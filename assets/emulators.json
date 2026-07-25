@@ -1,0 +1,797 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-25",
+  "consoles": [
+    {
+      "id": "atari2600",
+      "name": "Atari 2600/5200/7800",
+      "vendor": "atari",
+      "year": 1977,
+      "icon": "🕹️",
+      "description": "雅达利经典家用游戏机系列，第二世代主机的代表",
+      "emulators": [
+        {
+          "id": "retroarch_atari",
+          "name": "RetroArch (Stella)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Stella",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Stella核心模拟Atari 2600"
+        },
+        {
+          "id": "a2600_emu",
+          "name": "2600.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.A2600Emu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的Atari 2600专用模拟器，界面简洁稳定"
+        }
+      ]
+    },
+    {
+      "id": "fc",
+      "name": "FC / 红白机",
+      "vendor": "nintendo",
+      "year": 1983,
+      "icon": "🎮",
+      "description": "任天堂 Family Computer，8 位家用机，定义了现代游戏机产业",
+      "emulators": [
+        {
+          "id": "retroarch_fc",
+          "name": "RetroArch (FCEUmm)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "FCEUmm",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用FCEUmm核心，FC/NES兼容性极佳"
+        },
+        {
+          "id": "john_ness",
+          "name": "John NESS",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.2",
+          "description": "John系列模拟器，同时支持NES和SNES，操作流畅"
+        },
+        {
+          "id": "nes_emu",
+          "name": "NES.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.NesEmu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的NES专用模拟器，稳定性高"
+        }
+      ]
+    },
+    {
+      "id": "sfc",
+      "name": "SFC / 超级任天堂",
+      "vendor": "nintendo",
+      "year": 1990,
+      "icon": "🎮",
+      "description": "任天堂 Super Famicom，16 位家用机黄金时代的代表",
+      "emulators": [
+        {
+          "id": "retroarch_snes",
+          "name": "RetroArch (Snes9x)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Snes9x",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Snes9x核心，SNES兼容性极佳"
+        },
+        {
+          "id": "snes9x_ex",
+          "name": "Snes9x EX+",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "基于Snes9x核心的Android移植版，由Robert Broglia开发"
+        },
+        {
+          "id": "john_snes",
+          "name": "John SNES",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.2",
+          "description": "John系列模拟器，专精SNES，支持作弊码与即时存档"
+        },
+        {
+          "id": "snes_emu",
+          "name": "SNES.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.SnesEmu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的SNES专用模拟器，功能完善"
+        },
+        {
+          "id": "pizza_boy_snes",
+          "name": "Pizza Boy SNES",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.4",
+          "description": "界面精美的SNES模拟器，兼容性与性能出色"
+        }
+      ]
+    },
+    {
+      "id": "md",
+      "name": "MD / Mega Drive",
+      "vendor": "sega",
+      "year": 1988,
+      "icon": "🦔",
+      "description": "世嘉 Mega Drive / Genesis，16 位家用机，索尼克的诞生地",
+      "emulators": [
+        {
+          "id": "retroarch_md",
+          "name": "RetroArch (Genesis Plus GX)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Genesis Plus GX",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Genesis Plus GX核心，MD兼容性极佳"
+        },
+        {
+          "id": "md_emu",
+          "name": "MD.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.MdEmu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的Mega Drive/Genesis专用模拟器，支持多机种"
+        },
+        {
+          "id": "pizza_boy_md",
+          "name": "Pizza Boy Mega Drive",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.4",
+          "description": "界面精美的Mega Drive模拟器，性能优秀"
+        }
+      ]
+    },
+    {
+      "id": "gb",
+      "name": "GB / GBC",
+      "vendor": "nintendo",
+      "year": 1989,
+      "icon": "🔋",
+      "description": "任天堂 Game Boy / Game Boy Color，掌机时代的开创者",
+      "emulators": [
+        {
+          "id": "retroarch_gb",
+          "name": "RetroArch (mGBA)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "mGBA",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用mGBA核心，GB/GBC兼容性极佳"
+        },
+        {
+          "id": "john_gbc",
+          "name": "John GBC",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.2",
+          "description": "John系列模拟器，专精Game Boy Color，操作流畅"
+        },
+        {
+          "id": "gbc_emu",
+          "name": "GBC.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.GbcEmu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的Game Boy专用模拟器，支持GB/GBC"
+        }
+      ]
+    },
+    {
+      "id": "gba",
+      "name": "GBA",
+      "vendor": "nintendo",
+      "year": 2001,
+      "icon": "🎮",
+      "description": "任天堂 Game Boy Advance，32 位掌机，经典RPG的摇篮",
+      "emulators": [
+        {
+          "id": "retroarch_gba",
+          "name": "RetroArch (mGBA)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "mGBA",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用mGBA核心，GBA兼容性优秀"
+        },
+        {
+          "id": "pizza_boy_gba",
+          "name": "Pizza Boy GBA",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.4",
+          "description": "广受好评的GBA模拟器，性能与兼容性俱佳"
+        },
+        {
+          "id": "john_gba",
+          "name": "John GBA",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.2",
+          "description": "John系列模拟器，专精GBA，支持作弊码"
+        },
+        {
+          "id": "my_boy",
+          "name": "My Boy!",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.fastemulator.gba",
+          "website": "https://www.fastemulator.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "老牌GBA模拟器，运行高效，支持联机对战"
+        },
+        {
+          "id": "gba_emu",
+          "name": "GBA.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.GbaEmu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的GBA专用模拟器，稳定性高"
+        }
+      ]
+    },
+    {
+      "id": "n64",
+      "name": "N64",
+      "vendor": "nintendo",
+      "year": 1996,
+      "icon": "🎮",
+      "description": "任天堂 Nintendo 64，64 位家用机，3D游戏时代的先锋",
+      "emulators": [
+        {
+          "id": "retroarch_n64",
+          "name": "RetroArch (Mupen64Plus-Next)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Mupen64Plus-Next",
+          "compatibility": "good",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Mupen64Plus-Next核心模拟N64"
+        },
+        {
+          "id": "m64plus_fz",
+          "name": "M64Plus FZ",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "org.mupen64plusae.fzurita",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "功能丰富的N64模拟器，支持高清纹理包与多核心切换"
+        }
+      ]
+    },
+    {
+      "id": "ps1",
+      "name": "PS1 / PlayStation",
+      "vendor": "sony",
+      "year": 1994,
+      "icon": "💿",
+      "description": "索尼 PlayStation 初代，32 位家用机，光盘时代的霸主",
+      "emulators": [
+        {
+          "id": "duckstation",
+          "name": "DuckStation",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/stenzek/duckstation",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "7.0",
+          "description": "现代高性能PS1模拟器，支持高清渲染与即时存档"
+        },
+        {
+          "id": "epsxe",
+          "name": "ePSXe",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.epsxe.ePSXe",
+          "website": "https://www.epsxe.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "老牌PS1模拟器，兼容性高，功能成熟稳定"
+        },
+        {
+          "id": "fpse",
+          "name": "FPse",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.emulator.fpse",
+          "website": "https://www.fpsece.net/",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "4.0",
+          "description": "老牌PS1模拟器，支持多种插件与高清渲染"
+        },
+        {
+          "id": "retroarch_psx",
+          "name": "RetroArch (Beetle PSX)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Beetle PSX",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Beetle PSX核心，模拟准确性高"
+        }
+      ]
+    },
+    {
+      "id": "ps2",
+      "name": "PS2 / PlayStation 2",
+      "vendor": "sony",
+      "year": 2000,
+      "icon": "💿",
+      "description": "索尼 PlayStation 2，史上销量最高的家用游戏机",
+      "emulators": [
+        {
+          "id": "nethersx2",
+          "name": "NetherSX2",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/nethersx2/NetherSX2",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "AetherSX2的社区延续分支，持续更新，性能优秀"
+        },
+        {
+          "id": "aethersx2",
+          "name": "AetherSX2",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "基于PCSX2的Android PS2模拟器，已停止维护"
+        }
+      ]
+    },
+    {
+      "id": "psp",
+      "name": "PSP",
+      "vendor": "sony",
+      "year": 2004,
+      "icon": "📱",
+      "description": "索尼 PlayStation Portable，便携掌机，多媒体功能先驱",
+      "emulators": [
+        {
+          "id": "ppsspp",
+          "name": "PPSSPP",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/hrydgard/ppsspp",
+          "playStoreId": "org.ppsspp.ppsspp",
+          "website": "https://www.ppsspp.org/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "最优秀的PSP模拟器，兼容性极佳，支持高清化与纹理替换"
+        }
+      ]
+    },
+    {
+      "id": "nds",
+      "name": "NDS / Nintendo DS",
+      "vendor": "nintendo",
+      "year": 2004,
+      "icon": "🎮",
+      "description": "任天堂 Nintendo DS，双屏掌机，触控游戏的先驱",
+      "emulators": [
+        {
+          "id": "melonds",
+          "name": "melonDS",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/rafaelvcaetano/melonDS-android",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "高精度NDS模拟器Android移植版，模拟准确性优秀"
+        },
+        {
+          "id": "retroarch_nds",
+          "name": "RetroArch (melonDS)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "melonDS",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用melonDS核心模拟NDS"
+        }
+      ]
+    },
+    {
+      "id": "3ds",
+      "name": "3DS / Nintendo 3DS",
+      "vendor": "nintendo",
+      "year": 2011,
+      "icon": "🎮",
+      "description": "任天堂 Nintendo 3DS，裸眼3D双屏掌机",
+      "emulators": [
+        {
+          "id": "azahar",
+          "name": "Azahar",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/azahar-emu/azahar",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "8.0",
+          "description": "Citra的社区延续分支，持续开发中的3DS模拟器"
+        },
+        {
+          "id": "lime3ds",
+          "name": "Lime3DS",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/TabsN/Lime3DS",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "8.0",
+          "description": "Citra的另一个社区分支，专注Android体验优化"
+        }
+      ]
+    },
+    {
+      "id": "wii_gc",
+      "name": "Wii / GameCube",
+      "vendor": "nintendo",
+      "year": 2001,
+      "icon": "🎮",
+      "description": "任天堂 GameCube 与 Wii，兼容同一模拟器平台",
+      "emulators": [
+        {
+          "id": "dolphin",
+          "name": "Dolphin",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/dolphin-emu/dolphin",
+          "playStoreId": "org.dolphinemu.dolphinemu",
+          "website": "https://dolphin-emu.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "最优秀的Wii/GameCube模拟器，兼容性高，支持高清渲染"
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "vendor": "nintendo",
+      "year": 2017,
+      "icon": "🎮",
+      "description": "任天堂 Switch，家用与掌机二合一的现代主机",
+      "emulators": [
+        {
+          "id": "eden",
+          "name": "Eden",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/emuall/eden",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "9.0",
+          "description": "新兴Switch模拟器，基于Yuzu架构，持续开发中"
+        },
+        {
+          "id": "sudachi",
+          "name": "Sudachi",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "9.0",
+          "description": "Switch模拟器，性能尚可，持续开发中"
+        },
+        {
+          "id": "citron_neo",
+          "name": "Citron NEO",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "9.0",
+          "description": "Switch模拟器分支，持续开发中"
+        }
+      ]
+    },
+    {
+      "id": "dreamcast",
+      "name": "Dreamcast",
+      "vendor": "sega",
+      "year": 1998,
+      "icon": "🌀",
+      "description": "世嘉 Dreamcast，128 位家用机，世嘉最后一款家用主机",
+      "emulators": [
+        {
+          "id": "flycast",
+          "name": "Flycast",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/flyinghead/Flycast",
+          "playStoreId": "com.flycast.android",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi等街机系统"
+        },
+        {
+          "id": "redream",
+          "name": "Redream",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "https://redream.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "高质量Dreamcast模拟器，界面精美，开箱即用"
+        }
+      ]
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "vendor": "sega",
+      "year": 1994,
+      "icon": "🪐",
+      "description": "世嘉 Saturn，32 位家用机，双CPU架构复杂",
+      "emulators": [
+        {
+          "id": "retroarch_saturn",
+          "name": "RetroArch (Kronos)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Kronos",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Kronos核心模拟Saturn"
+        },
+        {
+          "id": "yabasanshiro",
+          "name": "YabaSanshiro",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "5.0",
+          "description": "专注Saturn模拟的Android模拟器，基于Yabause"
+        }
+      ]
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade / 街机",
+      "vendor": "various",
+      "year": 1970,
+      "icon": "🕹️",
+      "description": "街机游戏平台，涵盖多厂商的经典街机基板与游戏",
+      "emulators": [
+        {
+          "id": "mame4droid",
+          "name": "MAME4droid",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/seleuco/MAME4droid-Current",
+          "playStoreId": "com.seleuco.mame4droid",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "MAME的Android移植版，支持大量街机游戏"
+        },
+        {
+          "id": "retroarch_fbneo",
+          "name": "RetroArch (FBNeo)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "FBNeo",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用FBNeo核心，街机兼容性高"
+        },
+        {
+          "id": "retroarch_mame",
+          "name": "RetroArch (MAME)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "MAME",
+          "compatibility": "good",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用MAME核心，游戏支持广泛"
+        }
+      ]
+    },
+    {
+      "id": "pce",
+      "name": "PC Engine",
+      "vendor": "nec",
+      "year": 1987,
+      "icon": "🎮",
+      "description": "NEC PC Engine / TurboGrafx-16，8位向16位过渡期的经典主机",
+      "emulators": [
+        {
+          "id": "retroarch_pce",
+          "name": "RetroArch (Beetle PCE)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "com.retroarch",
+          "website": "https://retroarch.com/",
+          "core": "Beetle PCE",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于libretro框架，使用Beetle PCE核心模拟PC Engine"
+        },
+        {
+          "id": "pce_emu",
+          "name": "PCE.emu",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.explusalpha.PceEmu",
+          "website": "https://www.explusalpha.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "Robert Broglia开发的PC Engine专用模拟器，支持CD-ROM"
+        }
+      ]
+    }
+  ]
+}
