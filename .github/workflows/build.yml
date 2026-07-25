@@ -33,6 +33,12 @@ jobs:
       - name: Download dependencies
         run: flutter pub get
 
+      - name: Repair Android project structure
+        run: |
+          flutter create --platforms=android --org com.emuhub .
+          # 恢复自定义 Gradle 配置（含 applicationId 与 AndroidX 依赖）
+          git checkout -- android/app/build.gradle 2>/dev/null || true
+
       - name: Generate code (freezed / json_serializable / drift)
         run: dart run build_runner build --delete-conflicting-outputs
 
