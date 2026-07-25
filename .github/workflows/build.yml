@@ -36,9 +36,11 @@ jobs:
       - name: Repair Android project structure
         run: |
           flutter create --platforms=android --org com.emuhub .
+          # 恢复自定义 Gradle 配置（flutter create 会覆盖 .gradle.kts）
+          git checkout android/settings.gradle.kts android/build.gradle.kts android/app/build.gradle.kts android/gradle.properties android/gradle/wrapper/gradle-wrapper.properties
           # 若 gradlew 缺失则通过系统 gradle 生成 wrapper
           if [ ! -f android/gradlew ]; then
-            gradle wrapper --gradle-version 8.10.2 --distribution-type bin -p android || true
+            gradle wrapper --gradle-version 8.11.1 --distribution-type bin -p android || true
           fi
           chmod +x android/gradlew
 

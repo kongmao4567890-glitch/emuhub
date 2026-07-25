@@ -10,12 +10,13 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 
     sourceSets {
@@ -44,6 +45,8 @@ flutter {
 }
 
 dependencies {
+    // core library desugaring（flutter_local_notifications 需要）
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
     // workmanager 插件依赖的 AndroidX WorkManager 运行时库
     implementation("androidx.work:work-runtime-ktx:2.9.0")
     // flutter_local_notifications 依赖的 AndroidX 核心库
