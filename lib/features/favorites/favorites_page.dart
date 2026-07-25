@@ -130,8 +130,23 @@ class FavoritesPage extends ConsumerWidget {
               padding: const EdgeInsets.only(top: 8, bottom: 8),
               child: Row(
                 children: [
-                  Text(console?.icon ?? '🎮',
-                      style: const TextStyle(fontSize: 18)),
+                  if (console != null && console.imagePath.isNotEmpty)
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: Image.asset(
+                        console.imagePath,
+                        width: 24,
+                        height: 24,
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => Text(
+                          console?.icon ?? '🎮',
+                          style: const TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    )
+                  else
+                    Text(console?.icon ?? '🎮',
+                        style: const TextStyle(fontSize: 18)),
                   const SizedBox(width: 6),
                   Text(
                     console?.name ?? '未知机种',

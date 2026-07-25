@@ -73,31 +73,51 @@ class ConsoleDetailPage extends ConsumerWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 200,
+            expandedHeight: 240,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
                 console.name,
                 style: const TextStyle(fontWeight: FontWeight.w600),
               ),
-              background: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [cs.primary, cs.primaryContainer],
-                  ),
-                ),
-                child: Center(
-                  child: Hero(
-                    tag: 'console-icon-${console.id}',
-                    child: Text(
-                      console.icon,
-                      style: const TextStyle(fontSize: 72),
+              background: console.imagePath.isNotEmpty
+                  ? Hero(
+                      tag: 'console-image-${console.id}',
+                      child: Image.asset(
+                        console.imagePath,
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [cs.primary, cs.primaryContainer],
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              console.icon,
+                              style: const TextStyle(fontSize: 72),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  : Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [cs.primary, cs.primaryContainer],
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          console.icon,
+                          style: const TextStyle(fontSize: 72),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
             ),
           ),
           SliverToBoxAdapter(

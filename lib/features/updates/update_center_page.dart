@@ -488,7 +488,7 @@ class _UpdateCard extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         child: Row(
           children: [
-            // 图标
+            // 机种图片
             Container(
               width: 48,
               height: 48,
@@ -496,11 +496,23 @@ class _UpdateCard extends StatelessWidget {
                 color: cs.primaryContainer,
                 borderRadius: BorderRadius.circular(AppTheme.componentRadius),
               ),
+              clipBehavior: Clip.antiAlias,
               alignment: Alignment.center,
-              child: Text(
-                console?.icon ?? '🎮',
-                style: const TextStyle(fontSize: 26),
-              ),
+              child: console != null && console.imagePath.isNotEmpty
+                  ? Image.asset(
+                      console.imagePath,
+                      fit: BoxFit.cover,
+                      width: 48,
+                      height: 48,
+                      errorBuilder: (_, __, ___) => Text(
+                        console?.icon ?? '🎮',
+                        style: const TextStyle(fontSize: 26),
+                      ),
+                    )
+                  : Text(
+                      console?.icon ?? '🎮',
+                      style: const TextStyle(fontSize: 26),
+                    ),
             ),
             const SizedBox(width: 12),
             // 中间信息

@@ -132,7 +132,7 @@ class EmulatorDetailPage extends ConsumerWidget {
     );
   }
 
-  /// 顶部 SliverAppBar，带机种 emoji 作为 Hero 图标。
+  /// 顶部 SliverAppBar，带机种真实图片作为 Hero 图标。
   Widget _buildSliverAppBar(
     BuildContext context,
     Console console,
@@ -140,28 +140,39 @@ class EmulatorDetailPage extends ConsumerWidget {
   ) {
     final cs = Theme.of(context).colorScheme;
     return SliverAppBar(
-      expandedHeight: 220,
+      expandedHeight: 240,
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
         title: Text(
           emulator.name,
           style: const TextStyle(fontWeight: FontWeight.w600),
         ),
-        background: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [cs.primary, cs.primaryContainer],
-            ),
-          ),
-          child: Center(
-            child: Hero(
-              tag: 'emulator-icon-${emulator.id}',
-              child: Text(console.icon, style: const TextStyle(fontSize: 72)),
-            ),
-          ),
+        background: console.imagePath.isNotEmpty
+            ? Hero(
+                tag: 'emulator-console-${console.id}',
+                child: Image.asset(
+                  console.imagePath,
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => _buildGradientBg(cs, console.icon),
+                ),
+              )
+            : _buildGradientBg(cs, console.icon),
+      ),
+    );
+  }
+
+  /// 渐变背景 + emoji 回退。
+  Widget _buildGradientBg(ColorScheme cs, String icon) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [cs.primary, cs.primaryContainer],
         ),
+      ),
+      child: Center(
+        child: Text(icon, style: const TextStyle(fontSize: 72)),
       ),
     );
   }
@@ -395,7 +406,7 @@ class EmulatorDetailPage extends ConsumerWidget {
     );
   }
 
-  /// 下载源按钮。
+  /// 下载源按钮（含直接下载）。
   Widget _buildDownloadButtons(BuildContext context, Emulator emulator) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -404,9 +415,22 @@ class EmulatorDetailPage extends ConsumerWidget {
           fontWeight: FontWeight.bold,
         )),
         const SizedBox(height: 12),
+        // 直接下载 APK（优先显示）
+        if (emulator.downloadUrl.isNotEmpty) ...[
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: () => _launchUrl(context, emulator.downloadUrl),
+              icon: const Icon(Icons.download),
+              label: const Text('直接下载 APK（最新版）'),
+            ),
+          ),
+          const SizedBox(height: 8),
+        ],
+        // GitHub Releases 页面
         SizedBox(
           width: double.infinity,
-          child: FilledButton.icon(
+          child: FilledButton.tonalIcon(
             onPressed: () => _launchDownload(context, emulator),
             icon: Icon(_sourceIcon(emulator.sourceType)),
             label: Text(_downloadButtonLabel(emulator.sourceType)),

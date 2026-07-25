@@ -156,7 +156,7 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
                             crossAxisCount: 2,
                             crossAxisSpacing: 12,
                             mainAxisSpacing: 12,
-                            childAspectRatio: 0.82,
+                            childAspectRatio: 0.88,
                           ),
                           itemCount: filtered.length,
                           itemBuilder: (_, __) => const Card(
@@ -173,7 +173,7 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
                             crossAxisCount: 2,
                             crossAxisSpacing: 12,
                             mainAxisSpacing: 12,
-                            childAspectRatio: 0.82,
+                            childAspectRatio: 0.88,
                           ),
                           itemCount: filtered.length,
                           itemBuilder: (context, index) {
@@ -269,72 +269,82 @@ class _ConsoleCard extends StatelessWidget {
         : null;
 
     return Card(
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () => context.push('/console/${console.id}'),
         child: Stack(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(14),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // emoji 图标
-                  Container(
-                    width: 48,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: cs.primaryContainer,
-                      borderRadius:
-                          BorderRadius.circular(AppTheme.componentRadius),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(console.icon, style: const TextStyle(fontSize: 28)),
-                  ),
-                  const SizedBox(height: 10),
-                  // 机种名
-                  Text(
-                    console.name,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  // 厂商 + 年份
-                  Text(
-                    '${vendorDisplayName(console.vendor)} · ${console.year}',
-                    style: theme.textTheme.labelSmall?.copyWith(
-                      color: cs.onSurfaceVariant,
-                    ),
-                  ),
-                  const Spacer(),
-                  // 模拟器数量
-                  Row(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // 机种真实图片
+                SizedBox(
+                  width: double.infinity,
+                  height: 88,
+                  child: console.imagePath.isNotEmpty
+                      ? Hero(
+                          tag: 'console-image-${console.id}',
+                          child: Image.asset(
+                            console.imagePath,
+                            fit: BoxFit.cover,
+                            errorBuilder: (_, __, ___) => _buildEmojiFallback(
+                                cs, console.icon),
+                          ),
+                        )
+                      : _buildEmojiFallback(cs, console.icon),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(Icons.apps, size: 14, color: cs.onSurfaceVariant),
-                      const SizedBox(width: 4),
+                      // 机种名
                       Text(
-                        '${console.emulators.length} 个模拟器',
+                        console.name,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      // 厂商 + 年份
+                      Text(
+                        '${vendorDisplayName(console.vendor)} · ${console.year}',
                         style: theme.textTheme.labelSmall?.copyWith(
                           color: cs.onSurfaceVariant,
                         ),
                       ),
+                      const SizedBox(height: 6),
+                      // 模拟器数量
+                      Row(
+                        children: [
+                          Icon(Icons.apps, size: 14,
+                              color: cs.onSurfaceVariant),
+                          const SizedBox(width: 4),
+                          Text(
+                            '${console.emulators.length} 个模拟器',
+                            style: theme.textTheme.labelSmall?.copyWith(
+                              color: cs.onSurfaceVariant,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      // 最新版本号
+                      if (latest != null && latest.currentVersion.isNotEmpty)
+                        VersionTag(version: latest.currentVersion)
+                      else
+                        Text(
+                          '暂无版本信息',
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            color: cs.onSurfaceVariant.withOpacity(0.6),
+                          ),
+                        ),
                     ],
                   ),
-                  const SizedBox(height: 6),
-                  // 最新版本号
-                  if (latest != null && latest.currentVersion.isNotEmpty)
-                    VersionTag(version: latest.currentVersion)
-                  else
-                    Text(
-                      '暂无版本信息',
-                      style: theme.textTheme.labelSmall?.copyWith(
-                        color: cs.onSurfaceVariant.withOpacity(0.6),
-                      ),
-                    ),
-                ],
-              ),
+                ),
+              ],
             ),
             // 新版徽标
             if (hasNewVersion)
@@ -346,6 +356,15 @@ class _ConsoleCard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  /// 图片加载失败或无图片时，回退显示 emoji。
+  Widget _buildEmojiFallback(ColorScheme cs, String icon) {
+    return Container(
+      color: cs.primaryContainer,
+      alignment: Alignment.center,
+      child: Text(icon, style: const TextStyle(fontSize: 36)),
     );
   }
 }

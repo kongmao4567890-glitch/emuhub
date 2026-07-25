@@ -268,7 +268,23 @@ class _RecentUpdateCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(console?.icon ?? '🎮', style: const TextStyle(fontSize: 16)),
+                // 机种小图片缩略图
+                if (console != null && console.imagePath.isNotEmpty)
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: Image.asset(
+                      console.imagePath,
+                      width: 20,
+                      height: 20,
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => Text(
+                        console?.icon ?? '🎮',
+                        style: const TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  )
+                else
+                  Text(console?.icon ?? '🎮', style: const TextStyle(fontSize: 16)),
                 const SizedBox(width: 6),
                 Expanded(
                   child: Text(
@@ -361,7 +377,7 @@ class _RecommendedConsolesSection extends StatelessWidget {
   }
 }
 
-/// 推荐机种卡片。
+/// 推荐机种卡片（图片 + 底部文字叠加）。
 class _RecommendedConsoleCard extends StatelessWidget {
   const _RecommendedConsoleCard({required this.console});
 
@@ -373,33 +389,72 @@ class _RecommendedConsoleCard extends StatelessWidget {
     final cs = theme.colorScheme;
     return GestureDetector(
       onTap: () => context.push('/console/${console.id}'),
-      child: Container(
-        decoration: BoxDecoration(
-          color: cs.surfaceContainerHighest,
-          borderRadius: BorderRadius.circular(AppTheme.cardRadius),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(AppTheme.cardRadius),
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-            Text(console.icon, style: const TextStyle(fontSize: 32)),
-            const SizedBox(height: 6),
-            Text(
-              console.name,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: theme.textTheme.labelMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(height: 2),
-            Text(
-              '${console.year}',
-              style: theme.textTheme.labelSmall?.copyWith(
-                color: cs.onSurfaceVariant,
+            // 机种真实图片
+            console.imagePath.isNotEmpty
+                ? Image.asset(
+                    console.imagePath,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => _buildEmojiBg(cs),
+                  )
+                : _buildEmojiBg(cs),
+            // 底部渐变遮罩 + 文字
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.transparent,
+                      Colors.black.withOpacity(0.7),
+                    ],
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      console.name,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.labelMedium?.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      '${console.year}',
+                      style: theme.textTheme.labelSmall?.copyWith(
+                        color: Colors.white.withOpacity(0.8),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  /// 无图片时回退到 emoji 背景。
+  Widget _buildEmojiBg(ColorScheme cs) {
+    return Container(
+      color: cs.surfaceContainerHighest,
+      child: Center(
+        child: Text(console.icon, style: const TextStyle(fontSize: 32)),
       ),
     );
   }
