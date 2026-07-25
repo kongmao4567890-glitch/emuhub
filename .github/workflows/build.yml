@@ -36,8 +36,11 @@ jobs:
       - name: Repair Android project structure
         run: |
           flutter create --platforms=android --org com.emuhub .
-          # 恢复自定义 Gradle 配置（含 applicationId 与 AndroidX 依赖）
-          git checkout -- android/app/build.gradle 2>/dev/null || true
+          # 若 gradlew 缺失则通过系统 gradle 生成 wrapper
+          if [ ! -f android/gradlew ]; then
+            gradle wrapper --gradle-version 8.7 --distribution-type bin -p android || true
+          fi
+          chmod +x android/gradlew
 
       - name: Generate code (freezed / json_serializable / drift)
         run: dart run build_runner build --delete-conflicting-outputs
