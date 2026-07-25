@@ -38,7 +38,7 @@ jobs:
           flutter create --platforms=android --org com.emuhub .
           # 若 gradlew 缺失则通过系统 gradle 生成 wrapper
           if [ ! -f android/gradlew ]; then
-            gradle wrapper --gradle-version 8.7 --distribution-type bin -p android || true
+            gradle wrapper --gradle-version 8.10.2 --distribution-type bin -p android || true
           fi
           chmod +x android/gradlew
 
