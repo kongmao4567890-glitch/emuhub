@@ -114,12 +114,10 @@ class FavoritesDao extends DatabaseAccessor<AppDatabase>
 
   /// 返回已开启通知的收藏数量（用于后台检查任务排程）。
   Future<int> countNotifiableFavorites() async {
-    final count = countRows();
-    final query = selectOnly(favorites)
-      ..addColumns([count])
-      ..where(favorites.notify.equals(true));
-    final result = await query.map((row) => row.read(count)).get();
-    return result.first ?? 0;
+    final result = await (select(favorites)
+          ..where((f) => f.notify.equals(true)))
+        .get();
+    return result.length;
   }
 }
 
