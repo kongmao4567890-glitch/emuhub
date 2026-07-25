@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "lastUpdated": "2026-07-25",
   "consoles": [
     {
@@ -91,6 +91,20 @@
           "minAndroid": "5.0",
           "description": "Robert Broglia开发的NES模拟器，基于FCEUX核心，低延迟，有CI nightly构建",
           "downloadUrl": ""
+        },
+        {
+          "id": "nesoid",
+          "name": "Nesoid",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/proninyaroslav/nesoid",
+          "playStoreId": "",
+          "website": "",
+          "core": "FCEUX",
+          "compatibility": "high",
+          "minAndroid": "4.1",
+          "description": "经典Nesoid的现代fork，Material UI设计，支持蓝牙/WiFi联机对战、光枪外设，2025年1月更新",
+          "downloadUrl": "https://github.com/proninyaroslav/nesoid/releases/download/2.5-4/Nesoid-2.5-4-armeabi-v7a.apk"
         }
       ]
     },
@@ -354,7 +368,21 @@
           "core": "Mupen64Plus",
           "compatibility": "high",
           "minAndroid": "5.0",
-          "description": "Mupen64Plus Android Edition，功能丰富的N64模拟器，支持高清纹理包",
+          "description": "Mupen64Plus Android Edition，功能丰富的N64模拟器，支持高清纹理包，2026年4月仍活跃提交",
+          "downloadUrl": ""
+        },
+        {
+          "id": "mupen64plus_fz",
+          "name": "Mupen64Plus FZ Edition",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/fzurita/mupen64plus-ae",
+          "playStoreId": "",
+          "website": "",
+          "core": "Mupen64Plus",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "Mupen64Plus的FZ优化分支，Play Store上的FZ Edition对应源码，支持GlideN64/Parallel等多视频插件",
           "downloadUrl": ""
         }
       ]
@@ -371,7 +399,7 @@
         {
           "id": "duckstation",
           "name": "DuckStation",
-          "openSource": true,
+          "openSource": false,
           "sourceType": "github",
           "sourceUrl": "https://github.com/stenzek/duckstation",
           "playStoreId": "",
@@ -379,7 +407,35 @@
           "core": "",
           "compatibility": "perfect",
           "minAndroid": "7.0",
-          "description": "现代高性能PS1模拟器，支持高清渲染与即时存档，滚动发布（tag: latest）",
+          "description": "最优秀的PS1模拟器，支持PGXP几何校正、高清渲染、即时存档。注意：许可证已改为CC-BY-NC-ND（非OSI开源），2026年7月仍高频更新",
+          "downloadUrl": ""
+        },
+        {
+          "id": "duckstation_gpl",
+          "name": "DuckStation GPL",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Trixarian/duckstation-gpl",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "DuckStation的GPL开源分叉，由NetherSX2维护者Trixarian创建，在原版变更许可证后保留真正开源版本，2025年9月更新",
+          "downloadUrl": ""
+        },
+        {
+          "id": "duckstation_kanemaki",
+          "name": "DuckStation (kanemaki 分支)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/kanemaki/duckstation",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "DuckStation的活跃分叉，持续同步上游并加入XZ存档压缩、GameDB更新等功能，2025年9月更新",
           "downloadUrl": ""
         },
         {
@@ -434,6 +490,34 @@
           "minAndroid": "8.0",
           "description": "NetherSX2项目原始仓库，用于版本追踪与源码参考",
           "downloadUrl": ""
+        },
+        {
+          "id": "nethersx2_patch",
+          "name": "NetherSX2 (Patch 4248 标准版)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Trixarian/NetherSX2-patch",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "NetherSX2标准版延续，基于AetherSX2 4248构建，移除广告、修复RetroAchievements通知、支持联机对战，推荐Adreno GPU设备使用，2025年12月更新",
+          "downloadUrl": "https://github.com/Trixarian/NetherSX2-patch/releases/download/2.2n/NetherSX2-v2.2n-4248.apk"
+        },
+        {
+          "id": "nethersx2_tsk",
+          "name": "NetherSX2 (TSK-Entertainment 分支)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/TSK-Entertainment/NetherSX2-classic",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "NetherSX2 Classic的TSK分叉，更新GameDB与速度补丁，2025年10月活跃更新",
+          "downloadUrl": ""
         }
       ]
     },
@@ -448,16 +532,16 @@
       "emulators": [
         {
           "id": "rpcsx",
-          "name": "RPCSX",
+          "name": "RPCSX-UI-Android",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/rpcsx-android/rpcsx-android",
+          "sourceUrl": "https://github.com/RPCSX/rpcsx-ui-android",
           "playStoreId": "",
           "website": "",
           "core": "",
           "compatibility": "low",
-          "minAndroid": "8.0",
-          "description": "基于RPCS3代码库的ARM64/Vulkan移植，需骁龙8 Gen2以上设备",
+          "minAndroid": "10.0",
+          "description": "RPCSX模拟器的Android原生UI前端，Kotlin编写，支持自定义GPU驱动，2026年5月活跃开发中，PS3安卓模拟的新希望",
           "downloadUrl": ""
         },
         {
@@ -470,9 +554,9 @@
           "website": "",
           "core": "",
           "compatibility": "low",
-          "minAndroid": "9.0",
-          "description": "RPCS3的实验性Android移植，Kotlin+Java实现，早期开发阶段",
-          "downloadUrl": ""
+          "minAndroid": "10.0",
+          "description": "RPCS3的Android移植版，2025年3月进入Alpha阶段，支持控制器自动映射与省电模式，需骁龙8 Gen级别设备，更新趋缓",
+          "downloadUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases/download/alpha-5/rpcs3-release.apk"
         }
       ]
     },
@@ -496,7 +580,21 @@
           "core": "",
           "compatibility": "perfect",
           "minAndroid": "5.0",
-          "description": "最优秀的PSP模拟器，兼容性极佳，支持高清化与纹理替换",
+          "description": "最优秀的PSP模拟器，兼容性极佳，支持高清化与纹理替换、联机对战，持续高频更新",
+          "downloadUrl": ""
+        },
+        {
+          "id": "ppsspp_xtreme",
+          "name": "PPSSPP-Xtreme",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/KMFDManic/PPSSPP-Xtreme",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "PPSSPP的低端设备优化分叉，主打Lower Spec Xtreme性能模式，含音频修复等额外功能，2026年1月更新",
           "downloadUrl": ""
         }
       ]
@@ -559,13 +657,13 @@
           "website": "",
           "core": "",
           "compatibility": "good",
-          "minAndroid": "8.0",
-          "description": "Citra的社区延续分支，持续开发中的3DS模拟器，提供纯净版APK",
+          "minAndroid": "10.0",
+          "description": "PabloMK7的Citra分支与Lime3DS合并而成的3DS模拟器，Citra下架后的事实标准继承者，独创禁用右眼渲染单眼模式可提升50%性能，2026年7月极活跃",
           "downloadUrl": "https://github.com/azahar-emu/azahar/releases/download/2125.1.3/azahar-android-vanilla-2125.1.3.apk"
         },
         {
           "id": "lime3ds",
-          "name": "Lime3DS",
+          "name": "Lime3DS (已并入Azahar)",
           "openSource": true,
           "sourceType": "github",
           "sourceUrl": "https://github.com/TabsN/Lime3DS",
@@ -574,7 +672,7 @@
           "core": "",
           "compatibility": "good",
           "minAndroid": "8.0",
-          "description": "Citra的另一个社区分支，专注Android体验优化",
+          "description": "Citra的社区分支，已于2025年初与PabloMK7分支合并为Azahar，官方建议迁移至Azahar，仅作历史参考保留",
           "downloadUrl": ""
         }
       ]
@@ -598,8 +696,22 @@
           "website": "",
           "core": "",
           "compatibility": "high",
+          "minAndroid": "7.0",
+          "description": "业界最成熟的Wii/GameCube模拟器，2026年5月活跃更新，已支持mGBA GBA联动，移动端性能大幅优化",
+          "downloadUrl": ""
+        },
+        {
+          "id": "dolphin_mmjr2_vbi",
+          "name": "Dolphin MMJR2 VBI",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/VentureStratosphereWorldwide/Dolphin-MMJR2-VBI",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "medium",
           "minAndroid": "5.0",
-          "description": "最优秀的Wii/GameCube模拟器，兼容性高，支持高清渲染",
+          "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
           "downloadUrl": ""
         }
       ]
@@ -618,13 +730,13 @@
           "name": "Eden",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/emuall/eden",
+          "sourceUrl": "https://github.com/eden-emulator/Releases",
           "playStoreId": "",
           "website": "",
           "core": "",
           "compatibility": "medium",
           "minAndroid": "9.0",
-          "description": "新兴Switch模拟器，基于Yuzu架构，C++实现，持续开发中",
+          "description": "2025年发布的开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导，支持驱动自动推荐、联机大厅、提供标准/优化/旧版三种APK变体，2026年5月活跃更新",
           "downloadUrl": ""
         }
       ]
@@ -690,6 +802,20 @@
           "minAndroid": "5.0",
           "description": "Sega Saturn模拟器Yabause官方仓库，提供Libretro核心可经安卓前端使用",
           "downloadUrl": ""
+        },
+        {
+          "id": "yaba_sanshiro",
+          "name": "Yaba Sanshiro",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/devmiyax/yabause",
+          "playStoreId": "",
+          "website": "",
+          "core": "Yabause",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "devmiyax维护的Yabause分叉，是安卓端少数有独立App的土星模拟器，Kronos即从此分叉演进，2025年12月更新加入Oboe实时音频",
+          "downloadUrl": ""
         }
       ]
     },
@@ -754,6 +880,20 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle PCE核心模拟PC Engine",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "pce_emu_ex",
+          "name": "PCE.emu (EX+)",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha",
+          "playStoreId": "",
+          "website": "",
+          "core": "Mednafen",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "PC Engine/TurboGrafx-16/SuperGrafx/CD-ROM²模拟器，基于Mednafen核心，由Robert Broglia开发，低延迟，2026年4月活跃",
+          "downloadUrl": ""
         }
       ]
     }
