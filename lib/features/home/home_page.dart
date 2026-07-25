@@ -21,9 +21,15 @@ final _cachedVersionsStreamProvider =
 /// 首页。
 ///
 /// 展示欢迎卡片、"最近更新" 横向卡片、"推荐机种" 卡片以及快捷入口按钮。
-class HomePage extends ConsumerWidget {
+/// 首次打开应用时自动触发一次更新检查。
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
+  @override
+  ConsumerState<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends ConsumerState<HomePage> {
   /// 推荐机种 id 列表。
   static const List<String> _recommendedConsoleIds = <String>[
     'fc',
@@ -34,17 +40,29 @@ class HomePage extends ConsumerWidget {
     'switch',
   ];
 
+  /// 是否已完成首次更新检查（防止重复触发）。
+  bool _firstLaunchCheckDone = false;
+
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
     final cachedVersionsAsync =
         ref.watch(_cachedVersionsStreamProvider);
+
+    // 配置加载完成后，触发首次更新检查
+    if (!_firstLaunchCheckDone) {
+      final config = configAsync.valueOrNull;
+      if (config != null) {
+        _firstLaunchCheckDone = true;
+        _checkUpdatesOnFirstLaunch(config.consoles);
+      }
+    }
 
     return Scaffold(
       body: SafeArea(
         child: configAsync.when(
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (error, stack) => _buildError(context, ref, error),
+          error: (error, stack) => _buildError(context, error),
           data: (config) {
             return ListView(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
@@ -73,7 +91,80 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildError(BuildContext context, WidgetRef ref, Object error) {
+  /// 首次启动时自动检查更新，并通过 SnackBar 提示结果。
+  Future<void> _checkUpdatesOnFirstLaunch(List<Console> consoles) async {
+    if (!mounted) return;
+
+    // 显示检查中的 SnackBar
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Row(
+          children: [
+            SizedBox(
+              width: 16,
+              height: 16,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            ),
+            SizedBox(width: 12),
+            Text('正在检查模拟器更新…'),
+          ],
+        ),
+        duration: Duration(seconds: 10),
+      ),
+    );
+
+    try {
+      final allEmulators = consoles.expand((c) => c.emulators).toList();
+      final updateService = ref.read(updateServiceProvider);
+      final result = await updateService.checkAll(allEmulators);
+
+      if (!mounted) return;
+
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+
+      final message = result.hasUpdates
+          ? '发现 ${result.updated.length} 个新版本！共检查 ${result.checked} 个模拟器'
+              '${result.failed.isNotEmpty ? '，${result.failed.length} 个检查失败' : ''}'
+          : '所有 ${result.checked} 个模拟器均为最新版本'
+              '${result.failed.isNotEmpty ? '，${result.failed.length} 个检查失败' : ''}';
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Row(
+            children: [
+              Icon(
+                result.hasUpdates ? Icons.new_releases : Icons.check_circle,
+                size: 18,
+                color: result.hasUpdates
+                    ? AppTheme.success
+                    : Theme.of(context).colorScheme.primary,
+              ),
+              const SizedBox(width: 8),
+              Expanded(child: Text(message)),
+            ],
+          ),
+          duration: const Duration(seconds: 4),
+          action: result.hasUpdates
+              ? SnackBarAction(
+                  label: '查看',
+                  onPressed: () => context.push('/updates'),
+                )
+              : null,
+        ),
+      );
+    } catch (_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('更新检查失败，请稍后重试'),
+          duration: Duration(seconds: 3),
+        ),
+      );
+    }
+  }
+
+  Widget _buildError(BuildContext context, Object error) {
     final theme = Theme.of(context);
     return Center(
       child: Padding(
