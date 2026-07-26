@@ -128,6 +128,21 @@ class DownloadResolver {
     return emulator.nightlyUrl;
   }
 
+  /// 解析预览版下载链接。
+  ///
+  /// 优先使用缓存中的 `cachedPreviewDownloadUrl`（由适配器从 prerelease 提取）。
+  /// 若缓存为空，回退到静态 previewUrl。
+  static String resolvePreviewUrl(
+    Emulator emulator, {
+    String? cachedPreviewDownloadUrl,
+  }) {
+    if (cachedPreviewDownloadUrl != null &&
+        cachedPreviewDownloadUrl.isNotEmpty) {
+      return cachedPreviewDownloadUrl;
+    }
+    return emulator.previewUrl;
+  }
+
   /// 判断 URL 是否为直接下载链接（APK 文件或等效的下载重定向）。
   ///
   /// 返回 `true` 的情况：

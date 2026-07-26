@@ -97,6 +97,18 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
     }
 
+    // 如果模拟器有 previewUrl，尝试从 previewUrl 仓库提取预览版 APK 直链和更新说明
+    if (result != null && emulator.previewUrl.isNotEmpty) {
+      final previewResult = await _fetchPreviewApkUrl(emulator.previewUrl);
+      if (previewResult.apkUrl != null ||
+          previewResult.releaseNotes != null) {
+        result = result.copyWith(
+          previewDownloadUrl: previewResult.apkUrl,
+          previewReleaseNotes: previewResult.releaseNotes,
+        );
+      }
+    }
+
     return result;
   }
 
@@ -336,6 +348,86 @@ class GitHubReleasesAdapter implements VersionAdapter {
       return (apkUrl: apkUrl, releaseNotes: null);
     }
   }
+  /// 从 previewUrl 对应的 GitHub 仓库提取最新预览版 APK 直链和更新说明。
+  ///
+  /// previewUrl 指向包含 beta/RC/preview 版本的 GitHub 仓库（可能与 sourceUrl
+  /// 相同或不同）。解析 previewUrl 中的 owner/repo，查询其 releases 列表，
+  /// 优先提取 prerelease 的 APK asset 和 body。消耗 1 次 API 配额。
+  Future<({String? apkUrl, String? releaseNotes})> _fetchPreviewApkUrl(
+    String previewUrl,
+  ) async {
+    final parsed = _parseRepo(previewUrl);
+    if (parsed == null) return (apkUrl: null, releaseNotes: null);
+    final (owner, repo) = parsed;
+
+    try {
+      final response = await _dio.get(
+        'https://api.github.com/repos/$owner/$repo/releases?per_page=10',
+      );
+      final list = _asList(response.data);
+      if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
+
+      // 优先查找 prerelease（beta/RC/preview）
+      for (final item in list) {
+        final release = _asMap(item);
+        final isPrerelease = release['prerelease'];
+        if (isPrerelease == true) {
+          final apkUrl = _extractApkAssetUrl(release);
+          final body = release['body']?.toString();
+          if (apkUrl != null) {
+            return (apkUrl: apkUrl, releaseNotes: body);
+          }
+        }
+      }
+
+      // 如果没有 prerelease 标记，检查 tag 名是否含 RC/beta/preview/alpha
+      for (final item in list) {
+        final release = _asMap(item);
+        final tag = release['tag_name']?.toString() ?? '';
+        if (_isPrereleaseTag(tag)) {
+          final apkUrl = _extractApkAssetUrl(release);
+          final body = release['body']?.toString();
+          if (apkUrl != null) {
+            return (apkUrl: apkUrl, releaseNotes: body);
+          }
+        }
+      }
+
+      // 如果都没有，取第一个 release 作为预览版
+      final first = _asMap(list.first);
+      return (
+        apkUrl: _extractApkAssetUrl(first),
+        releaseNotes: first['body']?.toString(),
+      );
+    } catch (_) {
+      // API 失败 → 尝试 HTML 解析
+      final apkUrl = await _fetchApkUrlFromHtml(owner, repo);
+      return (apkUrl: apkUrl, releaseNotes: null);
+    }
+  }
+
+  /// 判断 tag 名是否包含预发布关键词（RC/beta/preview/alpha）。
+  ///
+  /// 部分 Forgejo/GitHub 仓库未将 RC 版本标记为 `prerelease: true`，
+  /// 但 tag 名中包含 "rc"、"beta"、"preview"、"alpha" 等关键词，
+  /// 通过此方法进行二次识别。
+  static bool _isPrereleaseTag(String tag) {
+    final lower = tag.toLowerCase();
+    // RC 版本：v1.0-rc1, v1.0-rc.1, v1.0rc1 等
+    if (RegExp(r'[-._]?rc[-._]?\d').hasMatch(lower)) return true;
+    if (lower.contains('-rc') || lower.contains('_rc')) return true;
+    // Beta 版本：v1.0-beta1, v1.0beta, v1.0-beta.1
+    if (RegExp(r'[-._]?beta[-._]?\d?').hasMatch(lower)) return true;
+    if (lower.contains('-beta') || lower.contains('_beta')) return true;
+    // Preview 版本
+    if (lower.contains('preview')) return true;
+    // Alpha 版本
+    if (RegExp(r'[-._]?alpha[-._]?\d?').hasMatch(lower)) return true;
+    if (lower.contains('-alpha') || lower.contains('_alpha')) return true;
+    return false;
+  }
+
+  /// 获取指定 tag 对应的 release 的 APK asset URL。
   ///
   /// 消耗 1 次 GitHub API 匿名配额。
   /// 仅在重定向法获取到版本号、但 asset 名含版本号无法构造稳定链接时调用。

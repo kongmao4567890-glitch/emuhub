@@ -72,6 +72,16 @@ class GitLabReleasesAdapter implements VersionAdapter {
         nightlyNotes = nightlyResult.releaseNotes;
       }
 
+      // 如果模拟器有 previewUrl，尝试从 previewUrl 仓库提取预览版 APK 直链和更新说明
+      String? previewApkUrl;
+      String? previewNotes;
+      if (emulator.previewUrl.isNotEmpty) {
+        final previewResult =
+            await _fetchPreviewApkFromGitLab(emulator.previewUrl);
+        previewApkUrl = previewResult.apkUrl;
+        previewNotes = previewResult.releaseNotes;
+      }
+
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
@@ -81,6 +91,8 @@ class GitLabReleasesAdapter implements VersionAdapter {
         downloadUrl: apkUrl,
         nightlyDownloadUrl: nightlyApkUrl,
         nightlyReleaseNotes: nightlyNotes,
+        previewDownloadUrl: previewApkUrl,
+        previewReleaseNotes: previewNotes,
       );
     } catch (_) {
       return null;
@@ -148,6 +160,35 @@ class GitLabReleasesAdapter implements VersionAdapter {
     String nightlyUrl,
   ) async {
     final parsed = _parseProject(nightlyUrl);
+    if (parsed == null) return (apkUrl: null, releaseNotes: null);
+    final (host, projectPath) = parsed;
+    final encodedPath = Uri.encodeComponent(projectPath);
+
+    try {
+      final response = await _dio.get(
+        'https://$host/api/v4/projects/$encodedPath/releases',
+        queryParameters: {'per_page': 1},
+      );
+      final list = _asList(response.data);
+      if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
+      final first = _asMap(list.first);
+      return (
+        apkUrl: _extractApkAssetUrl(first),
+        releaseNotes: first['description']?.toString(),
+      );
+    } catch (_) {
+      return (apkUrl: null, releaseNotes: null);
+    }
+  }
+
+  /// 从 previewUrl（GitLab 仓库）提取预览版 APK 直链和更新说明。
+  ///
+  /// previewUrl 指向包含 beta/RC/preview 版本的 GitLab 仓库。
+  /// 解析 previewUrl 中的 host/projectPath，查询其最新 release。
+  Future<({String? apkUrl, String? releaseNotes})> _fetchPreviewApkFromGitLab(
+    String previewUrl,
+  ) async {
+    final parsed = _parseProject(previewUrl);
     if (parsed == null) return (apkUrl: null, releaseNotes: null);
     final (host, projectPath) = parsed;
     final encodedPath = Uri.encodeComponent(projectPath);

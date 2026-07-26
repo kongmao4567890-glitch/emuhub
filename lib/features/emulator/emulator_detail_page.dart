@@ -473,6 +473,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     final cachedDownloadUrl = cached?.resolvedDownloadUrl;
     final cachedDevDownloadUrl = cached?.resolvedDevDownloadUrl;
     final cachedNightlyDownloadUrl = cached?.resolvedNightlyDownloadUrl;
+    final cachedPreviewDownloadUrl = cached?.resolvedPreviewDownloadUrl;
 
     final stableUrl = DownloadResolver.resolveStableUrl(
       emulator,
@@ -488,16 +489,22 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
       emulator,
       cachedNightlyDownloadUrl: cachedNightlyDownloadUrl,
     );
+    final previewUrl = DownloadResolver.resolvePreviewUrl(
+      emulator,
+      cachedPreviewDownloadUrl: cachedPreviewDownloadUrl,
+    );
 
     // 判断每个 URL 是否为直接下载
     final stableDirect = DownloadResolver.isDirectDownloadUrl(stableUrl);
     final devDirect = DownloadResolver.isDirectDownloadUrl(devUrl);
     final nightlyDirect = DownloadResolver.isDirectDownloadUrl(nightlyUrl);
+    final previewDirect = DownloadResolver.isDirectDownloadUrl(previewUrl);
 
     // 是否有任一渠道需要获取直链
     final hasPendingLink = (stableUrl.isNotEmpty && !stableDirect) ||
         (devUrl.isNotEmpty && !devDirect) ||
-        (nightlyUrl.isNotEmpty && !nightlyDirect);
+        (nightlyUrl.isNotEmpty && !nightlyDirect) ||
+        (previewUrl.isNotEmpty && !previewDirect);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -601,6 +608,38 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               url: '',
               color: Colors.deepPurple,
               releaseNotes: cached?.nightlyReleaseNotes,
+              onTapOverride: () => _autoCheckVersion(emulator),
+            ),
+          const SizedBox(height: 8),
+        ],
+        // 预览版/Beta/RC
+        if (previewUrl.isNotEmpty) ...[
+          if (previewDirect)
+            _DownloadChannelCard(
+              icon: Icons.visibility,
+              label: '预览版（Beta/RC）',
+              description: '即将发布的新版本预览，点击直接下载 APK',
+              url: previewUrl,
+              color: Colors.teal,
+              releaseNotes: cached?.previewReleaseNotes,
+            )
+          else if (_autoFetching)
+            _DownloadChannelCard(
+              icon: Icons.hourglass_top,
+              label: '预览版（正在获取直链...）',
+              description: '正在从服务器获取预览版 APK 下载地址',
+              url: '',
+              color: Colors.teal,
+              isLoading: true,
+            )
+          else
+            _DownloadChannelCard(
+              icon: Icons.refresh,
+              label: '预览版（点击检查更新）',
+              description: '检查最新预览版并获取 APK 直链',
+              url: '',
+              color: Colors.teal,
+              releaseNotes: cached?.previewReleaseNotes,
               onTapOverride: () => _autoCheckVersion(emulator),
             ),
           const SizedBox(height: 8),

@@ -220,6 +220,8 @@ class UpdateService {
         nightlyDownloadUrl: latest.nightlyDownloadUrl,
         devReleaseNotes: latest.devReleaseNotes,
         nightlyReleaseNotes: latest.nightlyReleaseNotes,
+        previewDownloadUrl: latest.previewDownloadUrl,
+        previewReleaseNotes: latest.previewReleaseNotes,
       );
 
       await _dao.upsertFromVersionInfo(versionInfo);

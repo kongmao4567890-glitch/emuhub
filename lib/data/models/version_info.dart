@@ -41,6 +41,15 @@ class VersionInfo with _$VersionInfo {
 
     /// 每夜版的更新说明（从 nightly release 的 body 提取）。
     String? nightlyReleaseNotes,
+
+    /// 预览版/beta/RC 版的直链下载地址（动态）。
+    ///
+    /// 从 previewUrl 对应的仓库的 prerelease 中提取。
+    /// 为 `null` 时回退到静态 previewUrl。
+    String? previewDownloadUrl,
+
+    /// 预览版的更新说明（从 prerelease body 提取）。
+    String? previewReleaseNotes,
   }) = _VersionInfo;
 
   factory VersionInfo.fromJson(Map<String, dynamic> json) =>

@@ -10,6 +10,7 @@ part 'emulator.g.dart';
 /// - [downloadUrl] 稳定版直接下载 APK 链接（动态指向最新版本），为空时回退到 Releases 页面。
 /// - [devUrl] 最新开发版/预览版下载链接，为空表示无独立开发版渠道。
 /// - [nightlyUrl] 每夜版/持续构建版下载链接，为空表示无每夜版渠道。
+/// - [previewUrl] 预览版/beta/RC 版下载链接，为空表示无独立预览版渠道。
 /// - [compatibility] 取值为 `perfect` / `high` / `good` / `medium` / `low`。
 @freezed
 class Emulator with _$Emulator {
@@ -28,6 +29,7 @@ class Emulator with _$Emulator {
     @Default('') String downloadUrl,
     @Default('') String devUrl,
     @Default('') String nightlyUrl,
+    @Default('') String previewUrl,
   }) = _Emulator;
 
   factory Emulator.fromJson(Map<String, dynamic> json) =>

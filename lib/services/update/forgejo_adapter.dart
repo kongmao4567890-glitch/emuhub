@@ -103,6 +103,15 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         nightlyNotes = nightlyResult.releaseNotes;
       }
 
+      // 从 previewUrl 仓库提取预览版 APK 直链和更新说明
+      String? previewApkUrl;
+      String? previewNotes;
+      if (emulator.previewUrl.isNotEmpty) {
+        final previewResult = await _fetchPreviewApkUrl(emulator.previewUrl);
+        previewApkUrl = previewResult.apkUrl;
+        previewNotes = previewResult.releaseNotes;
+      }
+
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
@@ -114,6 +123,8 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         nightlyDownloadUrl: nightlyApkUrl,
         devReleaseNotes: devNotes,
         nightlyReleaseNotes: nightlyNotes,
+        previewDownloadUrl: previewApkUrl,
+        previewReleaseNotes: previewNotes,
       );
     } catch (_) {
       // API 失败 → 尝试 HTML 解析
@@ -151,6 +162,84 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       final apkUrl = await _fetchApkUrlFromForgejoHtml(host, owner, repo);
       return (apkUrl: apkUrl, releaseNotes: null);
     }
+  }
+
+  /// 从 previewUrl 对应的 Forgejo 仓库提取最新预览版 APK 直链和更新说明。
+  ///
+  /// previewUrl 指向包含 beta/RC/preview 版本的 Forgejo 仓库。
+  /// 解析 previewUrl 中的 host/owner/repo，查询其 releases 列表，
+  /// 优先提取 prerelease 的 APK asset 和 body。
+  Future<({String? apkUrl, String? releaseNotes})> _fetchPreviewApkUrl(
+    String previewUrl,
+  ) async {
+    final parsed = _parseRepo(previewUrl);
+    if (parsed == null) return (apkUrl: null, releaseNotes: null);
+    final (host, owner, repo) = parsed;
+
+    try {
+      final response = await _dio.get(
+        'https://$host/api/v1/repos/$owner/$repo/releases',
+        queryParameters: {'limit': 5},
+      );
+
+      final list = _asList(response.data);
+      if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
+
+      // 优先查找 prerelease（beta/RC/preview）
+      for (final item in list) {
+        final release = _asMap(item);
+        final isPrerelease = release['prerelease'] == true;
+        if (isPrerelease) {
+          final apkUrl = _extractApkAssetUrl(release);
+          final body = release['body']?.toString();
+          if (apkUrl != null) {
+            return (apkUrl: apkUrl, releaseNotes: body);
+          }
+        }
+      }
+
+      // 如果没有 prerelease 标记，检查 tag 名是否含 RC/beta/preview/alpha
+      // （Forgejo 仓库可能未将 RC 版本标记为 prerelease）
+      for (final item in list) {
+        final release = _asMap(item);
+        final tag = release['tag_name']?.toString() ?? '';
+        if (_isPrereleaseTag(tag)) {
+          final apkUrl = _extractApkAssetUrl(release);
+          final body = release['body']?.toString();
+          if (apkUrl != null) {
+            return (apkUrl: apkUrl, releaseNotes: body);
+          }
+        }
+      }
+
+      // 如果都没有，取第一个 release
+      final first = _asMap(list.first);
+      return (
+        apkUrl: _extractApkAssetUrl(first),
+        releaseNotes: first['body']?.toString(),
+      );
+    } catch (_) {
+      // API 失败 → 尝试 HTML 解析
+      final apkUrl = await _fetchApkUrlFromForgejoHtml(host, owner, repo);
+      return (apkUrl: apkUrl, releaseNotes: null);
+    }
+  }
+
+  /// 判断 tag 名是否包含预发布关键词（RC/beta/preview/alpha）。
+  ///
+  /// 部分 Forgejo 仓库未将 RC 版本标记为 `prerelease: true`，
+  /// 但 tag 名中包含 "rc"、"beta"、"preview"、"alpha" 等关键词，
+  /// 通过此方法进行二次识别。
+  static bool _isPrereleaseTag(String tag) {
+    final lower = tag.toLowerCase();
+    if (RegExp(r'[-._]?rc[-._]?\d').hasMatch(lower)) return true;
+    if (lower.contains('-rc') || lower.contains('_rc')) return true;
+    if (RegExp(r'[-._]?beta[-._]?\d?').hasMatch(lower)) return true;
+    if (lower.contains('-beta') || lower.contains('_beta')) return true;
+    if (lower.contains('preview')) return true;
+    if (RegExp(r'[-._]?alpha[-._]?\d?').hasMatch(lower)) return true;
+    if (lower.contains('-alpha') || lower.contains('_alpha')) return true;
+    return false;
   }
 
   /// 从 Forgejo release 对象的 assets 数组中提取 APK 直链。
