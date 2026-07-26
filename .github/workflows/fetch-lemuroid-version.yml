@@ -4,9 +4,7 @@ name: Fetch Lemuroid Version Info
 # 对应截图2中 GitHub Releases 页面的版本信息
 
 on:
-  schedule:
-    - cron: '0 6 * * *'    # 每天 UTC 06:00 自动检查
-  workflow_dispatch: {}     # 支持手动触发
+  workflow_dispatch: {}     # 仅手动触发，不自动检测
 
 jobs:
   fetch-version:
