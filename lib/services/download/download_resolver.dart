@@ -113,6 +113,58 @@ class DownloadResolver {
     return null;
   }
 
+  /// 解析每夜版下载链接。
+  ///
+  /// 优先使用缓存中的 `cachedNightlyDownloadUrl`（由适配器从 CI 仓库提取）。
+  /// 若缓存为空，回退到静态 nightlyUrl。
+  static String resolveNightlyUrl(
+    Emulator emulator, {
+    String? cachedNightlyDownloadUrl,
+  }) {
+    if (cachedNightlyDownloadUrl != null &&
+        cachedNightlyDownloadUrl.isNotEmpty) {
+      return cachedNightlyDownloadUrl;
+    }
+    return emulator.nightlyUrl;
+  }
+
+  /// 判断 URL 是否为直接下载链接（APK 文件或等效的下载重定向）。
+  ///
+  /// 返回 `true` 的情况：
+  /// - URL 以 `.apk` 结尾（含带查询参数的情况如 `.apk?token=xxx`）
+  /// - Play Store 链接（打开应用商店安装，可接受）
+  /// - GitHub `releases/latest/download/` 链接（302 重定向到 APK 文件）
+  /// - GitHub `releases/download/` 链接（直接 APK 下载）
+  /// - SourceForge `/download` 链接（重定向下载）
+  /// - F-Droid 仓库直链（以 `.apk` 结尾，已被第一条覆盖）
+  ///
+  /// 返回 `false` 的情况（打开的是网页而非直接下载）：
+  /// - GitHub `/releases` 列表页面
+  /// - GitLab `/-/releases` 页面
+  /// - Forgejo `/releases` 页面
+  /// - 项目官网下载页面
+  /// - docs.libretro.com 文档页面
+  static bool isDirectDownloadUrl(String url) {
+    if (url.isEmpty) return false;
+    final lower = url.toLowerCase();
+    // 直接 APK 文件（可能带查询参数或锚点）
+    if (RegExp(r'\.apk([?#]|$)').hasMatch(lower)) return true;
+    // Play Store（打开应用商店，可接受）
+    if (url.contains('play.google.com')) return true;
+    // GitHub latest/download（302 重定向到 APK 文件）
+    if (lower.contains('/releases/latest/download/')) return true;
+    // GitHub releases/download/ + .apk（已由上面的 .apk 匹配覆盖）
+    // SourceForge latest/download（重定向下载）
+    if (url.contains('sourceforge.net') &&
+        url.contains('/latest/download')) return true;
+    // SourceForge /download 端点（文件下载页，触发下载）
+    if (url.contains('sourceforge.net') &&
+        (lower.endsWith('/download') || lower.contains('/download?'))) {
+      return true;
+    }
+    return false;
+  }
+
   /// 判断 URL 是否可能因版本更新而失效（包含硬编码版本号）。
   ///
   /// 注意：`releases/latest/download/{asset}` 形式中，如果 asset 文件名

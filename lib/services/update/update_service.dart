@@ -3,6 +3,7 @@ import 'dart:math';
 import '../../data/database/database.dart';
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
+import '../download/download_resolver.dart';
 import 'forgejo_adapter.dart';
 import 'github_adapter.dart';
 import 'gitlab_adapter.dart';
@@ -268,8 +269,8 @@ class UpdateService {
             releaseDate: DateTime.now(),
             releaseNotes: null,
             isNew: false,
-            // 保留原始 downloadUrl，UI 层会根据最新版本动态替换
-            downloadUrl: url,
+            // 仅在 URL 是直链时设置 downloadUrl，避免缓存网页 URL 为直链
+            downloadUrl: DownloadResolver.isDirectDownloadUrl(url) ? url : null,
           );
         }
       }

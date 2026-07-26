@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:html/parser.dart' as html_parser;
 
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
@@ -66,6 +67,11 @@ class GitHubReleasesAdapter implements VersionAdapter {
     // 策略 3：API tags（消耗 1 次配额）
     if (result == null) {
       result = await _fetchFromTags(emulator, owner, repo);
+    }
+
+    // 策略 4：HTML 解析（不消耗 API 配额，API 限流时的回退方案）
+    if (result == null) {
+      result = await _fetchViaHtmlParsing(emulator, owner, repo);
     }
 
     // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链
@@ -145,7 +151,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
 
       // 动态链接无效（asset 名含版本号）→ 用 API 获取真实 asset 直链
-      final apkUrl = await _fetchAssetUrlByTag(owner, repo, tag);
+      var apkUrl = await _fetchAssetUrlByTag(owner, repo, tag);
+
+      // API 失败（限流）→ 尝试 HTML 解析（不消耗配额）
+      if (apkUrl == null) {
+        apkUrl = await _fetchApkUrlFromHtml(owner, repo, tag: tag);
+      }
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -275,7 +286,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
       return null;
     } catch (_) {
-      return null;
+      // API 失败（限流）→ 尝试 HTML 解析
+      return await _fetchPrereleaseApkUrlFromHtml(owner, repo);
     }
   }
 
@@ -300,7 +312,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final first = _asMap(list.first);
       return _extractApkAssetUrl(first);
     } catch (_) {
-      return null;
+      // API 失败 → 尝试 HTML 解析
+      return await _fetchApkUrlFromHtml(owner, repo);
     }
   }
   ///
@@ -344,6 +357,235 @@ class GitHubReleasesAdapter implements VersionAdapter {
       );
       final release = _asMap(response.data);
       return _extractApkAssetUrl(release);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// HTML 解析法：从 GitHub releases 页面提取 APK 下载链接。
+  ///
+  /// 当 API 调用失败（限流、404 等）时作为回退方案。
+  /// 直接请求 releases 页面 HTML，解析其中的 APK 下载链接。
+  /// **不消耗 GitHub API 配额**。
+  ///
+  /// [tag] 指定具体 tag 的 releases 页面；为 null 时使用 releases/latest。
+  Future<String?> _fetchApkUrlFromHtml(
+    String owner,
+    String repo, {
+    String? tag,
+  }) async {
+    try {
+      final url = tag != null && tag.isNotEmpty
+          ? 'https://github.com/$owner/$repo/releases/tag/$tag'
+          : 'https://github.com/$owner/$repo/releases/latest';
+
+      final response = await _dio.get(
+        url,
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      return _extractApkUrlFromGitHubHtml(html);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 GitHub releases 页面 HTML 中提取 APK 下载链接。
+  ///
+  /// GitHub releases 页面的 HTML 中包含形如：
+  /// `/owner/repo/releases/download/v1.2.3/app.apk` 的下载链接。
+  /// 使用 html 包解析 DOM，比正则更稳健。
+  ///
+  /// APK 选择优先级：
+  /// 1. 名称含 `arm64` / `aarch64` 的 APK
+  /// 2. 名称含 `standard` / `universal` / `release` 的通用 APK
+  /// 3. 任意 APK（回退）
+  String? _extractApkUrlFromGitHubHtml(String htmlStr) {
+    try {
+      final document = html_parser.parse(htmlStr);
+      final links = document.querySelectorAll('a[href]');
+
+      String? arm64Apk;
+      String? standardApk;
+      String? anyApk;
+
+      for (final link in links) {
+        var href = link.attributes['href'] ?? '';
+        if (href.isEmpty) continue;
+        if (!href.toLowerCase().endsWith('.apk')) continue;
+        if (!href.contains('/releases/download/')) continue;
+
+        if (href.startsWith('/')) {
+          href = 'https://github.com$href';
+        }
+
+        final lower = href.toLowerCase();
+        if (lower.contains('arm64') || lower.contains('aarch64')) {
+          arm64Apk ??= href;
+        }
+        if (lower.contains('standard') ||
+            lower.contains('universal') ||
+            lower.contains('release')) {
+          standardApk ??= href;
+        }
+        anyApk ??= href;
+      }
+
+      return arm64Apk ?? standardApk ?? anyApk;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// HTML 解析法（完整版）：从 GitHub releases 页面同时提取版本号和 APK 直链。
+  ///
+  /// 作为策略 4，在 API 限流时使用。不消耗 API 配额。
+  Future<VersionInfo?> _fetchViaHtmlParsing(
+    Emulator emulator,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      var response = await _dio.get(
+        'https://github.com/$owner/$repo/releases/latest',
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      // 如果 latest 返回 404（无 latest release），尝试 releases 列表页
+      if (response.statusCode == 404) {
+        response = await _dio.get(
+          'https://github.com/$owner/$repo/releases',
+          options: Options(
+            headers: {'Accept': 'text/html'},
+            responseType: ResponseType.plain,
+          ),
+        );
+      }
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      // 提取 APK 下载链接
+      final apkUrl = _extractApkUrlFromGitHubHtml(html);
+
+      // 从下载链接中提取版本号
+      String? version;
+      if (apkUrl != null) {
+        final tagMatch =
+            RegExp(r'/releases/download/([^/]+)/').firstMatch(apkUrl);
+        if (tagMatch != null) {
+          version = _stripVPrefix(tagMatch.group(1)!);
+        }
+      }
+
+      // 从 HTML meta 标签提取版本号
+      if (version == null || version.isEmpty) {
+        try {
+          final document = html_parser.parse(html);
+          final metaTag = document.querySelector(
+            'meta[name="octolytics-dimension-repository_tag"]',
+          );
+          if (metaTag != null) {
+            final content = metaTag.attributes['content'];
+            if (content != null && content.isNotEmpty) {
+              version = _stripVPrefix(content);
+            }
+          }
+        } catch (_) {}
+      }
+
+      // 从页面标题提取版本号
+      if (version == null || version.isEmpty) {
+        final titleMatch = RegExp(
+          r'Release\s+([vV]?\d+[.\d]*)',
+        ).firstMatch(html);
+        if (titleMatch != null) {
+          version = _stripVPrefix(titleMatch.group(1)!);
+        }
+      }
+
+      if (version == null || version.isEmpty) return null;
+
+      return VersionInfo(
+        emulatorId: emulator.id,
+        version: version,
+        releaseDate: DateTime.now(),
+        releaseNotes: null,
+        isNew: false,
+        downloadUrl: apkUrl,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 GitHub releases 列表页 HTML 中提取 prerelease 的 APK 下载链接。
+  ///
+  /// 作为 API 限流时的回退方案。从 releases 列表页 HTML 中查找
+  /// prerelease 标记的 section，提取其中的 APK 下载链接。
+  Future<String?> _fetchPrereleaseApkUrlFromHtml(
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases',
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      final document = html_parser.parse(html);
+      final releaseSections = document.querySelectorAll('.release, .Box');
+
+      String? prereleaseApk;
+      String? anyApk;
+
+      for (final section in releaseSections) {
+        final label = section.querySelector('.Label, .label');
+        final isPrerelease =
+            label?.text.toLowerCase().contains('pre') ?? false;
+
+        final links = section.querySelectorAll('a[href]');
+        for (final link in links) {
+          var href = link.attributes['href'] ?? '';
+          if (href.isEmpty) continue;
+          if (!href.toLowerCase().endsWith('.apk')) continue;
+          if (!href.contains('/releases/download/')) continue;
+
+          if (href.startsWith('/')) {
+            href = 'https://github.com$href';
+          }
+
+          if (isPrerelease) {
+            prereleaseApk ??= href;
+          }
+          anyApk ??= href;
+        }
+      }
+
+      // 如果 CSS 选择器未匹配到 release section，直接从整页提取
+      if (prereleaseApk == null && anyApk == null) {
+        return _extractApkUrlFromGitHubHtml(html);
+      }
+
+      return prereleaseApk ?? anyApk;
     } catch (_) {
       return null;
     }

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:html/parser.dart' as html_parser;
 
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
@@ -105,7 +106,8 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         nightlyDownloadUrl: nightlyApkUrl,
       );
     } catch (_) {
-      return null;
+      // API 失败 → 尝试 HTML 解析
+      return await _fetchViaHtmlParsing(emulator, host, owner, repo);
     }
   }
 
@@ -130,7 +132,8 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       final first = _asMap(list.first);
       return _extractApkAssetUrl(first);
     } catch (_) {
-      return null;
+      // API 失败 → 尝试 HTML 解析
+      return await _fetchApkUrlFromForgejoHtml(host, owner, repo);
     }
   }
 
@@ -176,6 +179,129 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     }
 
     return standardApk ?? arm64Apk ?? anyApk;
+  }
+
+  /// HTML 解析法：从 Forgejo releases 页面提取 APK 下载链接。
+  ///
+  /// 当 API 调用失败时作为回退方案。
+  Future<String?> _fetchApkUrlFromForgejoHtml(
+    String host,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://$host/$owner/$repo/releases',
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      return _extractApkUrlFromForgejoHtml(html, host);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 Forgejo releases 页面 HTML 中提取 APK 下载链接。
+  String? _extractApkUrlFromForgejoHtml(String htmlStr, String host) {
+    try {
+      final document = html_parser.parse(htmlStr);
+      final links = document.querySelectorAll('a[href]');
+
+      String? arm64Apk;
+      String? standardApk;
+      String? anyApk;
+
+      for (final link in links) {
+        var href = link.attributes['href'] ?? '';
+        if (href.isEmpty) continue;
+        if (!href.toLowerCase().endsWith('.apk')) continue;
+        if (!href.contains('/releases/download/')) continue;
+
+        // 转换为完整 URL
+        if (href.startsWith('/')) {
+          href = 'https://$host$href';
+        }
+
+        final lower = href.toLowerCase();
+        if (lower.contains('arm64') || lower.contains('aarch64')) {
+          arm64Apk ??= href;
+        }
+        if (lower.contains('standard') || lower.contains('universal')) {
+          standardApk ??= href;
+        }
+        anyApk ??= href;
+      }
+
+      return arm64Apk ?? standardApk ?? anyApk;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// HTML 解析法（完整版）：从 Forgejo releases 页面同时提取版本号和 APK 直链。
+  Future<VersionInfo?> _fetchViaHtmlParsing(
+    Emulator emulator,
+    String host,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://$host/$owner/$repo/releases',
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      final apkUrl = _extractApkUrlFromForgejoHtml(html, host);
+
+      // 从下载链接中提取版本号
+      String? version;
+      if (apkUrl != null) {
+        final tagMatch =
+            RegExp(r'/releases/download/([^/]+)/').firstMatch(apkUrl);
+        if (tagMatch != null) {
+          version = _stripVPrefix(tagMatch.group(1)!);
+        }
+      }
+
+      // 从 HTML title 提取版本号
+      if (version == null || version.isEmpty) {
+        try {
+          final document = html_parser.parse(html);
+          final title = document.querySelector('title')?.text ?? '';
+          final titleMatch = RegExp(r'([vV]?\d+[.\d]+[.\d]*)').firstMatch(title);
+          if (titleMatch != null) {
+            version = _stripVPrefix(titleMatch.group(1)!);
+          }
+        } catch (_) {}
+      }
+
+      if (version == null || version.isEmpty) return null;
+
+      return VersionInfo(
+        emulatorId: emulator.id,
+        version: version,
+        releaseDate: DateTime.now(),
+        releaseNotes: null,
+        isNew: false,
+        downloadUrl: apkUrl,
+      );
+    } catch (_) {
+      return null;
+    }
   }
 
   /// 从 Forgejo 仓库 URL 解析出 (host, owner, repo)。
