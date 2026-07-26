@@ -48,7 +48,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://$host/api/v1/repos/$owner/$repo/releases',
-        queryParameters: {'limit': 5},
+        queryParameters: {'limit': 20},
       );
 
       final list = _asList(response.data);
@@ -135,7 +135,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
   /// 从 nightlyUrl 对应的 Forgejo 仓库提取最新 APK 直链和更新说明。
   ///
   /// nightlyUrl 可能指向与 sourceUrl 不同的仓库（如 Eden 的 CI 仓库）。
-  /// 解析 nightlyUrl 中的 host/owner/repo，查询其最新 release 的 APK asset 和 body。
+  /// 解析 nightlyUrl 中的 host/owner/repo，遍历 releases 找到包含 APK 的。
   Future<({String? apkUrl, String? releaseNotes})> _fetchNightlyApkUrl(
     String nightlyUrl,
   ) async {
@@ -146,17 +146,25 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://$host/api/v1/repos/$owner/$repo/releases',
-        queryParameters: {'limit': 1},
+        queryParameters: {'limit': 20},
       );
 
       final list = _asList(response.data);
       if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
 
-      final first = _asMap(list.first);
-      return (
-        apkUrl: _extractApkAssetUrl(first),
-        releaseNotes: first['body']?.toString(),
-      );
+      // 遍历所有 release，找到第一个包含 APK 资产的
+      for (final item in list) {
+        final release = _asMap(item);
+        final apkUrl = _extractApkAssetUrl(release);
+        if (apkUrl != null) {
+          return (
+            apkUrl: apkUrl,
+            releaseNotes: release['body']?.toString(),
+          );
+        }
+      }
+
+      return (apkUrl: null, releaseNotes: null);
     } catch (_) {
       // API 失败 → 尝试 HTML 解析
       final apkUrl = await _fetchApkUrlFromForgejoHtml(host, owner, repo);
@@ -212,12 +220,20 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         }
       }
 
-      // 如果都没有，取第一个 release
-      final first = _asMap(list.first);
-      return (
-        apkUrl: _extractApkAssetUrl(first),
-        releaseNotes: first['body']?.toString(),
-      );
+      // 如果都没有标记为 prerelease，遍历找第一个包含 APK 的 release
+      for (final item in list) {
+        final release = _asMap(item);
+        final apkUrl = _extractApkAssetUrl(release);
+        if (apkUrl != null) {
+          return (
+            apkUrl: apkUrl,
+            releaseNotes: release['body']?.toString(),
+          );
+        }
+      }
+
+      // 没有找到包含 APK 的 release
+      return (apkUrl: null, releaseNotes: null);
     } catch (_) {
       // API 失败 → 尝试 HTML 解析
       final apkUrl = await _fetchApkUrlFromForgejoHtml(host, owner, repo);
