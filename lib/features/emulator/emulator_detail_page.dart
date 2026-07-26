@@ -516,6 +516,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               url: stableUrl,
               color: cs.primary,
               isPrimary: true,
+              releaseNotes: cached?.releaseNotes,
             )
           else if (_autoFetching)
             _DownloadChannelCard(
@@ -535,6 +536,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               url: '',
               color: cs.primary,
               isPrimary: true,
+              releaseNotes: cached?.releaseNotes,
               onTapOverride: () => _autoCheckVersion(emulator),
             ),
           const SizedBox(height: 8),
@@ -548,6 +550,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               description: '包含最新功能，点击直接下载 APK',
               url: devUrl,
               color: Colors.orange,
+              releaseNotes: cached?.devReleaseNotes,
             )
           else if (_autoFetching)
             _DownloadChannelCard(
@@ -565,6 +568,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               description: '检查最新开发版并获取 APK 直链',
               url: '',
               color: Colors.orange,
+              releaseNotes: cached?.devReleaseNotes,
               onTapOverride: () => _autoCheckVersion(emulator),
             ),
           const SizedBox(height: 8),
@@ -578,6 +582,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               description: '每日自动构建，点击直接下载 APK',
               url: nightlyUrl,
               color: Colors.deepPurple,
+              releaseNotes: cached?.nightlyReleaseNotes,
             )
           else if (_autoFetching)
             _DownloadChannelCard(
@@ -595,6 +600,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               description: '检查最新每夜版并获取 APK 直链',
               url: '',
               color: Colors.deepPurple,
+              releaseNotes: cached?.nightlyReleaseNotes,
               onTapOverride: () => _autoCheckVersion(emulator),
             ),
           const SizedBox(height: 8),
@@ -891,7 +897,9 @@ class _AttributeTile extends StatelessWidget {
 /// - **直接下载**（默认）：点击打开 URL 下载 APK
 /// - **加载中**（`isLoading = true`）：显示转圈，不可点击
 /// - **自定义点击**（`onTapOverride`）：点击触发版本检查而非打开 URL
-class _DownloadChannelCard extends StatelessWidget {
+///
+/// 当 [releaseNotes] 非空时，卡片底部显示可展开的更新内容。
+class _DownloadChannelCard extends StatefulWidget {
   const _DownloadChannelCard({
     required this.icon,
     required this.label,
@@ -901,6 +909,7 @@ class _DownloadChannelCard extends StatelessWidget {
     this.isPrimary = false,
     this.isLoading = false,
     this.onTapOverride,
+    this.releaseNotes,
   });
 
   final IconData icon;
@@ -911,80 +920,196 @@ class _DownloadChannelCard extends StatelessWidget {
   final bool isPrimary;
   final bool isLoading;
   final Future<void> Function()? onTapOverride;
+  final String? releaseNotes;
+
+  @override
+  State<_DownloadChannelCard> createState() => _DownloadChannelCardState();
+}
+
+class _DownloadChannelCardState extends State<_DownloadChannelCard> {
+  bool _notesExpanded = false;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
-    return Material(
-      color: isPrimary ? color.withOpacity(0.08) : cs.surfaceContainerHighest,
-      borderRadius: BorderRadius.circular(AppTheme.componentRadius),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: isLoading
-            ? null
-            : () async {
-                if (onTapOverride != null) {
-                  await onTapOverride!();
-                  return;
-                }
-                final uri = Uri.parse(url);
-                if (await canLaunchUrl(uri)) {
-                  await launchUrl(uri, mode: LaunchMode.externalApplication);
-                } else if (context.mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('无法打开链接：$url')),
-                  );
-                }
-              },
-        borderRadius: BorderRadius.circular(AppTheme.componentRadius),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: color.withOpacity(0.15),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: isLoading
-                    ? SizedBox(
-                        width: 22,
-                        height: 22,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: color,
+    final translatedNotes = widget.releaseNotes != null &&
+            widget.releaseNotes!.isNotEmpty
+        ? ReleaseNotesTranslator.translate(widget.releaseNotes)
+        : null;
+
+    return Column(
+      children: [
+        Material(
+          color: widget.isPrimary
+              ? widget.color.withOpacity(0.08)
+              : cs.surfaceContainerHighest,
+          borderRadius: BorderRadius.circular(AppTheme.componentRadius),
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: widget.isLoading
+                ? null
+                : () async {
+                    if (widget.onTapOverride != null) {
+                      await widget.onTapOverride!();
+                      return;
+                    }
+                    final uri = Uri.parse(widget.url);
+                    if (await canLaunchUrl(uri)) {
+                      await launchUrl(
+                          uri, mode: LaunchMode.externalApplication);
+                    } else if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('无法打开链接：${widget.url}')),
+                      );
+                    }
+                  },
+            borderRadius: BorderRadius.circular(AppTheme.componentRadius),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: widget.color.withOpacity(0.15),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: widget.isLoading
+                        ? SizedBox(
+                            width: 22,
+                            height: 22,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: widget.color,
+                            ),
+                          )
+                        : Icon(widget.icon, color: widget.color, size: 22),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.label,
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: widget.isPrimary ? widget.color : null,
+                          ),
                         ),
-                      )
-                    : Icon(icon, color: color, size: 22),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      label,
-                      style: theme.textTheme.titleSmall?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: isPrimary ? color : null,
-                      ),
+                        const SizedBox(height: 2),
+                        Text(
+                          widget.description,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: cs.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 2),
-                    Text(
-                      description,
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: cs.onSurfaceVariant,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                  Icon(Icons.chevron_right, color: cs.onSurfaceVariant),
+                ],
               ),
-              Icon(Icons.chevron_right, color: cs.onSurfaceVariant),
-            ],
+            ),
           ),
         ),
+        // 更新内容（可展开）
+        if (translatedNotes != null && translatedNotes.isNotEmpty) ...[
+          const SizedBox(height: 4),
+          _ReleaseNotesExpansion(
+            notes: translatedNotes,
+            color: widget.color,
+            isExpanded: _notesExpanded,
+            onToggle: () =>
+                setState(() => _notesExpanded = !_notesExpanded),
+          ),
+        ],
+      ],
+    );
+  }
+}
+
+/// 更新内容展开/折叠组件。
+class _ReleaseNotesExpansion extends StatelessWidget {
+  const _ReleaseNotesExpansion({
+    required this.notes,
+    required this.color,
+    required this.isExpanded,
+    required this.onToggle,
+  });
+
+  final String notes;
+  final Color color;
+  final bool isExpanded;
+  final VoidCallback onToggle;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: cs.surfaceContainerLow,
+        borderRadius: BorderRadius.circular(AppTheme.componentRadius),
+        border: Border.all(
+          color: cs.outlineVariant.withOpacity(0.5),
+          width: 0.5,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          InkWell(
+            onTap: onToggle,
+            child: Row(
+              children: [
+                Icon(Icons.article_outlined,
+                    size: 14, color: color),
+                const SizedBox(width: 4),
+                Text(
+                  '更新内容',
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: color,
+                  ),
+                ),
+                const Spacer(),
+                Icon(
+                  isExpanded
+                      ? Icons.keyboard_arrow_up
+                      : Icons.keyboard_arrow_down,
+                  size: 16,
+                  color: cs.onSurfaceVariant,
+                ),
+              ],
+            ),
+          ),
+          if (isExpanded) ...[
+            const SizedBox(height: 8),
+            Text(
+              notes,
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: cs.onSurfaceVariant,
+                height: 1.5,
+              ),
+            ),
+          ] else ...[
+            const SizedBox(height: 4),
+            Text(
+              notes.split('\n').take(2).join('\n'),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: cs.onSurfaceVariant,
+                height: 1.4,
+              ),
+            ),
+          ],
+        ],
       ),
     );
   }

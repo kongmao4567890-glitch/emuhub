@@ -35,6 +35,12 @@ class VersionInfo with _$VersionInfo {
     /// 从 nightlyUrl 对应的 GitHub 仓库的 releases 中提取。
     /// 为 `null` 时回退到静态 nightlyUrl。
     String? nightlyDownloadUrl,
+
+    /// 开发版/预览版的更新说明（从 prerelease 的 body 提取）。
+    String? devReleaseNotes,
+
+    /// 每夜版的更新说明（从 nightly release 的 body 提取）。
+    String? nightlyReleaseNotes,
   }) = _VersionInfo;
 
   factory VersionInfo.fromJson(Map<String, dynamic> json) =>

@@ -62,10 +62,14 @@ class GitLabReleasesAdapter implements VersionAdapter {
       // 从 assets.links 中提取 APK 直链
       final apkUrl = _extractApkAssetUrl(first);
 
-      // 如果模拟器有 nightlyUrl，也尝试从 nightlyUrl 仓库提取 APK 直链
+      // 如果模拟器有 nightlyUrl，也尝试从 nightlyUrl 仓库提取 APK 直链和更新说明
       String? nightlyApkUrl;
+      String? nightlyNotes;
       if (emulator.nightlyUrl.isNotEmpty) {
-        nightlyApkUrl = await _fetchNightlyApkFromGitLab(emulator.nightlyUrl);
+        final nightlyResult =
+            await _fetchNightlyApkFromGitLab(emulator.nightlyUrl);
+        nightlyApkUrl = nightlyResult.apkUrl;
+        nightlyNotes = nightlyResult.releaseNotes;
       }
 
       return VersionInfo(
@@ -76,6 +80,7 @@ class GitLabReleasesAdapter implements VersionAdapter {
         isNew: false,
         downloadUrl: apkUrl,
         nightlyDownloadUrl: nightlyApkUrl,
+        nightlyReleaseNotes: nightlyNotes,
       );
     } catch (_) {
       return null;
@@ -138,10 +143,12 @@ class GitLabReleasesAdapter implements VersionAdapter {
     return arm64Apk ?? anyApk;
   }
 
-  /// 从 nightlyUrl（GitLab/Forgejo releases 页面）提取 APK 直链。
-  Future<String?> _fetchNightlyApkFromGitLab(String nightlyUrl) async {
+  /// 从 nightlyUrl（GitLab/Forgejo releases 页面）提取 APK 直链和更新说明。
+  Future<({String? apkUrl, String? releaseNotes})> _fetchNightlyApkFromGitLab(
+    String nightlyUrl,
+  ) async {
     final parsed = _parseProject(nightlyUrl);
-    if (parsed == null) return null;
+    if (parsed == null) return (apkUrl: null, releaseNotes: null);
     final (host, projectPath) = parsed;
     final encodedPath = Uri.encodeComponent(projectPath);
 
@@ -151,11 +158,14 @@ class GitLabReleasesAdapter implements VersionAdapter {
         queryParameters: {'per_page': 1},
       );
       final list = _asList(response.data);
-      if (list.isEmpty) return null;
+      if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
       final first = _asMap(list.first);
-      return _extractApkAssetUrl(first);
+      return (
+        apkUrl: _extractApkAssetUrl(first),
+        releaseNotes: first['description']?.toString(),
+      );
     } catch (_) {
-      return null;
+      return (apkUrl: null, releaseNotes: null);
     }
   }
 

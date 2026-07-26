@@ -51,6 +51,12 @@ class CachedVersions extends Table {
   /// 为 null 时回退到 emulators.json 中的静态 nightlyUrl。
   TextColumn get resolvedNightlyDownloadUrl => text().nullable()();
 
+  /// 开发版/预览版的更新说明（从 prerelease body 提取）。
+  TextColumn get devReleaseNotes => text().nullable()();
+
+  /// 每夜版的更新说明（从 nightly release body 提取）。
+  TextColumn get nightlyReleaseNotes => text().nullable()();
+
   @override
   Set<Column> get primaryKey => {emulatorId};
 }
@@ -183,6 +189,8 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
         resolvedDownloadUrl: Value(info.downloadUrl),
         resolvedDevDownloadUrl: Value(info.devDownloadUrl),
         resolvedNightlyDownloadUrl: Value(info.nightlyDownloadUrl),
+        devReleaseNotes: Value(info.devReleaseNotes),
+        nightlyReleaseNotes: Value(info.nightlyReleaseNotes),
         lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
       ),
     );
@@ -222,7 +230,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration {
@@ -239,6 +247,10 @@ class AppDatabase extends _$AppDatabase {
         if (from < 4) {
           await m.addColumn(
               cachedVersions, cachedVersions.resolvedNightlyDownloadUrl);
+        }
+        if (from < 5) {
+          await m.addColumn(cachedVersions, cachedVersions.devReleaseNotes);
+          await m.addColumn(cachedVersions, cachedVersions.nightlyReleaseNotes);
         }
       },
     );

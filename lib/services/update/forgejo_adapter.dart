@@ -83,16 +83,24 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       // 从稳定版 release 提取 APK 直链
       final apkUrl = _extractApkAssetUrl(latestRelease);
 
-      // 从 prerelease 提取开发版 APK 直链
+      // 从 prerelease 提取开发版 APK 直链和更新说明
       String? devApkUrl;
+      String? devNotes;
       if (prereleaseRelease != null) {
         devApkUrl = _extractApkAssetUrl(prereleaseRelease);
+        final devBody = prereleaseRelease['body']?.toString();
+        if (devBody != null && devBody.isNotEmpty) {
+          devNotes = devBody;
+        }
       }
 
-      // 从 nightlyUrl 仓库提取每夜版 APK 直链
+      // 从 nightlyUrl 仓库提取每夜版 APK 直链和更新说明
       String? nightlyApkUrl;
+      String? nightlyNotes;
       if (emulator.nightlyUrl.isNotEmpty) {
-        nightlyApkUrl = await _fetchNightlyApkUrl(emulator.nightlyUrl);
+        final nightlyResult = await _fetchNightlyApkUrl(emulator.nightlyUrl);
+        nightlyApkUrl = nightlyResult.apkUrl;
+        nightlyNotes = nightlyResult.releaseNotes;
       }
 
       return VersionInfo(
@@ -104,6 +112,8 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         downloadUrl: apkUrl,
         devDownloadUrl: devApkUrl,
         nightlyDownloadUrl: nightlyApkUrl,
+        devReleaseNotes: devNotes,
+        nightlyReleaseNotes: nightlyNotes,
       );
     } catch (_) {
       // API 失败 → 尝试 HTML 解析
@@ -111,13 +121,15 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 从 nightlyUrl 对应的 Forgejo 仓库提取最新 APK 直链。
+  /// 从 nightlyUrl 对应的 Forgejo 仓库提取最新 APK 直链和更新说明。
   ///
   /// nightlyUrl 可能指向与 sourceUrl 不同的仓库（如 Eden 的 CI 仓库）。
-  /// 解析 nightlyUrl 中的 host/owner/repo，查询其最新 release 的 APK asset。
-  Future<String?> _fetchNightlyApkUrl(String nightlyUrl) async {
+  /// 解析 nightlyUrl 中的 host/owner/repo，查询其最新 release 的 APK asset 和 body。
+  Future<({String? apkUrl, String? releaseNotes})> _fetchNightlyApkUrl(
+    String nightlyUrl,
+  ) async {
     final parsed = _parseRepo(nightlyUrl);
-    if (parsed == null) return null;
+    if (parsed == null) return (apkUrl: null, releaseNotes: null);
     final (host, owner, repo) = parsed;
 
     try {
@@ -127,13 +139,17 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       );
 
       final list = _asList(response.data);
-      if (list.isEmpty) return null;
+      if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
 
       final first = _asMap(list.first);
-      return _extractApkAssetUrl(first);
+      return (
+        apkUrl: _extractApkAssetUrl(first),
+        releaseNotes: first['body']?.toString(),
+      );
     } catch (_) {
       // API 失败 → 尝试 HTML 解析
-      return await _fetchApkUrlFromForgejoHtml(host, owner, repo);
+      final apkUrl = await _fetchApkUrlFromForgejoHtml(host, owner, repo);
+      return (apkUrl: apkUrl, releaseNotes: null);
     }
   }
 
