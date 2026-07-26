@@ -1,13 +1,13 @@
 {
   "emulatorId": "mame4droid",
-  "version": "1.37.6",
-  "releaseDate": "2026-07-11",
-  "releaseNotes": "New in 1.37.6: Added support for frame pacing and ADPF for improved performance on compatible devices. Fixes.\r\n****\r\nNew in 1.37.5: Refactor the OSD layer.  Some bug fixes and improvements.\r\n****\r\nNew in 1.37.4: New native system font rendering. Smarter haptics. Fixes.\r\n**** \r\nNew in 1.37.3: NetPlay IPv6 support — connects straight through CGNAT, ideal for playing over mobile networks (4G/5G)\r\n****\r\nNew in 1.37.2:   SAF concurrent persistent cache with lazy loading for improved start time\r\n****\r\nNew in 1.37.1: i18n & fixes\r\n****\r\n\r\n## 1.37 NetPlay\r\n\r\nThis release introduces **NetPlay**: play the same game together over Wi-Fi or the internet, built from scratch as a native part of MAME4droid rather than bolted on.\r\n\r\n### Two sync modes:\r\n- **Rollback** — save-state resimulation for near-zero input lag, ideal for fighting games and fast action titles. Boot is fully deterministic (RTC, samplerate, disk/NVRAM state pinned), so only inputs ever cross the network — nothing bulky to transfer at connect time.\r\n- **Lockstep** — simple guaranteed sync for titles where rollback doesn't apply cleanly.\r\n- A **CRC desync detector** watches the session and warns you the moment two machines drift apart, and a one-tap **Resync** recovers a live session without having to disconnect and start over.\r\n- **Adaptive input delay** reacts to sustained changes in latency rather than every ping blip, and frameskip stays network-aware to absorb the rough edges automatically.\r\n\r\n### Connect over the internet with zero setup\r\nNo account, no lobby, no relay server, no dedicated matchmaking service to run or trust — the app negotiates the connection itself:\r\n- **Full IPv6 support** (Network protocol: IPv4 / IPv6 / Auto). IPv6 has no NAT, so peers connect directly — the CGNAT wall that blocks IPv4 play on mobile carriers simply disappears. **Two phones on mobile data (4G/5G) connect with zero router setup**, making mobile networks the easiest way to play over the internet. The default stays IPv4 (the most field-tested path), but Auto is worth trying: the host accepts both families and one shared invite serves every peer.\r\n- A native STUN client (with proper symmetric-NAT detection, tuned to catch CGNAT/mobile carriers that other simple checks miss) discovers your public address — over IPv4 and IPv6 alike.\r\n- Automatic **UPnP port mapping** asks your router to open the game port for you the moment you host — no manual configuration, no forwarding rules to remember. It's cleaned up automatically when the session ends.\r\n- If UPnP isn't available, built-in **UDP hole punching** gets two peers talking directly through most home NATs anyway.\r\n- As a last resort, plain manual port forwarding still works, same as ever.\r\n\r\n### Getting connected is just... sharing a message\r\n- Hit **Share** and send your addresses (local + internet) to the other player through any messenger app you already use — no more reading digits off a screen and typing them in by hand.\r\n- Pasting a shared address back in is tolerant of the whole message, not just the raw IP — the best address is picked automatically.\r\n- A small connection stats overlay (ping/delay) is available during play, and audio automatically re-buffers around rollback stalls so hiccups don't turn into crackles.\r\n\r\nBoth players need the same MAME4droid build and the same game; a mismatched build is rejected cleanly at connect time instead of desyncing later.\r\n",
-  "author": "seleuco",
-  "commitSha": "4a4d6f9",
-  "commitDate": "2026-07-22",
-  "htmlUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.37.6",
-  "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/download/v1.37.6/MAME4droid.2026-1.37.6-release.apk",
+  "version": "",
+  "releaseDate": "",
+  "releaseNotes": "",
+  "author": "",
+  "commitSha": "",
+  "commitDate": "",
+  "htmlUrl": "https://github.com/seleuco/MAME4droid-Current/releases",
+  "downloadUrl": "",
   "source": "github-api",
-  "fetchedAt": "2026-07-26T23:31:10Z"
+  "fetchedAt": "2026-07-26T23:37:15Z"
 }
