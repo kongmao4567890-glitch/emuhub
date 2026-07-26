@@ -221,6 +221,17 @@ class SettingsPage extends ConsumerWidget {
                 ),
                 onTap: () => _launchRepo(context),
               ),
+              const Divider(height: 1, indent: 16),
+              ListTile(
+                leading: const Icon(Icons.person),
+                title: const Text('开发者'),
+                trailing: Text(
+                  '九尾猫游戏解说',
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ),
             ],
           ),
 

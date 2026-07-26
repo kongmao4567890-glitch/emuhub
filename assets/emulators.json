@@ -24,7 +24,7 @@
           "minAndroid": "5.0",
           "description": "最强大的Libretro前端，内置核心下载器、Netplay联机、倒带(Rewind)、成就系统(RetroAchievements)、着色器滤镜，覆盖从Atari到3DO几乎所有平台的核心，安卓端aarch64 nightly构建",
           "downloadUrl": "https://buildbot.libretro.com/nightly/android/RetroArch_aarch64.apk",
-          "nightlyUrl": "https://buildbot.libretro.com/nightly/android/latest/arm64-v8a/RetroArch.apk"
+          "nightlyUrl": "https://buildbot.libretro.com/nightly/android/"
         },
         {
           "id": "lemuroid",
@@ -137,14 +137,14 @@
           "name": "Handy (核心仓库)",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/libretro/handy-libretro",
+          "sourceUrl": "https://github.com/libretro/libretro-handy",
           "playStoreId": "",
           "website": "",
           "core": "Handy",
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Atari Lynx的Handy模拟器Libretro核心仓库，需通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/handy-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/libretro-handy"
         }
       ]
     },
@@ -209,7 +209,7 @@
           "minAndroid": "5.0",
           "description": "国人维护的NES模拟器，基于FCEUX核心，操作流畅，2026年7月仍在活跃更新",
           "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/latest/download/appgbc-release-V1501.apk",
-          "devUrl": "https://github.com/nzeidner/NostalgiaNES/releases"
+          "devUrl": ""
         },
         {
           "id": "nes_emu_ex",
@@ -481,14 +481,14 @@
           "name": "Yaba Sanshiro",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/devmiyax/yabause",
+          "sourceUrl": "https://www.yabasanshiro.com/",
           "playStoreId": "",
           "website": "",
           "core": "Yabause",
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "devmiyax维护的Yabause分叉，是安卓端少数有独立App的土星模拟器，Kronos即从此分叉演进，2025年12月更新加入Oboe实时音频",
-          "downloadUrl": "https://github.com/devmiyax/yabause/releases"
+          "downloadUrl": ""
         },
         {
           "id": "saturn_emu",
@@ -528,7 +528,7 @@
           "minAndroid": "6.0",
           "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi/Naomi 2/Atomiswave街机系统、GD-ROM与维米尔勒联网，活跃维护",
           "downloadUrl": "https://github.com/flyinghead/flycast/releases/latest/download/flycast-2.6.apk",
-          "devUrl": "https://github.com/flycast/flycast/releases"
+          "devUrl": "https://github.com/flyinghead/flycast/releases"
         },
         {
           "id": "lemuroid_dreamcast",
@@ -582,7 +582,7 @@
           "minAndroid": "5.0",
           "description": "国人维护的GBC模拟器，基于Gambatte核心，操作流畅，2026年7月仍在活跃更新",
           "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/latest/download/appgbc-release-V1501.apk",
-          "devUrl": "https://github.com/nzeidner/NostalgiaGBC/releases"
+          "devUrl": ""
         },
         {
           "id": "sameboy_core",
@@ -731,7 +731,7 @@
           "minAndroid": "5.0",
           "description": "Mupen64Plus的FZ优化分支，Play Store上的FZ Edition对应源码，支持GlideN64/Parallel等多视频插件",
           "downloadUrl": "https://github.com/fzurita/mupen64plus-ae/releases",
-          "devUrl": "https://github.com/mupen64plus-ae/fzurman-plus-ae/releases"
+          "devUrl": "https://github.com/fzurita/mupen64plus-ae/releases"
         },
         {
           "id": "nin64",
@@ -788,7 +788,7 @@
           "minAndroid": "5.0",
           "description": "商业NDS模拟器DraStic的国际化社区分叉，免费提供，性能与兼容性顶级，包含模拟摇杆触发器支持、右摇杆D-Pad模式、摇杆旋转模式、单屏布局显示下屏、TV模式快捷菜单，2026年7月活跃更新",
           "downloadUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases/latest/download/DraStic_r2.6.0.4a_build109_universal_rev260701.apk",
-          "devUrl": "https://github.com/DS-Devs/DrasticDSRevI18n/releases"
+          "devUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases"
         },
         {
           "id": "lemuroid_nds",
@@ -902,7 +902,7 @@
           "minAndroid": "5.0",
           "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
           "downloadUrl": "https://github.com/VentureStratosphereWorldwide/Dolphin-MMJR2-VBI/releases",
-          "devUrl": "https://github.com/Dolphin-MMJR2/Dolphin-MMJR2-VBI/releases"
+          "devUrl": "https://github.com/Medard22/Dolphin-MMJR2-VBI/releases"
         }
       ]
     },
@@ -954,7 +954,8 @@
           "minAndroid": "9.0",
           "description": "开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导。源码已迁移至自建Forgejo仓库(git.eden-emu.dev)，GitHub仓库曾被任天堂DMCA下架。最新稳定版v0.2.1(2026年6月)支持固件22.0、内置自动更新器、Vulkan性能优化。提供标准版/原神伪装版(伪装为Genshin Impact以启用旗舰设备帧生成等优化)/旧版(骁龙865等老芯片)三种APK变体，另有ChromeOS版本",
           "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk",
-          "devUrl": "https://git.eden-emu.dev/eden-emu/eden/releases"
+          "devUrl": "https://git.eden-emu.dev/eden-emu/eden/releases",
+          "nightlyUrl": "https://git.eden-emu.dev/eden-ci/nightly/releases"
         },
         {
           "id": "strato",
@@ -1004,15 +1005,15 @@
           "openSource": false,
           "sourceType": "github",
           "sourceUrl": "https://github.com/stenzek/duckstation",
-          "playStoreId": "",
+          "playStoreId": "com.github.stenzek.duckstation",
           "website": "https://www.duckstation.org/",
           "core": "",
           "compatibility": "perfect",
           "minAndroid": "7.0",
           "description": "最优秀的PS1模拟器，支持PGXP几何校正、高清渲染、即时存档、硬件光栅化、多线程CD读取。注意：许可证已改为CC-BY-NC-ND（非OSI开源），官方站点提供稳定APK，2026年7月仍高频更新",
           "downloadUrl": "https://www.duckstation.org/",
-          "devUrl": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-android.apk",
-          "nightlyUrl": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-android.apk"
+          "devUrl": "https://github.com/stenzek/duckstation/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "duckstation_gpl",
@@ -1169,7 +1170,7 @@
           "description": "PCSX2 fork，原生ARM64 JIT重编译器(EE/IOP/VU0/VU1/vtlb)，填补上游只有x86-64 JIT的空白。用LLM/AI辅助x86→ARM64翻译(~5万行发射器代码)。Local Link局域网联机(约57款PS2游戏)，异步GS回读，CPU亲和性控制，硬件ROV，ADPF，libretro核心(armsx2_libretro)，Adreno默认Vulkan，低延迟帧pacing。Stable+Nightly双轨",
           "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases/latest/download/ARMSX2-Refresh-2.6.5.1.apk",
           "devUrl": "",
-          "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly"
+          "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases"
         }
       ]
     },
@@ -1195,7 +1196,7 @@
           "minAndroid": "10.0",
           "description": "RPCSX模拟器的Android原生UI前端，Kotlin编写，支持自定义GPU驱动，2026年5月活跃开发中，PS3安卓模拟的新希望",
           "downloadUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases/latest/download/rpcsx-release.apk",
-          "devUrl": "https://github.com/Tech gearing/RPCSX/releases"
+          "devUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases"
         },
         {
           "id": "rpcsx_clanker",
@@ -1266,7 +1267,7 @@
           "minAndroid": "5.0",
           "description": "PPSSPP的低端设备优化分叉，主打Lower Spec Xtreme性能模式，含音频修复等额外功能，2026年1月更新",
           "downloadUrl": "https://github.com/KMFDManic/PPSSPP-Xtreme/releases",
-          "devUrl": "https://github.com/Joomsy/ppsspp/releases"
+          "devUrl": "https://www.ppsspp.org/devbuilds/"
         }
       ]
     },
@@ -3456,7 +3457,7 @@
           "description": "RPG Maker 2000/2003游戏的开源解释器，GPLv3开源。跨平台(Linux/macOS/Windows/Android/Web)。不支持XP/VX/Ace/MV/MZ。高分辨率渲染、Bug修复。提供APK+Chrome扩展+Libretro核心",
           "downloadUrl": "https://easyrpg.org/player/downloads/",
           "devUrl": "https://easyrpg.org/player/downloads/",
-          "nightlyUrl": "https://buildbot.easyrpg.org/"
+          "nightlyUrl": "https://easyrpg.org/player/downloads/"
         }
       ]
     },
@@ -4039,14 +4040,14 @@
           "name": "BlastEm (Mega-LD 核心)",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/VRCP-team/blastem-libretro",
+          "sourceUrl": "https://github.com/libretro/blastem",
           "playStoreId": "",
           "website": "",
           "core": "BlastEm",
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "BlastEm Libretro核心支持LaserActive Mega-LD（Sega PAC部分）。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/VRCP-team/blastem-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/blastem"
         }
       ]
     },
