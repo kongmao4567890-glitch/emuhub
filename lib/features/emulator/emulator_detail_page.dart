@@ -64,16 +64,28 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-class EmulatorDetailPage extends ConsumerWidget {
+/// 打开页面时自动触发一次版本检查，确保显示最新的版本信息和更新内容。
+class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
   final String emulatorId;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<EmulatorDetailPage> createState() => _EmulatorDetailPageState();
+}
+
+class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
+  /// 是否已完成自动检查（防止重复检查）。
+  bool _hasAutoChecked = false;
+
+  /// 是否正在检查更新。
+  bool _isChecking = false;
+
+  @override
+  Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
-    final cachedAsync = ref.watch(_cachedVersionProvider(emulatorId));
-    final isFavAsync = ref.watch(_isFavoriteProvider(emulatorId));
+    final cachedAsync = ref.watch(_cachedVersionProvider(widget.emulatorId));
+    final isFavAsync = ref.watch(_isFavoriteProvider(widget.emulatorId));
 
     return configAsync.when(
       loading: () => Scaffold(
@@ -85,7 +97,7 @@ class EmulatorDetailPage extends ConsumerWidget {
         body: _buildError(context, ref, error),
       ),
       data: (config) {
-        final result = findEmulator(config.consoles, emulatorId);
+        final result = findEmulator(config.consoles, widget.emulatorId);
         if (result == null) {
           return Scaffold(
             appBar: AppBar(),
@@ -94,6 +106,12 @@ class EmulatorDetailPage extends ConsumerWidget {
         }
         final console = result.console;
         final emulator = result.emulator;
+
+        // 首次加载配置后自动触发一次版本检查
+        if (!_hasAutoChecked) {
+          _hasAutoChecked = true;
+          _autoCheckUpdate(emulator);
+        }
 
         return Scaffold(
           body: CustomScrollView(
@@ -134,6 +152,20 @@ class EmulatorDetailPage extends ConsumerWidget {
         );
       },
     );
+  }
+
+  /// 自动触发一次版本检查，获取最新版本信息和更新内容。
+  void _autoCheckUpdate(Emulator emulator) {
+    // 防止重入
+    if (_isChecking) return;
+    setState(() => _isChecking = true);
+
+    final updateService = ref.read(updateServiceProvider);
+    updateService.checkOne(emulator).whenComplete(() {
+      if (mounted) {
+        setState(() => _isChecking = false);
+      }
+    });
   }
 
   /// 顶部 SliverAppBar，带机种真实图片作为 Hero 图标。
@@ -234,9 +266,54 @@ class EmulatorDetailPage extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('版本信息', style: theme.textTheme.titleMedium?.copyWith(
-          fontWeight: FontWeight.bold,
-        )),
+        Row(
+          children: [
+            Text('版本信息', style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            )),
+            if (_isChecking) ...[
+              const SizedBox(width: 8),
+              SizedBox(
+                width: 14,
+                height: 14,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  color: cs.primary,
+                ),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                '正在获取更新内容...',
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: cs.primary,
+                ),
+              ),
+            ],
+            const Spacer(),
+            if (!_isChecking)
+              IconButton(
+                icon: const Icon(Icons.refresh, size: 20),
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(
+                  minWidth: 32,
+                  minHeight: 32,
+                ),
+                tooltip: '检查更新',
+                onPressed: () {
+                  final config = ref.read(emulatorsConfigProvider);
+                  config.maybeWhen(
+                    data: (c) {
+                      final result = findEmulator(c.consoles, widget.emulatorId);
+                      if (result != null) {
+                        _autoCheckUpdate(result.emulator);
+                      }
+                    },
+                    orElse: () {},
+                  );
+                },
+              ),
+          ],
+        ),
         const SizedBox(height: 12),
         Card(
           child: Padding(
@@ -325,6 +402,33 @@ class EmulatorDetailPage extends ConsumerWidget {
                             color: cs.onSurfaceVariant,
                             height: 1.5,
                           ),
+                        ),
+                      ],
+                      // 正在检查但还没有更新内容时显示占位提示
+                      if (_isChecking &&
+                          (cached.releaseNotes == null ||
+                              cached.releaseNotes!.isEmpty)) ...[
+                        const SizedBox(height: 12),
+                        const Divider(),
+                        const SizedBox(height: 8),
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 14,
+                              height: 14,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: cs.onSurfaceVariant,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              '正在获取更新内容...',
+                              style: theme.textTheme.bodySmall?.copyWith(
+                                color: cs.onSurfaceVariant,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ],
@@ -575,10 +679,10 @@ class EmulatorDetailPage extends ConsumerWidget {
   ) async {
     final db = ref.read(appDatabaseProvider);
     if (isFav) {
-      await db.favoritesDao.removeFavorite(emulatorId);
+      await db.favoritesDao.removeFavorite(widget.emulatorId);
     } else {
       await db.favoritesDao.addFavorite(
-        emulatorId: emulatorId,
+        emulatorId: widget.emulatorId,
         consoleId: consoleId,
       );
     }
