@@ -10,15 +10,19 @@ import 'version_adapter.dart';
 ///
 /// 适用于 [Emulator.sourceType] 为 `github` 的模拟器。
 ///
-/// **核心策略**：优先使用「重定向解析法」，不经过 GitHub REST API，因此不受
-/// 60 次/小时 的匿名 API 限流约束。只有当重定向法失败时才回退到 API。
+/// **核心策略**（按优先级）：
 ///
 /// 1. **重定向法（主）**：请求 `https://github.com/owner/repo/releases/latest`，
 ///    GitHub 会 302 重定向到 `https://github.com/owner/repo/releases/tag/v1.2.3`，
-///    从重定向 Location 头直接提取版本号。无 API 限流。
-/// 2. **API 法（备）**：请求 `releases/latest` 接口。可获取发布日期和更新说明，
-///    但受匿名 60 次/小时限制。
-/// 3. **tags 接口（兜底）**：仓库没有 release 时，从 tags 接口取最新 tag。
+///    从重定向 Location 头直接提取版本号。**不消耗 API 配额**。
+///
+/// 2. **API releases 列表**：当重定向目标是 `/releases`（无 latest 标记）时，
+///    请求 `releases?per_page=1` 取最新一条 release。消耗 1 次 API 配额。
+///
+/// 3. **API tags**：仓库完全没有 release 时，从 `tags?per_page=1` 取最新 tag。
+///    消耗 1 次 API 配额。
+///
+/// 仅策略 2 和 3 消耗 GitHub API 匿名配额（60 次/小时），策略 1 完全不限流。
 class GitHubReleasesAdapter implements VersionAdapter {
   GitHubReleasesAdapter({Dio? dio})
       : _dio = dio ??
@@ -44,25 +48,24 @@ class GitHubReleasesAdapter implements VersionAdapter {
     if (parsed == null) return null;
     final (owner, repo) = parsed;
 
-    // 策略 1：重定向法（无 API 限流）
+    // 策略 1：重定向法（不消耗 API 配额）
     final redirectResult = await _fetchViaRedirect(emulator, owner, repo);
-    if (redirectResult != null) {
-      // 尝试用 API 补充发布日期和更新说明（即使失败也不影响版本号）
-      final enriched = await _tryEnrichFromApi(emulator, owner, repo, redirectResult);
-      return enriched ?? redirectResult;
-    }
+    if (redirectResult != null) return redirectResult;
 
-    // 策略 2：API releases/latest（可能触发限流）
-    final apiResult = await _fetchFromApi(emulator, owner, repo);
-    if (apiResult != null) return apiResult;
+    // 策略 2：API releases 列表（消耗 1 次配额）
+    final listResult = await _fetchFromApiReleasesList(emulator, owner, repo);
+    if (listResult != null) return listResult;
 
-    // 策略 3：tags 接口兜底
+    // 策略 3：API tags（消耗 1 次配额）
     return _fetchFromTags(emulator, owner, repo);
   }
 
   /// 重定向法：请求 releases/latest 页面，从 302 重定向 URL 提取版本号。
   ///
-  /// 此方法不经过 GitHub REST API，因此不受 60 次/小时的匿名限流约束。
+  /// 返回 `null` 的情况：
+  /// - 重定向到 `/releases`（有 releases 但无 latest 标记）→ 需要策略 2
+  /// - 返回 404（完全无 releases）→ 需要策略 3
+  /// - 网络错误
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
@@ -82,7 +85,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
       // 从重定向 URL 提取 tag：.../releases/tag/v1.2.3
       final tagMatch = RegExp(r'/releases/tag/(.+?)(?:\?|#|$)').firstMatch(location);
-      if (tagMatch == null) return null;
+      if (tagMatch == null) {
+        // 重定向到 /releases（无 tag）→ 返回 null 让策略 2 处理
+        return null;
+      }
 
       final tag = tagMatch.group(1)!;
       if (tag.isEmpty) return null;
@@ -102,57 +108,29 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 尝试用 API 补充发布日期和更新说明。失败时返回 null，不影响主流程。
-  Future<VersionInfo?> _tryEnrichFromApi(
-    Emulator emulator,
-    String owner,
-    String repo,
-    VersionInfo base,
-  ) async {
-    try {
-      final response = await _dio.get(
-        'https://api.github.com/repos/$owner/$repo/releases/latest',
-      );
-      final data = _asMap(response.data);
-      final tag = data['tag_name']?.toString();
-      if (tag == null || tag.isEmpty) return null;
-
-      // 只有 tag 匹配时才使用 API 数据
-      final apiVersion = _stripVPrefix(tag);
-      if (apiVersion != base.version) return null;
-
-      final releaseDate = _parseDate(data['published_at']?.toString());
-      final body = data['body']?.toString();
-
-      return VersionInfo(
-        emulatorId: emulator.id,
-        version: base.version,
-        releaseDate: releaseDate ?? base.releaseDate,
-        releaseNotes: body,
-        isNew: false,
-      );
-    } catch (_) {
-      return null;
-    }
-  }
-
-  /// API 法：直接请求 releases/latest 接口。
-  Future<VersionInfo?> _fetchFromApi(
+  /// API 法：请求 releases 列表，取第一条。
+  ///
+  /// 适用于仓库有 releases 但没有 "latest" 标记的情况（所有都是 prerelease）。
+  /// 消耗 1 次 GitHub API 匿名配额。
+  Future<VersionInfo?> _fetchFromApiReleasesList(
     Emulator emulator,
     String owner,
     String repo,
   ) async {
     try {
       final response = await _dio.get(
-        'https://api.github.com/repos/$owner/$repo/releases/latest',
+        'https://api.github.com/repos/$owner/$repo/releases?per_page=1',
       );
-      final data = _asMap(response.data);
-      final tag = data['tag_name']?.toString();
+      final list = _asList(response.data);
+      if (list.isEmpty) return null;
+
+      final first = _asMap(list.first);
+      final tag = first['tag_name']?.toString();
       if (tag == null || tag.isEmpty) return null;
 
       final version = _stripVPrefix(tag);
-      final releaseDate = _parseDate(data['published_at']?.toString());
-      final body = data['body']?.toString();
+      final releaseDate = _parseDate(first['published_at']?.toString());
+      final body = first['body']?.toString();
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -163,11 +141,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
       );
     } on DioException catch (e) {
       final status = e.response?.statusCode;
-      if (status == 404) {
-        // 没有 release，调用方会继续尝试 tags
-        return null;
-      }
-      // 403 限流或其它网络错误
+      if (status == 404) return null; // 无 releases，交给策略 3
+      // 403 限流 → 返回 null
       return null;
     } catch (_) {
       return null;
@@ -206,7 +181,6 @@ class GitHubReleasesAdapter implements VersionAdapter {
   }
 
   /// 从 GitHub 仓库 URL 解析出 (owner, repo)。
-  /// 支持 `https://github.com/owner/repo`、带尾斜杠、带 `.git` 后缀等形式。
   (String, String)? _parseRepo(String sourceUrl) {
     if (sourceUrl.isEmpty) return null;
     try {
@@ -252,9 +226,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
       try {
         final decoded = jsonDecode(data);
         if (decoded is Map) return Map<String, dynamic>.from(decoded);
-      } catch (_) {
-        // 忽略
-      }
+      } catch (_) {}
     }
     return <String, dynamic>{};
   }
@@ -266,9 +238,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
       try {
         final decoded = jsonDecode(data);
         if (decoded is List) return decoded;
-      } catch (_) {
-        // 忽略
-      }
+      } catch (_) {}
     }
     return <dynamic>[];
   }
