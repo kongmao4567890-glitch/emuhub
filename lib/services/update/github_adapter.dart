@@ -76,7 +76,11 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
     // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链和更新说明
     if (result != null && emulator.devUrl.isNotEmpty) {
-      final devResult = await _fetchPrereleaseApkUrl(owner, repo);
+      // 优先从 devUrl 解析仓库（devUrl 可能指向与 sourceUrl 不同的仓库）
+      final devParsed = _parseRepo(emulator.devUrl);
+      final devOwner = devParsed?.$1 ?? owner;
+      final devRepo = devParsed?.$2 ?? repo;
+      final devResult = await _fetchPrereleaseApkUrl(devOwner, devRepo);
       if (devResult.apkUrl != null || devResult.releaseNotes != null) {
         result = result.copyWith(
           devDownloadUrl: devResult.apkUrl,

@@ -94,6 +94,35 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         }
       }
 
+      // 如果 devUrl 指向不同的仓库，额外查询该仓库的 prerelease APK
+      if (devApkUrl == null && emulator.devUrl.isNotEmpty) {
+        final devParsed = _parseRepo(emulator.devUrl);
+        if (devParsed != null) {
+          final (devHost, devOwner, devRepo) = devParsed;
+          // 仅当 devUrl 仓库与 sourceUrl 仓库不同时才查询
+          if (devOwner != owner || devRepo != repo || devHost != host) {
+            try {
+              final devResponse = await _dio.get(
+                'https://$devHost/api/v1/repos/$devOwner/$devRepo/releases',
+                queryParameters: {'limit': 20},
+              );
+              final devList = _asList(devResponse.data);
+              for (final item in devList) {
+                final release = _asMap(item);
+                final apkUrl = _extractApkAssetUrl(release);
+                if (apkUrl != null) {
+                  devApkUrl = apkUrl;
+                  devNotes = release['body']?.toString();
+                  break;
+                }
+              }
+            } catch (_) {
+              // devUrl 仓库查询失败，忽略
+            }
+          }
+        }
+      }
+
       // 从 nightlyUrl 仓库提取每夜版 APK 直链和更新说明
       String? nightlyApkUrl;
       String? nightlyNotes;
