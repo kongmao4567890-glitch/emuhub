@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "lastUpdated": "2026-07-25",
+  "lastUpdated": "2026-07-26",
   "consoles": [
     {
       "id": "multi_system",
@@ -844,14 +844,14 @@
           "name": "Eden",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/eden-emulator",
+          "sourceUrl": "https://git.eden-emu.dev/eden-emu/eden",
           "playStoreId": "",
-          "website": "",
+          "website": "https://git.eden-emu.dev/eden-emu/eden",
           "core": "",
           "compatibility": "medium",
           "minAndroid": "9.0",
-          "description": "2025年发布的开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导，支持驱动自动推荐、联机大厅，2026年GitHub代码仓库曾被任天堂DMCA下架，组织主页仍在维护，提供标准/优化/旧版三种APK变体",
-          "downloadUrl": ""
+          "description": "开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导。源码已迁移至自建Forgejo仓库(git.eden-emu.dev)，GitHub仓库曾被任天堂DMCA下架。最新稳定版v0.2.1(2026年6月)支持固件22.0、内置自动更新器、Vulkan性能优化。提供标准版/原神伪装版(伪装为Genshin Impact以启用旗舰设备帧生成等优化)/旧版(骁龙865等老芯片)三种APK变体，另有ChromeOS版本",
+          "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk"
         },
         {
           "id": "strato",
@@ -1025,6 +1025,20 @@
           "minAndroid": "10.0",
           "description": "RPCSX模拟器的Android原生UI前端，Kotlin编写，支持自定义GPU驱动，2026年5月活跃开发中，PS3安卓模拟的新希望",
           "downloadUrl": ""
+        },
+        {
+          "id": "rpcsx_clanker",
+          "name": "RPCSX-Clanker (ouroboros420)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ouroboros420/rpcsx-ui-android",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "10.0",
+          "description": "RPCSX-UI的ouroboros420活跃分支(RPCSX-Clanker)，2026年7月最新版v2026.07.08。独有功能：游戏文件夹扫描与直接ISO播放、可排序/筛选游戏库、RPCN网络联机对战、Patch Manager补丁管理器(下载RPCS3官方补丁)、逐游戏配置、GPU turbo模式(Adreno满频)、Material 3主题。应用包名为net.rpcsx.clanker，可与官方RPCSX并存安装。仅arm64，主要适配骁龙8 Gen2/Adreno 740+Turnip驱动",
+          "downloadUrl": "https://github.com/ouroboros420/rpcsx-ui-android/releases/latest/download/app-release.apk"
         },
         {
           "id": "rpcs3_android",
@@ -1702,6 +1716,59 @@
           "minAndroid": "10.0",
           "description": "高级(HLE)xbox模拟器，将xbox API翻译为PC调用，目前仅Windows平台，Android端无可用构建，需从源码自行编译，仅供研究参考",
           "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "gpu_drivers",
+      "name": "GPU驱动 / Vulkan Drivers",
+      "vendor": "various",
+      "year": 2024,
+      "icon": "⚡",
+      "imagePath": "",
+      "description": "Adreno GPU的Vulkan驱动，可显著提升安卓模拟器图形性能与兼容性，需配合Adreno Tools应用安装",
+      "emulators": [
+        {
+          "id": "turnip_adreno",
+          "name": "Turnip Vulkan Driver (A7xx/A6xx)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "10.0",
+          "description": "开源Turnip Vulkan驱动，基于Mesa上游构建，适用于Adreno A7xx与A6xx GPU。最新版v26.3.0-R1(2026年7月)，Vulkan 1.4.354。安装后可显著提升Switch/PS2/PS3等模拟器的图形性能与兼容性，是安卓模拟器玩家的必备驱动。需通过Adreno Tools应用加载安装",
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/latest"
+        },
+        {
+          "id": "turnip_gen8",
+          "name": "Turnip Gen8 Driver (A8xx)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "10.0",
+          "description": "实验性Turnip驱动，支持新一代Adreno A8xx GPU(a840/a830/a829/a825/810)。最新版V33(2026年7月)，Vulkan 1.4.354。基于whitebelyash/mesa-unified gen8分支构建，尚在早期阶段",
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v33"
+        },
+        {
+          "id": "qualcomm_driver",
+          "name": "Qualcomm Driver v863.1",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "10.0",
+          "description": "高通专有Vulkan驱动，从Quest Ray-Ban Display设备提取，适用于Adreno A7xx与A6xx。部分游戏在专有驱动下表现优于Turnip开源驱动，可按需切换对比",
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v863.1_a7xx"
         }
       ]
     }
