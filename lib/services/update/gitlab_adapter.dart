@@ -167,15 +167,24 @@ class GitLabReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://$host/api/v4/projects/$encodedPath/releases',
-        queryParameters: {'per_page': 1},
+        queryParameters: {'per_page': 20},
       );
       final list = _asList(response.data);
       if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
-      final first = _asMap(list.first);
-      return (
-        apkUrl: _extractApkAssetUrl(first),
-        releaseNotes: first['description']?.toString(),
-      );
+
+      // 遍历所有 release，找到第一个包含 APK 资产的
+      for (final item in list) {
+        final release = _asMap(item);
+        final apkUrl = _extractApkAssetUrl(release);
+        if (apkUrl != null) {
+          return (
+            apkUrl: apkUrl,
+            releaseNotes: release['description']?.toString(),
+          );
+        }
+      }
+
+      return (apkUrl: null, releaseNotes: null);
     } catch (_) {
       return (apkUrl: null, releaseNotes: null);
     }
@@ -184,7 +193,8 @@ class GitLabReleasesAdapter implements VersionAdapter {
   /// 从 previewUrl（GitLab 仓库）提取预览版 APK 直链和更新说明。
   ///
   /// previewUrl 指向包含 beta/RC/preview 版本的 GitLab 仓库。
-  /// 解析 previewUrl 中的 host/projectPath，查询其最新 release。
+  /// 解析 previewUrl 中的 host/projectPath，查询其 releases 列表，
+  /// 遍历所有 release 找到包含 APK 资产的。
   Future<({String? apkUrl, String? releaseNotes})> _fetchPreviewApkFromGitLab(
     String previewUrl,
   ) async {
@@ -196,15 +206,24 @@ class GitLabReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://$host/api/v4/projects/$encodedPath/releases',
-        queryParameters: {'per_page': 1},
+        queryParameters: {'per_page': 20},
       );
       final list = _asList(response.data);
       if (list.isEmpty) return (apkUrl: null, releaseNotes: null);
-      final first = _asMap(list.first);
-      return (
-        apkUrl: _extractApkAssetUrl(first),
-        releaseNotes: first['description']?.toString(),
-      );
+
+      // 遍历所有 release，找到第一个包含 APK 资产的
+      for (final item in list) {
+        final release = _asMap(item);
+        final apkUrl = _extractApkAssetUrl(release);
+        if (apkUrl != null) {
+          return (
+            apkUrl: apkUrl,
+            releaseNotes: release['description']?.toString(),
+          );
+        }
+      }
+
+      return (apkUrl: null, releaseNotes: null);
     } catch (_) {
       return (apkUrl: null, releaseNotes: null);
     }

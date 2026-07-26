@@ -271,8 +271,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
   /// 获取最新的 prerelease（开发版/预览版）的 APK 直链和更新说明。
   ///
-  /// 查询 releases 列表（per_page=10），从中筛选第一个 `prerelease=true`
-  /// 的 release，提取其 APK asset URL 和 body（更新说明）。消耗 1 次 API 配额。
+  /// 查询 releases 列表（per_page=30），从中筛选第一个 `prerelease=true`
+  /// 且包含 APK 的 release。消耗 1 次 API 配额。
   ///
   /// 仅对配置了 devUrl 的模拟器调用，避免不必要的 API 消耗。
   /// 返回的 record 中 apkUrl 或 releaseNotes 可能为 null。
@@ -282,11 +282,11 @@ class GitHubReleasesAdapter implements VersionAdapter {
   ) async {
     try {
       final response = await _dio.get(
-        'https://api.github.com/repos/$owner/$repo/releases?per_page=10',
+        'https://api.github.com/repos/$owner/$repo/releases?per_page=30',
       );
       final list = _asList(response.data);
 
-      // 遍历查找第一个 prerelease
+      // 遍历查找第一个 prerelease 且包含 APK 的
       for (final item in list) {
         final release = _asMap(item);
         final isPrerelease = release['prerelease'];
@@ -299,14 +299,16 @@ class GitHubReleasesAdapter implements VersionAdapter {
         }
       }
 
-      // 如果没有 prerelease，尝试取第一个非 latest 的 release（可能是开发版）
-      // 适用于所有 release 都不是 prerelease 但有多个版本的情况
-      if (list.length > 1) {
-        final secondRelease = _asMap(list[1]);
-        return (
-          apkUrl: _extractApkAssetUrl(secondRelease),
-          releaseNotes: secondRelease['body']?.toString(),
-        );
+      // 如果没有 prerelease，遍历找第一个包含 APK 的 release
+      for (final item in list) {
+        final release = _asMap(item);
+        final apkUrl = _extractApkAssetUrl(release);
+        if (apkUrl != null) {
+          return (
+            apkUrl: apkUrl,
+            releaseNotes: release['body']?.toString(),
+          );
+        }
       }
 
       return (apkUrl: null, releaseNotes: null);
