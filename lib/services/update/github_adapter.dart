@@ -16,6 +16,10 @@ import 'version_adapter.dart';
 ///    GitHub 会 302 重定向到 `https://github.com/owner/repo/releases/tag/v1.2.3`，
 ///    从重定向 Location 头直接提取版本号。**不消耗 API 配额**。
 ///
+///    重定向成功后，尝试构造动态下载链接：
+///    - asset 名为静态（如 `ppsspp.apk`）→ `releases/latest/download/{asset}`（免费）
+///    - asset 名含版本号（如 `ARMSX2-2.6.5.2.apk`）→ 调用 API 获取真实直链（1 次配额）
+///
 /// 2. **API releases 列表**：当重定向目标是 `/releases`（无 latest 标记）时，
 ///    请求 `releases?per_page=1` 取最新一条 release。消耗 1 次 API 配额。
 ///
@@ -23,6 +27,7 @@ import 'version_adapter.dart';
 ///    消耗 1 次 API 配额。
 ///
 /// 仅策略 2 和 3 消耗 GitHub API 匿名配额（60 次/小时），策略 1 完全不限流。
+/// 策略 1 的 API 补充仅在 asset 名含版本号时触发，大部分模拟器不会触发。
 class GitHubReleasesAdapter implements VersionAdapter {
   GitHubReleasesAdapter({Dio? dio})
       : _dio = dio ??
@@ -67,8 +72,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// - 返回 404（完全无 releases）→ 需要策略 3
   /// - 网络错误
   ///
-  /// 成功时，同时构造 `releases/latest/download/` 形式的动态下载链接，
-  /// 写入 [VersionInfo.downloadUrl]。该链接会自动指向最新版本的 asset。
+  /// 成功时，构造动态下载链接：
+  /// - asset 名静态 → `releases/latest/download/{asset}`（免费）
+  /// - asset 名含版本号 → 调用 [_fetchAssetUrlByTag] 获取真实直链（1 次配额）
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
@@ -99,11 +105,25 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
-      // 构造动态下载链接：如果静态 downloadUrl 中包含 asset 名称，
-      // 则替换版本号为 latest/download 形式
+      // 尝试构造动态下载链接
       final dynamicDownloadUrl = _buildDynamicDownloadUrl(
         emulator, owner, repo, tag,
       );
+
+      // 如果动态链接有效（asset 名为静态），直接返回（无需 API 调用）
+      if (dynamicDownloadUrl != null && dynamicDownloadUrl.isNotEmpty) {
+        return VersionInfo(
+          emulatorId: emulator.id,
+          version: version,
+          releaseDate: DateTime.now(),
+          releaseNotes: null,
+          isNew: false,
+          downloadUrl: dynamicDownloadUrl,
+        );
+      }
+
+      // 动态链接无效（asset 名含版本号）→ 用 API 获取真实 asset 直链
+      final apkUrl = await _fetchAssetUrlByTag(owner, repo, tag);
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -111,7 +131,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         releaseDate: DateTime.now(),
         releaseNotes: null,
         isNew: false,
-        downloadUrl: dynamicDownloadUrl,
+        downloadUrl: apkUrl,
       );
     } catch (_) {
       return null;
@@ -197,6 +217,53 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
+  /// 通过 API 获取指定 tag 对应 release 的 APK 直链。
+  ///
+  /// 消耗 1 次 GitHub API 匿名配额。
+  /// 仅在重定向法获取到版本号、但 asset 名含版本号无法构造稳定链接时调用。
+  ///
+  /// 同时尝试带 `v` 前缀和不带前缀的 tag 两种形式。
+  Future<String?> _fetchAssetUrlByTag(
+    String owner,
+    String repo,
+    String tag,
+  ) async {
+    // 尝试原始 tag
+    var apkUrl = await _tryFetchReleaseAssets(owner, repo, tag);
+    if (apkUrl != null) return apkUrl;
+
+    // 如果原始 tag 不带 v 前缀，尝试加上
+    if (!tag.startsWith('v') && !tag.startsWith('V')) {
+      apkUrl = await _tryFetchReleaseAssets(owner, repo, 'v$tag');
+      if (apkUrl != null) return apkUrl;
+    }
+
+    // 如果原始 tag 带 v 前缀，尝试去掉
+    if (tag.startsWith('v') || tag.startsWith('V')) {
+      apkUrl = await _tryFetchReleaseAssets(owner, repo, tag.substring(1));
+      if (apkUrl != null) return apkUrl;
+    }
+
+    return null;
+  }
+
+  /// 请求 releases/tags/{tag} 接口并提取 APK asset URL。
+  Future<String?> _tryFetchReleaseAssets(
+    String owner,
+    String repo,
+    String tag,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://api.github.com/repos/$owner/$repo/releases/tags/$tag',
+      );
+      final release = _asMap(response.data);
+      return _extractApkAssetUrl(release);
+    } catch (_) {
+      return null;
+    }
+  }
+
   /// 从 GitHub 仓库 URL 解析出 (owner, repo)。
   (String, String)? _parseRepo(String sourceUrl) {
     if (sourceUrl.isEmpty) return null;
@@ -249,11 +316,15 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
   /// 构造动态下载链接。
   ///
-  /// 如果模拟器的静态 [downloadUrl] 已经是 `releases/latest/download/` 形式，
-  /// 直接返回（已动态）。
-  /// 如果是 `releases/download/{旧版本}/{asset}` 形式，提取 asset 名称，
-  /// 替换为 `releases/latest/download/{asset}` 形式（自动指向最新版）。
-  /// 如果静态 URL 无法解析出 asset 名，返回 null（由 API 策略处理）。
+  /// **返回非 null**：链接有效，可直接使用。
+  /// - 静态 URL 已是 `releases/latest/download/{asset}` 且 asset 名为静态 → 原样返回
+  /// - 静态 URL 是 `releases/download/{tag}/{asset}` 且 asset 名为静态 →
+  ///   转换为 `releases/latest/download/{asset}`
+  ///
+  /// **返回 null**：链接无效或易变，需要 API 获取真实 asset URL。
+  /// - asset 名包含版本号（如 `ARMSX2-2.6.5.2.apk`）→ 版本更新后 asset 名变化，
+  ///   即使 `latest/download/` 形式也会 404
+  /// - 静态 URL 无法解析出 asset 名
   String? _buildDynamicDownloadUrl(
     Emulator emulator,
     String owner,
@@ -263,12 +334,21 @@ class GitHubReleasesAdapter implements VersionAdapter {
     final staticUrl = emulator.downloadUrl;
     if (staticUrl.isEmpty) return null;
 
-    // 已经是 latest/download 形式，直接返回
+    // 情况 1：已经是 latest/download/{asset} 形式
     if (staticUrl.contains('/releases/latest/download/')) {
-      return staticUrl;
+      final assetMatch =
+          RegExp(r'/releases/latest/download/(.+)$').firstMatch(staticUrl);
+      if (assetMatch != null) {
+        final asset = assetMatch.group(1)!;
+        // 检查 asset 名是否含版本号（易变）
+        if (_isAssetNameVolatile(asset)) {
+          return null; // asset 名含版本号 → 需 API 获取真实直链
+        }
+      }
+      return staticUrl; // asset 名为静态，latest/download 有效
     }
 
-    // 从 releases/download/{tag}/{asset} 中提取 asset 名称
+    // 情况 2：releases/download/{tag}/{asset} 形式 → 转换为 latest/download
     final versionedMatch = RegExp(
       r'/releases/download/[^/]+/(.+)$',
     ).firstMatch(staticUrl);
@@ -276,12 +356,33 @@ class GitHubReleasesAdapter implements VersionAdapter {
     if (versionedMatch != null) {
       final asset = versionedMatch.group(1);
       if (asset != null && asset.isNotEmpty) {
+        // 检查 asset 名是否含版本号
+        if (_isAssetNameVolatile(asset)) {
+          return null; // asset 名含版本号 → 需 API 获取真实直链
+        }
         return 'https://github.com/$owner/$repo/releases/latest/download/$asset';
       }
     }
 
     // 无法从静态 URL 解析出 asset，返回 null
     return null;
+  }
+
+  /// 判断 asset 文件名是否包含版本号（即随版本更新而变化）。
+  ///
+  /// 包含版本号的 asset 名（如 `ARMSX2-Refresh-2.6.5.1.apk`）会随版本变化，
+  /// 即使使用 `releases/latest/download/` 形式也会因 asset 名不匹配而 404。
+  ///
+  /// 匹配模式：
+  /// - `x.y.z`（如 `2.6.5.1`、`1.2.3`）
+  /// - `x.y`（如 `2.6`、`0.5`）
+  /// - `x.y.z.build`（如 `4.0.Build.7533`）
+  bool _isAssetNameVolatile(String assetName) {
+    // 匹配 x.y.z 或更多点分段版本号
+    if (RegExp(r'\d+\.\d+\.\d+').hasMatch(assetName)) return true;
+    // 匹配 x.y 格式版本号
+    if (RegExp(r'\d+\.\d+').hasMatch(assetName)) return true;
+    return false;
   }
 
   /// 去除版本号前的 `v` / `V` 前缀。

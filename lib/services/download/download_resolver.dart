@@ -105,14 +105,29 @@ class DownloadResolver {
   }
 
   /// 判断 URL 是否可能因版本更新而失效（包含硬编码版本号）。
+  ///
+  /// 注意：`releases/latest/download/{asset}` 形式中，如果 asset 文件名
+  /// 包含版本号（如 `ARMSX2-2.6.5.2.apk`），版本更新后 asset 名会变化，
+  /// 导致 `latest/download/` 重定向 404。此类 URL 也被视为易变。
   static bool isUrlVolatile(String url) {
     if (url.isEmpty) return false;
-    // GitHub latest/download 形式不会失效
-    if (url.contains('/releases/latest/download/')) return false;
     // GitHub releases 页面不会失效
     if (url.endsWith('/releases')) return false;
     // Play Store 链接不会失效
     if (url.contains('play.google.com')) return false;
+    // GitHub latest/download/{asset} 形式：检查 asset 名是否含版本号
+    if (url.contains('/releases/latest/download/')) {
+      final assetMatch =
+          RegExp(r'/releases/latest/download/(.+)$').firstMatch(url);
+      if (assetMatch != null) {
+        final asset = assetMatch.group(1)!;
+        // asset 名含版本号 → 易变
+        if (RegExp(r'\d+\.\d+\.\d+').hasMatch(asset)) return true;
+        if (RegExp(r'\d+\.\d+').hasMatch(asset)) return true;
+      }
+      // asset 名为静态 → 不易变
+      return false;
+    }
     // 包含版本号模式的 URL 会失效
     if (RegExp(r'/v?\d+\.\d+\.\d+/').hasMatch(url)) return true;
     if (RegExp(r'/v?\d+\.\d+/').hasMatch(url)) return true;
