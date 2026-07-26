@@ -53,7 +53,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
     VersionInfo? result;
 
-    // 策略 1：重定向法（不消耗 API 配额）
+    // 策略 1：重定向法（不消耗 API 配额获取 tag，随后 API 获取 body+asset）
     result = await _fetchViaRedirect(emulator, owner, repo);
 
     // 策略 2：API releases 列表（消耗 1 次配额）
@@ -64,6 +64,25 @@ class GitHubReleasesAdapter implements VersionAdapter {
     // 策略 3：API tags（消耗 1 次配额）
     if (result == null) {
       result = await _fetchFromTags(emulator, owner, repo);
+    }
+
+    // 策略 4：HTML 解析法（API 全部限流时的回退方案，不消耗配额）
+    // 从 releases 页面 HTML 中提取版本号、更新内容和 APK 下载链接
+    if (result == null) {
+      result = await _fetchFromHtml(emulator, owner, repo);
+    }
+
+    // 如果已有版本信息但缺少 releaseNotes（API 限流导致），尝试 HTML 补充
+    if (result != null &&
+        (result.releaseNotes == null ||
+            result.releaseNotes!.isEmpty)) {
+      final tag = _reconstructTag(result.version);
+      if (tag != null) {
+        final htmlBody = await _fetchReleaseBodyFromHtml(owner, repo, tag);
+        if (htmlBody != null && htmlBody.isNotEmpty) {
+          result = result.copyWith(releaseNotes: htmlBody);
+        }
+      }
     }
 
     // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链和更新说明
@@ -135,7 +154,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
         );
       }
 
-      // API 失败（限流或网络错误）→ 回退到动态下载链接构造
+      // API 失败（限流或网络错误）→ 尝试 HTML 解析获取 release body
+      final htmlBody = await _fetchReleaseBodyFromHtml(owner, repo, tag);
+
+      // 同时回退到动态下载链接构造
       final dynamicDownloadUrl = _buildDynamicDownloadUrl(
         emulator, owner, repo, tag,
       );
@@ -144,7 +166,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         emulatorId: emulator.id,
         version: version,
         releaseDate: DateTime.now(),
-        releaseNotes: null,
+        releaseNotes: htmlBody,
         isNew: false,
         downloadUrl: dynamicDownloadUrl,
       );
@@ -230,6 +252,86 @@ class GitHubReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  /// HTML 解析法：从 GitHub releases 页面提取版本信息。
+  ///
+  /// 当 API 配额耗尽（所有 API 策略均返回 null）时的最终回退方案。
+  /// 请求 `https://github.com/{owner}/{repo}/releases` HTML 页面，
+  /// 从中提取最新 release 的版本号、更新内容和 APK 下载链接。
+  /// 不消耗 GitHub API 配额。
+  Future<VersionInfo?> _fetchFromHtml(
+    Emulator emulator,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases',
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      // 提取最新 release 的 tag（从 release 链接中）
+      // 形如 /Swordfish90/Lemuroid/releases/tag/1.17.0
+      final tagMatch = RegExp(
+        r'/releases/tag/([^"\x27/?#]+)',
+      ).firstMatch(html);
+
+      if (tagMatch == null) return null;
+
+      final tag = tagMatch.group(1)!;
+      final version = _stripVPrefix(tag);
+      if (version.isEmpty) return null;
+
+      // 提取更新内容
+      final body = _extractBodyFromHtml(html);
+
+      // 提取 APK 下载链接
+      // 形如 /Swordfish90/Lemuroid/releases/download/1.17.0/lemuroid-app-free-dynamic-release.apk
+      String? apkUrl;
+      final apkMatch = RegExp(
+        r'href="(/[^"]+/releases/download/[^"]+\.apk)"',
+      ).firstMatch(html);
+      if (apkMatch != null) {
+        apkUrl = 'https://github.com${apkMatch.group(1)}';
+      }
+
+      // 尝试从 HTML 中提取发布日期
+      DateTime? releaseDate;
+      final dateMatch = RegExp(
+        r'<relative-time[^>]*datetime="([^"]+)"',
+      ).firstMatch(html);
+      if (dateMatch != null) {
+        releaseDate = _parseDate(dateMatch.group(1));
+      }
+
+      return VersionInfo(
+        emulatorId: emulator.id,
+        version: version,
+        releaseDate: releaseDate ?? DateTime.now(),
+        releaseNotes: body,
+        isNew: false,
+        downloadUrl: apkUrl,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从版本号重建可能的 tag（添加 v 前缀）。
+  /// 用于在 API 限流后，通过 HTML 获取 release body。
+  String? _reconstructTag(String version) {
+    if (version.isEmpty) return null;
+    // 大多数仓库使用 v 前缀，但也有些不用
+    // 优先返回不带 v 的版本号（HTML URL 中通常使用原始 tag）
+    return version;
   }
 
   /// 获取最新的 prerelease（开发版/预览版）的 APK 直链和更新说明。
@@ -345,6 +447,79 @@ class GitHubReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  /// 从 GitHub release 页面 HTML 中提取更新说明（release body）。
+  ///
+  /// 当 GitHub API 限流（403）时作为回退方案，请求 release 页面 HTML
+  /// 并解析其中的更新内容文本。不消耗 API 配额。
+  ///
+  /// GitHub release 页面的 HTML 结构中，更新内容位于
+  /// `<div class="markdown-body">...</div>` 标签内。
+  Future<String?> _fetchReleaseBodyFromHtml(
+    String owner,
+    String repo,
+    String tag,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases/tag/$tag',
+        options: Options(
+          headers: {'Accept': 'text/html'},
+          responseType: ResponseType.plain,
+          validateStatus: (status) => status != null && status < 500,
+        ),
+      );
+
+      final html = response.data?.toString() ?? '';
+      if (html.isEmpty) return null;
+
+      return _extractBodyFromHtml(html);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 GitHub release 页面 HTML 中提取 release body 文本。
+  ///
+  /// GitHub release 页面中更新内容被包含在 `<div class="markdown-body">`
+  /// 标签内。提取该标签内容并去除 HTML 标签，保留纯文本。
+  String? _extractBodyFromHtml(String html) {
+    // 匹配 <div class="markdown-body">...</div>
+    final bodyMatch = RegExp(
+      r'<div[^>]*class="[^"]*markdown-body[^"]*"[^>]*>(.*?)</div>',
+      dotAll: true,
+    ).firstMatch(html);
+
+    if (bodyMatch == null) return null;
+
+    var body = bodyMatch.group(1);
+    if (body == null || body.trim().isEmpty) return null;
+
+    // 将 <li> 标签转换为换行 + 列表项
+    body = body.replaceAll(RegExp(r'<li[^>]*>'), '\n• ');
+    // 将 <p> 标签转换为换行
+    body = body.replaceAll(RegExp(r'</p>'), '\n');
+    body = body.replaceAll(RegExp(r'<p[^>]*>'), '');
+    // 将 <br> 转换为换行
+    body = body.replaceAll(RegExp(r'<br\s*/?>'), '\n');
+    // 将 <h1>-<h6> 转换为换行
+    body = body.replaceAll(RegExp(r'</?h[1-6][^>]*>'), '\n');
+    // 去除所有剩余 HTML 标签
+    body = body.replaceAll(RegExp(r'<[^>]+>'), '');
+    // 解码 HTML 实体
+    body = body
+        .replaceAll('&amp;', '&')
+        .replaceAll('&lt;', '<')
+        .replaceAll('&gt;', '>')
+        .replaceAll('&quot;', '"')
+        .replaceAll('&#39;', "'")
+        .replaceAll('&nbsp;', ' ')
+        .replaceAll('&times;', '×');
+    // 清理多余空行
+    body = body.replaceAll(RegExp(r'\n{3,}'), '\n\n').trim();
+
+    return body.isEmpty ? null : body;
   }
 
   /// 从 release 的 `assets` 数组中提取第一个 `.apk` 文件的下载地址。
