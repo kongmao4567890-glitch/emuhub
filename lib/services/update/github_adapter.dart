@@ -14,11 +14,10 @@ import 'version_adapter.dart';
 ///
 /// 1. **重定向法（主）**：请求 `https://github.com/owner/repo/releases/latest`，
 ///    GitHub 会 302 重定向到 `https://github.com/owner/repo/releases/tag/v1.2.3`，
-///    从重定向 Location 头直接提取版本号。**不消耗 API 配额**。
-///
-///    重定向成功后，尝试构造动态下载链接：
-///    - asset 名为静态（如 `ppsspp.apk`）→ `releases/latest/download/{asset}`（免费）
-///    - asset 名含版本号（如 `ARMSX2-2.6.5.2.apk`）→ 调用 API 获取真实直链（1 次配额）
+///    从重定向 Location 头直接提取版本号（不消耗配额）。
+///    随后调用 API `releases/tags/{tag}` 获取 release body（更新说明）、
+///    asset URL 和 published_at 日期（消耗 1 次配额）。
+///    若 API 因限流失败，回退到动态下载链接构造，releaseNotes 为 null。
 ///
 /// 2. **API releases 列表**：当重定向目标是 `/releases`（无 latest 标记）时，
 ///    请求 `releases?per_page=1` 取最新一条 release。消耗 1 次 API 配额。
@@ -26,8 +25,7 @@ import 'version_adapter.dart';
 /// 3. **API tags**：仓库完全没有 release 时，从 `tags?per_page=1` 取最新 tag。
 ///    消耗 1 次 API 配额。
 ///
-/// 仅策略 2 和 3 消耗 GitHub API 匿名配额（60 次/小时），策略 1 完全不限流。
-/// 策略 1 的 API 补充仅在 asset 名含版本号时触发，大部分模拟器不会触发。
+/// 策略 1-3 均消耗 GitHub API 匿名配额（60 次/小时），策略 1 的重定向本身不限流。
 class GitHubReleasesAdapter implements VersionAdapter {
   GitHubReleasesAdapter({Dio? dio})
       : _dio = dio ??
@@ -68,11 +66,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
       result = await _fetchFromTags(emulator, owner, repo);
     }
 
-    // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链
+    // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链和更新说明
     if (result != null && emulator.devUrl.isNotEmpty) {
-      final devApkUrl = await _fetchPrereleaseApkUrl(owner, repo);
-      if (devApkUrl != null) {
-        result = result.copyWith(devDownloadUrl: devApkUrl);
+      final devInfo = await _fetchPrereleaseInfo(owner, repo);
+      if (devInfo != null) {
+        result = result.copyWith(
+          devDownloadUrl: devInfo.apkUrl,
+          devReleaseNotes: devInfo.body,
+        );
       }
     }
 
@@ -86,9 +87,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// - 返回 404（完全无 releases）→ 需要策略 3
   /// - 网络错误
   ///
-  /// 成功时，构造动态下载链接：
-  /// - asset 名静态 → `releases/latest/download/{asset}`（免费）
-  /// - asset 名含版本号 → 调用 [_fetchAssetUrlByTag] 获取真实直链（1 次配额）
+  /// 成功后，始终调用 API `releases/tags/{tag}` 获取 release body（更新说明）
+  /// 和 published_at 发布日期，消耗 1 次 API 配额。
+  /// 若 API 调用因限流失败，则回退到动态下载链接构造，releaseNotes 为 null。
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
@@ -119,25 +120,25 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
-      // 尝试构造动态下载链接
-      final dynamicDownloadUrl = _buildDynamicDownloadUrl(
-        emulator, owner, repo, tag,
-      );
+      // 始终通过 API 获取 release body（更新说明）+ asset URL + 发布日期
+      final releaseInfo = await _fetchReleaseInfoByTag(owner, repo, tag);
 
-      // 如果动态链接有效（asset 名为静态），直接返回（无需 API 调用）
-      if (dynamicDownloadUrl != null && dynamicDownloadUrl.isNotEmpty) {
+      // 如果 API 成功，使用其 asset URL 和 release body
+      if (releaseInfo != null) {
         return VersionInfo(
           emulatorId: emulator.id,
           version: version,
-          releaseDate: DateTime.now(),
-          releaseNotes: null,
+          releaseDate: releaseInfo.publishedAt ?? DateTime.now(),
+          releaseNotes: releaseInfo.body,
           isNew: false,
-          downloadUrl: dynamicDownloadUrl,
+          downloadUrl: releaseInfo.apkUrl,
         );
       }
 
-      // 动态链接无效（asset 名含版本号）→ 用 API 获取真实 asset 直链
-      final apkUrl = await _fetchAssetUrlByTag(owner, repo, tag);
+      // API 失败（限流或网络错误）→ 回退到动态下载链接构造
+      final dynamicDownloadUrl = _buildDynamicDownloadUrl(
+        emulator, owner, repo, tag,
+      );
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -145,7 +146,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         releaseDate: DateTime.now(),
         releaseNotes: null,
         isNew: false,
-        downloadUrl: apkUrl,
+        downloadUrl: dynamicDownloadUrl,
       );
     } catch (_) {
       return null;
@@ -231,14 +232,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 获取最新的 prerelease（开发版/预览版）的 APK 直链。
+  /// 获取最新的 prerelease（开发版/预览版）的 APK 直链和更新说明。
   ///
   /// 查询 releases 列表（per_page=10），从中筛选第一个 `prerelease=true`
-  /// 的 release，提取其 APK asset URL。消耗 1 次 API 配额。
+  /// 的 release，提取其 APK asset URL 和 body（更新说明）。消耗 1 次 API 配额。
   ///
   /// 仅对配置了 devUrl 的模拟器调用，避免不必要的 API 消耗。
   /// 返回 null 表示无 prerelease 或 API 调用失败。
-  Future<String?> _fetchPrereleaseApkUrl(
+  Future<({String? apkUrl, String? body})?> _fetchPrereleaseInfo(
     String owner,
     String repo,
   ) async {
@@ -254,7 +255,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
         final isPrerelease = release['prerelease'];
         if (isPrerelease == true) {
           final apkUrl = _extractApkAssetUrl(release);
-          if (apkUrl != null) return apkUrl;
+          if (apkUrl != null) {
+            return (apkUrl: apkUrl, body: release['body']?.toString());
+          }
         }
       }
 
@@ -262,7 +265,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
       // 适用于所有 release 都不是 prerelease 但有多个版本的情况
       if (list.length > 1) {
         final secondRelease = _asMap(list[1]);
-        return _extractApkAssetUrl(secondRelease);
+        final apkUrl = _extractApkAssetUrl(secondRelease);
+        if (apkUrl != null) {
+          return (apkUrl: apkUrl, body: secondRelease['body']?.toString());
+        }
       }
 
       return null;
@@ -271,38 +277,38 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 通过 API 获取指定 tag 对应 release 的 APK 直链。
+  /// 通过 API 获取指定 tag 对应 release 的完整信息（APK 直链 + body + 发布日期）。
   ///
   /// 消耗 1 次 GitHub API 匿名配额。
-  /// 仅在重定向法获取到版本号、但 asset 名含版本号无法构造稳定链接时调用。
+  /// 在重定向法获取到版本号后调用，用于获取更新说明和真实 asset 直链。
   ///
   /// 同时尝试带 `v` 前缀和不带前缀的 tag 两种形式。
-  Future<String?> _fetchAssetUrlByTag(
+  Future<({String? apkUrl, String? body, DateTime? publishedAt})?> _fetchReleaseInfoByTag(
     String owner,
     String repo,
     String tag,
   ) async {
     // 尝试原始 tag
-    var apkUrl = await _tryFetchReleaseAssets(owner, repo, tag);
-    if (apkUrl != null) return apkUrl;
+    var result = await _tryFetchReleaseInfo(owner, repo, tag);
+    if (result != null) return result;
 
     // 如果原始 tag 不带 v 前缀，尝试加上
     if (!tag.startsWith('v') && !tag.startsWith('V')) {
-      apkUrl = await _tryFetchReleaseAssets(owner, repo, 'v$tag');
-      if (apkUrl != null) return apkUrl;
+      result = await _tryFetchReleaseInfo(owner, repo, 'v$tag');
+      if (result != null) return result;
     }
 
     // 如果原始 tag 带 v 前缀，尝试去掉
     if (tag.startsWith('v') || tag.startsWith('V')) {
-      apkUrl = await _tryFetchReleaseAssets(owner, repo, tag.substring(1));
-      if (apkUrl != null) return apkUrl;
+      result = await _tryFetchReleaseInfo(owner, repo, tag.substring(1));
+      if (result != null) return result;
     }
 
     return null;
   }
 
-  /// 请求 releases/tags/{tag} 接口并提取 APK asset URL。
-  Future<String?> _tryFetchReleaseAssets(
+  /// 请求 releases/tags/{tag} 接口并提取完整 release 信息。
+  Future<({String? apkUrl, String? body, DateTime? publishedAt})?> _tryFetchReleaseInfo(
     String owner,
     String repo,
     String tag,
@@ -312,7 +318,11 @@ class GitHubReleasesAdapter implements VersionAdapter {
         'https://api.github.com/repos/$owner/$repo/releases/tags/$tag',
       );
       final release = _asMap(response.data);
-      return _extractApkAssetUrl(release);
+      return (
+        apkUrl: _extractApkAssetUrl(release),
+        body: release['body']?.toString(),
+        publishedAt: _parseDate(release['published_at']?.toString()),
+      );
     } catch (_) {
       return null;
     }

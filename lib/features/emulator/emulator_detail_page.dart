@@ -469,6 +469,43 @@ class EmulatorDetailPage extends ConsumerWidget {
             url: devUrl,
             color: Colors.orange,
           ),
+          // 开发版更新说明
+          if (cached?.resolvedDevReleaseNotes != null &&
+              cached!.resolvedDevReleaseNotes!.isNotEmpty) ...[
+            const SizedBox(height: 4),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 8),
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.06),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '开发版更新说明',
+                      style: theme.textTheme.labelSmall?.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.orange.shade700,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      ReleaseNotesTranslator.translate(
+                              cached.resolvedDevReleaseNotes) ??
+                          cached.resolvedDevReleaseNotes!,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: cs.onSurfaceVariant,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
           const SizedBox(height: 8),
         ],
         // 每夜版/持续构建

@@ -210,6 +210,7 @@ class UpdateService {
         isNew: isNew,
         downloadUrl: latest.downloadUrl,
         devDownloadUrl: latest.devDownloadUrl,
+        devReleaseNotes: latest.devReleaseNotes,
       );
 
       await _dao.upsertFromVersionInfo(versionInfo);
