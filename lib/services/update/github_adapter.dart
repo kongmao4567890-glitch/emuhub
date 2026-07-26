@@ -66,6 +66,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// - 重定向到 `/releases`（有 releases 但无 latest 标记）→ 需要策略 2
   /// - 返回 404（完全无 releases）→ 需要策略 3
   /// - 网络错误
+  ///
+  /// 成功时，同时构造 `releases/latest/download/` 形式的动态下载链接，
+  /// 写入 [VersionInfo.downloadUrl]。该链接会自动指向最新版本的 asset。
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
@@ -96,12 +99,19 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
+      // 构造动态下载链接：如果静态 downloadUrl 中包含 asset 名称，
+      // 则替换版本号为 latest/download 形式
+      final dynamicDownloadUrl = _buildDynamicDownloadUrl(
+        emulator, owner, repo, tag,
+      );
+
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
         releaseDate: DateTime.now(),
         releaseNotes: null,
         isNew: false,
+        downloadUrl: dynamicDownloadUrl,
       );
     } catch (_) {
       return null;
@@ -112,6 +122,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   ///
   /// 适用于仓库有 releases 但没有 "latest" 标记的情况（所有都是 prerelease）。
   /// 消耗 1 次 GitHub API 匿名配额。
+  ///
+  /// 同时从 release 的 `assets` 数组中提取 APK 直链下载地址，
+  /// 写入 [VersionInfo.downloadUrl]，供 UI 层动态使用。
   Future<VersionInfo?> _fetchFromApiReleasesList(
     Emulator emulator,
     String owner,
@@ -132,12 +145,16 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final releaseDate = _parseDate(first['published_at']?.toString());
       final body = first['body']?.toString();
 
+      // 从 assets 数组中提取 APK 直链
+      final apkUrl = _extractApkAssetUrl(first);
+
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
         releaseDate: releaseDate ?? DateTime.now(),
         releaseNotes: body,
         isNew: false,
+        downloadUrl: apkUrl,
       );
     } on DioException catch (e) {
       final status = e.response?.statusCode;
@@ -197,6 +214,74 @@ class GitHubReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  /// 从 release 的 `assets` 数组中提取第一个 `.apk` 文件的下载地址。
+  ///
+  /// GitHub API 的 release 对象包含 `assets` 数组，每个 asset 有
+  /// `browser_download_url` 字段。返回第一个以 `.apk` 结尾的 URL，
+  /// 优先选择 `arm64` / `aarch64` 架构的包。
+  String? _extractApkAssetUrl(Map<String, dynamic> release) {
+    final assets = release['assets'];
+    if (assets is! List) return null;
+
+    String? arm64Apk;
+    String? anyApk;
+
+    for (final asset in assets) {
+      final assetMap = _asMap(asset);
+      final url = assetMap['browser_download_url']?.toString();
+      if (url == null || url.isEmpty) continue;
+      if (!url.toLowerCase().endsWith('.apk')) continue;
+
+      final name = (assetMap['name']?.toString() ?? '').toLowerCase();
+      // 优先选择 arm64/aarch64 架构的 APK
+      if (name.contains('arm64') ||
+          name.contains('aarch64') ||
+          name.contains('arm64-v8a')) {
+        arm64Apk = url;
+      }
+      anyApk ??= url;
+    }
+
+    return arm64Apk ?? anyApk;
+  }
+
+  /// 构造动态下载链接。
+  ///
+  /// 如果模拟器的静态 [downloadUrl] 已经是 `releases/latest/download/` 形式，
+  /// 直接返回（已动态）。
+  /// 如果是 `releases/download/{旧版本}/{asset}` 形式，提取 asset 名称，
+  /// 替换为 `releases/latest/download/{asset}` 形式（自动指向最新版）。
+  /// 如果静态 URL 无法解析出 asset 名，返回 null（由 API 策略处理）。
+  String? _buildDynamicDownloadUrl(
+    Emulator emulator,
+    String owner,
+    String repo,
+    String latestTag,
+  ) {
+    final staticUrl = emulator.downloadUrl;
+    if (staticUrl.isEmpty) return null;
+
+    // 已经是 latest/download 形式，直接返回
+    if (staticUrl.contains('/releases/latest/download/')) {
+      return staticUrl;
+    }
+
+    // 从 releases/download/{tag}/{asset} 中提取 asset 名称
+    final versionedMatch = RegExp(
+      r'/releases/download/[^/]+/(.+)$',
+    ).firstMatch(staticUrl);
+
+    if (versionedMatch != null) {
+      final asset = versionedMatch.group(1);
+      if (asset != null && asset.isNotEmpty) {
+        return 'https://github.com/$owner/$repo/releases/latest/download/$asset';
+      }
+    }
+
+    // 无法从静态 URL 解析出 asset，返回 null
+    return null;
   }
 
   /// 去除版本号前的 `v` / `V` 前缀。

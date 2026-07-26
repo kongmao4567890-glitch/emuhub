@@ -231,6 +231,9 @@ class UpdateService {
   ///
   /// 适用于 downloadUrl 中包含版本号的情况，如：
   /// `https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk`
+  ///
+  /// 返回的 [VersionInfo.downloadUrl] 设为原始 downloadUrl，
+  /// 由 [DownloadResolver] 在 UI 层根据最新版本号动态替换。
   Future<VersionInfo?> _tryFromDownloadUrl(Emulator emulator) async {
     final url = emulator.downloadUrl;
     if (url.isEmpty) return null;
@@ -256,6 +259,8 @@ class UpdateService {
             releaseDate: DateTime.now(),
             releaseNotes: null,
             isNew: false,
+            // 保留原始 downloadUrl，UI 层会根据最新版本动态替换
+            downloadUrl: url,
           );
         }
       }

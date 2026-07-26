@@ -9,6 +9,7 @@ import '../../data/database/database.dart';
 import '../../data/models/console.dart';
 import '../../data/models/emulator.dart';
 import '../../providers.dart';
+import '../../services/download/download_resolver.dart';
 import '../../widgets/version_badge.dart';
 import '../consoles/consoles_page.dart' show vendorDisplayName;
 
@@ -117,7 +118,7 @@ class EmulatorDetailPage extends ConsumerWidget {
                         const SizedBox(height: 20),
                         _buildDescription(context, emulator),
                         const SizedBox(height: 20),
-                        _buildDownloadButtons(context, emulator),
+                        _buildDownloadButtons(context, emulator, cached),
                         const SizedBox(height: 16),
                         _buildFavoriteButton(
                             context, ref, isFavAsync, console.id),
@@ -409,9 +410,31 @@ class EmulatorDetailPage extends ConsumerWidget {
   }
 
   /// 下载源按钮（含稳定版、开发版、每夜版三个渠道）。
-  Widget _buildDownloadButtons(BuildContext context, Emulator emulator) {
+  ///
+  /// 优先使用缓存中的动态下载链接（由适配器在版本检查时解析），
+  /// 避免模拟器更新后静态 URL 404。
+  Widget _buildDownloadButtons(
+    BuildContext context,
+    Emulator emulator,
+    CachedVersion? cached,
+  ) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
+
+    // 解析动态下载链接
+    final latestVersion = cached?.currentVersion;
+    final cachedDownloadUrl = cached?.resolvedDownloadUrl;
+
+    final stableUrl = DownloadResolver.resolveStableUrl(
+      emulator,
+      cachedDownloadUrl: cachedDownloadUrl,
+      latestVersion: latestVersion,
+    );
+    final devUrl = DownloadResolver.resolveDevUrl(
+      emulator,
+      latestVersion: latestVersion,
+    );
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -420,24 +443,24 @@ class EmulatorDetailPage extends ConsumerWidget {
         )),
         const SizedBox(height: 12),
         // 稳定版直接下载 APK
-        if (emulator.downloadUrl.isNotEmpty) ...[
+        if (stableUrl.isNotEmpty) ...[
           _DownloadChannelCard(
             icon: Icons.download,
             label: '稳定版（最新发布）',
             description: '经过测试的稳定版本',
-            url: emulator.downloadUrl,
+            url: stableUrl,
             color: cs.primary,
             isPrimary: true,
           ),
           const SizedBox(height: 8),
         ],
         // 开发版/预览版
-        if (emulator.devUrl.isNotEmpty) ...[
+        if (devUrl.isNotEmpty) ...[
           _DownloadChannelCard(
             icon: Icons.developer_mode,
             label: '开发版（最新预览）',
             description: '包含最新功能，可能不稳定',
-            url: emulator.devUrl,
+            url: devUrl,
             color: Colors.orange,
           ),
           const SizedBox(height: 8),

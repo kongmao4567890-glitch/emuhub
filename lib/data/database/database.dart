@@ -29,6 +29,7 @@ class Favorites extends Table {
 /// - [lastReleaseDate] 上次发现的发布时间（Unix 毫秒时间戳，可为空）
 /// - [releaseNotes] 版本更新说明，可为空
 /// - [isNew] 是否存在尚未被用户查看的新版本
+/// - [resolvedDownloadUrl] 适配器动态解析的最新版直链下载地址，避免静态 URL 404
 @DataClassName('CachedVersion')
 class CachedVersions extends Table {
   TextColumn get emulatorId => text()();
@@ -37,6 +38,10 @@ class CachedVersions extends Table {
   IntColumn get lastReleaseDate => integer().nullable()();
   TextColumn get releaseNotes => text().nullable()();
   BoolColumn get isNew => boolean().withDefault(const Constant(false))();
+
+  /// 动态解析的下载直链，由适配器在版本检查时写入。
+  /// 为 null 时回退到 emulators.json 中的静态 downloadUrl。
+  TextColumn get resolvedDownloadUrl => text().nullable()();
 
   @override
   Set<Column> get primaryKey => {emulatorId};
@@ -167,6 +172,7 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
         lastReleaseDate: Value(info.releaseDate.millisecondsSinceEpoch),
         releaseNotes: Value(info.releaseNotes),
         isNew: Value(info.isNew),
+        resolvedDownloadUrl: Value(info.downloadUrl),
         lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
       ),
     );
@@ -206,5 +212,17 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration {
+    return MigrationStrategy(
+      onCreate: (m) => m.createAll(),
+      onUpgrade: (m, from, to) async {
+        if (from < 2) {
+          await m.addColumn(cachedVersions, cachedVersions.resolvedDownloadUrl);
+        }
+      },
+    );
+  }
 }
