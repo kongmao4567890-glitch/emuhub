@@ -1,5 +1,5 @@
 {
-  "version": "3.0.3",
+  "version": "3.0.4",
   "lastUpdated": "2026-07-26",
   "consoles": [
     {
@@ -23,7 +23,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "最强大的Libretro前端，内置核心下载器、Netplay联机、倒带(Rewind)、成就系统(RetroAchievements)、着色器滤镜，覆盖从Atari到3DO几乎所有平台的核心，安卓端aarch64 nightly构建",
-          "downloadUrl": "https://buildbot.libretro.com/nightly/android/RetroArch_aarch64.apk"
+          "downloadUrl": "https://buildbot.libretro.com/nightly/android/RetroArch_aarch64.apk",
+          "nightlyUrl": "https://buildbot.libretro.com/nightly/android/latest/arm64-v8a/RetroArch.apk"
         },
         {
           "id": "lemuroid",
@@ -207,7 +208,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "国人维护的NES模拟器，基于FCEUX核心，操作流畅，2026年7月仍在活跃更新",
-          "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/download/v1.5.1/appnes-release-V1501.apk"
+          "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/download/v1.5.1/appnes-release-V1501.apk",
+          "devUrl": "https://github.com/nzeidner/NostalgiaNES/releases"
         },
         {
           "id": "nes_emu_ex",
@@ -525,7 +527,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi/Naomi 2/Atomiswave街机系统、GD-ROM与维米尔勒联网，活跃维护",
-          "downloadUrl": "https://github.com/flyinghead/flycast/releases/download/v2.6/flycast-2.6.apk"
+          "downloadUrl": "https://github.com/flyinghead/flycast/releases/download/v2.6/flycast-2.6.apk",
+          "devUrl": "https://github.com/flycast/flycast/releases"
         },
         {
           "id": "lemuroid_dreamcast",
@@ -578,7 +581,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "国人维护的GBC模拟器，基于Gambatte核心，操作流畅，2026年7月仍在活跃更新",
-          "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/download/v1.5.1/appgbc-release-V1501.apk"
+          "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/download/v1.5.1/appgbc-release-V1501.apk",
+          "devUrl": "https://github.com/nzeidner/NostalgiaGBC/releases"
         },
         {
           "id": "sameboy_core",
@@ -726,7 +730,24 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Mupen64Plus的FZ优化分支，Play Store上的FZ Edition对应源码，支持GlideN64/Parallel等多视频插件",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/mupen64plus-ae/fzurman-plus-ae/releases"
+        },
+        {
+          "id": "nin64",
+          "name": "Nin64",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/izzy2lost/Nin64-Emulator",
+          "playStoreId": "com.izzy2lost.nin64",
+          "website": "https://github.com/izzy2lost/Nin64-Emulator",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "8.0",
+          "description": "基于Mupen64Plus-Next libretro核心的安卓N64模拟器封装。GLideN64渲染器，最高8x分辨率缩放，高清纹理包，作弊码管理器(GameShark/Action Replay)，可自定义触控布局，Google Oboe低延迟音频，SRAM/FlashRAM/EEPROM/MemPak持久化。Google Play免费(带广告)",
+          "downloadUrl": "",
+          "devUrl": "",
+          "nightlyUrl": ""
         }
       ]
     },
@@ -751,7 +772,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "高精度NDS模拟器melonDS的Android移植版，模拟准确性优秀，活跃维护中",
-          "downloadUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases/latest/download/app-gitHub-prod-release.apk"
+          "downloadUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases/latest/download/app-gitHub-prod-release.apk",
+          "nightlyUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases"
         },
         {
           "id": "drastic_rev_i18n",
@@ -765,7 +787,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "商业NDS模拟器DraStic的国际化社区分叉，免费提供，性能与兼容性顶级，包含模拟摇杆触发器支持、右摇杆D-Pad模式、摇杆旋转模式、单屏布局显示下屏、TV模式快捷菜单，2026年7月活跃更新",
-          "downloadUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev260701/DraStic_r2.6.0.4a_build109_universal_rev260701.apk"
+          "downloadUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev260701/DraStic_r2.6.0.4a_build109_universal_rev260701.apk",
+          "devUrl": "https://github.com/DS-Devs/DrasticDSRevI18n/releases"
         },
         {
           "id": "lemuroid_nds",
@@ -780,6 +803,22 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用melonDS核心模拟NDS",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "melondualds",
+          "name": "melonDualDS",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/SapphireRhodonite/melonDS-android",
+          "playStoreId": "",
+          "website": "https://github.com/SapphireRhodonite/melonDS-android",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "melonDS安卓移植的活跃分支(fork自rafaelvcaetano/melonDS-android)。RetroAchievements Hardcore模式(经RA团队批准)，RAOfflineProxy离线成就，Vulkan渲染器，AdrenoTools自定义Turnip驱动，DSiWare支持，RetroArch/librashader着色器。下版本将推出实验性Vulkan FastPath与纹理替换系统",
+          "downloadUrl": "https://github.com/SapphireRhodonite/melonDS-android/releases/latest/download/melonDS-android.apk",
+          "devUrl": "https://github.com/SapphireRhodonite/melonDS-android/releases",
+          "nightlyUrl": ""
         }
       ]
     },
@@ -804,7 +843,9 @@
           "compatibility": "good",
           "minAndroid": "10.0",
           "description": "PabloMK7的Citra分支与Lime3DS合并而成的3DS模拟器，Citra下架后的事实标准继承者，独创禁用右眼渲染单眼模式可提升50%性能，2026年7月极活跃",
-          "downloadUrl": "https://github.com/azahar-emu/azahar/releases/download/2125.1.3/azahar-android-vanilla-2125.1.3.apk"
+          "downloadUrl": "https://github.com/azahar-emu/azahar/releases/download/2125.1.3/azahar-android-vanilla-2125.1.3.apk",
+          "devUrl": "https://github.com/azahar-emu/azahar/releases",
+          "nightlyUrl": "https://github.com/azahar-emu/azahar/releases"
         },
         {
           "id": "lime3ds",
@@ -818,7 +859,8 @@
           "compatibility": "good",
           "minAndroid": "8.0",
           "description": "Citra的社区分支，已于2025年初与PabloMK7分支合并为Azahar，官方建议迁移至Azahar，仅作历史参考保留",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/Lime3DS/Lime3DS/releases"
         }
       ]
     },
@@ -843,7 +885,9 @@
           "compatibility": "high",
           "minAndroid": "7.0",
           "description": "业界最成熟的Wii/GameCube模拟器，2026年5月活跃更新，已支持mGBA GBA联动，移动端性能大幅优化，官方CDN提供稳定APK下载",
-          "downloadUrl": "https://dl.dolphin-emu.org/releases/2606/dolphin-2606.apk"
+          "downloadUrl": "https://dl.dolphin-emu.org/releases/2606/dolphin-2606.apk",
+          "devUrl": "https://dolphin-emu.org/download/list/master/",
+          "nightlyUrl": "https://dolphin-emu.org/download/list/master/"
         },
         {
           "id": "dolphin_mmjr2_vbi",
@@ -857,7 +901,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/Dolphin-MMJR2/Dolphin-MMJR2-VBI/releases"
         }
       ]
     },
@@ -882,7 +927,8 @@
           "compatibility": "low",
           "minAndroid": "11.0",
           "description": "桌面端Wii U模拟器Cemu的Android移植版，由SSimco维护，2026年早期阶段，需骁龙8 Gen级别高端设备，支持原生OpenGL与Vulkan后端，需从GitHub下载APK",
-          "downloadUrl": "https://github.com/SSimco/Cemu/releases/download/0.5/Cemu-0.5.apk"
+          "downloadUrl": "https://github.com/SSimco/Cemu/releases/download/0.5/Cemu-0.5.apk",
+          "devUrl": "https://github.com/cemu-project/Cemu/releases"
         }
       ]
     },
@@ -907,7 +953,8 @@
           "compatibility": "medium",
           "minAndroid": "9.0",
           "description": "开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导。源码已迁移至自建Forgejo仓库(git.eden-emu.dev)，GitHub仓库曾被任天堂DMCA下架。最新稳定版v0.2.1(2026年6月)支持固件22.0、内置自动更新器、Vulkan性能优化。提供标准版/原神伪装版(伪装为Genshin Impact以启用旗舰设备帧生成等优化)/旧版(骁龙865等老芯片)三种APK变体，另有ChromeOS版本",
-          "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk"
+          "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk",
+          "devUrl": "https://git.eden-emu.dev/eden-emu/eden/releases"
         },
         {
           "id": "strato",
@@ -921,7 +968,24 @@
           "compatibility": "low",
           "minAndroid": "9.0",
           "description": "开源Switch模拟器，仍在早期开发阶段，尚无稳定版本发布，官网strato-emu.com提供项目进展，兼容性较低，需从源码自行编译",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/strato-emu/strato/releases"
+        },
+        {
+          "id": "citron_neo",
+          "name": "Citron Neo",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/citron-neo/emulator",
+          "playStoreId": "",
+          "website": "https://github.com/citron-neo/emulator",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "12.0",
+          "description": "Nintendo Switch模拟器，yuzu/Suyu血统的活跃分支。GPL-3.0开源，Vulkan-only渲染路线，Dynarmic-GPLv3改进。移除Discord-RPC、Portable Mode、Unity builds。GitHub提供APK下载",
+          "downloadUrl": "https://github.com/citron-neo/emulator/releases/latest/download/app-mainline-release.apk",
+          "devUrl": "",
+          "nightlyUrl": "https://github.com/citron-neo/emulator/releases"
         }
       ]
     },
@@ -946,7 +1010,9 @@
           "compatibility": "perfect",
           "minAndroid": "7.0",
           "description": "最优秀的PS1模拟器，支持PGXP几何校正、高清渲染、即时存档、硬件光栅化、多线程CD读取。注意：许可证已改为CC-BY-NC-ND（非OSI开源），官方站点提供稳定APK，2026年7月仍高频更新",
-          "downloadUrl": "https://www.duckstation.org/android/duckstation-android.apk"
+          "downloadUrl": "https://www.duckstation.org/android/duckstation-android.apk",
+          "devUrl": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-android.apk",
+          "nightlyUrl": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-android.apk"
         },
         {
           "id": "duckstation_gpl",
@@ -1027,7 +1093,8 @@
           "compatibility": "high",
           "minAndroid": "8.0",
           "description": "AetherSX2的社区延续分支，由Trixarian维护，持续更新，性能优秀",
-          "downloadUrl": "https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk"
+          "downloadUrl": "https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk",
+          "devUrl": "https://github.com/Trixarian/NetherSX2-classic/releases"
         },
         {
           "id": "nethersx2",
@@ -1041,7 +1108,8 @@
           "compatibility": "high",
           "minAndroid": "8.0",
           "description": "NetherSX2项目原始仓库，用于版本追踪与源码参考",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/Trixarian/NetherSX2-patch/releases"
         },
         {
           "id": "nethersx2_patch",
@@ -1070,6 +1138,38 @@
           "minAndroid": "8.0",
           "description": "NetherSX2 Classic的TSK分叉，更新GameDB与速度补丁，2025年10月活跃更新",
           "downloadUrl": ""
+        },
+        {
+          "id": "psx2_izzy",
+          "name": "PSX2",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/izzy2lost/PSX2",
+          "playStoreId": "",
+          "website": "https://github.com/izzy2lost/PSX2",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "PCSX2的安卓移植分支，fork自PCSX2_ARM64。支持Namco System 246/256街机基板。Mali/MediaTek渲染修复，RetroAchievements，自动封面下载，多区域BIOS自动切换，每游戏独立设置/记忆卡。ISO/CHD/CSO/ZSO/BIN-CUE支持。Google Play有付费版",
+          "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/latest/download/PSX2.apk",
+          "devUrl": "https://github.com/izzy2lost/PSX2/releases",
+          "nightlyUrl": ""
+        },
+        {
+          "id": "armsx2",
+          "name": "ARMSX2",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ARMSX2/ARMSX2",
+          "playStoreId": "",
+          "website": "https://armsx2.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "PCSX2 fork，原生ARM64 JIT重编译器(EE/IOP/VU0/VU1/vtlb)，填补上游只有x86-64 JIT的空白。用LLM/AI辅助x86→ARM64翻译(~5万行发射器代码)。Local Link局域网联机(约57款PS2游戏)，异步GS回读，CPU亲和性控制，硬件ROV，ADPF，libretro核心(armsx2_libretro)，Adreno默认Vulkan，低延迟帧pacing。Stable+Nightly双轨",
+          "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases/latest",
+          "devUrl": "",
+          "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly"
         }
       ]
     },
@@ -1094,7 +1194,8 @@
           "compatibility": "low",
           "minAndroid": "10.0",
           "description": "RPCSX模拟器的Android原生UI前端，Kotlin编写，支持自定义GPU驱动，2026年5月活跃开发中，PS3安卓模拟的新希望",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/Tech gearing/RPCSX/releases"
         },
         {
           "id": "rpcsx_clanker",
@@ -1122,7 +1223,8 @@
           "compatibility": "low",
           "minAndroid": "10.0",
           "description": "RPCS3的Android移植版，2025年3月进入Alpha阶段，支持控制器自动映射与省电模式，需骁龙8 Gen级别设备，更新趋缓",
-          "downloadUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases/download/alpha-5/rpcs3-release.apk"
+          "downloadUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases/download/alpha-5/rpcs3-release.apk",
+          "devUrl": "https://github.com/aenu1/aps3e/releases"
         }
       ]
     },
@@ -1147,7 +1249,9 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "最优秀的PSP模拟器，兼容性极佳，支持ad-hoc联机(PS Rewired/Openspy服务器)、成就系统、高清化与纹理替换，官方站点提供稳定APK，持续高频更新",
-          "downloadUrl": "https://www.ppsspp.org/files/1_20_4/ppsspp.apk"
+          "downloadUrl": "https://www.ppsspp.org/files/1_20_4/ppsspp.apk",
+          "devUrl": "https://www.ppsspp.org/devbuilds/",
+          "nightlyUrl": "https://www.ppsspp.org/devbuilds/"
         },
         {
           "id": "ppsspp_xtreme",
@@ -1161,7 +1265,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "PPSSPP的低端设备优化分叉，主打Lower Spec Xtreme性能模式，含音频修复等额外功能，2026年1月更新",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/Joomsy/ppsspp/releases"
         }
       ]
     },
@@ -1186,7 +1291,8 @@
           "compatibility": "medium",
           "minAndroid": "10.0",
           "description": "目前唯一活跃的PS Vita模拟器Android移植版，支持FSR升频、分数升频、FPS破解(30fps游戏可60fps运行)、纹理替换、自定义驱动，需骁龙8系列及以上高端设备，2026年持续更新",
-          "downloadUrl": "https://github.com/Vita3K/Vita3K-Android/releases/download/v12/vita3k-android-release-12.apk"
+          "downloadUrl": "https://github.com/Vita3K/Vita3K-Android/releases/download/v12/vita3k-android-release-12.apk",
+          "devUrl": "https://github.com/Vita3K/Vita3K/releases"
         },
         {
           "id": "vita3k_ikhoeyzx",
@@ -1200,7 +1306,8 @@
           "compatibility": "medium",
           "minAndroid": "9.0",
           "description": "Vita3K安卓社区分支，v12.5 build 16(2025年10月)。独有ASC模式(Adreno Shader Cache，仅Adreno)、stencil buffer深度修改、VPK文件支持(测试中)。社区测试性能优于官方v12",
-          "downloadUrl": "https://github.com/ikhoeyZX/Vita3K-Android/releases/latest/download/app-arm64-v8a-release.apk"
+          "downloadUrl": "https://github.com/ikhoeyZX/Vita3K-Android/releases/latest/download/app-arm64-v8a-release.apk",
+          "devUrl": "https://github.com/Vita3K/Vita3K-Android/releases"
         }
       ]
     },
@@ -1264,7 +1371,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "MAME的Android移植版，支持大量街机游戏，活跃维护中",
-          "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/download/v1.37.6/MAME4droid.2026-1.37.6-release.apk"
+          "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/download/v1.37.6/MAME4droid.2026-1.37.6-release.apk",
+          "devUrl": "https://github.com/seleuco/MAME4droid-0.139u1-/releases"
         },
         {
           "id": "lemuroid_arcade",
@@ -1742,6 +1850,22 @@
           "minAndroid": "5.0",
           "description": "DOSBox功能增强分叉，目标是完整模拟DOS与Win9x时代，支持更广软硬件，需从源码编译Android版本",
           "downloadUrl": ""
+        },
+        {
+          "id": "gamenative",
+          "name": "GameNative",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/utkarshdalal/GameNative",
+          "playStoreId": "",
+          "website": "https://gamenative.app/",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "8.0",
+          "description": "安卓PC游戏兼容层/启动器，通过Wine/Box64/Proton类技术在安卓运行Steam/Epic/GOG/Amazon的Windows PC游戏。云存档(PC/手机互通)，自动应用社区兼容配置，Steam DLC/Workshop/分支支持，Nexus Mods，LSFG-VK帧生成，DX12 on Mali/Exynos，Bionic Steam Client(DRM/在线/DLC)，多手柄，触屏HUD编辑器",
+          "downloadUrl": "https://downloads.gamenative.app/releases/v1.1.0/gamenative-v1.1.0.apk",
+          "devUrl": "",
+          "nightlyUrl": ""
         }
       ]
     },
@@ -1883,7 +2007,8 @@
           "compatibility": "low",
           "minAndroid": "10.0",
           "description": "基于QEMU的低级xbox模拟器，目前主要面向桌面平台，Android端无官方构建，兼容性较低，需从源码自行编译，2026年持续活跃开发",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/xemu-project/xemu/releases"
         },
         {
           "id": "cxbx_r",
@@ -1975,7 +2100,8 @@
           "compatibility": "low",
           "minAndroid": "12.0",
           "description": "PS4模拟器shadPS4的安卓社区移植版，实验性Alpha/PoC阶段。基于x86_64→ARM64跨架构JIT转译、Vulkan 1.3渲染。2D/像素小游戏可稳定运行，3A大作仅能进入菜单。需骁龙8 Gen1+/天玑9000+旗舰、12GB内存、Adreno GPU。联发科Mali仅能播放音频无画面。需自购固件",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/shadps4-emu/shadPS4/releases"
         }
       ]
     },
@@ -2029,6 +2155,22 @@
           "minAndroid": "12.0",
           "description": "基于Xenia Edge的实验性Apple导向分支，同时支持ARM64 Windows/Linux/Android。移动端兼容率28.88%(93/322)。改进会回流上游。BSD-3-Clause开源",
           "downloadUrl": "https://github.com/xenios-jp/XeniOS/releases/latest"
+        },
+        {
+          "id": "xendroid",
+          "name": "XenDroid",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/rfandango/XenDroid",
+          "playStoreId": "",
+          "website": "https://github.com/rfandango/XenDroid",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "12.0",
+          "description": "Xbox 360模拟器，最初fork自xa360e(基于Xenia Canary)，后完全rebase到Xenia Edge。Vulkan后端，自定义Adreno Vulkan驱动支持。仅限Snapdragon Gen2+/Adreno 740+。github-actions自动构建滚动发布",
+          "downloadUrl": "https://github.com/rfandango/XenDroid/releases/latest",
+          "devUrl": "https://github.com/rfandango/XenDroid/releases",
+          "nightlyUrl": ""
         }
       ]
     },
@@ -2053,7 +2195,8 @@
           "compatibility": "medium",
           "minAndroid": "9.0",
           "description": "Symbian系统级模拟器，支持S60v1/v3/v5/S60^3，可运行N-Gage游戏及.sis/.sisx应用。目前唯一靠谱的N-Gage安卓方案。GitHub提供APK下载",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/EKA2L1/EKA2L1/releases"
         }
       ]
     },
@@ -2092,7 +2235,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "多Sinclair模拟器(ZX80/ZX81/ZX Spectrum)，GPL开源。有移动/ARM版本。高精度时序模拟",
-          "downloadUrl": "https://github.com/chernandezba/zesarux/releases"
+          "downloadUrl": "https://github.com/chernandezba/zesarux/releases",
+          "devUrl": "https://github.com/chernandezba/zesarux/releases"
         }
       ]
     },
@@ -2117,7 +2261,8 @@
           "compatibility": "high",
           "minAndroid": "3.1",
           "description": "基于keropi/WinX68k的X68000模拟器，支持XVI/Compact等型号。GitHub提供安卓APK",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/neko68k/px68k/releases"
         },
         {
           "id": "px68k_core",
@@ -2559,7 +2704,8 @@
           "compatibility": "high",
           "minAndroid": "8.0",
           "description": "基于TamaLib via NDK的Tamagotchi P1/P2模拟器，带桌面小部件。GitHub提供APK，推荐通过Obtainium自动更新",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/twelvehouse/TamaDroid/releases"
         }
       ]
     },
@@ -2584,7 +2730,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Arduboy模拟器，支持虚拟手柄、LED模拟、变速、EEPROM备份/恢复、截屏。部分程序可能卡死，音频暂不支持",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/Termimad/ArbyEmulator/releases"
         }
       ]
     },
@@ -2715,7 +2862,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "安卓原生J2ME模拟器，Apache 2.0开源。支持2D/3D（含Mascot Capsule 3D）J2ME游戏。离线转换.jar文件，硬件加速，正确帧率与震动。支持各种厂商API（Nokia/Samsung/SonyEricsson/Motorola等）。Dalvik动态重编译VM",
-          "downloadUrl": "https://github.com/nikita36078/J2ME-Loader/releases/latest/download/app-release.apk"
+          "downloadUrl": "https://github.com/nikita36078/J2ME-Loader/releases/latest/download/app-release.apk",
+          "devUrl": "https://github.com/nikita36078/J2ME-Loader/releases"
         },
         {
           "id": "jl_mod",
@@ -2729,7 +2877,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "J2ME Loader的活跃分支，更新更频繁。新增SoundFont音源支持、SoftBank API实现。同样支持Mascot Capsule 3D与Dalvik动态重编译",
-          "downloadUrl": "https://github.com/woesss/JL-Mod/releases/latest/download/app-release.apk"
+          "downloadUrl": "https://github.com/woesss/JL-Mod/releases/latest/download/app-release.apk",
+          "devUrl": "https://github.com/woesss/JL-Mod/releases"
         },
         {
           "id": "manic_emu",
@@ -2860,7 +3009,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "最佳PC-98模拟器Neko Project II的kai分支，Libretro核心。高精度模拟，支持Android。兼容性优秀",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/AZO234/NP2kai/releases"
         },
         {
           "id": "mame_pc98",
@@ -2991,7 +3141,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "多Sinclair模拟器(ZX80/ZX81/ZX Spectrum)，GPL开源。高精度时序模拟，支持多种外围设备。v13.0-Beta2",
-          "downloadUrl": "https://github.com/chernandezba/zesarux/releases"
+          "downloadUrl": "https://github.com/chernandezba/zesarux/releases",
+          "devUrl": "https://github.com/chernandezba/zesarux/releases"
         },
         {
           "id": "sz81",
@@ -3250,7 +3401,9 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "开源冒险游戏引擎重制项目，GPLv2开源，支持280+游戏(含1800+文字冒险)。已合并ResidualVM。支持ARM/ARM64。功能：翻译、粉丝游戏、图形滤镜、MT-32模拟、云存档同步、Discord Rich Presence。官方网站下载APK",
-          "downloadUrl": "https://www.scummvm.org/downloads/"
+          "downloadUrl": "https://www.scummvm.org/downloads/",
+          "devUrl": "https://www.scummvm.org/downloads/",
+          "nightlyUrl": "https://buildbot.scummvm.org/"
         }
       ]
     },
@@ -3275,7 +3428,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "开源横版动作游戏引擎，BSD-3-Clause开源。专为清版动作游戏优化(双截龙、怒之铁拳风格)，也可适配任何游戏风格。数百个粉丝自制游戏可用。支持Android/Wii/PSP/Dreamcast",
-          "downloadUrl": "https://github.com/DCurrent/openbor/releases"
+          "downloadUrl": "https://github.com/DCurrent/openbor/releases",
+          "devUrl": "https://github.com/DCurrent/openbor/releases"
         }
       ]
     },
@@ -3300,7 +3454,9 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "RPG Maker 2000/2003游戏的开源解释器，GPLv3开源。跨平台(Linux/macOS/Windows/Android/Web)。不支持XP/VX/Ace/MV/MZ。高分辨率渲染、Bug修复。提供APK+Chrome扩展+Libretro核心",
-          "downloadUrl": "https://easyrpg.org/player/downloads/"
+          "downloadUrl": "https://easyrpg.org/player/downloads/",
+          "devUrl": "https://easyrpg.org/player/downloads/",
+          "nightlyUrl": "https://buildbot.easyrpg.org/"
         }
       ]
     },
@@ -3325,7 +3481,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "安卓原生Palm OS模拟器，GPLv2开源。可直接运行Palm OS应用与游戏",
-          "downloadUrl": "https://github.com/Florin9doi/PHEM/releases"
+          "downloadUrl": "https://github.com/Florin9doi/PHEM/releases",
+          "devUrl": "https://github.com/Florin9doi/PHEM/releases"
         },
         {
           "id": "mu_core",
@@ -3467,7 +3624,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "安卓原生Electronika BK-0010/11M模拟器，模拟16位PDP-11兼容苏联家用电脑。支持BK-0010-01等型号",
-          "downloadUrl": "https://github.com/3cky/bkemu-android/releases"
+          "downloadUrl": "https://github.com/3cky/bkemu-android/releases",
+          "devUrl": "https://github.com/3cky/bkemu-android/releases"
         }
       ]
     },
@@ -3542,7 +3700,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "KEGS Apple IIGS模拟器的社区安卓移植版，GPLv2开源。Google Play可下。支持IIGS ROM 01/03与全功能模拟",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "devUrl": "https://github.com/jamessanford/kegs/releases"
         },
         {
           "id": "mame_iigs",
@@ -4315,7 +4474,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "TI-83/84系列计算器模拟器，MIT开源。支持单色Z80与彩色Z80系列(TI-73/81/82/83/84/85/86)。推荐使用",
-          "downloadUrl": "https://github.com/sputt/wabbitemu/releases"
+          "downloadUrl": "https://github.com/sputt/wabbitemu/releases",
+          "devUrl": "https://github.com/sputt/wabbitemu/releases"
         },
         {
           "id": "graph89",
@@ -4343,7 +4503,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "TI-Nspire系列计算器模拟器，GPLv3开源。支持CX型号。GitHub提供安卓APK",
-          "downloadUrl": "https://github.com/nspire-emus/firebird/releases"
+          "downloadUrl": "https://github.com/nspire-emus/firebird/releases",
+          "devUrl": "https://github.com/nspire-emus/firebird/releases"
         },
         {
           "id": "droid48",

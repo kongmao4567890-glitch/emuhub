@@ -406,28 +406,52 @@ class EmulatorDetailPage extends ConsumerWidget {
     );
   }
 
-  /// 下载源按钮（含直接下载）。
+  /// 下载源按钮（含稳定版、开发版、每夜版三个渠道）。
   Widget _buildDownloadButtons(BuildContext context, Emulator emulator) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('下载源', style: Theme.of(context).textTheme.titleMedium?.copyWith(
+        Text('下载源', style: theme.textTheme.titleMedium?.copyWith(
           fontWeight: FontWeight.bold,
         )),
         const SizedBox(height: 12),
-        // 直接下载 APK（优先显示）
+        // 稳定版直接下载 APK
         if (emulator.downloadUrl.isNotEmpty) ...[
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton.icon(
-              onPressed: () => _launchUrl(context, emulator.downloadUrl),
-              icon: const Icon(Icons.download),
-              label: const Text('直接下载 APK（最新版）'),
-            ),
+          _DownloadChannelCard(
+            icon: Icons.download,
+            label: '稳定版（最新发布）',
+            description: '经过测试的稳定版本',
+            url: emulator.downloadUrl,
+            color: cs.primary,
+            isPrimary: true,
           ),
           const SizedBox(height: 8),
         ],
-        // GitHub Releases 页面
+        // 开发版/预览版
+        if (emulator.devUrl.isNotEmpty) ...[
+          _DownloadChannelCard(
+            icon: Icons.developer_mode,
+            label: '开发版（最新预览）',
+            description: '包含最新功能，可能不稳定',
+            url: emulator.devUrl,
+            color: Colors.orange,
+          ),
+          const SizedBox(height: 8),
+        ],
+        // 每夜版/持续构建
+        if (emulator.nightlyUrl.isNotEmpty) ...[
+          _DownloadChannelCard(
+            icon: Icons.nightlight,
+            label: '每夜版（自动构建）',
+            description: '每日自动构建，功能最前沿',
+            url: emulator.nightlyUrl,
+            color: Colors.deepPurple,
+          ),
+          const SizedBox(height: 8),
+        ],
+        // GitHub Releases 页面（通用回退）
         SizedBox(
           width: double.infinity,
           child: FilledButton.tonalIcon(
@@ -687,6 +711,87 @@ class _AttributeTile extends StatelessWidget {
           const Spacer(),
           trailing,
         ],
+      ),
+    );
+  }
+}
+
+/// 下载渠道卡片：稳定版/开发版/每夜版。
+class _DownloadChannelCard extends StatelessWidget {
+  const _DownloadChannelCard({
+    required this.icon,
+    required this.label,
+    required this.description,
+    required this.url,
+    required this.color,
+    this.isPrimary = false,
+  });
+
+  final IconData icon;
+  final String label;
+  final String description;
+  final String url;
+  final Color color;
+  final bool isPrimary;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    return Material(
+      color: isPrimary ? color.withOpacity(0.08) : cs.surfaceContainerHighest,
+      borderRadius: BorderRadius.circular(AppTheme.componentRadius),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () async {
+          final uri = Uri.parse(url);
+          if (await canLaunchUrl(uri)) {
+            await launchUrl(uri, mode: LaunchMode.externalApplication);
+          } else if (context.mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('无法打开链接：$url')),
+            );
+          }
+        },
+        borderRadius: BorderRadius.circular(AppTheme.componentRadius),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.15),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Icon(icon, color: color, size: 22),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      label,
+                      style: theme.textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: isPrimary ? color : null,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      description,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: cs.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right, color: cs.onSurfaceVariant),
+            ],
+          ),
+        ),
       ),
     );
   }
