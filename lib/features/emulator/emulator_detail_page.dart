@@ -621,10 +621,10 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
   ) async {
     final db = ref.read(appDatabaseProvider);
     if (isFav) {
-      await db.favoritesDao.removeFavorite(emulatorId);
+      await db.favoritesDao.removeFavorite(widget.emulatorId);
     } else {
       await db.favoritesDao.addFavorite(
-        emulatorId: emulatorId,
+        emulatorId: widget.emulatorId,
         consoleId: consoleId,
       );
     }
