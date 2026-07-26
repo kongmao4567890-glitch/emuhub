@@ -500,159 +500,114 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     final nightlyDirect = DownloadResolver.isDirectDownloadUrl(nightlyUrl);
     final previewDirect = DownloadResolver.isDirectDownloadUrl(previewUrl);
 
-    // 是否有任一渠道需要获取直链
-    final hasPendingLink = (stableUrl.isNotEmpty && !stableDirect) ||
-        (devUrl.isNotEmpty && !devDirect) ||
-        (nightlyUrl.isNotEmpty && !nightlyDirect) ||
-        (previewUrl.isNotEmpty && !previewDirect);
+    // 检查适配器是否已运行但找不到 APK（缓存中 resolved URL 为 null）
+    // 此时不应再让用户无限点击"检查更新"，而应显示"暂无直链"
+    final hasChecked = cached != null && cached.lastCheckedAt > 0;
+    final stableNoApk = hasChecked &&
+        cachedDownloadUrl == null &&
+        emulator.downloadUrl.isNotEmpty &&
+        !stableDirect;
+    final devNoApk = hasChecked &&
+        cachedDevDownloadUrl == null &&
+        emulator.devUrl.isNotEmpty &&
+        !devDirect;
+    final nightlyNoApk = hasChecked &&
+        cachedNightlyDownloadUrl == null &&
+        emulator.nightlyUrl.isNotEmpty &&
+        !nightlyDirect;
+    final previewNoApk = hasChecked &&
+        cachedPreviewDownloadUrl == null &&
+        emulator.previewUrl.isNotEmpty &&
+        !previewDirect;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('下载源', style: theme.textTheme.titleMedium?.copyWith(
-          fontWeight: FontWeight.bold,
-        )),
+        Row(
+          children: [
+            Text('下载源', style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            )),
+            if (_autoFetching) ...[
+              const SizedBox(width: 8),
+              SizedBox(
+                width: 14,
+                height: 14,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  color: cs.onSurfaceVariant,
+                ),
+              ),
+              const SizedBox(width: 4),
+              Text('正在获取直链...', style: theme.textTheme.bodySmall?.copyWith(
+                color: cs.onSurfaceVariant,
+              )),
+            ],
+          ],
+        ),
         const SizedBox(height: 12),
         // 稳定版
         if (stableUrl.isNotEmpty) ...[
-          if (stableDirect)
-            _DownloadChannelCard(
-              icon: Icons.download,
-              label: '稳定版（最新发布）',
-              description: '经过测试的稳定版本，点击直接下载 APK',
-              url: stableUrl,
-              color: cs.primary,
-              isPrimary: true,
-              releaseNotes: cached?.releaseNotes,
-            )
-          else if (_autoFetching)
-            _DownloadChannelCard(
-              icon: Icons.hourglass_top,
-              label: '稳定版（正在获取直链...）',
-              description: '正在从服务器获取最新 APK 下载地址',
-              url: '',
-              color: cs.primary,
-              isPrimary: true,
-              isLoading: true,
-            )
-          else
-            _DownloadChannelCard(
-              icon: Icons.refresh,
-              label: '稳定版（点击检查更新）',
-              description: '检查最新版本并获取 APK 直链',
-              url: '',
-              color: cs.primary,
-              isPrimary: true,
-              releaseNotes: cached?.releaseNotes,
-              onTapOverride: () => _autoCheckVersion(emulator),
-            ),
+          _DownloadChannelCard(
+            icon: stableDirect ? Icons.download : Icons.open_in_browser,
+            label: '稳定版',
+            description: stableDirect
+                ? '经过测试的稳定版本，点击直接下载 APK'
+                : (stableNoApk
+                    ? '暂无 APK 直链，点击打开下载页面'
+                    : '经过测试的稳定版本，点击打开下载页面'),
+            url: stableUrl,
+            color: cs.primary,
+            isPrimary: true,
+            releaseNotes: cached?.releaseNotes,
+          ),
           const SizedBox(height: 8),
         ],
         // 开发版/预览版
         if (devUrl.isNotEmpty) ...[
-          if (devDirect)
-            _DownloadChannelCard(
-              icon: Icons.developer_mode,
-              label: '开发版（最新预览）',
-              description: '包含最新功能，点击直接下载 APK',
-              url: devUrl,
-              color: Colors.orange,
-              releaseNotes: cached?.devReleaseNotes,
-            )
-          else if (_autoFetching)
-            _DownloadChannelCard(
-              icon: Icons.hourglass_top,
-              label: '开发版（正在获取直链...）',
-              description: '正在从服务器获取开发版 APK 下载地址',
-              url: '',
-              color: Colors.orange,
-              isLoading: true,
-            )
-          else
-            _DownloadChannelCard(
-              icon: Icons.refresh,
-              label: '开发版（点击检查更新）',
-              description: '检查最新开发版并获取 APK 直链',
-              url: '',
-              color: Colors.orange,
-              releaseNotes: cached?.devReleaseNotes,
-              onTapOverride: () => _autoCheckVersion(emulator),
-            ),
+          _DownloadChannelCard(
+            icon: devDirect ? Icons.developer_mode : Icons.open_in_browser,
+            label: '开发版',
+            description: devDirect
+                ? '包含最新功能，点击直接下载 APK'
+                : (devNoApk
+                    ? '暂无 APK 直链，点击打开下载页面'
+                    : '包含最新功能，点击打开下载页面'),
+            url: devUrl,
+            color: Colors.orange,
+            releaseNotes: cached?.devReleaseNotes,
+          ),
           const SizedBox(height: 8),
         ],
         // 每夜版/持续构建
         if (nightlyUrl.isNotEmpty) ...[
-          if (nightlyDirect)
-            _DownloadChannelCard(
-              icon: Icons.nightlight,
-              label: '每夜版（自动构建）',
-              description: '每日自动构建，点击直接下载 APK',
-              url: nightlyUrl,
-              color: Colors.deepPurple,
-              releaseNotes: cached?.nightlyReleaseNotes,
-            )
-          else if (_autoFetching)
-            _DownloadChannelCard(
-              icon: Icons.hourglass_top,
-              label: '每夜版（正在获取直链...）',
-              description: '正在从服务器获取每夜版 APK 下载地址',
-              url: '',
-              color: Colors.deepPurple,
-              isLoading: true,
-            )
-          else
-            _DownloadChannelCard(
-              icon: Icons.refresh,
-              label: '每夜版（点击检查更新）',
-              description: '检查最新每夜版并获取 APK 直链',
-              url: '',
-              color: Colors.deepPurple,
-              releaseNotes: cached?.nightlyReleaseNotes,
-              onTapOverride: () => _autoCheckVersion(emulator),
-            ),
+          _DownloadChannelCard(
+            icon: nightlyDirect ? Icons.nightlight : Icons.open_in_browser,
+            label: '每夜版',
+            description: nightlyDirect
+                ? '每日自动构建，点击直接下载 APK'
+                : (nightlyNoApk
+                    ? '暂无 APK 直链，点击打开下载页面'
+                    : '每日自动构建，点击打开下载页面'),
+            url: nightlyUrl,
+            color: Colors.deepPurple,
+            releaseNotes: cached?.nightlyReleaseNotes,
+          ),
           const SizedBox(height: 8),
         ],
         // 预览版/Beta/RC
         if (previewUrl.isNotEmpty) ...[
-          if (previewDirect)
-            _DownloadChannelCard(
-              icon: Icons.visibility,
-              label: '预览版（Beta/RC）',
-              description: '即将发布的新版本预览，点击直接下载 APK',
-              url: previewUrl,
-              color: Colors.teal,
-              releaseNotes: cached?.previewReleaseNotes,
-            )
-          else if (_autoFetching)
-            _DownloadChannelCard(
-              icon: Icons.hourglass_top,
-              label: '预览版（正在获取直链...）',
-              description: '正在从服务器获取预览版 APK 下载地址',
-              url: '',
-              color: Colors.teal,
-              isLoading: true,
-            )
-          else
-            _DownloadChannelCard(
-              icon: Icons.refresh,
-              label: '预览版（点击检查更新）',
-              description: '检查最新预览版并获取 APK 直链',
-              url: '',
-              color: Colors.teal,
-              releaseNotes: cached?.previewReleaseNotes,
-              onTapOverride: () => _autoCheckVersion(emulator),
-            ),
-          const SizedBox(height: 8),
-        ],
-        // 重新检查更新按钮
-        if (!_autoFetching && hasPendingLink) ...[
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton.icon(
-              onPressed: () => _autoCheckVersion(emulator),
-              icon: const Icon(Icons.sync),
-              label: const Text('重新检查更新'),
-            ),
+          _DownloadChannelCard(
+            icon: previewDirect ? Icons.visibility : Icons.open_in_browser,
+            label: '预览版（Beta/RC）',
+            description: previewDirect
+                ? '即将发布的新版本预览，点击直接下载 APK'
+                : (previewNoApk
+                    ? '暂无 APK 直链，点击打开下载页面'
+                    : '即将发布的新版本预览，点击打开下载页面'),
+            url: previewUrl,
+            color: Colors.teal,
+            releaseNotes: cached?.previewReleaseNotes,
           ),
           const SizedBox(height: 8),
         ],

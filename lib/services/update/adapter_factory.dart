@@ -1,4 +1,5 @@
 import '../../data/models/emulator.dart';
+import 'forgejo_adapter.dart';
 import 'github_adapter.dart';
 import 'gitlab_adapter.dart';
 import 'playstore_adapter.dart';
@@ -10,6 +11,7 @@ import 'website_adapter.dart';
 /// 根据 [Emulator.sourceType] 创建对应的数据源适配器实例：
 /// - `github` -> [GitHubReleasesAdapter]
 /// - `gitlab` -> [GitLabReleasesAdapter]
+/// - `forgejo` -> [ForgejoReleasesAdapter]
 /// - `playstore` -> [PlayStoreAdapter]
 /// - `website` -> [WebsiteAdapter]
 /// - 未知类型 -> [WebsiteAdapter]（兜底）
@@ -23,6 +25,8 @@ class AdapterFactory {
         return GitHubReleasesAdapter();
       case 'gitlab':
         return GitLabReleasesAdapter();
+      case 'forgejo':
+        return ForgejoReleasesAdapter();
       case 'playstore':
         return PlayStoreAdapter();
       case 'website':
