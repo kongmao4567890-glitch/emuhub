@@ -37,6 +37,8 @@ String sourceTypeLabel(String sourceType) {
       return 'GitHub';
     case 'gitlab':
       return 'GitLab';
+    case 'forgejo':
+      return 'Forgejo';
     case 'playstore':
       return 'Google Play';
     case 'website':
@@ -635,7 +637,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     String url;
     switch (emulator.sourceType) {
       case 'github':
-        // GitHub Releases 页面
+      case 'forgejo':
+        // GitHub/Forgejo Releases 页面
         url = emulator.sourceUrl.endsWith('/')
             ? '${emulator.sourceUrl}releases'
             : '${emulator.sourceUrl}/releases';
@@ -673,6 +676,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return Icons.code;
       case 'gitlab':
         return Icons.code;
+      case 'forgejo':
+        return Icons.code;
       case 'playstore':
         return Icons.shop;
       case 'website':
@@ -688,6 +693,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return 'GitHub Releases';
       case 'gitlab':
         return 'GitLab Releases';
+      case 'forgejo':
+        return 'Forgejo Releases';
       case 'playstore':
         return 'Google Play 下载';
       case 'website':

@@ -3,6 +3,7 @@ import 'dart:math';
 import '../../data/database/database.dart';
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
+import 'forgejo_adapter.dart';
 import 'github_adapter.dart';
 import 'gitlab_adapter.dart';
 import 'playstore_adapter.dart';
@@ -52,6 +53,7 @@ class UpdateService {
     required CachedVersionsDao dao,
     GitHubReleasesAdapter? githubAdapter,
     GitLabReleasesAdapter? gitlabAdapter,
+    ForgejoReleasesAdapter? forgejoAdapter,
     PlayStoreAdapter? playStoreAdapter,
     WebsiteAdapter? websiteAdapter,
     int maxConcurrency = 5,
@@ -59,6 +61,7 @@ class UpdateService {
   })  : _dao = dao,
         _githubAdapter = githubAdapter ?? GitHubReleasesAdapter(),
         _gitlabAdapter = gitlabAdapter ?? GitLabReleasesAdapter(),
+        _forgejoAdapter = forgejoAdapter ?? ForgejoReleasesAdapter(),
         _playStoreAdapter = playStoreAdapter ?? PlayStoreAdapter(),
         _websiteAdapter = websiteAdapter ?? WebsiteAdapter(),
         _maxConcurrency = maxConcurrency,
@@ -67,6 +70,7 @@ class UpdateService {
   final CachedVersionsDao _dao;
   final GitHubReleasesAdapter _githubAdapter;
   final GitLabReleasesAdapter _gitlabAdapter;
+  final ForgejoReleasesAdapter _forgejoAdapter;
   final PlayStoreAdapter _playStoreAdapter;
   final WebsiteAdapter _websiteAdapter;
   final int _maxConcurrency;
@@ -91,6 +95,8 @@ class UpdateService {
           return _websiteAdapter;
         }
         return _gitlabAdapter;
+      case 'forgejo':
+        return _forgejoAdapter;
       case 'playstore':
         return _playStoreAdapter;
       case 'website':
