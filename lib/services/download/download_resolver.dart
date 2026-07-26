@@ -149,7 +149,7 @@ class DownloadResolver {
   /// - URL 以 `.apk` 结尾（含带查询参数的情况如 `.apk?token=xxx`）
   /// - Play Store 链接（打开应用商店安装，可接受）
   /// - GitHub `releases/latest/download/` 链接（302 重定向到 APK 文件）
-  /// - GitHub `releases/download/` 链接（直接 APK 下载）
+  /// - GitHub/Forgejo/Gitea `releases/download/` 链接（直接 APK 下载）
   /// - SourceForge `/download` 链接（重定向下载）
   /// - F-Droid 仓库直链（以 `.apk` 结尾，已被第一条覆盖）
   ///
@@ -168,7 +168,14 @@ class DownloadResolver {
     if (url.contains('play.google.com')) return true;
     // GitHub latest/download（302 重定向到 APK 文件）
     if (lower.contains('/releases/latest/download/')) return true;
-    // GitHub releases/download/ + .apk（已由上面的 .apk 匹配覆盖）
+    // GitHub/Forgejo/Gitea releases/download/{tag}/{asset}（直接 APK 下载）
+    if (lower.contains('/releases/download/')) return true;
+    // GitLab releases downloads（/-/releases/{tag}/downloads/{asset}）
+    if (lower.contains('/-/releases/') && lower.contains('/downloads/')) {
+      return true;
+    }
+    // GitLab uploads（/uploads/{hash}/{asset}.apk）
+    if (lower.contains('/uploads/') && lower.contains('.apk')) return true;
     // SourceForge latest/download（重定向下载）
     if (url.contains('sourceforge.net') &&
         url.contains('/latest/download')) return true;

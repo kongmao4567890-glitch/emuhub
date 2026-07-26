@@ -283,12 +283,14 @@ class SettingsPage extends ConsumerWidget {
   /// 打开项目仓库（简单实现，使用 url_launcher）。
   Future<void> _launchRepo(BuildContext context) async {
     final uri = Uri.parse(AppConstants.githubRepo);
-    if (await canLaunchUrl(uri)) {
+    try {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } else if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('无法打开链接')),
-      );
+    } catch (_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('无法打开链接')),
+        );
+      }
     }
   }
 }

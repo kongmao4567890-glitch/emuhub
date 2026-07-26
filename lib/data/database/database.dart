@@ -185,6 +185,14 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
   }
 
   /// 将一个 [VersionInfo]（版本检查结果）写入缓存，并刷新检查时间。
+  ///
+  /// **直链保留策略**：当适配器因 GitHub API 限流（60 次/小时）无法解析
+  /// dev/nightly/preview 渠道的 APK 直链时，返回的 `devDownloadUrl` 等为 null。
+  /// 此时不应覆盖数据库中之前缓存的有效直链，否则用户在限流期间会看到
+  /// "暂无 APK 直链" 而无法下载。使用 `Value.absent()` 跳过 null 字段的更新，
+  /// 保留上次成功解析的直链。
+  ///
+  /// 版本号、更新说明、检查时间等字段始终更新。
   Future<void> upsertFromVersionInfo(VersionInfo info) async {
     await into(cachedVersions).insertOnConflictUpdate(
       CachedVersionsCompanion(
@@ -193,13 +201,29 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
         lastReleaseDate: Value(info.releaseDate.millisecondsSinceEpoch),
         releaseNotes: Value(info.releaseNotes),
         isNew: Value(info.isNew),
-        resolvedDownloadUrl: Value(info.downloadUrl),
-        resolvedDevDownloadUrl: Value(info.devDownloadUrl),
-        resolvedNightlyDownloadUrl: Value(info.nightlyDownloadUrl),
-        devReleaseNotes: Value(info.devReleaseNotes),
-        nightlyReleaseNotes: Value(info.nightlyReleaseNotes),
-        resolvedPreviewDownloadUrl: Value(info.previewDownloadUrl),
-        previewReleaseNotes: Value(info.previewReleaseNotes),
+        // 直链保留：null 时不覆盖已有缓存值
+        resolvedDownloadUrl: info.downloadUrl != null
+            ? Value(info.downloadUrl)
+            : const Value.absent(),
+        resolvedDevDownloadUrl: info.devDownloadUrl != null
+            ? Value(info.devDownloadUrl)
+            : const Value.absent(),
+        resolvedNightlyDownloadUrl: info.nightlyDownloadUrl != null
+            ? Value(info.nightlyDownloadUrl)
+            : const Value.absent(),
+        resolvedPreviewDownloadUrl: info.previewDownloadUrl != null
+            ? Value(info.previewDownloadUrl)
+            : const Value.absent(),
+        // 更新说明：null 时也保留已有值（限流时旧说明仍有效）
+        devReleaseNotes: info.devReleaseNotes != null
+            ? Value(info.devReleaseNotes)
+            : const Value.absent(),
+        nightlyReleaseNotes: info.nightlyReleaseNotes != null
+            ? Value(info.nightlyReleaseNotes)
+            : const Value.absent(),
+        previewReleaseNotes: info.previewReleaseNotes != null
+            ? Value(info.previewReleaseNotes)
+            : const Value.absent(),
         lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
       ),
     );

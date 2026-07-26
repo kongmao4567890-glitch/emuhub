@@ -688,6 +688,13 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
             : '${emulator.sourceUrl}/releases';
         if (emulator.sourceUrl.isEmpty) return;
         break;
+      case 'gitlab':
+        // GitLab Releases 页面（使用 /-/releases 路径）
+        if (emulator.sourceUrl.isEmpty) return;
+        url = emulator.sourceUrl.endsWith('/')
+            ? '${emulator.sourceUrl}-/releases'
+            : '${emulator.sourceUrl}/-/releases';
+        break;
       case 'playstore':
         if (emulator.playStoreId.isEmpty) return;
         url = 'https://play.google.com/store/apps/details?id=${emulator.playStoreId}';
@@ -703,14 +710,21 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
   }
 
   /// 使用 url_launcher 打开链接。
+  ///
+  /// 不使用 `canLaunchUrl` 预检查——该方法在 Android 11+ 上即使
+  /// manifest 已声明 `<queries>` 仍可能对有效 URL 返回 false，
+  /// 导致用户点击后只看到"无法打开链接"提示而非真正打开链接。
+  /// 改为直接调用 `launchUrl`，仅在抛出异常时提示用户。
   Future<void> _launchUrl(BuildContext context, String url) async {
     final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
+    try {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } else if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('无法打开链接：$url')),
-      );
+    } catch (_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('无法打开链接：$url')),
+        );
+      }
     }
   }
 
@@ -949,13 +963,15 @@ class _DownloadChannelCardState extends State<_DownloadChannelCard> {
                       return;
                     }
                     final uri = Uri.parse(widget.url);
-                    if (await canLaunchUrl(uri)) {
+                    try {
                       await launchUrl(
                           uri, mode: LaunchMode.externalApplication);
-                    } else if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('无法打开链接：${widget.url}')),
-                      );
+                    } catch (_) {
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('无法打开链接：${widget.url}')),
+                        );
+                      }
                     }
                   },
             borderRadius: BorderRadius.circular(AppTheme.componentRadius),

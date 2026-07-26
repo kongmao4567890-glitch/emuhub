@@ -117,7 +117,12 @@ class ForgejoReleasesAdapter implements VersionAdapter {
                 }
               }
             } catch (_) {
-              // devUrl 仓库查询失败，忽略
+              // API 失败 → 尝试 HTML 解析
+              devApkUrl = await _fetchApkUrlFromForgejoHtml(
+                devHost,
+                devOwner,
+                devRepo,
+              );
             }
           }
         }
@@ -300,6 +305,8 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     final assets = release['assets'];
     if (assets is! List) return null;
 
+    final apkPattern = RegExp(r'\.apk([?#]|$)', caseSensitive: false);
+
     String? standardApk;
     String? arm64Apk;
     String? anyApk;
@@ -308,7 +315,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       final assetMap = _asMap(asset);
       final url = assetMap['browser_download_url']?.toString();
       if (url == null || url.isEmpty) continue;
-      if (!url.toLowerCase().endsWith('.apk')) continue;
+      if (!apkPattern.hasMatch(url)) continue;
 
       final name = (assetMap['name']?.toString() ?? '').toLowerCase();
 
@@ -364,6 +371,8 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       final document = html_parser.parse(htmlStr);
       final links = document.querySelectorAll('a[href]');
 
+      final apkPattern = RegExp(r'\.apk([?#]|$)', caseSensitive: false);
+
       String? arm64Apk;
       String? standardApk;
       String? anyApk;
@@ -371,7 +380,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       for (final link in links) {
         var href = link.attributes['href'] ?? '';
         if (href.isEmpty) continue;
-        if (!href.toLowerCase().endsWith('.apk')) continue;
+        if (!apkPattern.hasMatch(href)) continue;
         if (!href.contains('/releases/download/')) continue;
 
         // 转换为完整 URL
