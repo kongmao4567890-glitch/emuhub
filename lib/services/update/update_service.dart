@@ -4,6 +4,7 @@ import '../../data/database/database.dart';
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
 import 'github_adapter.dart';
+import 'gitlab_adapter.dart';
 import 'playstore_adapter.dart';
 import 'version_adapter.dart';
 import 'version_comparator.dart';
@@ -36,25 +37,28 @@ class CheckResult {
 
 /// 更新检查编排服务。
 ///
-/// 依赖 [CachedVersionsDao] 与三个数据源适配器（GitHub / Play Store / Website），
+/// 依赖 [CachedVersionsDao] 与四个数据源适配器（GitHub / GitLab / Play Store / Website），
 /// 负责按 [Emulator.sourceType] 选择适配器、并发抓取最新版本、与本地缓存对比并
 /// 写回缓存，最终汇总为 [CheckResult]。
 ///
 /// 设计要点：
 /// - 并发上限可配置（默认 5），批次间插入延迟以避免触发限流；
 /// - 单个模拟器检查失败不影响其它模拟器，失败项记入 [CheckResult.failed]；
+/// - 当主适配器返回 null 时，自动尝试 website 适配器作为回退；
 /// - 适配器返回的 [VersionInfo.isNew] 一律为 false，是否为新版本由本服务结合
 ///   [VersionComparator] 与本地缓存判定后写入。
 class UpdateService {
   UpdateService({
     required CachedVersionsDao dao,
     GitHubReleasesAdapter? githubAdapter,
+    GitLabReleasesAdapter? gitlabAdapter,
     PlayStoreAdapter? playStoreAdapter,
     WebsiteAdapter? websiteAdapter,
     int maxConcurrency = 5,
-    Duration requestDelay = const Duration(milliseconds: 800),
+    Duration requestDelay = const Duration(milliseconds: 600),
   })  : _dao = dao,
         _githubAdapter = githubAdapter ?? GitHubReleasesAdapter(),
+        _gitlabAdapter = gitlabAdapter ?? GitLabReleasesAdapter(),
         _playStoreAdapter = playStoreAdapter ?? PlayStoreAdapter(),
         _websiteAdapter = websiteAdapter ?? WebsiteAdapter(),
         _maxConcurrency = maxConcurrency,
@@ -62,16 +66,31 @@ class UpdateService {
 
   final CachedVersionsDao _dao;
   final GitHubReleasesAdapter _githubAdapter;
+  final GitLabReleasesAdapter _gitlabAdapter;
   final PlayStoreAdapter _playStoreAdapter;
   final WebsiteAdapter _websiteAdapter;
   final int _maxConcurrency;
   final Duration _requestDelay;
 
   /// 根据 sourceType 选择适配器。
+  ///
+  /// 增加智能回退：如果 sourceType 是 github/gitlab 但 sourceUrl 不匹配
+  /// 对应平台域名，自动回退到 website 适配器。
   VersionAdapter _selectAdapter(Emulator emulator) {
     switch (emulator.sourceType) {
       case 'github':
+        // GitHub 类型但 URL 不是 github.com → 回退到 website
+        if (emulator.sourceUrl.isNotEmpty &&
+            !emulator.sourceUrl.contains('github.com')) {
+          return _websiteAdapter;
+        }
         return _githubAdapter;
+      case 'gitlab':
+        if (emulator.sourceUrl.isNotEmpty &&
+            !emulator.sourceUrl.contains('gitlab.com')) {
+          return _websiteAdapter;
+        }
+        return _gitlabAdapter;
       case 'playstore':
         return _playStoreAdapter;
       case 'website':
@@ -142,10 +161,25 @@ class UpdateService {
   ///
   /// 抓取最新版本后与本地缓存对比：若本地无缓存，视为新版本；否则使用
   /// [VersionComparator.isNewer] 判断。最终写回缓存。
+  ///
+  /// 如果主适配器返回 null，尝试使用 website 适配器作为回退。
   Future<_CheckOutcome> _checkOneInternal(Emulator emulator) async {
     try {
       final adapter = _selectAdapter(emulator);
-      final latest = await adapter.fetchLatestVersion(emulator);
+      var latest = await adapter.fetchLatestVersion(emulator);
+
+      // 回退：如果主适配器失败且有 website URL，尝试 website 适配器
+      if (latest == null &&
+          emulator.website.isNotEmpty &&
+          adapter.adapterName != 'website') {
+        latest = await _websiteAdapter.fetchLatestVersion(emulator);
+      }
+
+      // 再回退：如果 website 也失败且有 downloadUrl，尝试从 downloadUrl 解析版本
+      if (latest == null && emulator.downloadUrl.isNotEmpty) {
+        latest = await _tryFromDownloadUrl(emulator);
+      }
+
       if (latest == null) {
         return _CheckOutcome(
           emulatorId: emulator.id,
@@ -193,9 +227,46 @@ class UpdateService {
     }
   }
 
+  /// 从 downloadUrl 中尝试提取版本号作为最后手段。
+  ///
+  /// 适用于 downloadUrl 中包含版本号的情况，如：
+  /// `https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk`
+  Future<VersionInfo?> _tryFromDownloadUrl(Emulator emulator) async {
+    final url = emulator.downloadUrl;
+    if (url.isEmpty) return null;
+
+    // 尝试从 URL 路径中提取版本号
+    final patterns = <RegExp>[
+      // v0.2.1 或 v1.2.3
+      RegExp(r'/v(\d+\.\d+(?:\.\d+)*)'),
+      // version-1.2.3
+      RegExp(r'version[-_]?(\d+\.\d+(?:\.\d+)*)'),
+      // releases/v1.2.3
+      RegExp(r'releases/v?(\d+\.\d+(?:\.\d+)*)'),
+    ];
+
+    for (final pattern in patterns) {
+      final match = pattern.firstMatch(url);
+      if (match != null) {
+        final version = match.group(1);
+        if (version != null && version.isNotEmpty) {
+          return VersionInfo(
+            emulatorId: emulator.id,
+            version: version,
+            releaseDate: DateTime.now(),
+            releaseNotes: null,
+            isNew: false,
+          );
+        }
+      }
+    }
+
+    return null;
+  }
+
   /// 返回当前缓存中存在新版本（isNew = true）的 [VersionInfo] 列表。
   ///
-  /// 供 UI 层展示“有更新的模拟器列表”使用。
+  /// 供 UI 层展示"有更新的模拟器列表"使用。
   Future<List<VersionInfo>> getUpdatesSummary() async {
     final cached = await _dao.getAllCachedVersions();
     return cached

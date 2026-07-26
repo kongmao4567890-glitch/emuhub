@@ -6,7 +6,7 @@ part 'emulator.g.dart';
 /// 单个模拟器条目，对应 emulators.json 中某个机种下的一个模拟器。
 ///
 /// 字段说明：
-/// - [sourceType] 取值为 `github`，决定更新来源抓取策略。
+/// - [sourceType] 取值为 `github` / `gitlab` / `playstore` / `website`，决定更新来源抓取策略。
 /// - [downloadUrl] 稳定版直接下载 APK 链接（动态指向最新版本），为空时回退到 Releases 页面。
 /// - [devUrl] 最新开发版/预览版下载链接，为空表示无独立开发版渠道。
 /// - [nightlyUrl] 每夜版/持续构建版下载链接，为空表示无每夜版渠道。
@@ -17,7 +17,7 @@ class Emulator with _$Emulator {
     required String id,
     required String name,
     required bool openSource,
-    required String sourceType, // github
+    required String sourceType, // github / gitlab / playstore / website
     required String sourceUrl,
     required String playStoreId,
     required String website,

@@ -33,6 +33,8 @@ String sourceTypeLabel(String sourceType) {
   switch (sourceType) {
     case 'github':
       return 'GitHub';
+    case 'gitlab':
+      return 'GitLab';
     case 'playstore':
       return 'Google Play';
     case 'website':
@@ -557,6 +559,8 @@ class EmulatorDetailPage extends ConsumerWidget {
     switch (sourceType) {
       case 'github':
         return Icons.code;
+      case 'gitlab':
+        return Icons.code;
       case 'playstore':
         return Icons.shop;
       case 'website':
@@ -570,6 +574,8 @@ class EmulatorDetailPage extends ConsumerWidget {
     switch (sourceType) {
       case 'github':
         return 'GitHub Releases';
+      case 'gitlab':
+        return 'GitLab Releases';
       case 'playstore':
         return 'Google Play 下载';
       case 'website':
