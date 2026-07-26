@@ -64,16 +64,25 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-class EmulatorDetailPage extends ConsumerWidget {
+/// 打开页面时自动触发一次版本检查，确保显示最新的版本信息和更新内容。
+class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
   final String emulatorId;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<EmulatorDetailPage> createState() => _EmulatorDetailPageState();
+}
+
+class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
+  bool _hasAutoChecked = false;
+  bool _isChecking = false;
+
+  @override
+  Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
-    final cachedAsync = ref.watch(_cachedVersionProvider(emulatorId));
-    final isFavAsync = ref.watch(_isFavoriteProvider(emulatorId));
+    final cachedAsync = ref.watch(_cachedVersionProvider(widget.emulatorId));
+    final isFavAsync = ref.watch(_isFavoriteProvider(widget.emulatorId));
 
     return configAsync.when(
       loading: () => Scaffold(
@@ -85,7 +94,7 @@ class EmulatorDetailPage extends ConsumerWidget {
         body: _buildError(context, ref, error),
       ),
       data: (config) {
-        final result = findEmulator(config.consoles, emulatorId);
+        final result = findEmulator(config.consoles, widget.emulatorId);
         if (result == null) {
           return Scaffold(
             appBar: AppBar(),
@@ -95,37 +104,38 @@ class EmulatorDetailPage extends ConsumerWidget {
         final console = result.console;
         final emulator = result.emulator;
 
+        // 首次加载配置后自动触发一次版本检查
+        if (!_hasAutoChecked) {
+          _hasAutoChecked = true;
+          _autoCheckUpdate(emulator);
+        }
+
         return Scaffold(
           body: CustomScrollView(
             slivers: [
               _buildSliverAppBar(context, console, emulator),
               SliverToBoxAdapter(
-                child: cachedAsync.when(
-                  loading: () => const Padding(
-                    padding: EdgeInsets.all(32),
-                    child: Center(child: CircularProgressIndicator()),
-                  ),
-                  error: (_, __) => const SizedBox.shrink(),
-                  data: (cached) => Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _buildHeaderInfo(context, console, emulator, cached),
-                        const SizedBox(height: 20),
-                        _buildVersionSection(context, cached),
-                        const SizedBox(height: 20),
-                        _buildAttributes(context, emulator),
-                        const SizedBox(height: 20),
-                        _buildDescription(context, emulator),
-                        const SizedBox(height: 20),
-                        _buildDownloadButtons(context, emulator, cached),
-                        const SizedBox(height: 16),
-                        _buildFavoriteButton(
-                            context, ref, isFavAsync, console.id),
-                        const SizedBox(height: 32),
-                      ],
-                    ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildHeaderInfo(
+                          context, console, emulator, cachedAsync.valueOrNull),
+                      const SizedBox(height: 20),
+                      _buildVersionSection(context, cachedAsync.valueOrNull),
+                      const SizedBox(height: 20),
+                      _buildAttributes(context, emulator),
+                      const SizedBox(height: 20),
+                      _buildDescription(context, emulator),
+                      const SizedBox(height: 20),
+                      _buildDownloadButtons(
+                          context, emulator, cachedAsync.valueOrNull),
+                      const SizedBox(height: 16),
+                      _buildFavoriteButton(
+                          context, ref, isFavAsync, console.id),
+                      const SizedBox(height: 32),
+                    ],
                   ),
                 ),
               ),
@@ -134,6 +144,36 @@ class EmulatorDetailPage extends ConsumerWidget {
         );
       },
     );
+  }
+
+  /// 自动触发一次版本检查，获取最新版本信息和更新内容。
+  void _autoCheckUpdate(Emulator emulator) {
+    if (_isChecking) return;
+    setState(() => _isChecking = true);
+
+    final updateService = ref.read(updateServiceProvider);
+    updateService.checkOne(emulator).whenComplete(() {
+      if (mounted) {
+        setState(() => _isChecking = false);
+      }
+    });
+  }
+
+  /// 手动触发版本检查（点击刷新按钮时调用）。
+  void _manualCheckUpdate() {
+    if (_isChecking) return;
+    final config = ref.read(emulatorsConfigProvider).valueOrNull;
+    if (config == null) return;
+    final result = findEmulator(config.consoles, widget.emulatorId);
+    if (result == null) return;
+
+    setState(() => _isChecking = true);
+    final updateService = ref.read(updateServiceProvider);
+    updateService.checkOne(result.emulator).whenComplete(() {
+      if (mounted) {
+        setState(() => _isChecking = false);
+      }
+    });
   }
 
   /// 顶部 SliverAppBar，带机种真实图片作为 Hero 图标。
@@ -227,16 +267,34 @@ class EmulatorDetailPage extends ConsumerWidget {
     );
   }
 
-  /// 版本信息区域：当前版本 + 发布日期 + 更新说明。
+  /// 版本信息区域：当前版本 + 发布日期 + 更新说明 + 刷新按钮。
   Widget _buildVersionSection(BuildContext context, CachedVersion? cached) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('版本信息', style: theme.textTheme.titleMedium?.copyWith(
-          fontWeight: FontWeight.bold,
-        )),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('版本信息', style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            )),
+            if (_isChecking)
+              const SizedBox(
+                width: 18,
+                height: 18,
+                child: CircularProgressIndicator(strokeWidth: 2),
+              )
+            else
+              IconButton(
+                icon: const Icon(Icons.refresh, size: 20),
+                onPressed: _manualCheckUpdate,
+                tooltip: '检查更新',
+                visualDensity: VisualDensity.compact,
+              ),
+          ],
+        ),
         const SizedBox(height: 12),
         Card(
           child: Padding(
@@ -575,10 +633,10 @@ class EmulatorDetailPage extends ConsumerWidget {
   ) async {
     final db = ref.read(appDatabaseProvider);
     if (isFav) {
-      await db.favoritesDao.removeFavorite(emulatorId);
+      await db.favoritesDao.removeFavorite(widget.emulatorId);
     } else {
       await db.favoritesDao.addFavorite(
-        emulatorId: emulatorId,
+        emulatorId: widget.emulatorId,
         consoleId: consoleId,
       );
     }
