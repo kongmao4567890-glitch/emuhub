@@ -26,9 +26,28 @@ String vendorDisplayName(String vendor) {
       return '世嘉';
     case 'atari':
       return 'Atari';
-    case 'various':
-      return '街机';
+    case 'microsoft':
+    case 'microsoft_ascii':
+      return '微软';
+    case 'snk':
+      return 'SNK';
     case 'nec':
+      return 'NEC';
+    case 'bandai':
+      return '万代';
+    case 'commodore':
+      return 'Commodore';
+    case 'panasonic':
+      return '松下';
+    case 'coleco':
+      return 'Coleco';
+    case 'mattel':
+      return 'Mattel';
+    case 'gce':
+      return 'GCE';
+    case 'libretro':
+      return 'Libretro';
+    case 'various':
       return '其他';
     default:
       return '其他';
@@ -42,8 +61,12 @@ const List<({String key, String label})> _vendorFilters = [
   (key: 'sony', label: '索尼'),
   (key: 'sega', label: '世嘉'),
   (key: 'atari', label: 'Atari'),
-  (key: 'various', label: '街机'),
-  (key: 'nec', label: '其他'),
+  (key: 'microsoft', label: '微软'),
+  (key: 'snk', label: 'SNK'),
+  (key: 'nec', label: 'NEC'),
+  (key: 'commodore', label: 'Commodore'),
+  (key: 'bandai', label: '万代'),
+  (key: 'various', label: '其他'),
 ];
 
 /// 机种库页面（核心浏览页）。
@@ -69,9 +92,24 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
 
   /// 根据搜索词与厂商筛选过滤机种列表。
   List<Console> _filterConsoles(List<Console> consoles) {
+    // 有独立筛选 Chip 的厂商 key 集合
+    const knownVendors = {
+      'nintendo', 'sony', 'sega', 'atari', 'microsoft', 'snk',
+      'nec', 'commodore', 'bandai',
+    };
     return consoles.where((console) {
       // 厂商筛选
-      if (_selectedVendor != 'all' && console.vendor != _selectedVendor) {
+      if (_selectedVendor == 'various') {
+        // "其他" 显示不在已知列表中的厂商
+        if (knownVendors.contains(console.vendor)) return false;
+      } else if (_selectedVendor == 'microsoft') {
+        // 微软筛选同时匹配 microsoft 和 microsoft_ascii
+        if (console.vendor != 'microsoft' &&
+            console.vendor != 'microsoft_ascii') {
+          return false;
+        }
+      } else if (_selectedVendor != 'all' &&
+          console.vendor != _selectedVendor) {
         return false;
       }
       // 搜索筛选：匹配机种名或模拟器名

@@ -38,6 +38,9 @@ class _HomePageState extends ConsumerState<HomePage> {
     'ps1',
     'ps2',
     'switch',
+    'neogeo',
+    'psvita',
+    'multi_system',
   ];
 
   /// 是否已完成首次更新检查（防止重复触发）。
@@ -237,7 +240,7 @@ class _WelcomeCard extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            '覆盖从 Atari 到 Switch 的全世代主机',
+            '覆盖从 Atari 到 Switch 的全世代主机与掌机',
             style: theme.textTheme.bodySmall?.copyWith(
               color: cs.onPrimary.withOpacity(0.7),
             ),

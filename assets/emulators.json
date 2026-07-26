@@ -1,7 +1,46 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "lastUpdated": "2026-07-25",
   "consoles": [
+    {
+      "id": "multi_system",
+      "name": "多系统前端 / Multi-System Frontend",
+      "vendor": "libretro",
+      "year": 2010,
+      "icon": "🎛️",
+      "imagePath": "assets/consoles/multi_system.jpg",
+      "description": "多平台模拟器前端，通过加载Libretro核心统一管理各类主机与掌机的模拟",
+      "emulators": [
+        {
+          "id": "retroarch",
+          "name": "RetroArch",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/RetroArch",
+          "playStoreId": "",
+          "website": "https://www.libretro.com/",
+          "core": "Libretro",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "最强大的Libretro前端，内置核心下载器、Netplay联机、倒带(Rewind)、成就系统(RetroAchievements)、着色器滤镜，覆盖从Atari到3DO几乎所有平台的核心，安卓端aarch64 nightly构建",
+          "downloadUrl": "https://buildbot.libretro.com/nightly/android/RetroArch_aarch64.apk"
+        },
+        {
+          "id": "lemuroid",
+          "name": "Lemuroid",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "https://f-droid.org/packages/com.swordfish.lemuroid/",
+          "core": "Libretro",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，Material Design界面、自动扫描ROM、即点即玩，已上架F-Droid（https://f-droid.org/packages/com.swordfish.lemuroid/），覆盖十余种主机平台，活跃维护中",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        }
+      ]
+    },
     {
       "id": "atari2600",
       "name": "Atari 2600/5200/7800",
@@ -36,7 +75,71 @@
           "core": "Stella",
           "compatibility": "good",
           "minAndroid": "5.0",
-          "description": "Atari 2600官方模拟器Stella的源码仓库，含Libretro核心可用于安卓前端",
+          "description": "Atari 2600官方模拟器Stella的源码仓库，含Libretro核心可在安卓前端使用，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "atari_lynx",
+      "name": "Atari Lynx",
+      "vendor": "atari",
+      "year": 1989,
+      "icon": "🐱",
+      "imagePath": "assets/consoles/atari_lynx.jpg",
+      "description": "雅达利首款彩色掌机，也是全球第一款彩色掌上游戏机",
+      "emulators": [
+        {
+          "id": "lemuroid_lynx",
+          "name": "Lemuroid (Handy)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "Handy",
+          "compatibility": "perfect",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用Handy核心模拟Atari Lynx，兼容性极佳",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "handy_core",
+          "name": "Handy (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/handy-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "Handy",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "Atari Lynx的Handy模拟器Libretro核心仓库，需通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "atari_jaguar",
+      "name": "Atari Jaguar",
+      "vendor": "atari",
+      "year": 1993,
+      "icon": "🐆",
+      "imagePath": "assets/consoles/atari_jaguar.jpg",
+      "description": "雅达利最后一款家用主机，号称64位架构的第五世代主机",
+      "emulators": [
+        {
+          "id": "virtual_jaguar_core",
+          "name": "Virtual Jaguar (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "Virtual Jaguar",
+          "compatibility": "medium",
+          "minAndroid": "6.0",
+          "description": "Atari Jaguar目前仅能通过RetroArch的Virtual Jaguar核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，兼容性中等",
           "downloadUrl": ""
         }
       ]
@@ -156,7 +259,7 @@
           "core": "Snes9x",
           "compatibility": "high",
           "minAndroid": "5.0",
-          "description": "Snes9x官方源码仓库，提供Libretro核心的安卓构建（nightly CI）",
+          "description": "Snes9x官方源码仓库，提供Libretro核心的安卓构建（nightly CI），通过RetroArch核心下载器获取",
           "downloadUrl": ""
         }
       ]
@@ -211,6 +314,190 @@
           "minAndroid": "5.0",
           "description": "Sega 8/16位高精度模拟器核心，100%兼容性，活跃维护中",
           "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "sms_gg",
+      "name": "Sega Master System / Game Gear",
+      "vendor": "sega",
+      "year": 1985,
+      "icon": "📟",
+      "imagePath": "assets/consoles/sms_gg.jpg",
+      "description": "世嘉 Master System 与 Game Gear 掌机，8位时代的世嘉主力平台",
+      "emulators": [
+        {
+          "id": "lemuroid_sms_gg",
+          "name": "Lemuroid (Genesis Plus GX)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "Genesis Plus GX",
+          "compatibility": "perfect",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用Genesis Plus GX核心模拟Master System与Game Gear，兼容性极佳",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "md_emu_ex_sms",
+          "name": "MD.emu (EX+)",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha",
+          "playStoreId": "",
+          "website": "",
+          "core": "Genesis Plus GX",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "MD.emu前端同样支持Master System与Game Gear，基于Genesis Plus GX核心，低延迟，Google Play付费",
+          "downloadUrl": ""
+        },
+        {
+          "id": "genplus_gx_sms",
+          "name": "Genesis Plus GX (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ekeeke/Genesis-Plus-GX",
+          "playStoreId": "",
+          "website": "",
+          "core": "Genesis Plus GX",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "Genesis Plus GX核心原生支持Master System/Game Gear/SG-1000，100%兼容性，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        },
+        {
+          "id": "gearsystem",
+          "name": "Gearsystem",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/drhelius/Gearsystem",
+          "playStoreId": "",
+          "website": "",
+          "core": "Gearsystem",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "由drhelius开发的高精度Master System/Game Gear/SG-1000模拟器，C++编写，提供Libretro核心，含准确时序与高兼容性，活跃维护",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "sega_32x",
+      "name": "Sega 32X",
+      "vendor": "sega",
+      "year": 1994,
+      "icon": "🔢",
+      "imagePath": "assets/consoles/sega_32x.jpg",
+      "description": "世嘉 Mega Drive 的32位扩展外设，第五世代过渡产品",
+      "emulators": [
+        {
+          "id": "picodrive_core",
+          "name": "PicoDrive (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/picodrive",
+          "playStoreId": "",
+          "website": "",
+          "core": "PicoDrive",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "Sega 32X目前仅能通过PicoDrive核心模拟，安卓端无独立App，PicoDrive核心同时支持Mega Drive/Mega CD/32X/Pico，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "vendor": "sega",
+      "year": 1994,
+      "icon": "🪐",
+      "imagePath": "assets/consoles/saturn.jpg",
+      "description": "世嘉 Saturn，32 位家用机，双CPU架构复杂",
+      "emulators": [
+        {
+          "id": "lemuroid_saturn",
+          "name": "Lemuroid (Kronos)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "Kronos",
+          "compatibility": "medium",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用Kronos核心模拟Saturn",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "yabause",
+          "name": "Yabause (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Yabause/yabause",
+          "playStoreId": "",
+          "website": "",
+          "core": "Yabause",
+          "compatibility": "good",
+          "minAndroid": "5.0",
+          "description": "Sega Saturn模拟器Yabause官方仓库，提供Libretro核心可经安卓前端使用",
+          "downloadUrl": ""
+        },
+        {
+          "id": "yaba_sanshiro",
+          "name": "Yaba Sanshiro",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/devmiyax/yabause",
+          "playStoreId": "",
+          "website": "",
+          "core": "Yabause",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "devmiyax维护的Yabause分叉，是安卓端少数有独立App的土星模拟器，Kronos即从此分叉演进，2025年12月更新加入Oboe实时音频",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "dreamcast",
+      "name": "Dreamcast",
+      "vendor": "sega",
+      "year": 1998,
+      "icon": "🌀",
+      "imagePath": "assets/consoles/dreamcast.jpg",
+      "description": "世嘉 Dreamcast，128 位家用机，世嘉最后一款家用主机",
+      "emulators": [
+        {
+          "id": "flycast",
+          "name": "Flycast",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/flyinghead/flycast",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi/Naomi 2/Atomiswave街机系统、GD-ROM与维米尔勒联网，活跃维护",
+          "downloadUrl": "https://github.com/flyinghead/flycast/releases/download/v2.6/flycast-2.6.apk"
+        },
+        {
+          "id": "lemuroid_dreamcast",
+          "name": "Lemuroid (Flycast)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "Flycast",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用Flycast核心模拟Dreamcast，便于统一管理",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
         }
       ]
     },
@@ -388,6 +675,201 @@
       ]
     },
     {
+      "id": "nds",
+      "name": "NDS / Nintendo DS",
+      "vendor": "nintendo",
+      "year": 2004,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/nds.jpg",
+      "description": "任天堂 Nintendo DS，双屏掌机，触控游戏的先驱",
+      "emulators": [
+        {
+          "id": "melonds_android",
+          "name": "melonDS Android",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/rafaelvcaetano/melonDS-android",
+          "playStoreId": "",
+          "website": "",
+          "core": "melonDS",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "高精度NDS模拟器melonDS的Android移植版，模拟准确性优秀，活跃维护中",
+          "downloadUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases/latest/download/app-gitHub-prod-release.apk"
+        },
+        {
+          "id": "drastic_rev_i18n",
+          "name": "DraStic Rev i18N",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/R-YaTian/DraStic_rev_i18n",
+          "playStoreId": "",
+          "website": "",
+          "core": "DraStic",
+          "compatibility": "perfect",
+          "minAndroid": "5.0",
+          "description": "商业NDS模拟器DraStic的国际化社区分叉，免费提供，性能与兼容性顶级，包含模拟摇杆触发器支持、右摇杆D-Pad模式、摇杆旋转模式、单屏布局显示下屏、TV模式快捷菜单，2026年7月活跃更新",
+          "downloadUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev260701/DraStic_r2.6.0.4a_build109_universal_rev260701.apk"
+        },
+        {
+          "id": "lemuroid_nds",
+          "name": "Lemuroid (melonDS)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "melonDS",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用melonDS核心模拟NDS",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        }
+      ]
+    },
+    {
+      "id": "3ds",
+      "name": "3DS / Nintendo 3DS",
+      "vendor": "nintendo",
+      "year": 2011,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/3ds.jpg",
+      "description": "任天堂 Nintendo 3DS，裸眼3D双屏掌机",
+      "emulators": [
+        {
+          "id": "azahar",
+          "name": "Azahar",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/azahar-emu/azahar",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "10.0",
+          "description": "PabloMK7的Citra分支与Lime3DS合并而成的3DS模拟器，Citra下架后的事实标准继承者，独创禁用右眼渲染单眼模式可提升50%性能，2026年7月极活跃",
+          "downloadUrl": "https://github.com/azahar-emu/azahar/releases/download/2125.1.3/azahar-android-vanilla-2125.1.3.apk"
+        },
+        {
+          "id": "lime3ds",
+          "name": "Lime3DS (已并入Azahar)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/TabsN/Lime3DS",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "8.0",
+          "description": "Citra的社区分支，已于2025年初与PabloMK7分支合并为Azahar，官方建议迁移至Azahar，仅作历史参考保留",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "wii_gc",
+      "name": "Wii / GameCube",
+      "vendor": "nintendo",
+      "year": 2001,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/wii_gc.jpg",
+      "description": "任天堂 GameCube 与 Wii，兼容同一模拟器平台",
+      "emulators": [
+        {
+          "id": "dolphin",
+          "name": "Dolphin",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/dolphin-emu/dolphin",
+          "playStoreId": "",
+          "website": "https://dolphin-emu.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "7.0",
+          "description": "业界最成熟的Wii/GameCube模拟器，2026年5月活跃更新，已支持mGBA GBA联动，移动端性能大幅优化，官方CDN提供稳定APK下载",
+          "downloadUrl": "https://dl.dolphin-emu.org/releases/2606/dolphin-2606.apk"
+        },
+        {
+          "id": "dolphin_mmjr2_vbi",
+          "name": "Dolphin MMJR2 VBI",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/VentureStratosphereWorldwide/Dolphin-MMJR2-VBI",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "wii_u",
+      "name": "Wii U",
+      "vendor": "nintendo",
+      "year": 2012,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/wii_u.jpg",
+      "description": "任天堂 Wii U，双屏家用主机，GamePad 控制器创新",
+      "emulators": [
+        {
+          "id": "cemu_android",
+          "name": "Cemu Android",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/SSimco/Cemu",
+          "playStoreId": "",
+          "website": "https://cemu.info/",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "11.0",
+          "description": "桌面端Wii U模拟器Cemu的Android移植版，由SSimco维护，2026年早期阶段，需骁龙8 Gen级别高端设备，支持原生OpenGL与Vulkan后端，需从GitHub下载APK",
+          "downloadUrl": "https://github.com/SSimco/Cemu/releases/download/0.5/Cemu-0.5.apk"
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "vendor": "nintendo",
+      "year": 2017,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/switch.jpg",
+      "description": "任天堂 Switch，家用与掌机二合一的现代主机",
+      "emulators": [
+        {
+          "id": "eden",
+          "name": "Eden",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/eden-emulator",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "9.0",
+          "description": "2025年发布的开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导，支持驱动自动推荐、联机大厅，2026年GitHub代码仓库曾被任天堂DMCA下架，组织主页仍在维护，提供标准/优化/旧版三种APK变体",
+          "downloadUrl": ""
+        },
+        {
+          "id": "strato",
+          "name": "Strato",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/strato-emu/strato",
+          "playStoreId": "",
+          "website": "https://strato-emu.com/",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "9.0",
+          "description": "开源Switch模拟器，仍在早期开发阶段，尚无稳定版本发布，官网strato-emu.com提供项目进展，兼容性较低，需从源码自行编译",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
       "id": "ps1",
       "name": "PS1 / PlayStation",
       "vendor": "sony",
@@ -403,12 +885,12 @@
           "sourceType": "github",
           "sourceUrl": "https://github.com/stenzek/duckstation",
           "playStoreId": "",
-          "website": "",
+          "website": "https://www.duckstation.org/",
           "core": "",
           "compatibility": "perfect",
           "minAndroid": "7.0",
-          "description": "最优秀的PS1模拟器，支持PGXP几何校正、高清渲染、即时存档。注意：许可证已改为CC-BY-NC-ND（非OSI开源），2026年7月仍高频更新",
-          "downloadUrl": ""
+          "description": "最优秀的PS1模拟器，支持PGXP几何校正、高清渲染、即时存档、硬件光栅化、多线程CD读取。注意：许可证已改为CC-BY-NC-ND（非OSI开源），官方站点提供稳定APK，2026年7月仍高频更新",
+          "downloadUrl": "https://www.duckstation.org/android/duckstation-android.apk"
         },
         {
           "id": "duckstation_gpl",
@@ -576,12 +1058,12 @@
           "sourceType": "github",
           "sourceUrl": "https://github.com/hrydgard/ppsspp",
           "playStoreId": "",
-          "website": "",
+          "website": "https://www.ppsspp.org/",
           "core": "",
           "compatibility": "perfect",
           "minAndroid": "5.0",
-          "description": "最优秀的PSP模拟器，兼容性极佳，支持高清化与纹理替换、联机对战，持续高频更新",
-          "downloadUrl": ""
+          "description": "最优秀的PSP模拟器，兼容性极佳，支持ad-hoc联机(PS Rewired/Openspy服务器)、成就系统、高清化与纹理替换，官方站点提供稳定APK，持续高频更新",
+          "downloadUrl": "https://www.ppsspp.org/files/1_20_4/ppsspp.apk"
         },
         {
           "id": "ppsspp_xtreme",
@@ -600,221 +1082,65 @@
       ]
     },
     {
-      "id": "nds",
-      "name": "NDS / Nintendo DS",
-      "vendor": "nintendo",
-      "year": 2004,
-      "icon": "🎮",
-      "imagePath": "assets/consoles/nds.jpg",
-      "description": "任天堂 Nintendo DS，双屏掌机，触控游戏的先驱",
-      "emulators": [
-        {
-          "id": "melonds_android",
-          "name": "melonDS Android",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/rafaelvcaetano/melonDS-android",
-          "playStoreId": "",
-          "website": "",
-          "core": "melonDS",
-          "compatibility": "high",
-          "minAndroid": "6.0",
-          "description": "高精度NDS模拟器melonDS的Android移植版，模拟准确性优秀，活跃维护中",
-          "downloadUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases/latest/download/app-gitHub-prod-release.apk"
-        },
-        {
-          "id": "lemuroid_nds",
-          "name": "Lemuroid (melonDS)",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
-          "playStoreId": "",
-          "website": "",
-          "core": "melonDS",
-          "compatibility": "high",
-          "minAndroid": "6.0",
-          "description": "基于Libretro框架的一体化模拟器，使用melonDS核心模拟NDS",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
-        }
-      ]
-    },
-    {
-      "id": "3ds",
-      "name": "3DS / Nintendo 3DS",
-      "vendor": "nintendo",
+      "id": "psvita",
+      "name": "PS Vita",
+      "vendor": "sony",
       "year": 2011,
-      "icon": "🎮",
-      "imagePath": "assets/consoles/3ds.jpg",
-      "description": "任天堂 Nintendo 3DS，裸眼3D双屏掌机",
+      "icon": "📱",
+      "imagePath": "assets/consoles/psvita.jpg",
+      "description": "索尼 PlayStation Vita，双摇杆OLED掌机，索尼最后一款掌机",
       "emulators": [
         {
-          "id": "azahar",
-          "name": "Azahar",
+          "id": "vita3k",
+          "name": "Vita3K",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/azahar-emu/azahar",
+          "sourceUrl": "https://github.com/Vita3K/Vita3K-Android",
           "playStoreId": "",
-          "website": "",
+          "website": "https://vita3k.org/",
           "core": "",
-          "compatibility": "good",
+          "compatibility": "medium",
           "minAndroid": "10.0",
-          "description": "PabloMK7的Citra分支与Lime3DS合并而成的3DS模拟器，Citra下架后的事实标准继承者，独创禁用右眼渲染单眼模式可提升50%性能，2026年7月极活跃",
-          "downloadUrl": "https://github.com/azahar-emu/azahar/releases/download/2125.1.3/azahar-android-vanilla-2125.1.3.apk"
-        },
-        {
-          "id": "lime3ds",
-          "name": "Lime3DS (已并入Azahar)",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/TabsN/Lime3DS",
-          "playStoreId": "",
-          "website": "",
-          "core": "",
-          "compatibility": "good",
-          "minAndroid": "8.0",
-          "description": "Citra的社区分支，已于2025年初与PabloMK7分支合并为Azahar，官方建议迁移至Azahar，仅作历史参考保留",
-          "downloadUrl": ""
+          "description": "目前唯一活跃的PS Vita模拟器Android移植版，支持FSR升频、分数升频、FPS破解(30fps游戏可60fps运行)、纹理替换、自定义驱动，需骁龙8系列及以上高端设备，2026年持续更新",
+          "downloadUrl": "https://github.com/Vita3K/Vita3K-Android/releases/download/v12/vita3k-android-release-12.apk"
         }
       ]
     },
     {
-      "id": "wii_gc",
-      "name": "Wii / GameCube",
-      "vendor": "nintendo",
-      "year": 2001,
+      "id": "pce",
+      "name": "PC Engine",
+      "vendor": "nec",
+      "year": 1987,
       "icon": "🎮",
-      "imagePath": "assets/consoles/wii_gc.jpg",
-      "description": "任天堂 GameCube 与 Wii，兼容同一模拟器平台",
+      "imagePath": "assets/consoles/pce.jpg",
+      "description": "NEC PC Engine / TurboGrafx-16，8位向16位过渡期的经典主机",
       "emulators": [
         {
-          "id": "dolphin",
-          "name": "Dolphin",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/dolphin-emu/dolphin",
-          "playStoreId": "",
-          "website": "",
-          "core": "",
-          "compatibility": "high",
-          "minAndroid": "7.0",
-          "description": "业界最成熟的Wii/GameCube模拟器，2026年5月活跃更新，已支持mGBA GBA联动，移动端性能大幅优化",
-          "downloadUrl": ""
-        },
-        {
-          "id": "dolphin_mmjr2_vbi",
-          "name": "Dolphin MMJR2 VBI",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/VentureStratosphereWorldwide/Dolphin-MMJR2-VBI",
-          "playStoreId": "",
-          "website": "",
-          "core": "",
-          "compatibility": "medium",
-          "minAndroid": "5.0",
-          "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
-          "downloadUrl": ""
-        }
-      ]
-    },
-    {
-      "id": "switch",
-      "name": "Switch",
-      "vendor": "nintendo",
-      "year": 2017,
-      "icon": "🎮",
-      "imagePath": "assets/consoles/switch.jpg",
-      "description": "任天堂 Switch，家用与掌机二合一的现代主机",
-      "emulators": [
-        {
-          "id": "eden",
-          "name": "Eden",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/eden-emulator/Releases",
-          "playStoreId": "",
-          "website": "",
-          "core": "",
-          "compatibility": "medium",
-          "minAndroid": "9.0",
-          "description": "2025年发布的开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导，支持驱动自动推荐、联机大厅、提供标准/优化/旧版三种APK变体，2026年5月活跃更新",
-          "downloadUrl": ""
-        }
-      ]
-    },
-    {
-      "id": "dreamcast",
-      "name": "Dreamcast",
-      "vendor": "sega",
-      "year": 1998,
-      "icon": "🌀",
-      "imagePath": "assets/consoles/dreamcast.jpg",
-      "description": "世嘉 Dreamcast，128 位家用机，世嘉最后一款家用主机",
-      "emulators": [
-        {
-          "id": "flycast",
-          "name": "Flycast",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/flyinghead/Flycast",
-          "playStoreId": "",
-          "website": "",
-          "core": "",
-          "compatibility": "high",
-          "minAndroid": "6.0",
-          "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi等街机系统",
-          "downloadUrl": "https://github.com/flyinghead/flycast/releases/download/v2.6/flycast-2.6.apk"
-        }
-      ]
-    },
-    {
-      "id": "saturn",
-      "name": "Saturn",
-      "vendor": "sega",
-      "year": 1994,
-      "icon": "🪐",
-      "imagePath": "assets/consoles/saturn.jpg",
-      "description": "世嘉 Saturn，32 位家用机，双CPU架构复杂",
-      "emulators": [
-        {
-          "id": "lemuroid_saturn",
-          "name": "Lemuroid (Kronos)",
+          "id": "lemuroid_pce",
+          "name": "Lemuroid (Beetle PCE)",
           "openSource": true,
           "sourceType": "github",
           "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
           "playStoreId": "",
           "website": "",
-          "core": "Kronos",
-          "compatibility": "medium",
+          "core": "Beetle PCE",
+          "compatibility": "high",
           "minAndroid": "6.0",
-          "description": "基于Libretro框架的一体化模拟器，使用Kronos核心模拟Saturn",
+          "description": "基于Libretro框架的一体化模拟器，使用Beetle PCE核心模拟PC Engine",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
         },
         {
-          "id": "yabause",
-          "name": "Yabause (核心仓库)",
-          "openSource": true,
+          "id": "pce_emu_ex",
+          "name": "PCE.emu (EX+)",
+          "openSource": false,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/Yabause/yabause",
+          "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha",
           "playStoreId": "",
           "website": "",
-          "core": "Yabause",
-          "compatibility": "good",
+          "core": "Mednafen",
+          "compatibility": "high",
           "minAndroid": "5.0",
-          "description": "Sega Saturn模拟器Yabause官方仓库，提供Libretro核心可经安卓前端使用",
-          "downloadUrl": ""
-        },
-        {
-          "id": "yaba_sanshiro",
-          "name": "Yaba Sanshiro",
-          "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://github.com/devmiyax/yabause",
-          "playStoreId": "",
-          "website": "",
-          "core": "Yabause",
-          "compatibility": "medium",
-          "minAndroid": "5.0",
-          "description": "devmiyax维护的Yabause分叉，是安卓端少数有独立App的土星模拟器，Kronos即从此分叉演进，2025年12月更新加入Oboe实时音频",
+          "description": "PC Engine/TurboGrafx-16/SuperGrafx/CD-ROM²模拟器，基于Mednafen核心，由Robert Broglia开发，低延迟，2026年4月活跃",
           "downloadUrl": ""
         }
       ]
@@ -859,40 +1185,522 @@
       ]
     },
     {
-      "id": "pce",
-      "name": "PC Engine",
-      "vendor": "nec",
-      "year": 1987,
-      "icon": "🎮",
-      "imagePath": "assets/consoles/pce.jpg",
-      "description": "NEC PC Engine / TurboGrafx-16，8位向16位过渡期的经典主机",
+      "id": "neogeo",
+      "name": "Neo Geo",
+      "vendor": "snk",
+      "year": 1990,
+      "icon": "🥊",
+      "imagePath": "assets/consoles/neogeo.jpg",
+      "description": "SNK Neo Geo，家用与街机同规格的高端16位主机，格斗游戏圣地",
       "emulators": [
         {
-          "id": "lemuroid_pce",
-          "name": "Lemuroid (Beetle PCE)",
+          "id": "mame4droid_neogeo",
+          "name": "MAME4droid",
           "openSource": true,
           "sourceType": "github",
-          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "sourceUrl": "https://github.com/seleuco/MAME4droid-Current",
           "playStoreId": "",
           "website": "",
-          "core": "Beetle PCE",
+          "core": "MAME",
           "compatibility": "high",
           "minAndroid": "6.0",
-          "description": "基于Libretro框架的一体化模拟器，使用Beetle PCE核心模拟PC Engine",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "description": "MAME4droid完整支持Neo Geo MVS/AES基板，需自备BIOS与ROM，活跃维护",
+          "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/download/v1.37.6/MAME4droid.2026-1.37.6-release.apk"
         },
         {
-          "id": "pce_emu_ex",
-          "name": "PCE.emu (EX+)",
+          "id": "fbneo_neogeo",
+          "name": "FBNeo (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/finalburnneo/FBNeo",
+          "playStoreId": "",
+          "website": "",
+          "core": "FBNeo",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "FinalBurn Neo核心对Neo Geo支持优秀，性能优于MAME，提供Libretro核心，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        },
+        {
+          "id": "neo_emu",
+          "name": "NEO.emu (EX+)",
           "openSource": false,
           "sourceType": "github",
           "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha",
           "playStoreId": "",
           "website": "",
-          "core": "Mednafen",
+          "core": "FBNeo",
           "compatibility": "high",
           "minAndroid": "5.0",
-          "description": "PC Engine/TurboGrafx-16/SuperGrafx/CD-ROM²模拟器，基于Mednafen核心，由Robert Broglia开发，低延迟，2026年4月活跃",
+          "description": "基于FBNeo核心的Neo Geo专属Android前端，由Robert Broglia开发，低延迟、支持MVS/AES/CD，Google Play付费",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "ngp",
+      "name": "Neo Geo Pocket",
+      "vendor": "snk",
+      "year": 1998,
+      "icon": "👾",
+      "imagePath": "assets/consoles/ngp.jpg",
+      "description": "SNK Neo Geo Pocket / Pocket Color，SNK 掌机，黑白与彩色两代",
+      "emulators": [
+        {
+          "id": "lemuroid_ngp",
+          "name": "Lemuroid (Beetle NeoPop)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "Beetle NeoPop",
+          "compatibility": "perfect",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用Beetle NeoPop核心模拟Neo Geo Pocket/Color，兼容性极佳",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "neopop_core",
+          "name": "NeoPop (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/beetle-ngp-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "Beetle NeoPop",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "Neo Geo Pocket的Mednafen NeoPop核心Libretro仓库，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "msx",
+      "name": "MSX",
+      "vendor": "microsoft_ascii",
+      "year": 1983,
+      "icon": "💻",
+      "imagePath": "assets/consoles/msx.jpg",
+      "description": "MSX 家用电脑标准，微软与ASCII联合制定，日系8位计算机平台",
+      "emulators": [
+        {
+          "id": "lemuroid_msx",
+          "name": "Lemuroid (fMSX)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "fMSX",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用fMSX核心模拟MSX/MSX2/MSX2+，兼容性高",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "fmsx_core",
+          "name": "fMSX (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/fmsx-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "fMSX",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "fMSX的Libretro核心仓库，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        },
+        {
+          "id": "bluemsx_core",
+          "name": "blueMSX (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/blueMSX-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "blueMSX",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "blueMSX核心支持MSX全系列与SVI/ColecoVision等Z80机器，准确性高，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "amiga",
+      "name": "Amiga",
+      "vendor": "commodore",
+      "year": 1985,
+      "icon": "🌈",
+      "imagePath": "assets/consoles/amiga.jpg",
+      "description": "Commodore Amiga，搭载定制图形与音频芯片的16位个人电脑",
+      "emulators": [
+        {
+          "id": "lemuroid_amiga",
+          "name": "Lemuroid (UAE)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "PUAE",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用PUAE核心模拟Amiga 500/1200，兼容性高",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "puae_core",
+          "name": "PUAE (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/PUAE",
+          "playStoreId": "",
+          "website": "",
+          "core": "PUAE",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "PUAE (libretro的UAE移植)核心仓库，支持Amiga 500/1000/2000/1200/4000与CD32，需自备Kickstart ROM，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        },
+        {
+          "id": "uae4droid",
+          "name": "UAE4Droid",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/EmuELEC/uae4droid",
+          "playStoreId": "",
+          "website": "",
+          "core": "UAE",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "UAE的Android原生移植，独立App，更新较少，需自备Kickstart ROM",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "c64",
+      "name": "Commodore 64",
+      "vendor": "commodore",
+      "year": 1982,
+      "icon": "💾",
+      "imagePath": "assets/consoles/c64.jpg",
+      "description": "Commodore 64，史上销量最高的个人电脑，8位时代的王者",
+      "emulators": [
+        {
+          "id": "lemuroid_c64",
+          "name": "Lemuroid (VICE)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "VICE",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用VICE核心模拟C64，兼容性高",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "vice_core",
+          "name": "VICE (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/vice-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "VICE",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "VICE (Versatile Commodore Emulator)的Libretro核心仓库，支持C64/C128/PET/VIC20/CBM-II，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        },
+        {
+          "id": "c64_emu",
+          "name": "C64.emu (EX+)",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha",
+          "playStoreId": "",
+          "website": "",
+          "core": "VICE",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于VICE核心的C64 Android原生前端，由Robert Broglia开发，支持True Drive模拟、磁盘镜像，Google Play付费",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "3do",
+      "name": "3DO",
+      "vendor": "panasonic",
+      "year": 1993,
+      "icon": "🎬",
+      "imagePath": "assets/consoles/3do.jpg",
+      "description": "3DO Interactive Multiplayer，松下等厂商制造的32位CD-ROM主机",
+      "emulators": [
+        {
+          "id": "opera_core",
+          "name": "Opera (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/opera-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "Opera",
+          "compatibility": "medium",
+          "minAndroid": "6.0",
+          "description": "3DO目前仅能通过RetroArch的Opera核心（原4DO）模拟，安卓端无独立App，需通过RetroArch核心下载器获取，兼容性中等",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "wonderswan",
+      "name": "WonderSwan",
+      "vendor": "bandai",
+      "year": 1999,
+      "icon": "🦢",
+      "imagePath": "assets/consoles/wonderswan.jpg",
+      "description": "万代 WonderSwan / WonderSwan Color，横竖皆可玩的掌机",
+      "emulators": [
+        {
+          "id": "lemuroid_wonderswan",
+          "name": "Lemuroid (Beetle Cygne)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Swordfish90/Lemuroid",
+          "playStoreId": "",
+          "website": "",
+          "core": "Beetle Cygne",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "基于Libretro框架的一体化模拟器，使用Beetle Cygne核心模拟WonderSwan/Color，支持横竖屏切换",
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+        },
+        {
+          "id": "cygne_core",
+          "name": "Cygne (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/beetle-wswan-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "Beetle Cygne",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "WonderSwan的Mednafen Cygne核心Libretro仓库，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "virtualboy",
+      "name": "Virtual Boy",
+      "vendor": "nintendo",
+      "year": 1995,
+      "icon": "🥽",
+      "imagePath": "assets/consoles/virtualboy.jpg",
+      "description": "任天堂 Virtual Boy，32位红黑3D游戏机，任天堂罕见的商业失败之作",
+      "emulators": [
+        {
+          "id": "mednafen_vb_core",
+          "name": "Mednafen VB (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/beetle-vb-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "Mednafen VB",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "Virtual Boy目前仅能通过RetroArch的Mednafen VB (Beetle VB)核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持红黑配色与3D效果渲染",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "dos",
+      "name": "DOS / MS-DOS",
+      "vendor": "microsoft",
+      "year": 1981,
+      "icon": "🖥️",
+      "imagePath": "assets/consoles/dos.jpg",
+      "description": "MS-DOS 磁盘操作系统，IBM PC 兼容机的经典游戏平台",
+      "emulators": [
+        {
+          "id": "magic_dosbox",
+          "name": "Magic Dosbox",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "",
+          "playStoreId": "",
+          "website": "https://magicdosbox.com/",
+          "core": "DOSBox",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "专为触屏优化的DOS模拟器，支持自定义虚拟按键、快捷指令面板、游戏专属配置文件，免费版与付费版，官网提供下载",
+          "downloadUrl": ""
+        },
+        {
+          "id": "dosbox_turbo",
+          "name": "DOSBox Turbo",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/hexenbrae/dosbox-turbo",
+          "playStoreId": "",
+          "website": "",
+          "core": "DOSBox",
+          "compatibility": "high",
+          "minAndroid": "4.0",
+          "description": "DOSBox的Android优化移植，支持动态CPU核心、SVGA模式，仅通过Google Play获取，更新较少",
+          "downloadUrl": ""
+        },
+        {
+          "id": "dosbox_x",
+          "name": "DOSBox-X",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/joncampbell123/dosbox-x",
+          "playStoreId": "",
+          "website": "https://dosbox-x.com/",
+          "core": "DOSBox",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "DOSBox功能增强分叉，目标是完整模拟DOS与Win9x时代，支持更广软硬件，需从源码编译Android版本",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "vectrex",
+      "name": "Vectrex",
+      "vendor": "gce",
+      "year": 1982,
+      "icon": "📐",
+      "imagePath": "assets/consoles/vectrex.jpg",
+      "description": "GCE Vectrex，自带矢量显示器的独特家用机，矢量图形游戏代表",
+      "emulators": [
+        {
+          "id": "vecx_core",
+          "name": "VecX (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/libretro-vecx",
+          "playStoreId": "",
+          "website": "",
+          "core": "VecX",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "Vectrex目前仅能通过RetroArch的VecX核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持矢量线渲染与叠加色片",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "coleco",
+      "name": "ColecoVision",
+      "vendor": "coleco",
+      "year": 1982,
+      "icon": "🎰",
+      "imagePath": "assets/consoles/coleco.jpg",
+      "description": "ColecoVision，第二世代高性能家用机，以SG-1000同架构闻名",
+      "emulators": [
+        {
+          "id": "gearcoleco_core",
+          "name": "Gearcoleco (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/drhelius/Gearcoleco",
+          "playStoreId": "",
+          "website": "",
+          "core": "Gearcoleco",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "drhelius开发的ColecoVision高精度模拟器，提供Libretro核心，需通过RetroArch核心下载器获取，准确时序",
+          "downloadUrl": ""
+        },
+        {
+          "id": "bluemsx_coleco",
+          "name": "blueMSX (核心仓库)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/blueMSX-libretro",
+          "playStoreId": "",
+          "website": "",
+          "core": "blueMSX",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "blueMSX核心亦支持ColecoVision/MSX/SVI，通过RetroArch核心下载器获取",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "intellivision",
+      "name": "Intellivision",
+      "vendor": "mattel",
+      "year": 1979,
+      "icon": "🎯",
+      "imagePath": "assets/consoles/intellivision.jpg",
+      "description": "Mattel Intellivision，第二世代16位主机，雅达利2600的主要竞争对手",
+      "emulators": [
+        {
+          "id": "freeintv_core",
+          "name": "FreeIntv (RetroArch 核心)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/FreeIntv",
+          "playStoreId": "",
+          "website": "",
+          "core": "FreeIntv",
+          "compatibility": "high",
+          "minAndroid": "6.0",
+          "description": "Intellivision目前仅能通过RetroArch的FreeIntv核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持EXEC与GROM BIOS",
+          "downloadUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "xbox",
+      "name": "Xbox",
+      "vendor": "microsoft",
+      "year": 2001,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/xbox.jpg",
+      "description": "微软 Xbox 初代，第六世代家用主机，微软进军游戏机市场的首作",
+      "emulators": [
+        {
+          "id": "xemu",
+          "name": "xemu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mborgerson/xemu",
+          "playStoreId": "",
+          "website": "https://xemu.app/",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "10.0",
+          "description": "基于QEMU的低级xbox模拟器，目前主要面向桌面平台，Android端无官方构建，兼容性较低，需从源码自行编译，2026年持续活跃开发",
+          "downloadUrl": ""
+        },
+        {
+          "id": "cxbx_r",
+          "name": "CXBX-R",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Cxbx-Reloaded/Cxbx-Reloaded",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "10.0",
+          "description": "高级(HLE)xbox模拟器，将xbox API翻译为PC调用，目前仅Windows平台，Android端无可用构建，需从源码自行编译，仅供研究参考",
           "downloadUrl": ""
         }
       ]
