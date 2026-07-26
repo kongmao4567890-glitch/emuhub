@@ -59,12 +59,23 @@ class GitLabReleasesAdapter implements VersionAdapter {
       final createdAt = _parseDate(first['created_at']?.toString());
       final description = first['description']?.toString();
 
+      // 从 assets.links 中提取 APK 直链
+      final apkUrl = _extractApkAssetUrl(first);
+
+      // 如果模拟器有 nightlyUrl，也尝试从 nightlyUrl 仓库提取 APK 直链
+      String? nightlyApkUrl;
+      if (emulator.nightlyUrl.isNotEmpty) {
+        nightlyApkUrl = await _fetchNightlyApkFromGitLab(emulator.nightlyUrl);
+      }
+
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
         releaseDate: createdAt ?? DateTime.now(),
         releaseNotes: (description != null && description.isNotEmpty) ? description : null,
         isNew: false,
+        downloadUrl: apkUrl,
+        nightlyDownloadUrl: nightlyApkUrl,
       );
     } catch (_) {
       return null;
@@ -78,7 +89,7 @@ class GitLabReleasesAdapter implements VersionAdapter {
     if (sourceUrl.isEmpty) return null;
     try {
       final uri = Uri.parse(sourceUrl);
-      if (!uri.host.contains('gitlab.com')) return null;
+      // 支持 gitlab.com 和自托管 GitLab/Forgejo 实例
       final segments = uri.pathSegments.where((s) => s.isNotEmpty).toList();
       if (segments.length < 2) return null;
 
@@ -89,6 +100,60 @@ class GitLabReleasesAdapter implements VersionAdapter {
         repo = repo.substring(0, repo.length - 4);
       }
       return (uri.host, '$owner/$repo');
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 GitLab release 对象的 assets.links 中提取 APK 直链。
+  ///
+  /// GitLab API release 对象包含 `assets.links` 数组，
+  /// 每个 link 有 `direct_asset_url` 或 `url` 字段。
+  String? _extractApkAssetUrl(Map<String, dynamic> release) {
+    final assets = release['assets'];
+    if (assets is! Map) return null;
+    final links = assets['links'];
+    if (links is! List) return null;
+
+    String? arm64Apk;
+    String? anyApk;
+
+    for (final link in links) {
+      final linkMap = link is Map<String, dynamic>
+          ? link
+          : (link is Map ? Map<String, dynamic>.from(link) : <String, dynamic>{});
+      final url = (linkMap['direct_asset_url'] ?? linkMap['url'])?.toString();
+      if (url == null || url.isEmpty) continue;
+      if (!url.toLowerCase().endsWith('.apk')) continue;
+
+      final name = (linkMap['name']?.toString() ?? '').toLowerCase();
+      if (name.contains('arm64') ||
+          name.contains('aarch64') ||
+          name.contains('arm64-v8a')) {
+        arm64Apk = url;
+      }
+      anyApk ??= url;
+    }
+
+    return arm64Apk ?? anyApk;
+  }
+
+  /// 从 nightlyUrl（GitLab/Forgejo releases 页面）提取 APK 直链。
+  Future<String?> _fetchNightlyApkFromGitLab(String nightlyUrl) async {
+    final parsed = _parseProject(nightlyUrl);
+    if (parsed == null) return null;
+    final (host, projectPath) = parsed;
+    final encodedPath = Uri.encodeComponent(projectPath);
+
+    try {
+      final response = await _dio.get(
+        'https://$host/api/v4/projects/$encodedPath/releases',
+        queryParameters: {'per_page': 1},
+      );
+      final list = _asList(response.data);
+      if (list.isEmpty) return null;
+      final first = _asMap(list.first);
+      return _extractApkAssetUrl(first);
     } catch (_) {
       return null;
     }

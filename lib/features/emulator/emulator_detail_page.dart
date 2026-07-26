@@ -64,13 +64,53 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-class EmulatorDetailPage extends ConsumerWidget {
+/// 页面打开时若本地无缓存或缓存超过 1 小时，自动触发一次版本检查，
+/// 以获取最新的 APK 直链，避免用户点击后打开网页而非直接下载。
+class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
   final String emulatorId;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<EmulatorDetailPage> createState() =>
+      _EmulatorDetailPageState();
+}
+
+class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
+  bool _autoFetching = false;
+
+  /// 自动触发版本检查（仅当无缓存或缓存超过 1 小时时）。
+  Future<void> _autoCheckVersion(Emulator emulator) async {
+    if (_autoFetching) return;
+
+    final cached = await ref
+        .read(appDatabaseProvider)
+        .cachedVersionsDao
+        .getCachedVersion(emulator.id);
+
+    // 判断是否需要自动检查：无缓存、或超过1小时未检查
+    final needCheck = cached == null ||
+        cached.currentVersion.isEmpty ||
+        cached.lastCheckedAt == 0 ||
+        (DateTime.now().millisecondsSinceEpoch - cached.lastCheckedAt) >
+            3600000; // 1小时 = 3600000ms
+
+    if (!needCheck) return;
+
+    setState(() => _autoFetching = true);
+    try {
+      final updateService = ref.read(updateServiceProvider);
+      await updateService.checkOne(emulator);
+    } catch (_) {
+      // 静默失败，不影响用户浏览
+    } finally {
+      if (mounted) setState(() => _autoFetching = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final emulatorId = widget.emulatorId;
     final configAsync = ref.watch(emulatorsConfigProvider);
     final cachedAsync = ref.watch(_cachedVersionProvider(emulatorId));
     final isFavAsync = ref.watch(_isFavoriteProvider(emulatorId));
@@ -94,6 +134,13 @@ class EmulatorDetailPage extends ConsumerWidget {
         }
         final console = result.console;
         final emulator = result.emulator;
+
+        // 自动触发版本检查获取 APK 直链
+        if (!_autoFetching) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            _autoCheckVersion(emulator);
+          });
+        }
 
         return Scaffold(
           body: CustomScrollView(
@@ -119,7 +166,8 @@ class EmulatorDetailPage extends ConsumerWidget {
                         const SizedBox(height: 20),
                         _buildDescription(context, emulator),
                         const SizedBox(height: 20),
-                        _buildDownloadButtons(context, emulator, cached),
+                        _buildDownloadButtons(
+                            context, emulator, cached),
                         const SizedBox(height: 16),
                         _buildFavoriteButton(
                             context, ref, isFavAsync, console.id),
@@ -427,6 +475,7 @@ class EmulatorDetailPage extends ConsumerWidget {
     final latestVersion = cached?.currentVersion;
     final cachedDownloadUrl = cached?.resolvedDownloadUrl;
     final cachedDevDownloadUrl = cached?.resolvedDevDownloadUrl;
+    final cachedNightlyDownloadUrl = cached?.resolvedNightlyDownloadUrl;
 
     final stableUrl = DownloadResolver.resolveStableUrl(
       emulator,
@@ -438,6 +487,17 @@ class EmulatorDetailPage extends ConsumerWidget {
       cachedDevDownloadUrl: cachedDevDownloadUrl,
       latestVersion: latestVersion,
     );
+    final nightlyUrl = (cachedNightlyDownloadUrl != null &&
+            cachedNightlyDownloadUrl.isNotEmpty)
+        ? cachedNightlyDownloadUrl
+        : emulator.nightlyUrl;
+
+    // 判断是否正在获取直链
+    final isFetching = _autoFetching &&
+        (cached == null ||
+            cached.currentVersion.isEmpty ||
+            (cached.resolvedDownloadUrl == null &&
+                emulator.sourceType == 'github'));
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -446,12 +506,33 @@ class EmulatorDetailPage extends ConsumerWidget {
           fontWeight: FontWeight.bold,
         )),
         const SizedBox(height: 12),
+        if (isFetching) ...[
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Row(
+              children: [
+                const SizedBox(
+                  width: 16, height: 16,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+                const SizedBox(width: 8),
+                Text('正在获取下载链接...',
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: cs.onSurfaceVariant,
+                    )),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+        ],
         // 稳定版直接下载 APK
         if (stableUrl.isNotEmpty) ...[
           _DownloadChannelCard(
             icon: Icons.download,
             label: '稳定版（最新发布）',
-            description: '经过测试的稳定版本',
+            description: cachedDownloadUrl != null && cachedDownloadUrl.isNotEmpty
+                ? '经过测试的稳定版本，直接下载 APK'
+                : '经过测试的稳定版本',
             url: stableUrl,
             color: cs.primary,
             isPrimary: true,
@@ -472,12 +553,14 @@ class EmulatorDetailPage extends ConsumerWidget {
           const SizedBox(height: 8),
         ],
         // 每夜版/持续构建
-        if (emulator.nightlyUrl.isNotEmpty) ...[
+        if (nightlyUrl.isNotEmpty) ...[
           _DownloadChannelCard(
             icon: Icons.nightlight,
             label: '每夜版（自动构建）',
-            description: '每日自动构建，功能最前沿',
-            url: emulator.nightlyUrl,
+            description: cachedNightlyDownloadUrl != null && cachedNightlyDownloadUrl.isNotEmpty
+                ? '每日自动构建，直接下载 APK'
+                : '每日自动构建，功能最前沿',
+            url: nightlyUrl,
             color: Colors.deepPurple,
           ),
           const SizedBox(height: 8),

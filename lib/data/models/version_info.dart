@@ -29,6 +29,12 @@ class VersionInfo with _$VersionInfo {
     ///
     /// 从 GitHub prerelease 的 assets 中提取。为 `null` 时回退到静态 devUrl。
     String? devDownloadUrl,
+
+    /// 适配器抓取到的最新**每夜版/CI构建**直链下载地址（动态）。
+    ///
+    /// 从 nightlyUrl 对应的 GitHub 仓库的 releases 中提取。
+    /// 为 `null` 时回退到静态 nightlyUrl。
+    String? nightlyDownloadUrl,
   }) = _VersionInfo;
 
   factory VersionInfo.fromJson(Map<String, dynamic> json) =>

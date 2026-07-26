@@ -76,6 +76,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
     }
 
+    // 如果模拟器有 nightlyUrl，尝试从 nightlyUrl 对应的仓库提取 APK 直链
+    if (result != null && emulator.nightlyUrl.isNotEmpty) {
+      final nightlyApkUrl = await _fetchNightlyApkUrl(emulator.nightlyUrl);
+      if (nightlyApkUrl != null) {
+        result = result.copyWith(nightlyDownloadUrl: nightlyApkUrl);
+      }
+    }
+
     return result;
   }
 
@@ -271,7 +279,30 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 通过 API 获取指定 tag 对应 release 的 APK 直链。
+  /// 从 nightlyUrl 对应的 GitHub 仓库提取最新的 APK 直链。
+  ///
+  /// nightlyUrl 可能指向与 sourceUrl 不同的仓库（如 Citron Neo 的 CI 仓库）。
+  /// 解析 nightlyUrl 中的 owner/repo，查询其最新 release 的 APK asset。
+  /// 消耗 1 次 API 配额。
+  Future<String?> _fetchNightlyApkUrl(String nightlyUrl) async {
+    final parsed = _parseRepo(nightlyUrl);
+    if (parsed == null) return null;
+    final (owner, repo) = parsed;
+
+    try {
+      final response = await _dio.get(
+        'https://api.github.com/repos/$owner/$repo/releases?per_page=5',
+      );
+      final list = _asList(response.data);
+      if (list.isEmpty) return null;
+
+      // 取第一个 release（最新的）
+      final first = _asMap(list.first);
+      return _extractApkAssetUrl(first);
+    } catch (_) {
+      return null;
+    }
+  }
   ///
   /// 消耗 1 次 GitHub API 匿名配额。
   /// 仅在重定向法获取到版本号、但 asset 名含版本号无法构造稳定链接时调用。
