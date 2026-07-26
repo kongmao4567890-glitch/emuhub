@@ -15,7 +15,7 @@ final _cachedVersionsStreamProvider =
   return db.cachedVersionsDao.watchAllCachedVersions();
 });
 
-/// 厂商 id -> 中文名。
+/// 厂商 id -> 显示名。
 String vendorDisplayName(String vendor) {
   switch (vendor) {
     case 'nintendo':
@@ -47,10 +47,60 @@ String vendorDisplayName(String vendor) {
       return 'GCE';
     case 'libretro':
       return 'Libretro';
+    case 'apple':
+      return 'Apple';
+    case 'philips':
+      return '飞利浦';
+    case 'sharp':
+      return '夏普';
+    case 'sinclair':
+      return 'Sinclair';
+    case 'amstrad':
+      return 'Amstrad';
+    case 'fujitsu':
+      return '富士通';
+    case 'vtech':
+      return 'VTech';
+    case 'epoch':
+      return 'Epoch';
+    case 'casio':
+      return '卡西欧';
+    case 'pioneer':
+      return 'Pioneer';
+    case 'tandy':
+      return 'Tandy';
+    case 'acorn':
+      return 'Acorn';
+    case 'bally':
+      return 'Bally';
+    case 'apf':
+      return 'APF';
+    case 'entex':
+      return 'Entex';
+    case 'tiger':
+      return 'Tiger';
+    case 'cybiko':
+      return 'Cybiko';
+    case 'leapfrog':
+      return 'LeapFrog';
+    case 'nokia':
+      return 'Nokia';
+    case 'palm':
+      return 'Palm';
+    case 'adobe':
+      return 'Adobe';
+    case 'oracle':
+      return 'Oracle';
+    case 'electronika':
+      return 'Electronika';
+    case 'emerson':
+      return 'Emerson';
+    case 'fairchild':
+      return 'Fairchild';
     case 'various':
       return '其他';
     default:
-      return '其他';
+      return vendor; // 显示原始厂商名
   }
 }
 
@@ -66,6 +116,15 @@ const List<({String key, String label})> _vendorFilters = [
   (key: 'nec', label: 'NEC'),
   (key: 'commodore', label: 'Commodore'),
   (key: 'bandai', label: '万代'),
+  (key: 'apple', label: 'Apple'),
+  (key: 'vtech', label: 'VTech'),
+  (key: 'epoch', label: 'Epoch'),
+  (key: 'fujitsu', label: '富士通'),
+  (key: 'sharp', label: '夏普'),
+  (key: 'philips', label: '飞利浦'),
+  (key: 'mattel', label: 'Mattel'),
+  (key: 'casio', label: '卡西欧'),
+  (key: 'amstrad', label: 'Amstrad'),
   (key: 'various', label: '其他'),
 ];
 
@@ -94,8 +153,10 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
   List<Console> _filterConsoles(List<Console> consoles) {
     // 有独立筛选 Chip 的厂商 key 集合
     const knownVendors = {
-      'nintendo', 'sony', 'sega', 'atari', 'microsoft', 'snk',
-      'nec', 'commodore', 'bandai',
+      'nintendo', 'sony', 'sega', 'atari', 'microsoft', 'microsoft_ascii',
+      'snk', 'nec', 'commodore', 'bandai',
+      'apple', 'vtech', 'epoch', 'fujitsu', 'sharp',
+      'philips', 'mattel', 'casio', 'amstrad',
     };
     return consoles.where((console) {
       // 厂商筛选
