@@ -1,0 +1,13 @@
+{
+  "emulatorId": "snes9x_core",
+  "version": "1.63",
+  "releaseDate": "2024-07-09",
+  "releaseNotes": "Mainly a bug-fix release.\r\n\r\n**Changes:**\r\n```\r\nSnes9x 1.63\r\nGeneral:\r\n- Added a shortcut to change the backdrop color for sprite extraction.\r\n- Fixed QuickSave 0-9 slot shortcuts not working.\r\n- Allow \"Address:byte\" form for cheat inputs.\r\n- Fixed ZIP files not being closed after patch search.\r\n- Various memmap fixes to allow unofficial mappings.\r\n- Added usage of ImGui to draw things on top of the screen instead of inside.\r\n\r\nWin32:\r\n- Fixed AVI not recording audio.\r\n- Fixed framerate throttling in turbo mode (now works during AVI recording).\r\n- Fixed interlaced output speed being double.\r\n- Fixed command line arguments not working.\r\n- Fixed WaveOut device name display for names longer than 31 characters.\r\n- Fixed Bank+/- hotkey saving.\r\n- Added hotkeys for aspect ratio, cheat edit/search.\r\n- Added multiselect for cheat edit dialog.\r\n\r\nGtk:\r\n- Fixed config file location to never put files directly in $HOME and obey\r\n  $XDG_CONFIG_HOME.\r\n- Updated translations from JakeSmarter and StanleyKid-22.\r\n\r\nMac:\r\n- Added a new cheat finder.\r\n- Added MultiCart support back.\r\n- Create a blank window when starting the program, so the global menu change\r\n  doesn't go unnoticed.\r\n```",
+  "author": "bearoso",
+  "commitSha": "921f9f7",
+  "commitDate": "2024-07-07",
+  "htmlUrl": "https://github.com/snes9xgit/snes9x/releases/tag/1.63",
+  "downloadUrl": "",
+  "source": "github-api",
+  "fetchedAt": "2026-07-26T23:31:10Z"
+}

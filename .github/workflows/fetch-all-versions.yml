@@ -1,0 +1,129 @@
+name: Fetch All Emulator Versions
+
+# 通过读取 GitHub Releases 数据，获取所有模拟器的版本信息+更新说明，
+# 并以 Pull Request 方式提交（不直接合并到 main）。
+
+on:
+  workflow_dispatch: {}     # 仅手动触发
+
+permissions:
+  contents: write       # 创建分支+提交需要写权限
+  pull-requests: write  # 创建 PR 需要权限
+
+jobs:
+  fetch-and-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch all emulator versions + release notes
+        id: fetch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 scripts/fetch_all_versions.py --save --delay 0.2
+
+      - name: Generate summary
+        id: summary
+        run: |
+          # 统计结果
+          TOTAL=$(ls assets/version_cache/*.json 2>/dev/null | wc -l)
+          WITH_VERSION=$(jq -r 'select(.version != "")' assets/version_cache/*.json | jq -s 'length')
+          WITH_NOTES=$(jq -r 'select(.releaseNotes != "")' assets/version_cache/*.json | jq -s 'length')
+
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          echo "with_version=$WITH_VERSION" >> $GITHUB_OUTPUT
+          echo "with_notes=$WITH_NOTES" >> $GITHUB_OUTPUT
+
+          # 写入 Actions Summary
+          {
+            echo "## 📋 全部模拟器版本信息（版本号 + 更新说明）"
+            echo ""
+            echo "| 统计项 | 数量 |"
+            echo "|--------|------|"
+            echo "| 模拟器总数 | $TOTAL |"
+            echo "| 获取到版本号 | $WITH_VERSION |"
+            echo "| 包含更新说明 | $WITH_NOTES |"
+            echo ""
+            echo "### 📝 版本信息列表"
+            echo ""
+            echo "| 模拟器 | 版本 | 发布日期 | 更新说明 | 仓库 |"
+            echo "|--------|------|----------|----------|------|"
+            for f in assets/version_cache/*.json; do
+              NAME=$(jq -r '.emulatorId' "$f")
+              VER=$(jq -r '.version // ""' "$f")
+              DATE=$(jq -r '.releaseDate // ""' "$f")
+              NOTES=$(jq -r 'if (.releaseNotes // "") != "" then "✅" else "❌" end' "$f")
+              REPO=$(jq -r '.htmlUrl // ""' "$f" | sed 's|https://github.com/||; s|/releases.*||')
+              echo "| $NAME | ${VER:-N/A} | ${DATE:-N/A} | $NOTES | $REPO |"
+            done
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add assets/version_cache/
+
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 版本信息无变化，跳过 PR 创建" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            CHANGED=$(git diff --cached --name-only | wc -l)
+            echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
+            echo "✅ 检测到 $CHANGED 个文件有变化" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: chore/update-all-emulator-versions
+          delete-branch: true
+          title: "chore: 更新全部模拟器版本信息与更新说明"
+          body: |
+            ## 📋 全部模拟器版本信息更新
+
+            本 PR 由 GitHub Action 自动生成，通过**读取 GitHub Releases 数据**获取所有模拟器的版本信息和更新说明。
+
+            ### 更新统计
+
+            | 统计项 | 数量 |
+            |--------|------|
+            | 模拟器总数 | ${{ steps.summary.outputs.total }} |
+            | 获取到版本号 | ${{ steps.summary.outputs.with_version }} |
+            | 包含更新说明 | ${{ steps.summary.outputs.with_notes }} |
+            | 变更文件数 | ${{ steps.changes.outputs.changed_files }} |
+
+            ### 数据内容
+
+            每个模拟器的版本缓存 JSON 包含：
+            - **版本号** (version) — 最新 release 的 tag
+            - **发布日期** (releaseDate) — release 发布日期
+            - **更新说明** (releaseNotes) — release 的完整 changelog
+            - **commit SHA** — 版本对应的 commit
+            - **APK 下载链接** — release 中的 APK asset
+
+            ### 获取方式
+
+            通过 `scripts/fetch_all_versions.py` 脚本：
+            1. 读取 `assets/emulators.json` 中所有 GitHub 来源的模拟器
+            2. 按仓库去重（同一仓库只请求一次 API）
+            3. 使用 GitHub API `releases/latest` 获取版本号+更新说明
+            4. 回退到 `releases` 列表和 `tags` 列表
+
+            ---
+            _⏰ 生成时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')_
+          labels: |
+            automated
+            version-update
+          commit-message: "chore: update all emulator versions and release notes"

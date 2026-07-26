@@ -1,0 +1,13 @@
+{
+  "emulatorId": "rpcsx_clanker",
+  "version": "2026.07.08-1138",
+  "releaseDate": "2026-07-08",
+  "releaseNotes": "# RPCSX-UI app — v2026.07.08-1138\r\n\r\nAndroid frontend. This release adds playing games straight from a folder you pick\r\n(including ISOs), a sortable/filterable library, safer game removal, and RPCN/power UX.\r\n\r\n## Game library\r\n- Games folder: scan a folder you choose, in place (all-files access), including\r\n  direct ISO play; boot content:// ISOs via a SAF fd with no extraction\r\n- Sort the library (Last played / Name) and filter it (Installed / Games folder /\r\n  Only played) from persistent top-bar toggles\r\n- De-duplicate the same title across install sources\r\n- Removal reworked: a games-folder entry is never kicked off the list (move its\r\n  file out of the folder to remove it); only installed copies can be deleted, behind\r\n  a confirmation; Clear Cache works for any game (keyed by title id, incl. ISOs); a\r\n  user's source ISO/folder is never deleted\r\n- Storage-permission prompt asked once, up front; robust installed-vs-folder\r\n  classification; onBoot hardened against an unsynced list\r\n\r\n## Launch / frontends\r\n- Other frontends (Daijisho, ES-DE, ...) can launch a game directly via intent\r\n\r\n## Power / gameplay UX\r\n- Opt-in GPU turbo toggle (max Adreno clocks, off by default), mutually exclusive\r\n  with battery saver, plus an in-game home-menu bridge\r\n- Keep the screen on during long precompiles and gameplay\r\n- Fix quit-to-recents ANR; fix overlay dpad/face-button drift when scaled; show the\r\n  install-failure dialog even when notifications are denied\r\n\r\n## Online (RPCN)\r\n- Live connection-status indicator (polled, non-blocking); auto-connect on\r\n  enable/startup; clearer create-vs-sign-in and Test-connection gating\r\n\r\n## Stability\r\n- Crash-loop breaker for a core that hard-crashes during load (durable flag);\r\n  ProgressRepository request-id race fix; smooth-shaders toggle in Clanker settings",
+  "author": "ouroboros420",
+  "commitSha": "5bc99fa",
+  "commitDate": "2026-06-26",
+  "htmlUrl": "https://github.com/ouroboros420/rpcsx-ui-android/releases/tag/v2026.07.08-1138",
+  "downloadUrl": "https://github.com/ouroboros420/rpcsx-ui-android/releases/download/v2026.07.08-1138/rpcsx-release.apk",
+  "source": "github-api",
+  "fetchedAt": "2026-07-26T23:31:10Z"
+}

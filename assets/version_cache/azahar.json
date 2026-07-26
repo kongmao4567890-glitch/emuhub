@@ -1,0 +1,13 @@
+{
+  "emulatorId": "azahar",
+  "version": "2125.1.3",
+  "releaseDate": "2026-06-29",
+  "releaseNotes": "This is an unscheduled release which almost exclusively addresses issues in the macOS version of Azahar.\r\nPrimarily, it fixes an issue experienced by many users where Azahar could potentially freeze when opened.\r\n\r\nThis issue didn't affect all users, and whether or not it appeared was dependent on multiple factors such as the macOS version being run and the macOS version Azahar was built with, and the current state of the user's Azahar directory. Because of this, it took some time to determine the root cause of the issue. Apologies for any inconvenience this may have caused for any affected users.\r\n\r\n---\r\n\r\n# Azahar 2125.1.3 Changelog\r\n\r\n# macOS\r\n\r\n- Fixed an issue where Azahar could instantly freeze on boot depending on certain factors such as OS version and Azahar user data content. | @OpenSauce04 #2244 \r\n\r\n# Technical\r\n\r\n- Backported a fix for linker warnings when building with Discord rich presence on macOS, first introduced in 2126.0 Alpha 2. | @OpenSauce04 #2216\r\n  - The CMake option name change introduced in that PR has **not** been backported.\r\n- Introduced changes to dynarmic which fix a build issue introduced by MSYS2 package updates. | @PabloMK7 #2236",
+  "author": "OpenSauce04",
+  "commitSha": "b42d091",
+  "commitDate": "2026-06-29",
+  "htmlUrl": "https://github.com/azahar-emu/azahar/releases/tag/2125.1.3",
+  "downloadUrl": "https://github.com/azahar-emu/azahar/releases/download/2125.1.3/azahar-android-googleplay-2125.1.3.apk",
+  "source": "github-api",
+  "fetchedAt": "2026-07-26T23:31:10Z"
+}

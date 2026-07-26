@@ -1,0 +1,13 @@
+{
+  "emulatorId": "easyrpg",
+  "version": "0.8.1.1",
+  "releaseDate": "2025-06-02",
+  "releaseNotes": "## Changes\r\n\r\nThe highlights:\r\n\r\n- Fix text encoding detection for ZIP archives on Android and our Homebrew platforms. (#3401)\r\n- Improve support for LZH archives (#3394)\r\n\r\nFor everything else read the release notes. Enjoy!\r\n\r\n## Full release notes\r\n\r\nhttps://blog.easyrpg.org/2025/06/easyrpg-player-0-8-1-1-stun-patch-1/\r\n\r\n## For Developers / Maintainers / Building\r\n\r\nThis is a minor patch release. Build against liblcf 0.8.1.\r\n\r\nMinimum supported versions were changed from _very ancient_ to _a bit less ancient_: (#3391)\r\n\r\n- CMake 3.18 (from 3.16)\r\n- SDL 2.0.14 (from SDL 2.0.5)\r\n\r\nOtherwise, there are no significant changes.\r\n\r\nAs a reminder:\r\n\r\n- Autotools (``configure``) is still deprecated and will be removed in the next major release. Please migrate to CMake\r\n- To opt in to SDL3 (the default is SDL2) invoke CMake with ``-DPLAYER_TARGET_PLATFORM=SDL3``\r\n",
+  "author": "Ghabry",
+  "commitSha": "",
+  "commitDate": "",
+  "htmlUrl": "https://github.com/EasyRPG/Player/releases/tag/0.8.1.1",
+  "downloadUrl": "",
+  "source": "github-api",
+  "fetchedAt": "2026-07-26T23:31:10Z"
+}

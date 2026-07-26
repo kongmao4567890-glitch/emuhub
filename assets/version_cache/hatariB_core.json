@@ -1,0 +1,13 @@
+{
+  "emulatorId": "hatariB_core",
+  "version": "0.3",
+  "releaseDate": "2024-04-15",
+  "releaseNotes": "The third public release of the **hatariB** emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the **Atari ST** computer family, including the **ST**, **STE**, **TT**, and **Falcon**.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment. Just make sure to tell me which build you used (those 7 letters/numbers on the end will identify it).\r\n\r\nChanges since v0.2:\r\n  * On-screen keyboard improvements:\r\n    * Can now hold the key continuously.\r\n    * Auto-repeat for a held direction.\r\n    * Pressing up from space bar now remembers last key instead of always going to Z.\r\n  * Fixed blitter hang when using cycle-accurate cache emulation.\r\n  * Single button disk swap.\r\n  * Savestate optimizations, making run-ahead and netplay viable.\r\n  * Savestate determinism improvements to reduce netplay re-synchronizations.\r\n  * Fix CPU clock rate change on reset.\r\n  * CPU speed button mapping.\r\n  * Joystick / Mouse Toggle button mapping.\r\n  * 4:3 pixel aspect ratio option.\r\n  * Medium resolution vertical-doubling can be disabled.\r\n  * Resolution doubling settings now work for TT and Falcon.\r\n  * Border cropping settings now apply to Falcon.\r\n  * Hard disk images can be loaded as content.\r\n  * M3U can be used to auto-run a program at boot.\r\n  * Fixes to savestates on non-Windows platforms.\r\n  * Attempting to make savestates as cross-platform compatible as possible.\r\n  * Option to disable boot notification.\r\n  * Fixed out-of-date screen image during pause/one-shot and savestate/netplay/run-ahead.\r\n  * Android builds.\r\n  * Multiple hard disk support.\r\n  * MacOS Fat build (Intel 64-bit, Apple Arm).\r\n  * M3U can be used to select disk image or empty drive at boot.",
+  "author": "bbbradsmith",
+  "commitSha": "9c5ee60",
+  "commitDate": "2024-04-15",
+  "htmlUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/0.3",
+  "downloadUrl": "",
+  "source": "github-api",
+  "fetchedAt": "2026-07-26T23:31:10Z"
+}
