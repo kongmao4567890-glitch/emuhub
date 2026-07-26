@@ -53,16 +53,30 @@ class GitHubReleasesAdapter implements VersionAdapter {
     if (parsed == null) return null;
     final (owner, repo) = parsed;
 
+    VersionInfo? result;
+
     // 策略 1：重定向法（不消耗 API 配额）
-    final redirectResult = await _fetchViaRedirect(emulator, owner, repo);
-    if (redirectResult != null) return redirectResult;
+    result = await _fetchViaRedirect(emulator, owner, repo);
 
     // 策略 2：API releases 列表（消耗 1 次配额）
-    final listResult = await _fetchFromApiReleasesList(emulator, owner, repo);
-    if (listResult != null) return listResult;
+    if (result == null) {
+      result = await _fetchFromApiReleasesList(emulator, owner, repo);
+    }
 
     // 策略 3：API tags（消耗 1 次配额）
-    return _fetchFromTags(emulator, owner, repo);
+    if (result == null) {
+      result = await _fetchFromTags(emulator, owner, repo);
+    }
+
+    // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链
+    if (result != null && emulator.devUrl.isNotEmpty) {
+      final devApkUrl = await _fetchPrereleaseApkUrl(owner, repo);
+      if (devApkUrl != null) {
+        result = result.copyWith(devDownloadUrl: devApkUrl);
+      }
+    }
+
+    return result;
   }
 
   /// 重定向法：请求 releases/latest 页面，从 302 重定向 URL 提取版本号。
@@ -212,6 +226,46 @@ class GitHubReleasesAdapter implements VersionAdapter {
         releaseNotes: null,
         isNew: false,
       );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 获取最新的 prerelease（开发版/预览版）的 APK 直链。
+  ///
+  /// 查询 releases 列表（per_page=10），从中筛选第一个 `prerelease=true`
+  /// 的 release，提取其 APK asset URL。消耗 1 次 API 配额。
+  ///
+  /// 仅对配置了 devUrl 的模拟器调用，避免不必要的 API 消耗。
+  /// 返回 null 表示无 prerelease 或 API 调用失败。
+  Future<String?> _fetchPrereleaseApkUrl(
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://api.github.com/repos/$owner/$repo/releases?per_page=10',
+      );
+      final list = _asList(response.data);
+
+      // 遍历查找第一个 prerelease
+      for (final item in list) {
+        final release = _asMap(item);
+        final isPrerelease = release['prerelease'];
+        if (isPrerelease == true) {
+          final apkUrl = _extractApkAssetUrl(release);
+          if (apkUrl != null) return apkUrl;
+        }
+      }
+
+      // 如果没有 prerelease，尝试取第一个非 latest 的 release（可能是开发版）
+      // 适用于所有 release 都不是 prerelease 但有多个版本的情况
+      if (list.length > 1) {
+        final secondRelease = _asMap(list[1]);
+        return _extractApkAssetUrl(secondRelease);
+      }
+
+      return null;
     } catch (_) {
       return null;
     }

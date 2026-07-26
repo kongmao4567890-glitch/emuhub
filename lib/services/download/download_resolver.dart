@@ -49,10 +49,19 @@ class DownloadResolver {
   }
 
   /// 解析开发版下载链接。
+  ///
+  /// 优先使用缓存中的 `cachedDevDownloadUrl`（由适配器从 prerelease 提取）。
+  /// 若缓存为空，回退到静态 devUrl。
   static String resolveDevUrl(
     Emulator emulator, {
+    String? cachedDevDownloadUrl,
     String? latestVersion,
   }) {
+    // 优先使用缓存的动态开发版链接
+    if (cachedDevDownloadUrl != null && cachedDevDownloadUrl.isNotEmpty) {
+      return cachedDevDownloadUrl;
+    }
+
     final url = emulator.devUrl;
     if (url.isEmpty) return url;
 

@@ -20,10 +20,15 @@ class VersionInfo with _$VersionInfo {
     String? releaseNotes,
     required bool isNew,
 
-    /// 适配器抓取到的最新版本直链下载地址（动态，随版本更新而变化）。
+    /// 适配器抓取到的最新**稳定版**直链下载地址（动态，随版本更新而变化）。
     ///
     /// 为 `null` 表示适配器未能解析到直链，调用方应回退到静态 downloadUrl。
     String? downloadUrl,
+
+    /// 适配器抓取到的最新**开发版/预览版**直链下载地址（动态）。
+    ///
+    /// 从 GitHub prerelease 的 assets 中提取。为 `null` 时回退到静态 devUrl。
+    String? devDownloadUrl,
   }) = _VersionInfo;
 
   factory VersionInfo.fromJson(Map<String, dynamic> json) =>

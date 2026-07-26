@@ -43,6 +43,10 @@ class CachedVersions extends Table {
   /// 为 null 时回退到 emulators.json 中的静态 downloadUrl。
   TextColumn get resolvedDownloadUrl => text().nullable()();
 
+  /// 动态解析的**开发版**下载直链，由适配器在版本检查时从 prerelease 提取。
+  /// 为 null 时回退到 emulators.json 中的静态 devUrl。
+  TextColumn get resolvedDevDownloadUrl => text().nullable()();
+
   @override
   Set<Column> get primaryKey => {emulatorId};
 }
@@ -173,6 +177,7 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
         releaseNotes: Value(info.releaseNotes),
         isNew: Value(info.isNew),
         resolvedDownloadUrl: Value(info.downloadUrl),
+        resolvedDevDownloadUrl: Value(info.devDownloadUrl),
         lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
       ),
     );
@@ -212,7 +217,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration {
@@ -221,6 +226,10 @@ class AppDatabase extends _$AppDatabase {
       onUpgrade: (m, from, to) async {
         if (from < 2) {
           await m.addColumn(cachedVersions, cachedVersions.resolvedDownloadUrl);
+        }
+        if (from < 3) {
+          await m.addColumn(
+              cachedVersions, cachedVersions.resolvedDevDownloadUrl);
         }
       },
     );

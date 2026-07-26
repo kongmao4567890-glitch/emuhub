@@ -10,6 +10,7 @@ import '../../data/models/console.dart';
 import '../../data/models/emulator.dart';
 import '../../providers.dart';
 import '../../services/download/download_resolver.dart';
+import '../../services/update/release_notes_translator.dart';
 import '../../widgets/version_badge.dart';
 import '../consoles/consoles_page.dart' show vendorDisplayName;
 
@@ -318,7 +319,8 @@ class EmulatorDetailPage extends ConsumerWidget {
                         )),
                         const SizedBox(height: 4),
                         Text(
-                          cached.releaseNotes!,
+                          ReleaseNotesTranslator.translate(cached.releaseNotes) ??
+                              cached.releaseNotes!,
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: cs.onSurfaceVariant,
                             height: 1.5,
@@ -424,6 +426,7 @@ class EmulatorDetailPage extends ConsumerWidget {
     // 解析动态下载链接
     final latestVersion = cached?.currentVersion;
     final cachedDownloadUrl = cached?.resolvedDownloadUrl;
+    final cachedDevDownloadUrl = cached?.resolvedDevDownloadUrl;
 
     final stableUrl = DownloadResolver.resolveStableUrl(
       emulator,
@@ -432,6 +435,7 @@ class EmulatorDetailPage extends ConsumerWidget {
     );
     final devUrl = DownloadResolver.resolveDevUrl(
       emulator,
+      cachedDevDownloadUrl: cachedDevDownloadUrl,
       latestVersion: latestVersion,
     );
 
@@ -459,7 +463,9 @@ class EmulatorDetailPage extends ConsumerWidget {
           _DownloadChannelCard(
             icon: Icons.developer_mode,
             label: '开发版（最新预览）',
-            description: '包含最新功能，可能不稳定',
+            description: cachedDevDownloadUrl != null && cachedDevDownloadUrl.isNotEmpty
+                ? '包含最新功能，直接下载 APK'
+                : '包含最新功能，可能不稳定',
             url: devUrl,
             color: Colors.orange,
           ),
