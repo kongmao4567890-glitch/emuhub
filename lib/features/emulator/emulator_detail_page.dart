@@ -10,6 +10,7 @@ import '../../data/models/console.dart';
 import '../../data/models/emulator.dart';
 import '../../providers.dart';
 import '../../services/download/download_resolver.dart';
+import '../../services/update/google_translate_service.dart';
 import '../../services/update/release_notes_translator.dart';
 import '../../widgets/version_badge.dart';
 import '../consoles/consoles_page.dart' show vendorDisplayName;
@@ -379,9 +380,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                           fontWeight: FontWeight.w600,
                         )),
                         const SizedBox(height: 4),
-                        Text(
-                          ReleaseNotesTranslator.translate(cached.releaseNotes) ??
-                              cached.releaseNotes!,
+                        TranslatedReleaseNotes(
+                          text: cached.releaseNotes!,
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: cs.onSurfaceVariant,
                             height: 1.5,
@@ -553,10 +553,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    Text(
-                      ReleaseNotesTranslator.translate(
-                              cached.resolvedDevReleaseNotes) ??
-                          cached.resolvedDevReleaseNotes!,
+                    TranslatedReleaseNotes(
+                      text: cached.resolvedDevReleaseNotes!,
                       style: theme.textTheme.bodySmall?.copyWith(
                         color: cs.onSurfaceVariant,
                         height: 1.4,
@@ -816,6 +814,102 @@ class _CompatibilityTag extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+/// 异步翻译的更新说明组件。
+///
+/// 显示流程：
+/// 1. 先用字典翻译（ReleaseNotesTranslator）即时显示
+/// 2. 后台调用 Google 翻译获取更完整的中文翻译
+/// 3. Google 翻译成功后替换为翻译结果
+/// 4. Google 翻译失败则保留字典翻译结果
+///
+/// 如果文本已经是中文（中文占比高），直接显示原文。
+class TranslatedReleaseNotes extends StatefulWidget {
+  const TranslatedReleaseNotes({
+    super.key,
+    required this.text,
+    this.style,
+  });
+
+  final String text;
+  final TextStyle? style;
+
+  @override
+  State<TranslatedReleaseNotes> createState() => _TranslatedReleaseNotesState();
+}
+
+class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
+  String? _translatedText;
+  bool _isTranslating = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _translate();
+  }
+
+  Future<void> _translate() async {
+    // 如果文本主要是中文，不需要翻译
+    if (!GoogleTranslateService.needsTranslation(widget.text)) {
+      if (mounted) {
+        setState(() {
+          _translatedText = widget.text;
+          _isTranslating = false;
+        });
+      }
+      return;
+    }
+
+    // 先用字典翻译作为即时回退
+    final dictResult = ReleaseNotesTranslator.translate(widget.text) ?? widget.text;
+
+    // 尝试 Google 翻译
+    final googleResult = await GoogleTranslateService.translateToChinese(widget.text);
+
+    if (mounted) {
+      setState(() {
+        // 优先使用 Google 翻译结果，失败则用字典翻译
+        _translatedText = googleResult ?? dictResult;
+        _isTranslating = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_isTranslating) {
+      // 翻译中：先显示字典翻译结果（即时可用）
+      final dictResult = ReleaseNotesTranslator.translate(widget.text) ?? widget.text;
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(dictResult, style: widget.style),
+          const SizedBox(height: 4),
+          Row(
+            children: [
+              const SizedBox(
+                width: 12,
+                height: 12,
+                child: CircularProgressIndicator(strokeWidth: 1.5),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                '正在翻译...',
+                style: (widget.style ?? const TextStyle()).copyWith(
+                  fontSize: 11,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.grey,
+                ),
+              ),
+            ],
+          ),
+        ],
+      );
+    }
+
+    return Text(_translatedText ?? widget.text, style: widget.style);
   }
 }
 
