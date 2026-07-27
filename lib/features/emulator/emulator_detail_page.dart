@@ -96,68 +96,115 @@ class EmulatorDetailPage extends ConsumerWidget {
         final console = result.console;
         final emulator = result.emulator;
 
-        return Scaffold(
-          body: CustomScrollView(
-            slivers: [
-              _buildSliverAppBar(context, console, emulator),
-              SliverToBoxAdapter(
-                child: cachedAsync.when(
-                  loading: () => const Padding(
-                    padding: EdgeInsets.all(32),
-                    child: Center(child: CircularProgressIndicator()),
-                  ),
-                  error: (error, stack) {
-                    debugPrint('emulator_detail_page: cachedAsync error: $error');
-                    debugPrint('Stack: $stack');
-                    return Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          _buildHeaderInfo(context, console, emulator, null),
-                          const SizedBox(height: 20),
-                          _buildVersionSection(context, null),
-                          const SizedBox(height: 20),
-                          _buildAttributes(context, emulator),
-                          const SizedBox(height: 20),
-                          _buildDescription(context, emulator),
-                          const SizedBox(height: 20),
-                          _buildDownloadButtons(context, emulator, null),
-                          const SizedBox(height: 16),
-                          _buildFavoriteButton(
-                              context, ref, isFavAsync, console.id),
-                          const SizedBox(height: 32),
-                        ],
-                      ),
-                    );
-                  },
-                  data: (cached) => Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _buildHeaderInfo(context, console, emulator, cached),
-                        const SizedBox(height: 20),
-                        _buildVersionSection(context, cached),
-                        const SizedBox(height: 20),
-                        _buildAttributes(context, emulator),
-                        const SizedBox(height: 20),
-                        _buildDescription(context, emulator),
-                        const SizedBox(height: 20),
-                        _buildDownloadButtons(context, emulator, cached),
-                        const SizedBox(height: 16),
-                        _buildFavoriteButton(
-                            context, ref, isFavAsync, console.id),
-                        const SizedBox(height: 32),
-                      ],
+        try {
+          return _buildDetailContent(
+              context, ref, console, emulator, cachedAsync, isFavAsync);
+        } catch (e, stack) {
+          debugPrint('EmulatorDetailPage build error: $e');
+          debugPrint('Stack: $stack');
+          return Scaffold(
+            appBar: AppBar(title: Text(emulator.name)),
+            body: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.error_outline, size: 48, color: Colors.red),
+                    const SizedBox(height: 12),
+                    Text('页面渲染出错', style: Theme.of(context).textTheme.titleMedium),
+                    const SizedBox(height: 8),
+                    Text(
+                      e.toString(),
+                      style: Theme.of(context).textTheme.bodySmall,
+                      textAlign: TextAlign.center,
+                      maxLines: 5,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                  ),
+                    const SizedBox(height: 16),
+                    FilledButton(
+                      onPressed: () => ref.invalidate(emulatorsConfigProvider),
+                      child: const Text('重试'),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
-        );
+            ),
+          );
+        }
       },
+    );
+  }
+
+  /// 构建详情页主体内容。
+  Widget _buildDetailContent(
+    BuildContext context,
+    WidgetRef ref,
+    Console console,
+    Emulator emulator,
+    AsyncValue<CachedVersion?> cachedAsync,
+    AsyncValue<bool> isFavAsync,
+  ) {
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          _buildSliverAppBar(context, console, emulator),
+          SliverToBoxAdapter(
+            child: cachedAsync.when(
+              loading: () => const Padding(
+                padding: EdgeInsets.all(32),
+                child: Center(child: CircularProgressIndicator()),
+              ),
+              error: (error, stack) {
+                debugPrint('emulator_detail_page: cachedAsync error: $error');
+                debugPrint('Stack: $stack');
+                return Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildHeaderInfo(context, console, emulator, null),
+                      const SizedBox(height: 20),
+                      _buildVersionSection(context, null),
+                      const SizedBox(height: 20),
+                      _buildAttributes(context, emulator),
+                      const SizedBox(height: 20),
+                      _buildDescription(context, emulator),
+                      const SizedBox(height: 20),
+                      _buildDownloadButtons(context, emulator, null),
+                      const SizedBox(height: 16),
+                      _buildFavoriteButton(
+                          context, ref, isFavAsync, console.id),
+                      const SizedBox(height: 32),
+                    ],
+                  ),
+                );
+              },
+              data: (cached) => Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildHeaderInfo(context, console, emulator, cached),
+                    const SizedBox(height: 20),
+                    _buildVersionSection(context, cached),
+                    const SizedBox(height: 20),
+                    _buildAttributes(context, emulator),
+                    const SizedBox(height: 20),
+                    _buildDescription(context, emulator),
+                    const SizedBox(height: 20),
+                    _buildDownloadButtons(context, emulator, cached),
+                    const SizedBox(height: 16),
+                    _buildFavoriteButton(
+                        context, ref, isFavAsync, console.id),
+                    const SizedBox(height: 32),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

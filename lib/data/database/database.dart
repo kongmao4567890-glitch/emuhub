@@ -245,28 +245,39 @@ class AppDatabase extends _$AppDatabase {
       beforeOpen: (details) async {
         // 仅在数据库已存在（非首次创建）时检查
         if (!details.wasCreated) {
-          // 检查 cached_versions 表的列是否完整
-          final columns = await customSelect(
-            'PRAGMA table_info(cached_versions)',
-          ).get();
-          final columnNames = columns
-              .map((row) => row.read<String>('name'))
-              .toSet();
+          try {
+            // 检查 cached_versions 表是否存在
+            final tableExists = await customSelect(
+              "SELECT name FROM sqlite_master WHERE type='table' AND name='cached_versions'",
+            ).get();
+            if (tableExists.isEmpty) return;
 
-          if (!columnNames.contains('resolved_download_url')) {
-            await customStatement(
-              'ALTER TABLE cached_versions ADD COLUMN resolved_download_url TEXT',
-            );
-          }
-          if (!columnNames.contains('resolved_dev_download_url')) {
-            await customStatement(
-              'ALTER TABLE cached_versions ADD COLUMN resolved_dev_download_url TEXT',
-            );
-          }
-          if (!columnNames.contains('resolved_dev_release_notes')) {
-            await customStatement(
-              'ALTER TABLE cached_versions ADD COLUMN resolved_dev_release_notes TEXT',
-            );
+            // 检查 cached_versions 表的列是否完整
+            final columns = await customSelect(
+              'PRAGMA table_info(cached_versions)',
+            ).get();
+            final columnNames = columns
+                .map((row) => row.read<String>('name'))
+                .toSet();
+
+            if (!columnNames.contains('resolved_download_url')) {
+              await customStatement(
+                'ALTER TABLE cached_versions ADD COLUMN resolved_download_url TEXT',
+              );
+            }
+            if (!columnNames.contains('resolved_dev_download_url')) {
+              await customStatement(
+                'ALTER TABLE cached_versions ADD COLUMN resolved_dev_download_url TEXT',
+              );
+            }
+            if (!columnNames.contains('resolved_dev_release_notes')) {
+              await customStatement(
+                'ALTER TABLE cached_versions ADD COLUMN resolved_dev_release_notes TEXT',
+              );
+            }
+          } catch (e) {
+            // 忽略修复错误，不阻止数据库打开
+            // ErrorWidget.builder 会显示后续查询错误
           }
         }
       },
