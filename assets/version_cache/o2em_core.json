@@ -1,13 +1,13 @@
 {
   "emulatorId": "o2em_core",
-  "version": "",
-  "releaseDate": "",
-  "releaseNotes": "",
+  "version": "commit-679d6fe",
+  "releaseDate": "2026-07-21",
+  "releaseNotes": "libretro-common: restore compat/msvc/stdint.h\n\nThe libretro-common prune in 82000ac computed its keep-set from the\nLinux build's textual include closure, which cannot see this file:\nthe pre-2010 MSVC lanes resolve the ordinary '#include <stdint.h>'\nin every source file through it by appending\nlibretro-common/include/compat/msvc to the INCLUDE path, since those\ncompilers ship no stdint.h of their own. Its deletion broke the\nwindows_msvc2005_x86 build at the first file:\n\n  src/audio.c(18) : fatal error C1083: Cannot open include file:\n  'stdint.h': No such file or directory\n\nRestored byte-identical from RetroArch @ 45246ce (the same revision\nthe resync came from; upstream's compat/msvc contains only this\nfile). The other five prune deletions were re-audited for the same\ncross-platform failure mode and are genuinely unreferenced: the\nstring_list.h reference sits behind the unused cdrom path, and\naudio_resampler.c's stdstring.h uses only header-inline definitions,\nwhich the Linux link's --no-undefined already proves. A C90 syntax\nsweep of the recently touched sources found nothing else the MSVC\n2005 frontend would reject beyond its accepted extensions.",
   "author": "",
-  "commitSha": "",
-  "commitDate": "",
-  "htmlUrl": "https://github.com/libretro/libretro-o2em/releases",
+  "commitSha": "679d6fe",
+  "commitDate": "2026-07-21",
+  "htmlUrl": "https://github.com/libretro/libretro-o2em/commit/679d6fe",
   "downloadUrl": "",
-  "source": "github-api",
-  "fetchedAt": "2026-07-26T23:37:15Z"
+  "source": "github",
+  "fetchedAt": "2026-07-27T02:33:30Z"
 }

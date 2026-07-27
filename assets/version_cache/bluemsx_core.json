@@ -1,13 +1,13 @@
 {
   "emulatorId": "bluemsx_core",
-  "version": "",
-  "releaseDate": "",
-  "releaseNotes": "",
-  "author": "",
-  "commitSha": "",
-  "commitDate": "",
-  "htmlUrl": "https://github.com/libretro/blueMSX-libretro/releases",
+  "version": "commit-2f31e9c",
+  "releaseDate": "2026-07-18",
+  "releaseNotes": "Declare remaining implicitly-declared functions (Android NDK build)\n\nThe Android buildbot (NDK r27, clang 18, default -std=gnu17 where\nimplicit function declarations are hard errors) fails in libretro.c:\n\n  libretro.c:276,1869: unmountDiskOverlay\n  libretro.c:1765:     writeDiskOverlay\n  libretro.c:1916:     slotManagerResetCheat\n  libretro.c:1942,1952: slotManagerAddCheat\n\nA tree-wide sweep replicating the NDK's semantics (clang 18 with\n-std=gnu17 appended after the Makefile's flags, so it survives the\ndesktop build's -std=gnu89 and -w which had been masking these as\nsuppressed warnings) finds the same problem at call sites the Android\nbuild had not yet reached: unmountDiskOverlay in\nSrc/Emulator/Actions.c, mount/unmountDiskOverlay in\nSrc/Emulator/LaunchFile.c, and a second romMapperSC3000MultiCartCreate\ncall in Src/Board/Machine.c.\n\nRoot causes and fixes:\n\n- The drive-level overlay API (mountDiskOverlay, writeDiskOverlay,\n  unmountDiskOverlay) is implemented in Disk.c but was declared in no\n  header at all; every caller in the tree relied on implicit\n  declarations.  Declare it in Disk.h, which all callers already\n  include.\n\n- slotManagerAddCheat/slotManagerResetCheat are declared in\n  SlotManager.h, which libretro.c never included.  Include it.\n\n- Machine.c's ROM_SC3000_MULTICART/MEGACART cases call\n  romMapperSC3000MultiCartCreate; give Machine.c the same include\n  MegaromCartridge.c received in 9274f39.\n\nWith this the corrected sweep reports zero implicit declarations in\nthe whole tree, the clang build completes, and the determinism test\nbattery (including both savestate round-trips) still passes.",
+  "author": "claude",
+  "commitSha": "2f31e9c",
+  "commitDate": "2026-07-18",
+  "htmlUrl": "https://github.com/libretro/blueMSX-libretro/commit/2f31e9c",
   "downloadUrl": "",
-  "source": "github-api",
-  "fetchedAt": "2026-07-26T23:37:15Z"
+  "source": "github",
+  "fetchedAt": "2026-07-27T02:33:30Z"
 }
