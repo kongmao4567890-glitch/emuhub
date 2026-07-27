@@ -21,7 +21,8 @@ final _cachedVersionsStreamProvider =
 /// 首页。
 ///
 /// 展示欢迎卡片、"最近更新" 横向卡片、"推荐机种" 卡片以及快捷入口按钮。
-/// 首次打开应用时自动触发一次更新检查。
+/// 首次打开应用时自动触发一次更新检查，**仅检查收藏夹中的模拟器**，
+/// 不再在启动时检查全部模拟器，以减少网络请求量并聚焦用户关注的内容。
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
@@ -94,9 +95,32 @@ class _HomePageState extends ConsumerState<HomePage> {
     );
   }
 
-  /// 首次启动时自动检查更新，并通过 SnackBar 提示结果。
+  /// 首次启动时自动检查更新，仅检查收藏夹中的模拟器。
+  ///
+  /// 取消启动时检查全部模拟器的行为，改为只更新收藏夹里的模拟器，
+  /// 从而减少启动时的网络请求量并聚焦用户关注的模拟器。若收藏夹为空
+  /// 或收藏的模拟器在当前配置中均不存在，则跳过本次检查。
   Future<void> _checkUpdatesOnFirstLaunch(List<Console> consoles) async {
     if (!mounted) return;
+
+    // 仅检查收藏夹中的模拟器
+    final db = ref.read(appDatabaseProvider);
+    final favorites = await db.favoritesDao.getAllFavorites();
+
+    // 收藏夹为空时跳过自动检查，不打扰用户
+    if (favorites.isEmpty) {
+      return;
+    }
+
+    final favoriteIds = favorites.map((f) => f.emulatorId).toSet();
+    final allEmulators = consoles.expand((c) => c.emulators).toList();
+    final favoriteEmulators =
+        allEmulators.where((e) => favoriteIds.contains(e.id)).toList();
+
+    // 收藏项在当前配置中均未匹配到时跳过
+    if (favoriteEmulators.isEmpty) {
+      return;
+    }
 
     // 显示检查中的 SnackBar
     ScaffoldMessenger.of(context).showSnackBar(
@@ -109,7 +133,7 @@ class _HomePageState extends ConsumerState<HomePage> {
               child: CircularProgressIndicator(strokeWidth: 2),
             ),
             SizedBox(width: 12),
-            Text('正在检查模拟器更新…'),
+            Text('正在检查收藏模拟器更新…'),
           ],
         ),
         duration: Duration(seconds: 10),
@@ -117,18 +141,17 @@ class _HomePageState extends ConsumerState<HomePage> {
     );
 
     try {
-      final allEmulators = consoles.expand((c) => c.emulators).toList();
       final updateService = ref.read(updateServiceProvider);
-      final result = await updateService.checkAll(allEmulators);
+      final result = await updateService.checkAll(favoriteEmulators);
 
       if (!mounted) return;
 
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
 
       final message = result.hasUpdates
-          ? '发现 ${result.updated.length} 个新版本！共检查 ${result.checked} 个模拟器'
+          ? '发现 ${result.updated.length} 个新版本！共检查 ${result.checked} 个收藏模拟器'
               '${result.failed.isNotEmpty ? '，${result.failed.length} 个检查失败' : ''}'
-          : '所有 ${result.checked} 个模拟器均为最新版本'
+          : '收藏的 ${result.checked} 个模拟器均为最新版本'
               '${result.failed.isNotEmpty ? '，${result.failed.length} 个检查失败' : ''}';
 
       ScaffoldMessenger.of(context).showSnackBar(
