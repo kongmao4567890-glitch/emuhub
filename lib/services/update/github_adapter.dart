@@ -53,8 +53,13 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
     VersionInfo? result;
 
+    // 策略 0：HTML 解析法（不消耗 API 配额）
+    result = await _fetchFromHtml(emulator, owner, repo);
+
     // 策略 1：重定向法（不消耗 API 配额）
-    result = await _fetchViaRedirect(emulator, owner, repo);
+    if (result == null) {
+      result = await _fetchViaRedirect(emulator, owner, repo);
+    }
 
     // 策略 2：API releases 列表（消耗 1 次配额）
     if (result == null) {
@@ -135,7 +140,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
         );
       }
 
-      // API 失败（限流或网络错误）→ 回退到动态下载链接构造
+      // API 失败（限流或网络错误）→ 尝试从 HTML 获取更新说明
+      final htmlNotes = await _fetchReleaseNotesFromHtml(owner, repo, tag);
       final dynamicDownloadUrl = _buildDynamicDownloadUrl(
         emulator, owner, repo, tag,
       );
@@ -144,13 +150,182 @@ class GitHubReleasesAdapter implements VersionAdapter {
         emulatorId: emulator.id,
         version: version,
         releaseDate: DateTime.now(),
-        releaseNotes: null,
+        releaseNotes: htmlNotes,
         isNew: false,
         downloadUrl: dynamicDownloadUrl,
       );
     } catch (_) {
       return null;
     }
+  }
+
+  /// HTML 解析法：从 GitHub releases 页面提取全部版本信息（不消耗 API 配额）。
+  ///
+  /// 请求 `releases/latest` 页面（GitHub 会 302 重定向到 tag 页面），
+  /// 从最终 URL 提取版本号，从 HTML 提取更新说明、APK 下载链接和发布日期。
+  /// 单次 HTTP 请求即可获取全部信息，无需调用 GitHub API。
+  Future<VersionInfo?> _fetchFromHtml(
+    Emulator emulator,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases/latest',
+        options: Options(
+          responseType: ResponseType.plain,
+          followRedirects: true,
+          validateStatus: (status) => status != null && status < 400,
+        ),
+      );
+
+      final html = response.data.toString();
+      final finalUrl = response.realUri.toString();
+
+      // 1. 从最终 URL 提取版本号：.../releases/tag/v1.2.3
+      final tagMatch =
+          RegExp(r'/releases/tag/(.+?)(?:\?|#|$)').firstMatch(finalUrl);
+      if (tagMatch == null) return null;
+      final tag = tagMatch.group(1)!;
+      if (tag.isEmpty) return null;
+
+      final version = _stripVPrefix(tag);
+      if (version.isEmpty) return null;
+
+      // 2. 从 HTML 提取更新说明
+      final releaseNotes = _extractReleaseNotesFromHtml(html);
+
+      // 3. 从 HTML 提取 APK 下载链接
+      final apkUrl = _extractApkUrlFromHtml(html);
+
+      // 4. 从 HTML 提取发布日期
+      final releaseDate = _extractReleaseDateFromHtml(html);
+
+      return VersionInfo(
+        emulatorId: emulator.id,
+        version: version,
+        releaseDate: releaseDate ?? DateTime.now(),
+        releaseNotes: releaseNotes,
+        isNew: false,
+        downloadUrl: apkUrl,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从指定 tag 的 release 页面 HTML 中提取更新说明（不消耗 API 配额）。
+  Future<String?> _fetchReleaseNotesFromHtml(
+    String owner,
+    String repo,
+    String tag,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases/tag/$tag',
+        options: Options(
+          responseType: ResponseType.plain,
+          followRedirects: true,
+          validateStatus: (status) => status != null && status < 400,
+        ),
+      );
+      final html = response.data.toString();
+      return _extractReleaseNotesFromHtml(html);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 GitHub releases 页面 HTML 提取 release notes。
+  ///
+  /// GitHub release 页面的更新说明位于 `<div class="markdown-body">` 元素中。
+  String? _extractReleaseNotesFromHtml(String html) {
+    final patterns = <RegExp>[
+      // 主匹配：markdown-body div（非贪婪匹配到闭合标签）
+      RegExp(
+        r'<div[^>]*class="[^"]*markdown-body[^"]*"[^>]*>([\s\S]*?)</div>',
+        caseSensitive: false,
+      ),
+    ];
+
+    for (final pattern in patterns) {
+      final match = pattern.firstMatch(html);
+      if (match != null) {
+        var content = match.group(1)!;
+        // Strip HTML tags
+        content = content.replaceAll(RegExp(r'<[^>]+>'), '');
+        // Decode HTML entities
+        content = _decodeHtmlEntities(content);
+        // Clean up whitespace
+        content = content
+            .replaceAll(RegExp(r'\n{3,}'), '\n\n')
+            .trim();
+        if (content.isNotEmpty) {
+          return content;
+        }
+      }
+    }
+    return null;
+  }
+
+  /// 从 GitHub releases 页面 HTML 提取 APK 下载链接。
+  ///
+  /// 优先返回 arm64/aarch64 架构的 APK。
+  String? _extractApkUrlFromHtml(String html) {
+    String? arm64Apk;
+    String? anyApk;
+
+    final apkPattern = RegExp(
+      r'href="([^"]*\.apk)"',
+      caseSensitive: false,
+    );
+
+    for (final match in apkPattern.allMatches(html)) {
+      var url = match.group(1)!;
+      if (url.startsWith('/')) {
+        url = 'https://github.com$url';
+      }
+      final name = url.toLowerCase();
+      if (name.contains('arm64') ||
+          name.contains('aarch64') ||
+          name.contains('arm64-v8a')) {
+        arm64Apk ??= url;
+      }
+      anyApk ??= url;
+    }
+
+    return arm64Apk ?? anyApk;
+  }
+
+  /// 从 GitHub releases 页面 HTML 提取发布日期。
+  DateTime? _extractReleaseDateFromHtml(String html) {
+    final patterns = <RegExp>[
+      RegExp(r'<relative-time[^>]*datetime="([^"]+)"', caseSensitive: false),
+      RegExp(r'<time[^>]*datetime="([^"]+)"', caseSensitive: false),
+    ];
+
+    for (final pattern in patterns) {
+      final match = pattern.firstMatch(html);
+      if (match != null) {
+        final date = _parseDate(match.group(1));
+        if (date != null) return date;
+      }
+    }
+    return null;
+  }
+
+  /// 解码 HTML 实体。
+  String _decodeHtmlEntities(String text) {
+    return text
+        .replaceAll('&lt;', '<')
+        .replaceAll('&gt;', '>')
+        .replaceAll('&amp;', '&')
+        .replaceAll('&quot;', '"')
+        .replaceAll('&#39;', "'")
+        .replaceAll('&apos;', "'")
+        .replaceAll('&nbsp;', ' ')
+        .replaceAll('&#x2F;', '/')
+        .replaceAll('&#x27;', "'");
   }
 
   /// API 法：请求 releases 列表，取第一条。

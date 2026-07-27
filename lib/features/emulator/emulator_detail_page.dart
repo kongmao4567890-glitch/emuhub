@@ -64,16 +64,56 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-class EmulatorDetailPage extends ConsumerWidget {
+/// 打开页面时自动检查更新，也支持手动刷新。
+class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
   final String emulatorId;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<EmulatorDetailPage> createState() => _EmulatorDetailPageState();
+}
+
+class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
+  bool _hasAutoChecked = false;
+  bool _isChecking = false;
+
+  /// 自动触发一次版本检查，获取最新版本信息和更新内容。
+  void _autoCheckUpdate(Emulator emulator) {
+    if (_isChecking) return;
+    setState(() => _isChecking = true);
+
+    final updateService = ref.read(updateServiceProvider);
+    updateService.checkOne(emulator).whenComplete(() {
+      if (mounted) {
+        setState(() => _isChecking = false);
+      }
+    });
+  }
+
+  /// 手动触发版本检查（点击刷新按钮时调用）。
+  void _manualCheckUpdate() {
+    if (_isChecking) return;
+    final config = ref.read(emulatorsConfigProvider).valueOrNull;
+    if (config == null) return;
+    final result = findEmulator(config.consoles, widget.emulatorId);
+    if (result == null) return;
+
+    setState(() => _isChecking = true);
+    final updateService = ref.read(updateServiceProvider);
+    updateService.checkOne(result.emulator).whenComplete(() {
+      if (mounted) {
+        setState(() => _isChecking = false);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final ref = this.ref;
     final configAsync = ref.watch(emulatorsConfigProvider);
-    final cachedAsync = ref.watch(_cachedVersionProvider(emulatorId));
-    final isFavAsync = ref.watch(_isFavoriteProvider(emulatorId));
+    final cachedAsync = ref.watch(_cachedVersionProvider(widget.emulatorId));
+    final isFavAsync = ref.watch(_isFavoriteProvider(widget.emulatorId));
 
     return configAsync.when(
       loading: () => Scaffold(
@@ -85,7 +125,7 @@ class EmulatorDetailPage extends ConsumerWidget {
         body: _buildError(context, ref, error),
       ),
       data: (config) {
-        final result = findEmulator(config.consoles, emulatorId);
+        final result = findEmulator(config.consoles, widget.emulatorId);
         if (result == null) {
           return Scaffold(
             appBar: AppBar(),
@@ -94,6 +134,14 @@ class EmulatorDetailPage extends ConsumerWidget {
         }
         final console = result.console;
         final emulator = result.emulator;
+
+        // 自动检查更新（仅在首次加载时触发一次）
+        if (!_hasAutoChecked) {
+          _hasAutoChecked = true;
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            _autoCheckUpdate(emulator);
+          });
+        }
 
         return Scaffold(
           body: CustomScrollView(
@@ -146,6 +194,19 @@ class EmulatorDetailPage extends ConsumerWidget {
     return SliverAppBar(
       expandedHeight: 240,
       pinned: true,
+      actions: [
+        IconButton(
+          icon: _isChecking
+              ? const SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                )
+              : const Icon(Icons.refresh),
+          onPressed: _isChecking ? null : _manualCheckUpdate,
+          tooltip: '检查更新',
+        ),
+      ],
       flexibleSpace: FlexibleSpaceBar(
         title: Text(
           emulator.name,
@@ -575,10 +636,10 @@ class EmulatorDetailPage extends ConsumerWidget {
   ) async {
     final db = ref.read(appDatabaseProvider);
     if (isFav) {
-      await db.favoritesDao.removeFavorite(emulatorId);
+      await db.favoritesDao.removeFavorite(widget.emulatorId);
     } else {
       await db.favoritesDao.addFavorite(
-        emulatorId: emulatorId,
+        emulatorId: widget.emulatorId,
         consoleId: consoleId,
       );
     }
