@@ -64,7 +64,8 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-/// 打开页面时自动检查更新，也支持手动刷新。
+/// 不再在打开页面时自动检查更新，用户需手动点击右上角刷新按钮
+/// 逐个检查模拟器版本。
 class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
@@ -75,21 +76,7 @@ class EmulatorDetailPage extends ConsumerStatefulWidget {
 }
 
 class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
-  bool _hasAutoChecked = false;
   bool _isChecking = false;
-
-  /// 自动触发一次版本检查，获取最新版本信息和更新内容。
-  void _autoCheckUpdate(Emulator emulator) {
-    if (_isChecking) return;
-    setState(() => _isChecking = true);
-
-    final updateService = ref.read(updateServiceProvider);
-    updateService.checkOne(emulator).whenComplete(() {
-      if (mounted) {
-        setState(() => _isChecking = false);
-      }
-    });
-  }
 
   /// 手动触发版本检查（点击刷新按钮时调用）。
   void _manualCheckUpdate() {
@@ -134,14 +121,6 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         }
         final console = result.console;
         final emulator = result.emulator;
-
-        // 自动检查更新（仅在首次加载时触发一次）
-        if (!_hasAutoChecked) {
-          _hasAutoChecked = true;
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            _autoCheckUpdate(emulator);
-          });
-        }
 
         return Scaffold(
           body: CustomScrollView(
