@@ -241,12 +241,12 @@ class AppDatabase extends _$AppDatabase {
               cachedVersions, cachedVersions.resolvedDevReleaseNotes);
         }
       },
-      // 防止迁移失败导致查询异常：打开数据库时检查并补齐缺失的列。
+      // 防止迁移失败导致查询异常：每次打开数据库时检查并补齐缺失的列。
       beforeOpen: (details) async {
-        if (details.hadData) {
-          final db = details.database;
+        // 仅在数据库已存在（非首次创建）时检查
+        if (!details.wasCreated) {
           // 检查 cached_versions 表的列是否完整
-          final columns = await db.customSelect(
+          final columns = await customSelect(
             'PRAGMA table_info(cached_versions)',
           ).get();
           final columnNames = columns
@@ -254,17 +254,17 @@ class AppDatabase extends _$AppDatabase {
               .toSet();
 
           if (!columnNames.contains('resolved_download_url')) {
-            await db.customStatement(
+            await customStatement(
               'ALTER TABLE cached_versions ADD COLUMN resolved_download_url TEXT',
             );
           }
           if (!columnNames.contains('resolved_dev_download_url')) {
-            await db.customStatement(
+            await customStatement(
               'ALTER TABLE cached_versions ADD COLUMN resolved_dev_download_url TEXT',
             );
           }
           if (!columnNames.contains('resolved_dev_release_notes')) {
-            await db.customStatement(
+            await customStatement(
               'ALTER TABLE cached_versions ADD COLUMN resolved_dev_release_notes TEXT',
             );
           }
