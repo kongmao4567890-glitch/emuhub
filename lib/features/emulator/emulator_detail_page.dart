@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -105,7 +106,31 @@ class EmulatorDetailPage extends ConsumerWidget {
                     padding: EdgeInsets.all(32),
                     child: Center(child: CircularProgressIndicator()),
                   ),
-                  error: (_, __) => const SizedBox.shrink(),
+                  error: (error, stack) {
+                    debugPrint('emulator_detail_page: cachedAsync error: $error');
+                    debugPrint('Stack: $stack');
+                    return Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildHeaderInfo(context, console, emulator, null),
+                          const SizedBox(height: 20),
+                          _buildVersionSection(context, null),
+                          const SizedBox(height: 20),
+                          _buildAttributes(context, emulator),
+                          const SizedBox(height: 20),
+                          _buildDescription(context, emulator),
+                          const SizedBox(height: 20),
+                          _buildDownloadButtons(context, emulator, null),
+                          const SizedBox(height: 16),
+                          _buildFavoriteButton(
+                              context, ref, isFavAsync, console.id),
+                          const SizedBox(height: 32),
+                        ],
+                      ),
+                    );
+                  },
                   data: (cached) => Padding(
                     padding: const EdgeInsets.all(16),
                     child: Column(
