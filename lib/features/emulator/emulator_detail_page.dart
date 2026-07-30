@@ -11,6 +11,7 @@ import '../../data/models/emulator.dart';
 import '../../providers.dart';
 import '../../services/download/download_resolver.dart';
 import '../../services/update/google_translate_service.dart';
+import '../../services/update/mymemory_translate_service.dart';
 import '../../services/update/release_notes_translator.dart';
 import '../../widgets/version_badge.dart';
 import '../consoles/consoles_page.dart' show vendorDisplayName;
@@ -859,7 +860,8 @@ class TranslatedReleaseNotes extends StatefulWidget {
 class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
   String? _translatedText;
   bool _isTranslating = true;
-  bool _googleSuccess = false;
+  /// 翻译来源：'google' | 'mymemory' | 'dict'
+  String _source = 'dict';
   bool _showOriginal = false;
 
   @override
@@ -877,7 +879,7 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
       setState(() {
         _translatedText = null;
         _isTranslating = true;
-        _googleSuccess = false;
+        _source = 'dict';
         _showOriginal = false;
       });
       _translate();
@@ -891,24 +893,49 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
         setState(() {
           _translatedText = widget.text;
           _isTranslating = false;
-          _googleSuccess = true;
+          _source = 'google';
         });
       }
       return;
     }
 
-    // 先用字典翻译作为即时回退
+    // 先用字典翻译作为即时回退（立即可用）
     final dictResult = ReleaseNotesTranslator.translate(widget.text) ?? widget.text;
 
-    // 尝试 Google 翻译
+    // 尝试 1: Google 翻译（国际用户首选，但中国大陆不可用）
     final googleResult = await GoogleTranslateService.translateToChinese(widget.text);
 
+    if (googleResult != null && googleResult.isNotEmpty) {
+      if (mounted) {
+        setState(() {
+          _translatedText = googleResult;
+          _isTranslating = false;
+          _source = 'google';
+        });
+      }
+      return;
+    }
+
+    // 尝试 2: MyMemory 翻译（Google 不可用时的备选，中国大陆可访问）
+    final myMemoryResult = await MyMemoryTranslateService.translateToChinese(widget.text);
+
+    if (myMemoryResult != null && myMemoryResult.isNotEmpty) {
+      if (mounted) {
+        setState(() {
+          _translatedText = myMemoryResult;
+          _isTranslating = false;
+          _source = 'mymemory';
+        });
+      }
+      return;
+    }
+
+    // 尝试 3: 字典翻译（离线，始终可用）
     if (mounted) {
       setState(() {
-        // 优先使用 Google 翻译结果，失败则用字典翻译
-        _translatedText = googleResult ?? dictResult;
-        _googleSuccess = googleResult != null;
+        _translatedText = dictResult;
         _isTranslating = false;
+        _source = 'dict';
       });
     }
   }
@@ -965,7 +992,11 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
         Row(
           children: [
             _buildSourceChip(
-              _googleSuccess ? 'Google 翻译' : '字典翻译',
+              switch (_source) {
+                'google' => 'Google 翻译',
+                'mymemory' => 'MyMemory 翻译',
+                _ => '字典翻译',
+              },
             ),
             const SizedBox(width: 8),
           ],
@@ -976,6 +1007,8 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
 
   /// 构建翻译来源标签 + 原文切换按钮。
   Widget _buildSourceChip(String label) {
+    // google/mymemory 为在线翻译（绿色），dict 为离线字典（橙色）
+    final isOnline = _source == 'google' || _source == 'mymemory';
     return InkWell(
       onTap: () {
         setState(() {
@@ -992,7 +1025,7 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
               label,
               style: TextStyle(
                 fontSize: 11,
-                color: _googleSuccess ? Colors.green : Colors.orange,
+                color: isOnline ? Colors.green : Colors.orange,
               ),
             ),
             const SizedBox(width: 4),
