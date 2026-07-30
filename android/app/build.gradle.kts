@@ -35,6 +35,9 @@ android {
 
     buildTypes {
         release {
+            // TODO(发布前必改): 当前 release 使用 debug 签名，仅适合个人测试。
+            // 公开发布请配置独立的 upload keystore（通过 CI secrets 注入，
+            // 切勿把私钥提交进仓库），否则 APK 可能被他人冒名签名覆盖安装。
             signingConfig = signingConfigs.getByName("debug")
         }
     }

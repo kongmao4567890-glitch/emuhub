@@ -197,8 +197,9 @@ class UpdateService {
       final cached = await _dao.getCachedVersion(emulator.id);
       final bool isNew;
       if (cached == null) {
-        // 本地无缓存，视为新版本
-        isNew = true;
+        // 本地无缓存：本次为首次检查，仅建立版本基线，不标记为新版本。
+        // 否则首次运行会把全部模拟器标记为“有更新”并群发通知。
+        isNew = false;
       } else if (cached.currentVersion.isEmpty) {
         isNew = true;
       } else {
@@ -294,6 +295,10 @@ class UpdateService {
                 : DateTime.now(),
             releaseNotes: c.releaseNotes,
             isNew: true,
+            // 携带适配器动态解析的下载直链，避免 UI 回退到可能 404 的静态 URL
+            downloadUrl: c.resolvedDownloadUrl,
+            devDownloadUrl: c.resolvedDevDownloadUrl,
+            devReleaseNotes: c.resolvedDevReleaseNotes,
           ),
         )
         .toList();

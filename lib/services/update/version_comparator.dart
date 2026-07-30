@@ -1,10 +1,9 @@
-import 'package:pub_semver/pub_semver.dart';
-
 /// 版本号对比工具。
 ///
 /// 负责将各来源抓取到的“脏”版本号规范化，并提供新旧版本比较能力。
-/// 优先使用 [pub_semver](https://pub.dev/packages/pub_semver) 进行语义化比较，
-/// 解析失败时退化为字符串比较，保证健壮性。
+/// 规范化后的版本号为纯数字点分形式，比较时按数值段逐段对比，
+/// 支持任意段数（如 `2.6.5.2` 这样的四段版本号），
+/// 段数不同时短的一侧按 `0` 补齐（`1.2` 与 `1.2.0` 视为相等）。
 class VersionComparator {
   VersionComparator._();
 
@@ -45,8 +44,9 @@ class VersionComparator {
 
   /// 判断 [latest] 是否比 [current] 更新。
   ///
-  /// 优先使用 `pub_semver` 的语义化版本比较；若任一版本无法解析为合法
-  /// semver，则退化为字符串比较（仅当两者不同且 latest 字典序更大时返回 true）。
+  /// 两者经 [normalize] 规范化后按数值段逐段比较（短的一侧补 0），
+  /// 因此 `2.6.5.2 > 2.6.5.1`、`2024.03 == 2024.3`（前导零按数值处理）。
+  /// 若存在空段等非法格式，则退化为字符串比较。
   ///
   /// 若 [latest] 为空，返回 `false`；若 [current] 为空，返回 `true`。
   static bool isNewer(String current, String latest) {
@@ -57,25 +57,37 @@ class VersionComparator {
     if (normalizedCurrent.isEmpty) return true;
     if (normalizedLatest == normalizedCurrent) return false;
 
-    try {
-      final currentVersion = Version.parse(_ensureSemver(normalizedCurrent));
-      final latestVersion = Version.parse(_ensureSemver(normalizedLatest));
-      return latestVersion > currentVersion;
-    } catch (_) {
-      // pub_semver 解析失败，退化为字符串比较
-      return normalizedLatest.compareTo(normalizedCurrent) > 0;
+    final currentParts = _numericParts(normalizedCurrent);
+    final latestParts = _numericParts(normalizedLatest);
+
+    if (currentParts != null && latestParts != null) {
+      final maxLength = currentParts.length > latestParts.length
+          ? currentParts.length
+          : latestParts.length;
+      for (var i = 0; i < maxLength; i++) {
+        final c = i < currentParts.length ? currentParts[i] : 0;
+        final l = i < latestParts.length ? latestParts[i] : 0;
+        if (l != c) return l > c;
+      }
+      return false;
     }
+
+    // 非法格式（含空段），退化为字符串比较
+    return normalizedLatest.compareTo(normalizedCurrent) > 0;
   }
 
-  /// 将版本号补齐为至少三段（major.minor.patch），不足补 `0`。
+  /// 将规范化后的版本号拆分为数值段。
   ///
-  /// pub_semver 要求版本号至少包含 `major.minor.patch`，而部分来源只
-  /// 提供 `1.2` 这样的两段版本号，需要补齐后才能解析。
-  static String _ensureSemver(String version) {
-    final parts = version.split('.').where((p) => p.isNotEmpty).toList();
-    while (parts.length < 3) {
-      parts.add('0');
+  /// 任一一段为空（如 `1..2`、`.1`、`1.`）时返回 null，表示格式非法。
+  static List<int>? _numericParts(String version) {
+    final segments = version.split('.');
+    final result = <int>[];
+    for (final segment in segments) {
+      if (segment.isEmpty) return null;
+      final value = int.tryParse(segment);
+      if (value == null) return null;
+      result.add(value);
     }
-    return parts.take(3).join('.');
+    return result;
   }
 }

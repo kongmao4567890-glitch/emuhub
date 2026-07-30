@@ -264,7 +264,25 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
                             ),
                           ),
                         ),
-                        error: (_, __) => _buildEmptyResult(),
+                        // 版本缓存只是徽标辅助数据，读取失败不应吞掉机种列表，
+                        // 按空缓存正常渲染网格
+                        error: (_, __) => GridView.builder(
+                          padding: const EdgeInsets.all(16),
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 12,
+                            mainAxisSpacing: 12,
+                            childAspectRatio: 0.88,
+                          ),
+                          itemCount: filtered.length,
+                          itemBuilder: (context, index) {
+                            return _ConsoleCard(
+                              console: filtered[index],
+                              cachedVersions: const [],
+                            );
+                          },
+                        ),
                         data: (cached) => GridView.builder(
                           padding: const EdgeInsets.all(16),
                           gridDelegate:

@@ -97,14 +97,16 @@ class DownloadResolver {
     }
 
     // 通用模式：路径中包含 /v{version}/ 或 /{version}/
-    final versionInPath = RegExp(r'/v?(\d+\.\d+(?:\.\d+)?)/');
+    // 替换时保留原文是否有 v 前缀，避免给无前缀的 URL 强加 v 导致 404
+    final versionInPath = RegExp(r'/(v?)(\d+\.\d+(?:\.\d+)?)/');
     final matches = versionInPath.allMatches(url);
     if (matches.isNotEmpty) {
       var result = url;
       // 逆序替换，避免偏移问题
       for (final match in matches.toList().reversed) {
+        final prefix = match.group(1) ?? '';
         result = result.substring(0, match.start) +
-            '/v$newVersion/' +
+            '/$prefix$newVersion/' +
             result.substring(match.end);
       }
       return result;

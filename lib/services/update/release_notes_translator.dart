@@ -58,8 +58,7 @@ class ReleaseNotesTranslator {
     MapEntry(RegExp(r'initial support for', caseSensitive: false), '初步支持：'),
     MapEntry(RegExp(r'initial support', caseSensitive: false), '初步支持'),
     MapEntry(RegExp(r'experimental support', caseSensitive: false), '实验性支持'),
-    MapEntry(RegExp(r'new feature', caseSensitive: false), '新功能'),
-    MapEntry(RegExp(r'new features', caseSensitive: false), '新功能'),
+    MapEntry(RegExp(r'new features?', caseSensitive: false), '新功能'),
     MapEntry(RegExp(r'known issues?', caseSensitive: false), '已知问题'),
     MapEntry(RegExp(r'other changes?', caseSensitive: false), '其他变更'),
     MapEntry(RegExp(r'misc changes?', caseSensitive: false), '杂项变更'),
@@ -90,8 +89,7 @@ class ReleaseNotesTranslator {
     MapEntry(RegExp(r'memory leak', caseSensitive: false), '内存泄漏'),
     MapEntry(RegExp(r'memory usage', caseSensitive: false), '内存占用'),
     MapEntry(RegExp(r'reduce memory', caseSensitive: false), '减少内存'),
-    MapEntry(RegExp(r'save state', caseSensitive: false), '存档'),
-    MapEntry(RegExp(r'save states', caseSensitive: false), '存档'),
+    MapEntry(RegExp(r'save states?', caseSensitive: false), '存档'),
     MapEntry(RegExp(r'cheat codes?', caseSensitive: false), '金手指'),
     MapEntry(RegExp(r'controller support', caseSensitive: false), '手柄支持'),
     MapEntry(RegExp(r'controller mapping', caseSensitive: false), '手柄映射'),
@@ -126,7 +124,11 @@ class ReleaseNotesTranslator {
     MapEntry(RegExp(r'settings? menu', caseSensitive: false), '设置菜单'),
     MapEntry(RegExp(r'settings? page', caseSensitive: false), '设置页面'),
     MapEntry(RegExp(r'settings? screen', caseSensitive: false), '设置界面'),
-    MapEntry(RegExp(r'android 1[0-9]', caseSensitive: false), 'Android'),
+    // 仅替换 android 单词本身（lookahead 保留后面的版本号，如 "Android 13"）
+    MapEntry(
+      RegExp(r'android (?=1[0-9]\b)', caseSensitive: false),
+      'Android ',
+    ),
   ];
 
   /// 单词/术语翻译表。

@@ -142,6 +142,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         if (!_hasAutoChecked) {
           _hasAutoChecked = true;
           WidgetsBinding.instance.addPostFrameCallback((_) {
+            // 回调触发时页面可能已被销毁，setState 前必须判 mounted
+            if (!mounted) return;
             _autoCheckUpdate(emulator);
           });
         }
@@ -862,6 +864,20 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
   void initState() {
     super.initState();
     _translate();
+  }
+
+  @override
+  void didUpdateWidget(covariant TranslatedReleaseNotes oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // 文本变化（如后台检查写入了新的 releaseNotes）时重新翻译，
+    // 否则会一直显示旧文本的翻译结果
+    if (oldWidget.text != widget.text) {
+      setState(() {
+        _translatedText = null;
+        _isTranslating = true;
+      });
+      _translate();
+    }
   }
 
   Future<void> _translate() async {

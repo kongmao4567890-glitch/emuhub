@@ -52,12 +52,19 @@ class _HomePageState extends ConsumerState<HomePage> {
     final cachedVersionsAsync =
         ref.watch(_cachedVersionsStreamProvider);
 
-    // 配置加载完成后，触发首次更新检查
+    // 配置加载完成后，触发首次更新检查。
+    // 必须在帧结束后触发：_checkUpdatesOnFirstLaunch 会同步调用
+    // ScaffoldMessenger.showSnackBar，在 build 阶段直接调用会触发
+    // "setState() called during build" 错误。
     if (!_firstLaunchCheckDone) {
       final config = configAsync.valueOrNull;
       if (config != null) {
         _firstLaunchCheckDone = true;
-        _checkUpdatesOnFirstLaunch(config.consoles);
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) {
+            _checkUpdatesOnFirstLaunch(config.consoles);
+          }
+        });
       }
     }
 

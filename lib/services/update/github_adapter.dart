@@ -436,16 +436,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
         }
       }
 
-      // 如果没有 prerelease，尝试取第一个非 latest 的 release（可能是开发版）
-      // 适用于所有 release 都不是 prerelease 但有多个版本的情况
-      if (list.length > 1) {
-        final secondRelease = _asMap(list[1]);
-        final apkUrl = _extractApkAssetUrl(secondRelease);
-        if (apkUrl != null) {
-          return (apkUrl: apkUrl, body: secondRelease['body']?.toString());
-        }
-      }
-
+      // 仓库没有 prerelease：返回 null。
+      // 注意不能用 releases 列表中第二新的 release 冒充开发版，
+      // 那通常只是更旧的稳定版，会误导用户下载旧包。
       return null;
     } catch (_) {
       return null;

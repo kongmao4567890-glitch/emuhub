@@ -12,6 +12,7 @@ import 'core/constants/app_constants.dart';
 import 'data/database/database.dart';
 import 'data/models/emulators_config.dart';
 import 'data/repositories/settings_repository.dart';
+import 'services/background_task.dart';
 import 'services/notification_service.dart';
 import 'services/update/update_service.dart';
 
@@ -35,22 +36,26 @@ final Provider<AppDatabase> appDatabaseProvider = Provider<AppDatabase>((ref) {
 
 /// SharedPreferences 实例。
 ///
-/// 异步初始化，UI 层应先 watch 本 provider，待 [AsyncValue] 进入
-/// data 状态后再访问依赖它的 [settingsRepositoryProvider] /
-/// [appSettingsProvider]，以避免 [AsyncValue.requireValue] 抛出异常。
-final FutureProvider<SharedPreferences> sharedPreferencesProvider =
-    FutureProvider<SharedPreferences>((ref) {
-  return SharedPreferences.getInstance();
+/// 同步 Provider，必须在 `main()` 中通过 `ProviderScope.overrides`
+/// 注入已加载完成的实例：
+/// ```dart
+/// final prefs = await SharedPreferences.getInstance();
+/// ProviderScope(overrides: [sharedPreferencesProvider.overrideWithValue(prefs)])
+/// ```
+/// 未 override 时访问会抛出 [UnimplementedError]。
+final Provider<SharedPreferences> sharedPreferencesProvider =
+    Provider<SharedPreferences>((ref) {
+  throw UnimplementedError(
+    'sharedPreferencesProvider 必须在 main() 中 override 注入',
+  );
 });
 
 /// 用户设置仓库。
 ///
-/// 依赖 [sharedPreferencesProvider]。由于 SharedPreferences 是异步加载的，
-/// 本 provider 通过 [AsyncValue.requireValue] 取值，**必须在
-/// [sharedPreferencesProvider] 就绪后再访问**（通常由根组件做启动门禁）。
+/// 依赖 [sharedPreferencesProvider]（同步，已在 main() 中注入实例）。
 final Provider<SettingsRepository> settingsRepositoryProvider =
     Provider<SettingsRepository>((ref) {
-  final prefs = ref.watch(sharedPreferencesProvider).requireValue;
+  final prefs = ref.watch(sharedPreferencesProvider);
   return SettingsRepository(prefs);
 });
 
@@ -65,9 +70,20 @@ class AppSettingsNotifier extends StateNotifier<AppSettings> {
   final SettingsRepository _repository;
 
   /// 用新的设置覆盖当前状态并持久化。
+  ///
+  /// 持久化后按新设置重新调度后台周期任务（检查间隔 / 仅 Wi-Fi 约束
+  /// 可能已变化）；调度失败不影响设置保存结果。
   Future<void> updateSettings(AppSettings settings) async {
     state = settings;
     await _repository.saveSettings(settings);
+    try {
+      await BackgroundTask.registerPeriodicTask(
+        frequency: settings.checkIntervalDuration,
+        wifiOnly: settings.wifiOnly,
+      );
+    } catch (_) {
+      // workmanager 未初始化或平台不支持时忽略
+    }
   }
 }
 

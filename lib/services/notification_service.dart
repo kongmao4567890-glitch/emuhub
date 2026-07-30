@@ -44,10 +44,9 @@ class NotificationService {
     await _plugin.initialize(initSettings);
 
     // 创建通知通道（Android 8.0+）
-    await _plugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
-        ?.createNotificationChannel(
+    final androidPlugin = _plugin.resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    await androidPlugin?.createNotificationChannel(
       const AndroidNotificationChannel(
         channelId,
         channelName,
@@ -55,6 +54,9 @@ class NotificationService {
         importance: Importance.high,
       ),
     );
+
+    // 请求通知运行时权限（Android 13+ 必须，否则通知会被系统静默丢弃）
+    await androidPlugin?.requestNotificationsPermission();
 
     _initialized = true;
   }

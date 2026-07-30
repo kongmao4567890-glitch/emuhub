@@ -269,6 +269,9 @@ class SettingsPage extends ConsumerWidget {
       helpText: isStart ? '选择静音开始时间' : '选择静音结束时间',
     );
 
+    // await 之后页面可能已销毁，使用 ref/context 前必须判 mounted
+    if (!context.mounted) return;
+
     if (picked != null) {
       final formatted =
           '${picked.hour.toString().padLeft(2, '0')}:${picked.minute.toString().padLeft(2, '0')}';
