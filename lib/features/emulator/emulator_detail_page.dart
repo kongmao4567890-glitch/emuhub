@@ -218,16 +218,21 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
           emulator.name,
           style: const TextStyle(fontWeight: FontWeight.w600),
         ),
-        background: console.imagePath.isNotEmpty
+        background: emulator.iconPath.isNotEmpty
             ? Hero(
-                tag: 'emulator-console-${console.id}',
-                child: Image.asset(
-                  console.imagePath,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => _buildGradientBg(cs, console.icon),
+                tag: 'emulator-icon-${emulator.id}',
+                child: Container(
+                  color: cs.surfaceContainerHighest,
+                  child: Image.asset(
+                    emulator.iconPath,
+                    fit: BoxFit.contain,
+                    alignment: Alignment.center,
+                    errorBuilder: (_, __, ___) =>
+                        _buildConsoleBg(console, cs),
+                  ),
                 ),
               )
-            : _buildGradientBg(cs, console.icon),
+            : _buildConsoleBg(console, cs),
       ),
     );
   }
@@ -246,6 +251,18 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         child: Text(icon, style: const TextStyle(fontSize: 72)),
       ),
     );
+  }
+
+  /// 机种图片或 emoji 回退背景。
+  Widget _buildConsoleBg(Console console, ColorScheme cs) {
+    if (console.imagePath.isNotEmpty) {
+      return Image.asset(
+        console.imagePath,
+        fit: BoxFit.cover,
+        errorBuilder: (_, __, ___) => _buildGradientBg(cs, console.icon),
+      );
+    }
+    return _buildGradientBg(cs, console.icon);
   }
 
   /// 头部信息：所属机种 + 来源标签。

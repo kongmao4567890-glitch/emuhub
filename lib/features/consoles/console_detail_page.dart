@@ -289,7 +289,7 @@ class _EmulatorListCard extends StatelessWidget {
           padding: const EdgeInsets.all(14),
           child: Row(
             children: [
-              // 左侧图标
+              // 左侧图标：优先显示模拟器官方图标，无图标时回退到手柄图标
               Container(
                 width: 44,
                 height: 44,
@@ -298,8 +298,20 @@ class _EmulatorListCard extends StatelessWidget {
                   borderRadius:
                       BorderRadius.circular(AppTheme.componentRadius),
                 ),
+                clipBehavior: Clip.antiAlias,
                 alignment: Alignment.center,
-                child: Icon(Icons.sports_esports, color: cs.onPrimaryContainer),
+                child: emulator.iconPath.isNotEmpty
+                    ? Image.asset(
+                        emulator.iconPath,
+                        fit: BoxFit.cover,
+                        width: 44,
+                        height: 44,
+                        errorBuilder: (_, __, ___) => Icon(
+                            Icons.sports_esports,
+                            color: cs.onPrimaryContainer),
+                      )
+                    : Icon(Icons.sports_esports,
+                        color: cs.onPrimaryContainer),
               ),
               const SizedBox(width: 12),
               // 中间信息
