@@ -859,6 +859,8 @@ class TranslatedReleaseNotes extends StatefulWidget {
 class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
   String? _translatedText;
   bool _isTranslating = true;
+  bool _googleSuccess = false;
+  bool _showOriginal = false;
 
   @override
   void initState() {
@@ -875,6 +877,8 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
       setState(() {
         _translatedText = null;
         _isTranslating = true;
+        _googleSuccess = false;
+        _showOriginal = false;
       });
       _translate();
     }
@@ -887,6 +891,7 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
         setState(() {
           _translatedText = widget.text;
           _isTranslating = false;
+          _googleSuccess = true;
         });
       }
       return;
@@ -902,6 +907,7 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
       setState(() {
         // 优先使用 Google 翻译结果，失败则用字典翻译
         _translatedText = googleResult ?? dictResult;
+        _googleSuccess = googleResult != null;
         _isTranslating = false;
       });
     }
@@ -909,6 +915,18 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
 
   @override
   Widget build(BuildContext context) {
+    // 查看原文模式
+    if (_showOriginal) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(widget.text, style: widget.style),
+          const SizedBox(height: 4),
+          _buildSourceChip('原文'),
+        ],
+      );
+    }
+
     if (_isTranslating) {
       // 翻译中：先显示字典翻译结果（即时可用）
       final dictResult = ReleaseNotesTranslator.translate(widget.text) ?? widget.text;
@@ -939,7 +957,54 @@ class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
       );
     }
 
-    return Text(_translatedText ?? widget.text, style: widget.style);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(_translatedText ?? widget.text, style: widget.style),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            _buildSourceChip(
+              _googleSuccess ? 'Google 翻译' : '字典翻译',
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    );
+  }
+
+  /// 构建翻译来源标签 + 原文切换按钮。
+  Widget _buildSourceChip(String label) {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          _showOriginal = !_showOriginal;
+        });
+      },
+      borderRadius: BorderRadius.circular(4),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 11,
+                color: _googleSuccess ? Colors.green : Colors.orange,
+              ),
+            ),
+            const SizedBox(width: 4),
+            Icon(
+              _showOriginal ? Icons.translate : Icons.code,
+              size: 12,
+              color: Colors.grey,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
