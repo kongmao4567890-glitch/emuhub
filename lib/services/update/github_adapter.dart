@@ -140,11 +140,17 @@ class GitHubReleasesAdapter implements VersionAdapter {
         );
       }
 
-      // API 失败（限流或网络错误）→ 尝试从 HTML 获取更新说明
+      // API 失败（限流或网络错误）→ 通过 expanded_assets 获取 APK 链接
       final htmlNotes = await _fetchReleaseNotesFromHtml(owner, repo, tag);
-      final dynamicDownloadUrl = _buildDynamicDownloadUrl(
-        emulator, owner, repo, tag,
+      var dynamicDownloadUrl = await _fetchApkUrlFromExpandedAssets(
+        owner, repo, tag,
       );
+      // expanded_assets 也失败 → 尝试从静态 URL 动态构造
+      if (dynamicDownloadUrl == null) {
+        dynamicDownloadUrl = _buildDynamicDownloadUrl(
+          emulator, owner, repo, tag,
+        );
+      }
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -162,8 +168,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// HTML 解析法：从 GitHub releases 页面提取全部版本信息（不消耗 API 配额）。
   ///
   /// 请求 `releases/latest` 页面（GitHub 会 302 重定向到 tag 页面），
-  /// 从最终 URL 提取版本号，从 HTML 提取更新说明、APK 下载链接和发布日期。
-  /// 单次 HTTP 请求即可获取全部信息，无需调用 GitHub API。
+  /// 从最终 URL 提取版本号，从 HTML 提取更新说明和发布日期。
+  /// APK 下载链接通过 `releases/expanded_assets/{tag}` 端点单独获取
+  /// （GitHub 已改用 JavaScript 动态渲染 asset 列表，静态 HTML 不含下载链接）。
   Future<VersionInfo?> _fetchFromHtml(
     Emulator emulator,
     String owner,
@@ -195,10 +202,17 @@ class GitHubReleasesAdapter implements VersionAdapter {
       // 2. 从 HTML 提取更新说明
       final releaseNotes = _extractReleaseNotesFromHtml(html);
 
-      // 3. 从 HTML 提取 APK 下载链接
-      final apkUrl = _extractApkUrlFromHtml(html);
+      // 3. 通过 expanded_assets 端点提取 APK 下载链接（不消耗 API 配额）
+      //    GitHub 已改用 JavaScript 动态渲染 asset 列表，静态 HTML 不含下载链接。
+      //    expanded_assets/{tag} 返回包含 asset 链接的 HTML 片段。
+      var apkUrl = await _fetchApkUrlFromExpandedAssets(owner, repo, tag);
 
-      // 4. 从 HTML 提取发布日期
+      // 4. 如果 expanded_assets 失败，尝试从静态 URL 动态构造
+      if (apkUrl == null) {
+        apkUrl = _buildDynamicDownloadUrl(emulator, owner, repo, tag);
+      }
+
+      // 5. 从 HTML 提取发布日期
       final releaseDate = _extractReleaseDateFromHtml(html);
 
       return VersionInfo(
@@ -209,6 +223,35 @@ class GitHubReleasesAdapter implements VersionAdapter {
         isNew: false,
         downloadUrl: apkUrl,
       );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 通过 GitHub 的 `expanded_assets/{tag}` 端点提取 APK 下载链接。
+  ///
+  /// GitHub releases 页面的 asset 列表通过 JavaScript 动态加载，
+  /// 静态 HTML 中不包含下载链接。该端点返回包含 asset 链接的 HTML 片段，
+  /// 无需消耗 GitHub API 配额。
+  ///
+  /// 返回 arm64/aarch64 架构的 APK 链接优先，否则返回第一个 APK 链接。
+  Future<String?> _fetchApkUrlFromExpandedAssets(
+    String owner,
+    String repo,
+    String tag,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases/expanded_assets/$tag',
+        options: Options(
+          responseType: ResponseType.plain,
+          followRedirects: true,
+          validateStatus: (status) => status != null && status < 400,
+        ),
+      );
+
+      final html = response.data.toString();
+      return _extractApkUrlFromHtml(html);
     } catch (_) {
       return null;
     }
