@@ -9,7 +9,7 @@
       "year": 2010,
       "icon": "🎛️",
       "imagePath": "assets/consoles/multi_system.jpg",
-      "description": "多平台模拟器前端，通过加载Libretro核心统一管理各类主机与掌机的模拟",
+      "description": "多平台模拟器前端，通过加载Libretro核心统一管理各类主机与掌机的模拟。支持着色器、倒带、净延迟输入、多人游戏等高级功能，是跨平台复古游戏的核心解决方案",
       "emulators": [
         {
           "id": "retroarch",
@@ -24,7 +24,8 @@
           "minAndroid": "5.0",
           "description": "最强大的Libretro前端，内置核心下载器、Netplay联机、倒带(Rewind)、成就系统(RetroAchievements)、着色器滤镜，覆盖从Atari到3DO几乎所有平台的核心，安卓端aarch64 nightly构建",
           "downloadUrl": "https://buildbot.libretro.com/nightly/android/RetroArch_aarch64.apk",
-          "nightlyUrl": "https://buildbot.libretro.com/nightly/android/"
+          "nightlyUrl": "https://buildbot.libretro.com/nightly/android/",
+          "iconPath": "assets/emulators/retroarch.png"
         },
         {
           "id": "lemuroid",
@@ -38,7 +39,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，Material Design界面、自动扫描ROM、即点即玩，已上架F-Droid（https://f-droid.org/packages/com.swordfish.lemuroid/），覆盖十余种主机平台，活跃维护中",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "classicboy",
@@ -52,7 +54,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "多合一模拟器前端，内置Mupen64Plus(N64)、PCSX-ReARMed/SwanStation(PS1)、MelonDS(NDS)、mGBA(GBA)、Snes9x(SNES)、FCEUmm(NES)、Genplus/PicoDrive(MD)、FB Alpha(街机)、Atari 2600等8个核心。免费Lite版+Pro付费版",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.portableandroid.classicboy"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.portableandroid.classicboy",
+          "iconPath": "assets/emulators/classicboy.png"
         },
         {
           "id": "argon",
@@ -66,7 +69,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "多系统复古游戏模拟器，专有软件。支持Atari 2600/5200/7800/8-Bit/Lynx、ColecoVision、Intellivision、NES、Game Boy/GBC/GBA、Vectrex、PICO-8。内置游戏库+自定义ROM。支持Chromebook与Raspberry Pi",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.markspace.retro"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.markspace.retro",
+          "iconPath": "assets/emulators/argon.png"
         }
       ]
     },
@@ -77,7 +81,7 @@
       "year": 1977,
       "icon": "🕹️",
       "imagePath": "assets/consoles/atari2600.jpg",
-      "description": "雅达利2600，第二世代家用主机的标志性代表，卡带式游戏机的先驱",
+      "description": "雅达利2600（Atari VCS），1977年发售的第二世代家用主机，开创了卡带式游戏机的商业模式。搭载MOS 6507处理器，销量超3000万台，推出《太空侵略者》《吃豆人》等经典作品，但也因《E.T.》等劣质游戏引发了1983年北美游戏市场崩溃",
       "emulators": [
         {
           "id": "lemuroid_atari",
@@ -91,7 +95,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Stella核心模拟Atari 2600，活跃维护中",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "stella_android",
@@ -105,7 +110,8 @@
           "compatibility": "good",
           "minAndroid": "5.0",
           "description": "Atari 2600官方模拟器Stella的源码仓库，含Libretro核心可在安卓前端使用，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/stella-emu/stella/releases"
+          "downloadUrl": "https://github.com/stella-emu/stella/releases",
+          "iconPath": "assets/emulators/stella_android.png"
         }
       ]
     },
@@ -116,7 +122,7 @@
       "year": 1989,
       "icon": "🐱",
       "imagePath": "assets/consoles/atari_lynx.jpg",
-      "description": "雅达利首款彩色掌机，也是全球第一款彩色掌上游戏机",
+      "description": "雅达利Lynx，1989年发售的全球首款彩色掌机，搭载16位处理器和3.5寸彩色LCD。支持多人联机（ComLynx）、可旋转画面，硬件性能远超同期Game Boy，但因体积大、耗电快而商业表现不佳",
       "emulators": [
         {
           "id": "lemuroid_lynx",
@@ -130,7 +136,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Handy核心模拟Atari Lynx，兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "handy_core",
@@ -144,7 +151,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Atari Lynx的Handy模拟器Libretro核心仓库，需通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/libretro-handy"
+          "downloadUrl": "https://github.com/libretro/libretro-handy",
+          "iconPath": "assets/emulators/handy_core.png"
         }
       ]
     },
@@ -155,7 +163,7 @@
       "year": 1993,
       "icon": "🐆",
       "imagePath": "assets/consoles/atari_jaguar.jpg",
-      "description": "雅达利最后一款家用主机，号称64位架构的第五世代主机",
+      "description": "雅达利Jaguar，1993年发售，号称首款64位家用主机。采用Tom和Jerry双处理器架构，虽硬件先进但开发困难，代表作有《异形大战铁血战士》《钢铁骑士》，是雅达利最后一款家用主机",
       "emulators": [
         {
           "id": "virtual_jaguar_core",
@@ -169,7 +177,8 @@
           "compatibility": "medium",
           "minAndroid": "6.0",
           "description": "Atari Jaguar目前仅能通过RetroArch的Virtual Jaguar核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，兼容性中等",
-          "downloadUrl": "https://github.com/libretro/virtualjaguar-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/virtualjaguar-libretro/releases",
+          "iconPath": "assets/emulators/virtual_jaguar_core.png"
         }
       ]
     },
@@ -180,7 +189,7 @@
       "year": 1983,
       "icon": "🎮",
       "imagePath": "assets/consoles/fc.jpg",
-      "description": "任天堂 Family Computer，8 位家用机，定义了现代游戏机产业",
+      "description": "任天堂Family Computer（红白机），1983年日本发售、1985年以NES登陆北美。搭载Ricoh 2A03处理器，销量超6100万台，定义了现代游戏机产业标准。《超级马里奥兄弟》《勇者斗恶龙》《塞尔达传说》等传世名作均诞生于此平台",
       "emulators": [
         {
           "id": "lemuroid_fc",
@@ -194,7 +203,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用FCEUmm核心，FC/NES兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "nostalgia_nes",
@@ -209,7 +219,8 @@
           "minAndroid": "5.0",
           "description": "国人维护的NES模拟器，基于FCEUX核心，操作流畅，2026年7月仍在活跃更新",
           "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/latest/download/appgbc-release-V1501.apk",
-          "devUrl": ""
+          "devUrl": "",
+          "iconPath": "assets/emulators/nostalgia_nes.png"
         },
         {
           "id": "nes_emu_ex",
@@ -223,7 +234,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Robert Broglia开发的NES模拟器，基于FCEUX核心，低延迟，有CI nightly构建",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/nes_emu_ex.png"
         },
         {
           "id": "nesoid",
@@ -237,7 +249,8 @@
           "compatibility": "high",
           "minAndroid": "4.1",
           "description": "经典Nesoid的现代fork，Material UI设计，支持蓝牙/WiFi联机对战、光枪外设，2025年1月更新",
-          "downloadUrl": "https://github.com/proninyaroslav/nesoid/releases/latest/download/Nesoid-2.5-4-armeabi-v7a.apk"
+          "downloadUrl": "https://github.com/proninyaroslav/nesoid/releases/latest/download/Nesoid-2.5-4-armeabi-v7a.apk",
+          "iconPath": "assets/emulators/nesoid.png"
         }
       ]
     },
@@ -248,7 +261,7 @@
       "year": 1990,
       "icon": "🎮",
       "imagePath": "assets/consoles/sfc.jpg",
-      "description": "任天堂 Super Famicom，16 位家用机黄金时代的代表",
+      "description": "任天堂Super Famicom，1990年发售的16位家用机，搭载Ricoh 5A22处理器。以Mode 7图形特效和丰富的色彩著称，销量超4900万台。《超级马里奥世界》《时空之轮》《最终幻想VI》《超银河战士》等经典奠定了16位黄金时代",
       "emulators": [
         {
           "id": "lemuroid_snes",
@@ -262,7 +275,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Snes9x核心，SNES兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "snes9x_ex",
@@ -276,7 +290,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于Snes9x核心的Android移植版，由Robert Broglia开发，支持多点触控与蓝牙手柄",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/snes9x_ex.png"
         },
         {
           "id": "snes9x_core",
@@ -290,7 +305,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Snes9x官方源码仓库，提供Libretro核心的安卓构建（nightly CI），通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/snes9xgit/snes9x/releases"
+          "downloadUrl": "https://github.com/snes9xgit/snes9x/releases",
+          "iconPath": "assets/emulators/snes9x_core.png"
         }
       ]
     },
@@ -301,7 +317,7 @@
       "year": 1988,
       "icon": "🦔",
       "imagePath": "assets/consoles/md.jpg",
-      "description": "世嘉 Mega Drive / Genesis，16 位家用机，索尼克的诞生地",
+      "description": "世嘉Mega Drive（北美称Genesis），1988年发售的16位家用机，搭载Motorola 68000处理器。以刺猬索尼克系列对抗任天堂，销量超3000万台。拥有大量优秀街机移植作品和《幽游白书》《怒之铁拳》等经典",
       "emulators": [
         {
           "id": "lemuroid_md",
@@ -315,7 +331,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Genesis Plus GX核心，MD兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "md_emu_ex",
@@ -329,7 +346,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于Genesis Plus GX核心的Android原生前端，支持Mega Drive/Genesis、Mega CD、Master System",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/md_emu_ex.png"
         },
         {
           "id": "genplus_gx",
@@ -343,7 +361,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "Sega 8/16位高精度模拟器核心，100%兼容性，活跃维护中",
-          "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases"
+          "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases",
+          "iconPath": "assets/emulators/genplus_gx.png"
         }
       ]
     },
@@ -354,7 +373,7 @@
       "year": 1985,
       "icon": "📟",
       "imagePath": "assets/consoles/sms_gg.jpg",
-      "description": "世嘉 Master System 与 Game Gear 掌机，8位时代的世嘉主力平台",
+      "description": "世嘉Master System（1985）与Game Gear（1990）掌机。Master System搭载Z80处理器，在巴西市场长期热销；Game Gear为彩色掌机，硬件基于Master System架构，以出色画面挑战Game Boy但功耗较大",
       "emulators": [
         {
           "id": "lemuroid_sms_gg",
@@ -368,7 +387,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Genesis Plus GX核心模拟Master System与Game Gear，兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "md_emu_ex_sms",
@@ -382,7 +402,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "MD.emu前端同样支持Master System与Game Gear，基于Genesis Plus GX核心，低延迟，Google Play付费",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/md_emu_ex.png"
         },
         {
           "id": "genplus_gx_sms",
@@ -396,7 +417,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "Genesis Plus GX核心原生支持Master System/Game Gear/SG-1000，100%兼容性，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases"
+          "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases",
+          "iconPath": "assets/emulators/genplus_gx_sms.png"
         },
         {
           "id": "gearsystem",
@@ -410,7 +432,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "由drhelius开发的高精度Master System/Game Gear/SG-1000模拟器，C++编写，提供Libretro核心，含准确时序与高兼容性，活跃维护",
-          "downloadUrl": "https://github.com/drhelius/Gearsystem/releases"
+          "downloadUrl": "https://github.com/drhelius/Gearsystem/releases",
+          "iconPath": "assets/emulators/gearsystem.png"
         }
       ]
     },
@@ -421,7 +444,7 @@
       "year": 1994,
       "icon": "🔢",
       "imagePath": "assets/consoles/sega_32x.jpg",
-      "description": "世嘉 Mega Drive 的32位扩展外设，第五世代过渡产品",
+      "description": "世嘉32X，1994年发售的Mega Drive扩展外设，通过两个32位RISC处理器提升图形性能。作为第五世代过渡产品，因游戏数量少（约40款）和Saturn同年发售而迅速被市场淘汰",
       "emulators": [
         {
           "id": "picodrive_core",
@@ -435,7 +458,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Sega 32X目前仅能通过PicoDrive核心模拟，安卓端无独立App，PicoDrive核心同时支持Mega Drive/Mega CD/32X/Pico，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/picodrive/releases"
+          "downloadUrl": "https://github.com/libretro/picodrive/releases",
+          "iconPath": "assets/emulators/picodrive_core.png"
         }
       ]
     },
@@ -446,7 +470,7 @@
       "year": 1994,
       "icon": "🪐",
       "imagePath": "assets/consoles/saturn.jpg",
-      "description": "世嘉 Saturn，32 位家用机，双CPU架构复杂",
+      "description": "世嘉Saturn，1994年发售的32位家用主机，搭载双Hitachi SH-2处理器和双VDP图形芯片。2D性能强大，3D表现因架构复杂而参差不齐。代表作有《樱花大战》《VR战士》《铁甲飞龙》等，日本销量可观但海外失利",
       "emulators": [
         {
           "id": "lemuroid_saturn",
@@ -460,7 +484,8 @@
           "compatibility": "medium",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Kronos核心模拟Saturn",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "yabause",
@@ -474,21 +499,23 @@
           "compatibility": "good",
           "minAndroid": "5.0",
           "description": "Sega Saturn模拟器Yabause官方仓库，提供Libretro核心可经安卓前端使用",
-          "downloadUrl": "https://github.com/Yabause/yabause/releases"
+          "downloadUrl": "https://github.com/Yabause/yabause/releases",
+          "iconPath": "assets/emulators/yabause.png"
         },
         {
           "id": "yaba_sanshiro",
           "name": "Yaba Sanshiro",
           "openSource": true,
-          "sourceType": "github",
-          "sourceUrl": "https://www.yabasanshiro.com/",
+          "sourceType": "website",
+          "sourceUrl": "",
           "playStoreId": "",
-          "website": "",
+          "website": "https://www.yabasanshiro.com/",
           "core": "Yabause",
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "devmiyax维护的Yabause分叉，是安卓端少数有独立App的土星模拟器，Kronos即从此分叉演进，2025年12月更新加入Oboe实时音频",
-          "downloadUrl": ""
+          "downloadUrl": "",
+          "iconPath": "assets/emulators/yaba_sanshiro.png"
         },
         {
           "id": "saturn_emu",
@@ -502,7 +529,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "基于Yabause的Saturn模拟器，独立安卓App。免费/捐赠版",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.vapps.SaturnEmuBeta2"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.vapps.SaturnEmuBeta2",
+          "iconPath": "assets/emulators/saturn_emu.png"
         }
       ]
     },
@@ -513,7 +541,7 @@
       "year": 1998,
       "icon": "🌀",
       "imagePath": "assets/consoles/dreamcast.jpg",
-      "description": "世嘉 Dreamcast，128 位家用机，世嘉最后一款家用主机",
+      "description": "世嘉Dreamcast，1998年发售的128位家用主机，搭载Hitachi SH-4处理器和PowerVR图形芯片。首款内置调制解调器支持联网的家用主机，开创了在线游戏时代。《索尼克大冒险》《莎木》《灵魂能力》等开创了3D游戏新纪元，是世嘉最后一款家用主机",
       "emulators": [
         {
           "id": "flycast",
@@ -528,7 +556,8 @@
           "minAndroid": "6.0",
           "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi/Naomi 2/Atomiswave街机系统、GD-ROM与维米尔勒联网，活跃维护",
           "downloadUrl": "https://github.com/flyinghead/flycast/releases/latest/download/flycast-2.6.apk",
-          "devUrl": "https://github.com/flyinghead/flycast/releases"
+          "devUrl": "https://github.com/flyinghead/flycast/releases",
+          "iconPath": "assets/emulators/flycast.png"
         },
         {
           "id": "lemuroid_dreamcast",
@@ -542,7 +571,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Flycast核心模拟Dreamcast，便于统一管理",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         }
       ]
     },
@@ -553,7 +583,7 @@
       "year": 1989,
       "icon": "🔋",
       "imagePath": "assets/consoles/gb.jpg",
-      "description": "任天堂 Game Boy / Game Boy Color，掌机时代的开创者",
+      "description": "任天堂Game Boy（1989）与Game Boy Color（1998）。Game Boy搭载Z80衍生处理器，虽为单色屏幕但以长续航和《俄罗斯方块》《宝可梦》系列席卷全球，销量超1.18亿台，定义了掌机时代",
       "emulators": [
         {
           "id": "lemuroid_gb",
@@ -567,7 +597,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，支持GB/GBC，使用mGBA/SameBoy核心",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "nostalgia_gbc",
@@ -582,7 +613,8 @@
           "minAndroid": "5.0",
           "description": "国人维护的GBC模拟器，基于Gambatte核心，操作流畅，2026年7月仍在活跃更新",
           "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/latest/download/appgbc-release-V1501.apk",
-          "devUrl": ""
+          "devUrl": "",
+          "iconPath": "assets/emulators/nostalgia_gbc.png"
         },
         {
           "id": "sameboy_core",
@@ -596,7 +628,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "高精度GB/GBC模拟器核心，C编写，提供Libretro core可在安卓上经前端使用",
-          "downloadUrl": "https://github.com/LIJI32/SameBoy/releases"
+          "downloadUrl": "https://github.com/LIJI32/SameBoy/releases",
+          "iconPath": "assets/emulators/sameboy_core.png"
         },
         {
           "id": "gbc_emu_ex",
@@ -610,7 +643,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于Gambatte核心的Android原生GB/GBC前端，低延迟",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/gbc_emu_ex.png"
         }
       ]
     },
@@ -621,7 +655,7 @@
       "year": 2001,
       "icon": "🎮",
       "imagePath": "assets/consoles/gba.jpg",
-      "description": "任天堂 Game Boy Advance，32 位掌机，经典RPG的摇篮",
+      "description": "任天堂Game Boy Advance，2001年发售的32位掌机，搭载ARM7TDMI处理器。向下兼容GB/GBC游戏，拥有《火焰之纹章》《黄金太阳》《逆转裁判》《恶魔城》等大量经典RPG和动作游戏，全球销量超8100万台",
       "emulators": [
         {
           "id": "lemuroid_gba",
@@ -635,7 +669,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用mGBA核心，GBA兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "mgba_core",
@@ -649,7 +684,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "GBA高精度模拟器，MPL-2.0开源，也支持GB/GBC，提供Libretro core供安卓前端使用",
-          "downloadUrl": "https://github.com/mgba-emu/mgba/releases"
+          "downloadUrl": "https://github.com/mgba-emu/mgba/releases",
+          "iconPath": "assets/emulators/mgba_core.png"
         },
         {
           "id": "gba_emu_ex",
@@ -663,7 +699,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于mGBA核心的Android原生GBA前端，稳定性高",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/gba_emu_ex.png"
         },
         {
           "id": "pizza_boy_gba",
@@ -677,7 +714,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "Pizza Boy GBA模拟器，闭源，免费Basic版+付费Pro版，无广告。低配设备优化出色，兼容性极高",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.pizzaboy.gba"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.pizzaboy.gba",
+          "iconPath": "assets/emulators/pizza_boy_gba.png"
         }
       ]
     },
@@ -688,7 +726,7 @@
       "year": 1996,
       "icon": "🎮",
       "imagePath": "assets/consoles/n64.jpg",
-      "description": "任天堂 Nintendo 64，64 位家用机，3D游戏时代的先锋",
+      "description": "任天堂Nintendo 64，1996年发售的64位家用主机，搭载MIPS R4300i处理器。首创模拟摇杆手柄和4人手柄接口，以《超级马里奥64》《塞尔达传说：时之笛》《黄金眼007》开创3D游戏时代。采用卡带介质而非常见CD-ROM",
       "emulators": [
         {
           "id": "lemuroid_n64",
@@ -702,7 +740,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Mupen64Plus-Next核心模拟N64",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "mupen64plus_ae",
@@ -716,7 +755,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Mupen64Plus Android Edition，功能丰富的N64模拟器，支持高清纹理包，2026年4月仍活跃提交",
-          "downloadUrl": "https://github.com/mupen64plus-ae/mupen64plus-ae/releases"
+          "downloadUrl": "https://github.com/mupen64plus-ae/mupen64plus-ae/releases",
+          "iconPath": "assets/emulators/mupen64plus_ae.png"
         },
         {
           "id": "nin64",
@@ -732,7 +772,8 @@
           "description": "基于Mupen64Plus-Next libretro核心的安卓N64模拟器封装。GLideN64渲染器，最高8x分辨率缩放，高清纹理包，作弊码管理器(GameShark/Action Replay)，可自定义触控布局，Google Oboe低延迟音频，SRAM/FlashRAM/EEPROM/MemPak持久化。Google Play免费(带广告)",
           "downloadUrl": "https://github.com/izzy2lost/Nin64-Emulator/releases",
           "devUrl": "",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/nin64.png"
         }
       ]
     },
@@ -743,7 +784,7 @@
       "year": 2004,
       "icon": "🎮",
       "imagePath": "assets/consoles/nds.jpg",
-      "description": "任天堂 Nintendo DS，双屏掌机，触控游戏的先驱",
+      "description": "任天堂Nintendo DS，2004年发售的双屏掌机，下屏支持触摸操作。搭载双ARM处理器，内置Wi-Fi和麦克风，全球销量超1.54亿台，是史上最畅销的掌机之一。《任天狗》《脑力锻炼》《宝可梦》系列展现了双屏创新的巨大潜力",
       "emulators": [
         {
           "id": "melonds_android",
@@ -758,7 +799,8 @@
           "minAndroid": "6.0",
           "description": "高精度NDS模拟器melonDS的Android移植版，模拟准确性优秀，活跃维护中",
           "downloadUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases/latest/download/app-gitHub-prod-release.apk",
-          "nightlyUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases"
+          "nightlyUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases",
+          "iconPath": "assets/emulators/melonds_android.png"
         },
         {
           "id": "drastic_rev_i18n",
@@ -773,7 +815,8 @@
           "minAndroid": "5.0",
           "description": "商业NDS模拟器DraStic的国际化社区分叉，免费提供，性能与兼容性顶级，包含模拟摇杆触发器支持、右摇杆D-Pad模式、摇杆旋转模式、单屏布局显示下屏、TV模式快捷菜单，2026年7月活跃更新",
           "downloadUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases/latest/download/DraStic_r2.6.0.4a_build109_universal_rev260701.apk",
-          "devUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases"
+          "devUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases",
+          "iconPath": "assets/emulators/drastic_rev_i18n.png"
         },
         {
           "id": "lemuroid_nds",
@@ -787,7 +830,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用melonDS核心模拟NDS",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "melondualds",
@@ -803,7 +847,8 @@
           "description": "melonDS安卓移植的活跃分支(fork自rafaelvcaetano/melonDS-android)。RetroAchievements Hardcore模式(经RA团队批准)，RAOfflineProxy离线成就，Vulkan渲染器，AdrenoTools自定义Turnip驱动，DSiWare支持，RetroArch/librashader着色器。下版本将推出实验性Vulkan FastPath与纹理替换系统",
           "downloadUrl": "https://github.com/SapphireRhodonite/melonDS-android/releases/latest/download/MelonDualDS-0.6.1.apk",
           "devUrl": "https://github.com/SapphireRhodonite/melonDS-android/releases",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/melondualds.png"
         }
       ]
     },
@@ -814,7 +859,7 @@
       "year": 2011,
       "icon": "🎮",
       "imagePath": "assets/consoles/3ds.jpg",
-      "description": "任天堂 Nintendo 3DS，裸眼3D双屏掌机",
+      "description": "任天堂Nintendo 3DS，2011年发售的裸眼3D双屏掌机，搭载ARM11处理器。通过视差屏障技术实现3D效果，向下兼容NDS游戏。StreetPass功能开创了便携社交玩法，全球销量超7500万台",
       "emulators": [
         {
           "id": "azahar",
@@ -830,7 +875,8 @@
           "description": "PabloMK7的Citra分支与Lime3DS合并而成的3DS模拟器，Citra下架后的事实标准继承者，独创禁用右眼渲染单眼模式可提升50%性能，2026年7月极活跃",
           "downloadUrl": "https://github.com/azahar-emu/azahar/releases/latest/download/azahar-android-googleplay-2125.1.3.apk",
           "devUrl": "https://github.com/azahar-emu/azahar/releases",
-          "nightlyUrl": "https://github.com/azahar-emu/azahar/releases"
+          "nightlyUrl": "https://github.com/azahar-emu/azahar/releases",
+          "iconPath": "assets/emulators/azahar.png"
         },
         {
           "id": "azahar_plus",
@@ -847,7 +893,8 @@
           "downloadUrl": "",
           "devUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
           "nightlyUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
-          "previewUrl": "https://github.com/AzaharPlus/AzaharPlus/releases"
+          "previewUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
+          "iconPath": "assets/emulators/azahar.png"
         }
       ]
     },
@@ -858,7 +905,7 @@
       "year": 2001,
       "icon": "🎮",
       "imagePath": "assets/consoles/wii_gc.jpg",
-      "description": "任天堂 GameCube 与 Wii，兼容同一模拟器平台",
+      "description": "任天堂GameCube（2001）与Wii（2006）。GameCube搭载IBM Gekko与ATI Flipper，采用独特光盘介质。Wii以体感遥控器和MotionPlus技术颠覆游戏交互方式，销量超1亿台，开创了休闲游戏市场",
       "emulators": [
         {
           "id": "dolphin",
@@ -874,7 +921,8 @@
           "description": "业界最成熟的Wii/GameCube模拟器，2026年5月活跃更新，已支持mGBA GBA联动，移动端性能大幅优化，官方CDN提供稳定APK下载",
           "downloadUrl": "https://dl.dolphin-emu.org/releases/2606/dolphin-2606.apk",
           "devUrl": "https://dolphin-emu.org/download/list/master/",
-          "nightlyUrl": "https://dolphin-emu.org/download/list/master/"
+          "nightlyUrl": "https://dolphin-emu.org/download/list/master/",
+          "iconPath": "assets/emulators/dolphin.png"
         },
         {
           "id": "dolphin_mmjr2_vbi",
@@ -889,7 +937,8 @@
           "minAndroid": "5.0",
           "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
           "downloadUrl": "https://github.com/VentureStratosphereWorldwide/Dolphin-MMJR2-VBI/releases",
-          "devUrl": "https://github.com/Medard22/Dolphin-MMJR2-VBI/releases"
+          "devUrl": "https://github.com/Medard22/Dolphin-MMJR2-VBI/releases",
+          "iconPath": "assets/emulators/dolphin.png"
         }
       ]
     },
@@ -900,7 +949,7 @@
       "year": 2012,
       "icon": "🎮",
       "imagePath": "assets/consoles/wii_u.jpg",
-      "description": "任天堂 Wii U，双屏家用主机，GamePad 控制器创新",
+      "description": "任天堂Wii U，2012年发售的双屏家用主机，GamePad控制器内置6.2寸触摸屏。支持非对称多人游戏和Off-TV Play，向下兼容Wii游戏。因定位模糊和第三方支持不足销量不佳，但孕育了《斯普拉遁》《马里奥制造》等创新IP",
       "emulators": [
         {
           "id": "cemu_android",
@@ -915,7 +964,8 @@
           "minAndroid": "11.0",
           "description": "桌面端Wii U模拟器Cemu的Android移植版，由SSimco维护，2026年早期阶段，需骁龙8 Gen级别高端设备，支持原生OpenGL与Vulkan后端，需从GitHub下载APK",
           "downloadUrl": "https://github.com/SSimco/Cemu/releases/latest/download/Cemu-0.5.apk",
-          "devUrl": "https://github.com/cemu-project/Cemu/releases"
+          "devUrl": "https://github.com/cemu-project/Cemu/releases",
+          "iconPath": "assets/emulators/cemu_android.png"
         }
       ]
     },
@@ -926,7 +976,7 @@
       "year": 2017,
       "icon": "🎮",
       "imagePath": "assets/consoles/switch.jpg",
-      "description": "任天堂 Switch，家用与掌机二合一的现代主机",
+      "description": "任天堂Switch，2017年发售的家用与掌机二合一主机，搭载Nvidia Tegra X1芯片。可在电视模式和手持模式间自由切换，支持Joy-Con分离式手柄和HD振动。全球销量超1.4亿台，《塞尔达传说：旷野之息》《集合啦！动物森友会》定义了现代游戏体验",
       "emulators": [
         {
           "id": "eden",
@@ -942,7 +992,8 @@
           "description": "开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导。源码已迁移至自建Forgejo仓库(git.eden-emu.dev)，GitHub仓库曾被任天堂DMCA下架。最新稳定版v0.2.1(2026年6月)支持固件22.0、内置自动更新器、Vulkan性能优化。提供标准版/原神伪装版(伪装为Genshin Impact以启用旗舰设备帧生成等优化)/旧版(骁龙865等老芯片)三种APK变体，另有ChromeOS版本",
           "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk",
           "devUrl": "https://git.eden-emu.dev/eden-emu/eden/releases",
-          "nightlyUrl": "https://git.eden-emu.dev/eden-ci/nightly/releases"
+          "nightlyUrl": "https://git.eden-emu.dev/eden-ci/nightly/releases",
+          "iconPath": "assets/emulators/eden.png"
         },
         {
           "id": "citron_neo",
@@ -958,7 +1009,8 @@
           "description": "Nintendo Switch模拟器，yuzu/Suyu血统的活跃分支。GPL-3.0开源，Vulkan-only渲染路线，Dynarmic-GPLv3改进。移除Discord-RPC、Portable Mode、Unity builds。GitHub提供APK下载",
           "downloadUrl": "https://github.com/citron-neo/emulator/releases/latest/download/app-mainline-release.apk",
           "devUrl": "https://github.com/citron-neo/CI/releases",
-          "nightlyUrl": "https://github.com/citron-neo/CI/releases"
+          "nightlyUrl": "https://github.com/citron-neo/CI/releases",
+          "iconPath": "assets/emulators/citron_neo.png"
         }
       ]
     },
@@ -969,7 +1021,7 @@
       "year": 1994,
       "icon": "💿",
       "imagePath": "assets/consoles/ps1.jpg",
-      "description": "索尼 PlayStation 初代，32 位家用机，光盘时代的霸主",
+      "description": "索尼PlayStation，1994年发售的32位家用主机，搭载R3000A处理器。以CD-ROM取代卡带，凭借3D图形能力和《最终幻想VII》《合金装备》《古惑狼》等大作击败N64和Saturn，全球销量超1.02亿台，开创了光盘游戏时代",
       "emulators": [
         {
           "id": "duckstation",
@@ -985,7 +1037,8 @@
           "description": "最优秀的PS1模拟器，支持PGXP几何校正、高清渲染、即时存档、硬件光栅化、多线程CD读取。注意：许可证已改为CC-BY-NC-ND（非OSI开源），官方站点提供稳定APK，2026年7月仍高频更新",
           "downloadUrl": "https://www.duckstation.org/",
           "devUrl": "https://github.com/stenzek/duckstation/releases",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/duckstation.png"
         },
         {
           "id": "duckstation_gpl",
@@ -999,7 +1052,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "DuckStation的GPL开源分叉，由NetherSX2维护者Trixarian创建，在原版变更许可证后保留真正开源版本，2025年9月更新",
-          "downloadUrl": "https://github.com/Trixarian/duckstation-gpl/releases"
+          "downloadUrl": "https://github.com/Trixarian/duckstation-gpl/releases",
+          "iconPath": "assets/emulators/duckstation.png"
         },
         {
           "id": "lemuroid_psx",
@@ -1013,7 +1067,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle PSX核心，模拟准确性高",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         }
       ]
     },
@@ -1024,7 +1079,7 @@
       "year": 2000,
       "icon": "💿",
       "imagePath": "assets/consoles/ps2.jpg",
-      "description": "索尼 PlayStation 2，史上销量最高的家用游戏机",
+      "description": "索尼PlayStation 2，2000年发售的128位家用主机，搭载Emotion Engine处理器。向下兼容PS1并内置DVD播放器，全球销量超1.55亿台，是史上销量最高的游戏机。《侠盗猎车手》《最终幻想X》《战神》等大作定义了第六世代",
       "emulators": [
         {
           "id": "nethersx2_classic",
@@ -1039,7 +1094,8 @@
           "minAndroid": "8.0",
           "description": "AetherSX2的社区延续分支，由Trixarian维护，持续更新，性能优秀",
           "downloadUrl": "https://github.com/Trixarian/NetherSX2-classic/releases/latest/download/NetherSX2-v2.2n-3668.apk",
-          "devUrl": "https://github.com/Trixarian/NetherSX2-classic/releases"
+          "devUrl": "https://github.com/Trixarian/NetherSX2-classic/releases",
+          "iconPath": "assets/emulators/nethersx2_classic.png"
         },
         {
           "id": "nethersx2_patch",
@@ -1053,7 +1109,8 @@
           "compatibility": "high",
           "minAndroid": "8.0",
           "description": "NetherSX2标准版延续，基于AetherSX2 4248构建，移除广告、修复RetroAchievements通知、支持联机对战，推荐Adreno GPU设备使用，2025年12月更新",
-          "downloadUrl": "https://github.com/Trixarian/NetherSX2-patch/releases/latest/download/NetherSX2-v2.2n-4248.apk"
+          "downloadUrl": "https://github.com/Trixarian/NetherSX2-patch/releases/latest/download/NetherSX2-v2.2n-4248.apk",
+          "iconPath": "assets/emulators/nethersx2_patch.png"
         },
         {
           "id": "psx2_izzy",
@@ -1069,7 +1126,8 @@
           "description": "PCSX2的安卓移植分支，fork自PCSX2_ARM64。支持Namco System 246/256街机基板。Mali/MediaTek渲染修复，RetroAchievements，自动封面下载，多区域BIOS自动切换，每游戏独立设置/记忆卡。ISO/CHD/CSO/ZSO/BIN-CUE支持。Google Play有付费版",
           "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/latest/download/PSX2_1.2.6.apk",
           "devUrl": "https://github.com/izzy2lost/PSX2/releases",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/psx2_izzy.png"
         },
         {
           "id": "armsx2",
@@ -1085,7 +1143,8 @@
           "description": "PCSX2 fork，原生ARM64 JIT重编译器(EE/IOP/VU0/VU1/vtlb)，填补上游只有x86-64 JIT的空白。用LLM/AI辅助x86→ARM64翻译(~5万行发射器代码)。Local Link局域网联机(约57款PS2游戏)，异步GS回读，CPU亲和性控制，硬件ROV，ADPF，libretro核心(armsx2_libretro)，Adreno默认Vulkan，低延迟帧pacing。Stable+Nightly双轨",
           "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases",
           "devUrl": "",
-          "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases"
+          "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases",
+          "iconPath": "assets/emulators/armsx2.png"
         },
         {
           "id": "emucorex",
@@ -1100,7 +1159,8 @@
           "minAndroid": "8.0",
           "description": "基于PCSX2核心的PS2模拟器，面向手持设备优化。Jetpack Compose现代化UI，内置游戏库管理器、实时叠加控制器、驱动目录兼容性提示、OpenSL ES音频后端与轻量SPU2模式，支持反交错(Deinterlacing)与抖动(Dithering)设置。每版提供标准版与并行渲染(parallel)双APK，GPL-3.0开源，2026年7月更新至v0.2.9",
           "downloadUrl": "https://github.com/sashkinbro/EmuCoreX/releases",
-          "devUrl": "https://github.com/sashkinbro/EmuCoreX/releases"
+          "devUrl": "https://github.com/sashkinbro/EmuCoreX/releases",
+          "iconPath": "assets/emulators/nethersx2_classic.png"
         }
       ]
     },
@@ -1111,7 +1171,7 @@
       "year": 2006,
       "icon": "💿",
       "imagePath": "assets/consoles/ps3.jpg",
-      "description": "索尼 PlayStation 3，Cell宽带引擎架构，蓝光时代的家用主机",
+      "description": "索尼PlayStation 3，2006年发售的第七世代主机，搭载Cell宽带引擎处理器和RSX图形芯片。首发内置蓝光播放器，支持1080p高清输出。《最后生还者》《神秘海域》《战神3》展现了主机级电影化叙事的巅峰",
       "emulators": [
         {
           "id": "rpcsx",
@@ -1126,7 +1186,8 @@
           "minAndroid": "10.0",
           "description": "RPCSX模拟器的Android原生UI前端，Kotlin编写，支持自定义GPU驱动，2026年5月活跃开发中，PS3安卓模拟的新希望",
           "downloadUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases/latest/download/rpcsx-release.apk",
-          "devUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases"
+          "devUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases",
+          "iconPath": "assets/emulators/rpcsx.png"
         },
         {
           "id": "rpcsx_clanker",
@@ -1140,7 +1201,8 @@
           "compatibility": "low",
           "minAndroid": "10.0",
           "description": "RPCSX-UI的ouroboros420活跃分支(RPCSX-Clanker)，2026年7月最新版v2026.07.08。独有功能：游戏文件夹扫描与直接ISO播放、可排序/筛选游戏库、RPCN网络联机对战、Patch Manager补丁管理器(下载RPCS3官方补丁)、逐游戏配置、GPU turbo模式(Adreno满频)、Material 3主题。应用包名为net.rpcsx.clanker，可与官方RPCSX并存安装。仅arm64，主要适配骁龙8 Gen2/Adreno 740+Turnip驱动",
-          "downloadUrl": "https://github.com/ouroboros420/rpcsx-ui-android/releases/latest/download/rpcsx-release.apk"
+          "downloadUrl": "https://github.com/ouroboros420/rpcsx-ui-android/releases/latest/download/rpcsx-release.apk",
+          "iconPath": "assets/emulators/rpcsx_clanker.png"
         },
         {
           "id": "rpcs3_android",
@@ -1155,7 +1217,8 @@
           "minAndroid": "10.0",
           "description": "RPCS3的Android移植版，2025年3月进入Alpha阶段，支持控制器自动映射与省电模式，需骁龙8 Gen级别设备，更新趋缓",
           "downloadUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases/latest/download/rpcs3-release.apk",
-          "devUrl": "https://github.com/aenu1/aps3e/releases"
+          "devUrl": "https://github.com/aenu1/aps3e/releases",
+          "iconPath": "assets/emulators/rpcs3_android.png"
         }
       ]
     },
@@ -1166,7 +1229,7 @@
       "year": 2004,
       "icon": "📱",
       "imagePath": "assets/consoles/psp.jpg",
-      "description": "索尼 PlayStation Portable，便携掌机，多媒体功能先驱",
+      "description": "索尼PlayStation Portable，2004年发售的便携掌机，搭载MIPS R4000处理器。使用UMD光盘介质，支持Wi-Fi联机和多媒体功能（音乐、视频、网络浏览），是首款在性能上接近家用机的掌机。全球销量超8000万台",
       "emulators": [
         {
           "id": "ppsspp",
@@ -1182,7 +1245,8 @@
           "description": "最优秀的PSP模拟器，兼容性极佳，支持ad-hoc联机(PS Rewired/Openspy服务器)、成就系统、高清化与纹理替换，官方站点提供稳定APK，持续高频更新",
           "downloadUrl": "https://www.ppsspp.org/files/1_20_4/ppsspp.apk",
           "devUrl": "https://www.ppsspp.org/devbuilds/",
-          "nightlyUrl": "https://www.ppsspp.org/devbuilds/"
+          "nightlyUrl": "https://www.ppsspp.org/devbuilds/",
+          "iconPath": "assets/emulators/ppsspp.png"
         },
         {
           "id": "ppsspp_xtreme",
@@ -1197,7 +1261,8 @@
           "minAndroid": "5.0",
           "description": "PPSSPP的低端设备优化分叉，主打Lower Spec Xtreme性能模式，含音频修复等额外功能，2026年1月更新",
           "downloadUrl": "https://github.com/KMFDManic/PPSSPP-Xtreme/releases",
-          "devUrl": "https://www.ppsspp.org/devbuilds/"
+          "devUrl": "https://www.ppsspp.org/devbuilds/",
+          "iconPath": "assets/emulators/ppsspp.png"
         }
       ]
     },
@@ -1208,7 +1273,7 @@
       "year": 2011,
       "icon": "📱",
       "imagePath": "assets/consoles/psvita.jpg",
-      "description": "索尼 PlayStation Vita，双摇杆OLED掌机，索尼最后一款掌机",
+      "description": "索尼PlayStation Vita，2011年发售的掌机，搭载ARM Cortex-A9四核处理器和5寸OLED屏。双摇杆设计适合FPS和动作游戏，支持触摸屏和背触板， Remote Play可远程游玩PS4游戏。虽商业表现不佳但拥有大量精品独立游戏",
       "emulators": [
         {
           "id": "vita3k",
@@ -1223,7 +1288,8 @@
           "minAndroid": "10.0",
           "description": "目前唯一活跃的PS Vita模拟器Android移植版，支持FSR升频、分数升频、FPS破解(30fps游戏可60fps运行)、纹理替换、自定义驱动，需骁龙8系列及以上高端设备，2026年持续更新",
           "downloadUrl": "https://github.com/Vita3K/Vita3K-Android/releases/latest/download/vita3k-android-release-12.apk",
-          "devUrl": "https://github.com/Vita3K/Vita3K/releases"
+          "devUrl": "https://github.com/Vita3K/Vita3K/releases",
+          "iconPath": "assets/emulators/vita3k.png"
         },
         {
           "id": "vita3k_ikhoeyzx",
@@ -1238,7 +1304,8 @@
           "minAndroid": "9.0",
           "description": "Vita3K安卓社区分支，v12.5 build 16(2025年10月)。独有ASC模式(Adreno Shader Cache，仅Adreno)、stencil buffer深度修改、VPK文件支持(测试中)。社区测试性能优于官方v12",
           "downloadUrl": "https://github.com/ikhoeyZX/Vita3K-Android/releases",
-          "devUrl": "https://github.com/Vita3K/Vita3K-Android/releases"
+          "devUrl": "https://github.com/Vita3K/Vita3K-Android/releases",
+          "iconPath": "assets/emulators/vita3k.png"
         },
         {
           "id": "emucorev",
@@ -1253,7 +1320,8 @@
           "minAndroid": "8.0",
           "description": "基于Vita3K核心的PS Vita模拟器，采用Jetpack Compose自定义UI，内置游戏库管理、目录浏览、手柄支持与用户档案系统(含密码恢复)。每版提供标准版与并行渲染(parallel)双APK，GPL-2.0开源，2026年6月更新至v0.1.5",
           "downloadUrl": "https://github.com/sashkinbro/EmuCoreV/releases",
-          "devUrl": "https://github.com/sashkinbro/EmuCoreV/releases"
+          "devUrl": "https://github.com/sashkinbro/EmuCoreV/releases",
+          "iconPath": "assets/emulators/emucorev.png"
         }
       ]
     },
@@ -1264,7 +1332,7 @@
       "year": 1987,
       "icon": "🎮",
       "imagePath": "assets/consoles/pce.jpg",
-      "description": "NEC PC Engine / TurboGrafx-16，8位向16位过渡期的经典主机",
+      "description": "NEC PC Engine / TurboGrafx-16，1987年日本发售、1989年北美发售。搭载HuC6280处理器，首创CD-ROM²光驱扩展，是首款支持光盘游戏的家用主机。以《猎人R》《天外魔境》等作品著称，日本市场表现优异",
       "emulators": [
         {
           "id": "lemuroid_pce",
@@ -1278,7 +1346,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle PCE核心模拟PC Engine",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "pce_emu_ex",
@@ -1292,7 +1361,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "PC Engine/TurboGrafx-16/SuperGrafx/CD-ROM²模拟器，基于Mednafen核心，由Robert Broglia开发，低延迟，2026年4月活跃",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/pce_emu_ex.png"
         }
       ]
     },
@@ -1303,7 +1373,7 @@
       "year": 1970,
       "icon": "🕹️",
       "imagePath": "assets/consoles/arcade.jpg",
-      "description": "街机游戏平台，涵盖多厂商的经典街机基板与游戏",
+      "description": "街机游戏平台，涵盖Capcom CPS-1/CPS-2/CPS-3、SNK Neo Geo MVS、世嘉System 16/Model 2/Model 3、Namco System 22等多厂商经典基板。街机曾引领游戏技术前沿，3D图形与对战格斗的诞生地",
       "emulators": [
         {
           "id": "mame4droid",
@@ -1318,7 +1388,8 @@
           "minAndroid": "6.0",
           "description": "MAME的Android移植版，支持大量街机游戏，活跃维护中",
           "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/latest/download/MAME4droid.2026-1.37.6-release.apk",
-          "devUrl": "https://github.com/seleuco/MAME4droid-0.139u1-/releases"
+          "devUrl": "https://github.com/seleuco/MAME4droid-0.139u1-/releases",
+          "iconPath": "assets/emulators/mame4droid.png"
         },
         {
           "id": "lemuroid_arcade",
@@ -1332,7 +1403,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用FBNeo核心，街机兼容性高",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "fbneo_core",
@@ -1346,7 +1418,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "FinalBurn Neo的Libretro核心，专注CPS1/CPS2/CPS3/Neo Geo等街机基板模拟。通过RetroArch核心下载器获取，支持安卓",
-          "downloadUrl": "https://github.com/finalburnneo/FBNeo/releases"
+          "downloadUrl": "https://github.com/finalburnneo/FBNeo/releases",
+          "iconPath": "assets/emulators/fbneo_core.png"
         }
       ]
     },
@@ -1357,7 +1430,7 @@
       "year": 1990,
       "icon": "🥊",
       "imagePath": "assets/consoles/neogeo.jpg",
-      "description": "SNK Neo Geo，家用与街机同规格的高端16位主机，格斗游戏圣地",
+      "description": "SNK Neo Geo，1990年发售的高端家用主机，与街机MVS完全同规格。搭载Motorola 68000与Z80双处理器，以大容量卡带实现街机级画质。《拳皇》《侍魂》《合金弹头》系列成为格斗游戏的代名词",
       "emulators": [
         {
           "id": "mame4droid_neogeo",
@@ -1371,7 +1444,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "MAME4droid完整支持Neo Geo MVS/AES基板，需自备BIOS与ROM，活跃维护",
-          "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/latest/download/MAME4droid.2026-1.37.6-release.apk"
+          "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/latest/download/MAME4droid.2026-1.37.6-release.apk",
+          "iconPath": "assets/emulators/mame4droid.png"
         },
         {
           "id": "fbneo_neogeo",
@@ -1385,7 +1459,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "FinalBurn Neo核心对Neo Geo支持优秀，性能优于MAME，提供Libretro核心，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/finalburnneo/FBNeo/releases"
+          "downloadUrl": "https://github.com/finalburnneo/FBNeo/releases",
+          "iconPath": "assets/emulators/fbneo_neogeo.png"
         },
         {
           "id": "neo_emu",
@@ -1399,7 +1474,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于FBNeo核心的Neo Geo专属Android前端，由Robert Broglia开发，低延迟、支持MVS/AES/CD，Google Play付费",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/neo_emu.png"
         }
       ]
     },
@@ -1410,7 +1486,7 @@
       "year": 1998,
       "icon": "👾",
       "imagePath": "assets/consoles/ngp.jpg",
-      "description": "SNK Neo Geo Pocket / Pocket Color，SNK 掌机，黑白与彩色两代",
+      "description": "SNK Neo Geo Pocket（1998黑白版）与Pocket Color（1999彩色版）。搭载16位处理器，8方向摇杆手感出色。支持与Dreamcast联机互动，拥有《拳皇R》《侍魂》等精良移植作品，是SNK唯一的掌机产品",
       "emulators": [
         {
           "id": "lemuroid_ngp",
@@ -1424,7 +1500,8 @@
           "compatibility": "perfect",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle NeoPop核心模拟Neo Geo Pocket/Color，兼容性极佳",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "neopop_core",
@@ -1438,7 +1515,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Neo Geo Pocket的Mednafen NeoPop核心Libretro仓库，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/beetle-ngp-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/beetle-ngp-libretro/releases",
+          "iconPath": "assets/emulators/neopop_core.png"
         }
       ]
     },
@@ -1449,7 +1527,7 @@
       "year": 1983,
       "icon": "💻",
       "imagePath": "assets/consoles/msx.jpg",
-      "description": "MSX 家用电脑标准，微软与ASCII联合制定，日系8位计算机平台",
+      "description": "MSX标准由微软与ASCII于1983年联合制定，日系8位家用电脑平台。搭载Z80处理器，统一规格使得软件跨厂商通用。Konami在此平台创作了大量经典：《合金装备》《恶魔城》《宇宙巡航机》。日本市场尤其繁荣",
       "emulators": [
         {
           "id": "lemuroid_msx",
@@ -1463,7 +1541,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用fMSX核心模拟MSX/MSX2/MSX2+，兼容性高",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "fmsx_core",
@@ -1477,7 +1556,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "fMSX的Libretro核心仓库，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/fmsx-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/fmsx-libretro/releases",
+          "iconPath": "assets/emulators/openmsx_android.png"
         },
         {
           "id": "bluemsx_core",
@@ -1491,7 +1571,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "blueMSX核心支持MSX全系列与SVI/ColecoVision等Z80机器，准确性高，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/blueMSX-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/blueMSX-libretro/releases",
+          "iconPath": "assets/emulators/bluemsx_core.png"
         },
         {
           "id": "openmsx_android",
@@ -1505,7 +1586,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "openMSX的安卓社区移植版，由CleversonSA移植。openMSX是兼容性最准确的MSX核心。重点支持巴西MSX Expert/HotBit",
-          "downloadUrl": "https://github.com/CleversonSA/openmsx4android/releases/latest/download/openmsx4android.apk"
+          "downloadUrl": "https://github.com/CleversonSA/openmsx4android/releases/latest/download/openmsx4android.apk",
+          "iconPath": "assets/emulators/openmsx_android.png"
         }
       ]
     },
@@ -1516,7 +1598,7 @@
       "year": 1985,
       "icon": "🌈",
       "imagePath": "assets/consoles/amiga.jpg",
-      "description": "Commodore Amiga，搭载定制图形与音频芯片的16位个人电脑",
+      "description": "Commodore Amiga，1985年发售的16位个人电脑。搭载Motorola 68000和定制OCS/ECS/AGA图形与音效芯片，以卓越的动画与音频能力闻名。拥有大量街机级游戏，是欧洲游戏开发的核心平台",
       "emulators": [
         {
           "id": "lemuroid_amiga",
@@ -1530,7 +1612,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用PUAE核心模拟Amiga 500/1200，兼容性高",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "puae_core",
@@ -1544,7 +1627,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "PUAE (libretro的UAE移植)核心仓库，支持Amiga 500/1000/2000/1200/4000与CD32，需自备Kickstart ROM，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/PUAE/releases"
+          "downloadUrl": "https://github.com/libretro/PUAE/releases",
+          "iconPath": "assets/emulators/puae_core.png"
         },
         {
           "id": "uae4droid",
@@ -1558,7 +1642,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "UAE的Android原生移植，独立App，更新较少，需自备Kickstart ROM",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=org.ab.uae"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=org.ab.uae",
+          "iconPath": "assets/emulators/uae4droid.png"
         }
       ]
     },
@@ -1569,7 +1654,7 @@
       "year": 1982,
       "icon": "💾",
       "imagePath": "assets/consoles/c64.jpg",
-      "description": "Commodore 64，史上销量最高的个人电脑，8位时代的王者",
+      "description": "Commodore 64，1982年发售的8位个人电脑，搭载MOS 6510处理器和SID音效芯片。全球销量超1700万台，是史上销量最高的个人电脑。拥有超过10000款游戏，对欧美游戏文化影响深远",
       "emulators": [
         {
           "id": "lemuroid_c64",
@@ -1583,7 +1668,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用VICE核心模拟C64，兼容性高",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "vice_core",
@@ -1597,7 +1683,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "VICE (Versatile Commodore Emulator)的Libretro核心仓库，支持C64/C128/PET/VIC20/CBM-II，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/vice-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
+          "iconPath": "assets/emulators/vice_core.png"
         },
         {
           "id": "c64_emu",
@@ -1611,7 +1698,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于VICE核心的C64 Android原生前端，由Robert Broglia开发，支持True Drive模拟、磁盘镜像，Google Play付费",
-          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases"
+          "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "iconPath": "assets/emulators/c64_emu.png"
         },
         {
           "id": "eightbitwonders_c64",
@@ -1625,7 +1713,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持C64。AGPL开源。支持硬件手柄、虚拟摇杆、存档/回溯、内置游戏、archive.org下载。F-Droid/Play/Amazon可下",
-          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases"
+          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
+          "iconPath": "assets/emulators/eightbitwonders_c64.png"
         }
       ]
     },
@@ -1636,7 +1725,7 @@
       "year": 1993,
       "icon": "🎬",
       "imagePath": "assets/consoles/3do.jpg",
-      "description": "3DO Interactive Multiplayer，松下等厂商制造的32位CD-ROM主机",
+      "description": "3DO Interactive Multiplayer，1993年发售的32位CD-ROM主机，由松下、Sanyo等厂商生产。采用授权制造模式，硬件性能领先同期但价格昂贵。《Gex》《D之食卓》展现了CD-ROM多媒体游戏的潜力",
       "emulators": [
         {
           "id": "opera_core",
@@ -1650,7 +1739,8 @@
           "compatibility": "medium",
           "minAndroid": "6.0",
           "description": "3DO目前仅能通过RetroArch的Opera核心（原4DO）模拟，安卓端无独立App，需通过RetroArch核心下载器获取，兼容性中等",
-          "downloadUrl": "https://github.com/libretro/opera-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/opera-libretro/releases",
+          "iconPath": "assets/emulators/opera_core.png"
         }
       ]
     },
@@ -1661,7 +1751,7 @@
       "year": 1999,
       "icon": "🦢",
       "imagePath": "assets/consoles/wonderswan.jpg",
-      "description": "万代 WonderSwan / WonderSwan Color，横竖皆可玩的掌机",
+      "description": "万代WonderSwan（1999）与WonderSwan Color（2000），由横井军平参与设计的掌机。以超长续航（30-40小时）和横竖双方向游玩著称，搭载16位处理器。拥有《最终幻想》复刻版等独占作品，日本市场有一定影响力",
       "emulators": [
         {
           "id": "lemuroid_wonderswan",
@@ -1675,7 +1765,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle Cygne核心模拟WonderSwan/Color，支持横竖屏切换",
-          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk"
+          "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
+          "iconPath": "assets/emulators/lemuroid.png"
         },
         {
           "id": "cygne_core",
@@ -1689,7 +1780,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "WonderSwan的Mednafen Cygne核心Libretro仓库，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/beetle-wswan-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/beetle-wswan-libretro/releases",
+          "iconPath": "assets/emulators/wonderdroid.png"
         },
         {
           "id": "wonderdroid",
@@ -1703,7 +1795,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "安卓原生WonderSwan/WonderSwan Color模拟器，支持Mono与Color。Google Play可下",
-          "downloadUrl": "https://github.com/williehwc/wonderdroid-x/releases/latest/download/70.apk"
+          "downloadUrl": "https://github.com/williehwc/wonderdroid-x/releases/latest/download/70.apk",
+          "iconPath": "assets/emulators/wonderdroid.png"
         },
         {
           "id": "wonderdroid_ultra",
@@ -1717,7 +1810,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "WonderDroid的增强分支，v5.5。GPLv2开源。多系统支持：WonderSwan/WS Color/GameGear/Master System/PC Engine/TurboGrafx-16/SuperGrafx/Neo Geo Pocket/Color。自动创建ROM目录，ROM元数据截图库",
-          "downloadUrl": "https://github.com/williehwc/wonderdroid-x/releases/latest/download/70.apk"
+          "downloadUrl": "https://github.com/williehwc/wonderdroid-x/releases/latest/download/70.apk",
+          "iconPath": "assets/emulators/wonderdroid.png"
         }
       ]
     },
@@ -1728,7 +1822,7 @@
       "year": 1995,
       "icon": "🥽",
       "imagePath": "assets/consoles/virtualboy.jpg",
-      "description": "任天堂 Virtual Boy，32位红黑3D游戏机，任天堂罕见的商业失败之作",
+      "description": "任天堂Virtual Boy，1995年发售的32位红黑3D游戏机，由横井军平设计。采用红色LED镜面反射显示伪3D效果，因容易导致眩晕和游戏数量少而成为任天堂罕见的商业失败之作",
       "emulators": [
         {
           "id": "mednafen_vb_core",
@@ -1742,7 +1836,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "Virtual Boy目前仅能通过RetroArch的Mednafen VB (Beetle VB)核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持红黑配色与3D效果渲染",
-          "downloadUrl": "https://github.com/libretro/beetle-vb-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/beetle-vb-libretro/releases",
+          "iconPath": "assets/emulators/mednafen_vb_core.png"
         }
       ]
     },
@@ -1753,7 +1848,7 @@
       "year": 1981,
       "icon": "🖥️",
       "imagePath": "assets/consoles/dos.jpg",
-      "description": "MS-DOS 磁盘操作系统，IBM PC 兼容机的经典游戏平台",
+      "description": "MS-DOS磁盘操作系统，1980-90年代IBM PC兼容机的核心游戏平台。支持VGA/SVGA图形和Sound Blaster声卡，诞生了《毁灭战士》《德军总部》《魔法门》《创世纪》等划时代PC游戏，是PC游戏的起源",
       "emulators": [
         {
           "id": "magic_dosbox",
@@ -1767,7 +1862,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "专为触屏优化的DOS模拟器，支持自定义虚拟按键、快捷指令面板、游戏专属配置文件，免费版与付费版，官网提供下载",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=br.com.magicsoup.dosboxfree"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=br.com.magicsoup.dosboxfree",
+          "iconPath": "assets/emulators/magic_dosbox.png"
         },
         {
           "id": "dosbox_turbo",
@@ -1781,7 +1877,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "DOSBox的Android优化移植，支持动态CPU核心、SVGA模式，仅通过Google Play获取，更新较少",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.fishstix.dosbox"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.fishstix.dosbox",
+          "iconPath": "assets/emulators/dosbox_turbo.png"
         },
         {
           "id": "dosbox_x",
@@ -1795,7 +1892,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "DOSBox功能增强分叉，目标是完整模拟DOS与Win9x时代，支持更广软硬件，需从源码编译Android版本",
-          "downloadUrl": "https://github.com/joncampbell123/dosbox-x/releases"
+          "downloadUrl": "https://github.com/joncampbell123/dosbox-x/releases",
+          "iconPath": "assets/emulators/dosbox_x.png"
         },
         {
           "id": "gamenative",
@@ -1811,7 +1909,8 @@
           "description": "安卓PC游戏兼容层/启动器，通过Wine/Box64/Proton类技术在安卓运行Steam/Epic/GOG/Amazon的Windows PC游戏。云存档(PC/手机互通)，自动应用社区兼容配置，Steam DLC/Workshop/分支支持，Nexus Mods，LSFG-VK帧生成，DX12 on Mali/Exynos，Bionic Steam Client(DRM/在线/DLC)，多手柄，触屏HUD编辑器",
           "downloadUrl": "https://github.com/utkarshdalal/GameNative/releases/latest/download/gamenative-v1.1.1-legacy-xr.apk",
           "devUrl": "",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/gamenative.png"
         }
       ]
     },
@@ -1822,7 +1921,7 @@
       "year": 1982,
       "icon": "📐",
       "imagePath": "assets/consoles/vectrex.jpg",
-      "description": "GCE Vectrex，自带矢量显示器的独特家用机，矢量图形游戏代表",
+      "description": "GCE Vectrex，1982年发售的家用主机，自带9寸矢量显示器，无需连接电视。以独特的矢量线框图形和3D模拟效果著称，《Mine Storm》《星光大战》展现了矢量游戏的魅力，是电子游戏史上的独特存在",
       "emulators": [
         {
           "id": "vecx_core",
@@ -1836,7 +1935,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "Vectrex目前仅能通过RetroArch的VecX核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持矢量线渲染与叠加色片",
-          "downloadUrl": "https://github.com/libretro/libretro-vecx/releases"
+          "downloadUrl": "https://github.com/libretro/libretro-vecx/releases",
+          "iconPath": "assets/emulators/vecx_core.png"
         }
       ]
     },
@@ -1847,7 +1947,7 @@
       "year": 1982,
       "icon": "🎰",
       "imagePath": "assets/consoles/coleco.jpg",
-      "description": "ColecoVision，第二世代高性能家用机，以SG-1000同架构闻名",
+      "description": "ColecoVision，1982年发售的第二世代家用主机。搭载Z80处理器，以接近街机的画面表现著称，《大金刚》《 ladybug》等街机移植作品质量极高，销量超200万台，是雅达利2600的主要竞争对手",
       "emulators": [
         {
           "id": "gearcoleco_core",
@@ -1861,7 +1961,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "drhelius开发的ColecoVision高精度模拟器，提供Libretro核心，需通过RetroArch核心下载器获取，准确时序",
-          "downloadUrl": "https://github.com/drhelius/Gearcoleco/releases"
+          "downloadUrl": "https://github.com/drhelius/Gearcoleco/releases",
+          "iconPath": "assets/emulators/gearcoleco_core.png"
         },
         {
           "id": "bluemsx_coleco",
@@ -1875,7 +1976,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "blueMSX核心亦支持ColecoVision/MSX/SVI，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/blueMSX-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/blueMSX-libretro/releases",
+          "iconPath": "assets/emulators/bluemsx_coleco.png"
         },
         {
           "id": "colem",
@@ -1889,7 +1991,8 @@
           "compatibility": "high",
           "minAndroid": "2.3",
           "description": "fMS出品的ColecoVision模拟器，支持ColecoVision+Coleco Adam(需切换)。支持WiFi联机、MIDI录音。免费版+Deluxe付费版",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.fms.colem"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.fms.colem",
+          "iconPath": "assets/emulators/colem.png"
         }
       ]
     },
@@ -1900,7 +2003,7 @@
       "year": 1979,
       "icon": "🎯",
       "imagePath": "assets/consoles/intellivision.jpg",
-      "description": "Mattel Intellivision，第二世代16位主机，雅达利2600的主要竞争对手",
+      "description": "Mattel Intellivision，1979年发售的第二世代主机，搭载16位GI CP1610处理器。是早期16位主机，以出色的策略和体育游戏闻名。销量超300万台，是雅达利2600的主要竞争对手",
       "emulators": [
         {
           "id": "freeintv_core",
@@ -1914,7 +2017,8 @@
           "compatibility": "high",
           "minAndroid": "6.0",
           "description": "Intellivision目前仅能通过RetroArch的FreeIntv核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持EXEC与GROM BIOS",
-          "downloadUrl": "https://github.com/libretro/FreeIntv/releases"
+          "downloadUrl": "https://github.com/libretro/FreeIntv/releases",
+          "iconPath": "assets/emulators/freeintv_core.png"
         },
         {
           "id": "jzintv4droid",
@@ -1928,7 +2032,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "基于jzintv的Intellivision安卓模拟器，桌面jzintv的前端移植。Google Play可下",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=org.libsdl.jzintv4droid"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=org.libsdl.jzintv4droid",
+          "iconPath": "assets/emulators/jzintv4droid.png"
         }
       ]
     },
@@ -1939,7 +2044,7 @@
       "year": 2001,
       "icon": "🎮",
       "imagePath": "assets/consoles/xbox.jpg",
-      "description": "微软 Xbox 初代，第六世代家用主机，微软进军游戏机市场的首作",
+      "description": "微软Xbox，2001年发售的第六世代家用主机，搭载Intel Pentium III处理器和Nvidia NV2A图形芯片。首创内置硬盘和Xbox Live在线服务，《光环》系列定义了主机FPS体验。销量超2400万台，标志微软进军游戏机市场",
       "emulators": [
         {
           "id": "xemu",
@@ -1954,7 +2059,8 @@
           "minAndroid": "10.0",
           "description": "基于QEMU的低级xbox模拟器，目前主要面向桌面平台，Android端无官方构建，兼容性较低，需从源码自行编译，2026年持续活跃开发",
           "downloadUrl": "https://github.com/mborgerson/xemu/releases",
-          "devUrl": "https://github.com/xemu-project/xemu/releases"
+          "devUrl": "https://github.com/xemu-project/xemu/releases",
+          "iconPath": "assets/emulators/xemu.png"
         },
         {
           "id": "cxbx_r",
@@ -1968,7 +2074,8 @@
           "compatibility": "low",
           "minAndroid": "10.0",
           "description": "高级(HLE)xbox模拟器，将xbox API翻译为PC调用，目前仅Windows平台，Android端无可用构建，需从源码自行编译，仅供研究参考",
-          "downloadUrl": "https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases"
+          "downloadUrl": "https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases",
+          "iconPath": "assets/emulators/cxbx_r.png"
         }
       ]
     },
@@ -1979,7 +2086,7 @@
       "year": 2024,
       "icon": "⚡",
       "imagePath": "assets/consoles/gpu_drivers.jpg",
-      "description": "Adreno GPU的Vulkan驱动，可显著提升安卓模拟器图形性能与兼容性，需配合Adreno Tools应用安装",
+      "description": "Adreno GPU的Vulkan驱动替换方案，通过Mesa Turnip驱动显著提升安卓模拟器的图形性能与兼容性。不同版本适配不同Adreno GPU代际（A6xx/A7xx/A8xx），需配合Adreno Tools应用安装。对Dolphin、Yuzu等模拟器性能提升显著",
       "emulators": [
         {
           "id": "turnip_adreno",
@@ -1993,7 +2100,8 @@
           "compatibility": "perfect",
           "minAndroid": "10.0",
           "description": "开源Turnip Vulkan驱动，基于Mesa上游构建，适用于Adreno A7xx与A6xx GPU。最新版v26.3.0-R1(2026年7月)，Vulkan 1.4.354。安装后可显著提升Switch/PS2/PS3等模拟器的图形性能与兼容性，是安卓模拟器玩家的必备驱动。需通过Adreno Tools应用加载安装",
-          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases"
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases",
+          "iconPath": "assets/emulators/turnip_adreno.png"
         },
         {
           "id": "turnip_gen8",
@@ -2007,7 +2115,8 @@
           "compatibility": "high",
           "minAndroid": "10.0",
           "description": "实验性Turnip驱动，支持新一代Adreno A8xx GPU(a840/a830/a829/a825/810)。最新版V33(2026年7月)，Vulkan 1.4.354。基于whitebelyash/mesa-unified gen8分支构建，尚在早期阶段",
-          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v33"
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v33",
+          "iconPath": "assets/emulators/turnip_gen8.png"
         },
         {
           "id": "qualcomm_driver",
@@ -2021,7 +2130,8 @@
           "compatibility": "high",
           "minAndroid": "10.0",
           "description": "高通专有Vulkan驱动，从Quest Ray-Ban Display设备提取，适用于Adreno A7xx与A6xx。部分游戏在专有驱动下表现优于Turnip开源驱动，可按需切换对比",
-          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v863.1_a7xx"
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v863.1_a7xx",
+          "iconPath": "assets/emulators/qualcomm_driver.png"
         }
       ]
     },
@@ -2032,7 +2142,7 @@
       "year": 2013,
       "icon": "🎮",
       "imagePath": "assets/consoles/ps4.jpg",
-      "description": "索尼 PlayStation 4，第八世代主流家用主机",
+      "description": "索尼PlayStation 4，2013年发售的第八世代主流家用主机，搭载AMD八核Jaguar CPU和GCN架构GPU。支持Remote Play远程游玩，以《血源诅咒》《战神4》《最后生还者2》等大量独占大作主导了第八世代市场，全球销量超1.17亿台",
       "emulators": [
         {
           "id": "shadps4_android",
@@ -2047,7 +2157,8 @@
           "minAndroid": "12.0",
           "description": "PS4模拟器shadPS4的安卓社区移植版，实验性Alpha/PoC阶段。基于x86_64→ARM64跨架构JIT转译、Vulkan 1.3渲染。2D/像素小游戏可稳定运行，3A大作仅能进入菜单。需骁龙8 Gen1+/天玑9000+旗舰、12GB内存、Adreno GPU。联发科Mali仅能播放音频无画面。需自购固件",
           "downloadUrl": "https://github.com/shadps4-emu/shadPS4/releases",
-          "devUrl": "https://github.com/shadps4-emu/shadPS4/releases"
+          "devUrl": "https://github.com/shadps4-emu/shadPS4/releases",
+          "iconPath": "assets/emulators/shadps4_android.png"
         }
       ]
     },
@@ -2058,7 +2169,7 @@
       "year": 2005,
       "icon": "🎮",
       "imagePath": "assets/consoles/xbox_360.jpg",
-      "description": "微软 Xbox 360，第七世代家用主机，高清游戏与Xbox Live时代的开端",
+      "description": "微软Xbox 360，2005年发售的第七世代家用主机，搭载IBM PowerPC三核处理器和ATI Xenos GPU。以Xbox Live在线服务和高清游戏体验定义了第七世代，首发带来《完美黑暗零》《战争机器》系列。全球销量超8400万台",
       "emulators": [
         {
           "id": "ax360e",
@@ -2072,7 +2183,8 @@
           "compatibility": "low",
           "minAndroid": "10.0",
           "description": "基于Xenia/Xenia Canary的安卓Xbox 360模拟器，由aPS3e作者aenu开发，2025年12月上架Google Play公测。支持.iso/.god/.xex格式。需骁龙8 Gen1+与Adreno GPU，Mali/低端GPU基本不可用。轻量游戏与独立游戏可运行，3A大作仅可启动",
-          "downloadUrl": "https://github.com/aenu1/ax360e/releases"
+          "downloadUrl": "https://github.com/aenu1/ax360e/releases",
+          "iconPath": "assets/emulators/ax360e.png"
         },
         {
           "id": "x360_mobile",
@@ -2086,7 +2198,8 @@
           "compatibility": "low",
           "minAndroid": "11.0",
           "description": "基于Xenia Canary的安卓Xbox 360模拟器，ARM64+Vulkan 1.3。v0.5.2(2026年6月)，约300款测试中40%可玩。需Snapdragon+Adreno 600系以上、6GB RAM起。仅发布APK不开源",
-          "downloadUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/latest/download/X360_0.5.2_public.apk"
+          "downloadUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/latest/download/X360_0.5.2_public.apk",
+          "iconPath": "assets/emulators/x360_mobile.png"
         },
         {
           "id": "xenios",
@@ -2100,7 +2213,8 @@
           "compatibility": "low",
           "minAndroid": "12.0",
           "description": "基于Xenia Edge的实验性Apple导向分支，同时支持ARM64 Windows/Linux/Android。移动端兼容率28.88%(93/322)。改进会回流上游。BSD-3-Clause开源",
-          "downloadUrl": "https://github.com/xenios-jp/XeniOS/releases"
+          "downloadUrl": "https://github.com/xenios-jp/XeniOS/releases",
+          "iconPath": "assets/emulators/xenios.png"
         },
         {
           "id": "xendroid",
@@ -2116,7 +2230,8 @@
           "description": "Xbox 360模拟器，最初fork自xa360e(基于Xenia Canary)，后完全rebase到Xenia Edge。Vulkan后端，自定义Adreno Vulkan驱动支持。仅限Snapdragon Gen2+/Adreno 740+。github-actions自动构建滚动发布",
           "downloadUrl": "https://github.com/rfandango/XenDroid/releases/latest/download/XenDroid_Release_0f4f701.apk",
           "devUrl": "https://github.com/rfandango/XenDroid/releases",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xendroid.png"
         }
       ]
     },
@@ -2127,7 +2242,7 @@
       "year": 2003,
       "icon": "📱",
       "imagePath": "assets/consoles/ngage.jpg",
-      "description": "诺基亚 N-Gage，融合手机与游戏机的跨界掌机",
+      "description": "诺基亚N-Gage，2003年发售的融合手机与游戏机的跨界掌机。支持蓝牙联机和N-Gage Arena在线服务，使用MMC卡带介质。虽因设计缺陷和游戏数量少而商业失败，但开创了手机游戏的先河",
       "emulators": [
         {
           "id": "eka2l1",
@@ -2142,7 +2257,8 @@
           "minAndroid": "9.0",
           "description": "Symbian系统级模拟器，支持S60v1/v3/v5/S60^3，可运行N-Gage游戏及.sis/.sisx应用。目前唯一靠谱的N-Gage安卓方案。GitHub提供APK下载",
           "downloadUrl": "https://github.com/EKA2L1/EKA2L1/releases/latest/download/EKA2L1-Android.apk",
-          "devUrl": "https://github.com/EKA2L1/EKA2L1/releases"
+          "devUrl": "https://github.com/EKA2L1/EKA2L1/releases",
+          "iconPath": "assets/emulators/eka2l1.png"
         }
       ]
     },
@@ -2153,7 +2269,7 @@
       "year": 1982,
       "icon": "🖥️",
       "imagePath": "assets/consoles/zx_spectrum.jpg",
-      "description": "Sinclair ZX Spectrum，英国8位家用电脑，英国游戏文化的标志",
+      "description": "Sinclair ZX Spectrum，1982年发售的英国8位家用电脑，搭载Z80处理器。以彩色显示和低成本著称，售价仅125英镑。催生了庞大的英国游戏开发社区，诞生了《Manic Miner》《精英》等开创性作品，是英国游戏文化的标志",
       "emulators": [
         {
           "id": "speccy",
@@ -2167,7 +2283,8 @@
           "compatibility": "high",
           "minAndroid": "2.3",
           "description": "fMS系列出品的ZX Spectrum模拟器，支持SAM Coupé模式切换、存档、作弊、手柄。免费版+Deluxe付费版",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.fms.speccy"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.fms.speccy",
+          "iconPath": "assets/emulators/speccy.png"
         },
         {
           "id": "zesarux_spec",
@@ -2182,7 +2299,8 @@
           "minAndroid": "5.0",
           "description": "多Sinclair模拟器(ZX80/ZX81/ZX Spectrum)，GPL开源。有移动/ARM版本。高精度时序模拟",
           "downloadUrl": "https://github.com/chernandezba/zesarux/releases",
-          "devUrl": "https://github.com/chernandezba/zesarux/releases"
+          "devUrl": "https://github.com/chernandezba/zesarux/releases",
+          "iconPath": "assets/emulators/zesarux_spec.png"
         }
       ]
     },
@@ -2193,7 +2311,7 @@
       "year": 1987,
       "icon": "🖥️",
       "imagePath": "assets/consoles/x68000.jpg",
-      "description": "夏普 X68000，日本16位家用电脑，拥有大量街机级移植游戏",
+      "description": "夏普X68000，1987年发售的日本16位家用电脑，搭载Motorola 68000处理器。拥有超卓的图形和音频能力，大量街机级移植作品（如《街头霸王II》《圆桌骑士》）质量甚至超越街机原版，是日本计算机游戏的黄金平台",
       "emulators": [
         {
           "id": "px68k",
@@ -2208,7 +2326,8 @@
           "minAndroid": "3.1",
           "description": "基于keropi/WinX68k的X68000模拟器，支持XVI/Compact等型号。GitHub提供安卓APK",
           "downloadUrl": "https://github.com/neko68k/px68k/releases",
-          "devUrl": "https://github.com/neko68k/px68k/releases"
+          "devUrl": "https://github.com/neko68k/px68k/releases",
+          "iconPath": "assets/emulators/px68k.png"
         },
         {
           "id": "px68k_core",
@@ -2222,7 +2341,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "px68k的Libretro核心移植，通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/RetroSven/px68k-libretro/releases"
+          "downloadUrl": "https://github.com/RetroSven/px68k-libretro/releases",
+          "iconPath": "assets/emulators/px68k_core.png"
         }
       ]
     },
@@ -2233,7 +2353,7 @@
       "year": 1979,
       "icon": "💻",
       "imagePath": "assets/consoles/atari_8bit.jpg",
-      "description": "雅达利8位电脑系列，含400/800/600XL/800XL/130XE，与Atari 5200共用硬件架构",
+      "description": "雅达利8位电脑系列（400/800/600XL/800XL/130XE），1979年发售。搭载6502处理器和ANTIC/GTIA/POKEY定制芯片，图形与音效能力远超同期Apple II。与Atari 5200游戏机共用硬件架构，拥有大量精良游戏",
       "emulators": [
         {
           "id": "atari800_android",
@@ -2247,7 +2367,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "Atari800的安卓移植版，金标准核心，支持400/800/600XL/800XL/130XE及5200。开源GPL",
-          "downloadUrl": "https://atari800.github.io/Atari800forAndroid.html"
+          "downloadUrl": "https://atari800.github.io/Atari800forAndroid.html",
+          "iconPath": "assets/emulators/atari800_android.png"
         },
         {
           "id": "xemu65",
@@ -2261,7 +2382,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于Atari800的安卓前端，零配置+TOSEC自动识别、触屏优化。已上架Google Play",
-          "downloadUrl": "https://github.com/gitGalu/XEmu65/releases"
+          "downloadUrl": "https://github.com/gitGalu/XEmu65/releases",
+          "iconPath": "assets/emulators/xemu65.png"
         }
       ]
     },
@@ -2272,7 +2394,7 @@
       "year": 1985,
       "icon": "💻",
       "imagePath": "assets/consoles/atari_st.jpg",
-      "description": "雅达利ST系列16位电脑，摩托罗拉68000处理器，MIDI音乐先驱",
+      "description": "雅达利ST系列，1985年发售的16位电脑，搭载Motorola 68000处理器。内置MIDI接口使其成为音乐制作领域的先驱，广泛应用于电子音乐创作。以GEM图形界面著称，与Amiga竞争激烈",
       "emulators": [
         {
           "id": "hataroid",
@@ -2286,7 +2408,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "基于Hatari的Atari ST安卓模拟器，已上架Google Play。需TOS ROM。支持STF/STE/Falcon等型号",
-          "downloadUrl": "https://hataroid.andro.io/"
+          "downloadUrl": "https://hataroid.andro.io/",
+          "iconPath": "assets/emulators/hataroid.png"
         },
         {
           "id": "hatariB_core",
@@ -2300,7 +2423,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Hatari的Libretro核心移植，支持Android 32/64位。v0.3(2024-04)。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/bbbradsmith/hatariB/releases"
+          "downloadUrl": "https://github.com/bbbradsmith/hatariB/releases",
+          "iconPath": "assets/emulators/hatariB_core.png"
         }
       ]
     },
@@ -2311,7 +2435,7 @@
       "year": 1982,
       "icon": "🕹️",
       "imagePath": "assets/consoles/atari_5200.jpg",
-      "description": "雅达利5200，第二世代家用主机，与Atari 8-bit电脑共用硬件",
+      "description": "雅达利5200，1982年发售的第二世代家用主机，基于Atari 8-bit电脑硬件。以糟糕的模拟摇杆手柄著称，向下不兼容2600卡带（后推出适配器）。市场表现不佳，但在游戏史上作为 Atari 首款16位架构主机具有里程碑意义",
       "emulators": [
         {
           "id": "atari800_5200",
@@ -2325,7 +2449,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "Atari800核心同时支持5200，5200与8-bit硬件同源。通过RetroArch加载atari800核心可运行5200游戏",
-          "downloadUrl": "https://atari800.github.io/"
+          "downloadUrl": "https://atari800.github.io/",
+          "iconPath": "assets/emulators/atari800_5200.png"
         }
       ]
     },
@@ -2336,7 +2461,7 @@
       "year": 1986,
       "icon": "🕹️",
       "imagePath": "assets/consoles/atari_7800.jpg",
-      "description": "雅达利7800，向下兼容2600的第三代家用主机",
+      "description": "雅达利7800，1986年发售的第三代家用主机，向下兼容2600卡带。搭载6502C处理器和MARIA图形芯片，支持256色和更多精灵图。因上市时机不佳（NES已主导市场）而商业表现平淡",
       "emulators": [
         {
           "id": "prosystem_core",
@@ -2350,7 +2475,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "ProSystem是Atari 7800的标准模拟核心，GPLv2开源。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/prosystem-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/prosystem-libretro/releases",
+          "iconPath": "assets/emulators/prosystem_core.png"
         }
       ]
     },
@@ -2361,7 +2487,7 @@
       "year": 2001,
       "icon": "🎮",
       "imagePath": "assets/consoles/pokemon_mini.jpg",
-      "description": "任天堂最小的掌机，专为宝可梦迷你游戏设计",
+      "description": "宝可梦mini，2001年发售的任天堂最小掌机，专为宝可梦迷你游戏设计。搭载32位处理器，内置震动马达和红外通信功能。虽屏幕小且游戏数量有限，但拥有《宝可梦迷你大集合》等独占作品",
       "emulators": [
         {
           "id": "pokemini_core",
@@ -2375,7 +2501,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Pokémon mini模拟器PokeMini的Libretro核心。支持LCD点阵滤镜、震动模拟、多种调色板。内置FreeBIOS无需额外BIOS。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/PokeMini/releases"
+          "downloadUrl": "https://github.com/libretro/PokeMini/releases",
+          "iconPath": "assets/emulators/pokemini_core.png"
         }
       ]
     },
@@ -2386,7 +2513,7 @@
       "year": 1980,
       "icon": "⌚",
       "imagePath": "assets/consoles/game_and_watch.jpg",
-      "description": "任天堂Game & Watch系列掌机，横井军平设计的LCD掌上游戏先驱",
+      "description": "任天堂Game & Watch系列，1980-1991年间发售的LCD掌上游戏机，由横井军平设计。首创十字方向键设计，每款主机内置单一游戏。售价亲民、便携耐用，是现代掌机的鼻祖，全球销量超4300万台",
       "emulators": [
         {
           "id": "mame_gw_core",
@@ -2400,7 +2527,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Game & Watch系列。需配合artwork(背景图与LCD透明层)才能正确显示画面，支持.mgw/.zip格式",
-          "downloadUrl": "https://github.com/libretro/mame/releases"
+          "downloadUrl": "https://github.com/libretro/mame/releases",
+          "iconPath": "assets/emulators/mame_gw_core.png"
         }
       ]
     },
@@ -2411,7 +2539,7 @@
       "year": 1983,
       "icon": "🎮",
       "imagePath": "assets/consoles/sg1000.jpg",
-      "description": "世嘉首款家用游戏机，与ColecoVision/MSX共享硬件架构",
+      "description": "世嘉SG-1000，1983年发售的世嘉首款家用游戏机，搭载Z80处理器。与ColecoVision和MSX共享硬件架构，拥有《 Congo Bongo》《Girl's Garden》等作品。虽市场表现被同年发售的红白机压制，但标志着世嘉进入家用机市场",
       "emulators": [
         {
           "id": "genplus_gx_sg",
@@ -2425,7 +2553,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Genesis Plus GX核心支持SG-1000，与ColecoVision/MSX共享硬件。通过RetroArch核心下载器获取，直接支持.sg文件",
-          "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases"
+          "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases",
+          "iconPath": "assets/emulators/genplus_gx_sg.png"
         }
       ]
     },
@@ -2436,7 +2565,7 @@
       "year": 1993,
       "icon": "📚",
       "imagePath": "assets/consoles/sega_pico.jpg",
-      "description": "世嘉Pico教育互动主机，带绘画板和故事书",
+      "description": "世嘉Pico，1993年发售的教育互动主机，带绘画板和故事书。搭载与Mega Drive相似的硬件，以\"故事书+游戏\"模式面向学龄前儿童。拥有《迪士尼》《芝麻街》等教育游戏系列，全球销量超340万台",
       "emulators": [
         {
           "id": "picodrive_pico",
@@ -2450,7 +2579,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "PicoDrive核心支持Sega Pico，已测试可运行Pico游戏。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/notaz/picodrive/releases"
+          "downloadUrl": "https://github.com/notaz/picodrive/releases",
+          "iconPath": "assets/emulators/picodrive_pico.png"
         }
       ]
     },
@@ -2461,7 +2591,7 @@
       "year": 1998,
       "icon": "💾",
       "imagePath": "assets/consoles/vmu.jpg",
-      "description": "Dreamcast的可拆卸记忆卡兼微型游戏机",
+      "description": "世嘉VMU（Visual Memory Unit），Dreamcast的可拆卸记忆卡兼微型游戏机。拥有独立CPU（S-1）、48x32点阵LCD和十字方向键，可独立运行小型游戏。支持与另一台VMU联机对战，是游戏机外设史上最具创意的设计之一",
       "emulators": [
         {
           "id": "vemulator",
@@ -2475,7 +2605,8 @@
           "compatibility": "medium",
           "minAndroid": "4.0",
           "description": "Dreamcast VMU模拟器，支持.vms/.dci独立小游戏文件及Dreamcast flash dump(.bin)。免费版含5个内置小游戏，PRO版支持回写flash存档",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.mjaoune.vemulator"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.mjaoune.vemulator",
+          "iconPath": "assets/emulators/vemulator.png"
         }
       ]
     },
@@ -2486,7 +2617,7 @@
       "year": 1994,
       "icon": "🎮",
       "imagePath": "assets/consoles/pcfx.jpg",
-      "description": "NEC PC-FX，PC Engine的后继机种，专注2D与全动视频",
+      "description": "NEC PC-FX，1994年发售的PC Engine后继机种。专注2D表现和全动视频播放，搭载32位V810处理器。因3D能力薄弱而被PS和Saturn超越，但拥有《第一神拳》《_compiler》等大量精美2D游戏，是2D爱好者的收藏佳品",
       "emulators": [
         {
           "id": "beetle_pcfx_core",
@@ -2500,7 +2631,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Mednafen PC-FX的Libretro核心移植，高精度PC-FX模拟。需BIOS(pcfx.rom)。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/beetle-pcfx-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/beetle-pcfx-libretro/releases",
+          "iconPath": "assets/emulators/beetle_pcfx_core.png"
         }
       ]
     },
@@ -2511,7 +2643,7 @@
       "year": 1978,
       "icon": "🎮",
       "imagePath": "assets/consoles/odyssey2.jpg",
-      "description": "Magnavox Odyssey²，第二代家用主机，内置键盘",
+      "description": "Magnavox Odyssey²，1978年发售的第二代家用主机，内置薄膜键盘。搭载Intel 8048处理器，以内置语音合成模块（The Voice）著称。在欧洲以Philips Videopac G7000之名销售，拥有约60款游戏",
       "emulators": [
         {
           "id": "o2em_core",
@@ -2525,7 +2657,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "O2EM是Odyssey²/Videopac+的标准模拟核心，支持语音模块。LGPL/GPL开源。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/libretro-o2em/releases"
+          "downloadUrl": "https://github.com/libretro/libretro-o2em/releases",
+          "iconPath": "assets/emulators/o2em_core.png"
         }
       ]
     },
@@ -2536,7 +2669,7 @@
       "year": 1976,
       "icon": "🎮",
       "imagePath": "assets/consoles/channel_f.jpg",
-      "description": "Fairchild Channel F，首款使用卡带的家用游戏机",
+      "description": "Fairchild Channel F，1976年发售，是首款使用可更换卡带的家用游戏机。搭载Fairchild F8处理器，首创暂停功能。虽游戏数量有限（约26款），但开创了卡带式游戏机商业模式",
       "emulators": [
         {
           "id": "freechaf_core",
@@ -2550,7 +2683,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "FreeChaF是Channel F的精准模拟核心，GPL开源。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/FreeChaF/releases"
+          "downloadUrl": "https://github.com/libretro/FreeChaF/releases",
+          "iconPath": "assets/emulators/freechaf_core.png"
         }
       ]
     },
@@ -2561,7 +2695,7 @@
       "year": 1982,
       "icon": "🎮",
       "imagePath": "assets/consoles/arcadia_2001.jpg",
-      "description": "Emerson Arcadia 2001，第二代8位家用主机",
+      "description": "Emerson Arcadia 2001，1982年发售的第二代8位家用主机。搭载Signetics 2650处理器，画面表现优于Atari 2600。虽游戏数量约35款且寿命短暂，但在意大利等国以不同品牌销售过改良版本",
       "emulators": [
         {
           "id": "droidarcadia",
@@ -2575,7 +2709,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "Arcadia 2001家族安卓模拟器，支持Emerson/Bandai/Grandstand/Intervision/MPT-03等全系列及Interton VC 4000。专有软件，作者Amigan。少有的原生安卓方案",
-          "downloadUrl": "https://amigan.yatho.com/"
+          "downloadUrl": "https://amigan.yatho.com/",
+          "iconPath": "assets/emulators/droidarcadia.png"
         }
       ]
     },
@@ -2586,7 +2721,7 @@
       "year": 1992,
       "icon": "🎮",
       "imagePath": "assets/consoles/supervision.jpg",
-      "description": "Watara Supervision，低成本掌机，Game Boy的廉价替代品",
+      "description": "Watara Supervision，1992年发售的低成本掌机，搭载8位处理器。以极低价格和类似Game Boy的外观作为廉价替代品销售，游戏数量约70款。虽性能有限但以独特设计在英国市场有一定影响力",
       "emulators": [
         {
           "id": "potator_core",
@@ -2600,7 +2735,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Potator是Watara Supervision的模拟核心，支持.sv/.bin ROM。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/potator/releases"
+          "downloadUrl": "https://github.com/libretro/potator/releases",
+          "iconPath": "assets/emulators/potator_core.png"
         }
       ]
     },
@@ -2611,7 +2747,7 @@
       "year": 1977,
       "icon": "🔢",
       "imagePath": "assets/consoles/chip8.jpg",
-      "description": "CHIP-8虚拟机语言，最早的解释型虚拟机之一，用于跨平台运行简单游戏",
+      "description": "CHIP-8虚拟机语言，1970年代Joseph Weisbecker创建的解释型虚拟机。专为简化跨平台游戏开发而设计，在Cosmac VIP、Telmac 1800等早期计算机上运行。虽已有50年历史，仍是编程学习和自制游戏的入门平台",
       "emulators": [
         {
           "id": "chip8_android",
@@ -2625,7 +2761,8 @@
           "compatibility": "perfect",
           "minAndroid": "5.0",
           "description": "CHIP-8/SCHIP/XO-CHIP解释器，支持4色XO-CHIP、CPU quirks、1x-40x调速、6色主题、CRT扫描线、像素辉光效果。GitHub提供APK",
-          "downloadUrl": "https://github.com/Wynx-1/chip8-emulator-android/releases/latest/download/Chip8-Emulator-v1.0.apk"
+          "downloadUrl": "https://github.com/Wynx-1/chip8-emulator-android/releases/latest/download/Chip8-Emulator-v1.0.apk",
+          "iconPath": "assets/emulators/chip8_android.png"
         }
       ]
     },
@@ -2636,7 +2773,7 @@
       "year": 1996,
       "icon": "🥚",
       "imagePath": "assets/consoles/tamagotchi.jpg",
-      "description": "万代Tamagotchi（拓麻歌子），电子宠物养成玩具",
+      "description": "万代拓麻歌子，1996年发售的电子宠物养成玩具。三按键操作，需定时喂食、清洁和照料。以情感共鸣和养成机制引发全球热潮，销量超8200万台，开创了虚拟宠物游戏类型",
       "emulators": [
         {
           "id": "tamadroid",
@@ -2651,7 +2788,8 @@
           "minAndroid": "8.0",
           "description": "基于TamaLib via NDK的Tamagotchi P1/P2模拟器，带桌面小部件。GitHub提供APK，推荐通过Obtainium自动更新",
           "downloadUrl": "https://github.com/twelvehouse/TamaDroid/releases/latest/download/TamaDroid-0.2.1.apk",
-          "devUrl": "https://github.com/twelvehouse/TamaDroid/releases"
+          "devUrl": "https://github.com/twelvehouse/TamaDroid/releases",
+          "iconPath": "assets/emulators/tamadroid.png"
         }
       ]
     },
@@ -2662,7 +2800,7 @@
       "year": 2015,
       "icon": "🎮",
       "imagePath": "assets/consoles/arduboy.jpg",
-      "description": "Arduboy开源掌机，基于Arduino的极迷你游戏机",
+      "description": "Arduboy开源掌机，基于Arduino平台的极迷你游戏机。搭载ATmega32U4微控制器和OLED屏幕，厚度仅5mm。完全开源硬件，社区贡献了数百款自制游戏，是创客和编程教育的热门平台",
       "emulators": [
         {
           "id": "arby_emulator",
@@ -2677,7 +2815,8 @@
           "minAndroid": "5.0",
           "description": "Arduboy模拟器，支持虚拟手柄、LED模拟、变速、EEPROM备份/恢复、截屏。部分程序可能卡死，音频暂不支持",
           "downloadUrl": "https://github.com/Termimad/ArbyEmulator/releases",
-          "devUrl": "https://github.com/Termimad/ArbyEmulator/releases"
+          "devUrl": "https://github.com/Termimad/ArbyEmulator/releases",
+          "iconPath": "assets/emulators/arby_emulator.png"
         }
       ]
     },
@@ -2688,7 +2827,7 @@
       "year": 1984,
       "icon": "💻",
       "imagePath": "assets/consoles/amstrad_cpc.jpg",
-      "description": "Amstrad CPC系列，英国/欧洲流行的8位家用电脑",
+      "description": "Amstrad CPC系列，1984年发售的英国/欧洲流行8位家用电脑，搭载Z80处理器。以一体化设计（主机+显示器+键盘）和合理的价格著称，464/6128等型号在欧洲市场与Commodore 64和ZX Spectrum竞争",
       "emulators": [
         {
           "id": "andcpc",
@@ -2702,7 +2841,8 @@
           "compatibility": "medium",
           "minAndroid": "4.0",
           "description": "Amstrad CPC安卓模拟器，项目已停止维护但可用。需从归档镜像获取",
-          "downloadUrl": "https://code.google.com/archive/p/andcpc/"
+          "downloadUrl": "https://code.google.com/archive/p/andcpc/",
+          "iconPath": "assets/emulators/andcpc.png"
         },
         {
           "id": "azimuth",
@@ -2716,7 +2856,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "安卓原生Amstrad CPC模拟器，推荐使用。Google Play可下。高性能模拟，支持快进/慢放、即时存档、屏幕滤镜",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=johnidis.azimuth"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=johnidis.azimuth",
+          "iconPath": "assets/emulators/azimuth.png"
         },
         {
           "id": "droidcpc",
@@ -2730,7 +2871,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "安卓Amstrad CPC模拟器，专有软件。Google Play可下",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.kokak.droidcpc"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.kokak.droidcpc",
+          "iconPath": "assets/emulators/droidcpc.png"
         },
         {
           "id": "caprice32_cpc",
@@ -2744,7 +2886,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "CaPriCe32 Libretro核心，支持CPC与CPC+。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/libretro-cap32/releases"
+          "downloadUrl": "https://github.com/libretro/libretro-cap32/releases",
+          "iconPath": "assets/emulators/caprice32_cpc.png"
         }
       ]
     },
@@ -2755,7 +2898,7 @@
       "year": 1977,
       "icon": "💻",
       "imagePath": "assets/consoles/apple2.jpg",
-      "description": "Apple II系列，苹果开创性的8位个人电脑",
+      "description": "Apple II系列，1977年发售的苹果开创性8位个人电脑，搭载6502处理器。以开放架构和彩色图形著称，是早期个人电脑游戏的核心平台。《巫术》《创世纪》《波斯王子》等经典系列均起步于此",
       "emulators": [
         {
           "id": "vavi_appleii",
@@ -2769,7 +2912,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "跨平台Java实现的Apple II模拟器，含6502核心。可作Android库集成。安卓端独立可用方案较稀缺",
-          "downloadUrl": "https://github.com/umjammer/vavi-apps-appleii/releases"
+          "downloadUrl": "https://github.com/umjammer/vavi-apps-appleii/releases",
+          "iconPath": "assets/emulators/vavi_appleii.png"
         },
         {
           "id": "mame_apple2",
@@ -2783,7 +2927,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Apple II系列。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_apple2.png"
         }
       ]
     },
@@ -2794,7 +2939,7 @@
       "year": 2000,
       "icon": "📱",
       "imagePath": "assets/consoles/j2me.jpg",
-      "description": "Java 2 Micro Edition，功能手机时代的Java游戏与应用平台",
+      "description": "Java 2 Micro Edition (J2ME)，功能手机时代的Java游戏与应用平台。在2000-2010年代广泛用于Nokia、Sony Ericsson等手机，诞生了大量手机游戏。支持3D图形(Mascot Capsule)、蓝牙联机，是智能手机游戏的前身",
       "emulators": [
         {
           "id": "j2me_loader",
@@ -2809,7 +2954,8 @@
           "minAndroid": "5.0",
           "description": "安卓原生J2ME模拟器，Apache 2.0开源。支持2D/3D（含Mascot Capsule 3D）J2ME游戏。离线转换.jar文件，硬件加速，正确帧率与震动。支持各种厂商API（Nokia/Samsung/SonyEricsson/Motorola等）。Dalvik动态重编译VM",
           "downloadUrl": "https://github.com/nikita36078/J2ME-Loader/releases/latest/download/J2ME_Loader-1.8.2-open-release.apk",
-          "devUrl": "https://github.com/nikita36078/J2ME-Loader/releases"
+          "devUrl": "https://github.com/nikita36078/J2ME-Loader/releases",
+          "iconPath": "assets/emulators/j2me_loader.png"
         },
         {
           "id": "jl_mod",
@@ -2824,7 +2970,8 @@
           "minAndroid": "5.0",
           "description": "J2ME Loader的活跃分支，更新更频繁。新增SoundFont音源支持、SoftBank API实现。同样支持Mascot Capsule 3D与Dalvik动态重编译",
           "downloadUrl": "https://github.com/woesss/JL-Mod/releases/latest/download/JL-Mod_0.87.1-arm64-v8a.apk",
-          "devUrl": "https://github.com/woesss/JL-Mod/releases"
+          "devUrl": "https://github.com/woesss/JL-Mod/releases",
+          "iconPath": "assets/emulators/jl_mod.png"
         },
         {
           "id": "manic_emu",
@@ -2838,7 +2985,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "新一代J2ME模拟器，AGPLv3开源。活跃开发中，是J2ME Loader的替代选择",
-          "downloadUrl": "https://github.com/Manic-EMU/ManicEMU/releases"
+          "downloadUrl": "https://github.com/Manic-EMU/ManicEMU/releases",
+          "iconPath": "assets/emulators/manic_emu.png"
         }
       ]
     },
@@ -2849,7 +2997,7 @@
       "year": 1996,
       "icon": "🌐",
       "imagePath": "assets/consoles/flash.jpg",
-      "description": "Adobe Flash平台，曾经网页游戏与动画的黄金标准",
+      "description": "Adobe Flash平台，1996-2020年间网页游戏与动画的黄金标准。基于矢量图形和ActionScript，催生了《机械迷城》《城堡守卫战》等无数经典网页游戏。Ruffle项目致力于在现代浏览器中重现Flash游戏体验",
       "emulators": [
         {
           "id": "ruffle_android",
@@ -2863,7 +3011,8 @@
           "compatibility": "medium",
           "minAndroid": "7.0",
           "description": "基于Rust的Flash播放器安卓移植版，MIT/Apache 2.0双开源。可运行大量早期Flash游戏，当前重点开发AVM2文件支持。桌面/HTML5/Android多平台",
-          "downloadUrl": "https://github.com/ruffle-rs/ruffle-android/releases/latest/download/app-arm64-v8a-release.apk"
+          "downloadUrl": "https://github.com/ruffle-rs/ruffle-android/releases/latest/download/app-arm64-v8a-release.apk",
+          "iconPath": "assets/emulators/ruffle_android.png"
         },
         {
           "id": "reflash",
@@ -2877,7 +3026,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "专有安卓Flash播放器，支持.swf文件。Google Play可下",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.kyun.flashgame"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.kyun.flashgame",
+          "iconPath": "assets/emulators/reflash.png"
         }
       ]
     },
@@ -2888,7 +3038,7 @@
       "year": 1981,
       "icon": "🖥️",
       "imagePath": "assets/consoles/pc8801.jpg",
-      "description": "NEC PC-8800系列，日本8位个人电脑，大量日式RPG与文字冒险游戏的平台",
+      "description": "NEC PC-8800系列，1981年发售的日本8位个人电脑，搭载Z80A处理器。以出色的显示能力著称，是日本80年代PC游戏的主力平台。《光辉传说》《伊苏》《银河女警花》等大量日式RPG和动作游戏诞生于此",
       "emulators": [
         {
           "id": "quasi88",
@@ -2902,7 +3052,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "PC-88模拟器，有安卓APK构建(130609)与Libretro核心。BSD-3-Clause开源。支持RetroAchievements。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/quasi88-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/quasi88-libretro/releases",
+          "iconPath": "assets/emulators/quasi88.png"
         },
         {
           "id": "xm8",
@@ -2916,7 +3067,8 @@
           "compatibility": "medium",
           "minAndroid": "4.0",
           "description": "PC-88模拟器安卓移植版(v1.70)，跨平台支持。项目已停止维护但可用",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=net.pi/apps.XM8"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=net.pi/apps.XM8",
+          "iconPath": "assets/emulators/xm8.png"
         },
         {
           "id": "mame_pc88",
@@ -2930,7 +3082,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟PC-8801MA/MH/mkIISR。MAME 0.251+可玩但不完整。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_pc88.png"
         }
       ]
     },
@@ -2941,7 +3094,7 @@
       "year": 1982,
       "icon": "🖥️",
       "imagePath": "assets/consoles/pc9800.jpg",
-      "description": "NEC PC-9800系列，日本16位个人电脑，日式PC游戏的黄金平台",
+      "description": "NEC PC-9800系列，1982年发售的日本16位个人电脑，搭载Intel 8086/V30处理器。拥有超高分辨率和丰富色彩，是日本90年代PC游戏的黄金平台。《东方Project》《 Leaf》《Key》等品牌游戏均以此平台为核心",
       "emulators": [
         {
           "id": "np2kai",
@@ -2956,7 +3109,8 @@
           "minAndroid": "5.0",
           "description": "最佳PC-98模拟器Neko Project II的kai分支，Libretro核心。高精度模拟，支持Android。兼容性优秀",
           "downloadUrl": "https://github.com/AZO234/NP2kai/releases",
-          "devUrl": "https://github.com/AZO234/NP2kai/releases"
+          "devUrl": "https://github.com/AZO234/NP2kai/releases",
+          "iconPath": "assets/emulators/np2kai.png"
         },
         {
           "id": "mame_pc98",
@@ -2970,7 +3124,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟PC-9801RS/PC-9821。MAME 0.282+可玩但不完整，精度低。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_pc98.png"
         },
         {
           "id": "j98",
@@ -2984,7 +3139,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "安卓原生PC-98模拟器(J98-b)，专有软件。低精度但可用",
-          "downloadUrl": "http://akiyuki.boy.jp/android"
+          "downloadUrl": "http://akiyuki.boy.jp/android",
+          "iconPath": "assets/emulators/j98.png"
         }
       ]
     },
@@ -2995,7 +3151,7 @@
       "year": 1981,
       "icon": "💻",
       "imagePath": "assets/consoles/vic20.jpg",
-      "description": "Commodore VIC-20，首款销量超百万的个人电脑",
+      "description": "Commodore VIC-20，1981年发售的首款销量超百万的个人电脑，搭载6502处理器。售价仅299美元，以家用电视为显示器。虽仅5KB内存，但拥有大量卡带游戏，是入门级家用电脑的里程碑",
       "emulators": [
         {
           "id": "vice_vic20",
@@ -3009,7 +3165,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持VIC-20。GPLv2开源，高精度模拟。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/vice-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
+          "iconPath": "assets/emulators/vice_vic20.png"
         },
         {
           "id": "eightbitwonders_vic",
@@ -3023,7 +3180,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持VIC-20/C64/PET/C128/Plus/4。AGPL开源，支持硬件手柄、虚拟摇杆、存档/回溯、内置游戏。F-Droid/Play/Amazon可下",
-          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases"
+          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
+          "iconPath": "assets/emulators/eightbitwonders_vic.png"
         }
       ]
     },
@@ -3034,7 +3192,7 @@
       "year": 1985,
       "icon": "💻",
       "imagePath": "assets/consoles/c128.jpg",
-      "description": "Commodore 128，C64的增强版，向下兼容且支持CP/M模式",
+      "description": "Commodore 128，1985年发售的C64增强版，搭载双处理器（8502+Z80）。向下兼容C64游戏，支持80列文本显示和CP/M模式。虽仅生产3年，但以三模式操作（C64/C128/CP/M）展现了多用途设计理念",
       "emulators": [
         {
           "id": "vice_c128",
@@ -3048,7 +3206,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持C128。极高精度模拟。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/vice-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
+          "iconPath": "assets/emulators/vice_c128.png"
         },
         {
           "id": "eightbitwonders_c128",
@@ -3062,7 +3221,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持C128。AGPL开源，F-Droid/Play/Amazon可下",
-          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases"
+          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
+          "iconPath": "assets/emulators/eightbitwonders_c128.png"
         }
       ]
     },
@@ -3073,7 +3233,7 @@
       "year": 1981,
       "icon": "🖥️",
       "imagePath": "assets/consoles/zx81.jpg",
-      "description": "Sinclair ZX81，ZX80的后继机型，英国入门级家用电脑",
+      "description": "Sinclair ZX81，1981年发售的ZX80后继机型，英国入门级家用电脑。售价仅49.95英镑（组装版），搭载Z80处理器和1KB内存。以极低成本将编程带入英国千家万户，催生了早期的英国游戏开发社区",
       "emulators": [
         {
           "id": "zesarux",
@@ -3088,7 +3248,8 @@
           "minAndroid": "5.0",
           "description": "多Sinclair模拟器(ZX80/ZX81/ZX Spectrum)，GPL开源。高精度时序模拟，支持多种外围设备。v13.0-Beta2",
           "downloadUrl": "https://github.com/chernandezba/zesarux/releases",
-          "devUrl": "https://github.com/chernandezba/zesarux/releases"
+          "devUrl": "https://github.com/chernandezba/zesarux/releases",
+          "iconPath": "assets/emulators/zesarux.png"
         },
         {
           "id": "sz81",
@@ -3102,7 +3263,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "基于xz80与z81的ZX81模拟器，有移动/ARM版本。GPLv2开源",
-          "downloadUrl": "https://sourceforge.net/projects/sz81/files/latest/download"
+          "downloadUrl": "https://sourceforge.net/projects/sz81/files/latest/download",
+          "iconPath": "assets/emulators/sz81.png"
         },
         {
           "id": "mame_zx81",
@@ -3116,7 +3278,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Sinclair ZX81。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_zx81.png"
         }
       ]
     },
@@ -3127,7 +3290,7 @@
       "year": 1981,
       "icon": "🖥️",
       "imagePath": "assets/consoles/sharp_x1.jpg",
-      "description": "夏普X1系列，日本8位个人电脑，以出色的图形与声音能力著称",
+      "description": "夏普X1系列，1983年发售的日本8位个人电脑，搭载Z80A处理器。以出色的图形与声音能力著称，可重叠显示电视画面和电脑图形。拥有大量街机移植游戏，是日本8位时代的高性能选择",
       "emulators": [
         {
           "id": "x1_libretro",
@@ -3141,7 +3304,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Sharp X1模拟器X Millennium的Libretro核心移植，支持X1与X1 Turbo。BSD-3-Clause开源。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/xmil-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/xmil-libretro/releases",
+          "iconPath": "assets/emulators/x1_libretro.png"
         },
         {
           "id": "mame_x1",
@@ -3155,7 +3319,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Sharp X1 Turbo。X1 Turbo Z与X1 Twin暂不支持。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_x1.png"
         }
       ]
     },
@@ -3166,7 +3331,7 @@
       "year": 1981,
       "icon": "💻",
       "imagePath": "assets/consoles/bbc_micro.jpg",
-      "description": "Acorn BBC Micro，英国教育用个人电脑，ARM架构的前身",
+      "description": "Acorn BBC Micro，1981年发售的英国教育用个人电脑，搭载6502处理器。由BBC Computer Literacy Project支持，广泛用于英国学校。是ARM处理器架构的前身，对英国计算机教育影响深远",
       "emulators": [
         {
           "id": "beebdroid",
@@ -3180,7 +3345,8 @@
           "compatibility": "high",
           "minAndroid": "4.0",
           "description": "基于B-em的安卓BBC Micro模拟器，支持Model A/B/B+/M128/MC/Master Turbo/M512。Google Play可下",
-          "downloadUrl": "https://github.com/littlefluffytoys/Beebdroid/releases"
+          "downloadUrl": "https://github.com/littlefluffytoys/Beebdroid/releases",
+          "iconPath": "assets/emulators/beebdroid.png"
         },
         {
           "id": "mame_bbc",
@@ -3194,7 +3360,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟BBC Micro与Acorn Electron。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_bbc.png"
         }
       ]
     },
@@ -3205,7 +3372,7 @@
       "year": 1977,
       "icon": "💻",
       "imagePath": "assets/consoles/trs80.jpg",
-      "description": "Tandy/Radio Shack TRS-80，早期三大个人电脑之一（与Apple II、PET并列）",
+      "description": "Tandy/Radio Shack TRS-80，1977年发售的早期三大个人电脑之一（与Apple II、PET并列）。搭载Z80处理器，以全集成设计和亲民价格打入消费市场。Model I/III/4系列广泛用于家庭和小型企业",
       "emulators": [
         {
           "id": "puder_trs80",
@@ -3219,7 +3386,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "开源TRS-80 Model I/III安卓模拟器，Apache 2.0开源。支持文本模式、磁带、软盘、音频播放。灵活键盘配置、外接键盘检测、倾斜光标控制、游戏手柄支持、Chromecast投屏、应用内游戏下载",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=org.puder.trs80"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=org.puder.trs80",
+          "iconPath": "assets/emulators/puder_trs80.png"
         }
       ]
     },
@@ -3230,7 +3398,7 @@
       "year": 1999,
       "icon": "🎮",
       "imagePath": "assets/consoles/pocketstation.jpg",
-      "description": "索尼PocketStation，PS1的存储卡兼微型游戏机",
+      "description": "索尼PocketStation，1999年发售的PS1存储卡兼微型游戏机。拥有32位处理器、32x32点阵LCD、十字键和红外通信。可与《最终幻想VIII》《山脊赛车4》等PS1游戏联动解锁迷你游戏和隐藏内容",
       "emulators": [
         {
           "id": "pk201",
@@ -3244,7 +3412,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "安卓PocketStation模拟器，支持通过XEBRA与PlayStation连接。Google Play可下",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.dokutajigokusai.pk201"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.dokutajigokusai.pk201",
+          "iconPath": "assets/emulators/pk201.png"
         },
         {
           "id": "mame_pockstat",
@@ -3258,7 +3427,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟PocketStation。部分游戏可运行，但存在硬件问题导致部分崩溃。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_pockstat.png"
         }
       ]
     },
@@ -3269,7 +3439,7 @@
       "year": 1991,
       "icon": "💿",
       "imagePath": "assets/consoles/cdi.jpg",
-      "description": "飞利浦CD-i，基于CD-ROM的交互式多媒体平台，以任天堂授权游戏闻名",
+      "description": "飞利浦CD-i，1991年发售的基于CD-ROM的交互式多媒体平台。以任天堂授权的《塞尔达传说》《马里奥》CD-i游戏而闻名（虽评价不佳），但也拥有教育软件和互动电影内容。是早期多媒体光盘游戏的探索者",
       "emulators": [
         {
           "id": "same_cdi",
@@ -3283,7 +3453,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Single Arcade Machine Emulator for CD-i，从MAME fork而来，仅含CD-i驱动。简化光盘加载，即插即用。GPLv2开源。支持滤镜、HDR、着色器链。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://docs.libretro.com/library/same_cdi/"
+          "downloadUrl": "https://docs.libretro.com/library/same_cdi/",
+          "iconPath": "assets/emulators/same_cdi.png"
         },
         {
           "id": "mame_cdi",
@@ -3297,7 +3468,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟CD-i。目前无DVC(数字视频卡)模拟，需DVC的游戏无法运行。从光盘启动游戏推荐。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_cdi.png"
         }
       ]
     },
@@ -3308,7 +3480,7 @@
       "year": 2004,
       "icon": "🎮",
       "imagePath": "assets/consoles/vsmile.jpg",
-      "description": "VTech V.Smile，面向儿童的教育型卡带游戏机",
+      "description": "VTech V.Smile，2005年发售的面向3-7岁儿童的教育型卡带游戏机。以学习为导向，结合动画角色（如迪士尼、海绵宝宝）设计教育游戏。支持V.Smile Motion体感手柄，是教育游戏机的代表产品",
       "emulators": [
         {
           "id": "mame_vsmile",
@@ -3322,7 +3494,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟V.Smile。模拟尚不完整，部分游戏ROM集不兼容。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_vsmile.png"
         }
       ]
     },
@@ -3333,7 +3506,7 @@
       "year": 2001,
       "icon": "🎮",
       "imagePath": "assets/consoles/scummvm.jpg",
-      "description": "ScummVM，点选式冒险游戏引擎重制项目，支持280+经典冒险游戏与RPG",
+      "description": "ScummVM（Smart Utility Under Mini-Mouse Virtual Machine），点选式冒险游戏引擎重制项目。支持LucasArts SCUMM引擎和280+经典冒险游戏与RPG，包括《猴岛小英雄》《神秘岛》《断剑》系列。跨平台运行，是保存游戏遗产的重要项目",
       "emulators": [
         {
           "id": "scummvm_android",
@@ -3349,7 +3522,8 @@
           "description": "开源冒险游戏引擎重制项目，GPLv2开源，支持280+游戏(含1800+文字冒险)。已合并ResidualVM。支持ARM/ARM64。功能：翻译、粉丝游戏、图形滤镜、MT-32模拟、云存档同步、Discord Rich Presence。官方网站下载APK",
           "downloadUrl": "https://www.scummvm.org/downloads/",
           "devUrl": "https://www.scummvm.org/downloads/",
-          "nightlyUrl": "https://buildbot.scummvm.org/"
+          "nightlyUrl": "https://buildbot.scummvm.org/",
+          "iconPath": "assets/emulators/scummvm_android.png"
         }
       ]
     },
@@ -3360,7 +3534,7 @@
       "year": 2004,
       "icon": "🎮",
       "imagePath": "assets/consoles/openbor.jpg",
-      "description": "OpenBOR，开源横版清版动作游戏引擎，基于Beats of Rage，数百个粉丝自制游戏",
+      "description": "OpenBOR（Open Beats of Rage），开源横版清版动作游戏引擎。基于世嘉《怒之铁拳》的逆向工程开发，社区贡献了数百款高质量粉丝自制横版游戏。支持自定义角色、关卡、战斗系统，是最大的横版动作游戏创作平台",
       "emulators": [
         {
           "id": "openbor_android",
@@ -3375,7 +3549,8 @@
           "minAndroid": "5.0",
           "description": "开源横版动作游戏引擎，BSD-3-Clause开源。专为清版动作游戏优化(双截龙、怒之铁拳风格)，也可适配任何游戏风格。数百个粉丝自制游戏可用。支持Android/Wii/PSP/Dreamcast",
           "downloadUrl": "https://github.com/DCurrent/openbor/releases/latest/download/OpenBOR-Android.v4.0.Build.7533.apk",
-          "devUrl": "https://github.com/DCurrent/openbor/releases"
+          "devUrl": "https://github.com/DCurrent/openbor/releases",
+          "iconPath": "assets/emulators/openbor_android.png"
         }
       ]
     },
@@ -3386,7 +3561,7 @@
       "year": 2000,
       "icon": "🎮",
       "imagePath": "assets/consoles/rpgmaker.jpg",
-      "description": "RPG Maker游戏引擎，EasyRPG Player可运行RPG Maker 2000/2003制作的游戏",
+      "description": "RPG Maker游戏引擎，由ASCII/Enterbrain开发。EasyRPG Player可运行RPG Maker 2000/2003制作的游戏，包括《青鬼》《Ib》《梦日记》等经典独立RPG。是日本独立游戏开发的起点，催生了大量同人创作",
       "emulators": [
         {
           "id": "easyrpg",
@@ -3402,7 +3577,8 @@
           "description": "RPG Maker 2000/2003游戏的开源解释器，GPLv3开源。跨平台(Linux/macOS/Windows/Android/Web)。不支持XP/VX/Ace/MV/MZ。高分辨率渲染、Bug修复。提供APK+Chrome扩展+Libretro核心",
           "downloadUrl": "https://easyrpg.org/player/downloads/",
           "devUrl": "https://easyrpg.org/player/downloads/",
-          "nightlyUrl": "https://easyrpg.org/player/downloads/"
+          "nightlyUrl": "https://easyrpg.org/player/downloads/",
+          "iconPath": "assets/emulators/easyrpg.png"
         }
       ]
     },
@@ -3413,7 +3589,7 @@
       "year": 1996,
       "icon": "📱",
       "imagePath": "assets/consoles/palmos.jpg",
-      "description": "Palm OS，PDA时代的移动操作系统，大量掌上游戏与应用",
+      "description": "Palm OS，1996年发行的PDA操作系统。占据掌上设备市场主导地位约10年，拥有大量掌上游戏与应用。以简洁的手写输入和低功耗著称，是智能手机时代的前身",
       "emulators": [
         {
           "id": "phem",
@@ -3428,7 +3604,8 @@
           "minAndroid": "5.0",
           "description": "安卓原生Palm OS模拟器，GPLv2开源。可直接运行Palm OS应用与游戏",
           "downloadUrl": "https://github.com/Florin9doi/PHEM/releases/latest/download/app-arm-release.apk",
-          "devUrl": "https://github.com/Florin9doi/PHEM/releases"
+          "devUrl": "https://github.com/Florin9doi/PHEM/releases",
+          "iconPath": "assets/emulators/phem.png"
         },
         {
           "id": "mu_core",
@@ -3442,7 +3619,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Palm OS的Libretro核心，支持Graffiti手写识别与触摸屏模拟。推荐核心。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/Mu/releases"
+          "downloadUrl": "https://github.com/libretro/Mu/releases",
+          "iconPath": "assets/emulators/mu_core.png"
         }
       ]
     },
@@ -3453,7 +3631,7 @@
       "year": 1982,
       "icon": "🖥️",
       "imagePath": "assets/consoles/fm7.jpg",
-      "description": "富士通FM-7系列，日本8位个人电脑，与PC-8801竞争的主流平台",
+      "description": "富士通FM-7系列，1982年发售的日本8位个人电脑，搭载6809处理器。以高速浮点运算能力著称，与PC-8801竞争日本市场。拥有《银河英雄传说》《梦幻骑士》等精良游戏，是日本8位时代的主流平台之一",
       "emulators": [
         {
           "id": "mame_fm7",
@@ -3467,7 +3645,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟FM-7。Android上最主要的FM-7模拟方案。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_fm7.png"
         }
       ]
     },
@@ -3478,7 +3657,7 @@
       "year": 1977,
       "icon": "💻",
       "imagePath": "assets/consoles/pet.jpg",
-      "description": "Commodore PET，早期三大个人电脑之一(与Apple II、TRS-80并列)",
+      "description": "Commodore PET，1977年发售的早期三大个人电脑之一（与Apple II、TRS-80并列）。搭载6502处理器，以一体化金属外壳设计和内置磁带存储器著称。是教育市场的主流选择，开创了个人电脑普及时代",
       "emulators": [
         {
           "id": "vice_pet",
@@ -3492,7 +3671,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持PET全型号。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/vice-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
+          "iconPath": "assets/emulators/vice_pet.png"
         },
         {
           "id": "eightbitwonders_pet",
@@ -3506,7 +3686,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持PET。AGPL开源，F-Droid/Play/Amazon可下",
-          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases"
+          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
+          "iconPath": "assets/emulators/eightbitwonders_pet.png"
         }
       ]
     },
@@ -3517,7 +3698,7 @@
       "year": 1984,
       "icon": "💻",
       "imagePath": "assets/consoles/plus4.jpg",
-      "description": "Commodore Plus/4，C64的后续机型，内置4款办公软件",
+      "description": "Commodore Plus/4，1984年发售的C64后续机型，内置4款办公软件（文字处理、电子表格、数据库、图形）。搭载7501处理器和TED图形芯片，虽256色但精灵图能力不如C64。因定位模糊而市场表现不佳",
       "emulators": [
         {
           "id": "vice_plus4",
@@ -3531,7 +3712,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持Plus/4与C16。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/vice-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
+          "iconPath": "assets/emulators/vice_plus4.png"
         },
         {
           "id": "eightbitwonders_plus4",
@@ -3545,7 +3727,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持Plus/4与C16。AGPL开源，F-Droid/Play/Amazon可下",
-          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases"
+          "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
+          "iconPath": "assets/emulators/eightbitwonders_plus4.png"
         }
       ]
     },
@@ -3556,7 +3739,7 @@
       "year": 1985,
       "icon": "💻",
       "imagePath": "assets/consoles/bk0010.jpg",
-      "description": "苏联16位PDP-11兼容家用电脑系列",
+      "description": "Electronika BK-0010，苏联1985年发售的16位PDP-11兼容家用电脑系列。搭载K1801VM1处理器，是苏联家用计算机的代表作。虽硬件有限但催生了大量苏联自制游戏和软件，是苏联计算机文化的独特遗产",
       "emulators": [
         {
           "id": "bkemu",
@@ -3571,7 +3754,8 @@
           "minAndroid": "4.0",
           "description": "安卓原生Electronika BK-0010/11M模拟器，模拟16位PDP-11兼容苏联家用电脑。支持BK-0010-01等型号",
           "downloadUrl": "https://github.com/3cky/bkemu-android/releases/latest/download/bkemu-android-1.2.2.apk",
-          "devUrl": "https://github.com/3cky/bkemu-android/releases"
+          "devUrl": "https://github.com/3cky/bkemu-android/releases",
+          "iconPath": "assets/emulators/bkemu.png"
         }
       ]
     },
@@ -3582,7 +3766,7 @@
       "year": 1980,
       "icon": "💻",
       "imagePath": "assets/consoles/coco.jpg",
-      "description": "Tandy Color Computer与Dragon 32/64，基于6809 CPU的个人电脑系列",
+      "description": "Tandy Color Computer (CoCo)与Dragon 32/64，基于Motorola 6809 CPU的个人电脑系列。CoCo系列（1980-1991）以低成本和Radio Shack销售渠道著称，Dragon 32/64为其英国授权版本。拥有活跃的社区和大量自制软件",
       "emulators": [
         {
           "id": "mame_coco",
@@ -3596,7 +3780,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟TRS-80 CoCo 1/2/3与Dragon 32/64。Android上最可靠的CoCo模拟方案。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_coco.png"
         }
       ]
     },
@@ -3607,7 +3792,7 @@
       "year": 1995,
       "icon": "🎮",
       "imagePath": "assets/consoles/super_acan.jpg",
-      "description": "Super A'Can，台湾独家第四世代家用主机，Motorola 68000处理器",
+      "description": "Super A'Can，1995年台湾发售的第四世代独家家用主机。搭载Motorola 68000处理器，是台湾唯一自主研发的16位游戏机。虽仅有约12款游戏且市场表现不佳，但代表了台湾游戏硬件产业的独特尝试",
       "emulators": [
         {
           "id": "mame_acan",
@@ -3621,7 +3806,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Super A'Can。首个也是唯一已知的Super A'Can模拟器，驱动处于初步阶段，部分游戏可运行，声音为初步支持。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_acan.png"
         }
       ]
     },
@@ -3632,7 +3818,7 @@
       "year": 1986,
       "icon": "💻",
       "imagePath": "assets/consoles/apple_iigs.jpg",
-      "description": "Apple IIGS，Apple II系列的16位增强型，WGS图形与Ensoniq音源",
+      "description": "Apple IIGS，1986年发售的Apple II系列16位增强型。搭载WDC 65C816处理器，支持640x200分辨率和4096色。内置Ensoniq音源芯片，向下兼容Apple II软件。是Apple II系列最后的旗舰型号",
       "emulators": [
         {
           "id": "kegs_android",
@@ -3647,7 +3833,8 @@
           "minAndroid": "5.0",
           "description": "KEGS Apple IIGS模拟器的社区安卓移植版，GPLv2开源。Google Play可下。支持IIGS ROM 01/03与全功能模拟",
           "downloadUrl": "https://github.com/jamessanford/kegs/releases",
-          "devUrl": "https://github.com/jamessanford/kegs/releases"
+          "devUrl": "https://github.com/jamessanford/kegs/releases",
+          "iconPath": "assets/emulators/kegs_android.png"
         },
         {
           "id": "mame_iigs",
@@ -3661,7 +3848,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Apple IIGS。模拟不完整，不推荐。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_iigs.png"
         }
       ]
     },
@@ -3672,7 +3860,7 @@
       "year": 1984,
       "icon": "💻",
       "imagePath": "assets/consoles/mac_68k.jpg",
-      "description": "经典Macintosh系列，摩托罗拉68000处理器的Mac OS电脑",
+      "description": "经典Macintosh系列，搭载摩托罗拉68000处理器的Mac OS电脑（1984-1996）。以图形用户界面和WYSIWYG排版著称。拥有独特的Mac游戏生态，包括《迷宫魔兽》《波斯王子》《神秘岛》等经典作品",
       "emulators": [
         {
           "id": "minivmac",
@@ -3686,7 +3874,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Macintosh 68k系列模拟器，GPLv2开源。支持Mac Plus/SE/II等型号。有安卓移植版与Libretro核心。官方网站下载各平台版本",
-          "downloadUrl": "https://www.gryphel.com/c/minivmac/ports.html"
+          "downloadUrl": "https://www.gryphel.com/c/minivmac/ports.html",
+          "iconPath": "assets/emulators/minivmac.png"
         },
         {
           "id": "minivmac_core",
@@ -3700,7 +3889,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Mini vMac的Libretro核心移植，通过RetroArch核心下载器获取。支持Mac Plus模拟",
-          "downloadUrl": "https://docs.libretro.com/library/minivmac/"
+          "downloadUrl": "https://docs.libretro.com/library/minivmac/",
+          "iconPath": "assets/emulators/minivmac_core.png"
         }
       ]
     },
@@ -3711,7 +3901,7 @@
       "year": 1989,
       "icon": "🖥️",
       "imagePath": "assets/consoles/fm_towns.jpg",
-      "description": "富士通FM Towns，日本32位多媒体个人电脑，大量街机级移植游戏与CD-ROM游戏",
+      "description": "富士通FM Towns，1989年发售的日本32位多媒体个人电脑。搭载Intel 80386和定制图形芯片，内置CD-ROM驱动器。以大量街机级移植游戏和精美CD音轨著称，是日本多媒体游戏的先驱平台",
       "emulators": [
         {
           "id": "mame_towns",
@@ -3725,7 +3915,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟FM Towns。MAME驱动处于初步阶段，质量不佳。推荐桌面端使用Tsugaru。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_towns.png"
         }
       ]
     },
@@ -3736,7 +3927,7 @@
       "year": 1981,
       "icon": "🎮",
       "imagePath": "assets/consoles/creativision.jpg",
-      "description": "VTech CreatiVision，融合家用电脑与游戏机的混合主机，6502 CPU",
+      "description": "VTech CreatiVision，1981年发售的融合家用电脑与游戏机的混合主机。搭载6502处理器，可通过键盘扩展变为个人电脑。在欧洲和澳洲以不同品牌销售，是早期家用电脑/游戏机混合形态的代表",
       "emulators": [
         {
           "id": "jollycv",
@@ -3750,7 +3941,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "CreatiVision专用Libretro核心，BSD-3-Clause开源。100%兼容性报告。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://gitlab.com/jgemu/jollycv/-/releases"
+          "downloadUrl": "https://gitlab.com/jgemu/jollycv/-/releases",
+          "iconPath": "assets/emulators/jollycv.png"
         },
         {
           "id": "mame_creative",
@@ -3764,7 +3956,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟CreatiVision。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_creative.png"
         }
       ]
     },
@@ -3775,7 +3968,7 @@
       "year": 1988,
       "icon": "🎮",
       "imagePath": "assets/consoles/socrates.jpg",
-      "description": "VTech Socrates，VTech首款教育型家用主机，Z80处理器",
+      "description": "VTech Socrates，1988年发售的VTech首款教育型家用主机，搭载Z80处理器。以学习软件和教育游戏为主，内置数学、拼写等练习内容。支持无线手柄，是教育游戏机领域的早期探索者",
       "emulators": [
         {
           "id": "mame_socrates",
@@ -3789,7 +3982,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟VTech Socrates。模拟处于非常早期阶段。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_socrates.png"
         }
       ]
     },
@@ -3800,7 +3994,7 @@
       "year": 1978,
       "icon": "🎮",
       "imagePath": "assets/consoles/astrocade.jpg",
-      "description": "Bally Astrocade，第二代家用主机，强大的图形与音频能力",
+      "description": "Bally Astrocade，1978年发售的第二代家用主机。搭载Z80处理器，以强大的图形（4色160x102）和音频能力著称。内置BASIC编程功能，是早期最具技术特色的家用主机之一",
       "emulators": [
         {
           "id": "mame_astro",
@@ -3814,7 +4008,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Bally Astrocade。MAME是唯一模拟器，完全模拟。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_astro.png"
         }
       ]
     },
@@ -3825,7 +4020,7 @@
       "year": 1978,
       "icon": "🎮",
       "imagePath": "assets/consoles/apf_mp1000.jpg",
-      "description": "APF Electronics MP1000，第二代家用主机，内置BASIC键盘扩展",
+      "description": "APF Electronics MP1000，1978年发售的第二代家用主机。内置BASIC键盘扩展，是早期可编程的家用游戏机。游戏数量少（约15款），但以可扩展性展现了早期游戏机的设计思路",
       "emulators": [
         {
           "id": "mame_apf",
@@ -3839,7 +4034,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟APF MP1000。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_apf.png"
         }
       ]
     },
@@ -3850,7 +4046,7 @@
       "year": 1983,
       "icon": "🎮",
       "imagePath": "assets/consoles/pv1000.jpg",
-      "description": "卡西欧PV-1000，日本第三代家用主机，仅在日本发售",
+      "description": "卡西欧PV-1000，1983年日本发售的第三代家用主机。搭载Z80处理器，仅在日本发售且寿命短暂。虽仅有约15款游戏，但其独特的三色图形显示和精良的街机移植作品在收藏圈有一定影响力",
       "emulators": [
         {
           "id": "mame_pv1000",
@@ -3864,7 +4060,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Casio PV-1000。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_pv1000.png"
         }
       ]
     },
@@ -3875,7 +4072,7 @@
       "year": 1995,
       "icon": "🎮",
       "imagePath": "assets/consoles/casio_loopy.jpg",
-      "description": "卡西欧Loopy，专为女性玩家设计的32位家用主机，内置贴纸打印机",
+      "description": "卡西欧Loopy，1995年发售的专为女性玩家设计的32位家用主机。内置贴纸打印机可将游戏画面打印为贴纸，搭载32位处理器。虽仅有约10款游戏且市场表现不佳，但其独特的目标定位在游戏史上独树一帜",
       "emulators": [
         {
           "id": "mame_loopy",
@@ -3889,7 +4086,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Casio Loopy。MAME 0.260+支持，无音频。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_loopy.png"
         }
       ]
     },
@@ -3900,7 +4098,7 @@
       "year": 1990,
       "icon": "🎮",
       "imagePath": "assets/consoles/gx4000.jpg",
-      "description": "Amstrad GX4000，Amstrad CPC+的家用主机版本，基于CPC硬件",
+      "description": "Amstrad GX4000，1990年发售的Amstrad CPC+系列家用主机版本。基于CPC 464+硬件，搭载Z80处理器。仅在欧洲发售且游戏数量少（约30款），但因硬件性能良好而拥有少量精良作品",
       "emulators": [
         {
           "id": "caprice32_gx",
@@ -3914,7 +4112,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "CaPriCe32 Libretro核心支持CPC+与GX4000。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/libretro-cap32/releases"
+          "downloadUrl": "https://github.com/libretro/libretro-cap32/releases",
+          "iconPath": "assets/emulators/caprice32_gx.png"
         },
         {
           "id": "mame_gx4000",
@@ -3928,7 +4127,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Amstrad GX4000。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_gx4000.png"
         }
       ]
     },
@@ -3939,7 +4139,7 @@
       "year": 1993,
       "icon": "🎮",
       "imagePath": "assets/consoles/cd32.jpg",
-      "description": "Commodore CD32，基于Amiga 1200的光盘游戏机，欧洲首台32位主机",
+      "description": "Commodore Amiga CD32，1993年发售的基于Amiga 1200的光盘游戏机。搭载Motorola 68EC020处理器，是欧洲首台32位CD-ROM游戏机。虽硬件优秀但因Commodore破产而短暂停产，是Amiga游戏的光盘载体",
       "emulators": [
         {
           "id": "puae_cd32",
@@ -3953,7 +4153,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "PUAE Libretro核心支持CD32。通过RetroArch核心下载器获取。需CD32 Kickstart ROM",
-          "downloadUrl": "https://github.com/libretro/PUAE/releases"
+          "downloadUrl": "https://github.com/libretro/PUAE/releases",
+          "iconPath": "assets/emulators/puae_cd32.png"
         }
       ]
     },
@@ -3964,7 +4165,7 @@
       "year": 1993,
       "icon": "💿",
       "imagePath": "assets/consoles/laseractive.jpg",
-      "description": "Pioneer LaserActive，基于LaserDisc的多媒体主机，支持Sega PAC与NEC PAC扩展",
+      "description": "Pioneer LaserActive，1993年发售的基于LaserDisc的多媒体主机。支持Sega PAC扩展（兼容Mega Drive/CD）和NEC PAC扩展（兼容PC Engine/CD），是最独特的多功能游戏平台。售价高达970美元，是高端多媒体主机的代表",
       "emulators": [
         {
           "id": "mame_la",
@@ -3978,7 +4179,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Pioneer LaserActive。支持Sega PAC与NEC PAC。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_la.png"
         },
         {
           "id": "blastem_la",
@@ -3992,7 +4194,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "BlastEm Libretro核心支持LaserActive Mega-LD（Sega PAC部分）。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/blastem"
+          "downloadUrl": "https://github.com/libretro/blastem",
+          "iconPath": "assets/emulators/blastem_la.png"
         }
       ]
     },
@@ -4003,7 +4206,7 @@
       "year": 1989,
       "icon": "🎮",
       "imagePath": "assets/consoles/supergrafx.jpg",
-      "description": "NEC SuperGrafx，PC Engine的增强版，仅7款独占游戏但包括经典大作",
+      "description": "NEC PC Engine SuperGrafx，1989年发售的PC Engine增强版。仅7款独占游戏但包括《大魔界村》《战斗神话》等经典。增强图形能力使Arcade级移植成为可能，虽市场表现不佳但被收藏家视为珍品",
       "emulators": [
         {
           "id": "beetle_sgx",
@@ -4017,7 +4220,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Mednafen PCE的Libretro核心，支持SuperGrafx。高精度模拟。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/beetle-pce-libretro/releases"
+          "downloadUrl": "https://github.com/libretro/beetle-pce-libretro/releases",
+          "iconPath": "assets/emulators/beetle_sgx.png"
         }
       ]
     },
@@ -4028,7 +4232,7 @@
       "year": 1993,
       "icon": "🎮",
       "imagePath": "assets/consoles/mega_duck.jpg",
-      "description": "Mega Duck，低成本掌机，Game Boy的廉价亚洲替代品",
+      "description": "Mega Duck / Cougar Boy，1993年发售的低成本掌机。搭载8位处理器，外观类似Game Boy。以极低价格在亚洲市场作为Game Boy的廉价替代品销售，拥有约30款独占游戏",
       "emulators": [
         {
           "id": "sameduck",
@@ -4042,7 +4246,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "Mega Duck专用Libretro核心，MIT开源。支持ARM与x86。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/libretro/sameduck/releases"
+          "downloadUrl": "https://github.com/libretro/sameduck/releases",
+          "iconPath": "assets/emulators/sameduck.png"
         },
         {
           "id": "mame_megaduck",
@@ -4056,7 +4261,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Mega Duck。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_megaduck.png"
         }
       ]
     },
@@ -4067,7 +4273,7 @@
       "year": 1981,
       "icon": "🎮",
       "imagePath": "assets/consoles/cassette_vision.jpg",
-      "description": "Epoch Cassette Vision，日本早期家用主机，BIOS内置于卡带中",
+      "description": "Epoch Cassette Vision，1981年发售的日本早期家用主机。采用独特的BIOS内置于卡带设计，是日本早期卡带式游戏机的代表。虽画面简单但拥有《大银河》《Baseball》等约11款游戏",
       "emulators": [
         {
           "id": "pd777",
@@ -4081,7 +4287,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Cassette Vision的Libretro核心。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://docs.libretro.com/library/pd777/"
+          "downloadUrl": "https://docs.libretro.com/library/pd777/",
+          "iconPath": "assets/emulators/pd777.png"
         }
       ]
     },
@@ -4092,7 +4299,7 @@
       "year": 1984,
       "icon": "🎮",
       "imagePath": "assets/consoles/scv.jpg",
-      "description": "Epoch Super Cassette Vision，Cassette Vision的后继机型，日本第三代家用主机",
+      "description": "Epoch Super Cassette Vision，1984年发售的Cassette Vision后继机型，日本第三代家用主机。搭载PD78064处理器，拥有更好的图形能力。以《孔方兄》《 Milky Way 》等作品著称，是日本80年代中期家用机市场的重要参与者",
       "emulators": [
         {
           "id": "emuscv",
@@ -4106,7 +4313,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "Super Cassette Vision的Libretro核心，GPLv2开源。模拟仍在开发中但可运行。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://docs.libretro.com/library/emuscv/"
+          "downloadUrl": "https://docs.libretro.com/library/emuscv/",
+          "iconPath": "assets/emulators/emuscv.png"
         },
         {
           "id": "mame_scv",
@@ -4120,7 +4328,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Super Cassette Vision。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_scv.png"
         }
       ]
     },
@@ -4131,7 +4340,7 @@
       "year": 1984,
       "icon": "🎮",
       "imagePath": "assets/consoles/game_pocket.jpg",
-      "description": "Epoch Game Pocket Computer，早期掌机，卡带式便携游戏机",
+      "description": "Epoch Game Pocket Computer，1984年发售的早期掌机。搭载PD78064G处理器，采用卡带式便携设计，LCD点阵屏幕。虽仅有约5款游戏且市场表现不佳，但作为卡带式掌机的先驱具有里程碑意义",
       "emulators": [
         {
           "id": "mame_gpc",
@@ -4145,7 +4354,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Epoch Game Pocket Computer。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_gpc.png"
         }
       ]
     },
@@ -4156,7 +4366,7 @@
       "year": 1982,
       "icon": "🎮",
       "imagePath": "assets/consoles/adventure_vision.jpg",
-      "description": "Entex Adventure Vision，独特的单游戏掌机，使用旋转镜显示",
+      "description": "Entex Adventure Vision，1982年发售的独特单游戏掌机。使用旋转镜面LED显示实现单色\"3D\"效果，类似Vectrex的矢量显示。仅有4款游戏，是电子游戏史上最罕见的硬件之一",
       "emulators": [
         {
           "id": "mame_av",
@@ -4170,7 +4380,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Entex Adventure Vision。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_av.png"
         }
       ]
     },
@@ -4181,7 +4392,7 @@
       "year": 1997,
       "icon": "🎮",
       "imagePath": "assets/consoles/gamecom.jpg",
-      "description": "Tiger Game.com，早期触摸屏掌机，支持互联网连接与PDA功能",
+      "description": "Tiger Game.com，1997年发售的早期触摸屏掌机。支持互联网连接和PDA功能，双卡带槽设计。虽硬件有限且游戏数量少，但以触摸屏和联网功能展现了掌机发展的前瞻性尝试",
       "emulators": [
         {
           "id": "mame_gamecom",
@@ -4195,7 +4406,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Tiger Game.com。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_gamecom.png"
         }
       ]
     },
@@ -4206,7 +4418,7 @@
       "year": 1979,
       "icon": "🎮",
       "imagePath": "assets/consoles/microvision.jpg",
-      "description": "Milton Bradley MicroVision，首款使用可更换卡带的掌机",
+      "description": "Milton Bradley MicroVision，1979年发售的首款使用可更换卡带的掌机。搭载Intel 8021/TI TMS1100处理器，每款卡带自带CPU和方向控制器。虽仅12款游戏，但开创了卡带式掌机先河",
       "emulators": [
         {
           "id": "mame_mv",
@@ -4220,7 +4432,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟MicroVision。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_mv.png"
         }
       ]
     },
@@ -4231,7 +4444,7 @@
       "year": 1990,
       "icon": "🎮",
       "imagePath": "assets/consoles/game_master.jpg",
-      "description": "Hartung Game Master，低成本8位掌机，Game Boy的廉价替代品",
+      "description": "Hartung Game Master，1990年发售的低成本8位掌机。以极低价格作为Game Boy的廉价替代品在欧洲销售。拥有约20款游戏，虽性能有限但以独特设计在收藏圈有一定影响力",
       "emulators": [
         {
           "id": "mame_gm",
@@ -4245,7 +4458,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Hartung Game Master。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_gm.png"
         }
       ]
     },
@@ -4256,7 +4470,7 @@
       "year": 1990,
       "icon": "🎮",
       "imagePath": "assets/consoles/gamate.jpg",
-      "description": "Gamate (Unity Electronics)，第四代掌机，Game Boy的亚洲竞争者",
+      "description": "Gamate (Unity Electronics)，1990年发售的第四代掌机。搭载8位处理器，以4色灰度LCD和卡带介质作为Game Boy的亚洲竞争者。拥有约50款游戏，虽市场表现平平但在多国发售展现了一定影响力",
       "emulators": [
         {
           "id": "mame_gamate",
@@ -4270,7 +4484,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Gamate。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_gamate.png"
         }
       ]
     },
@@ -4281,7 +4496,7 @@
       "year": 1977,
       "icon": "🎮",
       "imagePath": "assets/consoles/color_tv_game.jpg",
-      "description": "任天堂Color TV-Game系列，任天堂首款家用游戏机，内置游戏",
+      "description": "任天堂Color TV-Game系列，1977年发售的任天堂首款家用游戏机。包含Color TV-Game 6、15、Racing 112、Block Trap等型号，内置固定游戏。标志着任天堂从玩具制造商向游戏机产业的转型",
       "emulators": [
         {
           "id": "mame_ctg",
@@ -4295,7 +4510,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟任天堂Color TV-Game系列（CTG-6/10/15/16/Racing 112/Block Kuzushi）。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_ctg.png"
         }
       ]
     },
@@ -4306,7 +4522,7 @@
       "year": 2000,
       "icon": "📱",
       "imagePath": "assets/consoles/cybiko.jpg",
-      "description": "Cybiko，面向青少年的无线掌上设备，支持多人无线联机与大量免费游戏",
+      "description": "Cybiko / Cybiko Xtreme，2000年发售的面向青少年的无线掌上设备。支持多人无线联机（有效范围约50米），可免费下载游戏和应用。内置ARM处理器和单色LCD，是移动社交和无线游戏的前身",
       "emulators": [
         {
           "id": "mame_cybiko",
@@ -4320,7 +4536,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Cybiko与Cybiko Xtreme。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_cybiko.png"
         }
       ]
     },
@@ -4331,7 +4548,7 @@
       "year": 2003,
       "icon": "🎮",
       "imagePath": "assets/consoles/leapster.jpg",
-      "description": "LeapFrog Leapster，面向儿童的教育型掌机，支持多代产品(Leapster/L-MAX/TV)",
+      "description": "LeapFrog Leapster，2003年发售的面向4-10岁儿童的教育型掌机。支持多代产品（Leapster/L-MAX/TV），以学习游戏和动画角色互动为核心。是教育游戏机市场的领导者，全球销量超400万台",
       "emulators": [
         {
           "id": "mame_leapster",
@@ -4345,7 +4562,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟LeapFrog Leapster系列。驱动处于初步阶段。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_leapster.png"
         }
       ]
     },
@@ -4356,7 +4574,7 @@
       "year": 1979,
       "icon": "🎮",
       "imagePath": "assets/consoles/supervision_8000.jpg",
-      "description": "万代Super Vision 8000，日本第二代家用主机，可更换游戏卡带",
+      "description": "万代Super Vision 8000，1979年发售的日本第二代家用主机。可更换游戏卡带，是日本早期卡带式游戏机之一。虽市场影响力有限但展现了日本游戏机产业的早期探索",
       "emulators": [
         {
           "id": "mame_sv8000",
@@ -4370,7 +4588,8 @@
           "compatibility": "low",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Bandai Super Vision 8000。模拟不完整。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_sv8000.png"
         }
       ]
     },
@@ -4381,7 +4600,7 @@
       "year": 1983,
       "icon": "💻",
       "imagePath": "assets/consoles/electron.jpg",
-      "description": "Acorn Electron，BBC Micro的廉价版本，英国教育市场的主流8位电脑",
+      "description": "Acorn Electron，1983年发售的BBC Micro廉价版本，面向家庭市场。搭载6502处理器，虽性能降低但仍可运行大量BBC Micro教育软件。是英国教育市场的主流8位电脑之一",
       "emulators": [
         {
           "id": "mame_electron",
@@ -4395,7 +4614,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Acorn Electron。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_electron.png"
         }
       ]
     },
@@ -4406,7 +4626,7 @@
       "year": 1974,
       "icon": "🧮",
       "imagePath": "assets/consoles/calculators.jpg",
-      "description": "计算器模拟器，包含德州仪器TI系列与惠普HP系列科学计算器",
+      "description": "计算器模拟器，包含德州仪器TI-83/84/89系列与惠普HP-48/49/50系列科学计算器。这些可编程计算器在学生中广泛用于运行游戏和自制程序，是极客文化的独特载体",
       "emulators": [
         {
           "id": "wabbitemu",
@@ -4421,7 +4641,8 @@
           "minAndroid": "5.0",
           "description": "TI-83/84系列计算器模拟器，MIT开源。支持单色Z80与彩色Z80系列(TI-73/81/82/83/84/85/86)。推荐使用",
           "downloadUrl": "https://github.com/sputt/wabbitemu/releases",
-          "devUrl": "https://github.com/sputt/wabbitemu/releases"
+          "devUrl": "https://github.com/sputt/wabbitemu/releases",
+          "iconPath": "assets/emulators/wabbitemu.png"
         },
         {
           "id": "graph89",
@@ -4435,7 +4656,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "TI-89/TI-92/Voyage 200模拟器，模拟68000系列计算器。GPLv3开源，F-Droid可下",
-          "downloadUrl": "https://f-droid.org/en/packages/com.eanema.graph89/"
+          "downloadUrl": "https://f-droid.org/en/packages/com.eanema.graph89/",
+          "iconPath": "assets/emulators/graph89.png"
         },
         {
           "id": "firebird",
@@ -4450,7 +4672,8 @@
           "minAndroid": "5.0",
           "description": "TI-Nspire系列计算器模拟器，GPLv3开源。支持CX型号。GitHub提供安卓APK",
           "downloadUrl": "https://github.com/nspire-emus/firebird/releases/latest/download/firebird-android.apk",
-          "devUrl": "https://github.com/nspire-emus/firebird/releases"
+          "devUrl": "https://github.com/nspire-emus/firebird/releases",
+          "iconPath": "assets/emulators/firebird.png"
         },
         {
           "id": "droid48",
@@ -4464,7 +4687,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "HP 48G/48S计算器模拟器。Google Play可下",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=org.ab.x48"
+          "downloadUrl": "https://play.google.com/store/apps/details?id=org.ab.x48",
+          "iconPath": "assets/emulators/droid48.png"
         },
         {
           "id": "emu48",
@@ -4478,7 +4702,8 @@
           "compatibility": "high",
           "minAndroid": "5.0",
           "description": "HP 38G/39G/40G/48S/48SX/48G/48GX/49G/50g全系列计算器模拟器。活跃维护",
-          "downloadUrl": "https://hp.giesselink.com/emu48.htm"
+          "downloadUrl": "https://hp.giesselink.com/emu48.htm",
+          "iconPath": "assets/emulators/emu48.png"
         }
       ]
     },
@@ -4489,7 +4714,7 @@
       "year": 1981,
       "icon": "🖥️",
       "imagePath": "assets/consoles/pc6001.jpg",
-      "description": "NEC PC-6000系列，日本入门级个人电脑，PC-8800的低端姊妹机型",
+      "description": "NEC PC-6000系列，1981年发售的日本入门级个人电脑。搭载Z80处理器，以合理的价格和彩色图形著称。作为PC-8800的低端姊妹机型在日本家庭市场有一定影响力",
       "emulators": [
         {
           "id": "mame_pc6001",
@@ -4503,7 +4728,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟NEC PC-6001系列。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_pc6001.png"
         }
       ]
     },
@@ -4514,7 +4740,7 @@
       "year": 1983,
       "icon": "💻",
       "imagePath": "assets/consoles/aquarius.jpg",
-      "description": "Mattel Aquarius，Mattel推出的8位个人电脑，Z80处理器",
+      "description": "Mattel Aquarius，1983年发售的Mattel推出8位个人电脑，搭载Z80处理器。以低成本和简易设计面向家庭用户，但因硬件能力有限而市场表现不佳。拥有少量游戏和软件，是早期家用电脑的探索之一",
       "emulators": [
         {
           "id": "mame_aquarius",
@@ -4528,7 +4754,8 @@
           "compatibility": "medium",
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Mattel Aquarius。通过RetroArch核心下载器获取",
-          "downloadUrl": "https://github.com/mamedev/mame/releases"
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "iconPath": "assets/emulators/mame_aquarius.png"
         }
       ]
     }

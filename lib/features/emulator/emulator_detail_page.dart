@@ -10,6 +10,8 @@ import '../../data/models/console.dart';
 import '../../data/models/emulator.dart';
 import '../../providers.dart';
 import '../../services/download/download_resolver.dart';
+import '../../services/update/google_translate_service.dart';
+import '../../services/update/mymemory_translate_service.dart';
 import '../../services/update/release_notes_translator.dart';
 import '../../widgets/version_badge.dart';
 import '../consoles/consoles_page.dart' show vendorDisplayName;
@@ -37,6 +39,8 @@ String sourceTypeLabel(String sourceType) {
       return 'GitHub';
     case 'gitlab':
       return 'GitLab';
+    case 'forgejo':
+      return 'Forgejo';
     case 'playstore':
       return 'Google Play';
     case 'website':
@@ -191,16 +195,21 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
           emulator.name,
           style: const TextStyle(fontWeight: FontWeight.w600),
         ),
-        background: console.imagePath.isNotEmpty
+        background: emulator.iconPath.isNotEmpty
             ? Hero(
-                tag: 'emulator-console-${console.id}',
-                child: Image.asset(
-                  console.imagePath,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => _buildGradientBg(cs, console.icon),
+                tag: 'emulator-icon-${emulator.id}',
+                child: Container(
+                  color: cs.surfaceContainerHighest,
+                  child: Image.asset(
+                    emulator.iconPath,
+                    fit: BoxFit.contain,
+                    alignment: Alignment.center,
+                    errorBuilder: (_, __, ___) =>
+                        _buildConsoleBg(console, cs),
+                  ),
                 ),
               )
-            : _buildGradientBg(cs, console.icon),
+            : _buildConsoleBg(console, cs),
       ),
     );
   }
@@ -219,6 +228,18 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         child: Text(icon, style: const TextStyle(fontSize: 72)),
       ),
     );
+  }
+
+  /// 机种图片或 emoji 回退背景。
+  Widget _buildConsoleBg(Console console, ColorScheme cs) {
+    if (console.imagePath.isNotEmpty) {
+      return Image.asset(
+        console.imagePath,
+        fit: BoxFit.cover,
+        errorBuilder: (_, __, ___) => _buildGradientBg(cs, console.icon),
+      );
+    }
+    return _buildGradientBg(cs, console.icon);
   }
 
   /// 头部信息：所属机种 + 来源标签。
@@ -358,9 +379,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                           fontWeight: FontWeight.w600,
                         )),
                         const SizedBox(height: 4),
-                        Text(
-                          ReleaseNotesTranslator.translate(cached.releaseNotes) ??
-                              cached.releaseNotes!,
+                        TranslatedReleaseNotes(
+                          text: cached.releaseNotes!,
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: cs.onSurfaceVariant,
                             height: 1.5,
@@ -532,10 +552,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    Text(
-                      ReleaseNotesTranslator.translate(
-                              cached.resolvedDevReleaseNotes) ??
-                          cached.resolvedDevReleaseNotes!,
+                    TranslatedReleaseNotes(
+                      text: cached.resolvedDevReleaseNotes!,
                       style: theme.textTheme.bodySmall?.copyWith(
                         color: cs.onSurfaceVariant,
                         height: 1.4,
@@ -635,6 +653,14 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
             : '${emulator.sourceUrl}/releases';
         if (emulator.sourceUrl.isEmpty) return;
         break;
+      case 'gitlab':
+      case 'forgejo':
+        // GitLab/Forgejo Releases 页面
+        url = emulator.sourceUrl.endsWith('/')
+            ? '${emulator.sourceUrl}releases'
+            : '${emulator.sourceUrl}/releases';
+        if (emulator.sourceUrl.isEmpty) return;
+        break;
       case 'playstore':
         if (emulator.playStoreId.isEmpty) return;
         url = 'https://play.google.com/store/apps/details?id=${emulator.playStoreId}';
@@ -667,6 +693,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return Icons.code;
       case 'gitlab':
         return Icons.code;
+      case 'forgejo':
+        return Icons.code;
       case 'playstore':
         return Icons.shop;
       case 'website':
@@ -682,6 +710,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return 'GitHub Releases';
       case 'gitlab':
         return 'GitLab Releases';
+      case 'forgejo':
+        return 'Forgejo Releases';
       case 'playstore':
         return 'Google Play 下载';
       case 'website':
@@ -792,6 +822,213 @@ class _CompatibilityTag extends StatelessWidget {
         style: theme.textTheme.labelSmall?.copyWith(
           color: color,
           fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
+  }
+}
+
+/// 异步翻译的更新说明组件。
+///
+/// 显示流程：
+/// 1. 先用字典翻译（ReleaseNotesTranslator）即时显示
+/// 2. 后台调用 Google 翻译获取更完整的中文翻译
+/// 3. Google 翻译成功后替换为翻译结果
+/// 4. Google 翻译失败则保留字典翻译结果
+///
+/// 如果文本已经是中文（中文占比高），直接显示原文。
+class TranslatedReleaseNotes extends StatefulWidget {
+  const TranslatedReleaseNotes({
+    super.key,
+    required this.text,
+    this.style,
+  });
+
+  final String text;
+  final TextStyle? style;
+
+  @override
+  State<TranslatedReleaseNotes> createState() => _TranslatedReleaseNotesState();
+}
+
+class _TranslatedReleaseNotesState extends State<TranslatedReleaseNotes> {
+  String? _translatedText;
+  bool _isTranslating = true;
+  /// 翻译来源：'google' | 'mymemory' | 'dict'
+  String _source = 'dict';
+  bool _showOriginal = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _translate();
+  }
+
+  @override
+  void didUpdateWidget(covariant TranslatedReleaseNotes oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // 文本变化（如后台检查写入了新的 releaseNotes）时重新翻译，
+    // 否则会一直显示旧文本的翻译结果
+    if (oldWidget.text != widget.text) {
+      setState(() {
+        _translatedText = null;
+        _isTranslating = true;
+        _source = 'dict';
+        _showOriginal = false;
+      });
+      _translate();
+    }
+  }
+
+  Future<void> _translate() async {
+    // 如果文本主要是中文，不需要翻译
+    if (!GoogleTranslateService.needsTranslation(widget.text)) {
+      if (mounted) {
+        setState(() {
+          _translatedText = widget.text;
+          _isTranslating = false;
+          _source = 'google';
+        });
+      }
+      return;
+    }
+
+    // 先用字典翻译作为即时回退（立即可用）
+    final dictResult = ReleaseNotesTranslator.translate(widget.text) ?? widget.text;
+
+    // 尝试 1: Google 翻译（国际用户首选，但中国大陆不可用）
+    final googleResult = await GoogleTranslateService.translateToChinese(widget.text);
+
+    if (googleResult != null && googleResult.isNotEmpty) {
+      if (mounted) {
+        setState(() {
+          _translatedText = googleResult;
+          _isTranslating = false;
+          _source = 'google';
+        });
+      }
+      return;
+    }
+
+    // 尝试 2: MyMemory 翻译（Google 不可用时的备选，中国大陆可访问）
+    final myMemoryResult = await MyMemoryTranslateService.translateToChinese(widget.text);
+
+    if (myMemoryResult != null && myMemoryResult.isNotEmpty) {
+      if (mounted) {
+        setState(() {
+          _translatedText = myMemoryResult;
+          _isTranslating = false;
+          _source = 'mymemory';
+        });
+      }
+      return;
+    }
+
+    // 尝试 3: 字典翻译（离线，始终可用）
+    if (mounted) {
+      setState(() {
+        _translatedText = dictResult;
+        _isTranslating = false;
+        _source = 'dict';
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // 查看原文模式
+    if (_showOriginal) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(widget.text, style: widget.style),
+          const SizedBox(height: 4),
+          _buildSourceChip('原文'),
+        ],
+      );
+    }
+
+    if (_isTranslating) {
+      // 翻译中：先显示字典翻译结果（即时可用）
+      final dictResult = ReleaseNotesTranslator.translate(widget.text) ?? widget.text;
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(dictResult, style: widget.style),
+          const SizedBox(height: 4),
+          Row(
+            children: [
+              const SizedBox(
+                width: 12,
+                height: 12,
+                child: CircularProgressIndicator(strokeWidth: 1.5),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                '正在翻译...',
+                style: (widget.style ?? const TextStyle()).copyWith(
+                  fontSize: 11,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.grey,
+                ),
+              ),
+            ],
+          ),
+        ],
+      );
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(_translatedText ?? widget.text, style: widget.style),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            _buildSourceChip(
+              switch (_source) {
+                'google' => 'Google 翻译',
+                'mymemory' => 'MyMemory 翻译',
+                _ => '字典翻译',
+              },
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    );
+  }
+
+  /// 构建翻译来源标签 + 原文切换按钮。
+  Widget _buildSourceChip(String label) {
+    // google/mymemory 为在线翻译（绿色），dict 为离线字典（橙色）
+    final isOnline = _source == 'google' || _source == 'mymemory';
+    return InkWell(
+      onTap: () {
+        setState(() {
+          _showOriginal = !_showOriginal;
+        });
+      },
+      borderRadius: BorderRadius.circular(4),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 11,
+                color: isOnline ? Colors.green : Colors.orange,
+              ),
+            ),
+            const SizedBox(width: 4),
+            Icon(
+              _showOriginal ? Icons.translate : Icons.code,
+              size: 12,
+              color: Colors.grey,
+            ),
+          ],
         ),
       ),
     );

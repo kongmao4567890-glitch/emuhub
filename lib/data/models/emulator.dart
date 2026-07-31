@@ -28,6 +28,9 @@ class Emulator with _$Emulator {
     @Default('') String downloadUrl,
     @Default('') String devUrl,
     @Default('') String nightlyUrl,
+    /// 模拟器官方图标资源路径（如 assets/emulators/dolphin.png）。
+    /// 为空时回退到通用手柄图标。
+    @Default('') String iconPath,
   }) = _Emulator;
 
   factory Emulator.fromJson(Map<String, dynamic> json) =>

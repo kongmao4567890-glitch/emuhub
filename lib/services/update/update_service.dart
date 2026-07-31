@@ -5,6 +5,7 @@ import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
 import 'github_adapter.dart';
 import 'gitlab_adapter.dart';
+import 'forgejo_adapter.dart';
 import 'playstore_adapter.dart';
 import 'version_adapter.dart';
 import 'version_comparator.dart';
@@ -52,6 +53,7 @@ class UpdateService {
     required CachedVersionsDao dao,
     GitHubReleasesAdapter? githubAdapter,
     GitLabReleasesAdapter? gitlabAdapter,
+    ForgejoReleasesAdapter? forgejoAdapter,
     PlayStoreAdapter? playStoreAdapter,
     WebsiteAdapter? websiteAdapter,
     int maxConcurrency = 5,
@@ -59,6 +61,7 @@ class UpdateService {
   })  : _dao = dao,
         _githubAdapter = githubAdapter ?? GitHubReleasesAdapter(),
         _gitlabAdapter = gitlabAdapter ?? GitLabReleasesAdapter(),
+        _forgejoAdapter = forgejoAdapter ?? ForgejoReleasesAdapter(),
         _playStoreAdapter = playStoreAdapter ?? PlayStoreAdapter(),
         _websiteAdapter = websiteAdapter ?? WebsiteAdapter(),
         _maxConcurrency = maxConcurrency,
@@ -67,6 +70,7 @@ class UpdateService {
   final CachedVersionsDao _dao;
   final GitHubReleasesAdapter _githubAdapter;
   final GitLabReleasesAdapter _gitlabAdapter;
+  final ForgejoReleasesAdapter _forgejoAdapter;
   final PlayStoreAdapter _playStoreAdapter;
   final WebsiteAdapter _websiteAdapter;
   final int _maxConcurrency;
@@ -91,6 +95,8 @@ class UpdateService {
           return _websiteAdapter;
         }
         return _gitlabAdapter;
+      case 'forgejo':
+        return _forgejoAdapter;
       case 'playstore':
         return _playStoreAdapter;
       case 'website':
@@ -191,8 +197,9 @@ class UpdateService {
       final cached = await _dao.getCachedVersion(emulator.id);
       final bool isNew;
       if (cached == null) {
-        // 本地无缓存，视为新版本
-        isNew = true;
+        // 本地无缓存：本次为首次检查，仅建立版本基线，不标记为新版本。
+        // 否则首次运行会把全部模拟器标记为“有更新”并群发通知。
+        isNew = false;
       } else if (cached.currentVersion.isEmpty) {
         isNew = true;
       } else {
@@ -288,6 +295,10 @@ class UpdateService {
                 : DateTime.now(),
             releaseNotes: c.releaseNotes,
             isNew: true,
+            // 携带适配器动态解析的下载直链，避免 UI 回退到可能 404 的静态 URL
+            downloadUrl: c.resolvedDownloadUrl,
+            devDownloadUrl: c.resolvedDevDownloadUrl,
+            devReleaseNotes: c.resolvedDevReleaseNotes,
           ),
         )
         .toList();
