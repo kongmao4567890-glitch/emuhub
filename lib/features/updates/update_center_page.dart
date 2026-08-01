@@ -384,7 +384,7 @@ class _UpdateCard extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         child: Row(
           children: [
-            // 机种图片
+            // 模拟器图标：优先显示模拟器官方图标，无图标时回退到机种 emoji
             Container(
               width: 48,
               height: 48,
@@ -394,9 +394,9 @@ class _UpdateCard extends StatelessWidget {
               ),
               clipBehavior: Clip.antiAlias,
               alignment: Alignment.center,
-              child: console != null && console.imagePath.isNotEmpty
+              child: emulator != null && emulator.iconPath.isNotEmpty
                   ? Image.asset(
-                      console.imagePath,
+                      emulator.iconPath,
                       fit: BoxFit.cover,
                       width: 48,
                       height: 48,
@@ -547,6 +547,7 @@ class _UpToDateSectionState extends State<_UpToDateSection> {
                   return _UpToDateTile(
                     emulatorName: emulator?.name ?? c.emulatorId,
                     consoleName: console?.name ?? '未知机种',
+                    emulatorIconPath: emulator?.iconPath ?? '',
                     consoleIcon: console?.icon ?? '🎮',
                     version: c.currentVersion,
                     onTap: () =>
@@ -566,6 +567,7 @@ class _UpToDateTile extends StatelessWidget {
   const _UpToDateTile({
     required this.emulatorName,
     required this.consoleName,
+    required this.emulatorIconPath,
     required this.consoleIcon,
     required this.version,
     required this.onTap,
@@ -573,6 +575,9 @@ class _UpToDateTile extends StatelessWidget {
 
   final String emulatorName;
   final String consoleName;
+  /// 模拟器官方图标路径（如 assets/emulators/xxx.png），为空时回退到机种 emoji。
+  final String emulatorIconPath;
+  /// 机种 emoji，仅在模拟器图标不可用时作为回退。
   final String consoleIcon;
   final String version;
   final VoidCallback onTap;
@@ -587,7 +592,27 @@ class _UpToDateTile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Row(
           children: [
-            Text(consoleIcon, style: const TextStyle(fontSize: 20)),
+            // 模拟器图标：优先显示模拟器官方图标，无图标时回退到机种 emoji
+            SizedBox(
+              width: 28,
+              height: 28,
+              child: emulatorIconPath.isNotEmpty
+                  ? Image.asset(
+                      emulatorIconPath,
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => Text(
+                        consoleIcon,
+                        style: const TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  : Center(
+                      child: Text(
+                        consoleIcon,
+                        style: const TextStyle(fontSize: 20),
+                      ),
+                    ),
+            ),
             const SizedBox(width: 10),
             Expanded(
               child: Column(

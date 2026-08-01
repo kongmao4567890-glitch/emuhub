@@ -76,8 +76,11 @@ class DownloadResolver {
   /// 尝试将 URL 中的旧版本号替换为新版本号。
   ///
   /// 支持以下模式：
-  /// - `v0.2.1` → `v{newVersion}`
-  /// - `1.20.4` → `{newVersion}`
+  /// - `v0.2.1` → `v{newVersion}`（Eden 模式，同时替换路径和文件名）
+  /// - `1_20_4` → `{newVersion_with_underscores}`（PPSSPP 模式）
+  /// - `/v{version}/` 或 `/{version}/` → 路径中的版本号（通用模式）
+  /// - `{name}-{version}.apk` → 文件名中的版本号（如 `PSX2_1.2.6.apk`、
+  ///   `azahar-android-googleplay-2125.1.3.apk`）
   /// - `2606`（YYMM 格式）→ 不替换（无法自动推断）
   ///
   /// 返回 null 表示无法替换或不适用于替换。
@@ -99,17 +102,30 @@ class DownloadResolver {
     // 通用模式：路径中包含 /v{version}/ 或 /{version}/
     // 替换时保留原文是否有 v 前缀，避免给无前缀的 URL 强加 v 导致 404
     final versionInPath = RegExp(r'/(v?)(\d+\.\d+(?:\.\d+)?)/');
-    final matches = versionInPath.allMatches(url);
-    if (matches.isNotEmpty) {
+    final pathMatches = versionInPath.allMatches(url);
+    if (pathMatches.isNotEmpty) {
       var result = url;
       // 逆序替换，避免偏移问题
-      for (final match in matches.toList().reversed) {
+      for (final match in pathMatches.toList().reversed) {
         final prefix = match.group(1) ?? '';
         result = result.substring(0, match.start) +
             '/$prefix$newVersion/' +
             result.substring(match.end);
       }
       return result;
+    }
+
+    // 文件名中的版本号模式：asset-name-{version}.apk
+    // 例如：PSX2_1.2.6.apk → PSX2_1.2.7.apk
+    //      azahar-android-googleplay-2125.1.3.apk → azahar-android-googleplay-2126.0.apk
+    //      NetherSX2-v2.2n-3668.apk → 不匹配（纯数字段不含点号）
+    // 匹配 x.y.z 或 x.y 格式的版本号（至少两段，用点号分隔）
+    final versionInFilename = RegExp(r'(\d+\.\d+(?:\.\d+)*)');
+    final filenameMatch = versionInFilename.firstMatch(url);
+    if (filenameMatch != null) {
+      return url.substring(0, filenameMatch.start) +
+          newVersion +
+          url.substring(filenameMatch.end);
     }
 
     return null;

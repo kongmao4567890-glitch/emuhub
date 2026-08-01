@@ -55,7 +55,7 @@
           "minAndroid": "5.0",
           "description": "多合一模拟器前端，内置Mupen64Plus(N64)、PCSX-ReARMed/SwanStation(PS1)、MelonDS(NDS)、mGBA(GBA)、Snes9x(SNES)、FCEUmm(NES)、Genplus/PicoDrive(MD)、FB Alpha(街机)、Atari 2600等8个核心。免费Lite版+Pro付费版",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.portableandroid.classicboy",
-          "iconPath": "assets/emulators/classicboy.png"
+          "iconPath": "assets/emulators/classicboy.jpg"
         },
         {
           "id": "argon",
@@ -70,7 +70,7 @@
           "minAndroid": "5.0",
           "description": "多系统复古游戏模拟器，专有软件。支持Atari 2600/5200/7800/8-Bit/Lynx、ColecoVision、Intellivision、NES、Game Boy/GBC/GBA、Vectrex、PICO-8。内置游戏库+自定义ROM。支持Chromebook与Raspberry Pi",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.markspace.retro",
-          "iconPath": "assets/emulators/argon.png"
+          "iconPath": "assets/emulators/argon.jpg"
         }
       ]
     },
@@ -894,7 +894,7 @@
           "devUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
           "nightlyUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
           "previewUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
-          "iconPath": "assets/emulators/azahar.png"
+          "iconPath": "assets/emulators/azahar_plus.png"
         }
       ]
     },
@@ -1124,7 +1124,7 @@
           "compatibility": "high",
           "minAndroid": "8.0",
           "description": "PCSX2的安卓移植分支，fork自PCSX2_ARM64。支持Namco System 246/256街机基板。Mali/MediaTek渲染修复，RetroAchievements，自动封面下载，多区域BIOS自动切换，每游戏独立设置/记忆卡。ISO/CHD/CSO/ZSO/BIN-CUE支持。Google Play有付费版",
-          "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/latest/download/PSX2_1.2.6.apk",
+          "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/latest/download/29.apk",
           "devUrl": "https://github.com/izzy2lost/PSX2/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/psx2_izzy.png"
@@ -1160,7 +1160,7 @@
           "description": "基于PCSX2核心的PS2模拟器，面向手持设备优化。Jetpack Compose现代化UI，内置游戏库管理器、实时叠加控制器、驱动目录兼容性提示、OpenSL ES音频后端与轻量SPU2模式，支持反交错(Deinterlacing)与抖动(Dithering)设置。每版提供标准版与并行渲染(parallel)双APK，GPL-3.0开源，2026年7月更新至v0.2.9",
           "downloadUrl": "https://github.com/sashkinbro/EmuCoreX/releases",
           "devUrl": "https://github.com/sashkinbro/EmuCoreX/releases",
-          "iconPath": "assets/emulators/nethersx2_classic.png"
+          "iconPath": "assets/emulators/emucorex.png"
         }
       ]
     },
@@ -1217,8 +1217,22 @@
           "minAndroid": "10.0",
           "description": "RPCS3的Android移植版，2025年3月进入Alpha阶段，支持控制器自动映射与省电模式，需骁龙8 Gen级别设备，更新趋缓",
           "downloadUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases/latest/download/rpcs3-release.apk",
-          "devUrl": "https://github.com/aenu1/aps3e/releases",
           "iconPath": "assets/emulators/rpcs3_android.png"
+        },
+        {
+          "id": "aps3e",
+          "name": "aPS3e",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/aenu1/aps3e",
+          "playStoreId": "aenu.aps3e",
+          "website": "https://aps3e.org/",
+          "core": "RPCS3",
+          "compatibility": "low",
+          "minAndroid": "9.0",
+          "description": "基于RPCS3移植优化的Android原生PS3模拟器，由aenu开发(同Xbox 360模拟器ax360e作者)。2026年7月最新版v2.40，独有Mali-G57 Valhall Vulkan驱动适配、多语言UI。免费版+付费高级版(aPS3e Premium)均上架Google Play。需骁龙8 Gen级别设备，部分轻量游戏可运行",
+          "downloadUrl": "https://github.com/aenu1/aps3e/releases",
+          "iconPath": "assets/emulators/aps3e.png"
         }
       ]
     },
@@ -2130,7 +2144,7 @@
           "compatibility": "high",
           "minAndroid": "10.0",
           "description": "高通专有Vulkan驱动，从Quest Ray-Ban Display设备提取，适用于Adreno A7xx与A6xx。部分游戏在专有驱动下表现优于Turnip开源驱动，可按需切换对比",
-          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v863.1_a7xx",
+          "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases",
           "iconPath": "assets/emulators/qualcomm_driver.png"
         }
       ]
@@ -2228,7 +2242,7 @@
           "compatibility": "low",
           "minAndroid": "12.0",
           "description": "Xbox 360模拟器，最初fork自xa360e(基于Xenia Canary)，后完全rebase到Xenia Edge。Vulkan后端，自定义Adreno Vulkan驱动支持。仅限Snapdragon Gen2+/Adreno 740+。github-actions自动构建滚动发布",
-          "downloadUrl": "https://github.com/rfandango/XenDroid/releases/latest/download/XenDroid_Release_0f4f701.apk",
+          "downloadUrl": "https://github.com/rfandango/XenDroid/releases",
           "devUrl": "https://github.com/rfandango/XenDroid/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/xendroid.png"
@@ -3011,7 +3025,7 @@
           "compatibility": "medium",
           "minAndroid": "7.0",
           "description": "基于Rust的Flash播放器安卓移植版，MIT/Apache 2.0双开源。可运行大量早期Flash游戏，当前重点开发AVM2文件支持。桌面/HTML5/Android多平台",
-          "downloadUrl": "https://github.com/ruffle-rs/ruffle-android/releases/latest/download/app-arm64-v8a-release.apk",
+          "downloadUrl": "https://github.com/ruffle-rs/ruffle-android/releases",
           "iconPath": "assets/emulators/ruffle_android.png"
         },
         {
