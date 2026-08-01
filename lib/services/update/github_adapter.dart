@@ -46,6 +46,28 @@ class GitHubReleasesAdapter implements VersionAdapter {
   @override
   String get adapterName => 'github';
 
+  /// 为 GitHub HTML 页面请求创建 [Options]。
+  ///
+  /// Dio 实例默认带 `Accept: application/vnd.github+json`（API header），
+  /// 但 GitHub 的 `/releases` 页面会对此返回 **HTTP 406 Not Acceptable**。
+  /// 所有 HTML 页面请求必须覆盖此 header 为 `text/html`。
+  ///
+  /// 受影响的 URL 模式：
+  /// - `github.com/owner/repo/releases` → 406（不接受 API Accept）
+  /// - `github.com/owner/repo/releases/latest` → 200（不受影响，但保持一致）
+  /// - `github.com/owner/repo/releases/tag/{tag}` → 200（不受影响）
+  /// - `github.com/owner/repo/releases/expanded_assets/{tag}` → 200（不受影响）
+  Options _htmlOptions({bool followRedirects = true}) {
+    return Options(
+      responseType: ResponseType.plain,
+      followRedirects: followRedirects,
+      validateStatus: (status) => status != null && status < 400,
+      headers: {
+        'Accept': 'text/html, application/xhtml+xml, */*',
+      },
+    );
+  }
+
   @override
   Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
     final parsed = _parseRepo(emulator.sourceUrl);
@@ -121,11 +143,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://github.com/$owner/$repo/releases',
-        options: Options(
-          responseType: ResponseType.plain,
-          followRedirects: true,
-          validateStatus: (status) => status != null && status < 400,
-        ),
+        options: _htmlOptions(),
       );
 
       final html = response.data.toString();
@@ -155,11 +173,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
           try {
             final tagResponse = await _dio.get(
               'https://github.com/$owner/$repo/releases/tag/$tag',
-              options: Options(
-                responseType: ResponseType.plain,
-                followRedirects: true,
-                validateStatus: (status) => status != null && status < 400,
-              ),
+              options: _htmlOptions(),
             );
             final tagHtml = tagResponse.data.toString();
             body = _extractReleaseNotesFromHtml(tagHtml);
@@ -199,10 +213,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://github.com/$owner/$repo/releases/latest',
-        options: Options(
-          followRedirects: false,
-          validateStatus: (status) => status != null && status < 400,
-        ),
+        options: _htmlOptions(followRedirects: false),
       );
 
       final location = response.headers.value('location');
@@ -278,11 +289,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://github.com/$owner/$repo/releases/latest',
-        options: Options(
-          responseType: ResponseType.plain,
-          followRedirects: true,
-          validateStatus: (status) => status != null && status < 400,
-        ),
+        options: _htmlOptions(),
       );
 
       final html = response.data.toString();
@@ -334,11 +341,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         try {
           final tagResponse = await _dio.get(
             'https://github.com/$owner/$repo/releases/tag/$tag',
-            options: Options(
-              responseType: ResponseType.plain,
-              followRedirects: true,
-              validateStatus: (status) => status != null && status < 400,
-            ),
+            options: _htmlOptions(),
           );
           final tagHtml = tagResponse.data.toString();
           final tagDate = _extractReleaseDateFromHtml(tagHtml);
@@ -374,11 +377,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://github.com/$owner/$repo/releases/expanded_assets/$tag',
-        options: Options(
-          responseType: ResponseType.plain,
-          followRedirects: true,
-          validateStatus: (status) => status != null && status < 400,
-        ),
+        options: _htmlOptions(),
       );
 
       final html = response.data.toString();
@@ -397,11 +396,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         'https://github.com/$owner/$repo/releases/tag/$tag',
-        options: Options(
-          responseType: ResponseType.plain,
-          followRedirects: true,
-          validateStatus: (status) => status != null && status < 400,
-        ),
+        options: _htmlOptions(),
       );
       final html = response.data.toString();
       return _extractReleaseNotesFromHtml(html);
