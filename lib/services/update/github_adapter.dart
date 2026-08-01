@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
 import 'version_adapter.dart';
+import 'version_comparator.dart';
 
 /// 基于 GitHub Releases 的版本适配器。
 ///
@@ -71,7 +72,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
       result = await _fetchFromTags(emulator, owner, repo);
     }
 
-    // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease APK 直链和更新说明
+    // 如果成功获取到版本信息，且模拟器有 devUrl，尝试获取 prerelease 信息
+    // 并检查预发布版是否比稳定版更新
     if (result != null && emulator.devUrl.isNotEmpty) {
       final devInfo = await _fetchPrereleaseInfo(owner, repo);
       if (devInfo != null) {
@@ -79,6 +81,21 @@ class GitHubReleasesAdapter implements VersionAdapter {
           devDownloadUrl: devInfo.apkUrl,
           devReleaseNotes: devInfo.body,
         );
+
+        // 如果预发布版版本号比稳定版更新，将预发布版作为主版本显示
+        // 例如：稳定版 2125.1.3，预发布版 2126.0-rc5 → 显示 2126.0-rc5
+        if (devInfo.version != null && devInfo.version!.isNotEmpty) {
+          final stableVersion = result.version;
+          final devVersion = devInfo.version!;
+          if (VersionComparator.isNewer(stableVersion, devVersion)) {
+            result = result.copyWith(
+              version: devVersion,
+              releaseDate: devInfo.publishedAt ?? result.releaseDate,
+              releaseNotes: devInfo.body ?? result.releaseNotes,
+              downloadUrl: devInfo.apkUrl ?? result.downloadUrl,
+            );
+          }
+        }
       }
     }
 
@@ -450,14 +467,15 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 获取最新的 prerelease（开发版/预览版）的 APK 直链和更新说明。
+  /// 获取最新的 prerelease（开发版/预览版）信息。
   ///
   /// 查询 releases 列表（per_page=10），从中筛选第一个 `prerelease=true`
-  /// 的 release，提取其 APK asset URL 和 body（更新说明）。消耗 1 次 API 配额。
+  /// 的 release，提取其版本号、APK asset URL、body（更新说明）和发布日期。
+  /// 消耗 1 次 API 配额。
   ///
   /// 仅对配置了 devUrl 的模拟器调用，避免不必要的 API 消耗。
   /// 返回 null 表示无 prerelease 或 API 调用失败。
-  Future<({String? apkUrl, String? body})?> _fetchPrereleaseInfo(
+  Future<({String? version, String? apkUrl, String? body, DateTime? publishedAt})?> _fetchPrereleaseInfo(
     String owner,
     String repo,
   ) async {
@@ -472,10 +490,19 @@ class GitHubReleasesAdapter implements VersionAdapter {
         final release = _asMap(item);
         final isPrerelease = release['prerelease'];
         if (isPrerelease == true) {
+          final tag = release['tag_name']?.toString();
+          if (tag == null || tag.isEmpty) continue;
+
+          final version = _stripVPrefix(tag);
           final apkUrl = _extractApkAssetUrl(release);
-          if (apkUrl != null) {
-            return (apkUrl: apkUrl, body: release['body']?.toString());
-          }
+          final publishedAt = _parseDate(release['published_at']?.toString());
+
+          return (
+            version: version,
+            apkUrl: apkUrl,
+            body: release['body']?.toString(),
+            publishedAt: publishedAt,
+          );
         }
       }
 
