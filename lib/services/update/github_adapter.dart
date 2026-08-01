@@ -267,6 +267,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// 从最终 URL 提取版本号，从 HTML 提取更新说明和发布日期。
   /// APK 下载链接通过 `releases/expanded_assets/{tag}` 端点单独获取
   /// （GitHub 已改用 JavaScript 动态渲染 asset 列表，静态 HTML 不含下载链接）。
+  ///
+  /// 当 releases/latest 重定向到 /releases（无 latest 标记）时，
+  /// 从 HTML 内容中提取第一个 release 的 tag。
   Future<VersionInfo?> _fetchFromHtml(
     Emulator emulator,
     String owner,
@@ -286,17 +289,36 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final finalUrl = response.realUri.toString();
 
       // 1. 从最终 URL 提取版本号：.../releases/tag/v1.2.3
-      final tagMatch =
+      String? tag;
+      final urlTagMatch =
           RegExp(r'/releases/tag/(.+?)(?:\?|#|$)').firstMatch(finalUrl);
-      if (tagMatch == null) return null;
-      final tag = tagMatch.group(1)!;
-      if (tag.isEmpty) return null;
+      if (urlTagMatch != null) {
+        tag = urlTagMatch.group(1);
+      }
+
+      // 如果 URL 中没有 tag（重定向到 /releases），从 HTML 内容提取第一个 tag
+      final tagFromList = tag == null || tag.isEmpty;
+      if (tagFromList) {
+        tag = _extractFirstTagFromHtml(html);
+        if (tag == null || tag.isEmpty) return null;
+      }
 
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
       // 2. 从 HTML 提取更新说明
-      final releaseNotes = _extractReleaseNotesFromHtml(html);
+      //    如果 tag 是从 releases 列表页提取的（非 tag 页面），
+      //    列表页的 markdown-body 可能不包含完整更新说明，
+      //    额外请求 tag 页面获取完整内容。
+      String? releaseNotes = _extractReleaseNotesFromHtml(html);
+      if (tagFromList) {
+        final tagPageNotes = await _fetchReleaseNotesFromHtml(
+          owner, repo, tag,
+        );
+        if (tagPageNotes != null && tagPageNotes.isNotEmpty) {
+          releaseNotes = tagPageNotes;
+        }
+      }
 
       // 3. 通过 expanded_assets 端点提取 APK 下载链接（不消耗 API 配额）
       //    GitHub 已改用 JavaScript 动态渲染 asset 列表，静态 HTML 不含下载链接。
@@ -309,7 +331,23 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
 
       // 5. 从 HTML 提取发布日期
-      final releaseDate = _extractReleaseDateFromHtml(html);
+      //    如果 tag 是从列表页提取的，也尝试从 tag 页面获取日期
+      DateTime? releaseDate = _extractReleaseDateFromHtml(html);
+      if (tagFromList) {
+        try {
+          final tagResponse = await _dio.get(
+            'https://github.com/$owner/$repo/releases/tag/$tag',
+            options: Options(
+              responseType: ResponseType.plain,
+              followRedirects: true,
+              validateStatus: (status) => status != null && status < 400,
+            ),
+          );
+          final tagHtml = tagResponse.data.toString();
+          final tagDate = _extractReleaseDateFromHtml(tagHtml);
+          if (tagDate != null) releaseDate = tagDate;
+        } catch (_) {}
+      }
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -451,6 +489,41 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
     }
     return null;
+  }
+
+  /// 当 releases/latest 重定向到 /releases（无 latest 标记）时，
+  /// 从 HTML 内容中提取第一个 release 的 tag。
+  ///
+  /// GitHub releases 页面 HTML 包含类似以下的链接：
+  /// `<a href="/owner/repo/releases/tag/TAG_NAME">`
+  ///
+  /// 优先选择非 Pre-release 的稳定版；若全部为 Pre-release，则返回第一个。
+  String? _extractFirstTagFromHtml(String html) {
+    final tagPattern = RegExp(
+      r'href="[^"]*releases/tag/([^"]+)"',
+    );
+
+    String? firstStableTag;
+    String? firstAnyTag;
+
+    for (final match in tagPattern.allMatches(html)) {
+      final tag = match.group(1)!;
+      if (tag.isEmpty) continue;
+
+      firstAnyTag ??= tag;
+
+      // 检查该 tag 附近是否有 "Pre-release" 标记
+      // 在 tag 链接之后 500 字符内查找 "Pre-release" 标签
+      final checkEnd =
+          match.end + 500 < html.length ? match.end + 500 : html.length;
+      final afterTag = html.substring(match.end, checkEnd);
+      if (!afterTag.toLowerCase().contains('pre-release') &&
+          !afterTag.toLowerCase().contains('pre release')) {
+        firstStableTag ??= tag;
+      }
+    }
+
+    return firstStableTag ?? firstAnyTag;
   }
 
   /// 解码 HTML 实体。
