@@ -289,19 +289,16 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final finalUrl = response.realUri.toString();
 
       // 1. 从最终 URL 提取版本号：.../releases/tag/v1.2.3
-      String? tag;
       final urlTagMatch =
           RegExp(r'/releases/tag/(.+?)(?:\?|#|$)').firstMatch(finalUrl);
-      if (urlTagMatch != null) {
-        tag = urlTagMatch.group(1);
-      }
+      String? tag = urlTagMatch?.group(1);
 
       // 如果 URL 中没有 tag（重定向到 /releases），从 HTML 内容提取第一个 tag
       final tagFromList = tag == null || tag.isEmpty;
       if (tagFromList) {
         tag = _extractFirstTagFromHtml(html);
-        if (tag == null || tag.isEmpty) return null;
       }
+      if (tag == null || tag.isEmpty) return null;
 
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
