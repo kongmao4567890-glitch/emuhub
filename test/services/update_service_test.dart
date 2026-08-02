@@ -75,7 +75,9 @@ void main() {
     final result = await service.checkAll([first, second]);
 
     expect(result.checked, 2);
-    expect(adapter.calls, 1);
+    // 两个相同来源共享一次轻量请求和一次完整详情请求。
+    expect(adapter.calls, 2);
+    expect(adapter.detailCalls, 1);
     expect(
       await database.cachedVersionsDao.getCachedVersion(first.id),
       isNotNull,
@@ -86,27 +88,26 @@ void main() {
     );
   });
 
-  test('does not use check time as release date and fills details on entry',
+  test('batch update check stores complete release metadata',
       () async {
     final emulator = _emulator('emu-a');
 
     await service.checkAll([emulator]);
-    var cached =
+    final cached =
         await database.cachedVersionsDao.getCachedVersion(emulator.id);
-    expect(cached?.lastReleaseDate, isNull);
-
-    await service.checkOne(emulator);
-    cached = await database.cachedVersionsDao.getCachedVersion(emulator.id);
     expect(
       cached?.lastReleaseDate,
       DateTime.utc(2026, 1, 1).millisecondsSinceEpoch,
     );
+    expect(cached?.releaseNotes, 'notes for 1.0.0');
+    expect(cached?.resolvedDownloadUrl, 'https://example.com/1.0.0.apk');
   });
 }
 
 class _MutableAdapter implements VersionAdapter {
   String version = '1.0.0';
   int calls = 0;
+  int detailCalls = 0;
 
   @override
   String get adapterName => 'github';
@@ -117,6 +118,7 @@ class _MutableAdapter implements VersionAdapter {
     bool includeDetails = false,
   }) async {
     calls++;
+    if (includeDetails) detailCalls++;
     return VersionInfo(
       emulatorId: emulator.id,
       version: version,

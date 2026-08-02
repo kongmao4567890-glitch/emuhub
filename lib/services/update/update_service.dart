@@ -116,7 +116,9 @@ class UpdateService {
   /// 检查全部模拟器的更新。
   ///
   /// 按 [_maxConcurrency] 将模拟器分批，每批内并发请求；批次之间插入
-  /// [_requestDelay] 延迟以降低被限流的风险。单个失败不影响其它项。
+  /// [_requestDelay] 延迟以降低被限流的风险。检查时一次性获取版本号、
+  /// 发布日期、更新说明及下载地址，详情页只读取这里写入的缓存。
+  /// 单个失败不影响其它项。
   Future<CheckResult> checkAll(List<Emulator> emulators) async {
     final updated = <VersionInfo>[];
     final failed = <String>[];
@@ -143,6 +145,7 @@ class UpdateService {
           (emulator) => _checkOneInternal(
             emulator,
             sharedFetches: sharedFetches,
+            includeDetails: true,
           ),
         ),
       );
@@ -172,7 +175,11 @@ class UpdateService {
   ///
   /// 返回 `null` 表示抓取失败或无可用版本。
   Future<VersionInfo?> checkOne(Emulator emulator) async {
-    final outcome = await _checkOneInternal(emulator, includeDetails: true);
+    final outcome = await _checkOneInternal(
+      emulator,
+      includeDetails: true,
+      forceDetails: true,
+    );
     return outcome.versionInfo;
   }
 
@@ -186,24 +193,51 @@ class UpdateService {
     Emulator emulator, {
     Map<String, Future<VersionInfo?>>? sharedFetches,
     bool includeDetails = false,
+    bool forceDetails = false,
   }) async {
     try {
       final adapter = _selectAdapter(emulator);
       final requestKey = _requestKey(emulator, adapter);
+      final cached = await _dao.getCachedVersion(emulator.id);
+
+      // 先轻量获取版本号。批量检查只在版本变化、首次检查、已有元数据
+      // 缺失/可疑时再抓完整 Release 页面，兼顾完整性和请求数量。
       final fetch = sharedFetches?.putIfAbsent(
             requestKey,
             () => _fetchLatestWithFallback(
               emulator,
               adapter,
-              includeDetails: includeDetails,
+              includeDetails: false,
             ),
           ) ??
           _fetchLatestWithFallback(
             emulator,
             adapter,
-            includeDetails: includeDetails,
+            includeDetails: false,
           );
       var latest = await fetch;
+
+      if (latest != null &&
+          includeDetails &&
+          adapter.adapterName == 'github' &&
+          (forceDetails || _needsDetailedFetch(cached, latest))) {
+        final detailsKey = '$requestKey\u0000details';
+        final detailedFetch = sharedFetches?.putIfAbsent(
+              detailsKey,
+              () => _fetchLatestWithFallback(
+                emulator,
+                adapter,
+                includeDetails: true,
+              ),
+            ) ??
+            _fetchLatestWithFallback(
+              emulator,
+              adapter,
+              includeDetails: true,
+            );
+        final detailed = await detailedFetch;
+        if (detailed != null) latest = detailed;
+      }
 
       // 同一数据源的结果可供多个机种条目复用，但每条缓存仍使用自己的 id。
       if (latest != null && latest.emulatorId != emulator.id) {
@@ -219,7 +253,6 @@ class UpdateService {
         );
       }
 
-      final cached = await _dao.getCachedVersion(emulator.id);
       late final VersionInfo versionInfo;
       var detectedUpdate = false;
 
@@ -290,6 +323,22 @@ class UpdateService {
         detectedUpdate: false,
       );
     }
+  }
+
+  bool _needsDetailedFetch(CachedVersion? cached, VersionInfo latest) {
+    if (cached == null) return true;
+    if (VersionComparator.isNewer(cached.currentVersion, latest.version) ||
+        VersionComparator.isNewer(latest.version, cached.currentVersion)) {
+      return true;
+    }
+    if (cached.lastReleaseDate == null || cached.releaseNotes == null) {
+      return true;
+    }
+
+    // 旧版本曾把检查时间写成发布日期；两者几乎相同即视为待修复数据。
+    final difference =
+        (cached.lastCheckedAt - cached.lastReleaseDate!).abs();
+    return difference <= const Duration(minutes: 5).inMilliseconds;
   }
 
   /// 执行主数据源抓取及两级回退。
