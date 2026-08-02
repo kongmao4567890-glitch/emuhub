@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:html/parser.dart' as html_parser;
 
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
@@ -72,43 +73,57 @@ class GitHubReleasesAdapter implements VersionAdapter {
   }
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final parsed = _parseRepo(emulator.sourceUrl);
     if (parsed == null) return null;
     final (owner, repo) = parsed;
 
     VersionInfo? result;
 
-    // 策略 0：HTML 解析法（不消耗 API 配额）
-    result = await _fetchFromHtml(emulator, owner, repo);
+    // 策略 1：轻量重定向法（不消耗 API 配额，也不下载完整 release 页面）
+    result = await _fetchViaRedirect(emulator, owner, repo);
 
-    // 策略 1：重定向法（不消耗 API 配额）
+    // 策略 2：HTML 解析法（仅作为无 latest 重定向时的回退）
     if (result == null) {
-      result = await _fetchViaRedirect(emulator, owner, repo);
+      result = await _fetchFromHtml(emulator, owner, repo);
     }
 
-    // 策略 2：API releases 列表（消耗 1 次配额）
+    // 策略 3：API releases 列表（消耗 1 次配额）
     if (result == null) {
       result = await _fetchFromApiReleasesList(emulator, owner, repo);
     }
 
-    // 策略 3：API tags（消耗 1 次配额）
+    // 策略 4：API tags（消耗 1 次配额）
     if (result == null) {
       result = await _fetchFromTags(emulator, owner, repo);
+    }
+
+    // 详情页需要完整更新说明；批量/后台检查只取轻量版本信息。
+    if (result != null && includeDetails) {
+      final detailed = await _fetchFromHtml(emulator, owner, repo);
+      if (detailed != null &&
+          !VersionComparator.isNewer(result.version, detailed.version) &&
+          !VersionComparator.isNewer(detailed.version, result.version)) {
+        result = result.copyWith(
+          releaseDate: detailed.releaseDate,
+          releaseNotes: detailed.releaseNotes ?? result.releaseNotes,
+          downloadUrl: detailed.downloadUrl ?? result.downloadUrl,
+        );
+      }
     }
 
     // 如果成功获取到版本信息，尝试获取 prerelease 信息
     // 并检查预发布版是否比稳定版更新。
     //
-    // 注意：不再限制 devUrl 非空才检查预发布版。
-    // 很多模拟器的最新版本是预发布版（如 Azahar 2126.0-rc5），
-    // 如果不检查预发布版，用户会看到过时的稳定版号，误以为没有更新。
-    if (result != null) {
+    // 仅对明确配置了开发版渠道的条目检查预发布版，避免批量检查时
+    // 为所有 GitHub 仓库下载体积较大的 releases 列表页。
+    if (result != null && emulator.devUrl.isNotEmpty) {
       // 优先用 HTML 解析（不消耗 API 配额）
       var devInfo = await _fetchPrereleaseInfoFromHtml(owner, repo);
-      // 仅对配置了 devUrl 的模拟器回退到 API（避免为全部 227 个模拟器
-      // 消耗 API 配额）。无 devUrl 的模拟器仅依赖 HTML 解析。
-      if (devInfo == null && emulator.devUrl.isNotEmpty) {
+      if (devInfo == null) {
         devInfo = await _fetchPrereleaseInfo(owner, repo);
       }
       if (devInfo != null) {
@@ -254,16 +269,15 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// - 返回 404（完全无 releases）→ 需要策略 3
   /// - 网络错误
   ///
-  /// 成功后，始终调用 API `releases/tags/{tag}` 获取 release body（更新说明）
-  /// 和 published_at 发布日期，消耗 1 次 API 配额。
-  /// 若 API 调用因限流失败，则回退到动态下载链接构造，releaseNotes 为 null。
+  /// 成功后仅请求轻量的 `expanded_assets` HTML 片段解析 APK，不请求完整
+  /// release 页面或 API。更新说明会在必要的回退路径中补充。
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
     String repo,
   ) async {
     try {
-      final response = await _dio.get(
+      final response = await _dio.head(
         'https://github.com/$owner/$repo/releases/latest',
         options: _htmlOptions(followRedirects: false),
       );
@@ -284,23 +298,6 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
-      // 始终通过 API 获取 release body（更新说明）+ asset URL + 发布日期
-      final releaseInfo = await _fetchReleaseInfoByTag(owner, repo, tag);
-
-      // 如果 API 成功，使用其 asset URL 和 release body
-      if (releaseInfo != null) {
-        return VersionInfo(
-          emulatorId: emulator.id,
-          version: version,
-          releaseDate: releaseInfo.publishedAt ?? DateTime.now(),
-          releaseNotes: releaseInfo.body,
-          isNew: false,
-          downloadUrl: releaseInfo.apkUrl,
-        );
-      }
-
-      // API 失败（限流或网络错误）→ 通过 expanded_assets 获取 APK 链接
-      final htmlNotes = await _fetchReleaseNotesFromHtml(owner, repo, tag);
       var dynamicDownloadUrl = await _fetchApkUrlFromExpandedAssets(
         owner, repo, tag,
       );
@@ -315,7 +312,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         emulatorId: emulator.id,
         version: version,
         releaseDate: DateTime.now(),
-        releaseNotes: htmlNotes,
+        releaseNotes: null,
         isNew: false,
         downloadUrl: dynamicDownloadUrl,
       );
@@ -461,32 +458,17 @@ class GitHubReleasesAdapter implements VersionAdapter {
   ///
   /// GitHub release 页面的更新说明位于 `<div class="markdown-body">` 元素中。
   String? _extractReleaseNotesFromHtml(String html) {
-    final patterns = <RegExp>[
-      // 主匹配：markdown-body div（非贪婪匹配到闭合标签）
-      RegExp(
-        r'<div[^>]*class="[^"]*markdown-body[^"]*"[^>]*>([\s\S]*?)</div>',
-        caseSensitive: false,
-      ),
-    ];
-
-    for (final pattern in patterns) {
-      final match = pattern.firstMatch(html);
-      if (match != null) {
-        var content = match.group(1)!;
-        // Strip HTML tags
-        content = content.replaceAll(RegExp(r'<[^>]+>'), '');
-        // Decode HTML entities
-        content = _decodeHtmlEntities(content);
-        // Clean up whitespace
-        content = content
-            .replaceAll(RegExp(r'\n{3,}'), '\n\n')
-            .trim();
-        if (content.isNotEmpty) {
-          return content;
-        }
-      }
+    try {
+      final document = html_parser.parse(html);
+      final releaseBody = document.querySelector('.markdown-body');
+      final content = releaseBody?.text
+          .replaceAll(RegExp(r'[ \t]+'), ' ')
+          .replaceAll(RegExp(r'\n{3,}'), '\n\n')
+          .trim();
+      return content == null || content.isEmpty ? null : content;
+    } catch (_) {
+      return null;
     }
-    return null;
   }
 
   /// 从 GitHub releases 页面 HTML 提取 APK 下载链接。
@@ -568,20 +550,6 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
 
     return firstStableTag ?? firstAnyTag;
-  }
-
-  /// 解码 HTML 实体。
-  String _decodeHtmlEntities(String text) {
-    return text
-        .replaceAll('&lt;', '<')
-        .replaceAll('&gt;', '>')
-        .replaceAll('&amp;', '&')
-        .replaceAll('&quot;', '"')
-        .replaceAll('&#39;', "'")
-        .replaceAll('&apos;', "'")
-        .replaceAll('&nbsp;', ' ')
-        .replaceAll('&#x2F;', '/')
-        .replaceAll('&#x27;', "'");
   }
 
   /// API 法：请求 releases 列表，取第一条。
@@ -711,63 +679,15 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 通过 API 获取指定 tag 对应 release 的完整信息（APK 直链 + body + 发布日期）。
-  ///
-  /// 消耗 1 次 GitHub API 匿名配额。
-  /// 在重定向法获取到版本号后调用，用于获取更新说明和真实 asset 直链。
-  ///
-  /// 同时尝试带 `v` 前缀和不带前缀的 tag 两种形式。
-  Future<({String? apkUrl, String? body, DateTime? publishedAt})?> _fetchReleaseInfoByTag(
-    String owner,
-    String repo,
-    String tag,
-  ) async {
-    // 尝试原始 tag
-    var result = await _tryFetchReleaseInfo(owner, repo, tag);
-    if (result != null) return result;
-
-    // 如果原始 tag 不带 v 前缀，尝试加上
-    if (!tag.startsWith('v') && !tag.startsWith('V')) {
-      result = await _tryFetchReleaseInfo(owner, repo, 'v$tag');
-      if (result != null) return result;
-    }
-
-    // 如果原始 tag 带 v 前缀，尝试去掉
-    if (tag.startsWith('v') || tag.startsWith('V')) {
-      result = await _tryFetchReleaseInfo(owner, repo, tag.substring(1));
-      if (result != null) return result;
-    }
-
-    return null;
-  }
-
-  /// 请求 releases/tags/{tag} 接口并提取完整 release 信息。
-  Future<({String? apkUrl, String? body, DateTime? publishedAt})?> _tryFetchReleaseInfo(
-    String owner,
-    String repo,
-    String tag,
-  ) async {
-    try {
-      final response = await _dio.get(
-        'https://api.github.com/repos/$owner/$repo/releases/tags/$tag',
-      );
-      final release = _asMap(response.data);
-      return (
-        apkUrl: _extractApkAssetUrl(release),
-        body: release['body']?.toString(),
-        publishedAt: _parseDate(release['published_at']?.toString()),
-      );
-    } catch (_) {
-      return null;
-    }
-  }
-
   /// 从 GitHub 仓库 URL 解析出 (owner, repo)。
   (String, String)? _parseRepo(String sourceUrl) {
     if (sourceUrl.isEmpty) return null;
     try {
       final uri = Uri.parse(sourceUrl);
-      if (!uri.host.contains('github.com')) return null;
+      if ((uri.scheme != 'https' && uri.scheme != 'http') ||
+          uri.host != 'github.com') {
+        return null;
+      }
       final segments = uri.pathSegments.where((s) => s.isNotEmpty).toList();
       if (segments.length < 2) return null;
       final owner = segments[0];

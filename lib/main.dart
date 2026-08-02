@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -18,21 +20,6 @@ Future<void> main() async {
   final prefs = await SharedPreferences.getInstance();
   final settings = SettingsRepository(prefs).getSettings();
 
-  // 初始化本地通知服务（含 Android 13+ 通知运行时权限请求）。
-  await NotificationService().initialize();
-
-  // 初始化 workmanager 并按用户设置注册周期性后台更新检查。
-  // 失败（如非 Android 平台）不应阻断应用启动。
-  try {
-    await BackgroundTask.initializeWorkmanager();
-    await BackgroundTask.registerPeriodicTask(
-      frequency: settings.checkIntervalDuration,
-      wifiOnly: settings.wifiOnly,
-    );
-  } catch (_) {
-    // 后台任务注册失败不影响前台功能
-  }
-
   runApp(
     ProviderScope(
       overrides: [
@@ -41,6 +28,25 @@ Future<void> main() async {
       child: const EmuHubApp(),
     ),
   );
+
+  // 通知与后台任务都不是首帧渲染的前置条件。放到 runApp 之后初始化，
+  // 避免插件异常或较慢的平台调用造成白屏、闪退或启动时间过长。
+  unawaited(_initializeBackgroundServices(settings));
+}
+
+Future<void> _initializeBackgroundServices(AppSettings settings) async {
+  try {
+    if (settings.notificationEnabled) {
+      await NotificationService().initialize();
+    }
+    await BackgroundTask.initializeWorkmanager();
+    await BackgroundTask.registerPeriodicTask(
+      frequency: settings.checkIntervalDuration,
+      wifiOnly: settings.wifiOnly,
+    );
+  } catch (_) {
+    // 后台能力不可用时不影响前台浏览与手动检查。
+  }
 }
 
 class EmuHubApp extends ConsumerWidget {

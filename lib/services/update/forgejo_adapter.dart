@@ -38,7 +38,10 @@ class ForgejoReleasesAdapter implements VersionAdapter {
   String get adapterName => 'forgejo';
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final parsed = _parseRepo(emulator.sourceUrl);
     if (parsed == null) return null;
     final (host, owner, repo) = parsed;

@@ -7,6 +7,10 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
+concurrency:
+  group: android-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,7 +30,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          flutter-version: '3.44.8'
           cache: true
 
       - name: Get Flutter version
@@ -35,23 +39,14 @@ jobs:
       - name: Download dependencies
         run: flutter pub get
 
-      - name: Repair Android project structure
-        run: |
-          flutter create --platforms=android --org com.emuhub .
-          # 恢复自定义配置（flutter create 会覆盖 gradle 文件、清单与 Kotlin 代码）
-          git checkout android/settings.gradle.kts android/build.gradle.kts android/app/build.gradle.kts android/gradle.properties android/gradle/wrapper/gradle-wrapper.properties
-          git checkout android/app/src/main/AndroidManifest.xml android/app/src/main/kotlin/
-          # 若 gradlew 缺失则通过系统 gradle 生成 wrapper
-          if [ ! -f android/gradlew ]; then
-            gradle wrapper --gradle-version 8.11.1 --distribution-type bin -p android || true
-          fi
-          chmod +x android/gradlew
-
       - name: Generate code (freezed / json_serializable / drift)
         run: dart run build_runner build --delete-conflicting-outputs
 
       - name: Analyze code
-        run: flutter analyze --no-fatal-infos --no-fatal-warnings || true
+        run: flutter analyze --no-fatal-infos
+
+      - name: Run tests
+        run: flutter test
 
       - name: Build APK
         # versionCode 随 run_number 递增，否则所有 Release 的 versionCode 恒为 1，

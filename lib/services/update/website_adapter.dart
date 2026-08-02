@@ -33,7 +33,10 @@ class WebsiteAdapter implements VersionAdapter {
   String get adapterName => 'website';
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final url = emulator.website;
     if (url.isEmpty) return null;
 

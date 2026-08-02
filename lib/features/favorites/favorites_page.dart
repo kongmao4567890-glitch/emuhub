@@ -181,6 +181,11 @@ class FavoritesPage extends ConsumerWidget {
                 version: cachedVersion?.currentVersion ?? '',
                 hasNewVersion: hasNew,
                 consoleIcon: console?.icon ?? '🎮',
+                notify: fav.notify,
+                onToggleNotification: () => ref
+                    .read(appDatabaseProvider)
+                    .favoritesDao
+                    .setNotify(fav.emulatorId, !fav.notify),
               );
             }),
             const SizedBox(height: 8),
@@ -264,6 +269,8 @@ class _FavoriteCard extends StatelessWidget {
     required this.version,
     required this.hasNewVersion,
     required this.consoleIcon,
+    required this.notify,
+    required this.onToggleNotification,
   });
 
   final Emulator? emulator;
@@ -271,6 +278,8 @@ class _FavoriteCard extends StatelessWidget {
   final String version;
   final bool hasNewVersion;
   final String consoleIcon;
+  final bool notify;
+  final VoidCallback onToggleNotification;
 
   @override
   Widget build(BuildContext context) {
@@ -328,6 +337,17 @@ class _FavoriteCard extends StatelessWidget {
                 const SizedBox(width: 8),
                 const NewVersionBadge(),
               ],
+              IconButton(
+                onPressed: onToggleNotification,
+                tooltip: notify ? '关闭此模拟器的通知' : '开启此模拟器的通知',
+                visualDensity: VisualDensity.compact,
+                icon: Icon(
+                  notify
+                      ? Icons.notifications_active_outlined
+                      : Icons.notifications_off_outlined,
+                  color: notify ? cs.primary : cs.onSurfaceVariant,
+                ),
+              ),
               const SizedBox(width: 4),
               Icon(Icons.chevron_right, color: cs.onSurfaceVariant),
             ],

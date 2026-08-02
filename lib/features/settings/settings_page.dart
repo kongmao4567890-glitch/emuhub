@@ -156,17 +156,6 @@ class SettingsPage extends ConsumerWidget {
                       );
                 },
               ),
-              const Divider(height: 1, indent: 16),
-              SwitchListTile(
-                title: const Text('App 自身更新检查'),
-                subtitle: const Text('检查 EmuHub 是否有新版本'),
-                value: settings.appUpdateCheck,
-                onChanged: (value) {
-                  ref.read(appSettingsProvider.notifier).updateSettings(
-                        settings.copyWith(appUpdateCheck: value),
-                      );
-                },
-              ),
             ],
           ),
 

@@ -83,20 +83,28 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
   bool _isChecking = false;
 
   /// 自动触发一次版本检查，获取最新版本信息和更新内容。
-  void _autoCheckUpdate(Emulator emulator) {
+  Future<void> _autoCheckUpdate(Emulator emulator) async {
     if (_isChecking) return;
     setState(() => _isChecking = true);
 
-    final updateService = ref.read(updateServiceProvider);
-    updateService.checkOne(emulator).whenComplete(() {
+    try {
+      final updateService = ref.read(updateServiceProvider);
+      await updateService.checkOne(emulator);
+      if (mounted) {
+        await ref
+            .read(appDatabaseProvider)
+            .cachedVersionsDao
+            .markAsSeen(widget.emulatorId);
+      }
+    } finally {
       if (mounted) {
         setState(() => _isChecking = false);
       }
-    });
+    }
   }
 
   /// 手动触发版本检查（点击刷新按钮时调用）。
-  void _manualCheckUpdate() {
+  Future<void> _manualCheckUpdate() async {
     if (_isChecking) return;
     final config = ref.read(emulatorsConfigProvider).valueOrNull;
     if (config == null) return;
@@ -104,12 +112,20 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     if (result == null) return;
 
     setState(() => _isChecking = true);
-    final updateService = ref.read(updateServiceProvider);
-    updateService.checkOne(result.emulator).whenComplete(() {
+    try {
+      final updateService = ref.read(updateServiceProvider);
+      await updateService.checkOne(result.emulator);
+      if (mounted) {
+        await ref
+            .read(appDatabaseProvider)
+            .cachedVersionsDao
+            .markAsSeen(widget.emulatorId);
+      }
+    } finally {
       if (mounted) {
         setState(() => _isChecking = false);
       }
-    });
+    }
   }
 
   @override
@@ -677,8 +693,13 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         if (emulator.sourceUrl.isEmpty) return;
         break;
       case 'gitlab':
+        if (emulator.sourceUrl.isEmpty) return;
+        url = emulator.sourceUrl.endsWith('/')
+            ? '${emulator.sourceUrl}-/releases'
+            : '${emulator.sourceUrl}/-/releases';
+        break;
       case 'forgejo':
-        // GitLab/Forgejo Releases 页面
+        // Forgejo Releases 页面
         url = emulator.sourceUrl.endsWith('/')
             ? '${emulator.sourceUrl}releases'
             : '${emulator.sourceUrl}/releases';

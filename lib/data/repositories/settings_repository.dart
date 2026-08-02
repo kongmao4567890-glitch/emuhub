@@ -15,7 +15,7 @@ enum CheckScope { all, favoritesOnly }
 ///
 /// 不可变值对象，通过 [copyWith] 产生新实例。
 /// 默认值与产品需求一致：每 4 小时检查、检查全部、开启通知、
-/// 22:00–08:00 免打扰、不限 Wi-Fi、开启 App 自身更新检查。
+/// 22:00–08:00 免打扰、不限 Wi-Fi。
 class AppSettings {
   final CheckInterval checkInterval;
   final CheckScope checkScope;
@@ -23,7 +23,6 @@ class AppSettings {
   final String quietHoursStart; // 形如 "22:00"
   final String quietHoursEnd; // 形如 "08:00"
   final bool wifiOnly;
-  final bool appUpdateCheck;
 
   const AppSettings({
     this.checkInterval = CheckInterval.fourHours,
@@ -32,7 +31,6 @@ class AppSettings {
     this.quietHoursStart = '22:00',
     this.quietHoursEnd = '08:00',
     this.wifiOnly = false,
-    this.appUpdateCheck = true,
   });
 
   /// 复制并覆盖部分字段，未提供的字段保持原值。
@@ -43,7 +41,6 @@ class AppSettings {
     String? quietHoursStart,
     String? quietHoursEnd,
     bool? wifiOnly,
-    bool? appUpdateCheck,
   }) {
     return AppSettings(
       checkInterval: checkInterval ?? this.checkInterval,
@@ -52,7 +49,6 @@ class AppSettings {
       quietHoursStart: quietHoursStart ?? this.quietHoursStart,
       quietHoursEnd: quietHoursEnd ?? this.quietHoursEnd,
       wifiOnly: wifiOnly ?? this.wifiOnly,
-      appUpdateCheck: appUpdateCheck ?? this.appUpdateCheck,
     );
   }
 
@@ -85,7 +81,6 @@ class _StorageKeys {
   static const String quietHoursStart = 'settings_quiet_hours_start';
   static const String quietHoursEnd = 'settings_quiet_hours_end';
   static const String wifiOnly = 'settings_wifi_only';
-  static const String appUpdateCheck = 'settings_app_update_check';
 }
 
 /// 用户设置仓库。
@@ -109,7 +104,6 @@ class SettingsRepository {
           _prefs.getString(_StorageKeys.quietHoursStart) ?? '22:00',
       quietHoursEnd: _prefs.getString(_StorageKeys.quietHoursEnd) ?? '08:00',
       wifiOnly: _prefs.getBool(_StorageKeys.wifiOnly) ?? false,
-      appUpdateCheck: _prefs.getBool(_StorageKeys.appUpdateCheck) ?? true,
     );
   }
 
@@ -127,7 +121,6 @@ class SettingsRepository {
       _prefs.setString(_StorageKeys.quietHoursStart, settings.quietHoursStart),
       _prefs.setString(_StorageKeys.quietHoursEnd, settings.quietHoursEnd),
       _prefs.setBool(_StorageKeys.wifiOnly, settings.wifiOnly),
-      _prefs.setBool(_StorageKeys.appUpdateCheck, settings.appUpdateCheck),
     ]);
   }
 

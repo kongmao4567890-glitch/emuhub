@@ -8,6 +8,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:workmanager/workmanager.dart';
 
+import '../core/constants/app_constants.dart';
 import '../data/database/database.dart';
 import '../data/models/emulator.dart';
 import '../data/models/emulators_config.dart';
@@ -43,7 +44,7 @@ class BackgroundTask {
   ///
   /// 注意：必须与主应用创建 [AppDatabase] 时使用的文件名保持一致，
   /// 否则后台任务与前台将访问不同的数据库。
-  static const String databaseName = 'emuhub.db';
+  static const String databaseName = AppConstants.databaseName;
 
   /// 初始化 workmanager，注册 [callbackDispatcher]。
   ///
@@ -118,16 +119,18 @@ void callbackDispatcher() {
       // 打开数据库
       db = await _openDatabase();
 
-      // 按检查范围过滤：仅收藏时只检查开启了通知的收藏项
+      // 收藏既决定“仅收藏”检查范围，也决定哪些项目可以发送通知。
+      // notify=false 只关闭通知，不应让该收藏项停止更新检查。
+      final favorites = await db.favoritesDao.getAllFavorites();
+      final favoriteIds = favorites.map((f) => f.emulatorId).toSet();
+      final notifiableIds = favorites
+          .where((f) => f.notify)
+          .map((f) => f.emulatorId)
+          .toSet();
+
       var targets = emulators;
       if (settings.checkScope == CheckScope.favoritesOnly) {
-        final favorites = await db.favoritesDao.getAllFavorites();
-        final notifiableIds = favorites
-            .where((f) => f.notify)
-            .map((f) => f.emulatorId)
-            .toSet();
-        targets =
-            emulators.where((e) => notifiableIds.contains(e.id)).toList();
+        targets = emulators.where((e) => favoriteIds.contains(e.id)).toList();
       }
 
       // 无检查目标时直接成功结束
@@ -144,9 +147,12 @@ void callbackDispatcher() {
       // 执行更新检查
       final updateService = UpdateService(dao: db.cachedVersionsDao);
       final result = await updateService.checkAll(targets);
+      final notifiableUpdates = result.updated
+          .where((info) => notifiableIds.contains(info.emulatorId))
+          .toList();
 
       // 有更新且通知开启、不在免打扰时段内，则逐个发送通知
-      if (result.hasUpdates &&
+      if (notifiableUpdates.isNotEmpty &&
           settings.notificationEnabled &&
           !_isInQuietHours(
             settings.quietHoursStart,
@@ -155,7 +161,7 @@ void callbackDispatcher() {
           )) {
         final notif = NotificationService();
         await notif.initialize();
-        for (final info in result.updated) {
+        for (final info in notifiableUpdates) {
           final name = _emulatorName(emulators, info.emulatorId);
           final old = oldVersions[info.emulatorId] ?? '未知版本';
           await notif.showUpdateNotification(name, old, info.version);

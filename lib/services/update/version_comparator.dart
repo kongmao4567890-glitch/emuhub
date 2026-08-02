@@ -16,35 +16,21 @@ class VersionComparator {
   ///
   /// 处理步骤：
   /// 1. 去除首尾空白；
-  /// 2. 去除 `v` / `V` 前缀（如 `v1.2.3` -> `1.2.3`）；
-  /// 3. 去除 `-beta` / `-rc.1` 等预发布后缀；
-  /// 4. 去除 `+build` 元数据后缀；
-  /// 5. 仅保留数字与点号，过滤掉其它字符。
+  /// 2. 忽略 `+build` 元数据；
+  /// 3. 提取第一个数字点分版本号。
   ///
   /// 例如：`V1.2.3-beta.1+build5` -> `1.2.3`。
   static String normalize(String version) {
     var v = version.trim();
-
-    // 去掉 v / V 前缀
-    if (v.startsWith('v') || v.startsWith('V')) {
-      v = v.substring(1);
-    }
-
-    // 去掉预发布后缀（-beta / -rc 等）
-    final dashIndex = v.indexOf('-');
-    if (dashIndex > 0) {
-      v = v.substring(0, dashIndex);
-    }
-
-    // 去掉构建元数据后缀（+build 等）
     final plusIndex = v.indexOf('+');
-    if (plusIndex > 0) {
+    if (plusIndex >= 0) {
       v = v.substring(0, plusIndex);
     }
 
-    // 仅保留数字和点
-    final numericPart = v.replaceAll(RegExp(r'[^0-9.]'), '');
-    return numericPart.trim();
+    // 不能简单按第一个 `-` 截断：`release-2024.01`、`android-1.2.3`
+    // 等常见 tag 的连字符位于版本号之前。只提取首个数字点分序列。
+    final match = RegExp(r'\d+(?:\.\d+)*').firstMatch(v);
+    return match?.group(0) ?? '';
   }
 
   /// 判断 [latest] 是否比 [current] 更新。
@@ -119,19 +105,16 @@ class VersionComparator {
   /// 例如：`1.2.3-rc.5+build` → `rc.5`
   static String _extractPrereleaseSuffix(String version) {
     var v = version.trim();
-    // 去掉 v / V 前缀
-    if (v.startsWith('v') || v.startsWith('V')) {
-      v = v.substring(1);
-    }
-    final dashIndex = v.indexOf('-');
-    if (dashIndex < 0) return '';
-    v = v.substring(dashIndex + 1);
-    // 去掉构建元数据
     final plusIndex = v.indexOf('+');
     if (plusIndex >= 0) {
       v = v.substring(0, plusIndex);
     }
-    return v.trim();
+
+    final numericMatch = RegExp(r'\d+(?:\.\d+)*').firstMatch(v);
+    if (numericMatch == null) return '';
+    final remainder = v.substring(numericMatch.end).trim();
+    if (!remainder.startsWith('-')) return '';
+    return remainder.substring(1).trim();
   }
 
   /// 比较两个预发布后缀的优先级。
@@ -169,8 +152,14 @@ class VersionComparator {
   static int _prereleasePriority(String suffix) {
     final lower = suffix.toLowerCase();
     if (lower.startsWith('rc') || lower.startsWith('release')) return 3;
-    if (lower.startsWith('beta') || lower.startsWith('b.')) return 2;
-    if (lower.startsWith('alpha') || lower.startsWith('a.')) return 1;
+    if (lower.startsWith('beta') ||
+        RegExp(r'^b(?:\d|[._-]|$)').hasMatch(lower)) {
+      return 2;
+    }
+    if (lower.startsWith('alpha') ||
+        RegExp(r'^a(?:\d|[._-]|$)').hasMatch(lower)) {
+      return 1;
+    }
     return 0;
   }
 
