@@ -68,7 +68,8 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-/// 打开页面时自动检查更新，也支持手动刷新。
+/// 页面只展示检查更新时写入的缓存，不会因进入页面而发起网络请求；
+/// 用户仍可通过刷新按钮单独重新检查当前模拟器。
 class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
@@ -79,24 +80,11 @@ class EmulatorDetailPage extends ConsumerStatefulWidget {
 }
 
 class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
-  bool _hasAutoChecked = false;
+  bool _hasMarkedAsSeen = false;
   bool _isChecking = false;
 
-  /// 自动触发一次版本检查，获取最新版本信息和更新内容。
-  void _autoCheckUpdate(Emulator emulator) {
-    if (_isChecking) return;
-    setState(() => _isChecking = true);
-
-    final updateService = ref.read(updateServiceProvider);
-    updateService.checkOne(emulator).whenComplete(() {
-      if (mounted) {
-        setState(() => _isChecking = false);
-      }
-    });
-  }
-
   /// 手动触发版本检查（点击刷新按钮时调用）。
-  void _manualCheckUpdate() {
+  Future<void> _manualCheckUpdate() async {
     if (_isChecking) return;
     final config = ref.read(emulatorsConfigProvider).valueOrNull;
     if (config == null) return;
@@ -104,12 +92,20 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     if (result == null) return;
 
     setState(() => _isChecking = true);
-    final updateService = ref.read(updateServiceProvider);
-    updateService.checkOne(result.emulator).whenComplete(() {
+    try {
+      final updateService = ref.read(updateServiceProvider);
+      await updateService.checkOne(result.emulator);
+      if (mounted) {
+        await ref
+            .read(appDatabaseProvider)
+            .cachedVersionsDao
+            .markAsSeen(widget.emulatorId);
+      }
+    } finally {
       if (mounted) {
         setState(() => _isChecking = false);
       }
-    });
+    }
   }
 
   @override
@@ -139,13 +135,15 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         final console = result.console;
         final emulator = result.emulator;
 
-        // 自动检查更新（仅在首次加载时触发一次）
-        if (!_hasAutoChecked) {
-          _hasAutoChecked = true;
+        // 进入详情页只清除本地未读标记，不发起版本检查网络请求。
+        if (!_hasMarkedAsSeen) {
+          _hasMarkedAsSeen = true;
           WidgetsBinding.instance.addPostFrameCallback((_) {
-            // 回调触发时页面可能已被销毁，setState 前必须判 mounted
             if (!mounted) return;
-            _autoCheckUpdate(emulator);
+            ref
+                .read(appDatabaseProvider)
+                .cachedVersionsDao
+                .markAsSeen(widget.emulatorId);
           });
         }
 
@@ -677,8 +675,13 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         if (emulator.sourceUrl.isEmpty) return;
         break;
       case 'gitlab':
+        if (emulator.sourceUrl.isEmpty) return;
+        url = emulator.sourceUrl.endsWith('/')
+            ? '${emulator.sourceUrl}-/releases'
+            : '${emulator.sourceUrl}/-/releases';
+        break;
       case 'forgejo':
-        // GitLab/Forgejo Releases 页面
+        // Forgejo Releases 页面
         url = emulator.sourceUrl.endsWith('/')
             ? '${emulator.sourceUrl}releases'
             : '${emulator.sourceUrl}/releases';

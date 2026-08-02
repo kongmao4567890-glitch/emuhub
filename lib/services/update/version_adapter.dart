@@ -17,5 +17,8 @@ abstract class VersionAdapter {
   /// 抓取指定 [emulator] 的最新版本信息。
   ///
   /// 成功时返回 [VersionInfo]；失败或无可用数据时返回 `null`。
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator);
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  });
 }

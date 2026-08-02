@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/constants/app_constants.dart';
-import '../../core/theme/app_theme.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 
@@ -153,17 +152,6 @@ class SettingsPage extends ConsumerWidget {
                 onChanged: (value) {
                   ref.read(appSettingsProvider.notifier).updateSettings(
                         settings.copyWith(wifiOnly: value),
-                      );
-                },
-              ),
-              const Divider(height: 1, indent: 16),
-              SwitchListTile(
-                title: const Text('App 自身更新检查'),
-                subtitle: const Text('检查 EmuHub 是否有新版本'),
-                value: settings.appUpdateCheck,
-                onChanged: (value) {
-                  ref.read(appSettingsProvider.notifier).updateSettings(
-                        settings.copyWith(appUpdateCheck: value),
                       );
                 },
               ),

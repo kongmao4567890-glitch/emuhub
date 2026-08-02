@@ -17,7 +17,7 @@ import 'version_adapter.dart';
 /// 2. `\"版本号\",\"x.y.z\"` 形式的扁平片段；
 /// 3. `\"currentVersion\":\"x.y.z\"` 形式的字段；
 /// 4. `<meta name="version">` 标签内容；
-/// 5. 通用 `x.y.z` 版本号正则。
+/// 5. `itemprop="softwareVersion"` 结构化字段。
 ///
 /// 任意解析失败均返回 `null`，不抛出异常。
 class PlayStoreAdapter implements VersionAdapter {
@@ -37,7 +37,10 @@ class PlayStoreAdapter implements VersionAdapter {
   String get adapterName => 'playstore';
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final playStoreId = emulator.playStoreId;
     if (playStoreId.isEmpty) return null;
 
@@ -55,7 +58,7 @@ class PlayStoreAdapter implements VersionAdapter {
       final version = _extractVersion(html);
       if (version == null || version.isEmpty) return null;
 
-      final releaseDate = _extractUpdateDate(html) ?? DateTime.now();
+      final releaseDate = _extractUpdateDate(html);
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -99,9 +102,13 @@ class PlayStoreAdapter implements VersionAdapter {
       // 忽略解析错误
     }
 
-    // 策略 5：通用版本号正则
-    final match5 =
-        RegExp(r'\b(\d+\.\d+\.\d+(?:\.\d+)?)\b').firstMatch(html);
+    // 策略 5：旧版 Play 页面使用过的结构化 softwareVersion 字段。
+    // 不使用“页面中第一个 x.y.z”作为兜底，因为它经常是脚本/协议版本，
+    // 会产生不存在的新版本通知。
+    final match5 = RegExp(
+      r'itemprop="softwareVersion"[^>]*>\s*([^<]+)',
+      caseSensitive: false,
+    ).firstMatch(html);
     if (match5 != null) return _cleanVersion(match5.group(1)!);
 
     return null;

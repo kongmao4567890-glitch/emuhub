@@ -7,6 +7,7 @@ import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
+import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
 import '../emulator/emulator_detail_page.dart' show findEmulator;
@@ -105,6 +106,28 @@ class _HomePageState extends ConsumerState<HomePage> {
   Future<void> _checkUpdatesOnFirstLaunch(List<Console> consoles) async {
     if (!mounted) return;
 
+    final settings = ref.read(appSettingsProvider);
+    final db = ref.read(appDatabaseProvider);
+    final cached = await db.cachedVersionsDao.getAllCachedVersions();
+    final freshnessCutoff = DateTime.now()
+        .subtract(settings.checkIntervalDuration)
+        .millisecondsSinceEpoch;
+
+    // 后台任务或近期的前台检查已经完成时，不要在每次回到首页后再次
+    // 请求上百个数据源。手动检查仍可在“更新中心”随时强制执行。
+    if (cached.any((entry) => entry.lastCheckedAt >= freshnessCutoff)) {
+      return;
+    }
+
+    var targets = consoles.expand((c) => c.emulators).toList();
+    if (settings.checkScope == CheckScope.favoritesOnly) {
+      final favorites = await db.favoritesDao.getAllFavorites();
+      final favoriteIds = favorites.map((f) => f.emulatorId).toSet();
+      targets = targets.where((e) => favoriteIds.contains(e.id)).toList();
+    }
+
+    if (targets.isEmpty || !mounted) return;
+
     // 显示检查中的 SnackBar
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
@@ -124,9 +147,8 @@ class _HomePageState extends ConsumerState<HomePage> {
     );
 
     try {
-      final allEmulators = consoles.expand((c) => c.emulators).toList();
       final updateService = ref.read(updateServiceProvider);
-      final result = await updateService.checkAll(allEmulators);
+      final result = await updateService.checkAll(targets);
 
       if (!mounted) return;
 
@@ -379,7 +401,7 @@ class _RecentUpdateCard extends StatelessWidget {
                       height: 20,
                       fit: BoxFit.cover,
                       errorBuilder: (_, __, ___) => Text(
-                        console?.icon ?? '🎮',
+                        console.icon,
                         style: const TextStyle(fontSize: 16),
                       ),
                     ),

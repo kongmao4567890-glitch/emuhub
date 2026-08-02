@@ -15,7 +15,8 @@ class AppConstants {
   ///
   /// 由 App 更新检查逻辑请求该仓库的 Releases 接口，
   /// 与 [appVersion] 比较以判断是否有新版本。
-  static const String githubRepo = 'https://github.com/yourname/emuhub';
+  static const String githubRepo =
+      'https://github.com/kongmao4567890-glitch/emuhub';
 
   /// 本地数据库文件名。
   ///

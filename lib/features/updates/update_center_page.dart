@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
-import '../../data/models/emulator.dart';
+import '../../data/models/emulators_config.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
@@ -152,7 +152,9 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
 
   /// 底部 "立即检查更新" 按钮。
   Widget _buildCheckButton(
-      BuildContext context, AsyncValue<dynamic> configAsync) {
+    BuildContext context,
+    AsyncValue<EmulatorsConfig> configAsync,
+  ) {
     final theme = Theme.of(context);
     return SafeArea(
       top: false,
@@ -189,7 +191,9 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
   }
 
   /// 触发更新检查。
-  Future<void> _checkUpdates(AsyncValue<dynamic> configAsync) async {
+  Future<void> _checkUpdates(
+    AsyncValue<EmulatorsConfig> configAsync,
+  ) async {
     final config = configAsync.valueOrNull;
     if (config == null) return;
 
@@ -199,9 +203,7 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
     });
 
     try {
-      final allEmulators = (config.consoles as List<Console>)
-          .expand((c) => c.emulators)
-          .toList();
+      final allEmulators = config.consoles.expand((c) => c.emulators).toList();
       final updateService = ref.read(updateServiceProvider);
       final result = await updateService.checkAll(allEmulators);
 

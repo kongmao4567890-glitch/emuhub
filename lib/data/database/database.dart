@@ -177,12 +177,26 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
       CachedVersionsCompanion(
         emulatorId: Value(info.emulatorId),
         currentVersion: Value(info.version),
-        lastReleaseDate: Value(info.releaseDate.millisecondsSinceEpoch),
+        lastReleaseDate: Value(info.releaseDate?.millisecondsSinceEpoch),
         releaseNotes: Value(info.releaseNotes),
         isNew: Value(info.isNew),
         resolvedDownloadUrl: Value(info.downloadUrl),
         resolvedDevDownloadUrl: Value(info.devDownloadUrl),
         resolvedDevReleaseNotes: Value(info.devReleaseNotes),
+        lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
+      ),
+    );
+  }
+
+  /// 仅刷新检查时间，不覆盖已经确认的版本号、下载链接和未读状态。
+  ///
+  /// 当远端暂时返回旧版本（例如 latest 标记回退或镜像延迟）时使用，
+  /// 防止本地缓存被降级。
+  Future<void> touchLastChecked(String emulatorId) async {
+    await (update(cachedVersions)
+          ..where((c) => c.emulatorId.equals(emulatorId)))
+        .write(
+      CachedVersionsCompanion(
         lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
       ),
     );
