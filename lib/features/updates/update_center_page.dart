@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
-import '../../data/models/emulator.dart';
 import '../../data/models/emulators_config.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';

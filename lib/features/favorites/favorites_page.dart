@@ -75,6 +75,7 @@ class FavoritesPage extends ConsumerWidget {
                 error: (_, __) => _buildError(context, ref, '缓存读取失败'),
                 data: (cached) => _buildFavoritesList(
                   context,
+                  ref,
                   config.consoles,
                   favorites,
                   cached,
@@ -90,6 +91,7 @@ class FavoritesPage extends ConsumerWidget {
   /// 构建收藏列表，按机种分组。
   Widget _buildFavoritesList(
     BuildContext context,
+    WidgetRef ref,
     List<Console> consoles,
     List<Favorite> favorites,
     List<CachedVersion> cached,
@@ -139,7 +141,7 @@ class FavoritesPage extends ConsumerWidget {
                         height: 24,
                         fit: BoxFit.cover,
                         errorBuilder: (_, __, ___) => Text(
-                          console?.icon ?? '🎮',
+                          console.icon,
                           style: const TextStyle(fontSize: 18),
                         ),
                       ),

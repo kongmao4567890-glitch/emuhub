@@ -401,7 +401,7 @@ class _RecentUpdateCard extends StatelessWidget {
                       height: 20,
                       fit: BoxFit.cover,
                       errorBuilder: (_, __, ___) => Text(
-                        console?.icon ?? '🎮',
+                        console.icon,
                         style: const TextStyle(fontSize: 16),
                       ),
                     ),

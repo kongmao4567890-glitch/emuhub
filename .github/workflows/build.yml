@@ -42,6 +42,8 @@ jobs:
       - name: Repair Android project structure
         run: |
           flutter create --platforms=android --org com.emuhub .
+          # flutter create 会生成引用模板 MyApp 的测试；本项目已有自己的测试套件。
+          rm -f test/widget_test.dart
           # 恢复项目自定义的 Gradle、清单与 Kotlin 配置。
           git checkout android/settings.gradle.kts android/build.gradle.kts android/app/build.gradle.kts android/gradle.properties android/gradle/wrapper/gradle-wrapper.properties
           git checkout android/app/src/main/AndroidManifest.xml android/app/src/main/kotlin/
