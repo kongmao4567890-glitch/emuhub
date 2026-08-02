@@ -39,6 +39,17 @@ jobs:
       - name: Download dependencies
         run: flutter pub get
 
+      - name: Repair Android project structure
+        run: |
+          flutter create --platforms=android --org com.emuhub .
+          # 恢复项目自定义的 Gradle、清单与 Kotlin 配置。
+          git checkout android/settings.gradle.kts android/build.gradle.kts android/app/build.gradle.kts android/gradle.properties android/gradle/wrapper/gradle-wrapper.properties
+          git checkout android/app/src/main/AndroidManifest.xml android/app/src/main/kotlin/
+          if [ ! -f android/gradlew ]; then
+            gradle wrapper --gradle-version 8.11.1 --distribution-type bin -p android
+          fi
+          chmod +x android/gradlew
+
       - name: Generate code (freezed / json_serializable / drift)
         run: dart run build_runner build --delete-conflicting-outputs
 
