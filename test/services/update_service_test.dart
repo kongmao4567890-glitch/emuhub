@@ -85,6 +85,23 @@ void main() {
       isNotNull,
     );
   });
+
+  test('does not use check time as release date and fills details on entry',
+      () async {
+    final emulator = _emulator('emu-a');
+
+    await service.checkAll([emulator]);
+    var cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+    expect(cached?.lastReleaseDate, isNull);
+
+    await service.checkOne(emulator);
+    cached = await database.cachedVersionsDao.getCachedVersion(emulator.id);
+    expect(
+      cached?.lastReleaseDate,
+      DateTime.utc(2026, 1, 1).millisecondsSinceEpoch,
+    );
+  });
 }
 
 class _MutableAdapter implements VersionAdapter {
@@ -103,7 +120,7 @@ class _MutableAdapter implements VersionAdapter {
     return VersionInfo(
       emulatorId: emulator.id,
       version: version,
-      releaseDate: DateTime.utc(2026, 1, 1),
+      releaseDate: includeDetails ? DateTime.utc(2026, 1, 1) : null,
       releaseNotes: 'notes for $version',
       isNew: false,
       downloadUrl: 'https://example.com/$version.apk',

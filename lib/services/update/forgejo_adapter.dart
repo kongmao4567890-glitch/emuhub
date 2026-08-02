@@ -93,7 +93,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: publishedAt ?? DateTime.now(),
+        releaseDate: publishedAt,
         releaseNotes: (body != null && body.isNotEmpty) ? body : null,
         isNew: false,
         downloadUrl: apkUrl,

@@ -248,6 +248,11 @@ class UpdateService {
             // 相同版本再次检查时保留“未读”状态；只有详情页明确查看后
             // 才由 markAsSeen 清除，避免提示自动消失。
             isNew: latestIsNewer || cached.isNew,
+            // 轻量检查无法获知发布日期时，不得用检查时间覆盖真实日期。
+            // 详情检查拿到日期后会自动补全缓存。
+            releaseDate: latestIsNewer
+                ? latest.releaseDate
+                : latest.releaseDate ?? _releaseDateFromCache(cached),
             // 同版本抓取偶发缺字段时保留此前解析成功的数据。
             releaseNotes: latestIsNewer
                 ? latest.releaseNotes
@@ -334,15 +339,20 @@ class UpdateService {
     return VersionInfo(
       emulatorId: cached.emulatorId,
       version: cached.currentVersion,
-      releaseDate: cached.lastReleaseDate != null
-          ? DateTime.fromMillisecondsSinceEpoch(cached.lastReleaseDate!)
-          : DateTime.now(),
+      releaseDate: _releaseDateFromCache(cached),
       releaseNotes: cached.releaseNotes,
       isNew: cached.isNew,
       downloadUrl: cached.resolvedDownloadUrl,
       devDownloadUrl: cached.resolvedDevDownloadUrl,
       devReleaseNotes: cached.resolvedDevReleaseNotes,
     );
+  }
+
+  DateTime? _releaseDateFromCache(CachedVersion cached) {
+    final timestamp = cached.lastReleaseDate;
+    return timestamp == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(timestamp);
   }
 
   /// 从 downloadUrl 中尝试提取版本号作为最后手段。
@@ -374,7 +384,7 @@ class UpdateService {
           return VersionInfo(
             emulatorId: emulator.id,
             version: version,
-            releaseDate: DateTime.now(),
+            releaseDate: null,
             releaseNotes: null,
             isNew: false,
             // 保留原始 downloadUrl，UI 层会根据最新版本动态替换
@@ -398,9 +408,7 @@ class UpdateService {
           (c) => VersionInfo(
             emulatorId: c.emulatorId,
             version: c.currentVersion,
-            releaseDate: c.lastReleaseDate != null
-                ? DateTime.fromMillisecondsSinceEpoch(c.lastReleaseDate!)
-                : DateTime.now(),
+            releaseDate: _releaseDateFromCache(c),
             releaseNotes: c.releaseNotes,
             isNew: true,
             // 携带适配器动态解析的下载直链，避免 UI 回退到可能 404 的静态 URL

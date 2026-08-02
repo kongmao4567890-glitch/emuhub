@@ -177,7 +177,7 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
       CachedVersionsCompanion(
         emulatorId: Value(info.emulatorId),
         currentVersion: Value(info.version),
-        lastReleaseDate: Value(info.releaseDate.millisecondsSinceEpoch),
+        lastReleaseDate: Value(info.releaseDate?.millisecondsSinceEpoch),
         releaseNotes: Value(info.releaseNotes),
         isNew: Value(info.isNew),
         resolvedDownloadUrl: Value(info.downloadUrl),

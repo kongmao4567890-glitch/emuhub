@@ -65,7 +65,7 @@ class GitLabReleasesAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: createdAt ?? DateTime.now(),
+        releaseDate: createdAt,
         releaseNotes: (description != null && description.isNotEmpty) ? description : null,
         isNew: false,
       );

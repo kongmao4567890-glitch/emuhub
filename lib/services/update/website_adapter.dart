@@ -53,7 +53,7 @@ class WebsiteAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: DateTime.now(),
+        releaseDate: null,
         releaseNotes: null,
         isNew: false,
       );

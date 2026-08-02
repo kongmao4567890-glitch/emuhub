@@ -58,7 +58,7 @@ class PlayStoreAdapter implements VersionAdapter {
       final version = _extractVersion(html);
       if (version == null || version.isEmpty) return null;
 
-      final releaseDate = _extractUpdateDate(html) ?? DateTime.now();
+      final releaseDate = _extractUpdateDate(html);
 
       return VersionInfo(
         emulatorId: emulator.id,

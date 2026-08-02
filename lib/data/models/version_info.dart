@@ -16,7 +16,10 @@ class VersionInfo with _$VersionInfo {
   const factory VersionInfo({
     required String emulatorId,
     required String version,
-    required DateTime releaseDate,
+    /// 远端能够明确解析出的发布日期。
+    ///
+    /// 轻量检查或仅有 tag 信息时为 null，不能用检查时间冒充发布日期。
+    DateTime? releaseDate,
     String? releaseNotes,
     required bool isNew,
 

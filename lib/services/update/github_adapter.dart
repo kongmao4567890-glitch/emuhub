@@ -108,10 +108,26 @@ class GitHubReleasesAdapter implements VersionAdapter {
           !VersionComparator.isNewer(result.version, detailed.version) &&
           !VersionComparator.isNewer(detailed.version, result.version)) {
         result = result.copyWith(
-          releaseDate: detailed.releaseDate,
+          releaseDate: detailed.releaseDate ?? result.releaseDate,
           releaseNotes: detailed.releaseNotes ?? result.releaseNotes,
           downloadUrl: detailed.downloadUrl ?? result.downloadUrl,
         );
+      }
+
+      // GitHub 的 HTML 结构偶尔变化或页面尚未完整返回时，日期/说明可能解析
+      // 不到。详情页再用 latest release API 补齐一次，避免必须手动刷新。
+      if (result.releaseDate == null || result.releaseNotes == null) {
+        final apiDetailed =
+            await _fetchFromApiLatestRelease(emulator, owner, repo);
+        if (apiDetailed != null &&
+            !VersionComparator.isNewer(result.version, apiDetailed.version) &&
+            !VersionComparator.isNewer(apiDetailed.version, result.version)) {
+          result = result.copyWith(
+            releaseDate: apiDetailed.releaseDate ?? result.releaseDate,
+            releaseNotes: apiDetailed.releaseNotes ?? result.releaseNotes,
+            downloadUrl: apiDetailed.downloadUrl ?? result.downloadUrl,
+          );
+        }
       }
     }
 
@@ -311,7 +327,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: DateTime.now(),
+        // 重定向只提供 tag，不包含发布日期。保持为空，详情检查再补全。
+        releaseDate: null,
         releaseNotes: null,
         isNew: false,
         downloadUrl: dynamicDownloadUrl,
@@ -401,7 +418,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: releaseDate ?? DateTime.now(),
+        releaseDate: releaseDate,
         releaseNotes: releaseNotes,
         isNew: false,
         downloadUrl: apkUrl,
@@ -585,7 +602,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: releaseDate ?? DateTime.now(),
+        releaseDate: releaseDate,
         releaseNotes: body,
         isNew: false,
         downloadUrl: apkUrl,
@@ -595,6 +612,34 @@ class GitHubReleasesAdapter implements VersionAdapter {
       if (status == 404) return null; // 无 releases，交给策略 3
       // 403 限流 → 返回 null
       return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 详情页补全：读取 GitHub 标记的最新稳定版。
+  Future<VersionInfo?> _fetchFromApiLatestRelease(
+    Emulator emulator,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://api.github.com/repos/$owner/$repo/releases/latest',
+      );
+      final release = _asMap(response.data);
+      final tag = release['tag_name']?.toString();
+      if (tag == null || tag.isEmpty) return null;
+
+      final body = release['body']?.toString();
+      return VersionInfo(
+        emulatorId: emulator.id,
+        version: _stripVPrefix(tag),
+        releaseDate: _parseDate(release['published_at']?.toString()),
+        releaseNotes: body != null && body.isNotEmpty ? body : null,
+        isNew: false,
+        downloadUrl: _extractApkAssetUrl(release),
+      );
     } catch (_) {
       return null;
     }
@@ -622,7 +667,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: DateTime.now(),
+        // tag 本身不包含 release 日期，不能使用检查时间代替。
+        releaseDate: null,
         releaseNotes: null,
         isNew: false,
       );
