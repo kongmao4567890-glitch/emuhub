@@ -105,26 +105,38 @@ void main() {
             );
             return;
           }
-          if (path.endsWith('/releases') && perPage == '10') {
+          if (path.endsWith('/releases') && perPage == null) {
             handler.resolve(
-              Response<List<Map<String, dynamic>>>(
+              Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: [
-                  {
-                    'prerelease': true,
-                    'tag_name': 'v0.5.3_preview',
-                    'published_at': '2026-06-07T00:00:00Z',
-                    'body': 'X360 Mobile preview fixes',
-                    'assets': [
-                      {
-                        'name': 'X360_0.5.3_preview.apk',
-                        'browser_download_url':
-                            'https://example.com/X360_0.5.3_preview.apk',
-                      },
-                    ],
-                  },
-                ],
+                data: '<a href="/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+                    'tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88">'
+                    '0.5.3 preview</a><span>Pre-release</span>',
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<a href="/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+                    'download/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88/'
+                    'X360_0.5.3_preview.apk">APK</a>',
+              ),
+            );
+            return;
+          }
+          if (path.contains('/releases/tag/')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<relative-time datetime="2026-06-07T00:00:00Z">'
+                    '</relative-time><div class="markdown-body">'
+                    'X360 Mobile preview fixes</div>',
               ),
             );
             return;
@@ -143,16 +155,20 @@ void main() {
       _x360Mobile(),
     );
 
-    expect(result?.version, '0.5.3_preview');
+    expect(result?.version, '0.5.3_预览版');
     expect(result?.releaseDate, DateTime.parse('2026-06-07T00:00:00Z'));
     expect(result?.releaseNotes, 'X360 Mobile preview fixes');
     expect(
       result?.downloadUrl,
-      'https://example.com/X360_0.5.3_preview.apk',
+      'https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+      'download/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88/'
+      'X360_0.5.3_preview.apk',
     );
     expect(
       result?.devDownloadUrl,
-      'https://example.com/X360_0.5.3_preview.apk',
+      'https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+      'download/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88/'
+      'X360_0.5.3_preview.apk',
     );
   });
 }

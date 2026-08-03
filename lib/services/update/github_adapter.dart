@@ -854,6 +854,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// 去除版本号前的 `v` / `V` 前缀。
   String _stripVPrefix(String tag) {
     var v = tag.trim();
+    // GitHub HTML 的 href 会对中文等非 ASCII 标签进行 URL 编码。
+    // 版本展示和比较必须使用可读的原始 tag，例如
+    // v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88 -> 0.5.3_预览版。
+    try {
+      v = Uri.decodeComponent(v);
+    } catch (_) {
+      // 编码不完整时保留原值，避免单个异常标签中断更新检查。
+    }
     if (v.startsWith('v') || v.startsWith('V')) {
       v = v.substring(1);
     }
