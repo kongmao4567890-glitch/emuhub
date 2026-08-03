@@ -296,6 +296,12 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               icon: _sourceIcon(emulator.sourceType),
               label: sourceTypeLabel(emulator.sourceType),
             ),
+            if (emulator.sourceType != 'playstore' &&
+                emulator.playStoreId.isNotEmpty)
+              const _InfoPill(
+                icon: Icons.shop,
+                label: 'Google Play',
+              ),
             _InfoPill(
               icon: emulator.openSource ? Icons.lock_open : Icons.lock,
               label: emulator.openSource ? '开源' : '闭源',
@@ -618,6 +624,20 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               ),
             ),
           ),
+        // 部分开源项目同时提供 Google Play 正式版。它是独立下载渠道，
+        // 不应因为版本检查来源是 GitHub/官网而被隐藏。
+        if (emulator.sourceType != 'playstore' &&
+            emulator.playStoreId.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              onPressed: () => _launchPlayStore(context, emulator),
+              icon: const Icon(Icons.shop),
+              label: const Text('Google Play 下载'),
+            ),
+          ),
+        ],
         if (emulator.website.isNotEmpty) ...[
           const SizedBox(height: 8),
           SizedBox(
@@ -710,6 +730,18 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return;
     }
     await _launchUrl(context, url);
+  }
+
+  /// 打开已验证包名对应的 Google Play 页面。
+  Future<void> _launchPlayStore(
+    BuildContext context,
+    Emulator emulator,
+  ) async {
+    if (emulator.playStoreId.isEmpty) return;
+    await _launchUrl(
+      context,
+      'https://play.google.com/store/apps/details?id=${emulator.playStoreId}',
+    );
   }
 
   bool _hasDownloadSource(Emulator emulator) {

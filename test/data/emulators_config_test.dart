@@ -56,6 +56,16 @@ void main() {
           );
         }
 
+        if (emulator.playStoreId.isNotEmpty) {
+          expect(
+            RegExp(
+              r'^[A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z][A-Za-z0-9_]*)+$',
+            ).hasMatch(emulator.playStoreId),
+            isTrue,
+            reason: '${emulator.id}: ${emulator.playStoreId}',
+          );
+        }
+
         if (emulator.sourceType == 'playstore') {
           if (emulator.playStoreId.isEmpty) {
             expect(emulator.downloadUrl, isEmpty, reason: emulator.id);
