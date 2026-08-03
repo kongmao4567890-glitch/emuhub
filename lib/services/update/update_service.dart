@@ -38,7 +38,7 @@ class CheckResult {
 
 /// 更新检查编排服务。
 ///
-/// 依赖 [CachedVersionsDao] 与四个数据源适配器（GitHub / GitLab / Play Store / Website），
+/// 依赖 [CachedVersionsDao] 与五个数据源适配器（GitHub / GitLab / Forgejo / Play Store / Website），
 /// 负责按 [Emulator.sourceType] 选择适配器、并发抓取最新版本、与本地缓存对比并
 /// 写回缓存，最终汇总为 [CheckResult]。
 ///
@@ -46,6 +46,8 @@ class CheckResult {
 /// - 并发上限可配置（默认 5），批次间插入延迟以避免触发限流；
 /// - 单个模拟器检查失败不影响其它模拟器，失败项记入 [CheckResult.failed]；
 /// - 当主适配器返回 null 时，自动尝试 website 适配器作为回退；
+/// - 只要条目配置了 [Emulator.playStoreId]，都会补充 Google Play 的
+///   发布日期与“新变化”，不受主更新源类型限制；
 /// - 适配器返回的 [VersionInfo.isNew] 一律为 false，是否为新版本由本服务结合
 ///   [VersionComparator] 与本地缓存判定后写入。
 class UpdateService {
@@ -245,6 +247,26 @@ class UpdateService {
         if (detailed != null) latest = detailed;
       }
 
+      // Google Play 是独立的发布渠道。此前仅 sourceType=playstore 的条目
+      // 会读取商店“新变化”，导致 GitHub/GitLab 作为主更新源、但同样提供
+      // Google Play 下载的模拟器缺少发布日期和更新说明。
+      //
+      // 在完整检查时，所有设置了 playStoreId 的条目均补抓 Play 元数据；
+      // 版本号仍优先以主更新源为准。多个机种若复用同一个 Play 包名，则
+      // 共享同一次请求，避免放大商店请求量。
+      if (includeDetails &&
+          emulator.playStoreId.isNotEmpty &&
+          adapter.adapterName != 'playstore') {
+        final playMetadataKey = _playStoreMetadataRequestKey(emulator);
+        final metadataFetch = sharedFetches?.putIfAbsent(
+              playMetadataKey,
+              () => _fetchPlayStoreMetadataWithRetry(emulator),
+            ) ??
+            _fetchPlayStoreMetadataWithRetry(emulator);
+        final playMetadata = await metadataFetch;
+        latest = _mergePlayStoreMetadata(latest, playMetadata);
+      }
+
       // 同一数据源的结果可供多个机种条目复用，但每条缓存仍使用自己的 id。
       if (latest != null && latest.emulatorId != emulator.id) {
         latest = latest.copyWith(emulatorId: emulator.id);
@@ -381,6 +403,36 @@ class UpdateService {
     return null;
   }
 
+  /// 抓取 Google Play 的补充元数据，不触发 website/download 回退。
+  ///
+  /// 这与 [_fetchLatestWithRetry] 分开，防止主更新源为 GitHub 等情况时，
+  /// Google Play 元数据请求又错误地触发一轮官网版本抓取。
+  Future<VersionInfo?> _fetchPlayStoreMetadataWithRetry(
+    Emulator emulator,
+  ) async {
+    final attempts = max(1, _maxFetchAttempts);
+
+    for (var attempt = 0; attempt < attempts; attempt++) {
+      try {
+        final metadata = await _playStoreAdapter.fetchLatestVersion(
+          emulator,
+          includeDetails: true,
+        );
+        if (metadata != null) return metadata;
+      } catch (_) {
+        // 与主更新检查保持一致：短暂网络异常自动重试。
+      }
+
+      if (attempt + 1 < attempts) {
+        await Future<void>.delayed(
+          Duration(milliseconds: _retryDelay.inMilliseconds * (attempt + 1)),
+        );
+      }
+    }
+
+    return null;
+  }
+
   /// 执行主数据源抓取及两级回退。
   Future<VersionInfo?> _fetchLatestWithFallback(
     Emulator emulator,
@@ -391,6 +443,14 @@ class UpdateService {
       emulator,
       includeDetails: includeDetails,
     );
+
+    // Google Play 的现代页面可能只有更新日期和“新变化”，没有独立版本号。
+    // 暂存这些元数据，再使用官网或下载地址解析版本，最后合并为完整结果。
+    VersionInfo? metadataOnly;
+    if (latest != null && latest.version.trim().isEmpty) {
+      metadataOnly = latest;
+      latest = null;
+    }
 
     if (latest == null &&
         emulator.website.isNotEmpty &&
@@ -405,7 +465,34 @@ class UpdateService {
       latest = await _tryFromDownloadUrl(emulator);
     }
 
+    if (latest != null && metadataOnly != null) {
+      latest = latest.copyWith(
+        releaseDate: metadataOnly.releaseDate ?? latest.releaseDate,
+        releaseNotes: metadataOnly.releaseNotes ?? latest.releaseNotes,
+      );
+    }
+
     return latest;
+  }
+
+  /// 以主更新源的版本号为准，优先使用 Google Play 提供的发布日期和更新说明。
+  ///
+  /// 若主更新源不可用、而 Play 页面仍能解析到版本号，则 Play 结果可作为
+  /// 最后的可用结果；若 Play 仅返回元数据，则不能覆盖一个有效版本号。
+  VersionInfo? _mergePlayStoreMetadata(
+    VersionInfo? latest,
+    VersionInfo? playMetadata,
+  ) {
+    if (playMetadata == null) return latest;
+
+    if (latest == null) {
+      return playMetadata.version.trim().isEmpty ? null : playMetadata;
+    }
+
+    return latest.copyWith(
+      releaseDate: playMetadata.releaseDate ?? latest.releaseDate,
+      releaseNotes: playMetadata.releaseNotes ?? latest.releaseNotes,
+    );
   }
 
   /// 一次批量检查中可复用请求的键。
@@ -423,6 +510,10 @@ class UpdateService {
       emulator.nightlyUrl,
     ].join('\u0000');
   }
+
+  /// Google Play 的结果只由包名决定，可供同包名的不同机种条目复用。
+  String _playStoreMetadataRequestKey(Emulator emulator) =>
+      'playstore-metadata\u0000${emulator.playStoreId}';
 
   VersionInfo _versionInfoFromCache(CachedVersion cached) {
     return VersionInfo(

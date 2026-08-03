@@ -118,6 +118,82 @@ void main() {
     // 首次轻量请求失败后自动重试成功，随后再抓一次完整详情。
     expect(adapter.calls, 3);
   });
+
+  test('merges Play metadata with the website fallback version', () async {
+    final playAdapter = _PlayMetadataAdapter();
+    final websiteAdapter = _WebsiteVersionAdapter();
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      playStoreAdapter: playAdapter,
+      websiteAdapter: websiteAdapter,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _playStoreEmulator('epsxe');
+
+    final result = await playService.checkOne(emulator);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result?.version, '1.6.4');
+    expect(result?.releaseDate, DateTime.utc(2026, 7, 10));
+    expect(result?.releaseNotes, 'Play Store release notes');
+    expect(cached?.currentVersion, '1.6.4');
+    expect(cached?.releaseNotes, 'Play Store release notes');
+  });
+
+  test('supplements a GitHub-sourced emulator with Play Store metadata',
+      () async {
+    final githubAdapter = _WebsiteVersionAdapter();
+    final playAdapter = _PlayMetadataAdapter();
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: githubAdapter,
+      playStoreAdapter: playAdapter,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _githubEmulatorWithPlayStore('retroarch');
+
+    final result = await playService.checkOne(emulator);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result?.version, '1.6.4');
+    expect(result?.releaseDate, DateTime.utc(2026, 7, 10));
+    expect(result?.releaseNotes, 'Play Store release notes');
+    expect(cached?.releaseNotes, 'Play Store release notes');
+  });
+
+  test('shares Play Store metadata requests for matching package ids',
+      () async {
+    final githubAdapter = _WebsiteVersionAdapter();
+    final playAdapter = _CountingPlayMetadataAdapter();
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: githubAdapter,
+      playStoreAdapter: playAdapter,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final first = _githubEmulatorWithPlayStore('md-emu');
+    final second = _githubEmulatorWithPlayStore('md-emu-sms');
+
+    final result = await playService.checkAll([first, second]);
+
+    expect(result.checked, 2);
+    expect(playAdapter.calls, 1);
+    expect(
+      (await database.cachedVersionsDao.getCachedVersion(first.id))
+          ?.releaseNotes,
+      'Play Store release notes',
+    );
+    expect(
+      (await database.cachedVersionsDao.getCachedVersion(second.id))
+          ?.releaseNotes,
+      'Play Store release notes',
+    );
+  });
 }
 
 class _MutableAdapter implements VersionAdapter {
@@ -151,6 +227,57 @@ class _MutableAdapter implements VersionAdapter {
   }
 }
 
+class _PlayMetadataAdapter implements VersionAdapter {
+  @override
+  String get adapterName => 'playstore';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: '',
+      releaseDate: DateTime.utc(2026, 7, 10),
+      releaseNotes: 'Play Store release notes',
+      isNew: false,
+    );
+  }
+}
+
+class _CountingPlayMetadataAdapter extends _PlayMetadataAdapter {
+  int calls = 0;
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    calls++;
+    return super.fetchLatestVersion(emulator, includeDetails: includeDetails);
+  }
+}
+
+class _WebsiteVersionAdapter implements VersionAdapter {
+  @override
+  String get adapterName => 'website';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: '1.6.4',
+      releaseDate: null,
+      releaseNotes: null,
+      isNew: false,
+    );
+  }
+}
+
 Emulator _emulator(String id) {
   return Emulator(
     id: id,
@@ -159,6 +286,41 @@ Emulator _emulator(String id) {
     sourceType: 'github',
     sourceUrl: 'https://github.com/example/shared',
     playStoreId: '',
+    website: '',
+    core: 'core',
+    compatibility: 'good',
+    minAndroid: '8.0',
+    description: 'test emulator',
+    downloadUrl: 'https://example.com/latest.apk',
+  );
+}
+
+Emulator _playStoreEmulator(String id) {
+  return Emulator(
+    id: id,
+    name: id,
+    openSource: false,
+    sourceType: 'playstore',
+    sourceUrl: '',
+    playStoreId: 'com.epsxe.ePSXe',
+    website: 'https://www.epsxe.com/android/',
+    core: '',
+    compatibility: 'high',
+    minAndroid: '5.0',
+    description: 'test emulator',
+    downloadUrl:
+        'https://play.google.com/store/apps/details?id=com.epsxe.ePSXe',
+  );
+}
+
+Emulator _githubEmulatorWithPlayStore(String id) {
+  return Emulator(
+    id: id,
+    name: id,
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/example/$id',
+    playStoreId: 'com.example.shared',
     website: '',
     core: 'core',
     compatibility: 'good',

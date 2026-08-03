@@ -35,6 +35,36 @@ void main() {
     expect(result?.releaseDate, DateTime(2026, 7, 10));
     expect(result?.releaseNotes, 'Added Oboe\nFixed CHD & CDDA');
   });
+
+  test('keeps Play metadata when the modern page omits the version',
+      () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) => handler.resolve(
+          Response<String>(
+            requestOptions: options,
+            statusCode: 200,
+            data: '''
+              <div><div>更新日期</div><div>2026年7月10日</div></div>
+              <section>
+                <header><h2>新变化</h2></header>
+                <div itemprop="description">Fixed CHD CDDA</div>
+              </section>
+            ''',
+          ),
+        ),
+      ),
+    );
+
+    final result = await PlayStoreAdapter(dio: dio).fetchLatestVersion(
+      _epsxe(),
+    );
+
+    expect(result?.version, isEmpty);
+    expect(result?.releaseDate, DateTime(2026, 7, 10));
+    expect(result?.releaseNotes, 'Fixed CHD CDDA');
+  });
 }
 
 Emulator _epsxe() {

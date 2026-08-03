@@ -55,12 +55,17 @@ class PlayStoreAdapter implements VersionAdapter {
       );
       final html = response.data.toString();
 
-      final version = _extractVersion(html);
-      if (version == null || version.isEmpty) return null;
-
       final releaseDate = _extractUpdateDate(html);
       // 更新中心也需要完整信息；不能只在进入详情页时才补抓。
       final releaseNotes = _extractReleaseNotes(html);
+      final version = _extractVersion(html)?.trim() ?? '';
+
+      // 现代 Play 商店页面经常不再公开独立版本字段，但仍提供更新日期和
+      // “新变化”。此时返回元数据结果，由 UpdateService 与官网回退得到的
+      // 版本号合并；不能直接丢弃整份 Play 数据。
+      if (version.isEmpty && releaseDate == null && releaseNotes == null) {
+        return null;
+      }
 
       return VersionInfo(
         emulatorId: emulator.id,
