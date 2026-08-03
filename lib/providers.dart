@@ -124,6 +124,7 @@ final Provider<UpdateService> updateServiceProvider =
   return UpdateService(
     dao: db.cachedVersionsDao,
     maxConcurrency: AppConstants.maxConcurrentChecks,
+    requestDelay: AppConstants.updateBatchDelay,
   );
 });
 
