@@ -45,7 +45,8 @@ class CheckResult {
 /// 设计要点：
 /// - 并发上限可配置（默认 10），批次间插入短延迟以避免触发限流；
 /// - 单个模拟器检查失败不影响其它模拟器，失败项记入 [CheckResult.failed]；
-/// - 当主适配器返回 null 时，自动尝试 website 适配器作为回退；
+/// - Play Store 等非代码托管来源抓取失败时，自动尝试 website 适配器作为回退；
+///   GitHub / GitLab / Forgejo 失败时不会把官网页面的无关版本号写入缓存；
 /// - 只要条目配置了 [Emulator.playStoreId]，都会补充 Google Play 的
 ///   发布日期与“新变化”，不受主更新源类型限制；
 /// - 适配器返回的 [VersionInfo.isNew] 一律为 false，是否为新版本由本服务结合
@@ -297,16 +298,15 @@ class UpdateService {
         // 否则首次运行会把全部模拟器标记为“有更新”并群发通知。
         versionInfo = latest.copyWith(isNew: false);
       } else {
-        final latestIsNewer = VersionComparator.isNewer(
-          cached.currentVersion,
-          latest.version,
-        );
-        final cachedIsNewer = VersionComparator.isNewer(
-          latest.version,
-          cached.currentVersion,
-        );
+        // 只要两侧都有精确发布日期，发布时间就是跨稳定版、开发版和
+        // nightly 的唯一排序依据。这样不会把 nightly-20260803 和 2.6.6.3
+        // 这类完全不同格式的标签拿来做字符串/语义版本比较。
+        // 缺少日期时才回退到既有的版本比较，兼容官网和商店等数据源。
+        final recency = _compareRecency(cached, latest);
+        final latestIsNewer = recency > 0;
+        final cachedIsNewer = recency < 0;
 
-        if (cachedIsNewer && !latestIsNewer) {
+        if (cachedIsNewer) {
           // 远端偶尔会因 latest 标记、镜像同步或解析回退而返回旧版本。
           // 此时仅刷新检查时间，绝不能把本地版本和下载链接降级。
           await _dao.touchLastChecked(emulator.id);
@@ -375,6 +375,29 @@ class UpdateService {
     final difference =
         (cached.lastCheckedAt - cached.lastReleaseDate!).abs();
     return difference <= const Duration(minutes: 5).inMilliseconds;
+  }
+
+  int _compareRecency(CachedVersion cached, VersionInfo latest) {
+    final cachedDate = cached.lastReleaseDate;
+    final latestDate = latest.releaseDate?.millisecondsSinceEpoch;
+    if (latestDate != null) {
+      // 旧缓存可能由官网回退或早期解析逻辑写入了错误版本（例如把官网
+      // 的站点版本 1.0 当成模拟器版本），且没有可靠发布日期。当前源一旦
+      // 给出明确发布日期，就以它为准覆盖这类无日期基线，不能再让 1.0
+      // 之类的版本号比较永久阻止真实 Release 写回。
+      if (cachedDate == null) return 1;
+      if (latestDate != cachedDate) {
+        return latestDate.compareTo(cachedDate);
+      }
+    }
+
+    if (VersionComparator.isNewer(cached.currentVersion, latest.version)) {
+      return 1;
+    }
+    if (VersionComparator.isNewer(latest.version, cached.currentVersion)) {
+      return -1;
+    }
+    return 0;
   }
 
   /// 在一次用户触发的检查中，对临时网络失败自动重试。
@@ -460,7 +483,20 @@ class UpdateService {
       latest = null;
     }
 
+    // GitHub / GitLab / Forgejo 的官网通常会同时包含站点、文档或应用壳
+    // 的版本号；当 release 请求临时失败时，把网页中第一个 `1.0` 一类
+    // 数字写入缓存会污染真实模拟器版本（X360 Mobile 即出现过此情况）。
+    // 代码托管源只信任其 release 结果或明确的下载链接；Play/官网型来源
+    // 仍保留网页回退，以兼容商店不公开版本号的情况。
+    const codeHostingSources = <String>{
+      'github',
+      'gitlab',
+      'forgejo',
+    };
+    final allowsWebsiteFallback =
+        !codeHostingSources.contains(emulator.sourceType);
     if (latest == null &&
+        allowsWebsiteFallback &&
         emulator.website.isNotEmpty &&
         adapter.adapterName != 'website') {
       latest = await _websiteAdapter.fetchLatestVersion(
@@ -485,10 +521,10 @@ class UpdateService {
     return latest ?? metadataOnly;
   }
 
-  /// 以主更新源的版本号为准，优先使用 Google Play 提供的发布日期和更新说明。
+  /// 合并主更新源与 Google Play 时，始终选择发布时间更晚的一侧。
   ///
-  /// 若主更新源不可用，Play 结果可作为最后的可用结果；即使版本号未公开，
-  /// 仍保留发布日期和更新说明，详情页会以“版本号未公开”展示。
+  /// 这让 GitHub、GitLab、官网和商店渠道都遵循相同的“最新发布优先”
+  /// 规则；若 Play 没有版本号，只替换发布日期与更新说明，保留主源版本。
   VersionInfo? _mergePlayStoreMetadata(
     VersionInfo? latest,
     VersionInfo? playMetadata,
@@ -499,8 +535,18 @@ class UpdateService {
       return playMetadata;
     }
 
+    final playDate = playMetadata.releaseDate;
+    final primaryDate = latest.releaseDate;
+    final shouldUsePlay = playDate != null &&
+        (primaryDate == null || playDate.isAfter(primaryDate));
+
+    if (!shouldUsePlay) return latest;
+
     return latest.copyWith(
-      releaseDate: playMetadata.releaseDate ?? latest.releaseDate,
+      version: playMetadata.version.trim().isNotEmpty
+          ? playMetadata.version
+          : latest.version,
+      releaseDate: playDate,
       releaseNotes: playMetadata.releaseNotes ?? latest.releaseNotes,
     );
   }
