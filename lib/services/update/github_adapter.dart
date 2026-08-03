@@ -134,9 +134,11 @@ class GitHubReleasesAdapter implements VersionAdapter {
     // 如果成功获取到版本信息，尝试获取 prerelease 信息
     // 并检查预发布版是否比稳定版更新。
     //
-    // 仅对明确配置了开发版渠道的条目检查预发布版，避免批量检查时
-    // 为所有 GitHub 仓库下载体积较大的 releases 列表页。
-    if (result != null && emulator.devUrl.isNotEmpty) {
+    // 仅对明确配置了开发版或 nightly 渠道的条目检查预发布版，避免批量
+    // 检查时为所有 GitHub 仓库下载体积较大的 releases 列表页。
+    // nightlyUrl 与 devUrl 都代表用户希望跟踪的非稳定发布渠道。
+    if (result != null &&
+        (emulator.devUrl.isNotEmpty || emulator.nightlyUrl.isNotEmpty)) {
       // 优先用 HTML 解析（不消耗 API 配额）
       var devInfo = await _fetchPrereleaseInfoFromHtml(owner, repo);
       if (devInfo == null) {
@@ -683,7 +685,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// 的 release，提取其版本号、APK asset URL、body（更新说明）和发布日期。
   /// 消耗 1 次 API 配额。
   ///
-  /// 仅对配置了 devUrl 的模拟器调用，避免不必要的 API 消耗。
+  /// 仅对配置了 devUrl 或 nightlyUrl 的模拟器调用，避免不必要的 API 消耗。
   /// 返回 null 表示无 prerelease 或 API 调用失败。
   Future<({String? version, String? apkUrl, String? body, DateTime? publishedAt})?> _fetchPrereleaseInfo(
     String owner,
