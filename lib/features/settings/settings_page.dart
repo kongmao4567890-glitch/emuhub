@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../data/repositories/settings_repository.dart';
@@ -199,18 +198,6 @@ class SettingsPage extends ConsumerWidget {
               ),
               const Divider(height: 1, indent: 16),
               ListTile(
-                leading: const Icon(Icons.source),
-                title: const Text('项目仓库'),
-                trailing: Text(
-                  'GitHub',
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    color: theme.colorScheme.primary,
-                  ),
-                ),
-                onTap: () => _launchRepo(context),
-              ),
-              const Divider(height: 1, indent: 16),
-              ListTile(
                 leading: const Icon(Icons.person),
                 title: const Text('开发者'),
                 trailing: Text(
@@ -271,17 +258,6 @@ class SettingsPage extends ConsumerWidget {
     }
   }
 
-  /// 打开项目仓库（简单实现，使用 url_launcher）。
-  Future<void> _launchRepo(BuildContext context) async {
-    final uri = Uri.parse(AppConstants.githubRepo);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } else if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('无法打开链接')),
-      );
-    }
-  }
 }
 
 /// 分区标题。
