@@ -118,6 +118,29 @@ void main() {
     // 首次轻量请求失败后自动重试成功，随后再抓一次完整详情。
     expect(adapter.calls, 3);
   });
+
+  test('merges Play metadata with the website fallback version', () async {
+    final playAdapter = _PlayMetadataAdapter();
+    final websiteAdapter = _WebsiteVersionAdapter();
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      playStoreAdapter: playAdapter,
+      websiteAdapter: websiteAdapter,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _playStoreEmulator('epsxe');
+
+    final result = await playService.checkOne(emulator);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result?.version, '1.6.4');
+    expect(result?.releaseDate, DateTime.utc(2026, 7, 10));
+    expect(result?.releaseNotes, 'Play Store release notes');
+    expect(cached?.currentVersion, '1.6.4');
+    expect(cached?.releaseNotes, 'Play Store release notes');
+  });
 }
 
 class _MutableAdapter implements VersionAdapter {
@@ -151,6 +174,44 @@ class _MutableAdapter implements VersionAdapter {
   }
 }
 
+class _PlayMetadataAdapter implements VersionAdapter {
+  @override
+  String get adapterName => 'playstore';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: '',
+      releaseDate: DateTime.utc(2026, 7, 10),
+      releaseNotes: 'Play Store release notes',
+      isNew: false,
+    );
+  }
+}
+
+class _WebsiteVersionAdapter implements VersionAdapter {
+  @override
+  String get adapterName => 'website';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: '1.6.4',
+      releaseDate: null,
+      releaseNotes: null,
+      isNew: false,
+    );
+  }
+}
+
 Emulator _emulator(String id) {
   return Emulator(
     id: id,
@@ -165,5 +226,23 @@ Emulator _emulator(String id) {
     minAndroid: '8.0',
     description: 'test emulator',
     downloadUrl: 'https://example.com/latest.apk',
+  );
+}
+
+Emulator _playStoreEmulator(String id) {
+  return Emulator(
+    id: id,
+    name: id,
+    openSource: false,
+    sourceType: 'playstore',
+    sourceUrl: '',
+    playStoreId: 'com.epsxe.ePSXe',
+    website: 'https://www.epsxe.com/android/',
+    core: '',
+    compatibility: 'high',
+    minAndroid: '5.0',
+    description: 'test emulator',
+    downloadUrl:
+        'https://play.google.com/store/apps/details?id=com.epsxe.ePSXe',
   );
 }

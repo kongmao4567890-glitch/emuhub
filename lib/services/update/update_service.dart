@@ -392,6 +392,14 @@ class UpdateService {
       includeDetails: includeDetails,
     );
 
+    // Google Play 的现代页面可能只有更新日期和“新变化”，没有独立版本号。
+    // 暂存这些元数据，再使用官网或下载地址解析版本，最后合并为完整结果。
+    VersionInfo? metadataOnly;
+    if (latest != null && latest.version.trim().isEmpty) {
+      metadataOnly = latest;
+      latest = null;
+    }
+
     if (latest == null &&
         emulator.website.isNotEmpty &&
         adapter.adapterName != 'website') {
@@ -403,6 +411,13 @@ class UpdateService {
 
     if (latest == null && emulator.downloadUrl.isNotEmpty) {
       latest = await _tryFromDownloadUrl(emulator);
+    }
+
+    if (latest != null && metadataOnly != null) {
+      latest = latest.copyWith(
+        releaseDate: metadataOnly.releaseDate ?? latest.releaseDate,
+        releaseNotes: metadataOnly.releaseNotes ?? latest.releaseNotes,
+      );
     }
 
     return latest;
