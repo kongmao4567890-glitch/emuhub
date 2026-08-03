@@ -89,6 +89,30 @@ void main() {
     );
   });
 
+  test('processes independent sources with the configured concurrency',
+      () async {
+    final concurrentAdapter = _ConcurrencyAdapter();
+    final fastService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: concurrentAdapter,
+      websiteAdapter: concurrentAdapter,
+      maxConcurrency: 10,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulators = List.generate(
+      20,
+      (index) => _emulator('fast-$index').copyWith(
+        sourceUrl: 'https://github.com/example/fast-$index',
+      ),
+    );
+
+    final result = await fastService.checkAll(emulators);
+
+    expect(result.checked, 20);
+    expect(concurrentAdapter.maxInFlight, 10);
+  });
+
   test('batch update check stores complete release metadata',
       () async {
     final emulator = _emulator('emu-a');
@@ -295,6 +319,32 @@ class _MutableAdapter implements VersionAdapter {
       releaseNotes: 'notes for $version',
       isNew: false,
       downloadUrl: 'https://example.com/$version.apk',
+    );
+  }
+}
+
+class _ConcurrencyAdapter implements VersionAdapter {
+  var _inFlight = 0;
+  var maxInFlight = 0;
+
+  @override
+  String get adapterName => 'github';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    _inFlight++;
+    if (_inFlight > maxInFlight) maxInFlight = _inFlight;
+    await Future<void>.delayed(const Duration(milliseconds: 5));
+    _inFlight--;
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: '1.0.0',
+      releaseDate: includeDetails ? DateTime.utc(2026, 1, 1) : null,
+      releaseNotes: includeDetails ? 'fast check' : null,
+      isNew: false,
     );
   }
 }

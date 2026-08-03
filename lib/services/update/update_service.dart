@@ -43,7 +43,7 @@ class CheckResult {
 /// 写回缓存，最终汇总为 [CheckResult]。
 ///
 /// 设计要点：
-/// - 并发上限可配置（默认 5），批次间插入延迟以避免触发限流；
+/// - 并发上限可配置（默认 10），批次间插入短延迟以避免触发限流；
 /// - 单个模拟器检查失败不影响其它模拟器，失败项记入 [CheckResult.failed]；
 /// - 当主适配器返回 null 时，自动尝试 website 适配器作为回退；
 /// - 只要条目配置了 [Emulator.playStoreId]，都会补充 Google Play 的
@@ -58,10 +58,10 @@ class UpdateService {
     VersionAdapter? forgejoAdapter,
     VersionAdapter? playStoreAdapter,
     VersionAdapter? websiteAdapter,
-    int maxConcurrency = 5,
-    Duration requestDelay = const Duration(milliseconds: 600),
+    int maxConcurrency = 10,
+    Duration requestDelay = const Duration(milliseconds: 150),
     int maxFetchAttempts = 2,
-    Duration retryDelay = const Duration(milliseconds: 900),
+    Duration retryDelay = const Duration(milliseconds: 500),
   })  : _dao = dao,
         _githubAdapter = githubAdapter ?? GitHubReleasesAdapter(),
         _gitlabAdapter = gitlabAdapter ?? GitLabReleasesAdapter(),
