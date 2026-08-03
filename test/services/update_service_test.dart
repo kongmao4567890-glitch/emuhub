@@ -68,6 +68,27 @@ void main() {
     expect(cached?.currentVersion, '2.0.0');
   });
 
+  test('uses publication time for incomparable nightly and stable versions',
+      () async {
+    final emulator = _emulator('armsx2').copyWith(
+      nightlyUrl: 'https://github.com/example/armsx2/releases',
+    );
+
+    adapter.version = 'nightly-20260803';
+    adapter.releaseDate = DateTime.utc(2026, 8, 3, 12);
+    await service.checkOne(emulator);
+    adapter.version = '2.6.6.3';
+    adapter.releaseDate = DateTime.utc(2026, 8, 3, 13);
+
+    final result = await service.checkAll([emulator]);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated.single.version, '2.6.6.3');
+    expect(cached?.currentVersion, '2.6.6.3');
+    expect(cached?.releaseNotes, 'notes for 2.6.6.3');
+  });
+
   test('deduplicates identical network sources during a batch check', () async {
     final first = _emulator('emu-a');
     final second = _emulator('emu-b');
@@ -189,6 +210,24 @@ void main() {
     expect(cached?.releaseNotes, 'Play Store release notes');
   });
 
+  test('keeps newer primary metadata when Play Store is older', () async {
+    final githubAdapter = _DatedWebsiteAdapter(DateTime.utc(2026, 8, 1));
+    final playAdapter = _PlayMetadataAdapter();
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: githubAdapter,
+      playStoreAdapter: playAdapter,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _githubEmulatorWithPlayStore('dated-primary');
+
+    final result = await playService.checkOne(emulator);
+
+    expect(result?.releaseDate, DateTime.utc(2026, 8, 1));
+    expect(result?.releaseNotes, 'Primary release notes');
+  });
+
   test('shares Play Store metadata requests for matching package ids',
       () async {
     final githubAdapter = _WebsiteVersionAdapter();
@@ -294,6 +333,7 @@ void main() {
 
 class _MutableAdapter implements VersionAdapter {
   String version = '1.0.0';
+  DateTime releaseDate = DateTime.utc(2026, 1, 1);
   int calls = 0;
   int detailCalls = 0;
   int remainingFailures = 0;
@@ -315,7 +355,7 @@ class _MutableAdapter implements VersionAdapter {
     return VersionInfo(
       emulatorId: emulator.id,
       version: version,
-      releaseDate: includeDetails ? DateTime.utc(2026, 1, 1) : null,
+      releaseDate: includeDetails ? releaseDate : null,
       releaseNotes: 'notes for $version',
       isNew: false,
       downloadUrl: 'https://example.com/$version.apk',
@@ -429,6 +469,26 @@ class _WebsiteVersionAdapter implements VersionAdapter {
       version: '1.6.4',
       releaseDate: null,
       releaseNotes: null,
+      isNew: false,
+    );
+  }
+}
+
+class _DatedWebsiteAdapter extends _WebsiteVersionAdapter {
+  _DatedWebsiteAdapter(this.date);
+
+  final DateTime date;
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: '1.6.4',
+      releaseDate: date,
+      releaseNotes: 'Primary release notes',
       isNew: false,
     );
   }

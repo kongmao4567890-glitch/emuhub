@@ -5,7 +5,7 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
-  test('tracks prerelease nightly when only nightlyUrl is configured',
+  test('uses the newer nightly release when it was published after stable',
       () async {
     final dio = Dio();
     dio.interceptors.add(
@@ -33,6 +33,20 @@ void main() {
                 statusCode: 200,
                 data: '<a href="/ARMSX2/ARMSX2/releases/tag/nightly-20260802">'
                     'nightly</a><span>Pre-release</span>',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: RequestOptions(
+                  path: 'https://github.com/ARMSX2/ARMSX2/releases/tag/'
+                      'iOSv2.5.1',
+                ),
+                statusCode: 200,
+                data: '<relative-time datetime="2026-08-01T00:00:00Z"></relative-time>'
+                    '<div class="markdown-body">Stable fixes</div>',
               ),
             );
             return;
@@ -74,7 +88,14 @@ void main() {
     );
 
     expect(result?.version, 'nightly-20260802');
+    expect(result?.releaseDate, DateTime.parse('2026-08-02T00:00:00Z'));
     expect(result?.releaseNotes, 'Nightly fixes');
+    expect(result?.devReleaseNotes, 'Nightly fixes');
+    expect(
+      result?.devDownloadUrl,
+      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
+      'ARMSX2-nightly-20260802.apk',
+    );
     expect(
       result?.downloadUrl,
       'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
@@ -113,6 +134,20 @@ void main() {
                 data: '<a href="/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
                     'tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88">'
                     '0.5.3 preview</a><span>Pre-release</span>',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: RequestOptions(
+                  path: 'https://github.com/Ashnar2602/'
+                      'X360-Mobile---OFFICIAL/releases/tag/v0.5.2',
+                ),
+                statusCode: 200,
+                data: '<relative-time datetime="2026-06-06T00:00:00Z"></relative-time>'
+                    '<div class="markdown-body">Stable fixes</div>',
               ),
             );
             return;
