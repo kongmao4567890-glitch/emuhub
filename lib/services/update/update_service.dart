@@ -281,6 +281,14 @@ class UpdateService {
         );
       }
 
+      // Google Play 可能在后续页面改版中停止公开版本号。若本地已有可信
+      // 版本，保留该版本并刷新商店日期/说明，避免把缓存降级为空字符串。
+      if (cached != null &&
+          latest.version.trim().isEmpty &&
+          cached.currentVersion.trim().isNotEmpty) {
+        latest = latest.copyWith(version: cached.currentVersion);
+      }
+
       late final VersionInfo versionInfo;
       var detectedUpdate = false;
 
@@ -472,13 +480,15 @@ class UpdateService {
       );
     }
 
-    return latest;
+    // 没有官网版本回退时仍保存 Play 的日期和更新说明。版本号为空是
+    // “商店未公开版本号”，不代表整次抓取失败。
+    return latest ?? metadataOnly;
   }
 
   /// 以主更新源的版本号为准，优先使用 Google Play 提供的发布日期和更新说明。
   ///
-  /// 若主更新源不可用、而 Play 页面仍能解析到版本号，则 Play 结果可作为
-  /// 最后的可用结果；若 Play 仅返回元数据，则不能覆盖一个有效版本号。
+  /// 若主更新源不可用，Play 结果可作为最后的可用结果；即使版本号未公开，
+  /// 仍保留发布日期和更新说明，详情页会以“版本号未公开”展示。
   VersionInfo? _mergePlayStoreMetadata(
     VersionInfo? latest,
     VersionInfo? playMetadata,
@@ -486,7 +496,7 @@ class UpdateService {
     if (playMetadata == null) return latest;
 
     if (latest == null) {
-      return playMetadata.version.trim().isEmpty ? null : playMetadata;
+      return playMetadata;
     }
 
     return latest.copyWith(

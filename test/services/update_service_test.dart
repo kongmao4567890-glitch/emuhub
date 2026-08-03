@@ -194,6 +194,78 @@ void main() {
       'Play Store release notes',
     );
   });
+
+  test('stores Play metadata even when no source exposes a version',
+      () async {
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      playStoreAdapter: _PlayMetadataAdapter(),
+      websiteAdapter: _UnavailableAdapter(),
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _playStoreEmulator('my-boy').copyWith(website: '');
+
+    final result = await playService.checkOne(emulator);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result, isNotNull);
+    expect(result?.version, isEmpty);
+    expect(result?.releaseDate, DateTime.utc(2026, 7, 10));
+    expect(result?.releaseNotes, 'Play Store release notes');
+    expect(cached, isNotNull);
+    expect(cached?.currentVersion, isEmpty);
+    expect(cached?.releaseNotes, 'Play Store release notes');
+  });
+
+  test('keeps Play-only metadata when a configured primary source fails',
+      () async {
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: _UnavailableAdapter(),
+      playStoreAdapter: _PlayMetadataAdapter(),
+      websiteAdapter: _UnavailableAdapter(),
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _githubEmulatorWithPlayStore('github-unavailable');
+
+    final result = await playService.checkOne(emulator);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result, isNotNull);
+    expect(result?.version, isEmpty);
+    expect(result?.releaseNotes, 'Play Store release notes');
+    expect(cached?.releaseNotes, 'Play Store release notes');
+  });
+
+  test('preserves a cached version while refreshing Play metadata',
+      () async {
+    final playAdapter = _MutablePlayAdapter();
+    final playService = UpdateService(
+      dao: database.cachedVersionsDao,
+      playStoreAdapter: playAdapter,
+      websiteAdapter: _UnavailableAdapter(),
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _playStoreEmulator('play-only').copyWith(website: '');
+
+    playAdapter.version = '2.0.0';
+    await playService.checkOne(emulator);
+    playAdapter.version = '';
+    playAdapter.notes = 'New Play Store notes';
+    final result = await playService.checkOne(emulator);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result?.version, '2.0.0');
+    expect(result?.releaseNotes, 'New Play Store notes');
+    expect(cached?.currentVersion, '2.0.0');
+    expect(cached?.releaseNotes, 'New Play Store notes');
+  });
 }
 
 class _MutableAdapter implements VersionAdapter {
@@ -257,6 +329,40 @@ class _CountingPlayMetadataAdapter extends _PlayMetadataAdapter {
     calls++;
     return super.fetchLatestVersion(emulator, includeDetails: includeDetails);
   }
+}
+
+class _MutablePlayAdapter implements VersionAdapter {
+  String version = '';
+  String notes = 'Initial Play Store notes';
+
+  @override
+  String get adapterName => 'playstore';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    return VersionInfo(
+      emulatorId: emulator.id,
+      version: version,
+      releaseDate: DateTime.utc(2026, 7, 10),
+      releaseNotes: notes,
+      isNew: false,
+    );
+  }
+}
+
+class _UnavailableAdapter implements VersionAdapter {
+  @override
+  String get adapterName => 'website';
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async =>
+      null;
 }
 
 class _WebsiteVersionAdapter implements VersionAdapter {

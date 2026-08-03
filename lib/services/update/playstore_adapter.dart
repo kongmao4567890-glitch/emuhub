@@ -4,6 +4,7 @@ import 'package:html/parser.dart';
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
 import 'version_adapter.dart';
+import 'version_comparator.dart';
 
 /// 基于 Google Play 商店页面的版本适配器。
 ///
@@ -58,7 +59,10 @@ class PlayStoreAdapter implements VersionAdapter {
       final releaseDate = _extractUpdateDate(html);
       // 更新中心也需要完整信息；不能只在进入详情页时才补抓。
       final releaseNotes = _extractReleaseNotes(html);
-      final version = _extractVersion(html)?.trim() ?? '';
+      var version = _extractVersion(html)?.trim() ?? '';
+      if (version.isEmpty) {
+        version = _extractVersionFromReleaseNotes(releaseNotes) ?? '';
+      }
 
       // 现代 Play 商店页面经常不再公开独立版本字段，但仍提供更新日期和
       // “新变化”。此时返回元数据结果，由 UpdateService 与官网回退得到的
@@ -152,6 +156,28 @@ class PlayStoreAdapter implements VersionAdapter {
   bool _isReleaseNotesTitle(String title) {
     const titles = {'新变化', '更新内容', "What's new", 'What’s new'};
     return titles.contains(title.trim());
+  }
+
+  /// 部分开发者会把版本号写在“新变化”中，但 Play 页面不再单独公开版本字段。
+  ///
+  /// 只接受独占一行的数字点分版本号，避免从普通说明、日期或依赖版本中误取；
+  /// 同一份说明列出多个历史版本时选择数值上最新的一项。
+  String? _extractVersionFromReleaseNotes(String? releaseNotes) {
+    if (releaseNotes == null || releaseNotes.isEmpty) return null;
+
+    final matches = RegExp(
+      r'^\s*[vV]?(\d+(?:\.\d+){1,3})\s*$',
+      multiLine: true,
+    ).allMatches(releaseNotes);
+    var latest = '';
+    for (final match in matches) {
+      final candidate = match.group(1);
+      if (candidate == null || candidate.isEmpty) continue;
+      if (latest.isEmpty || VersionComparator.isNewer(latest, candidate)) {
+        latest = candidate;
+      }
+    }
+    return latest.isEmpty ? null : latest;
   }
 
   /// 提取更新日期，支持 ISO 日期、中文日期和 Play 商店的英文日期。
