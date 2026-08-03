@@ -134,7 +134,7 @@ class PlayStoreAdapter implements VersionAdapter {
             RegExp(r'<br\s*/?>', caseSensitive: false),
             '\n',
           ),
-        ).text;
+        ).text ?? '';
         final normalized = _normalizeText(text);
         if (normalized.isNotEmpty) return normalized;
       }
