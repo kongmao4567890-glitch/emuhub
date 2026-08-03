@@ -81,6 +81,6 @@ void main() {
     }
 
     expect(consoleIds.length, 117);
-    expect(emulatorIds.length, 228);
+    expect(emulatorIds.length, 233);
   });
 }
