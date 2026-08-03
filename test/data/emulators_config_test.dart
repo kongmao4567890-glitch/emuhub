@@ -55,6 +55,18 @@ void main() {
             reason: '${emulator.id}: $url',
           );
         }
+
+        if (emulator.sourceType == 'playstore') {
+          if (emulator.playStoreId.isEmpty) {
+            expect(emulator.downloadUrl, isEmpty, reason: emulator.id);
+          } else {
+            expect(
+              emulator.downloadUrl,
+              'https://play.google.com/store/apps/details?id=${emulator.playStoreId}',
+              reason: emulator.id,
+            );
+          }
+        }
       }
     }
 

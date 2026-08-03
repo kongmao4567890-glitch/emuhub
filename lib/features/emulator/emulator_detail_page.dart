@@ -598,15 +598,26 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
           ),
           const SizedBox(height: 8),
         ],
-        // GitHub Releases 页面（通用回退）
-        SizedBox(
-          width: double.infinity,
-          child: FilledButton.tonalIcon(
-            onPressed: () => _launchDownload(context, emulator),
-            icon: Icon(_sourceIcon(emulator.sourceType)),
-            label: Text(_downloadButtonLabel(emulator.sourceType)),
+        // 官方下载页（没有有效商店包名时不渲染失效按钮）。
+        if (_hasDownloadSource(emulator))
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.tonalIcon(
+              onPressed: () => _launchDownload(context, emulator),
+              icon: Icon(_sourceIcon(emulator.sourceType)),
+              label: Text(_downloadButtonLabel(emulator.sourceType)),
+            ),
+          )
+        else
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Text(
+              '暂无可用的官方下载源',
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: cs.onSurfaceVariant,
+              ),
+            ),
           ),
-        ),
         if (emulator.website.isNotEmpty) ...[
           const SizedBox(height: 8),
           SizedBox(
@@ -699,6 +710,21 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return;
     }
     await _launchUrl(context, url);
+  }
+
+  bool _hasDownloadSource(Emulator emulator) {
+    switch (emulator.sourceType) {
+      case 'github':
+      case 'gitlab':
+      case 'forgejo':
+        return emulator.sourceUrl.isNotEmpty;
+      case 'playstore':
+        return emulator.playStoreId.isNotEmpty;
+      case 'website':
+        return emulator.website.isNotEmpty || emulator.sourceUrl.isNotEmpty;
+      default:
+        return false;
+    }
   }
 
   /// 使用 url_launcher 打开链接。

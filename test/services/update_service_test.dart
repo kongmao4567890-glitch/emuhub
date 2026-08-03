@@ -20,6 +20,7 @@ void main() {
       githubAdapter: adapter,
       websiteAdapter: adapter,
       requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
     );
   });
 
@@ -102,12 +103,28 @@ void main() {
     expect(cached?.releaseNotes, 'notes for 1.0.0');
     expect(cached?.resolvedDownloadUrl, 'https://example.com/1.0.0.apk');
   });
+
+  test('retries a transient source failure within the same batch check',
+      () async {
+    final emulator = _emulator('emu-a');
+    adapter.remainingFailures = 1;
+
+    final result = await service.checkAll([emulator]);
+
+    expect(result.checked, 1);
+    expect(result.failed, isEmpty);
+    expect(await database.cachedVersionsDao.getCachedVersion(emulator.id),
+        isNotNull);
+    // 首次轻量请求失败后自动重试成功，随后再抓一次完整详情。
+    expect(adapter.calls, 3);
+  });
 }
 
 class _MutableAdapter implements VersionAdapter {
   String version = '1.0.0';
   int calls = 0;
   int detailCalls = 0;
+  int remainingFailures = 0;
 
   @override
   String get adapterName => 'github';
@@ -118,6 +135,10 @@ class _MutableAdapter implements VersionAdapter {
     bool includeDetails = false,
   }) async {
     calls++;
+    if (remainingFailures > 0) {
+      remainingFailures--;
+      return null;
+    }
     if (includeDetails) detailCalls++;
     return VersionInfo(
       emulatorId: emulator.id,
