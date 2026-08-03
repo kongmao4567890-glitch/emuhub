@@ -58,6 +58,8 @@ class UpdateService {
     VersionAdapter? websiteAdapter,
     int maxConcurrency = 5,
     Duration requestDelay = const Duration(milliseconds: 600),
+    int maxFetchAttempts = 2,
+    Duration retryDelay = const Duration(milliseconds: 900),
   })  : _dao = dao,
         _githubAdapter = githubAdapter ?? GitHubReleasesAdapter(),
         _gitlabAdapter = gitlabAdapter ?? GitLabReleasesAdapter(),
@@ -65,7 +67,9 @@ class UpdateService {
         _playStoreAdapter = playStoreAdapter ?? PlayStoreAdapter(),
         _websiteAdapter = websiteAdapter ?? WebsiteAdapter(),
         _maxConcurrency = maxConcurrency,
-        _requestDelay = requestDelay;
+        _requestDelay = requestDelay,
+        _maxFetchAttempts = maxFetchAttempts,
+        _retryDelay = retryDelay;
 
   final CachedVersionsDao _dao;
   final VersionAdapter _githubAdapter;
@@ -75,6 +79,8 @@ class UpdateService {
   final VersionAdapter _websiteAdapter;
   final int _maxConcurrency;
   final Duration _requestDelay;
+  final int _maxFetchAttempts;
+  final Duration _retryDelay;
 
   /// 根据 sourceType 选择适配器。
   ///
@@ -204,13 +210,13 @@ class UpdateService {
       // 缺失/可疑时再抓完整 Release 页面，兼顾完整性和请求数量。
       final fetch = sharedFetches?.putIfAbsent(
             requestKey,
-            () => _fetchLatestWithFallback(
+            () => _fetchLatestWithRetry(
               emulator,
               adapter,
               includeDetails: false,
             ),
           ) ??
-          _fetchLatestWithFallback(
+          _fetchLatestWithRetry(
             emulator,
             adapter,
             includeDetails: false,
@@ -224,13 +230,13 @@ class UpdateService {
         final detailsKey = '$requestKey\u0000details';
         final detailedFetch = sharedFetches?.putIfAbsent(
               detailsKey,
-              () => _fetchLatestWithFallback(
+              () => _fetchLatestWithRetry(
                 emulator,
                 adapter,
                 includeDetails: true,
               ),
-            ) ??
-            _fetchLatestWithFallback(
+          ) ??
+            _fetchLatestWithRetry(
               emulator,
               adapter,
               includeDetails: true,
@@ -339,6 +345,40 @@ class UpdateService {
     final difference =
         (cached.lastCheckedAt - cached.lastReleaseDate!).abs();
     return difference <= const Duration(minutes: 5).inMilliseconds;
+  }
+
+  /// 在一次用户触发的检查中，对临时网络失败自动重试。
+  ///
+  /// 适配器会将超时、限流和短暂的页面解析失败统一表现为 `null`，此前这些
+  /// 项目会直接被标记失败，用户必须再次点击才能补全。重试 Future 仍由
+  /// [sharedFetches] 共享，因此相同来源只会重试一次，不会放大请求量。
+  Future<VersionInfo?> _fetchLatestWithRetry(
+    Emulator emulator,
+    VersionAdapter adapter, {
+    required bool includeDetails,
+  }) async {
+    final attempts = max(1, _maxFetchAttempts);
+
+    for (var attempt = 0; attempt < attempts; attempt++) {
+      try {
+        final latest = await _fetchLatestWithFallback(
+          emulator,
+          adapter,
+          includeDetails: includeDetails,
+        );
+        if (latest != null) return latest;
+      } catch (_) {
+        // 与适配器返回 null 的临时失败统一走退避重试。
+      }
+
+      if (attempt + 1 < attempts) {
+        await Future<void>.delayed(
+          Duration(milliseconds: _retryDelay.inMilliseconds * (attempt + 1)),
+        );
+      }
+    }
+
+    return null;
   }
 
   /// 执行主数据源抓取及两级回退。
