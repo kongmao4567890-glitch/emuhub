@@ -297,16 +297,15 @@ class UpdateService {
         // 否则首次运行会把全部模拟器标记为“有更新”并群发通知。
         versionInfo = latest.copyWith(isNew: false);
       } else {
-        final latestIsNewer = VersionComparator.isNewer(
-          cached.currentVersion,
-          latest.version,
-        );
-        final cachedIsNewer = VersionComparator.isNewer(
-          latest.version,
-          cached.currentVersion,
-        );
+        // 只要两侧都有精确发布日期，发布时间就是跨稳定版、开发版和
+        // nightly 的唯一排序依据。这样不会把 nightly-20260803 和 2.6.6.3
+        // 这类完全不同格式的标签拿来做字符串/语义版本比较。
+        // 缺少日期时才回退到既有的版本比较，兼容官网和商店等数据源。
+        final recency = _compareRecency(cached, latest);
+        final latestIsNewer = recency > 0;
+        final cachedIsNewer = recency < 0;
 
-        if (cachedIsNewer && !latestIsNewer) {
+        if (cachedIsNewer) {
           // 远端偶尔会因 latest 标记、镜像同步或解析回退而返回旧版本。
           // 此时仅刷新检查时间，绝不能把本地版本和下载链接降级。
           await _dao.touchLastChecked(emulator.id);
@@ -375,6 +374,22 @@ class UpdateService {
     final difference =
         (cached.lastCheckedAt - cached.lastReleaseDate!).abs();
     return difference <= const Duration(minutes: 5).inMilliseconds;
+  }
+
+  int _compareRecency(CachedVersion cached, VersionInfo latest) {
+    final cachedDate = cached.lastReleaseDate;
+    final latestDate = latest.releaseDate?.millisecondsSinceEpoch;
+    if (cachedDate != null && latestDate != null && latestDate != cachedDate) {
+      return latestDate.compareTo(cachedDate);
+    }
+
+    if (VersionComparator.isNewer(cached.currentVersion, latest.version)) {
+      return 1;
+    }
+    if (VersionComparator.isNewer(latest.version, cached.currentVersion)) {
+      return -1;
+    }
+    return 0;
   }
 
   /// 在一次用户触发的检查中，对临时网络失败自动重试。
@@ -485,10 +500,10 @@ class UpdateService {
     return latest ?? metadataOnly;
   }
 
-  /// 以主更新源的版本号为准，优先使用 Google Play 提供的发布日期和更新说明。
+  /// 合并主更新源与 Google Play 时，始终选择发布时间更晚的一侧。
   ///
-  /// 若主更新源不可用，Play 结果可作为最后的可用结果；即使版本号未公开，
-  /// 仍保留发布日期和更新说明，详情页会以“版本号未公开”展示。
+  /// 这让 GitHub、GitLab、官网和商店渠道都遵循相同的“最新发布优先”
+  /// 规则；若 Play 没有版本号，只替换发布日期与更新说明，保留主源版本。
   VersionInfo? _mergePlayStoreMetadata(
     VersionInfo? latest,
     VersionInfo? playMetadata,
@@ -499,8 +514,18 @@ class UpdateService {
       return playMetadata;
     }
 
+    final playDate = playMetadata.releaseDate;
+    final primaryDate = latest.releaseDate;
+    final shouldUsePlay = playDate != null &&
+        (primaryDate == null || playDate.isAfter(primaryDate));
+
+    if (!shouldUsePlay) return latest;
+
     return latest.copyWith(
-      releaseDate: playMetadata.releaseDate ?? latest.releaseDate,
+      version: playMetadata.version.trim().isNotEmpty
+          ? playMetadata.version
+          : latest.version,
+      releaseDate: playDate,
       releaseNotes: playMetadata.releaseNotes ?? latest.releaseNotes,
     );
   }

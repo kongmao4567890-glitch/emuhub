@@ -131,8 +131,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
     }
 
-    // 如果成功获取到版本信息，尝试获取 prerelease 信息
-    // 并检查预发布版是否比稳定版更新。
+    // 如果成功获取到版本信息，尝试获取 prerelease 信息，并按**发布时间**
+    // 选择主卡片应显示的发布。版本标签的格式并不统一：稳定版通常是
+    // 语义化版本，nightly 常是日期型标签，因此不能拿字符串版本号跨渠道
+    // 比较。谁的发布时间更晚，就显示谁的版本、下载地址和更新说明。
     //
     // 仅对明确配置了开发版或 nightly 渠道的条目检查预发布版，避免批量
     // 检查时为所有 GitHub 仓库下载体积较大的 releases 列表页。
@@ -145,30 +147,50 @@ class GitHubReleasesAdapter implements VersionAdapter {
         devInfo = await _fetchPrereleaseInfo(owner, repo);
       }
       if (devInfo != null) {
+        // 轻量路径只从 latest 重定向中得到稳定版 tag，没有发布日期；为
+        // 正确比较稳定版与预发布版，需要补齐稳定版详情。仅在配置了额外
+        // 渠道的 GitHub 条目执行，不会拖慢普通模拟器的批量更新。
+        if (result.releaseDate == null) {
+          final stableDetails = await _fetchFromHtml(emulator, owner, repo);
+          if (stableDetails != null &&
+              _sameVersion(result.version, stableDetails.version)) {
+            result = result.copyWith(
+              releaseDate: stableDetails.releaseDate ?? result.releaseDate,
+              releaseNotes: stableDetails.releaseNotes ?? result.releaseNotes,
+              downloadUrl: stableDetails.downloadUrl ?? result.downloadUrl,
+            );
+          }
+        }
+
         result = result.copyWith(
           devDownloadUrl: devInfo.apkUrl,
           devReleaseNotes: devInfo.body,
         );
 
-        // 如果预发布版版本号比稳定版更新，将预发布版作为主版本显示
-        // 例如：稳定版 2125.1.3，预发布版 2126.0-rc5 → 显示 2126.0-rc5
-        if (devInfo.version != null && devInfo.version!.isNotEmpty) {
-          final stableVersion = result.version;
-          final devVersion = devInfo.version!;
-          if (VersionComparator.isNewer(stableVersion, devVersion)) {
-            result = result.copyWith(
-              version: devVersion,
-              releaseDate: devInfo.publishedAt ?? result.releaseDate,
-              releaseNotes: devInfo.body ?? result.releaseNotes,
-              downloadUrl: devInfo.apkUrl ?? result.downloadUrl,
-            );
-          }
+        // 当日期不可得时保留稳定版，避免以不可靠的标签格式猜测新旧。
+        // 每夜版信息仍会写入 dev* 字段，供下载区作为独立渠道使用。
+        if (devInfo.version != null &&
+            devInfo.version!.isNotEmpty &&
+            _isPublishedLater(devInfo.publishedAt, result.releaseDate)) {
+          result = result.copyWith(
+            version: devInfo.version!,
+            releaseDate: devInfo.publishedAt,
+            releaseNotes: devInfo.body ?? result.releaseNotes,
+            downloadUrl: devInfo.apkUrl ?? result.downloadUrl,
+          );
         }
       }
     }
 
     return result;
   }
+
+  static bool _sameVersion(String first, String second) =>
+      !VersionComparator.isNewer(first, second) &&
+      !VersionComparator.isNewer(second, first);
+
+  static bool _isPublishedLater(DateTime? candidate, DateTime? current) =>
+      candidate != null && current != null && candidate.isAfter(current);
 
   /// 通过 HTML 解析获取最新 prerelease 信息（不消耗 API 配额）。
   ///
