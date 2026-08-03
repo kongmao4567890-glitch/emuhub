@@ -65,6 +65,36 @@ void main() {
     expect(result?.releaseDate, DateTime(2026, 7, 10));
     expect(result?.releaseNotes, 'Fixed CHD CDDA');
   });
+
+  test('extracts the newest standalone version from release notes',
+      () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) => handler.resolve(
+          Response<String>(
+            requestOptions: options,
+            statusCode: 200,
+            data: '''
+              <div><div>更新日期</div><div>2026年7月2日</div></div>
+              <section>
+                <header><h2>新变化</h2></header>
+                <div itemprop="description">2.2.9<br>- RA spectator mode<br>2.2.10<br>- Fixed crashes<br>2.2.13<br>- Fixed unwanted exit</div>
+              </section>
+            ''',
+          ),
+        ),
+      ),
+    );
+
+    final result = await PlayStoreAdapter(dio: dio).fetchLatestVersion(
+      _epsxe(),
+    );
+
+    expect(result?.version, '2.2.13');
+    expect(result?.releaseDate, DateTime(2026, 7, 2));
+    expect(result?.releaseNotes, contains('Fixed unwanted exit'));
+  });
 }
 
 Emulator _epsxe() {

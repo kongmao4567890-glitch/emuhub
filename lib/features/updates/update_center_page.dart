@@ -739,7 +739,7 @@ class _UpToDateTile extends StatelessWidget {
                 ],
               ),
             ),
-            VersionTag(version: version.isEmpty ? '未知' : version),
+            VersionTag(version: version.isEmpty ? '未公开' : version),
             const SizedBox(width: 4),
             Icon(Icons.chevron_right,
                 size: 18, color: cs.onSurfaceVariant),

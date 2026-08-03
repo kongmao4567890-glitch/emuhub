@@ -329,7 +329,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: cached == null || cached.currentVersion.isEmpty
+            child: cached == null
                 ? Row(
                     children: [
                       Icon(Icons.history, color: cs.onSurfaceVariant),
@@ -342,23 +342,37 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Icon(Icons.tag, color: cs.primary),
-                          const SizedBox(width: 8),
-                          Text(
-                            cached.currentVersion,
-                            style: theme.textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: cached.isNew ? AppTheme.success : null,
-                            ),
-                          ),
-                          if (cached.isNew) ...[
+                      if (cached.currentVersion.isNotEmpty)
+                        Row(
+                          children: [
+                            Icon(Icons.tag, color: cs.primary),
                             const SizedBox(width: 8),
-                            const NewVersionBadge(),
+                            Text(
+                              cached.currentVersion,
+                              style: theme.textTheme.titleLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: cached.isNew ? AppTheme.success : null,
+                              ),
+                            ),
+                            if (cached.isNew) ...[
+                              const SizedBox(width: 8),
+                              const NewVersionBadge(),
+                            ],
                           ],
-                        ],
-                      ),
+                        )
+                      else
+                        Row(
+                          children: [
+                            Icon(Icons.info_outline, color: cs.primary),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Google Play 未公开版本号',
+                              style: theme.textTheme.titleSmall?.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
                       if (cached.lastReleaseDate != null) ...[
                         const SizedBox(height: 8),
                         Row(
