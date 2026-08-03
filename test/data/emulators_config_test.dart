@@ -80,7 +80,17 @@ void main() {
       }
     }
 
+    final armsx1 = config.consoles
+        .expand((console) => console.emulators)
+        .singleWhere(
+          (emulator) => emulator.id == 'armsx1',
+        );
+    expect(armsx1.sourceType, 'github');
+    expect(armsx1.iconPath, 'assets/emulators/armsx1.png');
+    final armsx1Icon = await rootBundle.load(armsx1.iconPath);
+    expect(armsx1Icon.lengthInBytes, greaterThan(0));
+
     expect(consoleIds.length, 117);
-    expect(emulatorIds.length, 233);
+    expect(emulatorIds.length, 234);
   });
 }
