@@ -32,6 +32,13 @@ void main() {
       'linux',
       'macos',
     };
+    const supportedCompatibility = {
+      'perfect',
+      'high',
+      'good',
+      'medium',
+      'low',
+    };
 
     for (final console in config.consoles) {
       expect(consoleIds.add(console.id), isTrue, reason: console.id);
@@ -43,6 +50,11 @@ void main() {
         expect(
           supportedSources,
           contains(emulator.sourceType),
+          reason: emulator.id,
+        );
+        expect(
+          supportedCompatibility,
+          contains(emulator.compatibility),
           reason: emulator.id,
         );
         expect(emulator.platforms, isNotEmpty, reason: emulator.id);
@@ -127,6 +139,61 @@ void main() {
     expect(armsx1.iconPath, 'assets/emulators/armsx1.png');
     final armsx1Icon = await rootBundle.load(armsx1.iconPath);
     expect(armsx1Icon.lengthInBytes, greaterThan(0));
+
+    final ryubing = config.consoles
+        .expand((console) => console.emulators)
+        .singleWhere((emulator) => emulator.id == 'ryubing_pc');
+    expect(ryubing.sourceType, 'forgejo');
+    expect(
+      ryubing.downloadUrl,
+      'https://git.ryujinx.app/projects/Ryubing/releases',
+    );
+    expect(
+      ryubing.nightlyUrl,
+      'https://git.ryujinx.app/Ryubing/Canary/releases',
+    );
+
+    // 本轮从官方 Releases 页面确认存在 prerelease/nightly 的项目。
+    // 防止后续目录整理时误删对应渠道，导致列表只剩稳定版。
+    const auditedDevelopmentIds = {
+      'cemu_pc',
+      'whittyarcade_pc',
+      'dosbox_staging_pc',
+      'padforge',
+      'mupen64plus_ae',
+      'rpcs3_android',
+      'ruffle_android',
+      'coffee_gb_pc',
+      'duckstation_gpl',
+      'gamenative',
+      'xenios',
+    };
+    const auditedNightlyIds = {
+      'ares_pc',
+      'bsnes_pc',
+      'cxbx_r',
+      'virtual_jaguar_core',
+      'pcsx2_pc',
+      'ruffle_pc',
+      'ymir_pc',
+    };
+    final allEmulators = config.consoles
+        .expand((console) => console.emulators)
+        .toList();
+    for (final id in auditedDevelopmentIds) {
+      expect(
+        allEmulators.singleWhere((emulator) => emulator.id == id).devUrl,
+        isNotEmpty,
+        reason: id,
+      );
+    }
+    for (final id in auditedNightlyIds) {
+      expect(
+        allEmulators.singleWhere((emulator) => emulator.id == id).nightlyUrl,
+        isNotEmpty,
+        reason: id,
+      );
+    }
 
     expect(consoleIds.length, 120);
     expect(emulatorIds.length, 284);

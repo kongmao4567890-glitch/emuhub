@@ -47,6 +47,20 @@ void main() {
       isFalse,
     );
   });
+
+  test('does not duplicate a nightly asset as a development channel', () {
+    final emulator = _emulator('https://example.com/releases').copyWith(
+      nightlyUrl: 'https://example.com/nightly',
+    );
+
+    expect(
+      DownloadResolver.resolveDevUrl(
+        emulator,
+        cachedDevDownloadUrl: 'https://example.com/nightly.apk',
+      ),
+      isEmpty,
+    );
+  });
 }
 
 Emulator _emulator(String downloadUrl) {

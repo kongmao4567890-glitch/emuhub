@@ -32,24 +32,6 @@ final _isFavoriteProvider =
       );
 });
 
-/// 数据来源标签。
-String sourceTypeLabel(String sourceType) {
-  switch (sourceType) {
-    case 'github':
-      return 'GitHub';
-    case 'gitlab':
-      return 'GitLab';
-    case 'forgejo':
-      return 'Forgejo';
-    case 'playstore':
-      return 'Google Play';
-    case 'website':
-      return '官网';
-    default:
-      return '未知';
-  }
-}
-
 /// 在全部机种中查找指定模拟器，返回 (机种, 模拟器) 或 null。
 ({Console console, Emulator emulator})? findEmulator(
   List<Console> consoles,
@@ -294,7 +276,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
           children: [
             _InfoPill(
               icon: _sourceIcon(emulator.sourceType),
-              label: sourceTypeLabel(emulator.sourceType),
+              label: AppTheme.sourceTypeLabel(emulator.sourceType),
             ),
             if (emulator.sourceType != 'playstore' &&
                 emulator.playStoreId.isNotEmpty)
@@ -581,8 +563,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         if (stableUrl.isNotEmpty) ...[
           _DownloadChannelCard(
             icon: Icons.download,
-            label: '稳定版（最新发布）',
-            description: '经过测试的稳定版本',
+            label: '当前最新版',
+            description: '按发布时间选出的最新发布',
             url: stableUrl,
             color: cs.primary,
             isPrimary: true,

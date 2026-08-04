@@ -1,5 +1,5 @@
 {
-  "version": "3.4.0",
+  "version": "3.5.0",
   "lastUpdated": "2026-08-04",
   "consoles": [
     {
@@ -102,7 +102,7 @@
           "description": "高精度多系统 PC 模拟器，覆盖 SNES、Mega Drive、Saturn、N64、PC Engine 等平台，强调硬件行为准确性。",
           "downloadUrl": "https://github.com/ares-emulator/ares/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://github.com/ares-emulator/ares/releases",
           "iconPath": "assets/emulators/ares_pc.png",
           "platforms": [
             "windows",
@@ -313,7 +313,9 @@
             "linux",
             "macos"
           ],
-          "desktopRequirements": "64 位 Windows / Linux / macOS"
+          "desktopRequirements": "64 位 Windows / Linux / macOS",
+          "devUrl": "",
+          "nightlyUrl": "https://github.com/libretro/virtualjaguar-libretro/releases"
         }
       ]
     },
@@ -379,7 +381,9 @@
           "iconPath": "assets/emulators/nes_emu_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "nesoid",
@@ -467,7 +471,9 @@
           "iconPath": "assets/emulators/snes9x_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "snes9x_core",
@@ -505,7 +511,7 @@
           "description": "以准确性和低延迟著称的 SNES/SFC PC 模拟器，支持特殊芯片与高精度模式。",
           "downloadUrl": "https://github.com/bsnes-emu/bsnes/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://github.com/bsnes-emu/bsnes/releases",
           "iconPath": "assets/emulators/bsnes_pc.png",
           "platforms": [
             "windows",
@@ -582,7 +588,9 @@
           "iconPath": "assets/emulators/md_emu_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "genplus_gx",
@@ -651,7 +659,9 @@
           "iconPath": "assets/emulators/md_emu_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "genplus_gx_sms",
@@ -827,7 +837,7 @@
           "description": "面向 Sega Saturn 的现代高精度 PC 模拟器，注重准确时序、软件兼容性和调试能力。",
           "downloadUrl": "https://github.com/StrikerX3/Ymir/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://github.com/StrikerX3/Ymir/releases",
           "iconPath": "assets/emulators/ymir_pc.png",
           "platforms": [
             "windows",
@@ -995,7 +1005,9 @@
           "iconPath": "assets/emulators/gbc_emu_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "my_oldboy",
@@ -1028,7 +1040,7 @@
           "minAndroid": "",
           "description": "使用 Java 与 Kotlin 开发的 Game Boy/Game Boy Color 模拟器，采用逐周期 CPU 执行方式，支持 MBC1 至 MBC5、压缩 ROM、电池存档和实验性回滚联机。",
           "downloadUrl": "https://github.com/trekawek/coffee-gb/releases",
-          "devUrl": "",
+          "devUrl": "https://github.com/trekawek/coffee-gb/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/coffee_gb_pc.png",
           "platforms": [
@@ -1105,7 +1117,9 @@
           "iconPath": "assets/emulators/gba_emu_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "pizza_boy_gba",
@@ -1188,7 +1202,9 @@
           "iconPath": "assets/emulators/mupen64plus_ae.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/mupen64plus-ae/mupen64plus-ae/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "nin64",
@@ -1538,7 +1554,7 @@
           "minAndroid": "",
           "description": "主流 Wii U PC 模拟器，支持 Vulkan、图形包、高分辨率和帧率增强，兼容性成熟。",
           "downloadUrl": "https://github.com/cemu-project/Cemu/releases",
-          "devUrl": "",
+          "devUrl": "https://github.com/cemu-project/Cemu/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/cemu_pc.png",
           "platforms": [
@@ -1603,17 +1619,17 @@
           "id": "ryubing_pc",
           "name": "Ryubing",
           "openSource": true,
-          "sourceType": "gitlab",
-          "sourceUrl": "https://git.ryujinx.app/ryujinx/release-channel-master",
+          "sourceType": "forgejo",
+          "sourceUrl": "https://git.ryujinx.app/projects/Ryubing",
           "playStoreId": "",
-          "website": "https://ryujinx.app/",
+          "website": "https://git.ryujinx.app/projects/Ryubing",
           "core": "",
           "compatibility": "high",
           "minAndroid": "",
-          "description": "基于 Ryujinx 技术路线的活跃 Switch PC 项目，面向 Windows、Linux 与 macOS，提供稳定版及 Canary 构建。",
-          "downloadUrl": "https://git.ryujinx.app/ryujinx/release-channel-master/-/releases",
+          "description": "基于 Ryujinx 技术路线的活跃 Switch PC 项目，面向 Windows、Linux 与 macOS；稳定版与独立 Canary 自动构建均提供官方发布页，更新检查按发布时间选择最新渠道。",
+          "downloadUrl": "https://git.ryujinx.app/projects/Ryubing/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://git.ryujinx.app/Ryubing/Canary/releases",
           "iconPath": "assets/emulators/ryubing_pc.png",
           "platforms": [
             "windows",
@@ -1673,7 +1689,9 @@
           "iconPath": "assets/emulators/duckstation.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Trixarian/duckstation-gpl/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "lemuroid_psx",
@@ -1873,7 +1891,7 @@
           "description": "成熟的 PlayStation 2 PC 模拟器，支持 Vulkan/Direct3D/OpenGL、宽屏与高分辨率渲染。",
           "downloadUrl": "https://github.com/PCSX2/pcsx2/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://github.com/PCSX2/pcsx2/releases",
           "iconPath": "assets/emulators/pcsx2_pc.png",
           "platforms": [
             "windows",
@@ -1946,7 +1964,9 @@
           "iconPath": "assets/emulators/rpcs3_android.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "aps3e",
@@ -2179,7 +2199,9 @@
           "iconPath": "assets/emulators/pce_emu_ex.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "ares_pce_pc",
@@ -2195,7 +2217,7 @@
           "description": "ares 的 PC Engine/TurboGrafx-16 高精度模拟模块，支持 CD-ROM² 与 SuperGrafx。",
           "downloadUrl": "https://github.com/ares-emulator/ares/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://github.com/ares-emulator/ares/releases",
           "iconPath": "assets/emulators/ares_pc.png",
           "platforms": [
             "windows",
@@ -2287,7 +2309,7 @@
           "minAndroid": "",
           "description": "仍在早期开发的独立多系统街机模拟器，覆盖 Namco System 22/246、Sega Model 1/2、System 16B、Galaga/Galaxian 等硬件，使用自有调度器与前端。",
           "downloadUrl": "https://github.com/CrownParkComputing/MANX/releases",
-          "devUrl": "",
+          "devUrl": "https://github.com/CrownParkComputing/MANX/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/whittyarcade_pc.png",
           "platforms": [
@@ -2363,7 +2385,9 @@
           "iconPath": "assets/emulators/neo_emu.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         }
       ]
     },
@@ -2689,7 +2713,9 @@
           "iconPath": "assets/emulators/c64_emu.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "eightbitwonders_c64",
@@ -2944,7 +2970,7 @@
           "minAndroid": "8.0",
           "description": "安卓PC游戏兼容层/启动器，通过Wine/Box64/Proton类技术在安卓运行Steam/Epic/GOG/Amazon的Windows PC游戏。云存档(PC/手机互通)，自动应用社区兼容配置，Steam DLC/Workshop/分支支持，Nexus Mods，LSFG-VK帧生成，DX12 on Mali/Exynos，Bionic Steam Client(DRM/在线/DLC)，多手柄，触屏HUD编辑器",
           "downloadUrl": "https://github.com/utkarshdalal/GameNative/releases",
-          "devUrl": "",
+          "devUrl": "https://github.com/utkarshdalal/GameNative/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/gamenative.png",
           "platforms": [
@@ -2964,7 +2990,7 @@
           "minAndroid": "",
           "description": "现代化 DOSBox 分支，改进音频、图形、MIDI、显示缩放和默认配置，适合 PC DOS 游戏。",
           "downloadUrl": "https://github.com/dosbox-staging/dosbox-staging/releases",
-          "devUrl": "",
+          "devUrl": "https://github.com/dosbox-staging/dosbox-staging/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/dosbox_staging_pc.png",
           "platforms": [
@@ -3206,7 +3232,9 @@
             "linux",
             "macos"
           ],
-          "desktopRequirements": "64 位 Windows / Linux / macOS"
+          "desktopRequirements": "64 位 Windows / Linux / macOS",
+          "devUrl": "",
+          "nightlyUrl": "https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases"
         }
       ]
     },
@@ -3370,7 +3398,9 @@
           "iconPath": "assets/emulators/xenios.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/xenios-jp/XeniOS/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "xendroid",
@@ -4605,7 +4635,9 @@
           "iconPath": "assets/emulators/ruffle_android.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "devUrl": "https://github.com/ruffle-rs/ruffle-android/releases",
+          "nightlyUrl": ""
         },
         {
           "id": "reflash",
@@ -4639,7 +4671,7 @@
           "description": "使用 Rust 重写的 Adobe Flash Player 模拟器，提供 Windows、Linux、macOS 桌面版与浏览器扩展。",
           "downloadUrl": "https://github.com/ruffle-rs/ruffle/releases",
           "devUrl": "",
-          "nightlyUrl": "",
+          "nightlyUrl": "https://github.com/ruffle-rs/ruffle/releases",
           "iconPath": "assets/emulators/ruffle_pc.png",
           "platforms": [
             "windows",
@@ -7087,7 +7119,7 @@
           "minAndroid": "",
           "description": "开源 Windows 控制器映射和虚拟设备工具，可将键鼠、方向盘、手柄等输入转换为 Xbox、PlayStation 等虚拟控制器。",
           "downloadUrl": "https://github.com/hifihedgehog/PadForge/releases",
-          "devUrl": "",
+          "devUrl": "https://github.com/hifihedgehog/PadForge/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/padforge.png",
           "platforms": [

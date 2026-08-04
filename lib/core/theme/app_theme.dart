@@ -197,4 +197,22 @@ class AppTheme {
         return '未知';
     }
   }
+
+  /// 模拟器版本信息来源对应的显示文案。
+  static String sourceTypeLabel(String sourceType) {
+    switch (sourceType) {
+      case 'github':
+        return 'GitHub';
+      case 'gitlab':
+        return 'GitLab';
+      case 'forgejo':
+        return 'Forgejo';
+      case 'playstore':
+        return 'Google Play';
+      case 'website':
+        return '官网';
+      default:
+        return '未知来源';
+    }
+  }
 }
