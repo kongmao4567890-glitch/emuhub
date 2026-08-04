@@ -227,7 +227,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 285);
+    expect(emulatorIds.length, 297);
 
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
@@ -259,6 +259,18 @@ void main() {
         'padforge',
         'adamp_pc',
         'sidplaywx',
+        'nesd',
+        'gearboy_pc',
+        'luna_project64_pc',
+        'nexium_pc',
+        'ngpcraft_pc',
+        'copperline_pc',
+        'winuae_pc',
+        'hbmame_pc',
+        'kat5200',
+        'winarcadia_pc',
+        'gameex',
+        'pinballx',
       }),
     );
 
