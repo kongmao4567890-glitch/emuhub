@@ -4,7 +4,7 @@
 
 ## 功能特性
 
-- **机种库**：120 个机种分类、283 条模拟器/核心/工具记录，覆盖 Atari、FC、SFC、MD、PS、Xbox、Switch、PS5、Sharp MZ 等机种
+- **机种库**：120 个机种分类、284 条模拟器/核心/工具记录，覆盖 Atari、FC、SFC、MD、PS、Xbox、Switch、PS5、Sharp MZ 等机种
 - **运行平台筛选**：按 Android、Windows、Linux、macOS 浏览模拟器，PC 条目展示对应系统要求
 - **实用工具**：收录游戏库前端、ROM 管理、控制器映射和一体化模拟器套件
 - **自动更新检测**：后台定时检查各模拟器最新版本，有新版本推送系统通知

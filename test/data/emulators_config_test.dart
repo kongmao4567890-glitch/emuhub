@@ -100,6 +100,21 @@ void main() {
             );
           }
         }
+
+        // 固定资产名会在项目发布新版本并修改文件名后立即变成 404。
+        // GitHub 适配器会在检查更新时动态取得当前 Release 的实际资产。
+        expect(
+          emulator.downloadUrl.contains('/releases/latest/download/'),
+          isFalse,
+          reason: emulator.id,
+        );
+
+        if (emulator.downloadUrl.contains(
+          'play.google.com/store/apps/details',
+        )) {
+          expect(emulator.sourceType, 'playstore', reason: emulator.id);
+          expect(emulator.playStoreId, isNotEmpty, reason: emulator.id);
+        }
       }
     }
 
@@ -114,7 +129,7 @@ void main() {
     expect(armsx1Icon.lengthInBytes, greaterThan(0));
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 283);
+    expect(emulatorIds.length, 284);
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
@@ -127,6 +142,8 @@ void main() {
         'steam_rom_manager',
         'retrobat',
         'padforge',
+        'adamp_pc',
+        'sidplaywx',
       }),
     );
 
