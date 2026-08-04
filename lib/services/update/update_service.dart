@@ -99,8 +99,10 @@ class UpdateService {
         }
         return _githubAdapter;
       case 'gitlab':
-        if (emulator.sourceUrl.isNotEmpty &&
-            !_hasHost(emulator.sourceUrl, 'gitlab.com')) {
+        final gitlabUri = Uri.tryParse(emulator.sourceUrl);
+        if (gitlabUri == null ||
+            (gitlabUri.scheme != 'https' && gitlabUri.scheme != 'http') ||
+            gitlabUri.host.isEmpty) {
           return _websiteAdapter;
         }
         return _gitlabAdapter;

@@ -82,9 +82,7 @@ class GitLabReleasesAdapter implements VersionAdapter {
     try {
       final uri = Uri.parse(sourceUrl);
       if (uri.scheme != 'https' && uri.scheme != 'http') return null;
-      if (uri.host != 'gitlab.com' && !uri.host.endsWith('.gitlab.com')) {
-        return null;
-      }
+      if (uri.host.isEmpty) return null;
       final segments = uri.pathSegments.where((s) => s.isNotEmpty).toList();
       if (segments.length < 2) return null;
 

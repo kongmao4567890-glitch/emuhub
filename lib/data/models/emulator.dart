@@ -11,6 +11,7 @@ part 'emulator.g.dart';
 /// - [devUrl] 最新开发版/预览版下载链接，为空表示无独立开发版渠道。
 /// - [nightlyUrl] 每夜版/持续构建版下载链接，为空表示无每夜版渠道。
 /// - [compatibility] 取值为 `perfect` / `high` / `good` / `medium` / `low`。
+/// - [platforms] 表示可运行平台：`android` / `windows` / `linux` / `macos`。
 @freezed
 class Emulator with _$Emulator {
   const factory Emulator({
@@ -28,6 +29,9 @@ class Emulator with _$Emulator {
     @Default('') String downloadUrl,
     @Default('') String devUrl,
     @Default('') String nightlyUrl,
+    @Default(<String>['android']) List<String> platforms,
+    /// PC 版的最低系统或架构要求；空字符串表示请查看官方说明。
+    @Default('') String desktopRequirements,
     /// 模拟器官方图标资源路径（如 assets/emulators/dolphin.png）。
     /// 为空时回退到通用手柄图标。
     @Default('') String iconPath,
@@ -35,4 +39,28 @@ class Emulator with _$Emulator {
 
   factory Emulator.fromJson(Map<String, dynamic> json) =>
       _$EmulatorFromJson(json);
+}
+
+extension EmulatorPlatformInfo on Emulator {
+  bool supportsPlatform(String platform) => platforms.contains(platform);
+
+  bool get supportsDesktop =>
+      supportsPlatform('windows') ||
+      supportsPlatform('linux') ||
+      supportsPlatform('macos');
+
+  String get platformLabel => platforms.map((platform) {
+        switch (platform) {
+          case 'android':
+            return 'Android';
+          case 'windows':
+            return 'Windows';
+          case 'linux':
+            return 'Linux';
+          case 'macos':
+            return 'macOS';
+          default:
+            return platform;
+        }
+      }).join(' / ');
 }

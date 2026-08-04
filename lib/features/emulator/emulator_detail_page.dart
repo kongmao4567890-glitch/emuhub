@@ -303,6 +303,12 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                 label: 'Google Play',
               ),
             _InfoPill(
+              icon: emulator.supportsDesktop
+                  ? Icons.desktop_windows
+                  : Icons.android,
+              label: emulator.platformLabel,
+            ),
+            _InfoPill(
               icon: emulator.openSource ? Icons.lock_open : Icons.lock,
               label: emulator.openSource ? '开源' : '闭源',
               color: emulator.openSource ? AppTheme.success : cs.onSurfaceVariant,
@@ -436,7 +442,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     );
   }
 
-  /// 属性区域：兼容性、最低 Android、核心、开源状态。
+  /// 属性区域：兼容性、支持平台、系统要求、核心与开源状态。
   Widget _buildAttributes(BuildContext context, Emulator emulator) {
     final theme = Theme.of(context);
     return Column(
@@ -456,13 +462,37 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               ),
               const Divider(height: 1, indent: 16),
               _AttributeTile(
-                icon: Icons.android,
-                title: '最低 Android 版本',
+                icon: Icons.devices,
+                title: '支持平台',
                 trailing: Text(
-                  emulator.minAndroid,
+                  emulator.platformLabel,
                   style: theme.textTheme.bodyMedium,
                 ),
               ),
+              if (emulator.supportsPlatform('android')) ...[
+                const Divider(height: 1, indent: 16),
+                _AttributeTile(
+                  icon: Icons.android,
+                  title: '最低 Android 版本',
+                  trailing: Text(
+                    emulator.minAndroid.isEmpty ? '请查看官网' : emulator.minAndroid,
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ),
+              ],
+              if (emulator.supportsDesktop) ...[
+                const Divider(height: 1, indent: 16),
+                _AttributeTile(
+                  icon: Icons.desktop_windows,
+                  title: 'PC 系统要求',
+                  trailing: Text(
+                    emulator.desktopRequirements.isEmpty
+                        ? '请查看官网'
+                        : emulator.desktopRequirements,
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ),
+              ],
               const Divider(height: 1, indent: 16),
               _AttributeTile(
                 icon: Icons.code,
@@ -1155,8 +1185,13 @@ class _AttributeTile extends StatelessWidget {
           Icon(icon, size: 20, color: theme.colorScheme.onSurfaceVariant),
           const SizedBox(width: 12),
           Text(title, style: theme.textTheme.bodyMedium),
-          const Spacer(),
-          trailing,
+          const SizedBox(width: 12),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: trailing,
+            ),
+          ),
         ],
       ),
     );
