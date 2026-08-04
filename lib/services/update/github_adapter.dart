@@ -646,7 +646,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         String? releaseNotes;
         if (encodedBody != null && encodedBody.isNotEmpty) {
           final bodyDocument = html_parser.parseFragment(encodedBody);
-          final text = bodyDocument.text
+          final text = (bodyDocument.text ?? '')
               .replaceAll(RegExp(r'[ \t]+'), ' ')
               .replaceAll(RegExp(r'\n{3,}'), '\n\n')
               .trim();
