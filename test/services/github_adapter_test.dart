@@ -206,6 +206,127 @@ void main() {
       'X360_0.5.3_preview.apk',
     );
   });
+
+  test('uses the tagged commit message when a prerelease body is empty',
+      () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (options.method == 'HEAD' && path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 302,
+                headers: Headers.fromMap({
+                  'location': [
+                    'https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases',
+                  ],
+                }),
+              ),
+            );
+            return;
+          }
+          if (path == '/Cxbx-Reloaded/Cxbx-Reloaded/releases/latest') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<a href="/Cxbx-Reloaded/Cxbx-Reloaded/releases/tag/'
+                    'CI-585c49a">CI-585c49a</a>',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases/tag/CI-585c49a')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<relative-time datetime="2026-04-19T18:56:36Z">'
+                    '</relative-time>',
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/CI-585c49a')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/repos/Cxbx-Reloaded/Cxbx-Reloaded/releases/latest')) {
+            handler.reject(
+              DioException(
+                requestOptions: options,
+                response: Response<dynamic>(
+                  requestOptions: options,
+                  statusCode: 404,
+                ),
+                type: DioExceptionType.badResponse,
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/repos/Cxbx-Reloaded/Cxbx-Reloaded/releases')) {
+            handler.resolve(
+              Response<dynamic>(
+                requestOptions: options,
+                statusCode: 200,
+                data: [
+                  {
+                    'tag_name': 'CI-585c49a',
+                    'target_commitish':
+                        '585c49a50af1255ab155099e06f24505f9c5a800',
+                    'published_at': '2026-04-19T18:56:36Z',
+                    'body': null,
+                    'assets': <dynamic>[],
+                  },
+                ],
+              ),
+            );
+            return;
+          }
+          if (path.endsWith(
+            '/repos/Cxbx-Reloaded/Cxbx-Reloaded/commits/CI-585c49a',
+          )) {
+            handler.resolve(
+              Response<dynamic>(
+                requestOptions: options,
+                statusCode: 200,
+                data: {
+                  'commit': {
+                    'message': 'd3d: invalidate texgen texture state',
+                  },
+                },
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _cxbx(),
+      includeDetails: true,
+    );
+
+    expect(result?.version, 'CI-585c49a');
+    expect(result?.releaseDate, DateTime.parse('2026-04-19T18:56:36Z'));
+    expect(result?.releaseNotes, 'd3d: invalidate texgen texture state');
+  });
 }
 
 Emulator _armsx2() {
@@ -242,5 +363,22 @@ Emulator _x360Mobile() {
     downloadUrl:
         'https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/latest/download/X360_0.5.2_public.apk',
     devUrl: 'https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases',
+  );
+}
+
+Emulator _cxbx() {
+  return const Emulator(
+    id: 'cxbx_r',
+    name: 'CXBX-R',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/Cxbx-Reloaded/Cxbx-Reloaded',
+    playStoreId: '',
+    website: '',
+    core: '',
+    compatibility: 'low',
+    minAndroid: '10.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases',
   );
 }

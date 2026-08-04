@@ -45,11 +45,12 @@ class CheckResult {
 /// 设计要点：
 /// - 并发上限可配置（默认 10），批次间插入短延迟以避免触发限流；
 /// - 单个模拟器检查失败不影响其它模拟器，失败项记入 [CheckResult.failed]；
-/// - 当主适配器返回 null 时，自动尝试 website 适配器作为回退；
+/// - Play Store 等非代码托管来源抓取失败时，自动尝试 website 适配器作为回退；
+///   GitHub / GitLab / Forgejo 失败时不会把官网页面的无关版本号写入缓存；
 /// - 只要条目配置了 [Emulator.playStoreId]，都会补充 Google Play 的
 ///   发布日期与“新变化”，不受主更新源类型限制；
-/// - 适配器返回的 [VersionInfo.isNew] 一律为 false，是否为新版本由本服务结合
-///   [VersionComparator] 与本地缓存判定后写入。
+/// - 适配器返回的 [VersionInfo.isNew] 一律为 false；只有远端发布日期
+///   严格晚于可信的缓存日期才标记新版本，版本比较仅用于静默修复缓存。
 class UpdateService {
   UpdateService({
     required CachedVersionsDao dao,
@@ -193,8 +194,8 @@ class UpdateService {
 
   /// 单个模拟器检查的内部实现。
   ///
-  /// 抓取最新版本后与本地缓存对比：若本地无缓存，视为新版本；否则使用
-  /// [VersionComparator.isNewer] 判断。最终写回缓存。
+  /// 抓取最新版本后与本地缓存对比：首次检查只建立基线；已有
+  /// 基线时，只有远端发布日期严格更新才产生更新提示。最终写回缓存。
   ///
   /// 如果主适配器返回 null，尝试使用 website 适配器作为回退。
   Future<_CheckOutcome> _checkOneInternal(
@@ -304,6 +305,7 @@ class UpdateService {
         final recency = _compareRecency(cached, latest);
         final latestIsNewer = recency > 0;
         final cachedIsNewer = recency < 0;
+        final hasNewerReleaseDate = _hasNewerReleaseDate(cached, latest);
 
         if (cachedIsNewer) {
           // 远端偶尔会因 latest 标记、镜像同步或解析回退而返回旧版本。
@@ -311,11 +313,14 @@ class UpdateService {
           await _dao.touchLastChecked(emulator.id);
           versionInfo = _versionInfoFromCache(cached);
         } else {
-          detectedUpdate = latestIsNewer;
+          // “有更新”只由可信的发布日期决定：远端日期必须严格晚于缓存
+          // 日期。缓存缺少日期时属于元数据修复，静默写回但不提示更新；
+          // 仅版本号变化或标签格式变化也不会产生误报。
+          detectedUpdate = hasNewerReleaseDate;
           versionInfo = latest.copyWith(
             // 相同版本再次检查时保留“未读”状态；只有详情页明确查看后
             // 才由 markAsSeen 清除，避免提示自动消失。
-            isNew: latestIsNewer || cached.isNew,
+            isNew: hasNewerReleaseDate || cached.isNew,
             // 轻量检查无法获知发布日期时，不得用检查时间覆盖真实日期。
             // 详情检查拿到日期后会自动补全缓存。
             releaseDate: latestIsNewer
@@ -371,16 +376,22 @@ class UpdateService {
     }
 
     // 旧版本曾把检查时间写成发布日期；两者几乎相同即视为待修复数据。
-    final difference =
-        (cached.lastCheckedAt - cached.lastReleaseDate!).abs();
-    return difference <= const Duration(minutes: 5).inMilliseconds;
+    return _hasSuspiciousCachedReleaseDate(cached);
   }
 
   int _compareRecency(CachedVersion cached, VersionInfo latest) {
-    final cachedDate = cached.lastReleaseDate;
+    final cachedDate = _trustedCachedReleaseDate(cached);
     final latestDate = latest.releaseDate?.millisecondsSinceEpoch;
-    if (cachedDate != null && latestDate != null && latestDate != cachedDate) {
-      return latestDate.compareTo(cachedDate);
+    if (latestDate != null) {
+      // 远端已有可信发布日期而旧缓存没有日期时，允许静默修复错误版本与
+      // 元数据；是否提示更新由 [_hasNewerReleaseDate] 单独决定。
+      if (cachedDate == null) return 1;
+      if (latestDate != cachedDate) {
+        return latestDate.compareTo(cachedDate);
+      }
+    } else if (cachedDate != null) {
+      // 临时解析失败不能用无日期结果覆盖已经确认的有日期缓存。
+      return -1;
     }
 
     if (VersionComparator.isNewer(cached.currentVersion, latest.version)) {
@@ -390,6 +401,29 @@ class UpdateService {
       return -1;
     }
     return 0;
+  }
+
+  bool _hasNewerReleaseDate(CachedVersion cached, VersionInfo latest) {
+    final cachedDate = _trustedCachedReleaseDate(cached);
+    final latestDate = latest.releaseDate?.millisecondsSinceEpoch;
+    return cachedDate != null &&
+        latestDate != null &&
+        latestDate > cachedDate;
+  }
+
+  /// 旧版曾把“检查时间”当作“发布时间”写入。两者几乎
+  /// 相同的行不能用来判断新旧，否则真实但更早的发布日期会被
+  /// 误判为远端回退，永远无法修复。
+  int? _trustedCachedReleaseDate(CachedVersion cached) =>
+      _hasSuspiciousCachedReleaseDate(cached)
+          ? null
+          : cached.lastReleaseDate;
+
+  bool _hasSuspiciousCachedReleaseDate(CachedVersion cached) {
+    final releaseDate = cached.lastReleaseDate;
+    if (releaseDate == null) return false;
+    final difference = (cached.lastCheckedAt - releaseDate).abs();
+    return difference <= const Duration(minutes: 5).inMilliseconds;
   }
 
   /// 在一次用户触发的检查中，对临时网络失败自动重试。
@@ -475,7 +509,19 @@ class UpdateService {
       latest = null;
     }
 
+    // GitHub / GitLab / Forgejo 的官网通常会同时包含站点、文档或应用壳
+    // 的版本号；当 release 请求临时失败时，把网页中第一个 `1.0` 一类
+    // 数字写入缓存会污染真实模拟器版本。代码托管源只信任其 release
+    // 结果或明确下载链接；Play/官网型来源仍保留网页回退。
+    const codeHostingSources = <String>{
+      'github',
+      'gitlab',
+      'forgejo',
+    };
+    final allowsWebsiteFallback =
+        !codeHostingSources.contains(emulator.sourceType);
     if (latest == null &&
+        allowsWebsiteFallback &&
         emulator.website.isNotEmpty &&
         adapter.adapterName != 'website') {
       latest = await _websiteAdapter.fetchLatestVersion(

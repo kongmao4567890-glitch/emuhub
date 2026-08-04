@@ -60,13 +60,13 @@ class GitLabReleasesAdapter implements VersionAdapter {
 
       final version = _stripVPrefix(tagName);
       final createdAt = _parseDate(first['created_at']?.toString());
-      final description = first['description']?.toString();
+      final description = _releaseNotes(first);
 
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
         releaseDate: createdAt,
-        releaseNotes: (description != null && description.isNotEmpty) ? description : null,
+        releaseNotes: description,
         isNew: false,
       );
     } catch (_) {
@@ -123,6 +123,21 @@ class GitLabReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  /// GitLab 的自动发布有时不填写 description，但 release 响应内会附带
+  /// 对应 commit；使用提交 message/title 补齐更新说明。
+  String? _releaseNotes(Map<String, dynamic> release) {
+    final description = _nonEmptyText(release['description']);
+    if (description != null) return description;
+
+    final commit = _asMap(release['commit']);
+    return _nonEmptyText(commit['message']) ?? _nonEmptyText(commit['title']);
+  }
+
+  String? _nonEmptyText(dynamic value) {
+    final text = value?.toString().trim();
+    return text == null || text.isEmpty ? null : text;
   }
 
   Map<String, dynamic> _asMap(dynamic data) {

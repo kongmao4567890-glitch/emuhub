@@ -236,7 +236,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration {
@@ -253,6 +253,14 @@ class AppDatabase extends _$AppDatabase {
         if (from < 4) {
           await m.addColumn(
               cachedVersions, cachedVersions.resolvedDevReleaseNotes);
+        }
+        if (from < 5) {
+          // 旧版曾按版本标签比较产生误报；无法从现有行反推出当时两侧
+          // 发布日期，因此升级时一次性清除遗留提示。版本、日期、说明与
+          // 下载地址全部保留，下一次检查会按“远端日期严格更新”重新标记。
+          await customStatement(
+            'UPDATE cached_versions SET is_new = 0',
+          );
         }
       },
     );

@@ -35,6 +35,7 @@ void main() {
     expect(baseline?.isNew, isFalse);
 
     adapter.version = '1.1.0';
+    adapter.releaseDate = DateTime.utc(2026, 1, 2);
     final update = await service.checkOne(emulator);
     expect(update?.isNew, isTrue);
 
@@ -87,6 +88,98 @@ void main() {
     expect(result.updated.single.version, '2.6.6.3');
     expect(cached?.currentVersion, '2.6.6.3');
     expect(cached?.releaseNotes, 'notes for 2.6.6.3');
+  });
+
+  test('repairs a missing-date cache without reporting a new update',
+      () async {
+    final emulator = _emulator('x360-mobile').copyWith(
+      devUrl: 'https://github.com/example/x360/releases',
+    );
+    await database.cachedVersionsDao.upsertFromVersionInfo(
+      const VersionInfo(
+        emulatorId: 'x360-mobile',
+        version: '1.0',
+        isNew: false,
+      ),
+    );
+    adapter.version = '0.5.3_preview';
+    adapter.releaseDate = DateTime.utc(2026, 6, 7, 13, 23, 24);
+
+    final result = await service.checkAll([emulator]);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated, isEmpty);
+    expect(cached?.currentVersion, '0.5.3_preview');
+    expect(cached?.releaseNotes, 'notes for 0.5.3_preview');
+    expect(cached?.isNew, isFalse);
+  });
+
+  test('repairs a legacy check-time release date without reporting an update',
+      () async {
+    final emulator = _emulator('legacy-check-date');
+    await database.cachedVersionsDao.upsertFromVersionInfo(
+      VersionInfo(
+        emulatorId: emulator.id,
+        version: '1.0',
+        releaseDate: DateTime.now(),
+        isNew: true,
+      ),
+    );
+    adapter.version = '0.5.3_preview';
+    adapter.releaseDate = DateTime.utc(2026, 6, 7, 13, 23, 24);
+
+    final result = await service.checkAll([emulator]);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated, isEmpty);
+    expect(cached?.currentVersion, '0.5.3_preview');
+    expect(
+      cached?.lastReleaseDate,
+      DateTime.utc(2026, 6, 7, 13, 23, 24).millisecondsSinceEpoch,
+    );
+    // 未读状态由数据库升级迁移统一清理；本测试只验证
+    // 可疑日期不再阻止真实元数据回写。
+    expect(cached?.isNew, isTrue);
+  });
+
+  test('does not report an update when only the version changes', () async {
+    final emulator = _emulator('same-date-version');
+
+    adapter.version = '1.0.0';
+    adapter.releaseDate = DateTime.utc(2026, 2, 1);
+    await service.checkOne(emulator);
+    adapter.version = '2.0.0';
+
+    final result = await service.checkAll([emulator]);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated, isEmpty);
+    expect(cached?.currentVersion, '2.0.0');
+    expect(cached?.isNew, isFalse);
+  });
+
+  test('does not cache an unrelated website version when GitHub is unavailable',
+      () async {
+    final protectedService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: _UnavailableGitHubAdapter(),
+      websiteAdapter: _WebsiteVersionAdapter(),
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+    final emulator = _emulator('github-fallback').copyWith(
+      website: 'https://example.com/product',
+      downloadUrl: 'https://example.com/latest.apk',
+    );
+
+    final result = await protectedService.checkOne(emulator);
+
+    expect(result, isNull);
+    expect(await database.cachedVersionsDao.getCachedVersion(emulator.id),
+        isNull);
   });
 
   test('deduplicates identical network sources during a batch check', () async {
@@ -453,6 +546,11 @@ class _UnavailableAdapter implements VersionAdapter {
     bool includeDetails = false,
   }) async =>
       null;
+}
+
+class _UnavailableGitHubAdapter extends _UnavailableAdapter {
+  @override
+  String get adapterName => 'github';
 }
 
 class _WebsiteVersionAdapter implements VersionAdapter {

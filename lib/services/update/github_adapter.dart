@@ -93,12 +93,22 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
     // 策略 3：API releases 列表（消耗 1 次配额）
     if (result == null) {
-      result = await _fetchFromApiReleasesList(emulator, owner, repo);
+      result = await _fetchFromApiReleasesList(
+        emulator,
+        owner,
+        repo,
+        includeCommitMessage: includeDetails,
+      );
     }
 
     // 策略 4：API tags（消耗 1 次配额）
     if (result == null) {
-      result = await _fetchFromTags(emulator, owner, repo);
+      result = await _fetchFromTags(
+        emulator,
+        owner,
+        repo,
+        includeCommitDetails: includeDetails,
+      );
     }
 
     // 详情页需要完整更新说明；批量/后台检查只取轻量版本信息。
@@ -126,6 +136,26 @@ class GitHubReleasesAdapter implements VersionAdapter {
             releaseDate: apiDetailed.releaseDate ?? result.releaseDate,
             releaseNotes: apiDetailed.releaseNotes ?? result.releaseNotes,
             downloadUrl: apiDetailed.downloadUrl ?? result.downloadUrl,
+          );
+        }
+      }
+
+      // 全部 release 都是 prerelease 时，GitHub 的 /releases/latest API
+      // 会返回 404；HTML 页面虽可解析出版本和日期，却经常拿不到正文。
+      // 再读取 release 列表中当前第一条，并在正文为空时使用对应提交信息。
+      if (result.releaseNotes == null) {
+        final apiFirst = await _fetchFromApiReleasesList(
+          emulator,
+          owner,
+          repo,
+          includeCommitMessage: true,
+        );
+        if (apiFirst != null &&
+            _sameVersion(result.version, apiFirst.version)) {
+          result = result.copyWith(
+            releaseDate: apiFirst.releaseDate ?? result.releaseDate,
+            releaseNotes: apiFirst.releaseNotes,
+            downloadUrl: apiFirst.downloadUrl ?? result.downloadUrl,
           );
         }
       }
@@ -603,8 +633,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   Future<VersionInfo?> _fetchFromApiReleasesList(
     Emulator emulator,
     String owner,
-    String repo,
-  ) async {
+    String repo, {
+    bool includeCommitMessage = false,
+  }) async {
     try {
       final response = await _dio.get(
         'https://api.github.com/repos/$owner/$repo/releases?per_page=1',
@@ -618,7 +649,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
       final version = _stripVPrefix(tag);
       final releaseDate = _parseDate(first['published_at']?.toString());
-      final body = first['body']?.toString();
+      final body = includeCommitMessage
+          ? await _resolveReleaseNotes(owner, repo, first)
+          : _nonEmptyText(first['body']);
 
       // 从 assets 数组中提取 APK 直链
       final apkUrl = _extractApkAssetUrl(first);
@@ -655,12 +688,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final tag = release['tag_name']?.toString();
       if (tag == null || tag.isEmpty) return null;
 
-      final body = release['body']?.toString();
+      final body = await _resolveReleaseNotes(owner, repo, release);
       return VersionInfo(
         emulatorId: emulator.id,
         version: _stripVPrefix(tag),
         releaseDate: _parseDate(release['published_at']?.toString()),
-        releaseNotes: body != null && body.isNotEmpty ? body : null,
+        releaseNotes: body,
         isNew: false,
         downloadUrl: _extractApkAssetUrl(release),
       );
@@ -673,8 +706,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   Future<VersionInfo?> _fetchFromTags(
     Emulator emulator,
     String owner,
-    String repo,
-  ) async {
+    String repo, {
+    bool includeCommitDetails = false,
+  }) async {
     try {
       final response = await _dio.get(
         'https://api.github.com/repos/$owner/$repo/tags?per_page=1',
@@ -687,13 +721,16 @@ class GitHubReleasesAdapter implements VersionAdapter {
       if (tag == null || tag.isEmpty) return null;
 
       final version = _stripVPrefix(tag);
+      final commitInfo = includeCommitDetails
+          ? await _fetchCommitInfo(owner, repo, tag)
+          : null;
 
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        // tag 本身不包含 release 日期，不能使用检查时间代替。
-        releaseDate: null,
-        releaseNotes: null,
+        // tag 本身不包含日期/说明；详细检查时从其目标提交补齐。
+        releaseDate: commitInfo?.date,
+        releaseNotes: commitInfo?.message,
         isNew: false,
       );
     } catch (_) {
@@ -731,10 +768,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
           final apkUrl = _extractApkAssetUrl(release);
           final publishedAt = _parseDate(release['published_at']?.toString());
 
+          final body = await _resolveReleaseNotes(owner, repo, release);
+
           return (
             version: version,
             apkUrl: apkUrl,
-            body: release['body']?.toString(),
+            body: body,
             publishedAt: publishedAt,
           );
         }
@@ -747,6 +786,56 @@ class GitHubReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  /// 获取 release 更新说明。GitHub Actions 自动发布的 release 常没有
+  /// body，但其 tag 指向的提交包含实际变更说明；此时读取提交 message
+  /// 作为统一回退，避免 CXBX-R 等条目只有版本号而没有更新说明。
+  Future<String?> _resolveReleaseNotes(
+    String owner,
+    String repo,
+    Map<String, dynamic> release,
+  ) async {
+    final body = _nonEmptyText(release['body']);
+    if (body != null) return body;
+
+    final tag = _nonEmptyText(release['tag_name']);
+    final target = _nonEmptyText(release['target_commitish']);
+    final reference = tag ?? target;
+    if (reference == null) return null;
+
+    final commitInfo = await _fetchCommitInfo(owner, repo, reference);
+    return commitInfo?.message;
+  }
+
+  Future<({DateTime? date, String? message})?> _fetchCommitInfo(
+    String owner,
+    String repo,
+    String reference,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://api.github.com/repos/$owner/$repo/commits/'
+        '${Uri.encodeComponent(reference)}',
+      );
+      final commit = _asMap(response.data);
+      final details = _asMap(commit['commit']);
+      final committer = _asMap(details['committer']);
+      final author = _asMap(details['author']);
+      return (
+        date: _parseDate(
+          committer['date']?.toString() ?? author['date']?.toString(),
+        ),
+        message: _nonEmptyText(details['message']),
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  String? _nonEmptyText(dynamic value) {
+    final text = value?.toString().trim();
+    return text == null || text.isEmpty ? null : text;
   }
 
   /// 从 GitHub 仓库 URL 解析出 (owner, repo)。
