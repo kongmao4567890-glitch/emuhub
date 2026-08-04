@@ -74,7 +74,7 @@ jobs:
         with:
           name: emuhub-apk
           path: build/app/outputs/flutter-apk/*.apk
-          retention-days: 90
+          retention-days: 7
           if-no-files-found: error
 
       - name: Create Release
