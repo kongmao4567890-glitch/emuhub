@@ -53,6 +53,78 @@ void main() {
     expect(afterSeen?.isNew, isFalse);
   });
 
+  test('manual reconciliation clears an unchanged stale unread marker',
+      () async {
+    final emulator = _emulator('stale-unread');
+
+    adapter.version = '1.0.0';
+    adapter.releaseDate = DateTime.utc(2026, 1, 1);
+    await service.checkOne(emulator);
+    await database.cachedVersionsDao.upsertFromVersionInfo(
+      VersionInfo(
+        emulatorId: emulator.id,
+        version: adapter.version,
+        releaseDate: adapter.releaseDate,
+        isNew: true,
+      ),
+    );
+
+    final result = await service.checkAll(
+      [emulator],
+      reconcileUnread: true,
+    );
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated, isEmpty);
+    expect(cached?.isNew, isFalse);
+  });
+
+  test('manual reconciliation keeps a genuinely newer release unread',
+      () async {
+    final emulator = _emulator('real-update');
+
+    adapter.version = '1.0.0';
+    adapter.releaseDate = DateTime.utc(2026, 1, 1);
+    await service.checkOne(emulator);
+    adapter.version = '1.1.0';
+    adapter.releaseDate = DateTime.utc(2026, 1, 2);
+
+    final result = await service.checkAll(
+      [emulator],
+      reconcileUnread: true,
+    );
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated.single.version, '1.1.0');
+    expect(cached?.isNew, isTrue);
+  });
+
+  test('manual reconciliation preserves unread state when fetching fails',
+      () async {
+    final emulator = _emulator('failed-update');
+    await database.cachedVersionsDao.upsertFromVersionInfo(
+      VersionInfo(
+        emulatorId: emulator.id,
+        version: '1.0.0',
+        releaseDate: DateTime.utc(2026, 1, 1),
+        isNew: true,
+      ),
+    );
+    adapter.remainingFailures = 2;
+
+    final result = await service.checkAll(
+      [emulator],
+      reconcileUnread: true,
+    );
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.failed, [emulator.id]);
+    expect(cached?.isNew, isTrue);
+  });
+
   test('does not downgrade the cache when a source temporarily returns older data',
       () async {
     final emulator = _emulator('emu-a');

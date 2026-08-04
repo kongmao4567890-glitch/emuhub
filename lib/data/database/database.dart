@@ -236,7 +236,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 5;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration {
@@ -258,6 +258,14 @@ class AppDatabase extends _$AppDatabase {
           // 旧版曾按版本标签比较产生误报；无法从现有行反推出当时两侧
           // 发布日期，因此升级时一次性清除遗留提示。版本、日期、说明与
           // 下载地址全部保留，下一次检查会按“远端日期严格更新”重新标记。
+          await customStatement(
+            'UPDATE cached_versions SET is_new = 0',
+          );
+        }
+        if (from < 6) {
+          // v5 之后的手动复检仍会保留旧 is_new，导致远端版本
+          // 完全没变时仍长期显示“检测到更新”。升级时再清理一次，
+          // 后续手动检查由 reconcileUnread 按本轮结果持续校正。
           await customStatement(
             'UPDATE cached_versions SET is_new = 0',
           );

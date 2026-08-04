@@ -205,7 +205,12 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
     try {
       final allEmulators = config.consoles.expand((c) => c.emulators).toList();
       final updateService = ref.read(updateServiceProvider);
-      final result = await updateService.checkAll(allEmulators);
+      // 手动检查应展示“本轮确认到的更新”，而不是继续展示
+      // 旧版本遗留的 isNew 未读标记。检查失败的条目不会被清除。
+      final result = await updateService.checkAll(
+        allEmulators,
+        reconcileUnread: true,
+      );
 
       if (mounted) {
         setState(() {

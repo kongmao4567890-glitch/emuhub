@@ -130,7 +130,10 @@ class UpdateService {
   /// [_requestDelay] 延迟以降低被限流的风险。检查时一次性获取版本号、
   /// 发布日期、更新说明及下载地址，详情页只读取这里写入的缓存。
   /// 单个失败不影响其它项。
-  Future<CheckResult> checkAll(List<Emulator> emulators) async {
+  Future<CheckResult> checkAll(
+    List<Emulator> emulators, {
+    bool reconcileUnread = false,
+  }) async {
     final updated = <VersionInfo>[];
     final failed = <String>[];
     final sharedFetches = <String, Future<VersionInfo?>>{};
@@ -157,6 +160,7 @@ class UpdateService {
             emulator,
             sharedFetches: sharedFetches,
             includeDetails: true,
+            reconcileUnread: reconcileUnread,
           ),
         ),
       );
@@ -205,6 +209,7 @@ class UpdateService {
     Map<String, Future<VersionInfo?>>? sharedFetches,
     bool includeDetails = false,
     bool forceDetails = false,
+    bool reconcileUnread = false,
   }) async {
     try {
       final adapter = _selectAdapter(emulator);
@@ -313,7 +318,12 @@ class UpdateService {
           // 远端偶尔会因 latest 标记、镜像同步或解析回退而返回旧版本。
           // 此时仅刷新检查时间，绝不能把本地版本和下载链接降级。
           await _dao.touchLastChecked(emulator.id);
-          versionInfo = _versionInfoFromCache(cached);
+          if (reconcileUnread && cached.isNew) {
+            await _dao.markAsSeen(emulator.id);
+          }
+          versionInfo = _versionInfoFromCache(cached).copyWith(
+            isNew: reconcileUnread ? false : cached.isNew,
+          );
         } else {
           // “有更新”只由可信的发布日期决定：远端日期必须严格晚于缓存
           // 日期。缓存缺少日期时属于元数据修复，静默写回但不提示更新；
@@ -322,7 +332,10 @@ class UpdateService {
           versionInfo = latest.copyWith(
             // 相同版本再次检查时保留“未读”状态；只有详情页明确查看后
             // 才由 markAsSeen 清除，避免提示自动消失。
-            isNew: hasNewerReleaseDate || cached.isNew,
+            // 用户手动复检时则以本轮结果为准：未发现更新就清除
+            // 历史遗留的假未读标记。后台检查仍保留原有未读语义。
+            isNew: hasNewerReleaseDate ||
+                (!reconcileUnread && cached.isNew),
             // 轻量检查无法获知发布日期时，不得用检查时间覆盖真实日期。
             // 详情检查拿到日期后会自动补全缓存。
             releaseDate: latestIsNewer
