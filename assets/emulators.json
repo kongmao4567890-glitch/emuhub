@@ -1,5 +1,5 @@
 {
-  "version": "3.5.0",
+  "version": "3.6.0",
   "lastUpdated": "2026-08-04",
   "consoles": [
     {
@@ -700,8 +700,12 @@
           "downloadUrl": "https://github.com/drhelius/Gearsystem/releases",
           "iconPath": "assets/emulators/gearsystem.png",
           "platforms": [
-            "android"
-          ]
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows、现代 Linux 或 macOS；桌面版使用 SDL/OpenGL"
         }
       ]
     },
@@ -841,9 +845,10 @@
           "iconPath": "assets/emulators/ymir_pc.png",
           "platforms": [
             "windows",
-            "linux"
+            "linux",
+            "macos"
           ],
-          "desktopRequirements": "Windows 10/11 或 64 位 Linux"
+          "desktopRequirements": "Windows 10+、现代 64 位 Linux 或 macOS 15+"
         }
       ]
     },
@@ -1454,8 +1459,11 @@
           "previewUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
           "iconPath": "assets/emulators/azahar_plus.png",
           "platforms": [
-            "android"
-          ]
+            "android",
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows 10 或现代 Linux；x86-64/ARM64 处理器"
         }
       ]
     },
@@ -1586,14 +1594,18 @@
           "core": "",
           "compatibility": "medium",
           "minAndroid": "9.0",
-          "description": "开源Switch模拟器，源自Yuzu与Sudachi，由前Citron开发者主导。源码已迁移至自建Forgejo仓库(git.eden-emu.dev)，GitHub仓库曾被任天堂DMCA下架。最新稳定版v0.2.1(2026年6月)支持固件22.0、内置自动更新器、Vulkan性能优化。提供标准版/原神伪装版(伪装为Genshin Impact以启用旗舰设备帧生成等优化)/旧版(骁龙865等老芯片)三种APK变体，另有ChromeOS版本",
+          "description": "开源 Switch 模拟器，源自 Yuzu 与 Sudachi，由前 Citron 开发者主导。官方稳定版和每夜版同时提供 Android、Windows、Linux 与 macOS 构建，并针对多种桌面架构、Steam Deck 和 Android 设备提供不同发布包。",
           "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk",
           "devUrl": "https://git.eden-emu.dev/eden-emu/eden/releases",
           "nightlyUrl": "https://git.eden-emu.dev/eden-ci/nightly/releases",
           "iconPath": "assets/emulators/eden.png",
           "platforms": [
-            "android"
-          ]
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows、现代 Linux 或 macOS；Vulkan/Metal 支持，具体要求以官方发布说明为准"
         },
         {
           "id": "citron_neo",
@@ -1606,14 +1618,18 @@
           "core": "",
           "compatibility": "medium",
           "minAndroid": "12.0",
-          "description": "Nintendo Switch模拟器，yuzu/Suyu血统的活跃分支。GPL-3.0开源，Vulkan-only渲染路线，Dynarmic-GPLv3改进。移除Discord-RPC、Portable Mode、Unity builds。GitHub提供APK下载",
+          "description": "Nintendo Switch 模拟器的活跃分支，官方 Release 同时提供 Android APK、Windows、Linux AppImage 与 macOS 构建，采用 Vulkan 渲染路线。",
           "downloadUrl": "https://github.com/citron-neo/emulator/releases",
           "devUrl": "",
           "nightlyUrl": "https://github.com/citron-neo/CI/releases",
           "iconPath": "assets/emulators/citron_neo.png",
           "platforms": [
-            "android"
-          ]
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows、现代 Linux 或 macOS；需要 Vulkan/Metal 图形支持"
         },
         {
           "id": "ryubing_pc",
@@ -1688,10 +1704,14 @@
           "downloadUrl": "https://github.com/Trixarian/duckstation-gpl/releases",
           "iconPath": "assets/emulators/duckstation.png",
           "platforms": [
-            "android"
+            "android",
+            "windows",
+            "linux",
+            "macos"
           ],
           "devUrl": "https://github.com/Trixarian/duckstation-gpl/releases",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "desktopRequirements": "Windows 10/11、现代 Linux 或 macOS 11+；x64/ARM64"
         },
         {
           "id": "lemuroid_psx",
@@ -1744,8 +1764,12 @@
           "downloadUrl": "https://github.com/ARMSX2/ARMSX1/releases",
           "iconPath": "assets/emulators/armsx1.png",
           "platforms": [
-            "android"
-          ]
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows、Linux 或 macOS；官方 CI 提供多架构桌面构建"
         },
         {
           "id": "pcsx_redux_pc",
@@ -1855,8 +1879,12 @@
           "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases",
           "iconPath": "assets/emulators/armsx2.png",
           "platforms": [
-            "android"
-          ]
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "ARM64 Windows、Linux 或 macOS；具体硬件要求参考项目文档"
         },
         {
           "id": "emucorex",
@@ -2141,18 +2169,19 @@
           "website": "https://vita3k.org/",
           "core": "",
           "compatibility": "medium",
-          "minAndroid": "",
+          "minAndroid": "9.0",
           "description": "首个开源 PlayStation Vita 模拟器，PC 版支持 Windows、Linux 和 macOS。",
           "downloadUrl": "https://github.com/Vita3K/Vita3K/releases",
           "devUrl": "",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/vita3k_pc.png",
           "platforms": [
+            "android",
             "windows",
             "linux",
             "macos"
           ],
-          "desktopRequirements": "64 位 Windows / Linux / macOS"
+          "desktopRequirements": "64 位 Windows、Linux 或 macOS"
         }
       ]
     },
@@ -3392,15 +3421,16 @@
           "website": "https://xenios.jp/",
           "core": "",
           "compatibility": "low",
-          "minAndroid": "12.0",
-          "description": "基于Xenia Edge的实验性Apple导向分支，同时支持ARM64 Windows/Linux/Android。移动端兼容率28.88%(93/322)。改进会回流上游。BSD-3-Clause开源",
+          "minAndroid": "",
+          "description": "基于 Xenia Edge 的实验性 Apple 平台分支，当前公开构建面向 Intel 与 Apple Silicon macOS；Windows 与 Linux 用户应使用 Xenia Edge 或 Xenia Canary。",
           "downloadUrl": "https://github.com/xenios-jp/XeniOS/releases",
           "iconPath": "assets/emulators/xenios.png",
           "platforms": [
-            "android"
+            "macos"
           ],
           "devUrl": "https://github.com/xenios-jp/XeniOS/releases",
-          "nightlyUrl": ""
+          "nightlyUrl": "",
+          "desktopRequirements": "Intel 或 Apple Silicon Mac；当前官方发布集中于 macOS"
         },
         {
           "id": "xendroid",
@@ -6791,11 +6821,12 @@
           "devUrl": "https://github.com/nspire-emus/firebird/releases",
           "iconPath": "assets/emulators/firebird.png",
           "platforms": [
+            "android",
             "windows",
             "linux",
             "macos"
           ],
-          "desktopRequirements": "64 位 Windows / Linux / macOS"
+          "desktopRequirements": "64 位 Windows、Linux 或 macOS"
         },
         {
           "id": "droid48",
@@ -6948,9 +6979,11 @@
           "nightlyUrl": "",
           "iconPath": "assets/emulators/kytyps5_pc.png",
           "platforms": [
-            "windows"
+            "windows",
+            "linux",
+            "macos"
           ],
-          "desktopRequirements": "64 位 Windows 10/11，支持 Vulkan 的现代独立显卡"
+          "desktopRequirements": "64 位 Windows 10/11、现代 Linux 或 macOS；需要 Vulkan 1.3，macOS 通过 MoltenVK"
         }
       ]
     },

@@ -195,6 +195,30 @@ void main() {
       );
     }
 
+    // 运行平台以官方 README 与当前 Release 构建资产为依据。对同时发布
+    // APK 和桌面包的项目保留全部平台，防止 Windows/Linux/macOS 标签
+    // 在目录维护时再次退化成仅 Android。
+    const auditedPlatformLabels = <String, Set<String>>{
+      'eden': {'android', 'windows', 'linux', 'macos'},
+      'citron_neo': {'android', 'windows', 'linux', 'macos'},
+      'armsx1': {'android', 'windows', 'linux', 'macos'},
+      'armsx2': {'android', 'windows', 'linux', 'macos'},
+      'azahar_plus': {'android', 'windows', 'linux'},
+      'gearsystem': {'android', 'windows', 'linux', 'macos'},
+      'kytyps5_pc': {'windows', 'linux', 'macos'},
+      'firebird': {'android', 'windows', 'linux', 'macos'},
+      'ymir_pc': {'windows', 'linux', 'macos'},
+      'duckstation_gpl': {'android', 'windows', 'linux', 'macos'},
+      'vita3k_pc': {'android', 'windows', 'linux', 'macos'},
+      'xenios': {'macos'},
+    };
+    for (final entry in auditedPlatformLabels.entries) {
+      final emulator = allEmulators.singleWhere(
+        (emulator) => emulator.id == entry.key,
+      );
+      expect(emulator.platforms.toSet(), entry.value, reason: entry.key);
+    }
+
     expect(consoleIds.length, 120);
     expect(emulatorIds.length, 284);
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
