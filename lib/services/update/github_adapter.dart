@@ -38,6 +38,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
                 headers: {
                   'Accept': 'application/vnd.github+json',
                   'X-GitHub-Api-Version': '2022-11-28',
+                  // GitHub 对缺少明确客户端标识的移动端请求偶尔返回限制页，
+                  // 导致只能拿到 latest 重定向中的版本号，日期和说明为空。
+                  'User-Agent':
+                      'EmuHub/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)',
                 },
               ),
             );
@@ -68,6 +72,22 @@ class GitHubReleasesAdapter implements VersionAdapter {
       receiveTimeout: const Duration(seconds: 30),
       headers: {
         'Accept': 'text/html, application/xhtml+xml, */*',
+        'User-Agent':
+            'EmuHub/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)',
+      },
+    );
+  }
+
+  Options _atomOptions() {
+    return Options(
+      responseType: ResponseType.plain,
+      followRedirects: true,
+      validateStatus: (status) => status != null && status < 400,
+      receiveTimeout: const Duration(seconds: 45),
+      headers: {
+        'Accept': 'application/atom+xml, application/xml, text/xml, */*',
+        'User-Agent':
+            'EmuHub/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)',
       },
     );
   }
@@ -159,6 +179,28 @@ class GitHubReleasesAdapter implements VersionAdapter {
           );
         }
       }
+
+      // GitHub API 匿名额度耗尽、HTML 结构临时变化或移动网络返回精简页时，
+      // latest 重定向通常仍能提供版本号，但日期和正文会缺失。官方 Atom
+      // Release Feed 不消耗 API 配额，并包含发布时间及完整 release body，
+      // 因此仅在详情仍不完整时作为最后回退。RPCS3 这类正文很长、又采用
+      // 滚动发布的项目也能在一次检查中补齐信息，无需再次点击刷新。
+      if (result.releaseDate == null || result.releaseNotes == null) {
+        final atomDetailed = await _fetchFromAtom(
+          emulator,
+          owner,
+          repo,
+          preferredVersion: result.version,
+        );
+        if (atomDetailed != null &&
+            _sameVersion(result.version, atomDetailed.version)) {
+          result = result.copyWith(
+            releaseDate: atomDetailed.releaseDate ?? result.releaseDate,
+            releaseNotes: atomDetailed.releaseNotes ?? result.releaseNotes,
+            downloadUrl: atomDetailed.downloadUrl ?? result.downloadUrl,
+          );
+        }
+      }
     }
 
     // 如果成功获取到版本信息，尝试获取 prerelease 信息，并按**发布时间**
@@ -170,7 +212,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     // 检查时为所有 GitHub 仓库下载体积较大的 releases 列表页。
     // nightlyUrl 与 devUrl 都代表用户希望跟踪的非稳定发布渠道。
     if (result != null &&
-        (emulator.devUrl.isNotEmpty || emulator.nightlyUrl.isNotEmpty)) {
+        _tracksGitHubPrerelease(emulator, owner: owner, repo: repo)) {
       // 优先用 HTML 解析（不消耗 API 配额）
       var devInfo = await _fetchPrereleaseInfoFromHtml(owner, repo);
       if (devInfo == null) {
@@ -221,6 +263,31 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
   static bool _isPublishedLater(DateTime? candidate, DateTime? current) =>
       candidate != null && current != null && candidate.isAfter(current);
+
+  /// 只有开发/每夜版链接确实指向当前 GitHub 仓库时，才扫描 prerelease。
+  ///
+  /// RPCS3 等项目把滚动构建放在独立官网；此前只要 devUrl 非空就会额外
+  /// 扫描 GitHub releases，不仅找不到开发版，还会拖慢批量更新并增加限流
+  /// 风险。外部渠道由静态链接直接展示，不进行无意义的 GitHub 请求。
+  bool _tracksGitHubPrerelease(
+    Emulator emulator, {
+    required String owner,
+    required String repo,
+  }) {
+    for (final url in <String>[emulator.devUrl, emulator.nightlyUrl]) {
+      final uri = Uri.tryParse(url);
+      if (uri == null || uri.host != 'github.com') continue;
+      final segments = uri.pathSegments
+          .where((part) => part.isNotEmpty)
+          .toList();
+      if (segments.length >= 2 &&
+          segments[0].toLowerCase() == owner.toLowerCase() &&
+          segments[1].toLowerCase() == repo.toLowerCase()) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   /// 通过 HTML 解析获取最新 prerelease 信息（不消耗 API 配额）。
   ///
@@ -537,6 +604,68 @@ class GitHubReleasesAdapter implements VersionAdapter {
           .replaceAll(RegExp(r'\n{3,}'), '\n\n')
           .trim();
       return content == null || content.isEmpty ? null : content;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从 GitHub 官方 releases.atom 补全指定版本的日期与更新说明。
+  ///
+  /// Feed 与 Releases 页面使用同一份发布正文，但不受 API 每小时 60 次的
+  /// 匿名限额影响。只在常规 HTML/API 详情抓取失败后调用，避免增加正常
+  /// 批量检查的流量。
+  Future<VersionInfo?> _fetchFromAtom(
+    Emulator emulator,
+    String owner,
+    String repo, {
+    required String preferredVersion,
+  }) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases.atom',
+        options: _atomOptions(),
+      );
+      final document = html_parser.parse(response.data.toString());
+      final entries = document.querySelectorAll('entry');
+
+      for (final entry in entries) {
+        final link = entry.querySelector('link[rel="alternate"]') ??
+            entry.querySelector('link');
+        final href = link?.attributes['href'];
+        final tag = href == null
+            ? null
+            : RegExp(r'/releases/tag/(.+?)(?:\?|#|$)')
+                .firstMatch(href)
+                ?.group(1);
+        if (tag == null || tag.isEmpty) continue;
+
+        final version = _stripVPrefix(tag);
+        if (!_sameVersion(version, preferredVersion)) continue;
+
+        final encodedBody = entry.querySelector('content')?.text.trim();
+        String? releaseNotes;
+        if (encodedBody != null && encodedBody.isNotEmpty) {
+          final bodyDocument = html_parser.parseFragment(encodedBody);
+          final text = (bodyDocument.text ?? '')
+              .replaceAll(RegExp(r'[ \t]+'), ' ')
+              .replaceAll(RegExp(r'\n{3,}'), '\n\n')
+              .trim();
+          if (text.isNotEmpty) releaseNotes = text;
+        }
+
+        final publishedAt = _parseDate(
+          entry.querySelector('updated')?.text.trim(),
+        );
+
+        return VersionInfo(
+          emulatorId: emulator.id,
+          version: version,
+          releaseDate: publishedAt,
+          releaseNotes: releaseNotes,
+          isNew: false,
+        );
+      }
+      return null;
     } catch (_) {
       return null;
     }

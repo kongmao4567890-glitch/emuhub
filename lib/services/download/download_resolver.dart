@@ -57,6 +57,11 @@ class DownloadResolver {
     String? cachedDevDownloadUrl,
     String? latestVersion,
   }) {
+    // 只有配置了独立开发版渠道时才显示开发版卡片。适配器也会把
+    // nightly 的动态资产写入开发版缓存字段，不能因此重复显示一个
+    // “开发版”和一个“每夜版”按钮。
+    if (emulator.devUrl.isEmpty) return '';
+
     // 优先使用缓存的动态开发版链接
     if (cachedDevDownloadUrl != null && cachedDevDownloadUrl.isNotEmpty) {
       return cachedDevDownloadUrl;

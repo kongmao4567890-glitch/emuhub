@@ -412,9 +412,16 @@ class _EmulatorListCard extends StatelessWidget {
                       spacing: 6,
                       runSpacing: 4,
                       children: [
-                        // 开源标签
+                        // 版本信息来源标签。来源与是否开源是两个独立概念，
+                        // GitLab/Forgejo 项目不能错误显示为 GitHub。
                         _Tag(
-                          label: emulator.openSource ? 'GitHub' : '闭源',
+                          label: AppTheme.sourceTypeLabel(emulator.sourceType),
+                          color: cs.primary,
+                          backgroundColor: cs.primary.withOpacity(0.1),
+                        ),
+                        // 开源状态标签
+                        _Tag(
+                          label: emulator.openSource ? '开源' : '闭源',
                           color: emulator.openSource
                               ? AppTheme.success
                               : cs.onSurfaceVariant,

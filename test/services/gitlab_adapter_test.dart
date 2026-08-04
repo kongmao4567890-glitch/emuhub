@@ -10,9 +10,9 @@ void main() {
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          expect(options.uri.host, 'git.ryujinx.app');
+          expect(options.uri.host, 'git.example.com');
           expect(options.uri.path, contains('/api/v4/projects/'));
-          expect(options.uri.toString(), contains('release-channel-master'));
+          expect(options.uri.toString(), contains('group%2Femulator'));
           handler.resolve(
             Response<dynamic>(
               requestOptions: options,
@@ -21,7 +21,7 @@ void main() {
                 {
                   'tag_name': '1.3.0',
                   'created_at': '2026-08-01T00:00:00Z',
-                  'description': 'Ryubing desktop fixes',
+                  'description': 'Self-hosted GitLab release notes',
                 },
               ],
             ),
@@ -32,12 +32,11 @@ void main() {
 
     final result = await GitLabReleasesAdapter(dio: dio).fetchLatestVersion(
       const Emulator(
-        id: 'ryubing_pc',
-        name: 'Ryubing',
+        id: 'self_hosted_gitlab',
+        name: 'Self-hosted GitLab emulator',
         openSource: true,
         sourceType: 'gitlab',
-        sourceUrl:
-            'https://git.ryujinx.app/ryujinx/release-channel-master',
+        sourceUrl: 'https://git.example.com/group/emulator',
         playStoreId: '',
         website: '',
         core: '',
@@ -50,6 +49,6 @@ void main() {
     );
 
     expect(result?.version, '1.3.0');
-    expect(result?.releaseNotes, 'Ryubing desktop fixes');
+    expect(result?.releaseNotes, 'Self-hosted GitLab release notes');
   });
 }

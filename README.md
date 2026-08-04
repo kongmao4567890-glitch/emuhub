@@ -4,10 +4,12 @@
 
 ## 功能特性
 
-- **机种库**：120 个机种分类、283 条模拟器/核心/工具记录，覆盖 Atari、FC、SFC、MD、PS、Xbox、Switch、PS5、Sharp MZ 等机种
+- **机种库**：120 个机种分类、285 条模拟器/核心/工具记录，覆盖 Atari、FC、SFC、MD、PS、Xbox、Switch、PS5、Sharp MZ 等机种
 - **运行平台筛选**：按 Android、Windows、Linux、macOS 浏览模拟器，PC 条目展示对应系统要求
+- **平台标签审计**：以官方 README 和 Release 构建资产为依据同步运行平台，避免桌面版本漏标
 - **实用工具**：收录游戏库前端、ROM 管理、控制器映射和一体化模拟器套件
 - **自动更新检测**：后台定时检查各模拟器最新版本，有新版本推送系统通知
+- **多渠道跟踪**：稳定版、开发版、预览版、Canary 与每夜构建按发布时间统一比较
 - **更新中心**：集中展示有更新和无更新的模拟器，一键跳转下载
 - **模拟器详情**：最新版本、更新日志、下载源、系统要求、兼容性评级
 - **收藏订阅**：关注特定模拟器，只接收订阅项的更新通知
@@ -22,8 +24,8 @@ App 直接从官方数据源检测版本更新（无后端）：
 | 数据源类型 | 适用模拟器 | 检测方式 |
 |------------|-----------|----------|
 | GitHub Releases | PPSSPP、Dolphin、RetroArch、NetherSX2、melonDS、Azahar、Flycast、MAME4droid、DuckStation 等 | Releases 重定向与资源页，API 作为回退 |
-| GitLab Releases | EightBitWonders、Ryubing 等 | GitLab.com 或自托管 GitLab Releases API |
-| Forgejo Releases | Eden 等 | Forgejo/Gitea Releases API |
+| GitLab Releases | EightBitWonders、JollyCV 等 | GitLab.com 或自托管 GitLab Releases API |
+| Forgejo Releases | Eden、Ryubing 等 | Forgejo/Gitea Releases API，支持独立 Canary/每夜仓库 |
 | Google Play | .emu 系列、ePSXe、FPse、John 系列、Pizza Boy 等 | 解析 Play Store 页面版本号 |
 | 官网 | YabaSanshiro 等无 GitHub 的项目 | 解析官网下载页版本号 |
 

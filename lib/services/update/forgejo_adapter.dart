@@ -47,13 +47,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     final (host, owner, repo) = parsed;
 
     try {
-      // 获取最新 release（非 prerelease）
-      final response = await _dio.get(
-        'https://$host/api/v1/repos/$owner/$repo/releases',
-        queryParameters: {'limit': 10, 'draft': false},
-      );
-
-      final list = _asList(response.data);
+      final list = await _fetchReleases(host, owner, repo);
       if (list.isEmpty) return null;
 
       // 查找第一个非 prerelease 的 release（稳定版）
@@ -70,35 +64,62 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         }
       }
 
-      // 配置了开发/每夜渠道时按发布时间选择稳定版与预发布版；未配置时
-      // 仍以稳定版为主，避免普通用户意外跟踪测试构建。
-      var release = stableRelease ?? _asMap(list.first);
-      if (preRelease != null &&
-          (emulator.devUrl.isNotEmpty || emulator.nightlyUrl.isNotEmpty)) {
-        final stableDate = _parseDate(release['published_at']?.toString());
-        final preDate = _parseDate(preRelease['published_at']?.toString());
-        if (preDate != null &&
-            (stableDate == null || preDate.isAfter(stableDate))) {
-          release = preRelease;
+      final stable = stableRelease ?? _asMap(list.first);
+      if (stable.isEmpty) return null;
+
+      // Forgejo 项目既可能把预发布放在同一仓库，也可能使用独立仓库，
+      // 例如 Ryubing 的稳定版 projects/Ryubing 与 Ryubing/Canary。
+      // 分别读取 dev/nightlyUrl，随后统一按发布时间选择最新发布。
+      final dev = await _fetchChannelRelease(
+        emulator.devUrl,
+        stableRepo: parsed,
+        sameRepoPrerelease: preRelease,
+      );
+      final nightly = await _fetchChannelRelease(
+        emulator.nightlyUrl,
+        stableRepo: parsed,
+        sameRepoPrerelease: preRelease,
+      );
+
+      var selected = (
+        host: host,
+        owner: owner,
+        repo: repo,
+        pageUrl: emulator.downloadUrl,
+        release: stable,
+      );
+      for (final candidate in [dev, nightly]) {
+        if (candidate != null &&
+            _isPublishedLater(candidate.release, selected.release)) {
+          selected = candidate;
         }
       }
-      if (release.isEmpty) return null;
 
+      final release = selected.release;
       final tagName = release['tag_name']?.toString();
       if (tagName == null || tagName.isEmpty) return null;
 
       final version = _stripVPrefix(tagName);
-      final publishedAt = _parseDate(release['published_at']?.toString());
-      final body = await _resolveReleaseNotes(host, owner, repo, release);
+      final publishedAt = _releaseDate(release);
+      final body = await _resolveReleaseNotes(
+        selected.host,
+        selected.owner,
+        selected.repo,
+        release,
+      );
       final apkUrl = _extractApkAssetUrl(release);
 
-      // 构建开发版信息
-      String? devApkUrl;
-      String? devBody;
-      if (preRelease != null) {
-        devApkUrl = _extractApkAssetUrl(preRelease);
-        devBody = await _resolveReleaseNotes(host, owner, repo, preRelease);
-      }
+      final devApkUrl = dev == null
+          ? null
+          : _extractApkAssetUrl(dev.release) ?? emulator.devUrl;
+      final devBody = dev == null
+          ? null
+          : await _resolveReleaseNotes(
+              dev.host,
+              dev.owner,
+              dev.repo,
+              dev.release,
+            );
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -106,7 +127,12 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         releaseDate: publishedAt,
         releaseNotes: body,
         isNew: false,
-        downloadUrl: apkUrl,
+        // PC 发布通常没有 APK；选择到独立 Canary/nightly 时回退到其
+        // 发布页，不能继续把“当前最新版”按钮指向旧的稳定版。
+        downloadUrl: apkUrl ??
+            (selected.pageUrl != emulator.downloadUrl
+                ? selected.pageUrl
+                : null),
         devDownloadUrl: devApkUrl,
         devReleaseNotes: devBody,
       );
@@ -114,6 +140,84 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       return null;
     }
   }
+
+  Future<List<dynamic>> _fetchReleases(
+    String host,
+    String owner,
+    String repo,
+  ) async {
+    final response = await _dio.get(
+      'https://$host/api/v1/repos/$owner/$repo/releases',
+      queryParameters: {'limit': 10, 'draft': false},
+    );
+    return _asList(response.data);
+  }
+
+  Future<({
+    String host,
+    String owner,
+    String repo,
+    String pageUrl,
+    Map<String, dynamic> release,
+  })?> _fetchChannelRelease(
+    String pageUrl, {
+    required (String, String, String) stableRepo,
+    required Map<String, dynamic>? sameRepoPrerelease,
+  }) async {
+    if (pageUrl.isEmpty) return null;
+    final parsed = _parseRepo(pageUrl);
+    if (parsed == null) return null;
+    final (host, owner, repo) = parsed;
+    final (stableHost, stableOwner, stableName) = stableRepo;
+
+    if (host == stableHost && owner == stableOwner && repo == stableName) {
+      if (sameRepoPrerelease == null) return null;
+      return (
+        host: host,
+        owner: owner,
+        repo: repo,
+        pageUrl: pageUrl,
+        release: sameRepoPrerelease,
+      );
+    }
+
+    try {
+      final releases = await _fetchReleases(host, owner, repo);
+      Map<String, dynamic>? latest;
+      for (final item in releases) {
+        final release = _asMap(item);
+        if (release.isEmpty || release['draft'] == true) continue;
+        if (latest == null || _isPublishedLater(release, latest)) {
+          latest = release;
+        }
+      }
+      if (latest == null) return null;
+      return (
+        host: host,
+        owner: owner,
+        repo: repo,
+        pageUrl: pageUrl,
+        release: latest,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  bool _isPublishedLater(
+    Map<String, dynamic> candidate,
+    Map<String, dynamic> current,
+  ) {
+    final candidateDate = _releaseDate(candidate);
+    final currentDate = _releaseDate(current);
+    return candidateDate != null &&
+        (currentDate == null || candidateDate.isAfter(currentDate));
+  }
+
+  DateTime? _releaseDate(Map<String, dynamic> release) => _parseDate(
+        release['published_at']?.toString() ??
+            release['created_at']?.toString(),
+      );
 
   /// 从 Forgejo 仓库 URL 解析出 (host, owner, repo)。
   ///
