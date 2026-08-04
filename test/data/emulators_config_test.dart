@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/data/models/emulators_config.dart';
 
 void main() {
