@@ -113,8 +113,22 @@ void main() {
     final armsx1Icon = await rootBundle.load(armsx1.iconPath);
     expect(armsx1Icon.lengthInBytes, greaterThan(0));
 
-    expect(consoleIds.length, 117);
-    expect(emulatorIds.length, 263);
+    expect(consoleIds.length, 120);
+    expect(emulatorIds.length, 283);
+    expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
+    expect(
+      emulatorIds,
+      containsAll({
+        'mesence_pc',
+        'pcsx_redux_pc',
+        'coffee_gb_pc',
+        'noods',
+        'sharpemu_pc',
+        'steam_rom_manager',
+        'retrobat',
+        'padforge',
+      }),
+    );
 
     final pcEmulators = config.consoles
         .expand((console) => console.emulators)
