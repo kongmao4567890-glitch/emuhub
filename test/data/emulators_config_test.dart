@@ -43,6 +43,13 @@ void main() {
     for (final console in config.consoles) {
       expect(consoleIds.add(console.id), isTrue, reason: console.id);
       expect(console.name, isNotEmpty, reason: console.id);
+      expect(console.imagePath, isNotEmpty, reason: console.id);
+      final consoleImage = await rootBundle.load(console.imagePath);
+      expect(
+        consoleImage.lengthInBytes,
+        greaterThan(0),
+        reason: console.id,
+      );
 
       for (final emulator in console.emulators) {
         expect(emulatorIds.add(emulator.id), isTrue, reason: emulator.id);
@@ -227,7 +234,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 297);
+    expect(emulatorIds.length, 309);
 
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
@@ -271,6 +278,18 @@ void main() {
         'winarcadia_pc',
         'gameex',
         'pinballx',
+        'gse_speedrun',
+        'panda3ds',
+        'pcsx2x6_arcade',
+        'supermodel_ponmi',
+        'negamame_pc',
+        'pcbox_pc',
+        'xenia_edge_pc',
+        'pcfxemu_pc',
+        's4w_scanlines',
+        'romvault',
+        'xenia_manager',
+        'gameplay_frontend',
       }),
     );
 

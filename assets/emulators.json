@@ -1,5 +1,5 @@
 {
-  "version": "3.7.0",
+  "version": "3.8.0",
   "lastUpdated": "2026-08-04",
   "consoles": [
     {
@@ -179,6 +179,30 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "gse_speedrun",
+          "name": "GSE (Game Boy Speedrun Emulator)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/CasualPokePlayer/GSE",
+          "playStoreId": "",
+          "website": "",
+          "core": "GSE / mGBA",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "面向速通玩家的 Game Boy、Game Boy Color 与 Game Boy Advance 模拟器，提供低延迟模式、精确计时和跨平台构建；GBA 部分使用 mGBA 核心。",
+          "downloadUrl": "https://github.com/CasualPokePlayer/GSE/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/coffee_gb_pc.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows x86/x64/ARM64、Linux x64/ARM/ARM64 或 macOS Universal"
         }
       ]
     },
@@ -1532,6 +1556,30 @@
             "linux"
           ],
           "desktopRequirements": "64 位 Windows 10 或现代 Linux；x86-64/ARM64 处理器"
+        },
+        {
+          "id": "panda3ds",
+          "name": "Panda3DS",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/wheremyfoodat/Panda3DS",
+          "playStoreId": "",
+          "website": "https://panda3ds.com/",
+          "core": "HLE 3DS",
+          "compatibility": "medium",
+          "minAndroid": "7.0",
+          "description": "红熊猫主题的 Nintendo 3DS HLE 模拟器，提供 Qt/SDL 桌面构建和 Android ARM64 构建，支持 Lua 脚本等实验性功能。",
+          "downloadUrl": "https://github.com/wheremyfoodat/Panda3DS/releases",
+          "devUrl": "https://panda3ds.com/download.html",
+          "nightlyUrl": "https://panda3ds.com/download.html",
+          "iconPath": "assets/emulators/azahar.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS；支持 OpenGL 4.3 或 Vulkan 的显卡"
         }
       ]
     },
@@ -2457,6 +2505,73 @@
             "windows"
           ],
           "desktopRequirements": "64 位 Windows；32 位旧构建以官网说明为准"
+        },
+        {
+          "id": "pcsx2x6_arcade",
+          "name": "PCSX2x6",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/PS2Homebrew-arcade/pcsx2x6",
+          "playStoreId": "",
+          "website": "https://ps2homebrew-arcade.github.io/pcsx2x6/",
+          "core": "PCSX2 / Namco System 246/256",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "针对 Namco System 246、System 256 与 Super System 256 的 PCSX2 实验分支，用于保存和运行基于 PlayStation 2 架构的街机软件。",
+          "downloadUrl": "https://github.com/PS2Homebrew-arcade/pcsx2x6/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/pcsx2_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS；支持 Vulkan、Direct3D 12 或 Metal"
+        },
+        {
+          "id": "supermodel_ponmi",
+          "name": "Supermodel PonMi",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/BackPonBeauty/Supermodel3-PonMi",
+          "playStoreId": "",
+          "website": "https://github.com/BackPonBeauty/Supermodel3-PonMi",
+          "core": "Sega Model 3",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "Supermodel 的实验分支，面向 Sega Model 3 街机，增加低延迟网络、画面效果动态调节及更偏机厅体验的功能。",
+          "downloadUrl": "https://github.com/BackPonBeauty/Supermodel3-PonMi/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/whittyarcade_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11；支持 OpenGL 的独立显卡"
+        },
+        {
+          "id": "negamame_pc",
+          "name": "NegaMAME",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/xinyingho/NegaMAME",
+          "playStoreId": "",
+          "website": "https://babelsoft.net/products/negamame.htm",
+          "core": "MAME",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "为 Negatron 等第三方前端增强机器配置访问能力的 MAME 衍生版，版本随 MAME 主线同步，并提供 Windows、Linux 与 macOS ARM 构建。",
+          "downloadUrl": "https://github.com/xinyingho/NegaMAME/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows 10+、Linux 或 Apple Silicon macOS"
         }
       ]
     },
@@ -3206,6 +3321,28 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "pcbox_pc",
+          "name": "PCBox",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/PCBox/PCBox",
+          "playStoreId": "",
+          "website": "https://pcbox-emu.xyz/",
+          "core": "86Box",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "基于 86Box 的低层 PC 模拟器，强调硬件精度与保存，可运行 DOS、早期 Windows 和多种旧式 PC 软件。",
+          "downloadUrl": "https://github.com/PCBox/PCBox/releases",
+          "devUrl": "https://github.com/PCBox/PCBox/actions",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/dosbox_staging_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "Windows 7+ 或现代 Linux；推荐 64 位多核处理器和 4 GB 以上内存"
         }
       ]
     },
@@ -3668,6 +3805,29 @@
             "windows"
           ],
           "desktopRequirements": "Windows 10/11 64 位"
+        },
+        {
+          "id": "xenia_edge_pc",
+          "name": "Xenia Edge",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/has207/xenia-edge",
+          "playStoreId": "",
+          "website": "https://xenia.jp/",
+          "core": "Xenia Canary",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "基于 Xenia Canary 的实验分支，集中整合更快迭代、较高默认兼容性和跨平台图形后端，提供 Windows、Linux 与 macOS 构建。",
+          "downloadUrl": "https://github.com/has207/xenia-edge/releases",
+          "devUrl": "https://github.com/has207/xenia-edge/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xenia_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS；支持 Vulkan、Direct3D 12 或 Metal"
         }
       ]
     },
@@ -4298,6 +4458,27 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "pcfxemu_pc",
+          "name": "PCFXEmu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/gameblabla/pcfxemu",
+          "playStoreId": "",
+          "website": "https://github.com/gameblabla/pcfxemu",
+          "core": "PC-FX / PC-FXGA",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "Gameblabla 维护的轻量 PC-FX 模拟器，包含 PC-FXGA 支持、无头模式与 WebAssembly 端口，并针对自制软件开发和精度测试持续改进。",
+          "downloadUrl": "https://github.com/gameblabla/pcfxemu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/beetle_pcfx_core.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "32/64 位 Windows；其他平台可从源码构建"
         }
       ]
     },
@@ -7485,6 +7666,90 @@
             "windows"
           ],
           "desktopRequirements": "64 位 Windows；多屏机柜可按需配置背板和 DMD 显示器"
+        },
+        {
+          "id": "s4w_scanlines",
+          "name": "S4W: Scanlines for Windows",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "https://s4windows.itch.io/scanlines-for-windows",
+          "playStoreId": "",
+          "website": "https://s4windows.itch.io/scanlines-for-windows",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "为 PC 游戏、模拟器和前端叠加扫描线、CRT 效果、边框与反射的 Windows 工具，支持 4:3 画面、MAME 单游戏配置和手柄快捷键。",
+          "downloadUrl": "https://s4windows.itch.io/scanlines-for-windows",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/retroarch.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11；支持 DirectX 的显卡"
+        },
+        {
+          "id": "romvault",
+          "name": "RomVault",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/RomVault/RVWorld",
+          "playStoreId": "",
+          "website": "https://www.romvault.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "基于 DAT 的 ROM 集扫描、校验、修复与压缩管理工具，可将分散文件整理为目标集合并生成修复计划。",
+          "downloadUrl": "https://www.romvault.com/",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/clrmame.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows；需要足够的校验和临时整理空间"
+        },
+        {
+          "id": "xenia_manager",
+          "name": "Xenia Manager",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/xenia-manager/xenia-manager",
+          "playStoreId": "",
+          "website": "https://xenia-manager.github.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Xenia 的图形化管理工具，提供一键安装、自动更新、游戏库、补丁管理和单游戏配置。",
+          "downloadUrl": "https://github.com/xenia-manager/xenia-manager/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xenia_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11 与 .NET Desktop Runtime"
+        },
+        {
+          "id": "gameplay_frontend",
+          "name": "GamePlay Frontend",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/leniad/GamePlay",
+          "playStoreId": "",
+          "website": "https://github.com/leniad/GamePlay",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "为 DOS、Windows 3.1/98、ScummVM、Apple II、Atari、Amiga、Saturn、SNES 和 N64 等平台设计的轻量前端，侧重免配置启动。",
+          "downloadUrl": "https://github.com/leniad/GamePlay/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/playnite.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "32/64 位 Windows；所需模拟器由用户按平台配置"
         }
       ]
     }
