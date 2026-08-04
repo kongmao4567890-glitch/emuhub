@@ -167,6 +167,7 @@ void main() {
       'duckstation_gpl',
       'gamenative',
       'xenios',
+      'rpcs3_pc',
     };
     const auditedNightlyIds = {
       'ares_pc',
@@ -194,6 +195,12 @@ void main() {
         reason: id,
       );
     }
+
+    final rpcs3 = allEmulators.singleWhere(
+      (emulator) => emulator.id == 'rpcs3_pc',
+    );
+    expect(rpcs3.devUrl, 'https://rpcs3.net/download');
+    expect(rpcs3.nightlyUrl, 'https://rpcs3.net/builds');
 
     // 运行平台以官方 README 与当前 Release 构建资产为依据。对同时发布
     // APK 和桌面包的项目保留全部平台，防止 Windows/Linux/macOS 标签

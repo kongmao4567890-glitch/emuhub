@@ -327,6 +327,78 @@ void main() {
     expect(result?.releaseDate, DateTime.parse('2026-04-19T18:56:36Z'));
     expect(result?.releaseNotes, 'd3d: invalidate texgen texture state');
   });
+
+  test('uses the Atom feed when release details are unavailable', () async {
+    final dio = Dio();
+    var prereleasePageRequests = 0;
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (options.uri.host == 'github.com' &&
+              path == '/RPCS3/rpcs3/releases') {
+            prereleasePageRequests++;
+          }
+          if (options.method == 'HEAD' && path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 302,
+                headers: Headers.fromMap({
+                  'location': [
+                    'https://github.com/RPCS3/rpcs3/releases/tag/v0.0.42',
+                  ],
+                }),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-07-31T18:15:12Z</updated>
+    <link rel="alternate" href="https://github.com/RPCS3/rpcs3/releases/tag/v0.0.42"/>
+    <title>v0.0.42 Alpha</title>
+    <content type="html">&lt;p&gt;RPCS3 rolling release fixes&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Vulkan fix&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              response: Response<dynamic>(
+                requestOptions: options,
+                statusCode: 403,
+              ),
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _rpcs3(),
+      includeDetails: true,
+    );
+
+    expect(result?.version, '0.0.42');
+    expect(result?.releaseDate, DateTime.parse('2026-07-31T18:15:12Z'));
+    expect(
+      result?.releaseNotes,
+      contains('RPCS3 rolling release fixes'),
+    );
+    expect(result?.releaseNotes, contains('Vulkan fix'));
+    expect(prereleasePageRequests, 0);
+  });
 }
 
 Emulator _armsx2() {
@@ -380,5 +452,24 @@ Emulator _cxbx() {
     minAndroid: '10.0',
     description: 'test',
     downloadUrl: 'https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases',
+  );
+}
+
+Emulator _rpcs3() {
+  return const Emulator(
+    id: 'rpcs3_pc',
+    name: 'RPCS3',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/RPCS3/rpcs3',
+    playStoreId: '',
+    website: 'https://rpcs3.net/',
+    core: '',
+    compatibility: 'high',
+    minAndroid: '',
+    description: 'test',
+    downloadUrl: 'https://github.com/RPCS3/rpcs3/releases/latest',
+    devUrl: 'https://rpcs3.net/download',
+    nightlyUrl: 'https://rpcs3.net/builds',
   );
 }
