@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/data/models/emulators_config.dart';
 
 void main() {
@@ -25,6 +26,12 @@ void main() {
       'playstore',
       'website',
     };
+    const supportedPlatforms = {
+      'android',
+      'windows',
+      'linux',
+      'macos',
+    };
 
     for (final console in config.consoles) {
       expect(consoleIds.add(console.id), isTrue, reason: console.id);
@@ -38,6 +45,22 @@ void main() {
           contains(emulator.sourceType),
           reason: emulator.id,
         );
+        expect(emulator.platforms, isNotEmpty, reason: emulator.id);
+        expect(
+          emulator.platforms.toSet().length,
+          emulator.platforms.length,
+          reason: emulator.id,
+        );
+        for (final platform in emulator.platforms) {
+          expect(supportedPlatforms, contains(platform), reason: emulator.id);
+        }
+        if (emulator.supportsPlatform('android')) {
+          expect(emulator.minAndroid, isNotEmpty, reason: emulator.id);
+        }
+        if (emulator.supportsDesktop) {
+          expect(emulator.desktopRequirements, isNotEmpty,
+              reason: emulator.id);
+        }
 
         for (final url in [
           emulator.sourceUrl,
@@ -90,7 +113,47 @@ void main() {
     final armsx1Icon = await rootBundle.load(armsx1.iconPath);
     expect(armsx1Icon.lengthInBytes, greaterThan(0));
 
-    expect(consoleIds.length, 117);
-    expect(emulatorIds.length, 234);
+    expect(consoleIds.length, 120);
+    expect(emulatorIds.length, 283);
+    expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
+    expect(
+      emulatorIds,
+      containsAll({
+        'mesence_pc',
+        'pcsx_redux_pc',
+        'coffee_gb_pc',
+        'noods',
+        'sharpemu_pc',
+        'steam_rom_manager',
+        'retrobat',
+        'padforge',
+      }),
+    );
+
+    final pcEmulators = config.consoles
+        .expand((console) => console.emulators)
+        .where((emulator) => emulator.supportsDesktop)
+        .toList();
+    expect(pcEmulators.length, greaterThanOrEqualTo(130));
+    expect(pcEmulators.any((emulator) => emulator.id == 'pcsx2_pc'), isTrue);
+    expect(pcEmulators.any((emulator) => emulator.id == 'rpcs3_pc'), isTrue);
+    expect(pcEmulators.any((emulator) => emulator.id == 'xenia_pc'), isTrue);
+    expect(pcEmulators.any((emulator) => emulator.id == 'cemu_pc'), isTrue);
+    expect(pcEmulators.any((emulator) => emulator.id == 'ryubing_pc'), isTrue);
+
+    for (final emulator in pcEmulators) {
+      expect(emulator.iconPath, isNotEmpty, reason: emulator.id);
+      final icon = await rootBundle.load(emulator.iconPath);
+      expect(icon.lengthInBytes, greaterThan(0), reason: emulator.id);
+    }
+
+    for (final console in config.consoles) {
+      if (console.id == 'gpu_drivers') continue;
+      expect(
+        console.emulators.any((emulator) => emulator.supportsDesktop),
+        isTrue,
+        reason: '${console.id} 缺少 PC 平台模拟器',
+      );
+    }
   });
 }

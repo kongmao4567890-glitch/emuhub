@@ -1,6 +1,6 @@
 {
-  "version": "3.1.4",
-  "lastUpdated": "2026-08-03",
+  "version": "3.3.0",
+  "lastUpdated": "2026-08-04",
   "consoles": [
     {
       "id": "multi_system",
@@ -25,7 +25,14 @@
           "description": "最强大的Libretro前端，内置核心下载器、Netplay联机、倒带(Rewind)、成就系统(RetroAchievements)、着色器滤镜，覆盖从Atari到3DO几乎所有平台的核心，安卓端aarch64 nightly构建",
           "downloadUrl": "https://buildbot.libretro.com/nightly/android/RetroArch_aarch64.apk",
           "nightlyUrl": "https://buildbot.libretro.com/nightly/android/",
-          "iconPath": "assets/emulators/retroarch.png"
+          "iconPath": "assets/emulators/retroarch.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "lemuroid",
@@ -40,7 +47,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，Material Design界面、自动扫描ROM、即点即玩，已上架F-Droid（https://f-droid.org/packages/com.swordfish.lemuroid/），覆盖十余种主机平台，活跃维护中",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "classicboy",
@@ -55,7 +65,10 @@
           "minAndroid": "5.0",
           "description": "多合一模拟器前端，内置Mupen64Plus(N64)、PCSX-ReARMed/SwanStation(PS1)、MelonDS(NDS)、mGBA(GBA)、Snes9x(SNES)、FCEUmm(NES)、Genplus/PicoDrive(MD)、FB Alpha(街机)、Atari 2600等8个核心。免费Lite版+Pro付费版",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.portableandroid.classicboy",
-          "iconPath": "assets/emulators/classicboy.jpg"
+          "iconPath": "assets/emulators/classicboy.jpg",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "argon",
@@ -70,7 +83,102 @@
           "minAndroid": "5.0",
           "description": "多系统复古游戏模拟器，专有软件。支持Atari 2600/5200/7800/8-Bit/Lynx、ColecoVision、Intellivision、NES、Game Boy/GBC/GBA、Vectrex、PICO-8。内置游戏库+自定义ROM。支持Chromebook与Raspberry Pi",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.markspace.retro",
-          "iconPath": "assets/emulators/argon.jpg"
+          "iconPath": "assets/emulators/argon.jpg",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ares_pc",
+          "name": "ares",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ares-emulator/ares",
+          "playStoreId": "",
+          "website": "https://ares-emu.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "高精度多系统 PC 模拟器，覆盖 SNES、Mega Drive、Saturn、N64、PC Engine 等平台，强调硬件行为准确性。",
+          "downloadUrl": "https://github.com/ares-emulator/ares/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/ares_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "mame_pc",
+          "name": "MAME (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mamedev/mame",
+          "playStoreId": "",
+          "website": "https://www.mamedev.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "大型多系统硬件保存项目，除街机外还支持大量早期主机、掌机、家用电脑和冷门硬件。",
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "mesence_pc",
+          "name": "MesenCE",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/nesdev-org/MesenCE",
+          "playStoreId": "",
+          "website": "https://github.com/nesdev-org/MesenCE",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Mesen Community Edition 是 Mesen2 的社区延续项目，支持 NES、SNES、GB/GBC、GBA、PC Engine、Master System/Game Gear 与 WonderSwan，提供高精度模拟、调试器、成就和开发工具。",
+          "downloadUrl": "https://github.com/nesdev-org/MesenCE/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mesence_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "es_de",
+          "name": "ES-DE Frontend",
+          "openSource": true,
+          "sourceType": "gitlab",
+          "sourceUrl": "https://gitlab.com/es-de/emulationstation-de",
+          "playStoreId": "",
+          "website": "https://es-de.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "跨平台游戏库前端，预配置大量模拟器、游戏引擎和游戏平台，支持主题、元数据抓取、合集管理以及本地应用导入。",
+          "downloadUrl": "https://es-de.org/#Download",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/es_de.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -96,7 +204,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Stella核心模拟Atari 2600，活跃维护中",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "stella_android",
@@ -111,7 +222,14 @@
           "minAndroid": "5.0",
           "description": "Atari 2600官方模拟器Stella的源码仓库，含Libretro核心可在安卓前端使用，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/stella-emu/stella/releases",
-          "iconPath": "assets/emulators/stella_android.png"
+          "iconPath": "assets/emulators/stella_android.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -137,7 +255,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Handy核心模拟Atari Lynx，兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "handy_core",
@@ -152,7 +273,14 @@
           "minAndroid": "5.0",
           "description": "Atari Lynx的Handy模拟器Libretro核心仓库，需通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/libretro-handy",
-          "iconPath": "assets/emulators/handy_core.png"
+          "iconPath": "assets/emulators/handy_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -178,7 +306,14 @@
           "minAndroid": "6.0",
           "description": "Atari Jaguar目前仅能通过RetroArch的Virtual Jaguar核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，兼容性中等",
           "downloadUrl": "https://github.com/libretro/virtualjaguar-libretro/releases",
-          "iconPath": "assets/emulators/virtual_jaguar_core.png"
+          "iconPath": "assets/emulators/virtual_jaguar_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -204,7 +339,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用FCEUmm核心，FC/NES兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "nostalgia_nes",
@@ -220,7 +358,10 @@
           "description": "国人维护的NES模拟器，基于FCEUX核心，操作流畅，2026年7月仍在活跃更新",
           "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/latest/download/appgbc-release-V1501.apk",
           "devUrl": "",
-          "iconPath": "assets/emulators/nostalgia_nes.png"
+          "iconPath": "assets/emulators/nostalgia_nes.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "nes_emu_ex",
@@ -235,7 +376,10 @@
           "minAndroid": "5.0",
           "description": "Robert Broglia开发的NES模拟器，基于FCEUX核心，低延迟，有CI nightly构建",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/nes_emu_ex.png"
+          "iconPath": "assets/emulators/nes_emu_ex.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "nesoid",
@@ -250,7 +394,33 @@
           "minAndroid": "4.1",
           "description": "经典Nesoid的现代fork，Material UI设计，支持蓝牙/WiFi联机对战、光枪外设，2025年1月更新",
           "downloadUrl": "https://github.com/proninyaroslav/nesoid/releases/latest/download/Nesoid-2.5-4-armeabi-v7a.apk",
-          "iconPath": "assets/emulators/nesoid.png"
+          "iconPath": "assets/emulators/nesoid.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "mesen2_pc",
+          "name": "Mesen 2",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/SourMesen/Mesen2",
+          "playStoreId": "",
+          "website": "https://www.mesen.ca/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "高精度 NES/Famicom 模拟器，同时覆盖 SNES、GB/GBC、PC Engine，内置强大调试器与录像功能。",
+          "downloadUrl": "https://github.com/SourMesen/Mesen2/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mesen2_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -276,7 +446,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Snes9x核心，SNES兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "snes9x_ex",
@@ -291,7 +464,10 @@
           "minAndroid": "5.0",
           "description": "基于Snes9x核心的Android移植版，由Robert Broglia开发，支持多点触控与蓝牙手柄",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/snes9x_ex.png"
+          "iconPath": "assets/emulators/snes9x_ex.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "snes9x_core",
@@ -306,7 +482,60 @@
           "minAndroid": "5.0",
           "description": "Snes9x官方源码仓库，提供Libretro核心的安卓构建（nightly CI），通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/snes9xgit/snes9x/releases",
-          "iconPath": "assets/emulators/snes9x_core.png"
+          "iconPath": "assets/emulators/snes9x_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "bsnes_pc",
+          "name": "bsnes",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/bsnes-emu/bsnes",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "以准确性和低延迟著称的 SNES/SFC PC 模拟器，支持特殊芯片与高精度模式。",
+          "downloadUrl": "https://github.com/bsnes-emu/bsnes/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/bsnes_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "supersnes9x_pc",
+          "name": "SuperSnes9x",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/shanytc/snes9x",
+          "playStoreId": "",
+          "website": "https://github.com/shanytc/snes9x",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Snes9x 的增强分支，加入 RetroAchievements、Run-Ahead、联网、调试和素材查看工具，并扩展 Game Boy/Super Game Boy、震动和现代手柄支持。",
+          "downloadUrl": "https://github.com/shanytc/snes9x/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/supersnes9x_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -332,7 +561,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Genesis Plus GX核心，MD兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "md_emu_ex",
@@ -347,7 +579,10 @@
           "minAndroid": "5.0",
           "description": "基于Genesis Plus GX核心的Android原生前端，支持Mega Drive/Genesis、Mega CD、Master System",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/md_emu_ex.png"
+          "iconPath": "assets/emulators/md_emu_ex.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "genplus_gx",
@@ -362,7 +597,14 @@
           "minAndroid": "5.0",
           "description": "Sega 8/16位高精度模拟器核心，100%兼容性，活跃维护中",
           "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases",
-          "iconPath": "assets/emulators/genplus_gx.png"
+          "iconPath": "assets/emulators/genplus_gx.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -388,7 +630,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Genesis Plus GX核心模拟Master System与Game Gear，兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "md_emu_ex_sms",
@@ -403,7 +648,10 @@
           "minAndroid": "5.0",
           "description": "MD.emu前端同样支持Master System与Game Gear，基于Genesis Plus GX核心，低延迟，Google Play付费",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/md_emu_ex.png"
+          "iconPath": "assets/emulators/md_emu_ex.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "genplus_gx_sms",
@@ -418,7 +666,14 @@
           "minAndroid": "5.0",
           "description": "Genesis Plus GX核心原生支持Master System/Game Gear/SG-1000，100%兼容性，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases",
-          "iconPath": "assets/emulators/genplus_gx_sms.png"
+          "iconPath": "assets/emulators/genplus_gx_sms.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "gearsystem",
@@ -433,7 +688,10 @@
           "minAndroid": "5.0",
           "description": "由drhelius开发的高精度Master System/Game Gear/SG-1000模拟器，C++编写，提供Libretro核心，含准确时序与高兼容性，活跃维护",
           "downloadUrl": "https://github.com/drhelius/Gearsystem/releases",
-          "iconPath": "assets/emulators/gearsystem.png"
+          "iconPath": "assets/emulators/gearsystem.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -459,7 +717,14 @@
           "minAndroid": "5.0",
           "description": "Sega 32X目前仅能通过PicoDrive核心模拟，安卓端无独立App，PicoDrive核心同时支持Mega Drive/Mega CD/32X/Pico，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/picodrive/releases",
-          "iconPath": "assets/emulators/picodrive_core.png"
+          "iconPath": "assets/emulators/picodrive_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -485,7 +750,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Kronos核心模拟Saturn",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "yabause",
@@ -500,7 +768,14 @@
           "minAndroid": "5.0",
           "description": "Sega Saturn模拟器Yabause官方仓库，提供Libretro核心可经安卓前端使用",
           "downloadUrl": "https://github.com/Yabause/yabause/releases",
-          "iconPath": "assets/emulators/yabause.png"
+          "iconPath": "assets/emulators/yabause.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "yaba_sanshiro",
@@ -515,7 +790,10 @@
           "minAndroid": "5.0",
           "description": "devmiyax维护的Yabause分叉，是安卓端少数有独立App的土星模拟器，Kronos即从此分叉演进，2025年12月更新加入Oboe实时音频",
           "downloadUrl": "",
-          "iconPath": "assets/emulators/yaba_sanshiro.png"
+          "iconPath": "assets/emulators/yaba_sanshiro.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "saturn_emu",
@@ -530,7 +808,32 @@
           "minAndroid": "5.0",
           "description": "基于Yabause的Saturn模拟器，独立安卓App。免费/捐赠版",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.explusalpha.SaturnEmu",
-          "iconPath": "assets/emulators/saturn_emu.png"
+          "iconPath": "assets/emulators/saturn_emu.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ymir_pc",
+          "name": "Ymir",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/StrikerX3/Ymir",
+          "playStoreId": "",
+          "website": "https://ymir-emu.github.io/",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "面向 Sega Saturn 的现代高精度 PC 模拟器，注重准确时序、软件兼容性和调试能力。",
+          "downloadUrl": "https://github.com/StrikerX3/Ymir/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/ymir_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "Windows 10/11 或 64 位 Linux"
         }
       ]
     },
@@ -557,7 +860,14 @@
           "description": "多平台Dreamcast模拟器，兼容性高，支持Naomi/Naomi 2/Atomiswave街机系统、GD-ROM与维米尔勒联网，活跃维护",
           "downloadUrl": "https://github.com/flyinghead/flycast/releases/latest/download/flycast-2.6.apk",
           "devUrl": "https://github.com/flyinghead/flycast/releases",
-          "iconPath": "assets/emulators/flycast.png"
+          "iconPath": "assets/emulators/flycast.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "lemuroid_dreamcast",
@@ -572,7 +882,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Flycast核心模拟Dreamcast，便于统一管理",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "redream",
@@ -587,7 +900,14 @@
           "minAndroid": "5.0",
           "description": "Dreamcast 原生模拟器，支持高分辨率渲染；Google Play 正式版可直接检查更新。压缩为 7z 或 ZIP 的游戏文件需先解压。",
           "downloadUrl": "https://play.google.com/store/apps/details?id=io.recompiled.redream",
-          "iconPath": "assets/emulators/redream.png"
+          "iconPath": "assets/emulators/redream.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -613,7 +933,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，支持GB/GBC，使用mGBA/SameBoy核心",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "nostalgia_gbc",
@@ -629,7 +952,10 @@
           "description": "国人维护的GBC模拟器，基于Gambatte核心，操作流畅，2026年7月仍在活跃更新",
           "downloadUrl": "https://github.com/huzongyao/NostalgiaLite/releases/latest/download/appgbc-release-V1501.apk",
           "devUrl": "",
-          "iconPath": "assets/emulators/nostalgia_gbc.png"
+          "iconPath": "assets/emulators/nostalgia_gbc.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "sameboy_core",
@@ -644,7 +970,14 @@
           "minAndroid": "5.0",
           "description": "高精度GB/GBC模拟器核心，C编写，提供Libretro core可在安卓上经前端使用",
           "downloadUrl": "https://github.com/LIJI32/SameBoy/releases",
-          "iconPath": "assets/emulators/sameboy_core.png"
+          "iconPath": "assets/emulators/sameboy_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "gbc_emu_ex",
@@ -659,7 +992,10 @@
           "minAndroid": "5.0",
           "description": "基于Gambatte核心的Android原生GB/GBC前端，低延迟",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/gbc_emu_ex.png"
+          "iconPath": "assets/emulators/gbc_emu_ex.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "my_oldboy",
@@ -674,7 +1010,33 @@
           "minAndroid": "5.0",
           "description": "GB/GBC 原生模拟器，支持联机线缆、震动与倾斜传感器，并可为 GB 游戏选择自定义调色板。",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.fastemulator.gbc",
-          "iconPath": "assets/emulators/my_oldboy.png"
+          "iconPath": "assets/emulators/my_oldboy.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "coffee_gb_pc",
+          "name": "Coffee GB",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/trekawek/coffee-gb",
+          "playStoreId": "",
+          "website": "https://github.com/trekawek/coffee-gb",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "使用 Java 与 Kotlin 开发的 Game Boy/Game Boy Color 模拟器，采用逐周期 CPU 执行方式，支持 MBC1 至 MBC5、压缩 ROM、电池存档和实验性回滚联机。",
+          "downloadUrl": "https://github.com/trekawek/coffee-gb/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/coffee_gb_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows / Linux / macOS，Java 16 或更高版本"
         }
       ]
     },
@@ -700,7 +1062,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用mGBA核心，GBA兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mgba_core",
@@ -715,7 +1080,14 @@
           "minAndroid": "5.0",
           "description": "GBA高精度模拟器，MPL-2.0开源，也支持GB/GBC，提供Libretro core供安卓前端使用",
           "downloadUrl": "https://github.com/mgba-emu/mgba/releases",
-          "iconPath": "assets/emulators/mgba_core.png"
+          "iconPath": "assets/emulators/mgba_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "gba_emu_ex",
@@ -730,7 +1102,10 @@
           "minAndroid": "5.0",
           "description": "基于mGBA核心的Android原生GBA前端，稳定性高",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/gba_emu_ex.png"
+          "iconPath": "assets/emulators/gba_emu_ex.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "pizza_boy_gba",
@@ -745,7 +1120,10 @@
           "minAndroid": "5.0",
           "description": "Pizza Boy GBA模拟器，闭源，免费Basic版+付费Pro版，无广告。低配设备优化出色，兼容性极高",
           "downloadUrl": "https://play.google.com/store/apps/details?id=it.dbtecno.pizzaboygba",
-          "iconPath": "assets/emulators/pizza_boy_gba.png"
+          "iconPath": "assets/emulators/pizza_boy_gba.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "my_boy",
@@ -760,7 +1138,10 @@
           "minAndroid": "5.0",
           "description": "GBA 原生模拟器，兼容低配置至现代设备，支持同机、蓝牙和 Wi-Fi 联机线缆，以及陀螺仪、倾斜与震动传感器。",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.fastemulator.gba",
-          "iconPath": "assets/emulators/my_boy.png"
+          "iconPath": "assets/emulators/my_boy.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -786,7 +1167,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Mupen64Plus-Next核心模拟N64",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mupen64plus_ae",
@@ -801,7 +1185,10 @@
           "minAndroid": "5.0",
           "description": "Mupen64Plus Android Edition，功能丰富的N64模拟器，支持高清纹理包，2026年4月仍活跃提交",
           "downloadUrl": "https://github.com/mupen64plus-ae/mupen64plus-ae/releases",
-          "iconPath": "assets/emulators/mupen64plus_ae.png"
+          "iconPath": "assets/emulators/mupen64plus_ae.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "nin64",
@@ -818,7 +1205,10 @@
           "downloadUrl": "https://github.com/izzy2lost/Nin64-Emulator/releases",
           "devUrl": "",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/nin64.png"
+          "iconPath": "assets/emulators/nin64.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "m64plus_fz",
@@ -833,7 +1223,33 @@
           "minAndroid": "5.0",
           "description": "N64 原生模拟器，Google Play 正式版支持控制器、图形插件与本地/网络联机设置；Pro 版提供互联网联机服务器支持。",
           "downloadUrl": "https://play.google.com/store/apps/details?id=org.mupen64plusae.v3.fzurita",
-          "iconPath": "assets/emulators/m64plus_fz.png"
+          "iconPath": "assets/emulators/m64plus_fz.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "rmg_pc",
+          "name": "Rosalie's Mupen GUI (RMG)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Rosalie241/RMG",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "基于 Mupen64Plus 的一体化 N64 PC 模拟器，内置图形界面、插件、手柄配置和自动更新。",
+          "downloadUrl": "https://github.com/Rosalie241/RMG/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/rmg_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -860,7 +1276,10 @@
           "description": "高精度NDS模拟器melonDS的Android移植版，模拟准确性优秀，活跃维护中",
           "downloadUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases/latest/download/app-gitHub-prod-release.apk",
           "nightlyUrl": "https://github.com/rafaelvcaetano/melonDS-android/releases",
-          "iconPath": "assets/emulators/melonds_android.png"
+          "iconPath": "assets/emulators/melonds_android.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "drastic_rev_i18n",
@@ -876,7 +1295,10 @@
           "description": "商业NDS模拟器DraStic的国际化社区分叉，免费提供，性能与兼容性顶级，包含模拟摇杆触发器支持、右摇杆D-Pad模式、摇杆旋转模式、单屏布局显示下屏、TV模式快捷菜单，2026年7月活跃更新",
           "downloadUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases/latest/download/DraStic_r2.6.0.4a_build109_universal_rev260701.apk",
           "devUrl": "https://github.com/R-YaTian/DraStic_rev_i18n/releases",
-          "iconPath": "assets/emulators/drastic_rev_i18n.png"
+          "iconPath": "assets/emulators/drastic_rev_i18n.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "lemuroid_nds",
@@ -891,7 +1313,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用melonDS核心模拟NDS",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "melondualds",
@@ -908,7 +1333,57 @@
           "downloadUrl": "https://github.com/SapphireRhodonite/melonDS-android/releases/latest/download/MelonDualDS-0.6.1.apk",
           "devUrl": "https://github.com/SapphireRhodonite/melonDS-android/releases",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/melondualds.png"
+          "iconPath": "assets/emulators/melondualds.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "melonds_pc",
+          "name": "melonDS (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/melonDS-emu/melonDS",
+          "playStoreId": "",
+          "website": "https://melonds.kuribo64.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "活跃开源的 Nintendo DS/DSi PC 模拟器，支持联机、JIT、高分辨率渲染与 DSi 功能。",
+          "downloadUrl": "https://github.com/melonDS-emu/melonDS/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/melonds_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "noods",
+          "name": "NooDS",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Hydr8gon/NooDS",
+          "playStoreId": "",
+          "website": "https://github.com/Hydr8gon/NooDS",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "快速且便携的 Nintendo DS/GBA 模拟器，支持准确的软件渲染、分辨率提升和多核加速，官方提供 Android、Windows、Linux 与 macOS 构建。",
+          "downloadUrl": "https://github.com/Hydr8gon/NooDS/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/noods.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -936,7 +1411,14 @@
           "downloadUrl": "https://github.com/azahar-emu/azahar/releases/latest/download/azahar-android-googleplay-2125.1.3.apk",
           "devUrl": "https://github.com/azahar-emu/azahar/releases",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/azahar.png"
+          "iconPath": "assets/emulators/azahar.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "azahar_plus",
@@ -954,7 +1436,10 @@
           "devUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
           "nightlyUrl": "",
           "previewUrl": "https://github.com/AzaharPlus/AzaharPlus/releases",
-          "iconPath": "assets/emulators/azahar_plus.png"
+          "iconPath": "assets/emulators/azahar_plus.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -982,7 +1467,14 @@
           "downloadUrl": "https://dl.dolphin-emu.org/releases/2606/dolphin-2606.apk",
           "devUrl": "",
           "nightlyUrl": "https://dolphin-emu.org/download/list/master/",
-          "iconPath": "assets/emulators/dolphin.png"
+          "iconPath": "assets/emulators/dolphin.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "dolphin_mmjr2_vbi",
@@ -998,7 +1490,10 @@
           "description": "Dolphin MMJR2的低端设备分叉，专为Anbernic/Retroid等掌机优化，移植VBISkip速度破解并保留非整数缩放，2025年仍活跃",
           "downloadUrl": "https://github.com/VentureStratosphereWorldwide/Dolphin-MMJR2-VBI/releases",
           "devUrl": "https://github.com/Medard22/Dolphin-MMJR2-VBI/releases",
-          "iconPath": "assets/emulators/dolphin.png"
+          "iconPath": "assets/emulators/dolphin.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -1025,7 +1520,33 @@
           "description": "桌面端Wii U模拟器Cemu的Android移植版，由SSimco维护，2026年早期阶段，需骁龙8 Gen级别高端设备，支持原生OpenGL与Vulkan后端，需从GitHub下载APK",
           "downloadUrl": "https://github.com/SSimco/Cemu/releases/latest/download/Cemu-0.5.apk",
           "devUrl": "https://github.com/cemu-project/Cemu/releases",
-          "iconPath": "assets/emulators/cemu_android.png"
+          "iconPath": "assets/emulators/cemu_android.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "cemu_pc",
+          "name": "Cemu (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/cemu-project/Cemu",
+          "playStoreId": "",
+          "website": "https://cemu.info/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "主流 Wii U PC 模拟器，支持 Vulkan、图形包、高分辨率和帧率增强，兼容性成熟。",
+          "downloadUrl": "https://github.com/cemu-project/Cemu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/cemu_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1053,7 +1574,10 @@
           "downloadUrl": "https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-standard.apk",
           "devUrl": "https://git.eden-emu.dev/eden-emu/eden/releases",
           "nightlyUrl": "https://git.eden-emu.dev/eden-ci/nightly/releases",
-          "iconPath": "assets/emulators/eden.png"
+          "iconPath": "assets/emulators/eden.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "citron_neo",
@@ -1070,7 +1594,33 @@
           "downloadUrl": "https://github.com/citron-neo/emulator/releases/latest/download/app-mainline-release.apk",
           "devUrl": "",
           "nightlyUrl": "https://github.com/citron-neo/CI/releases",
-          "iconPath": "assets/emulators/citron_neo.png"
+          "iconPath": "assets/emulators/citron_neo.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ryubing_pc",
+          "name": "Ryubing",
+          "openSource": true,
+          "sourceType": "gitlab",
+          "sourceUrl": "https://git.ryujinx.app/ryujinx/release-channel-master",
+          "playStoreId": "",
+          "website": "https://ryujinx.app/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "基于 Ryujinx 技术路线的活跃 Switch PC 项目，面向 Windows、Linux 与 macOS，提供稳定版及 Canary 构建。",
+          "downloadUrl": "https://git.ryujinx.app/ryujinx/release-channel-master/-/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/ryubing_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1098,7 +1648,14 @@
           "downloadUrl": "https://www.duckstation.org/",
           "devUrl": "https://github.com/stenzek/duckstation/releases",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/duckstation.png"
+          "iconPath": "assets/emulators/duckstation.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "duckstation_gpl",
@@ -1113,7 +1670,10 @@
           "minAndroid": "5.0",
           "description": "DuckStation的GPL开源分叉，由NetherSX2维护者Trixarian创建，在原版变更许可证后保留真正开源版本，2025年9月更新",
           "downloadUrl": "https://github.com/Trixarian/duckstation-gpl/releases",
-          "iconPath": "assets/emulators/duckstation.png"
+          "iconPath": "assets/emulators/duckstation.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "lemuroid_psx",
@@ -1128,7 +1688,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle PSX核心，模拟准确性高",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "epsxe",
@@ -1143,7 +1706,10 @@
           "minAndroid": "5.0",
           "description": "经典 PC ePSXe 的 Android 版，面向 PSX/PS One，支持高兼容性、良好性能、准确声音与 1-4 人游戏。",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.epsxe.ePSXe",
-          "iconPath": "assets/emulators/epsxe.png"
+          "iconPath": "assets/emulators/epsxe.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "armsx1",
@@ -1158,7 +1724,33 @@
           "minAndroid": "8.0",
           "description": "基于 psxe 的 PS1 模拟器，采用原生 FSUI 与 SDL2 前端。Android 是主要目标平台，支持 BIOS、BIN/CUE、ISO、CHD、ZIP、记忆卡、截图、快进与 VSync；项目当前处于早期版本。",
           "downloadUrl": "https://github.com/ARMSX2/ARMSX1/releases",
-          "iconPath": "assets/emulators/armsx1.png"
+          "iconPath": "assets/emulators/armsx1.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "pcsx_redux_pc",
+          "name": "PCSX-Redux",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/grumpycoders/pcsx-redux",
+          "playStoreId": "",
+          "website": "https://pcsx-redux.consoledev.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "面向 PlayStation 1 模拟、逆向工程和自制开发的现代 PCSX 分支，使用 SDL、OpenGL 与 ImGui，内置高级调试和 OpenBIOS 相关工具。当前构建属于持续开发版。",
+          "downloadUrl": "https://distrib.app/pub/org/pcsx-redux/project/dev-win-x64",
+          "devUrl": "https://distrib.app/pub/org/pcsx-redux/project/dev-win-x64",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/pcsx_redux_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1185,7 +1777,10 @@
           "description": "AetherSX2的社区延续分支，由Trixarian维护，持续更新，性能优秀",
           "downloadUrl": "https://github.com/Trixarian/NetherSX2-classic/releases/latest/download/NetherSX2-v2.2n-3668.apk",
           "devUrl": "https://github.com/Trixarian/NetherSX2-classic/releases",
-          "iconPath": "assets/emulators/nethersx2_classic.png"
+          "iconPath": "assets/emulators/nethersx2_classic.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "nethersx2_patch",
@@ -1200,7 +1795,10 @@
           "minAndroid": "8.0",
           "description": "NetherSX2标准版延续，基于AetherSX2 4248构建，移除广告、修复RetroAchievements通知、支持联机对战，推荐Adreno GPU设备使用，2025年12月更新",
           "downloadUrl": "https://github.com/Trixarian/NetherSX2-patch/releases/latest/download/NetherSX2-v2.2n-4248.apk",
-          "iconPath": "assets/emulators/nethersx2_patch.png"
+          "iconPath": "assets/emulators/nethersx2_patch.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "psx2_izzy",
@@ -1217,7 +1815,10 @@
           "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/latest/download/29.apk",
           "devUrl": "https://github.com/izzy2lost/PSX2/releases",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/psx2_izzy.png"
+          "iconPath": "assets/emulators/psx2_izzy.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "armsx2",
@@ -1234,7 +1835,10 @@
           "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases",
           "devUrl": "",
           "nightlyUrl": "https://github.com/ARMSX2/ARMSX2/releases",
-          "iconPath": "assets/emulators/armsx2.png"
+          "iconPath": "assets/emulators/armsx2.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "emucorex",
@@ -1250,7 +1854,33 @@
           "description": "基于PCSX2核心的PS2模拟器，面向手持设备优化。Jetpack Compose现代化UI，内置游戏库管理器、实时叠加控制器、驱动目录兼容性提示、OpenSL ES音频后端与轻量SPU2模式，支持反交错(Deinterlacing)与抖动(Dithering)设置。每版提供标准版与并行渲染(parallel)双APK，GPL-3.0开源，2026年7月更新至v0.2.9",
           "downloadUrl": "https://github.com/sashkinbro/EmuCoreX/releases",
           "devUrl": "https://github.com/sashkinbro/EmuCoreX/releases",
-          "iconPath": "assets/emulators/emucorex.png"
+          "iconPath": "assets/emulators/emucorex.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "pcsx2_pc",
+          "name": "PCSX2",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/PCSX2/pcsx2",
+          "playStoreId": "",
+          "website": "https://pcsx2.net/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "成熟的 PlayStation 2 PC 模拟器，支持 Vulkan/Direct3D/OpenGL、宽屏与高分辨率渲染。",
+          "downloadUrl": "https://github.com/PCSX2/pcsx2/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/pcsx2_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1277,7 +1907,10 @@
           "description": "RPCSX模拟器的Android原生UI前端，Kotlin编写，支持自定义GPU驱动，2026年5月活跃开发中，PS3安卓模拟的新希望",
           "downloadUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases/latest/download/rpcsx-release.apk",
           "devUrl": "https://github.com/RPCSX/rpcsx-ui-android/releases",
-          "iconPath": "assets/emulators/rpcsx.png"
+          "iconPath": "assets/emulators/rpcsx.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "rpcsx_clanker",
@@ -1292,7 +1925,10 @@
           "minAndroid": "10.0",
           "description": "RPCSX-UI的ouroboros420活跃分支(RPCSX-Clanker)，2026年7月最新版v2026.07.08。独有功能：游戏文件夹扫描与直接ISO播放、可排序/筛选游戏库、RPCN网络联机对战、Patch Manager补丁管理器(下载RPCS3官方补丁)、逐游戏配置、GPU turbo模式(Adreno满频)、Material 3主题。应用包名为net.rpcsx.clanker，可与官方RPCSX并存安装。仅arm64，主要适配骁龙8 Gen2/Adreno 740+Turnip驱动",
           "downloadUrl": "https://github.com/ouroboros420/rpcsx-ui-android/releases/latest/download/rpcsx-release.apk",
-          "iconPath": "assets/emulators/rpcsx_clanker.png"
+          "iconPath": "assets/emulators/rpcsx_clanker.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "rpcs3_android",
@@ -1307,7 +1943,10 @@
           "minAndroid": "10.0",
           "description": "RPCS3的Android移植版，2025年3月进入Alpha阶段，支持控制器自动映射与省电模式，需骁龙8 Gen级别设备，更新趋缓",
           "downloadUrl": "https://github.com/RPCS3-Android/rpcs3-android/releases/latest/download/rpcs3-release.apk",
-          "iconPath": "assets/emulators/rpcs3_android.png"
+          "iconPath": "assets/emulators/rpcs3_android.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "aps3e",
@@ -1322,7 +1961,33 @@
           "minAndroid": "9.0",
           "description": "基于RPCS3移植优化的Android原生PS3模拟器，由aenu开发(同Xbox 360模拟器ax360e作者)。2026年7月最新版v2.40，独有Mali-G57 Valhall Vulkan驱动适配、多语言UI。免费版+付费高级版(aPS3e Premium)均上架Google Play。需骁龙8 Gen级别设备，部分轻量游戏可运行",
           "downloadUrl": "https://github.com/aenu1/aps3e/releases",
-          "iconPath": "assets/emulators/aps3e.png"
+          "iconPath": "assets/emulators/aps3e.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "rpcs3_pc",
+          "name": "RPCS3",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/RPCS3/rpcs3",
+          "playStoreId": "",
+          "website": "https://rpcs3.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "主流 PlayStation 3 PC 模拟器，支持 Vulkan、多线程 SPU 编译与大量可游玩作品。",
+          "downloadUrl": "https://github.com/RPCS3/rpcs3/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/rpcs3_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1350,7 +2015,14 @@
           "downloadUrl": "https://www.ppsspp.org/files/1_20_4/ppsspp.apk",
           "devUrl": "https://www.ppsspp.org/devbuilds/",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/ppsspp.png"
+          "iconPath": "assets/emulators/ppsspp.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "ppsspp_xtreme",
@@ -1366,7 +2038,10 @@
           "description": "PPSSPP的低端设备优化分叉，主打Lower Spec Xtreme性能模式，含音频修复等额外功能，2026年1月更新",
           "downloadUrl": "https://github.com/KMFDManic/PPSSPP-Xtreme/releases",
           "devUrl": "",
-          "iconPath": "assets/emulators/ppsspp.png"
+          "iconPath": "assets/emulators/ppsspp.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -1393,7 +2068,10 @@
           "description": "目前唯一活跃的PS Vita模拟器Android移植版，支持FSR升频、分数升频、FPS破解(30fps游戏可60fps运行)、纹理替换、自定义驱动，需骁龙8系列及以上高端设备，2026年持续更新",
           "downloadUrl": "https://github.com/Vita3K/Vita3K-Android/releases/latest/download/vita3k-android-release-12.apk",
           "devUrl": "https://github.com/Vita3K/Vita3K-Android/releases",
-          "iconPath": "assets/emulators/vita3k.png"
+          "iconPath": "assets/emulators/vita3k.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "vita3k_ikhoeyzx",
@@ -1409,7 +2087,10 @@
           "description": "Vita3K安卓社区分支，v12.5 build 16(2025年10月)。独有ASC模式(Adreno Shader Cache，仅Adreno)、stencil buffer深度修改、VPK文件支持(测试中)。社区测试性能优于官方v12",
           "downloadUrl": "https://github.com/ikhoeyZX/Vita3K-Android/releases",
           "devUrl": "https://github.com/ikhoeyZX/Vita3K-Android/releases",
-          "iconPath": "assets/emulators/vita3k.png"
+          "iconPath": "assets/emulators/vita3k.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "emucorev",
@@ -1425,7 +2106,33 @@
           "description": "基于Vita3K核心的PS Vita模拟器，采用Jetpack Compose自定义UI，内置游戏库管理、目录浏览、手柄支持与用户档案系统(含密码恢复)。每版提供标准版与并行渲染(parallel)双APK，GPL-2.0开源，2026年6月更新至v0.1.5",
           "downloadUrl": "https://github.com/sashkinbro/EmuCoreV/releases",
           "devUrl": "https://github.com/sashkinbro/EmuCoreV/releases",
-          "iconPath": "assets/emulators/emucorev.png"
+          "iconPath": "assets/emulators/emucorev.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "vita3k_pc",
+          "name": "Vita3K (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Vita3K/Vita3K",
+          "playStoreId": "",
+          "website": "https://vita3k.org/",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "首个开源 PlayStation Vita 模拟器，PC 版支持 Windows、Linux 和 macOS。",
+          "downloadUrl": "https://github.com/Vita3K/Vita3K/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/vita3k_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1451,7 +2158,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle PCE核心模拟PC Engine",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "pce_emu_ex",
@@ -1466,7 +2176,33 @@
           "minAndroid": "5.0",
           "description": "PC Engine/TurboGrafx-16/SuperGrafx/CD-ROM²模拟器，基于Mednafen核心，由Robert Broglia开发，低延迟，2026年4月活跃",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/pce_emu_ex.png"
+          "iconPath": "assets/emulators/pce_emu_ex.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ares_pce_pc",
+          "name": "ares (PC Engine)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ares-emulator/ares",
+          "playStoreId": "",
+          "website": "https://ares-emu.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "ares 的 PC Engine/TurboGrafx-16 高精度模拟模块，支持 CD-ROM² 与 SuperGrafx。",
+          "downloadUrl": "https://github.com/ares-emulator/ares/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/ares_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1493,7 +2229,10 @@
           "description": "MAME的Android移植版，支持大量街机游戏，活跃维护中",
           "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/latest/download/MAME4droid.2026-1.37.6-release.apk",
           "devUrl": "https://github.com/seleuco/MAME4droid-Current/releases",
-          "iconPath": "assets/emulators/mame4droid.png"
+          "iconPath": "assets/emulators/mame4droid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "lemuroid_arcade",
@@ -1508,7 +2247,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用FBNeo核心，街机兼容性高",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "fbneo_core",
@@ -1523,7 +2265,36 @@
           "minAndroid": "5.0",
           "description": "FinalBurn Neo的Libretro核心，专注CPS1/CPS2/CPS3/Neo Geo等街机基板模拟。通过RetroArch核心下载器获取，支持安卓",
           "downloadUrl": "https://github.com/finalburnneo/FBNeo/releases",
-          "iconPath": "assets/emulators/fbneo_core.png"
+          "iconPath": "assets/emulators/fbneo_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "whittyarcade_pc",
+          "name": "WhittyArcade",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/CrownParkComputing/MANX",
+          "playStoreId": "",
+          "website": "https://github.com/CrownParkComputing/MANX",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "仍在早期开发的独立多系统街机模拟器，覆盖 Namco System 22/246、Sega Model 1/2、System 16B、Galaga/Galaxian 等硬件，使用自有调度器与前端。",
+          "downloadUrl": "https://github.com/CrownParkComputing/MANX/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/whittyarcade_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows 或 Linux，支持 Vulkan 的显卡"
         }
       ]
     },
@@ -1549,7 +2320,10 @@
           "minAndroid": "6.0",
           "description": "MAME4droid完整支持Neo Geo MVS/AES基板，需自备BIOS与ROM，活跃维护",
           "downloadUrl": "https://github.com/seleuco/MAME4droid-Current/releases/latest/download/MAME4droid.2026-1.37.6-release.apk",
-          "iconPath": "assets/emulators/mame4droid.png"
+          "iconPath": "assets/emulators/mame4droid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "fbneo_neogeo",
@@ -1564,7 +2338,14 @@
           "minAndroid": "5.0",
           "description": "FinalBurn Neo核心对Neo Geo支持优秀，性能优于MAME，提供Libretro核心，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/finalburnneo/FBNeo/releases",
-          "iconPath": "assets/emulators/fbneo_neogeo.png"
+          "iconPath": "assets/emulators/fbneo_neogeo.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "neo_emu",
@@ -1579,7 +2360,10 @@
           "minAndroid": "5.0",
           "description": "基于FBNeo核心的Neo Geo专属Android前端，由Robert Broglia开发，低延迟、支持MVS/AES/CD，Google Play付费",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/neo_emu.png"
+          "iconPath": "assets/emulators/neo_emu.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -1605,7 +2389,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle NeoPop核心模拟Neo Geo Pocket/Color，兼容性极佳",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "neopop_core",
@@ -1620,7 +2407,14 @@
           "minAndroid": "5.0",
           "description": "Neo Geo Pocket的Mednafen NeoPop核心Libretro仓库，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/beetle-ngp-libretro/releases",
-          "iconPath": "assets/emulators/neopop_core.png"
+          "iconPath": "assets/emulators/neopop_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1646,7 +2440,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用fMSX核心模拟MSX/MSX2/MSX2+，兼容性高",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "fmsx_core",
@@ -1661,7 +2458,14 @@
           "minAndroid": "5.0",
           "description": "fMSX的Libretro核心仓库，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/fmsx-libretro/releases",
-          "iconPath": "assets/emulators/openmsx_android.png"
+          "iconPath": "assets/emulators/openmsx_android.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "bluemsx_core",
@@ -1676,7 +2480,14 @@
           "minAndroid": "5.0",
           "description": "blueMSX核心支持MSX全系列与SVI/ColecoVision等Z80机器，准确性高，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/blueMSX-libretro/releases",
-          "iconPath": "assets/emulators/bluemsx_core.png"
+          "iconPath": "assets/emulators/bluemsx_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "openmsx_android",
@@ -1691,7 +2502,33 @@
           "minAndroid": "5.0",
           "description": "openMSX的安卓社区移植版，由CleversonSA移植。openMSX是兼容性最准确的MSX核心。重点支持巴西MSX Expert/HotBit",
           "downloadUrl": "https://github.com/CleversonSA/openmsx4android/releases/latest/download/openmsx4android.apk",
-          "iconPath": "assets/emulators/openmsx_android.png"
+          "iconPath": "assets/emulators/openmsx_android.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "openmsx_pc",
+          "name": "openMSX (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/openMSX/openMSX",
+          "playStoreId": "",
+          "website": "https://openmsx.org/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "高精度 MSX/MSX2/MSX2+/turboR PC 模拟器，拥有详细机型数据库、即时回放和调试功能。",
+          "downloadUrl": "https://github.com/openMSX/openMSX/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/openmsx_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1717,7 +2554,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用PUAE核心模拟Amiga 500/1200，兼容性高",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "puae_core",
@@ -1732,7 +2572,14 @@
           "minAndroid": "5.0",
           "description": "PUAE (libretro的UAE移植)核心仓库，支持Amiga 500/1000/2000/1200/4000与CD32，需自备Kickstart ROM，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/PUAE/releases",
-          "iconPath": "assets/emulators/puae_core.png"
+          "iconPath": "assets/emulators/puae_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "uae4droid",
@@ -1747,7 +2594,33 @@
           "minAndroid": "5.0",
           "description": "UAE的Android原生移植，独立App，更新较少，需自备Kickstart ROM",
           "downloadUrl": "https://play.google.com/store/apps/details?id=org.ab.uae",
-          "iconPath": "assets/emulators/uae4droid.png"
+          "iconPath": "assets/emulators/uae4droid.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "fs_uae_pc",
+          "name": "FS-UAE",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/FrodeSolheim/fs-uae",
+          "playStoreId": "",
+          "website": "https://fs-uae.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "基于 WinUAE 技术的跨平台 Amiga PC 模拟器，支持手柄、全屏、网战和游戏库前端。",
+          "downloadUrl": "https://github.com/FrodeSolheim/fs-uae/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/fs_uae_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1773,7 +2646,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用VICE核心模拟C64，兼容性高",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "vice_core",
@@ -1788,7 +2664,14 @@
           "minAndroid": "5.0",
           "description": "VICE (Versatile Commodore Emulator)的Libretro核心仓库，支持C64/C128/PET/VIC20/CBM-II，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
-          "iconPath": "assets/emulators/vice_core.png"
+          "iconPath": "assets/emulators/vice_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "c64_emu",
@@ -1803,7 +2686,10 @@
           "minAndroid": "5.0",
           "description": "基于VICE核心的C64 Android原生前端，由Robert Broglia开发，支持True Drive模拟、磁盘镜像，Google Play付费",
           "downloadUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases",
-          "iconPath": "assets/emulators/c64_emu.png"
+          "iconPath": "assets/emulators/c64_emu.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "eightbitwonders_c64",
@@ -1818,7 +2704,10 @@
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持C64。AGPL开源。支持硬件手柄、虚拟摇杆、存档/回溯、内置游戏、archive.org下载。F-Droid/Play/Amazon可下",
           "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
-          "iconPath": "assets/emulators/eightbitwonders_c64.png"
+          "iconPath": "assets/emulators/eightbitwonders_c64.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -1844,7 +2733,14 @@
           "minAndroid": "6.0",
           "description": "3DO目前仅能通过RetroArch的Opera核心（原4DO）模拟，安卓端无独立App，需通过RetroArch核心下载器获取，兼容性中等",
           "downloadUrl": "https://github.com/libretro/opera-libretro/releases",
-          "iconPath": "assets/emulators/opera_core.png"
+          "iconPath": "assets/emulators/opera_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1870,7 +2766,10 @@
           "minAndroid": "6.0",
           "description": "基于Libretro框架的一体化模拟器，使用Beetle Cygne核心模拟WonderSwan/Color，支持横竖屏切换",
           "downloadUrl": "https://github.com/Swordfish90/Lemuroid/releases/latest/download/lemuroid-app-free-dynamic-release.apk",
-          "iconPath": "assets/emulators/lemuroid.png"
+          "iconPath": "assets/emulators/lemuroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "cygne_core",
@@ -1885,7 +2784,14 @@
           "minAndroid": "5.0",
           "description": "WonderSwan的Mednafen Cygne核心Libretro仓库，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/beetle-wswan-libretro/releases",
-          "iconPath": "assets/emulators/wonderdroid.png"
+          "iconPath": "assets/emulators/wonderdroid.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "wonderdroid",
@@ -1900,7 +2806,10 @@
           "minAndroid": "4.0",
           "description": "安卓原生WonderSwan/WonderSwan Color模拟器，支持Mono与Color。Google Play可下",
           "downloadUrl": "https://github.com/williehwc/wonderdroid-x/releases/latest/download/70.apk",
-          "iconPath": "assets/emulators/wonderdroid.png"
+          "iconPath": "assets/emulators/wonderdroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "wonderdroid_ultra",
@@ -1915,7 +2824,10 @@
           "minAndroid": "5.0",
           "description": "WonderDroid的增强分支，v5.5。GPLv2开源。多系统支持：WonderSwan/WS Color/GameGear/Master System/PC Engine/TurboGrafx-16/SuperGrafx/Neo Geo Pocket/Color。自动创建ROM目录，ROM元数据截图库",
           "downloadUrl": "https://github.com/williehwc/wonderdroid-x/releases/latest/download/70.apk",
-          "iconPath": "assets/emulators/wonderdroid.png"
+          "iconPath": "assets/emulators/wonderdroid.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -1941,7 +2853,14 @@
           "minAndroid": "6.0",
           "description": "Virtual Boy目前仅能通过RetroArch的Mednafen VB (Beetle VB)核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持红黑配色与3D效果渲染",
           "downloadUrl": "https://github.com/libretro/beetle-vb-libretro/releases",
-          "iconPath": "assets/emulators/mednafen_vb_core.png"
+          "iconPath": "assets/emulators/mednafen_vb_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -1967,7 +2886,10 @@
           "minAndroid": "5.0",
           "description": "专为触屏优化的DOS模拟器，支持自定义虚拟按键、快捷指令面板、游戏专属配置文件，免费版与付费版，官网提供下载",
           "downloadUrl": "https://play.google.com/store/apps/details?id=br.com.magicsoup.dosboxfree",
-          "iconPath": "assets/emulators/magic_dosbox.png"
+          "iconPath": "assets/emulators/magic_dosbox.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "dosbox_turbo",
@@ -1982,7 +2904,10 @@
           "minAndroid": "4.0",
           "description": "DOSBox的Android优化移植，支持动态CPU核心、SVGA模式。原 Google Play 页面已下架，使用维护中的 GitHub 项目获取发布信息",
           "downloadUrl": "https://github.com/gururise/DosBoxTurbo/releases",
-          "iconPath": "assets/emulators/dosbox_turbo.png"
+          "iconPath": "assets/emulators/dosbox_turbo.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "dosbox_x",
@@ -1997,7 +2922,14 @@
           "minAndroid": "5.0",
           "description": "DOSBox功能增强分叉，目标是完整模拟DOS与Win9x时代，支持更广软硬件，需从源码编译Android版本",
           "downloadUrl": "https://github.com/joncampbell123/dosbox-x/releases",
-          "iconPath": "assets/emulators/dosbox_x.png"
+          "iconPath": "assets/emulators/dosbox_x.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "gamenative",
@@ -2014,7 +2946,33 @@
           "downloadUrl": "https://github.com/utkarshdalal/GameNative/releases/latest/download/gamenative-v1.1.1-legacy-xr.apk",
           "devUrl": "",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/gamenative.png"
+          "iconPath": "assets/emulators/gamenative.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "dosbox_staging_pc",
+          "name": "DOSBox Staging",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/dosbox-staging/dosbox-staging",
+          "playStoreId": "",
+          "website": "https://www.dosbox-staging.org/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "现代化 DOSBox 分支，改进音频、图形、MIDI、显示缩放和默认配置，适合 PC DOS 游戏。",
+          "downloadUrl": "https://github.com/dosbox-staging/dosbox-staging/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/dosbox_staging_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2040,7 +2998,14 @@
           "minAndroid": "6.0",
           "description": "Vectrex目前仅能通过RetroArch的VecX核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持矢量线渲染与叠加色片",
           "downloadUrl": "https://github.com/libretro/libretro-vecx/releases",
-          "iconPath": "assets/emulators/vecx_core.png"
+          "iconPath": "assets/emulators/vecx_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2066,7 +3031,14 @@
           "minAndroid": "6.0",
           "description": "drhelius开发的ColecoVision高精度模拟器，提供Libretro核心，需通过RetroArch核心下载器获取，准确时序",
           "downloadUrl": "https://github.com/drhelius/Gearcoleco/releases",
-          "iconPath": "assets/emulators/gearcoleco_core.png"
+          "iconPath": "assets/emulators/gearcoleco_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "bluemsx_coleco",
@@ -2081,7 +3053,14 @@
           "minAndroid": "5.0",
           "description": "blueMSX核心亦支持ColecoVision/MSX/SVI，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/blueMSX-libretro/releases",
-          "iconPath": "assets/emulators/bluemsx_coleco.png"
+          "iconPath": "assets/emulators/bluemsx_coleco.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "colem",
@@ -2096,7 +3075,10 @@
           "minAndroid": "2.3",
           "description": "fMS出品的ColecoVision模拟器，支持ColecoVision+Coleco Adam(需切换)。支持WiFi联机、MIDI录音。免费版+Deluxe付费版",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.fms.colem",
-          "iconPath": "assets/emulators/colem.png"
+          "iconPath": "assets/emulators/colem.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -2122,7 +3104,14 @@
           "minAndroid": "6.0",
           "description": "Intellivision目前仅能通过RetroArch的FreeIntv核心模拟，安卓端无独立App，需通过RetroArch核心下载器获取，支持EXEC与GROM BIOS",
           "downloadUrl": "https://github.com/libretro/FreeIntv/releases",
-          "iconPath": "assets/emulators/freeintv_core.png"
+          "iconPath": "assets/emulators/freeintv_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "jzintv4droid",
@@ -2137,7 +3126,10 @@
           "minAndroid": "4.0",
           "description": "基于jzintv的Intellivision安卓模拟器，桌面jzintv的前端移植。原 Google Play 页面已下架",
           "downloadUrl": "",
-          "iconPath": "assets/emulators/jzintv4droid.png"
+          "iconPath": "assets/emulators/jzintv4droid.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -2164,7 +3156,14 @@
           "description": "基于QEMU的低级xbox模拟器，目前主要面向桌面平台，Android端无官方构建，兼容性较低，需从源码自行编译，2026年持续活跃开发",
           "downloadUrl": "https://github.com/mborgerson/xemu/releases",
           "devUrl": "https://github.com/mborgerson/xemu/releases",
-          "iconPath": "assets/emulators/xemu.png"
+          "iconPath": "assets/emulators/xemu.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "cxbx_r",
@@ -2179,7 +3178,13 @@
           "minAndroid": "10.0",
           "description": "高级(HLE)xbox模拟器，将xbox API翻译为PC调用，目前仅Windows平台，Android端无可用构建，需从源码自行编译，仅供研究参考",
           "downloadUrl": "https://github.com/Cxbx-Reloaded/Cxbx-Reloaded/releases",
-          "iconPath": "assets/emulators/cxbx_r.png"
+          "iconPath": "assets/emulators/cxbx_r.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2205,7 +3210,10 @@
           "minAndroid": "10.0",
           "description": "开源Turnip Vulkan驱动，基于Mesa上游构建，适用于Adreno A7xx与A6xx GPU。最新版v26.3.0-R1(2026年7月)，Vulkan 1.4.354。安装后可显著提升Switch/PS2/PS3等模拟器的图形性能与兼容性，是安卓模拟器玩家的必备驱动。需通过Adreno Tools应用加载安装",
           "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases",
-          "iconPath": "assets/emulators/turnip_adreno.png"
+          "iconPath": "assets/emulators/turnip_adreno.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "turnip_gen8",
@@ -2220,7 +3228,10 @@
           "minAndroid": "10.0",
           "description": "实验性Turnip驱动，支持新一代Adreno A8xx GPU(a840/a830/a829/a825/810)。最新版V33(2026年7月)，Vulkan 1.4.354。基于whitebelyash/mesa-unified gen8分支构建，尚在早期阶段",
           "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v33",
-          "iconPath": "assets/emulators/turnip_gen8.png"
+          "iconPath": "assets/emulators/turnip_gen8.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "qualcomm_driver",
@@ -2235,7 +3246,10 @@
           "minAndroid": "10.0",
           "description": "高通专有Vulkan驱动，从Quest Ray-Ban Display设备提取，适用于Adreno A7xx与A6xx。部分游戏在专有驱动下表现优于Turnip开源驱动，可按需切换对比",
           "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases",
-          "iconPath": "assets/emulators/qualcomm_driver.png"
+          "iconPath": "assets/emulators/qualcomm_driver.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -2250,7 +3264,7 @@
       "emulators": [
         {
           "id": "shadps4_android",
-          "name": "shadPS4 (Android 社区移植)",
+          "name": "shadPS4 (PC)",
           "openSource": true,
           "sourceType": "github",
           "sourceUrl": "https://github.com/shadps4-emu/shadPS4",
@@ -2258,11 +3272,17 @@
           "website": "https://shadps4.net/",
           "core": "",
           "compatibility": "low",
-          "minAndroid": "12.0",
-          "description": "PS4模拟器shadPS4的安卓社区移植版，实验性Alpha/PoC阶段。基于x86_64→ARM64跨架构JIT转译、Vulkan 1.3渲染。2D/像素小游戏可稳定运行，3A大作仅能进入菜单。需骁龙8 Gen1+/天玑9000+旗舰、12GB内存、Adreno GPU。联发科Mali仅能播放音频无画面。需自购固件",
+          "minAndroid": "",
+          "description": "活跃开源的 PlayStation 4 PC 模拟器，面向 Windows、Linux 与 macOS，重点推进商业游戏兼容性。",
           "downloadUrl": "https://github.com/shadps4-emu/shadPS4/releases",
           "devUrl": "https://github.com/shadps4-emu/shadPS4/releases",
-          "iconPath": "assets/emulators/shadps4_android.png"
+          "iconPath": "assets/emulators/shadps4_android.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2288,7 +3308,10 @@
           "minAndroid": "10.0",
           "description": "基于Xenia/Xenia Canary的安卓Xbox 360模拟器，由aPS3e作者aenu开发，2025年12月上架Google Play公测。支持.iso/.god/.xex格式。需骁龙8 Gen1+与Adreno GPU，Mali/低端GPU基本不可用。轻量游戏与独立游戏可运行，3A大作仅可启动",
           "downloadUrl": "https://github.com/aenu1/ax360e/releases",
-          "iconPath": "assets/emulators/ax360e.png"
+          "iconPath": "assets/emulators/ax360e.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "x360_mobile",
@@ -2304,7 +3327,10 @@
           "minAndroid": "11.0",
           "description": "基于Xenia Canary的安卓Xbox 360模拟器，ARM64+Vulkan 1.3。v0.5.3预览版(2026年6月)引入设置优先级修复、新界面音效与离线游戏网络兼容性改进。约300款测试中40%可玩；需Snapdragon+Adreno 600系以上、6GB RAM起。仅发布APK不开源",
           "downloadUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/latest/download/X360_0.5.2_public.apk",
-          "iconPath": "assets/emulators/x360_mobile.png"
+          "iconPath": "assets/emulators/x360_mobile.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "xenios",
@@ -2319,7 +3345,10 @@
           "minAndroid": "12.0",
           "description": "基于Xenia Edge的实验性Apple导向分支，同时支持ARM64 Windows/Linux/Android。移动端兼容率28.88%(93/322)。改进会回流上游。BSD-3-Clause开源",
           "downloadUrl": "https://github.com/xenios-jp/XeniOS/releases",
-          "iconPath": "assets/emulators/xenios.png"
+          "iconPath": "assets/emulators/xenios.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "xendroid",
@@ -2336,7 +3365,31 @@
           "downloadUrl": "https://github.com/rfandango/XenDroid/releases",
           "devUrl": "https://github.com/rfandango/XenDroid/releases",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/xendroid.png"
+          "iconPath": "assets/emulators/xendroid.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "xenia_pc",
+          "name": "Xenia",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/xenia-project/xenia",
+          "playStoreId": "",
+          "website": "https://xenia.jp/",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "主流 Xbox 360 PC 模拟器，以 Windows 64 位和 Vulkan/Direct3D 12 图形后端为主。",
+          "downloadUrl": "https://github.com/xenia-project/xenia/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xenia_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows 10/11 64 位"
         }
       ]
     },
@@ -2363,7 +3416,14 @@
           "description": "Symbian系统级模拟器，支持S60v1/v3/v5/S60^3，可运行N-Gage游戏及.sis/.sisx应用。目前唯一靠谱的N-Gage安卓方案。GitHub提供APK下载",
           "downloadUrl": "https://github.com/EKA2L1/EKA2L1/releases/latest/download/EKA2L1-Android.apk",
           "devUrl": "https://github.com/EKA2L1/EKA2L1/releases",
-          "iconPath": "assets/emulators/eka2l1.png"
+          "iconPath": "assets/emulators/eka2l1.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2389,7 +3449,10 @@
           "minAndroid": "2.3",
           "description": "fMS系列出品的ZX Spectrum模拟器，支持SAM Coupé模式切换、存档、作弊、手柄。免费版+Deluxe付费版",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.fms.speccy",
-          "iconPath": "assets/emulators/speccy.png"
+          "iconPath": "assets/emulators/speccy.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "zesarux_spec",
@@ -2405,7 +3468,36 @@
           "description": "多Sinclair模拟器(ZX80/ZX81/ZX Spectrum)，GPL开源。有移动/ARM版本。高精度时序模拟",
           "downloadUrl": "https://github.com/chernandezba/zesarux/releases",
           "devUrl": "https://github.com/chernandezba/zesarux/releases",
-          "iconPath": "assets/emulators/zesarux_spec.png"
+          "iconPath": "assets/emulators/zesarux_spec.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "xpeccy_pc",
+          "name": "Xpeccy",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/samstyle/Xpeccy",
+          "playStoreId": "",
+          "website": "https://github.com/samstyle/Xpeccy",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "开源多平台复古电脑模拟器，重点支持 ZX Spectrum 及其兼容机，提供磁带、磁盘、声音芯片、调试和多种外围设备模拟。",
+          "downloadUrl": "https://github.com/samstyle/Xpeccy/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xpeccy_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2432,7 +3524,10 @@
           "description": "基于keropi/WinX68k的X68000模拟器，支持XVI/Compact等型号。GitHub提供安卓APK",
           "downloadUrl": "https://github.com/neko68k/px68k/releases",
           "devUrl": "https://github.com/neko68k/px68k/releases",
-          "iconPath": "assets/emulators/px68k.png"
+          "iconPath": "assets/emulators/px68k.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "px68k_core",
@@ -2447,7 +3542,14 @@
           "minAndroid": "5.0",
           "description": "px68k的Libretro核心移植，通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/RetroSven/px68k-libretro/releases",
-          "iconPath": "assets/emulators/px68k_core.png"
+          "iconPath": "assets/emulators/px68k_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2473,7 +3575,10 @@
           "minAndroid": "4.0",
           "description": "Atari800的安卓移植版，金标准核心，支持400/800/600XL/800XL/130XE及5200。开源GPL",
           "downloadUrl": "https://atari800.github.io/Atari800forAndroid.html",
-          "iconPath": "assets/emulators/atari800_android.png"
+          "iconPath": "assets/emulators/atari800_android.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "xemu65",
@@ -2488,7 +3593,33 @@
           "minAndroid": "5.0",
           "description": "基于Atari800的安卓前端，零配置+TOSEC自动识别、触屏优化。已上架Google Play",
           "downloadUrl": "https://github.com/gitGalu/XEmu65/releases",
-          "iconPath": "assets/emulators/xemu65.png"
+          "iconPath": "assets/emulators/xemu65.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "atari800_pc",
+          "name": "Atari800 (PC)",
+          "openSource": true,
+          "sourceType": "website",
+          "sourceUrl": "https://atari800.github.io/",
+          "playStoreId": "",
+          "website": "https://atari800.github.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "跨平台 Atari 8-bit 电脑与 5200 模拟器，支持 400/800/XL/XE 机型与磁盘、磁带镜像。",
+          "downloadUrl": "https://atari800.github.io/",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/atari800_android.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2514,7 +3645,10 @@
           "minAndroid": "4.0",
           "description": "基于Hatari的Atari ST安卓模拟器，已上架Google Play。需TOS ROM。支持STF/STE/Falcon等型号",
           "downloadUrl": "https://hataroid.andro.io/",
-          "iconPath": "assets/emulators/hataroid.png"
+          "iconPath": "assets/emulators/hataroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "hatariB_core",
@@ -2529,7 +3663,37 @@
           "minAndroid": "5.0",
           "description": "Hatari的Libretro核心移植，支持Android 32/64位。v0.3(2024-04)。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/bbbradsmith/hatariB/releases",
-          "iconPath": "assets/emulators/hatariB_core.png"
+          "iconPath": "assets/emulators/hatariB_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "hatari_pc",
+          "name": "Hatari (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/hatari/hatari",
+          "playStoreId": "",
+          "website": "https://www.hatari-emu.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "支持 Atari ST、STE、TT 和 Falcon 的跨平台 PC 模拟器，具备调试器和多种硬件扩展模拟。",
+          "downloadUrl": "https://github.com/hatari/hatari/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/hatari_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2555,7 +3719,33 @@
           "minAndroid": "4.0",
           "description": "Atari800核心同时支持5200，5200与8-bit硬件同源。通过RetroArch加载atari800核心可运行5200游戏",
           "downloadUrl": "https://atari800.github.io/",
-          "iconPath": "assets/emulators/atari800_5200.png"
+          "iconPath": "assets/emulators/atari800_5200.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "atari800_5200_pc",
+          "name": "Atari800 (5200 PC)",
+          "openSource": true,
+          "sourceType": "website",
+          "sourceUrl": "https://atari800.github.io/",
+          "playStoreId": "",
+          "website": "https://atari800.github.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Atari800 的 Atari 5200 PC 模式，支持卡带、手柄与多平台运行。",
+          "downloadUrl": "https://atari800.github.io/",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/atari800_android.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2581,7 +3771,14 @@
           "minAndroid": "5.0",
           "description": "ProSystem是Atari 7800的标准模拟核心，GPLv2开源。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/prosystem-libretro/releases",
-          "iconPath": "assets/emulators/prosystem_core.png"
+          "iconPath": "assets/emulators/prosystem_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2607,7 +3804,14 @@
           "minAndroid": "5.0",
           "description": "Pokémon mini模拟器PokeMini的Libretro核心。支持LCD点阵滤镜、震动模拟、多种调色板。内置FreeBIOS无需额外BIOS。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/PokeMini/releases",
-          "iconPath": "assets/emulators/pokemini_core.png"
+          "iconPath": "assets/emulators/pokemini_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2633,7 +3837,14 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Game & Watch系列。需配合artwork(背景图与LCD透明层)才能正确显示画面，支持.mgw/.zip格式",
           "downloadUrl": "https://github.com/libretro/mame/releases",
-          "iconPath": "assets/emulators/mame_gw_core.png"
+          "iconPath": "assets/emulators/mame_gw_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2659,7 +3870,14 @@
           "minAndroid": "5.0",
           "description": "Genesis Plus GX核心支持SG-1000，与ColecoVision/MSX共享硬件。通过RetroArch核心下载器获取，直接支持.sg文件",
           "downloadUrl": "https://github.com/ekeeke/Genesis-Plus-GX/releases",
-          "iconPath": "assets/emulators/genplus_gx_sg.png"
+          "iconPath": "assets/emulators/genplus_gx_sg.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2685,7 +3903,14 @@
           "minAndroid": "5.0",
           "description": "PicoDrive核心支持Sega Pico，已测试可运行Pico游戏。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/notaz/picodrive/releases",
-          "iconPath": "assets/emulators/picodrive_pico.png"
+          "iconPath": "assets/emulators/picodrive_pico.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2711,7 +3936,33 @@
           "minAndroid": "4.0",
           "description": "Dreamcast VMU模拟器，支持.vms/.dci独立小游戏文件及Dreamcast flash dump(.bin)。原 Google Play 页面已下架",
           "downloadUrl": "",
-          "iconPath": "assets/emulators/vemulator.png"
+          "iconPath": "assets/emulators/vemulator.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "flycast_vmu_pc",
+          "name": "Flycast (VMU)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/flyinghead/flycast",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Flycast PC 版的 Dreamcast VMU 支持，可配合 Dreamcast 游戏使用存档与 VMU 功能。",
+          "downloadUrl": "https://github.com/flyinghead/flycast/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/flycast.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2737,7 +3988,14 @@
           "minAndroid": "5.0",
           "description": "Mednafen PC-FX的Libretro核心移植，高精度PC-FX模拟。需BIOS(pcfx.rom)。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/beetle-pcfx-libretro/releases",
-          "iconPath": "assets/emulators/beetle_pcfx_core.png"
+          "iconPath": "assets/emulators/beetle_pcfx_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2763,7 +4021,14 @@
           "minAndroid": "5.0",
           "description": "O2EM是Odyssey²/Videopac+的标准模拟核心，支持语音模块。LGPL/GPL开源。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/libretro-o2em/releases",
-          "iconPath": "assets/emulators/o2em_core.png"
+          "iconPath": "assets/emulators/o2em_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2789,7 +4054,14 @@
           "minAndroid": "5.0",
           "description": "FreeChaF是Channel F的精准模拟核心，GPL开源。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/FreeChaF/releases",
-          "iconPath": "assets/emulators/freechaf_core.png"
+          "iconPath": "assets/emulators/freechaf_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2815,7 +4087,33 @@
           "minAndroid": "4.0",
           "description": "Arcadia 2001家族安卓模拟器，支持Emerson/Bandai/Grandstand/Intervision/MPT-03等全系列及Interton VC 4000。专有软件，作者Amigan。少有的原生安卓方案",
           "downloadUrl": "https://amigan.yatho.com/",
-          "iconPath": "assets/emulators/droidarcadia.png"
+          "iconPath": "assets/emulators/droidarcadia.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "mame_arcadia_pc",
+          "name": "MAME (Arcadia 2001 PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mamedev/mame",
+          "playStoreId": "",
+          "website": "https://www.mamedev.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "MAME PC 版的 Emerson Arcadia 2001 及兼容机型驱动。",
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2841,7 +4139,14 @@
           "minAndroid": "5.0",
           "description": "Potator是Watara Supervision的模拟核心，支持.sv/.bin ROM。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/potator/releases",
-          "iconPath": "assets/emulators/potator_core.png"
+          "iconPath": "assets/emulators/potator_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2867,7 +4172,33 @@
           "minAndroid": "5.0",
           "description": "CHIP-8/SCHIP/XO-CHIP解释器，支持4色XO-CHIP、CPU quirks、1x-40x调速、6色主题、CRT扫描线、像素辉光效果。GitHub提供APK",
           "downloadUrl": "https://github.com/Wynx-1/chip8-emulator-android/releases/latest/download/Chip8-Emulator-v1.0.apk",
-          "iconPath": "assets/emulators/chip8_android.png"
+          "iconPath": "assets/emulators/chip8_android.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "mame_chip8_pc",
+          "name": "MAME (CHIP-8 PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mamedev/mame",
+          "playStoreId": "",
+          "website": "https://www.mamedev.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "MAME PC 版的 CHIP-8/SCHIP 虚拟机支持，适用于经典 CHIP-8 程序。",
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2894,7 +4225,33 @@
           "description": "基于TamaLib via NDK的Tamagotchi P1/P2模拟器，带桌面小部件。GitHub提供APK，推荐通过Obtainium自动更新",
           "downloadUrl": "https://github.com/twelvehouse/TamaDroid/releases/latest/download/TamaDroid-0.2.1.apk",
           "devUrl": "https://github.com/twelvehouse/TamaDroid/releases",
-          "iconPath": "assets/emulators/tamadroid.png"
+          "iconPath": "assets/emulators/tamadroid.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "mame_tamagotchi_pc",
+          "name": "MAME (Tamagotchi PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mamedev/mame",
+          "playStoreId": "",
+          "website": "https://www.mamedev.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "MAME PC 版掌上电子玩具驱动，用于支持的 Tamagotchi 及同类设备。",
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2921,7 +4278,33 @@
           "description": "Arduboy模拟器，支持虚拟手柄、LED模拟、变速、EEPROM备份/恢复、截屏。部分程序可能卡死，音频暂不支持",
           "downloadUrl": "https://github.com/Termimad/ArbyEmulator/releases",
           "devUrl": "https://github.com/Termimad/ArbyEmulator/releases",
-          "iconPath": "assets/emulators/arby_emulator.png"
+          "iconPath": "assets/emulators/arby_emulator.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ardens_pc",
+          "name": "Ardens",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/tiberiusbrown/Ardens",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "面向 PC 的 Arduboy 高精度模拟器与调试器，支持性能分析、断点和帧缓冲观察。",
+          "downloadUrl": "https://github.com/tiberiusbrown/Ardens/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/arby_emulator.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -2947,7 +4330,10 @@
           "minAndroid": "4.0",
           "description": "Amstrad CPC安卓模拟器，项目已停止维护但可用。需从归档镜像获取",
           "downloadUrl": "https://code.google.com/archive/p/andcpc/",
-          "iconPath": "assets/emulators/andcpc.png"
+          "iconPath": "assets/emulators/andcpc.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "azimuth",
@@ -2962,7 +4348,10 @@
           "minAndroid": "5.0",
           "description": "安卓原生Amstrad CPC模拟器，推荐使用。Google Play可下。高性能模拟，支持快进/慢放、即时存档、屏幕滤镜",
           "downloadUrl": "https://play.google.com/store/apps/details?id=johnidis.azimuth",
-          "iconPath": "assets/emulators/azimuth.png"
+          "iconPath": "assets/emulators/azimuth.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "droidcpc",
@@ -2977,7 +4366,10 @@
           "minAndroid": "5.0",
           "description": "安卓Amstrad CPC模拟器，专有软件。原 Google Play 页面已下架",
           "downloadUrl": "",
-          "iconPath": "assets/emulators/droidcpc.png"
+          "iconPath": "assets/emulators/droidcpc.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "caprice32_cpc",
@@ -2992,7 +4384,37 @@
           "minAndroid": "5.0",
           "description": "CaPriCe32 Libretro核心，支持CPC与CPC+。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/libretro-cap32/releases",
-          "iconPath": "assets/emulators/caprice32_cpc.png"
+          "iconPath": "assets/emulators/caprice32_cpc.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "caprice32_pc",
+          "name": "Caprice32 (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ColinPitrat/caprice32",
+          "playStoreId": "",
+          "website": "https://github.com/ColinPitrat/caprice32",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "独立版 Amstrad CPC 464/664/6128/6128+ 模拟器，以较低层级复现硬件组件，兼顾准确性、兼容性与跨平台运行。",
+          "downloadUrl": "https://github.com/ColinPitrat/caprice32/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/caprice32_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3018,7 +4440,10 @@
           "minAndroid": "5.0",
           "description": "跨平台Java实现的Apple II模拟器，含6502核心。可作Android库集成。安卓端独立可用方案较稀缺",
           "downloadUrl": "https://github.com/umjammer/vavi-apps-appleii/releases",
-          "iconPath": "assets/emulators/vavi_appleii.png"
+          "iconPath": "assets/emulators/vavi_appleii.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mame_apple2",
@@ -3033,7 +4458,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Apple II系列。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_apple2.png"
+          "iconPath": "assets/emulators/mame_apple2.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3060,7 +4491,10 @@
           "description": "安卓原生J2ME模拟器，Apache 2.0开源。支持2D/3D（含Mascot Capsule 3D）J2ME游戏。离线转换.jar文件，硬件加速，正确帧率与震动。支持各种厂商API（Nokia/Samsung/SonyEricsson/Motorola等）。Dalvik动态重编译VM",
           "downloadUrl": "https://github.com/nikita36078/J2ME-Loader/releases/latest/download/J2ME_Loader-1.8.2-open-release.apk",
           "devUrl": "https://github.com/nikita36078/J2ME-Loader/releases",
-          "iconPath": "assets/emulators/j2me_loader.png"
+          "iconPath": "assets/emulators/j2me_loader.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "jl_mod",
@@ -3076,7 +4510,10 @@
           "description": "J2ME Loader的活跃分支，更新更频繁。新增SoundFont音源支持、SoftBank API实现。同样支持Mascot Capsule 3D与Dalvik动态重编译",
           "downloadUrl": "https://github.com/woesss/JL-Mod/releases/latest/download/JL-Mod_0.87.1-arm64-v8a.apk",
           "devUrl": "https://github.com/woesss/JL-Mod/releases",
-          "iconPath": "assets/emulators/jl_mod.png"
+          "iconPath": "assets/emulators/jl_mod.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "manic_emu",
@@ -3091,7 +4528,33 @@
           "minAndroid": "5.0",
           "description": "新一代J2ME模拟器，AGPLv3开源。活跃开发中，是J2ME Loader的替代选择",
           "downloadUrl": "https://github.com/Manic-EMU/ManicEMU/releases",
-          "iconPath": "assets/emulators/manic_emu.png"
+          "iconPath": "assets/emulators/manic_emu.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "freej2me_pc",
+          "name": "FreeJ2ME (PC/Libretro)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/hex007/freej2me",
+          "playStoreId": "",
+          "website": "",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "在 PC 与 Libretro 环境运行 J2ME 手机游戏的开源实现，支持键盘、手柄和多种屏幕尺寸。",
+          "downloadUrl": "https://github.com/hex007/freej2me/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/retroarch.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3117,7 +4580,10 @@
           "minAndroid": "7.0",
           "description": "基于Rust的Flash播放器安卓移植版，MIT/Apache 2.0双开源。可运行大量早期Flash游戏，当前重点开发AVM2文件支持。桌面/HTML5/Android多平台",
           "downloadUrl": "https://github.com/ruffle-rs/ruffle-android/releases",
-          "iconPath": "assets/emulators/ruffle_android.png"
+          "iconPath": "assets/emulators/ruffle_android.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "reflash",
@@ -3132,7 +4598,33 @@
           "minAndroid": "5.0",
           "description": "专有安卓Flash播放器，支持.swf文件。Google Play可下",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.kyun.flashgame",
-          "iconPath": "assets/emulators/reflash.png"
+          "iconPath": "assets/emulators/reflash.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ruffle_pc",
+          "name": "Ruffle (PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ruffle-rs/ruffle",
+          "playStoreId": "",
+          "website": "https://ruffle.rs/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "使用 Rust 重写的 Adobe Flash Player 模拟器，提供 Windows、Linux、macOS 桌面版与浏览器扩展。",
+          "downloadUrl": "https://github.com/ruffle-rs/ruffle/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/ruffle_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3158,7 +4650,14 @@
           "minAndroid": "5.0",
           "description": "PC-88模拟器，有安卓APK构建(130609)与Libretro核心。BSD-3-Clause开源。支持RetroAchievements。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/quasi88-libretro/releases",
-          "iconPath": "assets/emulators/quasi88.png"
+          "iconPath": "assets/emulators/quasi88.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "xm8",
@@ -3173,7 +4672,10 @@
           "minAndroid": "4.0",
           "description": "PC-88模拟器安卓移植版(v1.70)，跨平台支持。项目已停止维护但可用",
           "downloadUrl": "https://play.google.com/store/apps/details?id=net.pi/apps.XM8",
-          "iconPath": "assets/emulators/xm8.png"
+          "iconPath": "assets/emulators/xm8.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mame_pc88",
@@ -3188,7 +4690,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟PC-8801MA/MH/mkIISR。MAME 0.251+可玩但不完整。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_pc88.png"
+          "iconPath": "assets/emulators/mame_pc88.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3215,7 +4723,14 @@
           "description": "最佳PC-98模拟器Neko Project II的kai分支，Libretro核心。高精度模拟，支持Android。兼容性优秀",
           "downloadUrl": "https://github.com/AZO234/NP2kai/releases",
           "devUrl": "https://github.com/AZO234/NP2kai/releases",
-          "iconPath": "assets/emulators/np2kai.png"
+          "iconPath": "assets/emulators/np2kai.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_pc98",
@@ -3230,7 +4745,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟PC-9801RS/PC-9821。MAME 0.282+可玩但不完整，精度低。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_pc98.png"
+          "iconPath": "assets/emulators/mame_pc98.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "j98",
@@ -3245,7 +4766,10 @@
           "minAndroid": "5.0",
           "description": "安卓原生PC-98模拟器(J98-b)，专有软件。低精度但可用",
           "downloadUrl": "http://akiyuki.boy.jp/android",
-          "iconPath": "assets/emulators/j98.png"
+          "iconPath": "assets/emulators/j98.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -3271,7 +4795,14 @@
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持VIC-20。GPLv2开源，高精度模拟。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
-          "iconPath": "assets/emulators/vice_vic20.png"
+          "iconPath": "assets/emulators/vice_vic20.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "eightbitwonders_vic",
@@ -3286,7 +4817,10 @@
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持VIC-20/C64/PET/C128/Plus/4。AGPL开源，支持硬件手柄、虚拟摇杆、存档/回溯、内置游戏。F-Droid/Play/Amazon可下",
           "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
-          "iconPath": "assets/emulators/eightbitwonders_vic.png"
+          "iconPath": "assets/emulators/eightbitwonders_vic.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -3312,7 +4846,14 @@
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持C128。极高精度模拟。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
-          "iconPath": "assets/emulators/vice_c128.png"
+          "iconPath": "assets/emulators/vice_c128.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "eightbitwonders_c128",
@@ -3327,7 +4868,10 @@
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持C128。AGPL开源，F-Droid/Play/Amazon可下",
           "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
-          "iconPath": "assets/emulators/eightbitwonders_c128.png"
+          "iconPath": "assets/emulators/eightbitwonders_c128.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -3354,7 +4898,13 @@
           "description": "多Sinclair模拟器(ZX80/ZX81/ZX Spectrum)，GPL开源。高精度时序模拟，支持多种外围设备。v13.0-Beta2",
           "downloadUrl": "https://github.com/chernandezba/zesarux/releases",
           "devUrl": "https://github.com/chernandezba/zesarux/releases",
-          "iconPath": "assets/emulators/zesarux.png"
+          "iconPath": "assets/emulators/zesarux.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "sz81",
@@ -3369,7 +4919,10 @@
           "minAndroid": "5.0",
           "description": "基于xz80与z81的ZX81模拟器，有移动/ARM版本。GPLv2开源",
           "downloadUrl": "https://sourceforge.net/projects/sz81/files/latest/download",
-          "iconPath": "assets/emulators/sz81.png"
+          "iconPath": "assets/emulators/sz81.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mame_zx81",
@@ -3384,7 +4937,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Sinclair ZX81。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_zx81.png"
+          "iconPath": "assets/emulators/mame_zx81.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3410,7 +4969,14 @@
           "minAndroid": "5.0",
           "description": "Sharp X1模拟器X Millennium的Libretro核心移植，支持X1与X1 Turbo。BSD-3-Clause开源。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/xmil-libretro/releases",
-          "iconPath": "assets/emulators/x1_libretro.png"
+          "iconPath": "assets/emulators/x1_libretro.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_x1",
@@ -3425,7 +4991,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Sharp X1 Turbo。X1 Turbo Z与X1 Twin暂不支持。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_x1.png"
+          "iconPath": "assets/emulators/mame_x1.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3451,7 +5023,10 @@
           "minAndroid": "4.0",
           "description": "基于B-em的安卓BBC Micro模拟器，支持Model A/B/B+/M128/MC/Master Turbo/M512。Google Play可下",
           "downloadUrl": "https://github.com/littlefluffytoys/Beebdroid/releases",
-          "iconPath": "assets/emulators/beebdroid.png"
+          "iconPath": "assets/emulators/beebdroid.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mame_bbc",
@@ -3466,7 +5041,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟BBC Micro与Acorn Electron。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_bbc.png"
+          "iconPath": "assets/emulators/mame_bbc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3492,7 +5073,33 @@
           "minAndroid": "5.0",
           "description": "开源TRS-80 Model I/III安卓模拟器，Apache 2.0开源。支持文本模式、磁带、软盘、音频播放。灵活键盘配置、外接键盘检测、倾斜光标控制、游戏手柄支持、Chromecast投屏、应用内游戏下载",
           "downloadUrl": "https://play.google.com/store/apps/details?id=org.puder.trs80",
-          "iconPath": "assets/emulators/puder_trs80.png"
+          "iconPath": "assets/emulators/puder_trs80.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "mame_trs80_pc",
+          "name": "MAME (TRS-80 PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mamedev/mame",
+          "playStoreId": "",
+          "website": "https://www.mamedev.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "MAME PC 版的 TRS-80 Model I/III 驱动，支持磁盘与磁带镜像。",
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3518,7 +5125,10 @@
           "minAndroid": "5.0",
           "description": "安卓PocketStation模拟器，支持通过XEBRA与PlayStation连接。Google Play可下",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.dokutajigokusai.pk201",
-          "iconPath": "assets/emulators/pk201.png"
+          "iconPath": "assets/emulators/pk201.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mame_pockstat",
@@ -3533,7 +5143,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟PocketStation。部分游戏可运行，但存在硬件问题导致部分崩溃。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_pockstat.png"
+          "iconPath": "assets/emulators/mame_pockstat.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3559,7 +5175,14 @@
           "minAndroid": "5.0",
           "description": "Single Arcade Machine Emulator for CD-i，从MAME fork而来，仅含CD-i驱动。简化光盘加载，即插即用。GPLv2开源。支持滤镜、HDR、着色器链。通过RetroArch核心下载器获取",
           "downloadUrl": "https://docs.libretro.com/library/same_cdi/",
-          "iconPath": "assets/emulators/same_cdi.png"
+          "iconPath": "assets/emulators/same_cdi.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_cdi",
@@ -3574,7 +5197,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟CD-i。目前无DVC(数字视频卡)模拟，需DVC的游戏无法运行。从光盘启动游戏推荐。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_cdi.png"
+          "iconPath": "assets/emulators/mame_cdi.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3600,7 +5229,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟V.Smile。模拟尚不完整，部分游戏ROM集不兼容。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_vsmile.png"
+          "iconPath": "assets/emulators/mame_vsmile.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3628,7 +5263,14 @@
           "downloadUrl": "https://www.scummvm.org/downloads/",
           "devUrl": "",
           "nightlyUrl": "https://buildbot.scummvm.org/",
-          "iconPath": "assets/emulators/scummvm_android.png"
+          "iconPath": "assets/emulators/scummvm_android.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3655,7 +5297,14 @@
           "description": "开源横版动作游戏引擎，BSD-3-Clause开源。专为清版动作游戏优化(双截龙、怒之铁拳风格)，也可适配任何游戏风格。数百个粉丝自制游戏可用。支持Android/Wii/PSP/Dreamcast",
           "downloadUrl": "https://github.com/DCurrent/openbor/releases/latest/download/OpenBOR-Android.v4.0.Build.7533.apk",
           "devUrl": "https://github.com/DCurrent/openbor/releases",
-          "iconPath": "assets/emulators/openbor_android.png"
+          "iconPath": "assets/emulators/openbor_android.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3683,7 +5332,14 @@
           "downloadUrl": "https://easyrpg.org/player/downloads/",
           "devUrl": "",
           "nightlyUrl": "",
-          "iconPath": "assets/emulators/easyrpg.png"
+          "iconPath": "assets/emulators/easyrpg.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3710,7 +5366,10 @@
           "description": "安卓原生Palm OS模拟器，GPLv2开源。可直接运行Palm OS应用与游戏",
           "downloadUrl": "https://github.com/Florin9doi/PHEM/releases/latest/download/app-arm-release.apk",
           "devUrl": "https://github.com/Florin9doi/PHEM/releases",
-          "iconPath": "assets/emulators/phem.png"
+          "iconPath": "assets/emulators/phem.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mu_core",
@@ -3725,7 +5384,14 @@
           "minAndroid": "5.0",
           "description": "Palm OS的Libretro核心，支持Graffiti手写识别与触摸屏模拟。推荐核心。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/Mu/releases",
-          "iconPath": "assets/emulators/mu_core.png"
+          "iconPath": "assets/emulators/mu_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3751,7 +5417,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟FM-7。Android上最主要的FM-7模拟方案。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_fm7.png"
+          "iconPath": "assets/emulators/mame_fm7.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3777,7 +5449,14 @@
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持PET全型号。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
-          "iconPath": "assets/emulators/vice_pet.png"
+          "iconPath": "assets/emulators/vice_pet.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "eightbitwonders_pet",
@@ -3792,7 +5471,10 @@
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持PET。AGPL开源，F-Droid/Play/Amazon可下",
           "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
-          "iconPath": "assets/emulators/eightbitwonders_pet.png"
+          "iconPath": "assets/emulators/eightbitwonders_pet.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -3818,7 +5500,14 @@
           "minAndroid": "5.0",
           "description": "Versatile Commodore Emulator的Libretro核心，支持Plus/4与C16。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/vice-libretro/releases",
-          "iconPath": "assets/emulators/vice_plus4.png"
+          "iconPath": "assets/emulators/vice_plus4.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "eightbitwonders_plus4",
@@ -3833,7 +5522,10 @@
           "minAndroid": "5.0",
           "description": "基于VICE的安卓Commodore 8位系列模拟器，支持Plus/4与C16。AGPL开源，F-Droid/Play/Amazon可下",
           "downloadUrl": "https://gitlab.com/eightbitwonders/app/-/releases",
-          "iconPath": "assets/emulators/eightbitwonders_plus4.png"
+          "iconPath": "assets/emulators/eightbitwonders_plus4.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -3860,7 +5552,33 @@
           "description": "安卓原生Electronika BK-0010/11M模拟器，模拟16位PDP-11兼容苏联家用电脑。支持BK-0010-01等型号",
           "downloadUrl": "https://github.com/3cky/bkemu-android/releases/latest/download/bkemu-android-1.2.2.apk",
           "devUrl": "https://github.com/3cky/bkemu-android/releases",
-          "iconPath": "assets/emulators/bkemu.png"
+          "iconPath": "assets/emulators/bkemu.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "mame_bk0010_pc",
+          "name": "MAME (BK-0010 PC)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mamedev/mame",
+          "playStoreId": "",
+          "website": "https://www.mamedev.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "MAME PC 版的 Electronika BK-0010/BK-0011 驱动。",
+          "downloadUrl": "https://github.com/mamedev/mame/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mame_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3886,7 +5604,36 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟TRS-80 CoCo 1/2/3与Dragon 32/64。Android上最可靠的CoCo模拟方案。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_coco.png"
+          "iconPath": "assets/emulators/mame_coco.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "xroar_pc",
+          "name": "XRoar",
+          "openSource": true,
+          "sourceType": "website",
+          "sourceUrl": "https://www.6809.org.uk/xroar/",
+          "playStoreId": "",
+          "website": "https://www.6809.org.uk/xroar/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Dragon 32/64、Tandy Color Computer 和 MC-10 模拟器，支持 SDL3、GDB 调试、断点监视以及多种磁盘、磁带和外围设备。",
+          "downloadUrl": "https://www.6809.org.uk/xroar/",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xroar_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3912,7 +5659,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Super A'Can。首个也是唯一已知的Super A'Can模拟器，驱动处于初步阶段，部分游戏可运行，声音为初步支持。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_acan.png"
+          "iconPath": "assets/emulators/mame_acan.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3939,7 +5692,10 @@
           "description": "KEGS Apple IIGS模拟器的社区安卓移植版，GPLv2开源。Google Play可下。支持IIGS ROM 01/03与全功能模拟",
           "downloadUrl": "https://github.com/jamessanford/kegs/releases",
           "devUrl": "https://github.com/jamessanford/kegs/releases",
-          "iconPath": "assets/emulators/kegs_android.png"
+          "iconPath": "assets/emulators/kegs_android.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "mame_iigs",
@@ -3954,7 +5710,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Apple IIGS。模拟不完整，不推荐。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_iigs.png"
+          "iconPath": "assets/emulators/mame_iigs.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -3980,7 +5742,10 @@
           "minAndroid": "5.0",
           "description": "Macintosh 68k系列模拟器，GPLv2开源。支持Mac Plus/SE/II等型号。有安卓移植版与Libretro核心。官方网站下载各平台版本",
           "downloadUrl": "https://www.gryphel.com/c/minivmac/ports.html",
-          "iconPath": "assets/emulators/minivmac.png"
+          "iconPath": "assets/emulators/minivmac.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "minivmac_core",
@@ -3995,7 +5760,14 @@
           "minAndroid": "5.0",
           "description": "Mini vMac的Libretro核心移植，通过RetroArch核心下载器获取。支持Mac Plus模拟",
           "downloadUrl": "https://docs.libretro.com/library/minivmac/",
-          "iconPath": "assets/emulators/minivmac_core.png"
+          "iconPath": "assets/emulators/minivmac_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4021,7 +5793,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟FM Towns。MAME驱动处于初步阶段，质量不佳。推荐桌面端使用Tsugaru。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_towns.png"
+          "iconPath": "assets/emulators/mame_towns.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4047,7 +5825,14 @@
           "minAndroid": "5.0",
           "description": "CreatiVision专用Libretro核心，BSD-3-Clause开源。100%兼容性报告。通过RetroArch核心下载器获取",
           "downloadUrl": "https://gitlab.com/jgemu/jollycv/-/releases",
-          "iconPath": "assets/emulators/jollycv.png"
+          "iconPath": "assets/emulators/jollycv.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_creative",
@@ -4062,7 +5847,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟CreatiVision。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_creative.png"
+          "iconPath": "assets/emulators/mame_creative.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4088,7 +5879,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟VTech Socrates。模拟处于非常早期阶段。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_socrates.png"
+          "iconPath": "assets/emulators/mame_socrates.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4114,7 +5911,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Bally Astrocade。MAME是唯一模拟器，完全模拟。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_astro.png"
+          "iconPath": "assets/emulators/mame_astro.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4140,7 +5943,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟APF MP1000。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_apf.png"
+          "iconPath": "assets/emulators/mame_apf.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4166,7 +5975,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Casio PV-1000。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_pv1000.png"
+          "iconPath": "assets/emulators/mame_pv1000.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4192,7 +6007,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Casio Loopy。MAME 0.260+支持，无音频。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_loopy.png"
+          "iconPath": "assets/emulators/mame_loopy.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4218,7 +6039,14 @@
           "minAndroid": "5.0",
           "description": "CaPriCe32 Libretro核心支持CPC+与GX4000。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/libretro-cap32/releases",
-          "iconPath": "assets/emulators/caprice32_gx.png"
+          "iconPath": "assets/emulators/caprice32_gx.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_gx4000",
@@ -4233,7 +6061,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Amstrad GX4000。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_gx4000.png"
+          "iconPath": "assets/emulators/mame_gx4000.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4259,7 +6093,14 @@
           "minAndroid": "5.0",
           "description": "PUAE Libretro核心支持CD32。通过RetroArch核心下载器获取。需CD32 Kickstart ROM",
           "downloadUrl": "https://github.com/libretro/PUAE/releases",
-          "iconPath": "assets/emulators/puae_cd32.png"
+          "iconPath": "assets/emulators/puae_cd32.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4285,7 +6126,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Pioneer LaserActive。支持Sega PAC与NEC PAC。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_la.png"
+          "iconPath": "assets/emulators/mame_la.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "blastem_la",
@@ -4300,7 +6147,14 @@
           "minAndroid": "5.0",
           "description": "BlastEm Libretro核心支持LaserActive Mega-LD（Sega PAC部分）。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/blastem",
-          "iconPath": "assets/emulators/blastem_la.png"
+          "iconPath": "assets/emulators/blastem_la.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4326,7 +6180,14 @@
           "minAndroid": "5.0",
           "description": "Mednafen PCE的Libretro核心，支持SuperGrafx。高精度模拟。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/beetle-pce-libretro/releases",
-          "iconPath": "assets/emulators/beetle_sgx.png"
+          "iconPath": "assets/emulators/beetle_sgx.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4352,7 +6213,14 @@
           "minAndroid": "5.0",
           "description": "Mega Duck专用Libretro核心，MIT开源。支持ARM与x86。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/libretro/sameduck/releases",
-          "iconPath": "assets/emulators/sameduck.png"
+          "iconPath": "assets/emulators/sameduck.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_megaduck",
@@ -4367,7 +6235,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Mega Duck。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_megaduck.png"
+          "iconPath": "assets/emulators/mame_megaduck.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4393,7 +6267,14 @@
           "minAndroid": "5.0",
           "description": "Cassette Vision的Libretro核心。通过RetroArch核心下载器获取",
           "downloadUrl": "https://docs.libretro.com/library/pd777/",
-          "iconPath": "assets/emulators/pd777.png"
+          "iconPath": "assets/emulators/pd777.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4419,7 +6300,14 @@
           "minAndroid": "5.0",
           "description": "Super Cassette Vision的Libretro核心，GPLv2开源。模拟仍在开发中但可运行。通过RetroArch核心下载器获取",
           "downloadUrl": "https://docs.libretro.com/library/emuscv/",
-          "iconPath": "assets/emulators/emuscv.png"
+          "iconPath": "assets/emulators/emuscv.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "mame_scv",
@@ -4434,7 +6322,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Super Cassette Vision。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_scv.png"
+          "iconPath": "assets/emulators/mame_scv.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4460,7 +6354,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Epoch Game Pocket Computer。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_gpc.png"
+          "iconPath": "assets/emulators/mame_gpc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4486,7 +6386,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Entex Adventure Vision。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_av.png"
+          "iconPath": "assets/emulators/mame_av.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4512,7 +6418,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Tiger Game.com。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_gamecom.png"
+          "iconPath": "assets/emulators/mame_gamecom.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4538,7 +6450,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟MicroVision。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_mv.png"
+          "iconPath": "assets/emulators/mame_mv.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4564,7 +6482,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Hartung Game Master。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_gm.png"
+          "iconPath": "assets/emulators/mame_gm.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4590,7 +6514,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Gamate。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_gamate.png"
+          "iconPath": "assets/emulators/mame_gamate.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4616,7 +6546,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟任天堂Color TV-Game系列（CTG-6/10/15/16/Racing 112/Block Kuzushi）。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_ctg.png"
+          "iconPath": "assets/emulators/mame_ctg.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4642,7 +6578,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Cybiko与Cybiko Xtreme。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_cybiko.png"
+          "iconPath": "assets/emulators/mame_cybiko.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4668,7 +6610,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟LeapFrog Leapster系列。驱动处于初步阶段。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_leapster.png"
+          "iconPath": "assets/emulators/mame_leapster.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4694,7 +6642,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Bandai Super Vision 8000。模拟不完整。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_sv8000.png"
+          "iconPath": "assets/emulators/mame_sv8000.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4720,7 +6674,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Acorn Electron。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_electron.png"
+          "iconPath": "assets/emulators/mame_electron.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4747,7 +6707,13 @@
           "description": "TI-83/84系列计算器模拟器，MIT开源。支持单色Z80与彩色Z80系列(TI-73/81/82/83/84/85/86)。推荐使用",
           "downloadUrl": "https://github.com/sputt/wabbitemu/releases",
           "devUrl": "https://github.com/sputt/wabbitemu/releases",
-          "iconPath": "assets/emulators/wabbitemu.png"
+          "iconPath": "assets/emulators/wabbitemu.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "graph89",
@@ -4762,7 +6728,10 @@
           "minAndroid": "5.0",
           "description": "TI-89/TI-92/Voyage 200模拟器，模拟68000系列计算器。GPLv3开源，F-Droid可下",
           "downloadUrl": "https://f-droid.org/en/packages/com.eanema.graph89/",
-          "iconPath": "assets/emulators/graph89.png"
+          "iconPath": "assets/emulators/graph89.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "firebird",
@@ -4778,7 +6747,13 @@
           "description": "TI-Nspire系列计算器模拟器，GPLv3开源。支持CX型号。GitHub提供安卓APK",
           "downloadUrl": "https://github.com/nspire-emus/firebird/releases/latest/download/firebird-android.apk",
           "devUrl": "https://github.com/nspire-emus/firebird/releases",
-          "iconPath": "assets/emulators/firebird.png"
+          "iconPath": "assets/emulators/firebird.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         },
         {
           "id": "droid48",
@@ -4793,7 +6768,10 @@
           "minAndroid": "5.0",
           "description": "HP 48G/48S计算器模拟器。Google Play可下",
           "downloadUrl": "https://play.google.com/store/apps/details?id=org.ab.x48",
-          "iconPath": "assets/emulators/droid48.png"
+          "iconPath": "assets/emulators/droid48.png",
+          "platforms": [
+            "android"
+          ]
         },
         {
           "id": "emu48",
@@ -4808,7 +6786,10 @@
           "minAndroid": "5.0",
           "description": "HP 38G/39G/40G/48S/48SX/48G/48GX/49G/50g全系列计算器模拟器。活跃维护",
           "downloadUrl": "https://hp.giesselink.com/emu48.htm",
-          "iconPath": "assets/emulators/emu48.png"
+          "iconPath": "assets/emulators/emu48.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -4834,7 +6815,13 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟NEC PC-6001系列。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_pc6001.png"
+          "iconPath": "assets/emulators/mame_pc6001.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
         }
       ]
     },
@@ -4860,7 +6847,264 @@
           "minAndroid": "5.0",
           "description": "通过RetroArch加载MAME核心模拟Mattel Aquarius。通过RetroArch核心下载器获取",
           "downloadUrl": "https://github.com/mamedev/mame/releases",
-          "iconPath": "assets/emulators/mame_aquarius.png"
+          "iconPath": "assets/emulators/mame_aquarius.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        }
+      ]
+    },
+    {
+      "id": "ps5",
+      "name": "PlayStation 5",
+      "vendor": "sony",
+      "year": 2020,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/ps5.jpg",
+      "description": "索尼第五代 PlayStation 家用主机，采用 AMD Zen 2 与 RDNA 2 架构、超高速 SSD 和 DualSense 手柄。现有 PC 模拟器仍处于实验与研究阶段，商业游戏兼容性有限。",
+      "emulators": [
+        {
+          "id": "sharpemu_pc",
+          "name": "SharpEmu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/sharpemu/sharpemu",
+          "playStoreId": "",
+          "website": "https://sharpemu.app/",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "从零开发的实验性 PlayStation 5 模拟器，使用 C#，支持 Windows、Linux 与 macOS。当前主要用于架构研究和早期图形、内核功能验证，尚不能视为成熟游戏模拟器。",
+          "downloadUrl": "https://github.com/sharpemu/sharpemu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/sharpemu_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS，支持 Vulkan 或 Metal 的现代显卡"
+        },
+        {
+          "id": "kytyps5_pc",
+          "name": "KytyPS5",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/KytyPS5/KytyPS5",
+          "playStoreId": "",
+          "website": "https://github.com/KytyPS5/KytyPS5",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "基于 Kyty 深度修改并继续开发的开源 PlayStation 5 模拟器，当前以 Windows 为主要平台，仍处于早期阶段，仅适合测试少量自制软件和有限游戏。",
+          "downloadUrl": "https://github.com/KytyPS5/KytyPS5/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/kytyps5_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11，支持 Vulkan 的现代独立显卡"
+        }
+      ]
+    },
+    {
+      "id": "sharp_mz",
+      "name": "Sharp MZ-700 / MZ-800 / MZ-1500",
+      "vendor": "sharp",
+      "year": 1982,
+      "icon": "💻",
+      "imagePath": "assets/consoles/sharp_mz.jpg",
+      "description": "夏普 MZ 系列 8 位家用电脑，采用 Z80 处理器并支持磁带、软盘、Quick Disk 及多种扩展设备。",
+      "emulators": [
+        {
+          "id": "mz800emu_pc",
+          "name": "mz800emu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/michalhucik/mz800emu",
+          "playStoreId": "",
+          "website": "https://github.com/michalhucik/mz800emu",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "面向 Sharp MZ-700、MZ-800 与 MZ-1500 的开源模拟器，使用 SDL3 与 ImGui，强调 Z80、GDG、定时器、PIO、声音和存储外设的精确时序。",
+          "downloadUrl": "https://github.com/michalhucik/mz800emu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mz800emu_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        }
+      ]
+    },
+    {
+      "id": "emulation_tools",
+      "name": "模拟器工具 / Utilities",
+      "vendor": "various",
+      "year": 2026,
+      "icon": "🧰",
+      "imagePath": "assets/consoles/emulation_tools.jpg",
+      "description": "用于管理模拟器、ROM、封面、控制器和游戏库的实用工具。仅收录能够确认官方来源、维护状态和下载渠道的项目。",
+      "emulators": [
+        {
+          "id": "steam_rom_manager",
+          "name": "Steam ROM Manager",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/SteamGridDB/steam-rom-manager",
+          "playStoreId": "",
+          "website": "https://steamgriddb.github.io/steam-rom-manager/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "批量把模拟器游戏及其他非 Steam 项目导入 Steam，并管理封面、横幅、控制器模板与分类。",
+          "downloadUrl": "https://github.com/SteamGridDB/steam-rom-manager/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/steam_rom_manager.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "retrobat",
+          "name": "RetroBat",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/RetroBat-Official/retrobat",
+          "playStoreId": "",
+          "website": "https://www.retrobat.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "面向 Windows 的一体化复古游戏发行套件，整合 EmulationStation、RetroArch 和大量独立模拟器，支持自动下载、统一配置与手柄操作。",
+          "downloadUrl": "https://github.com/RetroBat-Official/retrobat/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/retrobat.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11"
+        },
+        {
+          "id": "playnite",
+          "name": "Playnite",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/JosefNemec/Playnite",
+          "playStoreId": "",
+          "website": "https://playnite.link/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "开源游戏库管理器，可统一展示模拟器游戏、Steam、GOG、Epic 等游戏库，并提供全屏手柄界面和插件系统。",
+          "downloadUrl": "https://github.com/JosefNemec/Playnite/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/playnite.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11"
+        },
+        {
+          "id": "igir",
+          "name": "Igir",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/emmercm/igir",
+          "playStoreId": "",
+          "website": "https://igir.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "跨平台命令行 ROM 收藏管理器，可排序、筛选、解压、重新归档、打补丁、校验并生成收藏报告。",
+          "downloadUrl": "https://github.com/emmercm/igir/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/igir.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "simple_launcher",
+          "name": "Simple Launcher",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/drpetersonfernandes/SimpleLauncher",
+          "playStoreId": "",
+          "website": "https://www.purelogiccode.com/SimpleLauncherPage",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "现代 Windows 模拟器前端，支持游戏扫描、RetroAchievements、CHD 挂载、参数管理和多种主流模拟器配置注入。",
+          "downloadUrl": "https://github.com/drpetersonfernandes/SimpleLauncher/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/simple_launcher.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11，.NET 10"
+        },
+        {
+          "id": "padforge",
+          "name": "PadForge",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/hifihedgehog/PadForge",
+          "playStoreId": "",
+          "website": "https://padforge.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "开源 Windows 控制器映射和虚拟设备工具，可将键鼠、方向盘、手柄等输入转换为 Xbox、PlayStation 等虚拟控制器。",
+          "downloadUrl": "https://github.com/hifihedgehog/PadForge/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/padforge.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11"
+        },
+        {
+          "id": "clrmame",
+          "name": "clrmame",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "https://mamedev.emulab.it/clrmamepro/binaries/readme.html",
+          "playStoreId": "",
+          "website": "https://mamedev.emulab.it/clrmamepro/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "由 clrmamepro 作者重写的 MAME 机器集扫描与重建工具，可根据 MAME XML 检查、修复和重新组织 ROM、CHD 与软件列表。执行删除或修复前应先备份。",
+          "downloadUrl": "https://mamedev.emulab.it/clrmamepro/",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/clrmame.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows；修复或删除前建议完整备份"
         }
       ]
     }

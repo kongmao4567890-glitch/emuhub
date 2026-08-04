@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
+import '../../data/models/emulator.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
 
@@ -141,6 +142,7 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
   String _selectedVendor = 'all';
+  String _selectedPlatform = 'all';
 
   @override
   void dispose() {
@@ -158,6 +160,13 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
       'philips', 'mattel', 'casio', 'amstrad',
     };
     return consoles.where((console) {
+      final platformEmulators = _selectedPlatform == 'all'
+          ? console.emulators
+          : console.emulators
+              .where((e) => e.supportsPlatform(_selectedPlatform))
+              .toList();
+      if (platformEmulators.isEmpty) return false;
+
       // 厂商筛选
       if (_selectedVendor == 'various') {
         // "其他" 显示不在已知列表中的厂商
@@ -176,7 +185,7 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
       if (_searchQuery.isNotEmpty) {
         final query = _searchQuery.toLowerCase();
         final nameMatch = console.name.toLowerCase().contains(query);
-        final emulatorMatch = console.emulators
+        final emulatorMatch = platformEmulators
             .any((e) => e.name.toLowerCase().contains(query));
         if (!nameMatch && !emulatorMatch) return false;
       }
@@ -219,6 +228,39 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
                   ),
                   onChanged: (value) =>
                       setState(() => _searchQuery = value.trim()),
+                ),
+              ),
+              SizedBox(
+                height: 44,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  children: [
+                    for (final option in const [
+                      (key: 'all', label: '全部平台'),
+                      (key: 'android', label: 'Android'),
+                      (key: 'windows', label: 'Windows'),
+                      (key: 'linux', label: 'Linux'),
+                      (key: 'macos', label: 'macOS'),
+                    ]) ...[
+                      ChoiceChip(
+                        avatar: Icon(
+                          option.key == 'android'
+                              ? Icons.android
+                              : option.key == 'all'
+                                  ? Icons.devices
+                                  : Icons.desktop_windows,
+                          size: 16,
+                        ),
+                        label: Text(option.label),
+                        selected: _selectedPlatform == option.key,
+                        onSelected: (_) => setState(
+                          () => _selectedPlatform = option.key,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                    ],
+                  ],
                 ),
               ),
               // 厂商筛选 Chips
@@ -279,6 +321,7 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
                             return _ConsoleCard(
                               console: filtered[index],
                               cachedVersions: const [],
+                              platform: _selectedPlatform,
                             );
                           },
                         ),
@@ -296,6 +339,7 @@ class _ConsolesPageState extends ConsumerState<ConsolesPage> {
                             return _ConsoleCard(
                               console: filtered[index],
                               cachedVersions: cached,
+                              platform: _selectedPlatform,
                             );
                           },
                         ),
@@ -363,10 +407,12 @@ class _ConsoleCard extends StatelessWidget {
   const _ConsoleCard({
     required this.console,
     required this.cachedVersions,
+    required this.platform,
   });
 
   final Console console;
   final List<CachedVersion> cachedVersions;
+  final String platform;
 
   @override
   Widget build(BuildContext context) {
@@ -374,7 +420,12 @@ class _ConsoleCard extends StatelessWidget {
     final cs = theme.colorScheme;
 
     // 查找该机种下所有模拟器的缓存版本
-    final emulatorIds = console.emulators.map((e) => e.id).toSet();
+    final visibleEmulators = platform == 'all'
+        ? console.emulators
+        : console.emulators
+            .where((emulator) => emulator.supportsPlatform(platform))
+            .toList();
+    final emulatorIds = visibleEmulators.map((e) => e.id).toSet();
     final relevant =
         cachedVersions.where((c) => emulatorIds.contains(c.emulatorId)).toList();
     final hasNewVersion = relevant.any((c) => c.isNew);
@@ -439,7 +490,7 @@ class _ConsoleCard extends StatelessWidget {
                               color: cs.onSurfaceVariant),
                           const SizedBox(width: 4),
                           Text(
-                            '${console.emulators.length} 个模拟器',
+                            '${visibleEmulators.length} 个模拟器',
                             style: theme.textTheme.labelSmall?.copyWith(
                               color: cs.onSurfaceVariant,
                             ),

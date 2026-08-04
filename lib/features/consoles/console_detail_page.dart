@@ -21,13 +21,21 @@ final _cachedVersionsStreamProvider =
 /// 机种详情页。
 ///
 /// 接收 [consoleId]，展示机种信息与该机种下所有模拟器列表。
-class ConsoleDetailPage extends ConsumerWidget {
+class ConsoleDetailPage extends ConsumerStatefulWidget {
   const ConsoleDetailPage({super.key, required this.consoleId});
 
   final String consoleId;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConsoleDetailPage> createState() =>
+      _ConsoleDetailPageState();
+}
+
+class _ConsoleDetailPageState extends ConsumerState<ConsoleDetailPage> {
+  String _selectedPlatform = 'all';
+
+  @override
+  Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
     final cachedVersionsAsync = ref.watch(_cachedVersionsStreamProvider);
 
@@ -43,7 +51,7 @@ class ConsoleDetailPage extends ConsumerWidget {
       data: (config) {
         final console = config.consoles
             .cast<Console?>()
-            .firstWhere((c) => c?.id == consoleId, orElse: () => null);
+            .firstWhere((c) => c?.id == widget.consoleId, orElse: () => null);
         if (console == null) {
           return Scaffold(
             appBar: AppBar(),
@@ -69,6 +77,15 @@ class ConsoleDetailPage extends ConsumerWidget {
   ) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
+    final emulators = _selectedPlatform == 'all'
+        ? console.emulators
+        : console.emulators
+            .where((emulator) =>
+                emulator.supportsPlatform(_selectedPlatform))
+            .toList();
+    final availablePlatforms = <String>{
+      for (final emulator in console.emulators) ...emulator.platforms,
+    };
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -141,7 +158,7 @@ class ConsoleDetailPage extends ConsumerWidget {
                       const SizedBox(width: 8),
                       _InfoChip(
                         icon: Icons.apps,
-                        label: '${console.emulators.length} 个模拟器',
+                        label: '${emulators.length} 个模拟器',
                       ),
                     ],
                   ),
@@ -159,6 +176,44 @@ class ConsoleDetailPage extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 24),
+                  Text('运行平台', style: theme.textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  )),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      ChoiceChip(
+                        avatar: const Icon(Icons.devices, size: 16),
+                        label: const Text('全部'),
+                        selected: _selectedPlatform == 'all',
+                        onSelected: (_) =>
+                            setState(() => _selectedPlatform = 'all'),
+                      ),
+                      for (final platform in const [
+                        'android',
+                        'windows',
+                        'linux',
+                        'macos',
+                      ])
+                        if (availablePlatforms.contains(platform))
+                          ChoiceChip(
+                            avatar: Icon(
+                              platform == 'android'
+                                  ? Icons.android
+                                  : Icons.desktop_windows,
+                              size: 16,
+                            ),
+                            label: Text(_platformLabel(platform)),
+                            selected: _selectedPlatform == platform,
+                            onSelected: (_) => setState(
+                              () => _selectedPlatform = platform,
+                            ),
+                          ),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
                   // 模拟器列表标题
                   Text('模拟器列表', style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
@@ -172,7 +227,7 @@ class ConsoleDetailPage extends ConsumerWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                final emulator = console.emulators[index];
+                final emulator = emulators[index];
                 final cachedVersion = cached
                     .where((c) => c.emulatorId == emulator.id)
                     .firstOrNull;
@@ -185,13 +240,28 @@ class ConsoleDetailPage extends ConsumerWidget {
                   ),
                 );
               },
-              childCount: console.emulators.length,
+              childCount: emulators.length,
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 24)),
         ],
       ),
     );
+  }
+
+  String _platformLabel(String platform) {
+    switch (platform) {
+      case 'android':
+        return 'Android';
+      case 'windows':
+        return 'Windows';
+      case 'linux':
+        return 'Linux';
+      case 'macos':
+        return 'macOS';
+      default:
+        return platform;
+    }
   }
 
   Widget _buildError(BuildContext context, WidgetRef ref, Object error) {
@@ -366,6 +436,20 @@ class _EmulatorListCard extends StatelessWidget {
                             label: '核心: ${emulator.core}',
                             color: cs.onSurfaceVariant,
                             backgroundColor: cs.surfaceContainerHighest,
+                          ),
+                        for (final platform in emulator.platforms)
+                          _Tag(
+                            label: platform == 'android'
+                                ? 'Android'
+                                : platform == 'windows'
+                                    ? 'Windows'
+                                    : platform == 'linux'
+                                        ? 'Linux'
+                                        : platform == 'macos'
+                                            ? 'macOS'
+                                            : platform,
+                            color: cs.primary,
+                            backgroundColor: cs.primary.withOpacity(0.1),
                           ),
                       ],
                     ),
