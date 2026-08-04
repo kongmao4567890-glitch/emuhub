@@ -68,8 +68,8 @@ String sourceTypeLabel(String sourceType) {
 /// 模拟器详情页。
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
-/// 不再在打开页面时自动检查更新，用户需手动点击右上角刷新按钮
-/// 逐个检查模拟器版本。
+/// 页面只展示检查更新时写入的缓存，不会因进入页面而发起网络请求；
+/// 用户需手动点击右上角刷新按钮逐个检查模拟器版本。
 class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
@@ -80,10 +80,11 @@ class EmulatorDetailPage extends ConsumerStatefulWidget {
 }
 
 class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
+  bool _hasMarkedAsSeen = false;
   bool _isChecking = false;
 
   /// 手动触发版本检查（点击刷新按钮时调用）。
-  void _manualCheckUpdate() {
+  Future<void> _manualCheckUpdate() async {
     if (_isChecking) return;
     final config = ref.read(emulatorsConfigProvider).valueOrNull;
     if (config == null) return;
@@ -91,12 +92,20 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
     if (result == null) return;
 
     setState(() => _isChecking = true);
-    final updateService = ref.read(updateServiceProvider);
-    updateService.checkOne(result.emulator).whenComplete(() {
+    try {
+      final updateService = ref.read(updateServiceProvider);
+      await updateService.checkOne(result.emulator);
+      if (mounted) {
+        await ref
+            .read(appDatabaseProvider)
+            .cachedVersionsDao
+            .markAsSeen(widget.emulatorId);
+      }
+    } finally {
       if (mounted) {
         setState(() => _isChecking = false);
       }
-    });
+    }
   }
 
   @override
@@ -125,6 +134,18 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         }
         final console = result.console;
         final emulator = result.emulator;
+
+        // 进入详情页只清除本地未读标记，不发起版本检查网络请求。
+        if (!_hasMarkedAsSeen) {
+          _hasMarkedAsSeen = true;
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (!mounted) return;
+            ref
+                .read(appDatabaseProvider)
+                .cachedVersionsDao
+                .markAsSeen(widget.emulatorId);
+          });
+        }
 
         return Scaffold(
           body: CustomScrollView(
@@ -275,6 +296,12 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
               icon: _sourceIcon(emulator.sourceType),
               label: sourceTypeLabel(emulator.sourceType),
             ),
+            if (emulator.sourceType != 'playstore' &&
+                emulator.playStoreId.isNotEmpty)
+              const _InfoPill(
+                icon: Icons.shop,
+                label: 'Google Play',
+              ),
             _InfoPill(
               icon: emulator.openSource ? Icons.lock_open : Icons.lock,
               label: emulator.openSource ? '开源' : '闭源',
@@ -302,7 +329,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: cached == null || cached.currentVersion.isEmpty
+            child: cached == null
                 ? Row(
                     children: [
                       Icon(Icons.history, color: cs.onSurfaceVariant),
@@ -315,23 +342,37 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Icon(Icons.tag, color: cs.primary),
-                          const SizedBox(width: 8),
-                          Text(
-                            cached.currentVersion,
-                            style: theme.textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: cached.isNew ? AppTheme.success : null,
-                            ),
-                          ),
-                          if (cached.isNew) ...[
+                      if (cached.currentVersion.isNotEmpty)
+                        Row(
+                          children: [
+                            Icon(Icons.tag, color: cs.primary),
                             const SizedBox(width: 8),
-                            const NewVersionBadge(),
+                            Text(
+                              cached.currentVersion,
+                              style: theme.textTheme.titleLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: cached.isNew ? AppTheme.success : null,
+                              ),
+                            ),
+                            if (cached.isNew) ...[
+                              const SizedBox(width: 8),
+                              const NewVersionBadge(),
+                            ],
                           ],
-                        ],
-                      ),
+                        )
+                      else
+                        Row(
+                          children: [
+                            Icon(Icons.info_outline, color: cs.primary),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Google Play 未公开版本号',
+                              style: theme.textTheme.titleSmall?.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
                       if (cached.lastReleaseDate != null) ...[
                         const SizedBox(height: 8),
                         Row(
@@ -577,15 +618,40 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
           ),
           const SizedBox(height: 8),
         ],
-        // GitHub Releases 页面（通用回退）
-        SizedBox(
-          width: double.infinity,
-          child: FilledButton.tonalIcon(
-            onPressed: () => _launchDownload(context, emulator),
-            icon: Icon(_sourceIcon(emulator.sourceType)),
-            label: Text(_downloadButtonLabel(emulator.sourceType)),
+        // 官方下载页（没有有效商店包名时不渲染失效按钮）。
+        if (_hasDownloadSource(emulator))
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.tonalIcon(
+              onPressed: () => _launchDownload(context, emulator),
+              icon: Icon(_sourceIcon(emulator.sourceType)),
+              label: Text(_downloadButtonLabel(emulator.sourceType)),
+            ),
+          )
+        else
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Text(
+              '暂无可用的官方下载源',
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: cs.onSurfaceVariant,
+              ),
+            ),
           ),
-        ),
+        // 部分开源项目同时提供 Google Play 正式版。它是独立下载渠道，
+        // 不应因为版本检查来源是 GitHub/官网而被隐藏。
+        if (emulator.sourceType != 'playstore' &&
+            emulator.playStoreId.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              onPressed: () => _launchPlayStore(context, emulator),
+              icon: const Icon(Icons.shop),
+              label: const Text('Google Play 下载'),
+            ),
+          ),
+        ],
         if (emulator.website.isNotEmpty) ...[
           const SizedBox(height: 8),
           SizedBox(
@@ -654,8 +720,13 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         if (emulator.sourceUrl.isEmpty) return;
         break;
       case 'gitlab':
+        if (emulator.sourceUrl.isEmpty) return;
+        url = emulator.sourceUrl.endsWith('/')
+            ? '${emulator.sourceUrl}-/releases'
+            : '${emulator.sourceUrl}/-/releases';
+        break;
       case 'forgejo':
-        // GitLab/Forgejo Releases 页面
+        // Forgejo Releases 页面
         url = emulator.sourceUrl.endsWith('/')
             ? '${emulator.sourceUrl}releases'
             : '${emulator.sourceUrl}/releases';
@@ -673,6 +744,33 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return;
     }
     await _launchUrl(context, url);
+  }
+
+  /// 打开已验证包名对应的 Google Play 页面。
+  Future<void> _launchPlayStore(
+    BuildContext context,
+    Emulator emulator,
+  ) async {
+    if (emulator.playStoreId.isEmpty) return;
+    await _launchUrl(
+      context,
+      'https://play.google.com/store/apps/details?id=${emulator.playStoreId}',
+    );
+  }
+
+  bool _hasDownloadSource(Emulator emulator) {
+    switch (emulator.sourceType) {
+      case 'github':
+      case 'gitlab':
+      case 'forgejo':
+        return emulator.sourceUrl.isNotEmpty;
+      case 'playstore':
+        return emulator.playStoreId.isNotEmpty;
+      case 'website':
+        return emulator.website.isNotEmpty || emulator.sourceUrl.isNotEmpty;
+      default:
+        return false;
+    }
   }
 
   /// 使用 url_launcher 打开链接。

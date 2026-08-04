@@ -177,12 +177,26 @@ class CachedVersionsDao extends DatabaseAccessor<AppDatabase>
       CachedVersionsCompanion(
         emulatorId: Value(info.emulatorId),
         currentVersion: Value(info.version),
-        lastReleaseDate: Value(info.releaseDate.millisecondsSinceEpoch),
+        lastReleaseDate: Value(info.releaseDate?.millisecondsSinceEpoch),
         releaseNotes: Value(info.releaseNotes),
         isNew: Value(info.isNew),
         resolvedDownloadUrl: Value(info.downloadUrl),
         resolvedDevDownloadUrl: Value(info.devDownloadUrl),
         resolvedDevReleaseNotes: Value(info.devReleaseNotes),
+        lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
+      ),
+    );
+  }
+
+  /// 仅刷新检查时间，不覆盖已经确认的版本号、下载链接和未读状态。
+  ///
+  /// 当远端暂时返回旧版本（例如 latest 标记回退或镜像延迟）时使用，
+  /// 防止本地缓存被降级。
+  Future<void> touchLastChecked(String emulatorId) async {
+    await (update(cachedVersions)
+          ..where((c) => c.emulatorId.equals(emulatorId)))
+        .write(
+      CachedVersionsCompanion(
         lastCheckedAt: Value(DateTime.now().millisecondsSinceEpoch),
       ),
     );
@@ -222,7 +236,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration {
@@ -239,6 +253,14 @@ class AppDatabase extends _$AppDatabase {
         if (from < 4) {
           await m.addColumn(
               cachedVersions, cachedVersions.resolvedDevReleaseNotes);
+        }
+        if (from < 5) {
+          // 旧版曾按版本标签比较产生误报；无法从现有行反推出当时两侧
+          // 发布日期，因此升级时一次性清除遗留提示。版本、日期、说明与
+          // 下载地址全部保留，下一次检查会按“远端日期严格更新”重新标记。
+          await customStatement(
+            'UPDATE cached_versions SET is_new = 0',
+          );
         }
       },
     );

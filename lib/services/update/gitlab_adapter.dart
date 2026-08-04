@@ -34,17 +34,20 @@ class GitLabReleasesAdapter implements VersionAdapter {
   String get adapterName => 'gitlab';
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final parsed = _parseProject(emulator.sourceUrl);
     if (parsed == null) return null;
-    final (host, projectPath) = parsed;
+    final (scheme, host, projectPath) = parsed;
 
     // URL 编码 project path: eightbitwonders/app → eightbitwonders%2Fapp
     final encodedPath = Uri.encodeComponent(projectPath);
 
     try {
       final response = await _dio.get(
-        'https://$host/api/v4/projects/$encodedPath/releases',
+        '$scheme://$host/api/v4/projects/$encodedPath/releases',
         queryParameters: {'per_page': 1},
       );
 
@@ -57,13 +60,13 @@ class GitLabReleasesAdapter implements VersionAdapter {
 
       final version = _stripVPrefix(tagName);
       final createdAt = _parseDate(first['created_at']?.toString());
-      final description = first['description']?.toString();
+      final description = _releaseNotes(first);
 
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: createdAt ?? DateTime.now(),
-        releaseNotes: (description != null && description.isNotEmpty) ? description : null,
+        releaseDate: createdAt,
+        releaseNotes: description,
         isNew: false,
       );
     } catch (_) {
@@ -71,24 +74,35 @@ class GitLabReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 从 GitLab 仓库 URL 解析出 (host, projectPath)。
+  /// 从 GitLab 仓库 URL 解析出 (scheme, host, projectPath)。
   /// 支持 `https://gitlab.com/owner/repo` 等形式。
-  /// projectPath 返回 `owner/repo`。
-  (String, String)? _parseProject(String sourceUrl) {
+  /// projectPath 保留多级 subgroup，例如 `group/subgroup/repo`。
+  (String, String, String)? _parseProject(String sourceUrl) {
     if (sourceUrl.isEmpty) return null;
     try {
       final uri = Uri.parse(sourceUrl);
-      if (!uri.host.contains('gitlab.com')) return null;
+      if (uri.scheme != 'https' && uri.scheme != 'http') return null;
+      if (uri.host != 'gitlab.com' && !uri.host.endsWith('.gitlab.com')) {
+        return null;
+      }
       final segments = uri.pathSegments.where((s) => s.isNotEmpty).toList();
       if (segments.length < 2) return null;
 
-      // 提取 owner/repo（去掉 -/releases 等后缀）
-      final owner = segments[0];
-      var repo = segments[1];
+      // GitLab 页面路由从 `/-/` 开始，之前的全部段都属于项目路径。
+      final routeSeparator = segments.indexOf('-');
+      final projectSegments = (routeSeparator >= 0
+              ? segments.take(routeSeparator)
+              : segments)
+          .toList();
+      if (projectSegments.length < 2) return null;
+
+      var repo = projectSegments.removeLast();
       if (repo.endsWith('.git')) {
         repo = repo.substring(0, repo.length - 4);
       }
-      return (uri.host, '$owner/$repo');
+      if (repo.isEmpty) return null;
+      projectSegments.add(repo);
+      return (uri.scheme, uri.host, projectSegments.join('/'));
     } catch (_) {
       return null;
     }
@@ -109,6 +123,21 @@ class GitLabReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  /// GitLab 的自动发布有时不填写 description，但 release 响应内会附带
+  /// 对应 commit；使用提交 message/title 补齐更新说明。
+  String? _releaseNotes(Map<String, dynamic> release) {
+    final description = _nonEmptyText(release['description']);
+    if (description != null) return description;
+
+    final commit = _asMap(release['commit']);
+    return _nonEmptyText(commit['message']) ?? _nonEmptyText(commit['title']);
+  }
+
+  String? _nonEmptyText(dynamic value) {
+    final text = value?.toString().trim();
+    return text == null || text.isEmpty ? null : text;
   }
 
   Map<String, dynamic> _asMap(dynamic data) {

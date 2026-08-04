@@ -9,13 +9,14 @@ class AppConstants {
   static const String appName = 'EmuHub';
 
   /// 应用版本号（语义化版本）。
-  static const String appVersion = '1.0.0';
+  static const String appVersion = '1.0.10';
 
   /// App 自身更新检查所使用的 GitHub 仓库地址。
   ///
   /// 由 App 更新检查逻辑请求该仓库的 Releases 接口，
   /// 与 [appVersion] 比较以判断是否有新版本。
-  static const String githubRepo = 'https://github.com/yourname/emuhub';
+  static const String githubRepo =
+      'https://github.com/kongmao4567890-glitch/emuhub';
 
   /// 本地数据库文件名。
   ///
@@ -29,6 +30,11 @@ class AppConstants {
 
   /// 更新检查的最大并发数。
   ///
-  /// 用于 [UpdateService] 的批次大小，避免对数据源造成过大压力。
-  static const int maxConcurrentChecks = 5;
+  /// 10 路并发可显著缩短全量检查时间，同时仍低于常见数据源的限流阈值。
+  static const int maxConcurrentChecks = 10;
+
+  /// 相邻更新检查批次之间的节流间隔。
+  ///
+  /// 保留短暂间隔以避免突发请求，但避免全量检查累计数十秒的无效等待。
+  static const Duration updateBatchDelay = Duration(milliseconds: 150);
 }

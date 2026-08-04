@@ -38,7 +38,10 @@ class ForgejoReleasesAdapter implements VersionAdapter {
   String get adapterName => 'forgejo';
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final parsed = _parseRepo(emulator.sourceUrl);
     if (parsed == null) return null;
     final (host, owner, repo) = parsed;
@@ -67,8 +70,18 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         }
       }
 
-      // 优先使用稳定版，没有则用第一个 release
-      final release = stableRelease ?? _asMap(list.first);
+      // 配置了开发/每夜渠道时按发布时间选择稳定版与预发布版；未配置时
+      // 仍以稳定版为主，避免普通用户意外跟踪测试构建。
+      var release = stableRelease ?? _asMap(list.first);
+      if (preRelease != null &&
+          (emulator.devUrl.isNotEmpty || emulator.nightlyUrl.isNotEmpty)) {
+        final stableDate = _parseDate(release['published_at']?.toString());
+        final preDate = _parseDate(preRelease['published_at']?.toString());
+        if (preDate != null &&
+            (stableDate == null || preDate.isAfter(stableDate))) {
+          release = preRelease;
+        }
+      }
       if (release.isEmpty) return null;
 
       final tagName = release['tag_name']?.toString();
@@ -76,7 +89,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
 
       final version = _stripVPrefix(tagName);
       final publishedAt = _parseDate(release['published_at']?.toString());
-      final body = release['body']?.toString();
+      final body = await _resolveReleaseNotes(host, owner, repo, release);
       final apkUrl = _extractApkAssetUrl(release);
 
       // 构建开发版信息
@@ -84,18 +97,18 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       String? devBody;
       if (preRelease != null) {
         devApkUrl = _extractApkAssetUrl(preRelease);
-        devBody = preRelease['body']?.toString();
+        devBody = await _resolveReleaseNotes(host, owner, repo, preRelease);
       }
 
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: publishedAt ?? DateTime.now(),
-        releaseNotes: (body != null && body.isNotEmpty) ? body : null,
+        releaseDate: publishedAt,
+        releaseNotes: body,
         isNew: false,
         downloadUrl: apkUrl,
         devDownloadUrl: devApkUrl,
-        devReleaseNotes: (devBody != null && devBody.isNotEmpty) ? devBody : null,
+        devReleaseNotes: devBody,
       );
     } catch (_) {
       return null;
@@ -171,6 +184,41 @@ class ForgejoReleasesAdapter implements VersionAdapter {
     } catch (_) {
       return null;
     }
+  }
+
+  Future<String?> _resolveReleaseNotes(
+    String host,
+    String owner,
+    String repo,
+    Map<String, dynamic> release,
+  ) async {
+    final body = _nonEmptyText(release['body']);
+    if (body != null) return body;
+
+    final tag = _nonEmptyText(release['tag_name']);
+    final target = _nonEmptyText(release['target_commitish']);
+    final reference = tag ?? target;
+    if (reference != null) {
+      try {
+        final response = await _dio.get(
+          'https://$host/api/v1/repos/$owner/$repo/git/commits/'
+          '${Uri.encodeComponent(reference)}',
+        );
+        final commit = _asMap(response.data);
+        final nested = _asMap(commit['commit']);
+        final message = _nonEmptyText(commit['message']) ??
+            _nonEmptyText(nested['message']);
+        if (message != null) return message;
+      } catch (_) {}
+    }
+
+    final name = _nonEmptyText(release['name']);
+    return name == tag ? null : name;
+  }
+
+  String? _nonEmptyText(dynamic value) {
+    final text = value?.toString().trim();
+    return text == null || text.isEmpty ? null : text;
   }
 
   Map<String, dynamic> _asMap(dynamic data) {

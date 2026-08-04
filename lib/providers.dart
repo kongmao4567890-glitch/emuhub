@@ -74,9 +74,18 @@ class AppSettingsNotifier extends StateNotifier<AppSettings> {
   /// 持久化后按新设置重新调度后台周期任务（检查间隔 / 仅 Wi-Fi 约束
   /// 可能已变化）；调度失败不影响设置保存结果。
   Future<void> updateSettings(AppSettings settings) async {
-    state = settings;
+    final notificationsJustEnabled =
+        !state.notificationEnabled && settings.notificationEnabled;
+    final notificationsJustDisabled =
+        state.notificationEnabled && !settings.notificationEnabled;
     await _repository.saveSettings(settings);
+    state = settings;
     try {
+      if (notificationsJustEnabled) {
+        await NotificationService().initialize();
+      } else if (notificationsJustDisabled) {
+        await NotificationService().cancelAll();
+      }
       await BackgroundTask.registerPeriodicTask(
         frequency: settings.checkIntervalDuration,
         wifiOnly: settings.wifiOnly,
@@ -115,6 +124,7 @@ final Provider<UpdateService> updateServiceProvider =
   return UpdateService(
     dao: db.cachedVersionsDao,
     maxConcurrency: AppConstants.maxConcurrentChecks,
+    requestDelay: AppConstants.updateBatchDelay,
   );
 });
 

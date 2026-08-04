@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// 应用主题配置。
 ///
 /// 基于 Material 3，以紫色为种子色生成 [ColorScheme]，亮色与暗色模式
-/// 均使用 [GoogleFonts.notoSansScTextTheme] 作为字体。统一约定：
+/// 均使用系统字体，避免首次启动时依赖在线字体下载。统一约定：
 /// - 卡片圆角 12
 /// - 通用组件（按钮、输入框、Chip、对话框等）圆角 8
 ///
@@ -59,10 +58,8 @@ class AppTheme {
       brightness: colorScheme.brightness,
     );
 
-    // 使用 Noto Sans SC 作为全局字体，保留原 TextTheme 的字号/字重结构。
-    final textTheme = GoogleFonts.notoSansScTextTheme(base.textTheme);
-    final primaryTextTheme =
-        GoogleFonts.notoSansScTextTheme(base.primaryTextTheme);
+    final textTheme = base.textTheme;
+    final primaryTextTheme = base.primaryTextTheme;
 
     final cardShape = RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(cardRadius),

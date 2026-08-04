@@ -7,6 +7,7 @@ import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
+import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
 import '../emulator/emulator_detail_page.dart' show findEmulator;
@@ -288,7 +289,7 @@ class _RecentUpdateCard extends StatelessWidget {
                       height: 20,
                       fit: BoxFit.cover,
                       errorBuilder: (_, __, ___) => Text(
-                        console?.icon ?? '🎮',
+                        console.icon,
                         style: const TextStyle(fontSize: 16),
                       ),
                     ),

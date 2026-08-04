@@ -4,20 +4,21 @@ import 'package:html/parser.dart';
 import '../../data/models/emulator.dart';
 import '../../data/models/version_info.dart';
 import 'version_adapter.dart';
+import 'version_comparator.dart';
 
 /// 基于 Google Play 商店页面的版本适配器。
 ///
 /// 适用于 [Emulator.sourceType] 为 `playstore` 的模拟器。请求应用详情页
 /// （`https://play.google.com/store/apps/details?id={playStoreId}&hl=zh`），
 /// 使用 [html](https://pub.dev/packages/html) 解析并尝试多种方式提取版本号
-/// 与更新日期。
+/// 与更新日期、更新说明。
 ///
 /// Play Store 页面结构经常变化，因此采用多策略兜底：
 /// 1. `[[\"版本号\",\"x.y.z\"]]` 形式的 JSON 片段；
 /// 2. `\"版本号\",\"x.y.z\"` 形式的扁平片段；
 /// 3. `\"currentVersion\":\"x.y.z\"` 形式的字段；
 /// 4. `<meta name="version">` 标签内容；
-/// 5. 通用 `x.y.z` 版本号正则。
+/// 5. `itemprop="softwareVersion"` 结构化字段。
 ///
 /// 任意解析失败均返回 `null`，不抛出异常。
 class PlayStoreAdapter implements VersionAdapter {
@@ -37,7 +38,10 @@ class PlayStoreAdapter implements VersionAdapter {
   String get adapterName => 'playstore';
 
   @override
-  Future<VersionInfo?> fetchLatestVersion(Emulator emulator) async {
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
     final playStoreId = emulator.playStoreId;
     if (playStoreId.isEmpty) return null;
 
@@ -52,16 +56,26 @@ class PlayStoreAdapter implements VersionAdapter {
       );
       final html = response.data.toString();
 
-      final version = _extractVersion(html);
-      if (version == null || version.isEmpty) return null;
+      final releaseDate = _extractUpdateDate(html);
+      // 更新中心也需要完整信息；不能只在进入详情页时才补抓。
+      final releaseNotes = _extractReleaseNotes(html);
+      var version = _extractVersion(html)?.trim() ?? '';
+      if (version.isEmpty) {
+        version = _extractVersionFromReleaseNotes(releaseNotes) ?? '';
+      }
 
-      final releaseDate = _extractUpdateDate(html) ?? DateTime.now();
+      // 现代 Play 商店页面经常不再公开独立版本字段，但仍提供更新日期和
+      // “新变化”。此时返回元数据结果，由 UpdateService 与官网回退得到的
+      // 版本号合并；不能直接丢弃整份 Play 数据。
+      if (version.isEmpty && releaseDate == null && releaseNotes == null) {
+        return null;
+      }
 
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
         releaseDate: releaseDate,
-        releaseNotes: null,
+        releaseNotes: releaseNotes,
         isNew: false,
       );
     } catch (_) {
@@ -99,22 +113,94 @@ class PlayStoreAdapter implements VersionAdapter {
       // 忽略解析错误
     }
 
-    // 策略 5：通用版本号正则
-    final match5 =
-        RegExp(r'\b(\d+\.\d+\.\d+(?:\.\d+)?)\b').firstMatch(html);
+    // 策略 5：旧版 Play 页面使用过的结构化 softwareVersion 字段。
+    // 不使用“页面中第一个 x.y.z”作为兜底，因为它经常是脚本/协议版本，
+    // 会产生不存在的新版本通知。
+    final match5 = RegExp(
+      r'itemprop="softwareVersion"[^>]*>\s*([^<]+)',
+      caseSensitive: false,
+    ).firstMatch(html);
     if (match5 != null) return _cleanVersion(match5.group(1)!);
 
     return null;
   }
 
-  /// 提取更新日期，支持 ISO 日期与中文日期（如 `2024年1月15日`）。
-  DateTime? _extractUpdateDate(String html) {
-    final match =
-        RegExp(r'"更新日期"\s*,\s*"([^"]+)"').firstMatch(html) ??
-            RegExp(r'更新日期[：:\s]*([^\s"<,]+)').firstMatch(html);
-    if (match == null) return null;
-    return _parseDate(match.group(1));
+  /// 提取更新说明。Play 商店将说明置于“新变化 / What's new”区块中；
+  /// 必须限定在该区块，避免把应用简介错误保存为更新日志。
+  String? _extractReleaseNotes(String html) {
+    try {
+      final document = parse(html);
+      for (final section in document.querySelectorAll('section')) {
+        final title = section.querySelector('h2')?.text.trim() ?? '';
+        if (!_isReleaseNotesTitle(title)) continue;
+
+        final content = section.querySelector('[itemprop="description"]');
+        if (content == null) continue;
+
+        // Google Play 使用 <br> 分隔条目；转换后保留可读的换行。
+        final text = parseFragment(
+          content.innerHtml.replaceAll(
+            RegExp(r'<br\s*/?>', caseSensitive: false),
+            '\n',
+          ),
+        ).text ?? '';
+        final normalized = _normalizeText(text);
+        if (normalized.isNotEmpty) return normalized;
+      }
+    } catch (_) {
+      // 页面格式变化时仍可返回版本号，不影响整次检查。
+    }
+    return null;
   }
+
+  bool _isReleaseNotesTitle(String title) {
+    const titles = {'新变化', '更新内容', "What's new", 'What’s new'};
+    return titles.contains(title.trim());
+  }
+
+  /// 部分开发者会把版本号写在“新变化”中，但 Play 页面不再单独公开版本字段。
+  ///
+  /// 只接受独占一行的数字点分版本号，避免从普通说明、日期或依赖版本中误取；
+  /// 同一份说明列出多个历史版本时选择数值上最新的一项。
+  String? _extractVersionFromReleaseNotes(String? releaseNotes) {
+    if (releaseNotes == null || releaseNotes.isEmpty) return null;
+
+    final matches = RegExp(
+      r'^\s*[vV]?(\d+(?:\.\d+){1,3})\s*$',
+      multiLine: true,
+    ).allMatches(releaseNotes);
+    var latest = '';
+    for (final match in matches) {
+      final candidate = match.group(1);
+      if (candidate == null || candidate.isEmpty) continue;
+      if (latest.isEmpty || VersionComparator.isNewer(latest, candidate)) {
+        latest = candidate;
+      }
+    }
+    return latest.isEmpty ? null : latest;
+  }
+
+  /// 提取更新日期，支持 ISO 日期、中文日期和 Play 商店的英文日期。
+  DateTime? _extractUpdateDate(String html) {
+    try {
+      final document = parse(html);
+      for (final label in document.querySelectorAll('div')) {
+        if (!_isUpdateDateLabel(label.text.trim())) continue;
+        final value = label.nextElementSibling?.text.trim();
+        final parsed = _parseDate(value);
+        if (parsed != null) return parsed;
+      }
+    } catch (_) {
+      // 继续使用旧页面的 JSON/文本格式兜底。
+    }
+
+    final match = RegExp(r'"更新日期"\s*,\s*"([^"]+)"').firstMatch(html) ??
+        RegExp(r'更新日期[：:\s]*([^\s"<,]+)').firstMatch(html);
+    return _parseDate(match?.group(1));
+  }
+
+  bool _isUpdateDateLabel(String label) =>
+      label == '更新日期' || label == 'Updated on' || label == 'Last updated';
 
   /// 解析日期字符串，支持 ISO 与中文格式。
   DateTime? _parseDate(String? dateStr) {
@@ -141,8 +227,45 @@ class PlayStoreAdapter implements VersionAdapter {
       }
     }
 
+    // 英文 Play 商店页面如 "Jul 10, 2026"。
+    final enMatch = RegExp(
+      r'([A-Za-z]{3,9})\s+(\d{1,2}),\s*(\d{4})',
+    ).firstMatch(dateStr);
+    if (enMatch != null) {
+      const months = {
+        'jan': 1,
+        'feb': 2,
+        'mar': 3,
+        'apr': 4,
+        'may': 5,
+        'jun': 6,
+        'jul': 7,
+        'aug': 8,
+        'sep': 9,
+        'oct': 10,
+        'nov': 11,
+        'dec': 12,
+      };
+      final month = months[enMatch.group(1)!.substring(0, 3).toLowerCase()];
+      if (month != null) {
+        return DateTime(
+          int.parse(enMatch.group(3)!),
+          month,
+          int.parse(enMatch.group(2)!),
+        );
+      }
+    }
+
     return null;
   }
+
+  String _normalizeText(String text) => text
+      .replaceAll('\r', '')
+      .split('\n')
+      .map((line) => line.trim())
+      .where((line) => line.isNotEmpty)
+      .join('\n')
+      .trim();
 
   String _cleanVersion(String version) => version.trim();
 }
