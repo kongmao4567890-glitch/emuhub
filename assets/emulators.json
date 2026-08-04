@@ -1,5 +1,5 @@
 {
-  "version": "3.6.1",
+  "version": "3.6.2",
   "lastUpdated": "2026-08-04",
   "consoles": [
     {
@@ -3308,6 +3308,24 @@
           "description": "实验性Turnip驱动，支持新一代Adreno A8xx GPU(a840/a830/a829/a825/810)。最新版V33(2026年7月)，Vulkan 1.4.354。基于whitebelyash/mesa-unified gen8分支构建，尚在早期阶段",
           "downloadUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v33",
           "iconPath": "assets/emulators/turnip_gen8.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "purple_turnip",
+          "name": "Purple Turnip Unified Driver",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/MrPurple666/purple-turnip",
+          "playStoreId": "",
+          "website": "",
+          "core": "Mesa Turnip 26.2.0-devel",
+          "compatibility": "high",
+          "minAndroid": "11.0",
+          "description": "MrPurple维护的统一版Turnip Vulkan驱动，T29基于Mesa 26.2.0-devel，支持Vulkan 1.4.354及Adreno A6xx、A7xx、A8xx。重点改进Adreno 810/829/830兼容性，并补充810/825/829设备ID；兼容Eden、Vita3K、Yuzu及其分支。以Adreno Driver Package压缩包发布，安装前请阅读Release说明并保留原驱动以便回退。",
+          "downloadUrl": "https://github.com/MrPurple666/purple-turnip/releases/latest",
+          "iconPath": "assets/emulators/purple_turnip.png",
           "platforms": [
             "android"
           ]

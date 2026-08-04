@@ -227,7 +227,24 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 284);
+    expect(emulatorIds.length, 285);
+
+    final purpleTurnip = config.consoles
+        .singleWhere((console) => console.id == 'gpu_drivers')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'purple_turnip');
+    expect(
+      purpleTurnip.sourceUrl,
+      'https://github.com/MrPurple666/purple-turnip',
+    );
+    expect(
+      purpleTurnip.downloadUrl,
+      'https://github.com/MrPurple666/purple-turnip/releases/latest',
+    );
+    expect(purpleTurnip.minAndroid, '11.0');
+    expect(purpleTurnip.platforms, ['android']);
+    final purpleTurnipIcon = await rootBundle.load(purpleTurnip.iconPath);
+    expect(purpleTurnipIcon.lengthInBytes, greaterThan(0));
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
