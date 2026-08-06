@@ -5,7 +5,7 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
-  test('uses the newer nightly release when it was published after stable',
+  test('uses the Releases page head instead of a later-published nightly',
       () async {
     final dio = Dio();
     dio.interceptors.add(
@@ -19,9 +19,31 @@ void main() {
                 statusCode: 302,
                 headers: Headers.fromMap({
                   'location': [
-                    'https://github.com/ARMSX2/ARMSX2/releases/tag/iOSv2.5.1',
+                    'https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.4',
                   ],
                 }),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-08-05T05:49:29Z</updated>
+    <link rel="alternate" href="https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.4"/>
+    <content type="html">&lt;p&gt;Stable 2.6.6.4 fixes&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <updated>2026-08-05T11:17:25Z</updated>
+    <link rel="alternate" href="https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260805"/>
+    <content type="html">&lt;p&gt;Nightly fixes&lt;/p&gt;</content>
+  </entry>
+</feed>''',
               ),
             );
             return;
@@ -31,7 +53,7 @@ void main() {
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/ARMSX2/ARMSX2/releases/tag/nightly-20260802">'
+                data: '<a href="/ARMSX2/ARMSX2/releases/tag/nightly-20260805">'
                     'nightly</a><span>Pre-release</span>',
               ),
             );
@@ -42,32 +64,43 @@ void main() {
               Response<String>(
                 requestOptions: RequestOptions(
                   path: 'https://github.com/ARMSX2/ARMSX2/releases/tag/'
-                      'iOSv2.5.1',
+                      '2.6.6.4',
                 ),
                 statusCode: 200,
-                data: '<relative-time datetime="2026-08-01T00:00:00Z"></relative-time>'
-                    '<div class="markdown-body">Stable fixes</div>',
+                data: '<relative-time datetime="2026-08-05T05:49:29Z"></relative-time>'
+                    '<div class="markdown-body">Stable 2.6.6.4 fixes</div>',
               ),
             );
             return;
           }
-          if (path.contains('/expanded_assets/nightly-20260802')) {
+          if (path.contains('/expanded_assets/2.6.6.4')) {
             handler.resolve(
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
-                    'ARMSX2-nightly-20260802.apk">APK</a>',
+                data: '<a href="/ARMSX2/ARMSX2/releases/download/2.6.6.4/'
+                    'ARMSX2-2.6.6.4.apk">APK</a>',
               ),
             );
             return;
           }
-          if (path.endsWith('/releases/tag/nightly-20260802')) {
+          if (path.contains('/expanded_assets/nightly-20260805')) {
             handler.resolve(
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<relative-time datetime="2026-08-02T00:00:00Z"></relative-time>'
+                data: '<a href="/ARMSX2/ARMSX2/releases/download/nightly-20260805/'
+                    'ARMSX2-nightly-20260805.apk">APK</a>',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases/tag/nightly-20260805')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<relative-time datetime="2026-08-05T11:17:25Z"></relative-time>'
                     '<div class="markdown-body">Nightly fixes</div>',
               ),
             );
@@ -87,19 +120,19 @@ void main() {
       _armsx2(),
     );
 
-    expect(result?.version, 'nightly-20260802');
-    expect(result?.releaseDate, DateTime.parse('2026-08-02T00:00:00Z'));
-    expect(result?.releaseNotes, 'Nightly fixes');
+    expect(result?.version, '2.6.6.4');
+    expect(result?.releaseDate, DateTime.parse('2026-08-05T05:49:29Z'));
+    expect(result?.releaseNotes, 'Stable 2.6.6.4 fixes');
     expect(result?.devReleaseNotes, 'Nightly fixes');
     expect(
       result?.devDownloadUrl,
-      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
-      'ARMSX2-nightly-20260802.apk',
+      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260805/'
+      'ARMSX2-nightly-20260805.apk',
     );
     expect(
       result?.downloadUrl,
-      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
-      'ARMSX2-nightly-20260802.apk',
+      'https://github.com/ARMSX2/ARMSX2/releases/download/2.6.6.4/'
+      'ARMSX2-2.6.6.4.apk',
     );
   });
 
@@ -122,6 +155,28 @@ void main() {
                         'releases/tag/v0.5.2',
                   ],
                 }),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88"/>
+    <content type="html">&lt;p&gt;X360 Mobile preview fixes&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <updated>2026-06-06T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.5.2"/>
+    <content type="html">&lt;p&gt;Stable fixes&lt;/p&gt;</content>
+  </entry>
+</feed>''',
               ),
             );
             return;

@@ -236,7 +236,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 6;
+  int get schemaVersion => 7;
 
   @override
   MigrationStrategy get migration {
@@ -269,6 +269,13 @@ class AppDatabase extends _$AppDatabase {
           await customStatement(
             'UPDATE cached_versions SET is_new = 0',
           );
+        }
+        if (from < 7) {
+          // 旧 GitHub 适配器可能把 Releases 页面下方的 nightly 按
+          // published_at 提升为主版本。版本标签和时间无法从现有
+          // 缓存安全反推页面顺序，因此仅清空可重建的版本缓存。
+          // 收藏和设置不受影响，下一次检查会按新规则重建基线。
+          await customStatement('DELETE FROM cached_versions');
         }
       },
     );
