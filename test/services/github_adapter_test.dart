@@ -5,7 +5,7 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
-  test('uses the Releases page head instead of a later-published nightly',
+  test('uses the latest timestamp instead of the Releases page order',
       () async {
     final dio = Dio();
     dio.interceptors.add(
@@ -120,9 +120,9 @@ void main() {
       _armsx2(),
     );
 
-    expect(result?.version, '2.6.6.4');
-    expect(result?.releaseDate, DateTime.parse('2026-08-05T05:49:29Z'));
-    expect(result?.releaseNotes, 'Stable 2.6.6.4 fixes');
+    expect(result?.version, 'nightly-20260805');
+    expect(result?.releaseDate, DateTime.parse('2026-08-05T11:17:25Z'));
+    expect(result?.releaseNotes, 'Nightly fixes');
     expect(result?.devReleaseNotes, 'Nightly fixes');
     expect(
       result?.devDownloadUrl,
@@ -131,8 +131,123 @@ void main() {
     );
     expect(
       result?.downloadUrl,
-      'https://github.com/ARMSX2/ARMSX2/releases/download/2.6.6.4/'
-      'ARMSX2-2.6.6.4.apk',
+      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260805/'
+      'ARMSX2-nightly-20260805.apk',
+    );
+  });
+
+  test('derives a build version from a mutable nightly tag title', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-07-16T07:17:29Z</updated>
+    <link rel="alternate" href="https://github.com/nexium-emu/nexium-nightly/releases/tag/nightly"/>
+    <title>NeXium nightly 2026.07.16 (f65720a)</title>
+    <content type="html">&lt;p&gt;Automated CI build&lt;/p&gt;</content>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/nightly')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<a href="/nexium-emu/nexium-nightly/releases/'
+                    'download/nightly/nexium-windows-x86_64.zip">ZIP</a>',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _nexium(),
+    );
+
+    expect(result?.version, 'nightly-2026.07.16');
+    expect(result?.releaseDate, DateTime.parse('2026-07-16T07:17:29Z'));
+    expect(result?.releaseNotes, 'Automated CI build');
+  });
+
+  test('compares release times across a separate GitHub CI repository',
+      () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (path == '/citron-neo/emulator/releases.atom') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<feed>
+  <entry>
+    <updated>2026-07-01T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/citron-neo/emulator/releases/tag/v0.10.0"/>
+    <title>Citron 0.10.0</title>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          if (path == '/citron-neo/CI/releases.atom') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<feed>
+  <entry>
+    <updated>2026-08-05T18:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/citron-neo/CI/releases/tag/nightly-20260805"/>
+    <title>Citron nightly 20260805</title>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _citron(),
+    );
+
+    expect(result?.version, 'nightly-20260805');
+    expect(result?.releaseDate, DateTime.parse('2026-08-05T18:00:00Z'));
+    expect(
+      result?.downloadUrl,
+      'https://github.com/citron-neo/CI/releases/tag/nightly-20260805',
     );
   });
 
@@ -526,5 +641,42 @@ Emulator _rpcs3() {
     downloadUrl: 'https://github.com/RPCS3/rpcs3/releases/latest',
     devUrl: 'https://rpcs3.net/download',
     nightlyUrl: 'https://rpcs3.net/builds',
+  );
+}
+
+Emulator _nexium() {
+  return const Emulator(
+    id: 'nexium_pc',
+    name: 'NeXium',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/nexium-emu/nexium-nightly',
+    playStoreId: '',
+    website: 'https://nexium-emu.org/',
+    core: '',
+    compatibility: 'low',
+    minAndroid: '',
+    description: 'test',
+    downloadUrl: 'https://github.com/nexium-emu/nexium-nightly/releases',
+    devUrl: 'https://github.com/nexium-emu/nexium-nightly/releases',
+    nightlyUrl: 'https://github.com/nexium-emu/nexium-nightly/releases',
+  );
+}
+
+Emulator _citron() {
+  return const Emulator(
+    id: 'citron_neo',
+    name: 'Citron Neo',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/citron-neo/emulator',
+    playStoreId: '',
+    website: '',
+    core: '',
+    compatibility: 'medium',
+    minAndroid: '9.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/citron-neo/emulator/releases',
+    nightlyUrl: 'https://github.com/citron-neo/CI/releases',
   );
 }

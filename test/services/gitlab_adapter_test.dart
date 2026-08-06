@@ -23,6 +23,11 @@ void main() {
                   'created_at': '2026-08-01T00:00:00Z',
                   'description': 'Self-hosted GitLab release notes',
                 },
+                {
+                  'tag_name': '1.4.0-nightly',
+                  'released_at': '2026-08-05T12:00:00Z',
+                  'description': 'Newer nightly notes',
+                },
               ],
             ),
           );
@@ -48,7 +53,8 @@ void main() {
       ),
     );
 
-    expect(result?.version, '1.3.0');
-    expect(result?.releaseNotes, 'Self-hosted GitLab release notes');
+    expect(result?.version, '1.4.0-nightly');
+    expect(result?.releaseDate, DateTime.parse('2026-08-05T12:00:00Z'));
+    expect(result?.releaseNotes, 'Newer nightly notes');
   });
 }

@@ -48,24 +48,40 @@ class GitLabReleasesAdapter implements VersionAdapter {
     try {
       final response = await _dio.get(
         '$scheme://$host/api/v4/projects/$encodedPath/releases',
-        queryParameters: {'per_page': 1},
+        queryParameters: {'per_page': 50},
       );
 
       final list = _asList(response.data);
       if (list.isEmpty) return null;
 
-      final first = _asMap(list.first);
-      final tagName = first['tag_name']?.toString();
+      // GitLab 通常按 released_at 返回，但自建实例和滚动发布项目可能重新
+      // 排序。与 GitHub/Forgejo 保持一致，遍历后取发布时间最大的 release。
+      Map<String, dynamic>? latest;
+      DateTime? latestDate;
+      for (final item in list) {
+        final release = _asMap(item);
+        if (release.isEmpty) continue;
+        final date = _releaseDate(release);
+        if (latest == null ||
+            (date != null &&
+                (latestDate == null || date.isAfter(latestDate)))) {
+          latest = release;
+          latestDate = date;
+        }
+      }
+      final selected = latest;
+      if (selected == null) return null;
+
+      final tagName = selected['tag_name']?.toString();
       if (tagName == null || tagName.isEmpty) return null;
 
       final version = _stripVPrefix(tagName);
-      final createdAt = _parseDate(first['created_at']?.toString());
-      final description = _releaseNotes(first);
+      final description = _releaseNotes(selected);
 
       return VersionInfo(
         emulatorId: emulator.id,
         version: version,
-        releaseDate: createdAt,
+        releaseDate: latestDate,
         releaseNotes: description,
         isNew: false,
       );
@@ -122,6 +138,10 @@ class GitLabReleasesAdapter implements VersionAdapter {
       return null;
     }
   }
+
+  DateTime? _releaseDate(Map<String, dynamic> release) =>
+      _parseDate(release['released_at']?.toString()) ??
+      _parseDate(release['created_at']?.toString());
 
   /// GitLab 的自动发布有时不填写 description，但 release 响应内会附带
   /// 对应 commit；使用提交 message/title 补齐更新说明。
