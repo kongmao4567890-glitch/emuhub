@@ -1,6 +1,6 @@
 {
-  "version": "3.8.0",
-  "lastUpdated": "2026-08-04",
+  "version": "3.8.1",
+  "lastUpdated": "2026-08-05",
   "consoles": [
     {
       "id": "multi_system",
@@ -3674,6 +3674,24 @@
       "imagePath": "assets/consoles/ps4.jpg",
       "description": "索尼PlayStation 4，2013年发售的第八世代主流家用主机，搭载AMD八核Jaguar CPU和GCN架构GPU。支持Remote Play远程游玩，以《血源诅咒》《战神4》《最后生还者2》等大量独占大作主导了第八世代市场，全球销量超1.17亿台",
       "emulators": [
+        {
+          "id": "bachata_s4",
+          "name": "Bachata S4",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/JICA98/Bachata-S4",
+          "playStoreId": "com.bachatas4.android",
+          "website": "https://jica98.github.io/Bachata-S4/",
+          "core": "shadPS4 / FEX",
+          "compatibility": "low",
+          "minAndroid": "12.0",
+          "description": "面向ARM64 Android设备的实验性PlayStation 4模拟器，基于shadPS4核心、FEX x86-64转译和托管的Debian/glibc运行环境。支持Vulkan渲染、系统或Turnip自定义图形驱动、触控与实体手柄。项目仍处于早期开发阶段，官方暂无完全可玩认证；要求Android 12以上、ARM64与Vulkan兼容GPU，推荐近期旗舰骁龙/Adreno设备",
+          "downloadUrl": "https://github.com/JICA98/Bachata-S4/releases",
+          "iconPath": "assets/emulators/bachata_s4.png",
+          "platforms": [
+            "android"
+          ]
+        },
         {
           "id": "shadps4_android",
           "name": "shadPS4 (PC)",

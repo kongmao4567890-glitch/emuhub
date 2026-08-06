@@ -234,7 +234,22 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 309);
+    expect(emulatorIds.length, 310);
+
+    final bachataS4 = config.consoles
+        .singleWhere((console) => console.id == 'ps4')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'bachata_s4');
+    expect(bachataS4.sourceType, 'github');
+    expect(
+      bachataS4.sourceUrl,
+      'https://github.com/JICA98/Bachata-S4',
+    );
+    expect(bachataS4.playStoreId, 'com.bachatas4.android');
+    expect(bachataS4.minAndroid, '12.0');
+    expect(bachataS4.platforms, ['android']);
+    final bachataS4Icon = await rootBundle.load(bachataS4.iconPath);
+    expect(bachataS4Icon.lengthInBytes, greaterThan(0));
 
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
@@ -290,6 +305,7 @@ void main() {
         'romvault',
         'xenia_manager',
         'gameplay_frontend',
+        'bachata_s4',
       }),
     );
 
