@@ -251,6 +251,26 @@ void main() {
     final bachataS4Icon = await rootBundle.load(bachataS4.iconPath);
     expect(bachataS4Icon.lengthInBytes, greaterThan(0));
 
+    // melonDualDS 在 0.7.0 正式更名为 WatermelonDS。保留原 id 可避免
+    // 已有收藏和版本缓存丢失，但所有用户可见信息必须指向新项目身份。
+    final watermelonDS = config.consoles
+        .singleWhere((console) => console.id == 'nds')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'melondualds');
+    expect(watermelonDS.name, 'WatermelonDS');
+    expect(
+      watermelonDS.sourceUrl,
+      'https://github.com/SapphireRhodonite/WatermelonDS',
+    );
+    expect(
+      watermelonDS.downloadUrl,
+      'https://github.com/SapphireRhodonite/WatermelonDS/releases',
+    );
+    expect(watermelonDS.minAndroid, '7.0');
+    expect(watermelonDS.platforms, ['android']);
+    final watermelonDSIcon = await rootBundle.load(watermelonDS.iconPath);
+    expect(watermelonDSIcon.lengthInBytes, greaterThan(0));
+
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
         .emulators
