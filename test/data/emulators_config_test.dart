@@ -234,7 +234,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 310);
+    expect(emulatorIds.length, 311);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -270,6 +270,20 @@ void main() {
     expect(watermelonDS.platforms, ['android']);
     final watermelonDSIcon = await rootBundle.load(watermelonDS.iconPath);
     expect(watermelonDSIcon.lengthInBytes, greaterThan(0));
+
+    final armsx3 = config.consoles
+        .singleWhere((console) => console.id == 'ps3')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'armsx3');
+    expect(armsx3.sourceType, 'github');
+    expect(armsx3.sourceUrl, 'https://github.com/ARMSX2/ARMSX3');
+    expect(armsx3.downloadUrl, 'https://github.com/ARMSX2/ARMSX3/releases');
+    expect(armsx3.core, 'RPCS3');
+    expect(armsx3.compatibility, 'low');
+    expect(armsx3.minAndroid, '10.0');
+    expect(armsx3.platforms, ['android']);
+    final armsx3Icon = await rootBundle.load(armsx3.iconPath);
+    expect(armsx3Icon.lengthInBytes, greaterThan(0));
 
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
@@ -326,6 +340,7 @@ void main() {
         'xenia_manager',
         'gameplay_frontend',
         'bachata_s4',
+        'armsx3',
       }),
     );
 
