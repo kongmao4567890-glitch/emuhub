@@ -234,7 +234,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 311);
+    expect(emulatorIds.length, 312);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -301,6 +301,26 @@ void main() {
     expect(purpleTurnip.platforms, ['android']);
     final purpleTurnipIcon = await rootBundle.load(purpleTurnip.iconPath);
     expect(purpleTurnipIcon.lengthInBytes, greaterThan(0));
+
+    final whitebelyashTurnip = config.consoles
+        .singleWhere((console) => console.id == 'gpu_drivers')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'whitebelyash_turnip');
+    expect(
+      whitebelyashTurnip.sourceUrl,
+      'https://github.com/whitebelyash/AdrenoToolsDrivers',
+    );
+    expect(
+      whitebelyashTurnip.downloadUrl,
+      'https://github.com/whitebelyash/AdrenoToolsDrivers/releases',
+    );
+    expect(whitebelyashTurnip.core, 'Mesa Turnip / Freedreno');
+    expect(whitebelyashTurnip.compatibility, 'medium');
+    expect(whitebelyashTurnip.minAndroid, '10.0');
+    expect(whitebelyashTurnip.platforms, ['android']);
+    final whitebelyashTurnipIcon =
+        await rootBundle.load(whitebelyashTurnip.iconPath);
+    expect(whitebelyashTurnipIcon.lengthInBytes, greaterThan(0));
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
@@ -341,6 +361,7 @@ void main() {
         'gameplay_frontend',
         'bachata_s4',
         'armsx3',
+        'whitebelyash_turnip',
       }),
     );
 

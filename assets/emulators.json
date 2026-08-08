@@ -1,5 +1,5 @@
 {
-  "version": "3.8.3",
+  "version": "3.8.4",
   "lastUpdated": "2026-08-08",
   "consoles": [
     {
@@ -3661,6 +3661,26 @@
           "description": "MrPurple维护的统一版Turnip Vulkan驱动，T29基于Mesa 26.2.0-devel，支持Vulkan 1.4.354及Adreno A6xx、A7xx、A8xx。重点改进Adreno 810/829/830兼容性，并补充810/825/829设备ID；兼容Eden、Vita3K、Yuzu及其分支。以Adreno Driver Package压缩包发布，安装前请阅读Release说明并保留原驱动以便回退。",
           "downloadUrl": "https://github.com/MrPurple666/purple-turnip/releases/latest",
           "iconPath": "assets/emulators/purple_turnip.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "whitebelyash_turnip",
+          "name": "AdrenoTools Drivers (whitebelyash)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/whitebelyash/AdrenoToolsDrivers",
+          "playStoreId": "",
+          "website": "https://github.com/whitebelyash/AdrenoToolsDrivers",
+          "core": "Mesa Turnip / Freedreno",
+          "compatibility": "medium",
+          "minAndroid": "10.0",
+          "description": "whitebelyash维护的AdrenoTools Turnip驱动构建，提供普通版与sync版ZIP包。Stable Turnip v1基于Mesa 26.2.0，Mainline v31来自turnip/gen8分支，支持Adreno 6xx、7xx与840/830/829/825/812/810等8xx GPU；710/720/722仅不稳定sysmem支持，812仍属实验性。仓库明确提示构建未经充分测试，使用前应备份原驱动并按具体模拟器说明安装。",
+          "downloadUrl": "https://github.com/whitebelyash/AdrenoToolsDrivers/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/whitebelyash_turnip.png",
           "platforms": [
             "android"
           ]
