@@ -234,7 +234,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 312);
+    expect(emulatorIds.length, 313);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -321,6 +321,21 @@ void main() {
     final whitebelyashTurnipIcon =
         await rootBundle.load(whitebelyashTurnip.iconPath);
     expect(whitebelyashTurnipIcon.lengthInBytes, greaterThan(0));
+
+    final swiff = config.consoles
+        .singleWhere((console) => console.id == 'flash')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'swiff');
+    expect(swiff.openSource, isFalse);
+    expect(swiff.sourceType, 'github');
+    expect(swiff.sourceUrl, 'https://github.com/NaviVani-dev/Swiff');
+    expect(swiff.downloadUrl, 'https://github.com/NaviVani-dev/Swiff/releases');
+    expect(swiff.core, 'Ruffle / AwayFL');
+    expect(swiff.minAndroid, '8.0');
+    expect(swiff.platforms, ['android']);
+    final swiffIcon = await rootBundle.load(swiff.iconPath);
+    expect(swiffIcon.lengthInBytes, greaterThan(0));
+
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
@@ -362,6 +377,7 @@ void main() {
         'bachata_s4',
         'armsx3',
         'whitebelyash_turnip',
+        'swiff',
       }),
     );
 
