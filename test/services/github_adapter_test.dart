@@ -568,14 +568,14 @@ void main() {
 
   test('uses the Atom feed when release details are unavailable', () async {
     final dio = Dio();
-    var prereleasePageRequests = 0;
+    var releasePageRequests = 0;
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
           final path = options.uri.path;
           if (options.uri.host == 'github.com' &&
               path == '/RPCS3/rpcs3/releases') {
-            prereleasePageRequests++;
+            releasePageRequests++;
           }
           if (options.method == 'HEAD' && path.endsWith('/releases/latest')) {
             handler.resolve(
@@ -635,7 +635,8 @@ void main() {
       contains('RPCS3 rolling release fixes'),
     );
     expect(result?.releaseNotes, contains('Vulkan fix'));
-    expect(prereleasePageRequests, 0);
+    // 主版本身份必须先由 Releases 页面验证；Atom 只负责补齐同版本详情。
+    expect(releasePageRequests, 1);
   });
 
   test('ignores newer Atom tags that are not GitHub releases', () async {
