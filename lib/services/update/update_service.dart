@@ -50,7 +50,8 @@ class CheckResult {
 /// - 只要条目配置了 [Emulator.playStoreId]，都会补充 Google Play 的
 ///   发布日期与“新变化”，不受主更新源类型限制；
 /// - 适配器返回的 [VersionInfo.isNew] 一律为 false；只有远端发布日期
-///   严格晚于可信的缓存日期才标记新版本，版本比较仅用于静默修复缓存。
+///   同时晚于可信缓存日期和上次成功检查时间才标记新版本，版本比较仅用于
+///   静默修复缓存，避免后来补识别的历史 Release 产生误报。
 class UpdateService {
   UpdateService({
     required CachedVersionsDao dao,
@@ -326,8 +327,9 @@ class UpdateService {
           );
         } else {
           // “有更新”只由可信的发布日期决定：远端日期必须严格晚于缓存
-          // 日期。缓存缺少日期时属于元数据修复，静默写回但不提示更新；
-          // 仅版本号变化或标签格式变化也不会产生误报。
+          // 日期及上次成功检查时间。缓存缺少日期或后来才补识别到历史版本
+          // 时属于元数据修复，静默写回但不提示更新；仅版本号变化或标签
+          // 格式变化也不会产生误报。
           detectedUpdate = hasNewerReleaseDate;
           versionInfo = latest.copyWith(
             // 相同版本再次检查时保留“未读”状态；只有详情页明确查看后
@@ -423,7 +425,10 @@ class UpdateService {
     final latestDate = latest.releaseDate?.millisecondsSinceEpoch;
     return cachedDate != null &&
         latestDate != null &&
-        latestDate > cachedDate;
+        latestDate > cachedDate &&
+        // 版本源之前漏抓、后来才补识别的历史 Release 只用于静默修复缓存。
+        // 只有上次成功检查之后真正发布的版本才应通知用户。
+        latestDate > cached.lastCheckedAt;
   }
 
   /// 旧版曾把“检查时间”当作“发布时间”写入。两者几乎

@@ -28,9 +28,9 @@ import 'version_comparator.dart';
 /// 3. **API tags**：仓库完全没有 release 时，从 `tags?per_page=1` 取最新 tag。
 ///    消耗 1 次 API 配额。
 ///
-/// 最后读取官方 Atom Feed，并在稳定版、预发布版和 nightly 中按精确发布
-/// 时间选择最新一条。GitHub Releases 页面的显示顺序不保证按发布时间排序，
-/// 因此不能把页面第一条或 `/releases/latest` 当作“时间最新”。
+/// 最后读取官方 Releases 列表页，并在稳定版、预发布版和 nightly 中按各
+/// Release 卡片的正式发布时间选择最新一条。不能使用 releases.atom 做主
+/// 版本选择：该 Feed 会混入普通 Tag，且 entry.updated 是编辑时间。
 ///
 /// 策略 1-3 均消耗 GitHub API 匿名配额（60 次/小时），策略 1 的重定向本身不限流。
 class GitHubReleasesAdapter implements VersionAdapter {
@@ -144,10 +144,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
       repo: repo,
     );
 
-    // `/releases/latest` 只代表 GitHub 标记的 Latest 稳定版，Releases 页面
-    // 的第一条也不保证是 published_at 最大的一条。统一遍历官方 Atom Feed
-    // 中的发布，按精确时间选择稳定版/prerelease/nightly 中最新的版本。
-    var latestPublished = await _fetchLatestPublishedReleaseFromAtom(
+    // `/releases/latest` 只代表 GitHub 标记的 Latest 稳定版，页面第一条也不
+    // 保证发布时间最大。遍历 Releases HTML 中的真实 Release 卡片；与 Atom
+    // 不同，这里不会把仅有 Tag 的 unmerged/v2.04 等引用误当成正式发布。
+    var latestPublished = await _fetchLatestPublishedReleaseFromHtml(
       emulator,
       owner,
       repo,
@@ -160,7 +160,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
       primaryOwner: owner,
       primaryRepo: repo,
     )) {
-      final candidate = await _fetchLatestPublishedReleaseFromAtom(
+      final candidate = await _fetchLatestPublishedReleaseFromHtml(
         emulator,
         channel.owner,
         channel.repo,
@@ -731,28 +731,29 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 读取 GitHub 官方 Atom Feed，并按 entry.updated 的最大值选最新版。
+  /// 读取 GitHub Releases 列表页，按每张真实 Release 卡片的发布时间选最新版。
   ///
-  /// Feed 和 Releases 页面都可能把被标为 Latest 的稳定版放在上方，而
-  /// 时间更晚的 nightly 位于其后；因此必须遍历全部 entry 后再决定。
-  Future<VersionInfo?> _fetchLatestPublishedReleaseFromAtom(
+  /// GitHub 的 releases.atom 是仓库 Tag 的 Feed：无发布正文/资产的普通 Tag
+  /// 也会出现，entry.updated 还会随编辑而变化。列表页只渲染正式 Release，
+  /// 并在每张 `.Box-body` 卡片中提供实际 published_at，因此适合作为权威来源。
+  Future<VersionInfo?> _fetchLatestPublishedReleaseFromHtml(
     Emulator emulator,
     String owner,
     String repo,
   ) async {
     try {
-      final feed = await _fetchAtomFeed(owner, repo);
-      if (feed == null) return null;
-      final document = html_parser.parse(feed);
-      final entries = document.querySelectorAll('entry');
-      if (entries.isEmpty) return null;
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases',
+        options: _htmlOptions(),
+      );
+      final document = html_parser.parse(response.data.toString());
 
-      Element? selectedEntry;
+      Element? selectedCard;
+      String? selectedTag;
       DateTime? selectedDate;
-      for (final entry in entries) {
-        final link = entry.querySelector('link[rel="alternate"]') ??
-            entry.querySelector('link');
-        final href = link?.attributes['href'];
+      for (final card in document.querySelectorAll('.Box-body')) {
+        final releaseLink = card.querySelector('a[href*="/releases/tag/"]');
+        final href = releaseLink?.attributes['href'];
         final tag = href == null
             ? null
             : RegExp(r'/releases/tag/(.+?)(?:\?|#|$)')
@@ -760,43 +761,35 @@ class GitHubReleasesAdapter implements VersionAdapter {
                 ?.group(1);
         if (tag == null || tag.isEmpty) continue;
 
-        final publishedAt = _parseDate(
-          entry.querySelector('updated')?.text.trim(),
-        );
-        if (selectedEntry == null ||
+        final publishedAt = _extractReleaseDateFromHtml(card.outerHtml);
+        if (selectedCard == null ||
             (publishedAt != null &&
                 (selectedDate == null || publishedAt.isAfter(selectedDate)))) {
-          selectedEntry = entry;
+          selectedCard = card;
+          selectedTag = tag;
           selectedDate = publishedAt;
         }
       }
 
-      final entry = selectedEntry;
-      if (entry == null) return null;
-      final link = entry.querySelector('link[rel="alternate"]') ??
-          entry.querySelector('link');
-      final href = link?.attributes['href'];
-      final tag = href == null
-          ? null
-          : RegExp(r'/releases/tag/(.+?)(?:\?|#|$)')
-              .firstMatch(href)
-              ?.group(1);
-      if (tag == null || tag.isEmpty) return null;
+      final card = selectedCard;
+      final tag = selectedTag;
+      if (card == null || tag == null) return null;
 
-      final title = entry.querySelector('title')?.text.trim() ?? '';
+      final title = card
+              .querySelector('a[href*="/releases/tag/"]')
+              ?.text
+              .trim() ??
+          '';
       final version = _displayVersion(tag, title);
       if (version.isEmpty) return null;
 
-      final encodedBody = entry.querySelector('content')?.text.trim();
-      String? releaseNotes;
-      if (encodedBody != null && encodedBody.isNotEmpty) {
-        final bodyDocument = html_parser.parseFragment(encodedBody);
-        final text = (bodyDocument.text ?? '')
-            .replaceAll(RegExp(r'[ \t]+'), ' ')
-            .replaceAll(RegExp(r'\n{3,}'), '\n\n')
-            .trim();
-        if (text.isNotEmpty) releaseNotes = text;
-      }
+      final releaseBody =
+          card.querySelector('[data-test-selector="body-content"]') ??
+              card.querySelector('.markdown-body');
+      final notes = releaseBody?.text
+          .replaceAll(RegExp(r'[ \t]+'), ' ')
+          .replaceAll(RegExp(r'\n{3,}'), '\n\n')
+          .trim();
 
       var apkUrl = await _fetchApkUrlFromExpandedAssets(owner, repo, tag);
       apkUrl ??= _buildDynamicDownloadUrl(emulator, owner, repo, tag);
@@ -806,7 +799,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
         emulatorId: emulator.id,
         version: version,
         releaseDate: selectedDate,
-        releaseNotes: releaseNotes,
+        releaseNotes: notes == null || notes.isEmpty ? null : notes,
         isNew: false,
         downloadUrl: apkUrl,
       );

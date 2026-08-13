@@ -53,8 +53,19 @@ void main() {
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/ARMSX2/ARMSX2/releases/tag/nightly-20260805">'
-                    'nightly</a><span>Pre-release</span>',
+                data: _releaseCard(
+                      '/ARMSX2/ARMSX2/releases/tag/2.6.6.4',
+                      'Stable 2.6.6.4',
+                      '2026-08-05T05:49:29Z',
+                      'Stable 2.6.6.4 fixes',
+                    ) +
+                    _releaseCard(
+                      '/ARMSX2/ARMSX2/releases/tag/nightly-20260805',
+                      'nightly',
+                      '2026-08-05T11:17:25Z',
+                      'Nightly fixes',
+                      prerelease: true,
+                    ),
               ),
             );
             return;
@@ -142,6 +153,21 @@ void main() {
       InterceptorsWrapper(
         onRequest: (options, handler) {
           final path = options.uri.path;
+          if (path.endsWith('/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/nexium-emu/nexium-nightly/releases/tag/nightly',
+                  'NeXium nightly 2026.07.16 (f65720a)',
+                  '2026-07-16T07:17:29Z',
+                  'Automated CI build',
+                ),
+              ),
+            );
+            return;
+          }
           if (path.endsWith('/releases.atom')) {
             handler.resolve(
               Response<String>(
@@ -197,6 +223,36 @@ void main() {
       InterceptorsWrapper(
         onRequest: (options, handler) {
           final path = options.uri.path;
+          if (path == '/citron-neo/emulator/releases') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/citron-neo/emulator/releases/tag/v0.10.0',
+                  'Citron 0.10.0',
+                  '2026-07-01T00:00:00Z',
+                  'Stable',
+                ),
+              ),
+            );
+            return;
+          }
+          if (path == '/citron-neo/CI/releases') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/citron-neo/CI/releases/tag/nightly-20260805',
+                  'Citron nightly 20260805',
+                  '2026-08-05T18:00:00Z',
+                  'Nightly',
+                ),
+              ),
+            );
+            return;
+          }
           if (path == '/citron-neo/emulator/releases.atom') {
             handler.resolve(
               Response<String>(
@@ -301,9 +357,21 @@ void main() {
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
-                    'tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88">'
-                    '0.5.3 preview</a><span>Pre-release</span>',
+                data: _releaseCard(
+                      '/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+                      'tag/v0.5.2',
+                      '0.5.2',
+                      '2026-06-06T00:00:00Z',
+                      'Stable fixes',
+                    ) +
+                    _releaseCard(
+                      '/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+                      'tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88',
+                      '0.5.3 preview',
+                      '2026-06-07T00:00:00Z',
+                      'X360 Mobile preview fixes',
+                      prerelease: true,
+                    ),
               ),
             );
             return;
@@ -569,6 +637,83 @@ void main() {
     expect(result?.releaseNotes, contains('Vulkan fix'));
     expect(prereleasePageRequests, 0);
   });
+
+  test('ignores newer Atom tags that are not GitHub releases', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (path.endsWith('/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/bbbradsmith/hatariB/releases/tag/0.3',
+                  'hatariB v0.3 - third beta',
+                  '2024-04-15T06:26:12Z',
+                  'The third public release of hatariB.',
+                ),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<feed>
+  <entry>
+    <updated>2024-04-29T21:25:40Z</updated>
+    <link rel="alternate" href="https://github.com/bbbradsmith/hatariB/releases/tag/unmerged-2.5.0"/>
+    <title>unmerged-2.5.0</title>
+    <content type="html">hatari source reference without hatariB changes</content>
+  </entry>
+  <entry>
+    <updated>2024-04-15T06:26:12Z</updated>
+    <link rel="alternate" href="https://github.com/bbbradsmith/hatariB/releases/tag/0.3"/>
+    <title>hatariB v0.3 - third beta</title>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _hatariB(),
+    );
+
+    expect(result?.version, '0.3');
+    expect(result?.releaseDate, DateTime.parse('2024-04-15T06:26:12Z'));
+    expect(result?.releaseNotes, 'The third public release of hatariB.');
+  });
+}
+
+String _releaseCard(
+  String href,
+  String title,
+  String publishedAt,
+  String notes, {
+  bool prerelease = false,
+}) {
+  return '<div class="Box-body">'
+      '<a href="$href">$title</a>'
+      '<relative-time datetime="$publishedAt"></relative-time>'
+      '${prerelease ? '<span>Pre-release</span>' : ''}'
+      '<div data-test-selector="body-content">$notes</div>'
+      '</div>';
 }
 
 Emulator _armsx2() {
@@ -586,6 +731,23 @@ Emulator _armsx2() {
     description: 'test',
     downloadUrl: 'https://github.com/ARMSX2/ARMSX2/releases',
     nightlyUrl: 'https://github.com/ARMSX2/ARMSX2/releases',
+  );
+}
+
+Emulator _hatariB() {
+  return const Emulator(
+    id: 'hatariB_core',
+    name: 'hatariB',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/bbbradsmith/hatariB',
+    playStoreId: '',
+    website: '',
+    core: 'hatari',
+    compatibility: 'high',
+    minAndroid: '5.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/bbbradsmith/hatariB/releases',
   );
 }
 

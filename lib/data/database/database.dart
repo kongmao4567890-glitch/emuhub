@@ -236,7 +236,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 9;
 
   @override
   MigrationStrategy get migration {
@@ -281,6 +281,13 @@ class AppDatabase extends _$AppDatabase {
           // v7 曾把 GitHub Releases/Atom Feed 的页面顺序当作时间顺序，
           // 会缓存较旧稳定版或固定 nightly 标签。清空可重建的版本缓存，
           // 下一次检查按所有渠道的最大发布时间建立正确基线。
+          await customStatement('DELETE FROM cached_versions');
+        }
+        if (from < 9) {
+          // v8 使用 releases.atom 选择时间最新条目，但 GitHub 的该 Feed
+          // 同时包含普通 Tag，且 updated 是编辑时间而非正式发布时间。
+          // 无法从旧行区分真实 Release 与 Tag，因此仅清空可重建的版本缓存；
+          // 收藏和设置不受影响，首次检查只建立基线，不会把历史版本报成更新。
           await customStatement('DELETE FROM cached_versions');
         }
       },

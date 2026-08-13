@@ -35,7 +35,12 @@ void main() {
     expect(baseline?.isNew, isFalse);
 
     adapter.version = '1.1.0';
-    adapter.releaseDate = DateTime.utc(2026, 1, 2);
+    final baselineCache =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+    adapter.releaseDate = DateTime.fromMillisecondsSinceEpoch(
+      baselineCache!.lastCheckedAt + 1000,
+      isUtc: true,
+    );
     final update = await service.checkOne(emulator);
     expect(update?.isNew, isTrue);
 
@@ -88,7 +93,12 @@ void main() {
     adapter.releaseDate = DateTime.utc(2026, 1, 1);
     await service.checkOne(emulator);
     adapter.version = '1.1.0';
-    adapter.releaseDate = DateTime.utc(2026, 1, 2);
+    final previous =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+    adapter.releaseDate = DateTime.fromMillisecondsSinceEpoch(
+      previous!.lastCheckedAt + 1000,
+      isUtc: true,
+    );
 
     final result = await service.checkAll(
       [emulator],
@@ -150,8 +160,13 @@ void main() {
     adapter.version = 'nightly-20260803';
     adapter.releaseDate = DateTime.utc(2026, 8, 3, 12);
     await service.checkOne(emulator);
+    final previous =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
     adapter.version = '2.6.6.3';
-    adapter.releaseDate = DateTime.utc(2026, 8, 3, 13);
+    adapter.releaseDate = DateTime.fromMillisecondsSinceEpoch(
+      previous!.lastCheckedAt + 1000,
+      isUtc: true,
+    );
 
     final result = await service.checkAll([emulator]);
     final cached =
@@ -224,6 +239,27 @@ void main() {
     await service.checkOne(emulator);
     adapter.version = '2.0.0';
 
+    final result = await service.checkAll([emulator]);
+    final cached =
+        await database.cachedVersionsDao.getCachedVersion(emulator.id);
+
+    expect(result.updated, isEmpty);
+    expect(cached?.currentVersion, '2.0.0');
+    expect(cached?.isNew, isFalse);
+  });
+
+  test('silently repairs a release that predates the last successful check',
+      () async {
+    final emulator = _emulator('historical-release');
+
+    adapter.version = '1.0.0';
+    adapter.releaseDate = DateTime.utc(2025, 1, 1);
+    await service.checkOne(emulator);
+
+    // 模拟数据源之前漏抓、后来才识别到的旧 Release。虽然它比缓存版本新，
+    // 但发布时间早于上次检查，不能作为“刚发布的更新”通知用户。
+    adapter.version = '2.0.0';
+    adapter.releaseDate = DateTime.utc(2025, 6, 1);
     final result = await service.checkAll([emulator]);
     final cached =
         await database.cachedVersionsDao.getCachedVersion(emulator.id);
