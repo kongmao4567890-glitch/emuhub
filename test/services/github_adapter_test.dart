@@ -5,7 +5,7 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
-  test('uses the newer nightly release when it was published after stable',
+  test('uses the latest timestamp instead of the Releases page order',
       () async {
     final dio = Dio();
     dio.interceptors.add(
@@ -19,9 +19,31 @@ void main() {
                 statusCode: 302,
                 headers: Headers.fromMap({
                   'location': [
-                    'https://github.com/ARMSX2/ARMSX2/releases/tag/iOSv2.5.1',
+                    'https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.4',
                   ],
                 }),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-08-05T05:49:29Z</updated>
+    <link rel="alternate" href="https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.4"/>
+    <content type="html">&lt;p&gt;Stable 2.6.6.4 fixes&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <updated>2026-08-05T11:17:25Z</updated>
+    <link rel="alternate" href="https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260805"/>
+    <content type="html">&lt;p&gt;Nightly fixes&lt;/p&gt;</content>
+  </entry>
+</feed>''',
               ),
             );
             return;
@@ -31,8 +53,19 @@ void main() {
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/ARMSX2/ARMSX2/releases/tag/nightly-20260802">'
-                    'nightly</a><span>Pre-release</span>',
+                data: _releaseCard(
+                      '/ARMSX2/ARMSX2/releases/tag/2.6.6.4',
+                      'Stable 2.6.6.4',
+                      '2026-08-05T05:49:29Z',
+                      'Stable 2.6.6.4 fixes',
+                    ) +
+                    _releaseCard(
+                      '/ARMSX2/ARMSX2/releases/tag/nightly-20260805',
+                      'nightly',
+                      '2026-08-05T11:17:25Z',
+                      'Nightly fixes',
+                      prerelease: true,
+                    ),
               ),
             );
             return;
@@ -42,32 +75,43 @@ void main() {
               Response<String>(
                 requestOptions: RequestOptions(
                   path: 'https://github.com/ARMSX2/ARMSX2/releases/tag/'
-                      'iOSv2.5.1',
+                      '2.6.6.4',
                 ),
                 statusCode: 200,
-                data: '<relative-time datetime="2026-08-01T00:00:00Z"></relative-time>'
-                    '<div class="markdown-body">Stable fixes</div>',
+                data: '<relative-time datetime="2026-08-05T05:49:29Z"></relative-time>'
+                    '<div class="markdown-body">Stable 2.6.6.4 fixes</div>',
               ),
             );
             return;
           }
-          if (path.contains('/expanded_assets/nightly-20260802')) {
+          if (path.contains('/expanded_assets/2.6.6.4')) {
             handler.resolve(
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
-                    'ARMSX2-nightly-20260802.apk">APK</a>',
+                data: '<a href="/ARMSX2/ARMSX2/releases/download/2.6.6.4/'
+                    'ARMSX2-2.6.6.4.apk">APK</a>',
               ),
             );
             return;
           }
-          if (path.endsWith('/releases/tag/nightly-20260802')) {
+          if (path.contains('/expanded_assets/nightly-20260805')) {
             handler.resolve(
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<relative-time datetime="2026-08-02T00:00:00Z"></relative-time>'
+                data: '<a href="/ARMSX2/ARMSX2/releases/download/nightly-20260805/'
+                    'ARMSX2-nightly-20260805.apk">APK</a>',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases/tag/nightly-20260805')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<relative-time datetime="2026-08-05T11:17:25Z"></relative-time>'
                     '<div class="markdown-body">Nightly fixes</div>',
               ),
             );
@@ -87,19 +131,179 @@ void main() {
       _armsx2(),
     );
 
-    expect(result?.version, 'nightly-20260802');
-    expect(result?.releaseDate, DateTime.parse('2026-08-02T00:00:00Z'));
+    expect(result?.version, 'nightly-20260805');
+    expect(result?.releaseDate, DateTime.parse('2026-08-05T11:17:25Z'));
     expect(result?.releaseNotes, 'Nightly fixes');
     expect(result?.devReleaseNotes, 'Nightly fixes');
     expect(
       result?.devDownloadUrl,
-      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
-      'ARMSX2-nightly-20260802.apk',
+      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260805/'
+      'ARMSX2-nightly-20260805.apk',
     );
     expect(
       result?.downloadUrl,
-      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260802/'
-      'ARMSX2-nightly-20260802.apk',
+      'https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260805/'
+      'ARMSX2-nightly-20260805.apk',
+    );
+  });
+
+  test('derives a build version from a mutable nightly tag title', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (path.endsWith('/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/nexium-emu/nexium-nightly/releases/tag/nightly',
+                  'NeXium nightly 2026.07.16 (f65720a)',
+                  '2026-07-16T07:17:29Z',
+                  'Automated CI build',
+                ),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-07-16T07:17:29Z</updated>
+    <link rel="alternate" href="https://github.com/nexium-emu/nexium-nightly/releases/tag/nightly"/>
+    <title>NeXium nightly 2026.07.16 (f65720a)</title>
+    <content type="html">&lt;p&gt;Automated CI build&lt;/p&gt;</content>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/nightly')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<a href="/nexium-emu/nexium-nightly/releases/'
+                    'download/nightly/nexium-windows-x86_64.zip">ZIP</a>',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _nexium(),
+    );
+
+    expect(result?.version, 'nightly-2026.07.16');
+    expect(result?.releaseDate, DateTime.parse('2026-07-16T07:17:29Z'));
+    expect(result?.releaseNotes, 'Automated CI build');
+  });
+
+  test('compares release times across a separate GitHub CI repository',
+      () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (path == '/citron-neo/emulator/releases') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/citron-neo/emulator/releases/tag/v0.10.0',
+                  'Citron 0.10.0',
+                  '2026-07-01T00:00:00Z',
+                  'Stable',
+                ),
+              ),
+            );
+            return;
+          }
+          if (path == '/citron-neo/CI/releases') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/citron-neo/CI/releases/tag/nightly-20260805',
+                  'Citron nightly 20260805',
+                  '2026-08-05T18:00:00Z',
+                  'Nightly',
+                ),
+              ),
+            );
+            return;
+          }
+          if (path == '/citron-neo/emulator/releases.atom') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<feed>
+  <entry>
+    <updated>2026-07-01T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/citron-neo/emulator/releases/tag/v0.10.0"/>
+    <title>Citron 0.10.0</title>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          if (path == '/citron-neo/CI/releases.atom') {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<feed>
+  <entry>
+    <updated>2026-08-05T18:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/citron-neo/CI/releases/tag/nightly-20260805"/>
+    <title>Citron nightly 20260805</title>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _citron(),
+    );
+
+    expect(result?.version, 'nightly-20260805');
+    expect(result?.releaseDate, DateTime.parse('2026-08-05T18:00:00Z'));
+    expect(
+      result?.downloadUrl,
+      'https://github.com/citron-neo/CI/releases/tag/nightly-20260805',
     );
   });
 
@@ -126,14 +330,48 @@ void main() {
             );
             return;
           }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <entry>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88"/>
+    <content type="html">&lt;p&gt;X360 Mobile preview fixes&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <updated>2026-06-06T00:00:00Z</updated>
+    <link rel="alternate" href="https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.5.2"/>
+    <content type="html">&lt;p&gt;Stable fixes&lt;/p&gt;</content>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
           if (path.endsWith('/releases') && perPage == null) {
             handler.resolve(
               Response<String>(
                 requestOptions: options,
                 statusCode: 200,
-                data: '<a href="/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
-                    'tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88">'
-                    '0.5.3 preview</a><span>Pre-release</span>',
+                data: _releaseCard(
+                      '/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+                      'tag/v0.5.2',
+                      '0.5.2',
+                      '2026-06-06T00:00:00Z',
+                      'Stable fixes',
+                    ) +
+                    _releaseCard(
+                      '/Ashnar2602/X360-Mobile---OFFICIAL/releases/'
+                      'tag/v0.5.3_%E9%A2%84%E8%A7%88%E7%89%88',
+                      '0.5.3 preview',
+                      '2026-06-07T00:00:00Z',
+                      'X360 Mobile preview fixes',
+                      prerelease: true,
+                    ),
               ),
             );
             return;
@@ -330,14 +568,14 @@ void main() {
 
   test('uses the Atom feed when release details are unavailable', () async {
     final dio = Dio();
-    var prereleasePageRequests = 0;
+    var releasePageRequests = 0;
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
           final path = options.uri.path;
           if (options.uri.host == 'github.com' &&
               path == '/RPCS3/rpcs3/releases') {
-            prereleasePageRequests++;
+            releasePageRequests++;
           }
           if (options.method == 'HEAD' && path.endsWith('/releases/latest')) {
             handler.resolve(
@@ -397,8 +635,86 @@ void main() {
       contains('RPCS3 rolling release fixes'),
     );
     expect(result?.releaseNotes, contains('Vulkan fix'));
-    expect(prereleasePageRequests, 0);
+    // 主版本身份必须先由 Releases 页面验证；Atom 只负责补齐同版本详情。
+    expect(releasePageRequests, 1);
   });
+
+  test('ignores newer Atom tags that are not GitHub releases', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (path.endsWith('/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/bbbradsmith/hatariB/releases/tag/0.3',
+                  'hatariB v0.3 - third beta',
+                  '2024-04-15T06:26:12Z',
+                  'The third public release of hatariB.',
+                ),
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases.atom')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''<feed>
+  <entry>
+    <updated>2024-04-29T21:25:40Z</updated>
+    <link rel="alternate" href="https://github.com/bbbradsmith/hatariB/releases/tag/unmerged-2.5.0"/>
+    <title>unmerged-2.5.0</title>
+    <content type="html">hatari source reference without hatariB changes</content>
+  </entry>
+  <entry>
+    <updated>2024-04-15T06:26:12Z</updated>
+    <link rel="alternate" href="https://github.com/bbbradsmith/hatariB/releases/tag/0.3"/>
+    <title>hatariB v0.3 - third beta</title>
+  </entry>
+</feed>''',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _hatariB(),
+    );
+
+    expect(result?.version, '0.3');
+    expect(result?.releaseDate, DateTime.parse('2024-04-15T06:26:12Z'));
+    expect(result?.releaseNotes, 'The third public release of hatariB.');
+  });
+}
+
+String _releaseCard(
+  String href,
+  String title,
+  String publishedAt,
+  String notes, {
+  bool prerelease = false,
+}) {
+  return '<div class="Box-body">'
+      '<a href="$href">$title</a>'
+      '<relative-time datetime="$publishedAt"></relative-time>'
+      '${prerelease ? '<span>Pre-release</span>' : ''}'
+      '<div data-test-selector="body-content">$notes</div>'
+      '</div>';
 }
 
 Emulator _armsx2() {
@@ -416,6 +732,23 @@ Emulator _armsx2() {
     description: 'test',
     downloadUrl: 'https://github.com/ARMSX2/ARMSX2/releases',
     nightlyUrl: 'https://github.com/ARMSX2/ARMSX2/releases',
+  );
+}
+
+Emulator _hatariB() {
+  return const Emulator(
+    id: 'hatariB_core',
+    name: 'hatariB',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/bbbradsmith/hatariB',
+    playStoreId: '',
+    website: '',
+    core: 'hatari',
+    compatibility: 'high',
+    minAndroid: '5.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/bbbradsmith/hatariB/releases',
   );
 }
 
@@ -471,5 +804,42 @@ Emulator _rpcs3() {
     downloadUrl: 'https://github.com/RPCS3/rpcs3/releases/latest',
     devUrl: 'https://rpcs3.net/download',
     nightlyUrl: 'https://rpcs3.net/builds',
+  );
+}
+
+Emulator _nexium() {
+  return const Emulator(
+    id: 'nexium_pc',
+    name: 'NeXium',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/nexium-emu/nexium-nightly',
+    playStoreId: '',
+    website: 'https://nexium-emu.org/',
+    core: '',
+    compatibility: 'low',
+    minAndroid: '',
+    description: 'test',
+    downloadUrl: 'https://github.com/nexium-emu/nexium-nightly/releases',
+    devUrl: 'https://github.com/nexium-emu/nexium-nightly/releases',
+    nightlyUrl: 'https://github.com/nexium-emu/nexium-nightly/releases',
+  );
+}
+
+Emulator _citron() {
+  return const Emulator(
+    id: 'citron_neo',
+    name: 'Citron Neo',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/citron-neo/emulator',
+    playStoreId: '',
+    website: '',
+    core: '',
+    compatibility: 'medium',
+    minAndroid: '9.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/citron-neo/emulator/releases',
+    nightlyUrl: 'https://github.com/citron-neo/CI/releases',
   );
 }

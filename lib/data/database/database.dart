@@ -236,7 +236,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.e);
 
   @override
-  int get schemaVersion => 5;
+  int get schemaVersion => 9;
 
   @override
   MigrationStrategy get migration {
@@ -261,6 +261,34 @@ class AppDatabase extends _$AppDatabase {
           await customStatement(
             'UPDATE cached_versions SET is_new = 0',
           );
+        }
+        if (from < 6) {
+          // v5 之后的手动复检仍会保留旧 is_new，导致远端版本
+          // 完全没变时仍长期显示“检测到更新”。升级时再清理一次，
+          // 后续手动检查由 reconcileUnread 按本轮结果持续校正。
+          await customStatement(
+            'UPDATE cached_versions SET is_new = 0',
+          );
+        }
+        if (from < 7) {
+          // 旧 GitHub 适配器可能把 Releases 页面下方的 nightly 按
+          // published_at 提升为主版本。版本标签和时间无法从现有
+          // 缓存安全反推页面顺序，因此仅清空可重建的版本缓存。
+          // 收藏和设置不受影响，下一次检查会按新规则重建基线。
+          await customStatement('DELETE FROM cached_versions');
+        }
+        if (from < 8) {
+          // v7 曾把 GitHub Releases/Atom Feed 的页面顺序当作时间顺序，
+          // 会缓存较旧稳定版或固定 nightly 标签。清空可重建的版本缓存，
+          // 下一次检查按所有渠道的最大发布时间建立正确基线。
+          await customStatement('DELETE FROM cached_versions');
+        }
+        if (from < 9) {
+          // v8 使用 releases.atom 选择时间最新条目，但 GitHub 的该 Feed
+          // 同时包含普通 Tag，且 updated 是编辑时间而非正式发布时间。
+          // 无法从旧行区分真实 Release 与 Tag，因此仅清空可重建的版本缓存；
+          // 收藏和设置不受影响，首次检查只建立基线，不会把历史版本报成更新。
+          await customStatement('DELETE FROM cached_versions');
         }
       },
     );

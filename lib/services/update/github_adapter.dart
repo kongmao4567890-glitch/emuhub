@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:html/dom.dart';
 import 'package:html/parser.dart' as html_parser;
 
 import '../../data/models/emulator.dart';
@@ -27,6 +28,10 @@ import 'version_comparator.dart';
 /// 3. **API tags**：仓库完全没有 release 时，从 `tags?per_page=1` 取最新 tag。
 ///    消耗 1 次 API 配额。
 ///
+/// 最后读取官方 Releases 列表页，并在稳定版、预发布版和 nightly 中按各
+/// Release 卡片的正式发布时间选择最新一条。不能使用 releases.atom 做主
+/// 版本选择：该 Feed 会混入普通 Tag，且 entry.updated 是编辑时间。
+///
 /// 策略 1-3 均消耗 GitHub API 匿名配额（60 次/小时），策略 1 的重定向本身不限流。
 class GitHubReleasesAdapter implements VersionAdapter {
   GitHubReleasesAdapter({Dio? dio})
@@ -47,6 +52,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
             );
 
   final Dio _dio;
+  final Map<String, ({DateTime fetchedAt, Future<String?> response})>
+      _atomFeedCache = {};
 
   @override
   String get adapterName => 'github';
@@ -131,6 +138,55 @@ class GitHubReleasesAdapter implements VersionAdapter {
       );
     }
 
+    final tracksGitHubPrerelease = _tracksGitHubPrerelease(
+      emulator,
+      owner: owner,
+      repo: repo,
+    );
+
+    // `/releases/latest` 只代表 GitHub 标记的 Latest 稳定版，页面第一条也不
+    // 保证发布时间最大。遍历 Releases HTML 中的真实 Release 卡片；与 Atom
+    // 不同，这里不会把仅有 Tag 的 unmerged/v2.04 等引用误当成正式发布。
+    var latestPublished = await _fetchLatestPublishedReleaseFromHtml(
+      emulator,
+      owner,
+      repo,
+    );
+
+    // 少数条目把 nightly/开发版放在另一个 GitHub 仓库（例如 Citron CI）。
+    // 这些仓库也属于同一条目的可用发布渠道，必须跨仓库比较发布时间。
+    for (final channel in _configuredGitHubChannelRepos(
+      emulator,
+      primaryOwner: owner,
+      primaryRepo: repo,
+    )) {
+      final candidate = await _fetchLatestPublishedReleaseFromHtml(
+        emulator,
+        channel.owner,
+        channel.repo,
+      );
+      final candidateDate = candidate?.releaseDate;
+      final selectedDate = latestPublished?.releaseDate;
+      if (candidate != null &&
+          (latestPublished == null ||
+              (candidateDate != null &&
+                  (selectedDate == null ||
+                      candidateDate.isAfter(selectedDate))))) {
+        latestPublished = candidate;
+      }
+    }
+
+    if (latestPublished != null) {
+      final previous = result;
+      final previousDownloadUrl = previous != null &&
+              _sameVersion(previous.version, latestPublished.version)
+          ? previous.downloadUrl
+          : null;
+      result = latestPublished.copyWith(
+        downloadUrl: latestPublished.downloadUrl ?? previousDownloadUrl,
+      );
+    }
+
     // 详情页需要完整更新说明；批量/后台检查只取轻量版本信息。
     if (result != null && includeDetails) {
       final detailed = await _fetchFromHtml(emulator, owner, repo);
@@ -203,18 +259,17 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
     }
 
-    // 如果成功获取到版本信息，尝试获取 prerelease 信息，并按**发布时间**
-    // 选择主卡片应显示的发布。版本标签的格式并不统一：稳定版通常是
-    // 语义化版本，nightly 常是日期型标签，因此不能拿字符串版本号跨渠道
-    // 比较。谁的发布时间更晚，就显示谁的版本、下载地址和更新说明。
+    // 如果成功获取到版本信息，继续抓取 prerelease 信息作为独立开发渠道。
+    // 主卡片已经由所有发布的最大时间戳确定；这里仅补充独立开发渠道按钮。
     //
     // 仅对明确配置了开发版或 nightly 渠道的条目检查预发布版，避免批量
     // 检查时为所有 GitHub 仓库下载体积较大的 releases 列表页。
     // nightlyUrl 与 devUrl 都代表用户希望跟踪的非稳定发布渠道。
-    if (result != null &&
-        _tracksGitHubPrerelease(emulator, owner: owner, repo: repo)) {
-      // 优先用 HTML 解析（不消耗 API 配额）
-      var devInfo = await _fetchPrereleaseInfoFromHtml(owner, repo);
+    if (result != null && tracksGitHubPrerelease) {
+      // 优先复用已缓存的 Atom Feed，避免再下载体积较大的
+      // Releases HTML。Feed 无法识别某些无特征标签时，再回退 HTML/API。
+      var devInfo = await _fetchPrereleaseInfoFromAtom(owner, repo);
+      devInfo ??= await _fetchPrereleaseInfoFromHtml(owner, repo);
       if (devInfo == null) {
         devInfo = await _fetchPrereleaseInfo(owner, repo);
       }
@@ -238,19 +293,6 @@ class GitHubReleasesAdapter implements VersionAdapter {
           devDownloadUrl: devInfo.apkUrl,
           devReleaseNotes: devInfo.body,
         );
-
-        // 当日期不可得时保留稳定版，避免以不可靠的标签格式猜测新旧。
-        // 每夜版信息仍会写入 dev* 字段，供下载区作为独立渠道使用。
-        if (devInfo.version != null &&
-            devInfo.version!.isNotEmpty &&
-            _isPublishedLater(devInfo.publishedAt, result.releaseDate)) {
-          result = result.copyWith(
-            version: devInfo.version!,
-            releaseDate: devInfo.publishedAt,
-            releaseNotes: devInfo.body ?? result.releaseNotes,
-            downloadUrl: devInfo.apkUrl ?? result.downloadUrl,
-          );
-        }
       }
     }
 
@@ -260,9 +302,6 @@ class GitHubReleasesAdapter implements VersionAdapter {
   static bool _sameVersion(String first, String second) =>
       !VersionComparator.isNewer(first, second) &&
       !VersionComparator.isNewer(second, first);
-
-  static bool _isPublishedLater(DateTime? candidate, DateTime? current) =>
-      candidate != null && current != null && candidate.isAfter(current);
 
   /// 只有开发/每夜版链接确实指向当前 GitHub 仓库时，才扫描 prerelease。
   ///
@@ -287,6 +326,28 @@ class GitHubReleasesAdapter implements VersionAdapter {
       }
     }
     return false;
+  }
+
+  List<({String owner, String repo})> _configuredGitHubChannelRepos(
+    Emulator emulator, {
+    required String primaryOwner,
+    required String primaryRepo,
+  }) {
+    final channels = <String, ({String owner, String repo})>{};
+    for (final url in <String>[emulator.devUrl, emulator.nightlyUrl]) {
+      final parsed = _parseRepo(url);
+      if (parsed == null) continue;
+      final (owner, repo) = parsed;
+      if (owner.toLowerCase() == primaryOwner.toLowerCase() &&
+          repo.toLowerCase() == primaryRepo.toLowerCase()) {
+        continue;
+      }
+      channels['${owner.toLowerCase()}/${repo.toLowerCase()}'] = (
+        owner: owner,
+        repo: repo,
+      );
+    }
+    return channels.values.toList(growable: false);
   }
 
   /// 通过 HTML 解析获取最新 prerelease 信息（不消耗 API 配额）。
@@ -621,11 +682,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
     required String preferredVersion,
   }) async {
     try {
-      final response = await _dio.get(
-        'https://github.com/$owner/$repo/releases.atom',
-        options: _atomOptions(),
-      );
-      final document = html_parser.parse(response.data.toString());
+      final feed = await _fetchAtomFeed(owner, repo);
+      if (feed == null) return null;
+      final document = html_parser.parse(feed);
       final entries = document.querySelectorAll('entry');
 
       for (final entry in entries) {
@@ -639,7 +698,8 @@ class GitHubReleasesAdapter implements VersionAdapter {
                 ?.group(1);
         if (tag == null || tag.isEmpty) continue;
 
-        final version = _stripVPrefix(tag);
+        final title = entry.querySelector('title')?.text.trim() ?? '';
+        final version = _displayVersion(tag, title);
         if (!_sameVersion(version, preferredVersion)) continue;
 
         final encodedBody = entry.querySelector('content')?.text.trim();
@@ -666,6 +726,178 @@ class GitHubReleasesAdapter implements VersionAdapter {
         );
       }
       return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 读取 GitHub Releases 列表页，按每张真实 Release 卡片的发布时间选最新版。
+  ///
+  /// GitHub 的 releases.atom 是仓库 Tag 的 Feed：无发布正文/资产的普通 Tag
+  /// 也会出现，entry.updated 还会随编辑而变化。列表页只渲染正式 Release，
+  /// 并在每张 `.Box-body` 卡片中提供实际 published_at，因此适合作为权威来源。
+  Future<VersionInfo?> _fetchLatestPublishedReleaseFromHtml(
+    Emulator emulator,
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases',
+        options: _htmlOptions(),
+      );
+      final document = html_parser.parse(response.data.toString());
+
+      Element? selectedCard;
+      String? selectedTag;
+      DateTime? selectedDate;
+      for (final card in document.querySelectorAll('.Box-body')) {
+        final releaseLink = card.querySelector('a[href*="/releases/tag/"]');
+        final href = releaseLink?.attributes['href'];
+        final tag = href == null
+            ? null
+            : RegExp(r'/releases/tag/(.+?)(?:\?|#|$)')
+                .firstMatch(href)
+                ?.group(1);
+        if (tag == null || tag.isEmpty) continue;
+
+        final publishedAt = _extractReleaseDateFromHtml(card.outerHtml);
+        if (selectedCard == null ||
+            (publishedAt != null &&
+                (selectedDate == null || publishedAt.isAfter(selectedDate)))) {
+          selectedCard = card;
+          selectedTag = tag;
+          selectedDate = publishedAt;
+        }
+      }
+
+      final card = selectedCard;
+      final tag = selectedTag;
+      if (card == null || tag == null) return null;
+
+      final title = card
+              .querySelector('a[href*="/releases/tag/"]')
+              ?.text
+              .trim() ??
+          '';
+      final version = _displayVersion(tag, title);
+      if (version.isEmpty) return null;
+
+      final releaseBody =
+          card.querySelector('[data-test-selector="body-content"]') ??
+              card.querySelector('.markdown-body');
+      final notes = releaseBody?.text
+          .replaceAll(RegExp(r'[ \t]+'), ' ')
+          .replaceAll(RegExp(r'\n{3,}'), '\n\n')
+          .trim();
+
+      var apkUrl = await _fetchApkUrlFromExpandedAssets(owner, repo, tag);
+      apkUrl ??= _buildDynamicDownloadUrl(emulator, owner, repo, tag);
+      apkUrl ??= 'https://github.com/$owner/$repo/releases/tag/$tag';
+
+      return VersionInfo(
+        emulatorId: emulator.id,
+        version: version,
+        releaseDate: selectedDate,
+        releaseNotes: notes == null || notes.isEmpty ? null : notes,
+        isNew: false,
+        downloadUrl: apkUrl,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 从同一 Atom Feed 中取第一个可明确识别的 prerelease/nightly。
+  Future<({String? version, String? apkUrl, String? body, DateTime? publishedAt})?> _fetchPrereleaseInfoFromAtom(
+    String owner,
+    String repo,
+  ) async {
+    try {
+      final feed = await _fetchAtomFeed(owner, repo);
+      if (feed == null) return null;
+      final document = html_parser.parse(feed);
+
+      for (final entry in document.querySelectorAll('entry')) {
+        final link = entry.querySelector('link[rel="alternate"]') ??
+            entry.querySelector('link');
+        final href = link?.attributes['href'];
+        final tag = href == null
+            ? null
+            : RegExp(r'/releases/tag/(.+?)(?:\?|#|$)')
+                .firstMatch(href)
+                ?.group(1);
+        if (tag == null || tag.isEmpty) continue;
+
+        final title = entry.querySelector('title')?.text.trim() ?? '';
+        final version = _displayVersion(tag, title);
+        if (!_isPrereleaseTag(version.toLowerCase()) &&
+            !_isPrereleaseTitle(title)) {
+          continue;
+        }
+
+        final encodedBody = entry.querySelector('content')?.text.trim();
+        String? body;
+        if (encodedBody != null && encodedBody.isNotEmpty) {
+          final bodyDocument = html_parser.parseFragment(encodedBody);
+          final text = (bodyDocument.text ?? '')
+              .replaceAll(RegExp(r'[ \t]+'), ' ')
+              .replaceAll(RegExp(r'\n{3,}'), '\n\n')
+              .trim();
+          if (text.isNotEmpty) body = text;
+        }
+
+        return (
+          version: version,
+          apkUrl: await _fetchApkUrlFromExpandedAssets(owner, repo, tag),
+          body: body,
+          publishedAt: _parseDate(
+            entry.querySelector('updated')?.text.trim(),
+          ),
+        );
+      }
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  bool _isPrereleaseTitle(String title) {
+    final normalized = title.toLowerCase();
+    return RegExp(
+      r'(^|\b)(nightly|preview|pre-release|prerelease|beta|alpha|snapshot|canary)(\b|$)',
+    ).hasMatch(normalized) ||
+        normalized.contains('release candidate') ||
+        normalized.contains('预览版') ||
+        normalized.contains('开发版') ||
+        normalized.contains('测试版');
+  }
+
+  /// 同一轮检查中多个机种可能共用同一 GitHub 仓库。对 Atom Feed
+  /// 做短时缓存，避免重复下载完全相同的内容；两分钟后自动失效，
+  /// 不会影响下一次手动或后台检查发现新发布。
+  Future<String?> _fetchAtomFeed(String owner, String repo) {
+    final key = '${owner.toLowerCase()}/${repo.toLowerCase()}';
+    final now = DateTime.now();
+    final cached = _atomFeedCache[key];
+    if (cached != null &&
+        now.difference(cached.fetchedAt) < const Duration(minutes: 2)) {
+      return cached.response;
+    }
+
+    final response = _requestAtomFeed(owner, repo);
+    _atomFeedCache[key] = (fetchedAt: now, response: response);
+    return response;
+  }
+
+  Future<String?> _requestAtomFeed(String owner, String repo) async {
+    try {
+      final response = await _dio.get(
+        'https://github.com/$owner/$repo/releases.atom',
+        options: _atomOptions(),
+      );
+      final data = response.data?.toString();
+      return data == null || data.isEmpty ? null : data;
     } catch (_) {
       return null;
     }
@@ -723,33 +955,18 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// GitHub releases 页面 HTML 包含类似以下的链接：
   /// `<a href="/owner/repo/releases/tag/TAG_NAME">`
   ///
-  /// 优先选择非 Pre-release 的稳定版；若全部为 Pre-release，则返回第一个。
+  /// 严格返回页面中的第一个 release，不自行把稳定版提到前面。
   String? _extractFirstTagFromHtml(String html) {
     final tagPattern = RegExp(
       r'href="[^"]*releases/tag/([^"]+)"',
     );
 
-    String? firstStableTag;
-    String? firstAnyTag;
-
     for (final match in tagPattern.allMatches(html)) {
       final tag = match.group(1)!;
       if (tag.isEmpty) continue;
-
-      firstAnyTag ??= tag;
-
-      // 检查该 tag 附近是否有 "Pre-release" 标记
-      // 在 tag 链接之后 500 字符内查找 "Pre-release" 标签
-      final checkEnd =
-          match.end + 500 < html.length ? match.end + 500 : html.length;
-      final afterTag = html.substring(match.end, checkEnd);
-      if (!afterTag.toLowerCase().contains('pre-release') &&
-          !afterTag.toLowerCase().contains('pre release')) {
-        firstStableTag ??= tag;
-      }
+      return tag;
     }
-
-    return firstStableTag ?? firstAnyTag;
+    return null;
   }
 
   /// API 法：请求 releases 列表，取第一条。
@@ -1106,6 +1323,29 @@ class GitHubReleasesAdapter implements VersionAdapter {
       v = v.substring(1);
     }
     return v;
+  }
+
+  /// 滚动发布常复用 `nightly` / `continuous` 这类固定 tag。只显示 tag 会让
+  /// 每次构建看起来版本完全没变，因此从 Release 标题提取实际构建版本。
+  String _displayVersion(String tag, String title) {
+    final version = _stripVPrefix(tag);
+    final normalized = version.toLowerCase();
+    const rollingTags = <String>{
+      'nightly',
+      'continuous',
+      'latest',
+      'canary',
+      'dev',
+      'development',
+      'preview',
+    };
+    if (!rollingTags.contains(normalized)) return version;
+
+    final match = RegExp(
+      r'\b(20\d{2}(?:[._-]\d{2}[._-]\d{2}|[._-]\d{4}|\d{4}))\b',
+    ).firstMatch(title);
+    final build = match?.group(1);
+    return build == null || build.isEmpty ? version : '$normalized-$build';
   }
 
   /// 解析 ISO 8601 时间字符串，失败返回 `null`。

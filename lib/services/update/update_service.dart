@@ -50,7 +50,8 @@ class CheckResult {
 /// - 只要条目配置了 [Emulator.playStoreId]，都会补充 Google Play 的
 ///   发布日期与“新变化”，不受主更新源类型限制；
 /// - 适配器返回的 [VersionInfo.isNew] 一律为 false；只有远端发布日期
-///   严格晚于可信的缓存日期才标记新版本，版本比较仅用于静默修复缓存。
+///   同时晚于可信缓存日期和上次成功检查时间才标记新版本，版本比较仅用于
+///   静默修复缓存，避免后来补识别的历史 Release 产生误报。
 class UpdateService {
   UpdateService({
     required CachedVersionsDao dao,
@@ -130,7 +131,10 @@ class UpdateService {
   /// [_requestDelay] 延迟以降低被限流的风险。检查时一次性获取版本号、
   /// 发布日期、更新说明及下载地址，详情页只读取这里写入的缓存。
   /// 单个失败不影响其它项。
-  Future<CheckResult> checkAll(List<Emulator> emulators) async {
+  Future<CheckResult> checkAll(
+    List<Emulator> emulators, {
+    bool reconcileUnread = false,
+  }) async {
     final updated = <VersionInfo>[];
     final failed = <String>[];
     final sharedFetches = <String, Future<VersionInfo?>>{};
@@ -157,6 +161,7 @@ class UpdateService {
             emulator,
             sharedFetches: sharedFetches,
             includeDetails: true,
+            reconcileUnread: reconcileUnread,
           ),
         ),
       );
@@ -205,6 +210,7 @@ class UpdateService {
     Map<String, Future<VersionInfo?>>? sharedFetches,
     bool includeDetails = false,
     bool forceDetails = false,
+    bool reconcileUnread = false,
   }) async {
     try {
       final adapter = _selectAdapter(emulator);
@@ -313,16 +319,25 @@ class UpdateService {
           // 远端偶尔会因 latest 标记、镜像同步或解析回退而返回旧版本。
           // 此时仅刷新检查时间，绝不能把本地版本和下载链接降级。
           await _dao.touchLastChecked(emulator.id);
-          versionInfo = _versionInfoFromCache(cached);
+          if (reconcileUnread && cached.isNew) {
+            await _dao.markAsSeen(emulator.id);
+          }
+          versionInfo = _versionInfoFromCache(cached).copyWith(
+            isNew: reconcileUnread ? false : cached.isNew,
+          );
         } else {
           // “有更新”只由可信的发布日期决定：远端日期必须严格晚于缓存
-          // 日期。缓存缺少日期时属于元数据修复，静默写回但不提示更新；
-          // 仅版本号变化或标签格式变化也不会产生误报。
+          // 日期及上次成功检查时间。缓存缺少日期或后来才补识别到历史版本
+          // 时属于元数据修复，静默写回但不提示更新；仅版本号变化或标签
+          // 格式变化也不会产生误报。
           detectedUpdate = hasNewerReleaseDate;
           versionInfo = latest.copyWith(
             // 相同版本再次检查时保留“未读”状态；只有详情页明确查看后
             // 才由 markAsSeen 清除，避免提示自动消失。
-            isNew: hasNewerReleaseDate || cached.isNew,
+            // 用户手动复检时则以本轮结果为准：未发现更新就清除
+            // 历史遗留的假未读标记。后台检查仍保留原有未读语义。
+            isNew: hasNewerReleaseDate ||
+                (!reconcileUnread && cached.isNew),
             // 轻量检查无法获知发布日期时，不得用检查时间覆盖真实日期。
             // 详情检查拿到日期后会自动补全缓存。
             releaseDate: latestIsNewer
@@ -410,7 +425,10 @@ class UpdateService {
     final latestDate = latest.releaseDate?.millisecondsSinceEpoch;
     return cachedDate != null &&
         latestDate != null &&
-        latestDate > cachedDate;
+        latestDate > cachedDate &&
+        // 版本源之前漏抓、后来才补识别的历史 Release 只用于静默修复缓存。
+        // 只有上次成功检查之后真正发布的版本才应通知用户。
+        latestDate > cached.lastCheckedAt;
   }
 
   /// 旧版曾把“检查时间”当作“发布时间”写入。两者几乎

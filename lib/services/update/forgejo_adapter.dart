@@ -50,22 +50,28 @@ class ForgejoReleasesAdapter implements VersionAdapter {
       final list = await _fetchReleases(host, owner, repo);
       if (list.isEmpty) return null;
 
-      // 查找第一个非 prerelease 的 release（稳定版）
-      Map<String, dynamic>? stableRelease;
+      // Forgejo 返回顺序不作为依据：同一仓库的稳定版、预发布版也统一按
+      // published_at（缺失时 created_at）选择时间最新的一条。
+      Map<String, dynamic>? latestRelease;
       Map<String, dynamic>? preRelease;
 
       for (final item in list) {
         final release = _asMap(item);
+        if (release.isEmpty || release['draft'] == true) continue;
+        if (latestRelease == null ||
+            _isPublishedLater(release, latestRelease)) {
+          latestRelease = release;
+        }
         final isPrerelease = release['prerelease'] == true;
-        if (isPrerelease) {
-          preRelease ??= release;
-        } else {
-          stableRelease ??= release;
+        if (isPrerelease &&
+            (preRelease == null ||
+                _isPublishedLater(release, preRelease))) {
+          preRelease = release;
         }
       }
 
-      final stable = stableRelease ?? _asMap(list.first);
-      if (stable.isEmpty) return null;
+      final repositoryLatest = latestRelease;
+      if (repositoryLatest == null || repositoryLatest.isEmpty) return null;
 
       // Forgejo 项目既可能把预发布放在同一仓库，也可能使用独立仓库，
       // 例如 Ryubing 的稳定版 projects/Ryubing 与 Ryubing/Canary。
@@ -86,7 +92,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         owner: owner,
         repo: repo,
         pageUrl: emulator.downloadUrl,
-        release: stable,
+        release: repositoryLatest,
       );
       for (final candidate in [dev, nightly]) {
         if (candidate != null &&
@@ -148,7 +154,7 @@ class ForgejoReleasesAdapter implements VersionAdapter {
   ) async {
     final response = await _dio.get(
       'https://$host/api/v1/repos/$owner/$repo/releases',
-      queryParameters: {'limit': 10, 'draft': false},
+      queryParameters: {'limit': 50, 'draft': false},
     );
     return _asList(response.data);
   }
@@ -214,10 +220,9 @@ class ForgejoReleasesAdapter implements VersionAdapter {
         (currentDate == null || candidateDate.isAfter(currentDate));
   }
 
-  DateTime? _releaseDate(Map<String, dynamic> release) => _parseDate(
-        release['published_at']?.toString() ??
-            release['created_at']?.toString(),
-      );
+  DateTime? _releaseDate(Map<String, dynamic> release) =>
+      _parseDate(release['published_at']?.toString()) ??
+      _parseDate(release['created_at']?.toString());
 
   /// 从 Forgejo 仓库 URL 解析出 (host, owner, repo)。
   ///

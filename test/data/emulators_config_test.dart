@@ -43,6 +43,13 @@ void main() {
     for (final console in config.consoles) {
       expect(consoleIds.add(console.id), isTrue, reason: console.id);
       expect(console.name, isNotEmpty, reason: console.id);
+      expect(console.imagePath, isNotEmpty, reason: console.id);
+      final consoleImage = await rootBundle.load(console.imagePath);
+      expect(
+        consoleImage.lengthInBytes,
+        greaterThan(0),
+        reason: console.id,
+      );
 
       for (final emulator in console.emulators) {
         expect(emulatorIds.add(emulator.id), isTrue, reason: emulator.id);
@@ -227,7 +234,56 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 285);
+    expect(emulatorIds.length, 313);
+
+    final bachataS4 = config.consoles
+        .singleWhere((console) => console.id == 'ps4')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'bachata_s4');
+    expect(bachataS4.sourceType, 'github');
+    expect(
+      bachataS4.sourceUrl,
+      'https://github.com/JICA98/Bachata-S4',
+    );
+    expect(bachataS4.playStoreId, 'com.bachatas4.android');
+    expect(bachataS4.minAndroid, '12.0');
+    expect(bachataS4.platforms, ['android']);
+    final bachataS4Icon = await rootBundle.load(bachataS4.iconPath);
+    expect(bachataS4Icon.lengthInBytes, greaterThan(0));
+
+    // melonDualDS 在 0.7.0 正式更名为 WatermelonDS。保留原 id 可避免
+    // 已有收藏和版本缓存丢失，但所有用户可见信息必须指向新项目身份。
+    final watermelonDS = config.consoles
+        .singleWhere((console) => console.id == 'nds')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'melondualds');
+    expect(watermelonDS.name, 'WatermelonDS');
+    expect(
+      watermelonDS.sourceUrl,
+      'https://github.com/SapphireRhodonite/WatermelonDS',
+    );
+    expect(
+      watermelonDS.downloadUrl,
+      'https://github.com/SapphireRhodonite/WatermelonDS/releases',
+    );
+    expect(watermelonDS.minAndroid, '7.0');
+    expect(watermelonDS.platforms, ['android']);
+    final watermelonDSIcon = await rootBundle.load(watermelonDS.iconPath);
+    expect(watermelonDSIcon.lengthInBytes, greaterThan(0));
+
+    final armsx3 = config.consoles
+        .singleWhere((console) => console.id == 'ps3')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'armsx3');
+    expect(armsx3.sourceType, 'github');
+    expect(armsx3.sourceUrl, 'https://github.com/ARMSX2/ARMSX3');
+    expect(armsx3.downloadUrl, 'https://github.com/ARMSX2/ARMSX3/releases');
+    expect(armsx3.core, 'RPCS3');
+    expect(armsx3.compatibility, 'low');
+    expect(armsx3.minAndroid, '10.0');
+    expect(armsx3.platforms, ['android']);
+    final armsx3Icon = await rootBundle.load(armsx3.iconPath);
+    expect(armsx3Icon.lengthInBytes, greaterThan(0));
 
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
@@ -245,6 +301,41 @@ void main() {
     expect(purpleTurnip.platforms, ['android']);
     final purpleTurnipIcon = await rootBundle.load(purpleTurnip.iconPath);
     expect(purpleTurnipIcon.lengthInBytes, greaterThan(0));
+
+    final whitebelyashTurnip = config.consoles
+        .singleWhere((console) => console.id == 'gpu_drivers')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'whitebelyash_turnip');
+    expect(
+      whitebelyashTurnip.sourceUrl,
+      'https://github.com/whitebelyash/AdrenoToolsDrivers',
+    );
+    expect(
+      whitebelyashTurnip.downloadUrl,
+      'https://github.com/whitebelyash/AdrenoToolsDrivers/releases',
+    );
+    expect(whitebelyashTurnip.core, 'Mesa Turnip / Freedreno');
+    expect(whitebelyashTurnip.compatibility, 'medium');
+    expect(whitebelyashTurnip.minAndroid, '10.0');
+    expect(whitebelyashTurnip.platforms, ['android']);
+    final whitebelyashTurnipIcon =
+        await rootBundle.load(whitebelyashTurnip.iconPath);
+    expect(whitebelyashTurnipIcon.lengthInBytes, greaterThan(0));
+
+    final swiff = config.consoles
+        .singleWhere((console) => console.id == 'flash')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'swiff');
+    expect(swiff.openSource, isFalse);
+    expect(swiff.sourceType, 'github');
+    expect(swiff.sourceUrl, 'https://github.com/NaviVani-dev/Swiff');
+    expect(swiff.downloadUrl, 'https://github.com/NaviVani-dev/Swiff/releases');
+    expect(swiff.core, 'Ruffle / AwayFL');
+    expect(swiff.minAndroid, '8.0');
+    expect(swiff.platforms, ['android']);
+    final swiffIcon = await rootBundle.load(swiff.iconPath);
+    expect(swiffIcon.lengthInBytes, greaterThan(0));
+
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
@@ -259,6 +350,34 @@ void main() {
         'padforge',
         'adamp_pc',
         'sidplaywx',
+        'nesd',
+        'gearboy_pc',
+        'luna_project64_pc',
+        'nexium_pc',
+        'ngpcraft_pc',
+        'copperline_pc',
+        'winuae_pc',
+        'hbmame_pc',
+        'kat5200',
+        'winarcadia_pc',
+        'gameex',
+        'pinballx',
+        'gse_speedrun',
+        'panda3ds',
+        'pcsx2x6_arcade',
+        'supermodel_ponmi',
+        'negamame_pc',
+        'pcbox_pc',
+        'xenia_edge_pc',
+        'pcfxemu_pc',
+        's4w_scanlines',
+        'romvault',
+        'xenia_manager',
+        'gameplay_frontend',
+        'bachata_s4',
+        'armsx3',
+        'whitebelyash_turnip',
+        'swiff',
       }),
     );
 
