@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
-import '../../data/models/emulators_config.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
@@ -22,7 +21,9 @@ final _cachedVersionsStreamProvider =
 
 /// 更新中心页面（核心）。
 ///
-/// 展示有新版本的模拟器、已是最新的模拟器，以及手动检查更新入口。
+/// 集中展示有新版本的模拟器与已是最新的模拟器。更新检查改为完全手动，
+/// 用户需进入各模拟器详情页逐个点击刷新按钮检查更新，本页面仅展示
+/// 已缓存的版本检查结果，不再提供批量"立即检查更新"入口。
 class UpdateCenterPage extends ConsumerStatefulWidget {
   const UpdateCenterPage({super.key});
 
@@ -31,9 +32,6 @@ class UpdateCenterPage extends ConsumerStatefulWidget {
 }
 
 class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
-  bool _checking = false;
-  String? _checkResultMessage;
-
   @override
   Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
@@ -42,31 +40,23 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('更新中心')),
-      body: Column(
-        children: [
-          Expanded(
-            child: configAsync.when(
-              loading: () =>
-                  const Center(child: CircularProgressIndicator()),
-              error: (error, stack) => _buildError(error),
-              data: (config) {
-                return cachedAsync.when(
-                  loading: () =>
-                      const Center(child: CircularProgressIndicator()),
-                  error: (_, __) => _buildError('缓存读取失败'),
-                  data: (cached) => _buildBody(
-                    context,
-                    config.consoles,
-                    cached,
-                    settings,
-                  ),
-                );
-              },
+      body: configAsync.when(
+        loading: () =>
+            const Center(child: CircularProgressIndicator()),
+        error: (error, stack) => _buildError(error),
+        data: (config) {
+          return cachedAsync.when(
+            loading: () =>
+                const Center(child: CircularProgressIndicator()),
+            error: (_, __) => _buildError('缓存读取失败'),
+            data: (cached) => _buildBody(
+              context,
+              config.consoles,
+              cached,
+              settings,
             ),
-          ),
-          // 底部检查按钮
-          _buildCheckButton(context, configAsync),
-        ],
+          );
+        },
       ),
     );
   }
@@ -125,109 +115,8 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
           ),
         if (hasUpdates.isEmpty && upToDate.isEmpty)
           _buildEmptyState(context),
-        if (_checkResultMessage != null) ...[
-          const SizedBox(height: 16),
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surfaceContainerHighest,
-              borderRadius: BorderRadius.circular(AppTheme.componentRadius),
-            ),
-            child: Row(
-              children: [
-                Icon(Icons.info_outline,
-                    color: Theme.of(context).colorScheme.primary),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(_checkResultMessage!,
-                      style: Theme.of(context).textTheme.bodySmall),
-                ),
-              ],
-            ),
-          ),
-        ],
       ],
     );
-  }
-
-  /// 底部 "立即检查更新" 按钮。
-  Widget _buildCheckButton(
-    BuildContext context,
-    AsyncValue<EmulatorsConfig> configAsync,
-  ) {
-    final theme = Theme.of(context);
-    return SafeArea(
-      top: false,
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-        decoration: BoxDecoration(
-          color: theme.colorScheme.surface,
-          border: Border(
-            top: BorderSide(
-              color: theme.colorScheme.outlineVariant,
-              width: 0.5,
-            ),
-          ),
-        ),
-        child: SizedBox(
-          width: double.infinity,
-          child: FilledButton.icon(
-            onPressed: _checking ? null : () => _checkUpdates(configAsync),
-            icon: _checking
-                ? const SizedBox(
-                    width: 18,
-                    height: 18,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2,
-                      color: Colors.white,
-                    ),
-                  )
-                : const Icon(Icons.refresh),
-            label: Text(_checking ? '正在检查...' : '立即检查更新'),
-          ),
-        ),
-      ),
-    );
-  }
-
-  /// 触发更新检查。
-  Future<void> _checkUpdates(
-    AsyncValue<EmulatorsConfig> configAsync,
-  ) async {
-    final config = configAsync.valueOrNull;
-    if (config == null) return;
-
-    setState(() {
-      _checking = true;
-      _checkResultMessage = null;
-    });
-
-    try {
-      final allEmulators = config.consoles.expand((c) => c.emulators).toList();
-      final updateService = ref.read(updateServiceProvider);
-      // 手动检查应展示“本轮确认到的更新”，而不是继续展示
-      // 旧版本遗留的 isNew 未读标记。检查失败的条目不会被清除。
-      final result = await updateService.checkAll(
-        allEmulators,
-        reconcileUnread: true,
-      );
-
-      if (mounted) {
-        setState(() {
-          _checking = false;
-          _checkResultMessage =
-              '检查完成：共检查 ${result.checked} 个，发现 ${result.updated.length} 个新版本'
-              '${result.failed.isNotEmpty ? '，${result.failed.length} 个失败' : ''}';
-        });
-      }
-    } catch (e) {
-      if (mounted) {
-        setState(() {
-          _checking = false;
-          _checkResultMessage = '检查失败：$e';
-        });
-      }
-    }
   }
 
   Widget _buildError(Object error) {
@@ -271,7 +160,7 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
             Text('暂无更新数据', style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
             Text(
-              '点击下方按钮检查更新',
+              '进入模拟器详情页点击刷新按钮检查更新',
               style: theme.textTheme.bodySmall?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
               ),
