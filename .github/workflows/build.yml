@@ -52,6 +52,22 @@ jobs:
           fi
           chmod +x android/gradlew
 
+      - name: Prepare fixed release signing
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          test -n "$ANDROID_KEYSTORE_PASSWORD"
+          test -n "$ANDROID_KEY_ALIAS"
+          test -n "$ANDROID_KEY_PASSWORD"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/emuhub-release.p12
+          test -s android/app/emuhub-release.p12
+
       - name: Generate code (freezed / json_serializable / drift)
         run: dart run build_runner build --delete-conflicting-outputs
 
@@ -64,7 +80,34 @@ jobs:
       - name: Build APK
         # versionCode 随 run_number 递增，否则所有 Release 的 versionCode 恒为 1，
         # 用户无法以“新版本”覆盖安装
+        env:
+          ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/android/app/emuhub-release.p12
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: flutter build apk --release --no-tree-shake-icons --build-number=${{ github.run_number }}
+
+      - name: Verify fixed release signing certificate
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          set -euo pipefail
+          expected=$(tr -d '[:space:]' < android/signing-certificate.sha256 | tr 'A-F' 'a-f')
+          apksigner=$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)
+          test -x "$apksigner"
+          actual=$("$apksigner" verify --print-certs build/app/outputs/flutter-apk/app-release.apk \
+            | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' \
+            | head -n 1 \
+            | tr 'A-F' 'a-f')
+          test -n "$actual"
+          test "$actual" = "$expected"
+          echo "Verified release signing certificate SHA-256: $actual"
+
+      - name: Remove decoded signing key
+        if: always()
+        run: |
+          if [ -f android/app/emuhub-release.p12 ]; then
+            shred -u android/app/emuhub-release.p12 || rm -f android/app/emuhub-release.p12
+          fi
 
       - name: List build output
         run: ls -lh build/app/outputs/flutter-apk/
