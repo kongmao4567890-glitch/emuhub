@@ -111,7 +111,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
     VersionInfo? result;
 
     // 策略 1：轻量重定向法（不消耗 API 配额，也不下载完整 release 页面）
-    result = await _fetchViaRedirect(emulator, owner, repo);
+    result = await _fetchViaRedirect(
+      emulator,
+      owner,
+      repo,
+      includeAssets: includeDetails,
+    );
 
     // 策略 2：HTML 解析法（仅作为无 latest 重定向时的回退）
     if (result == null) {
@@ -145,34 +150,37 @@ class GitHubReleasesAdapter implements VersionAdapter {
     );
 
     // `/releases/latest` 只代表 GitHub 标记的 Latest 稳定版，页面第一条也不
-    // 保证发布时间最大。遍历 Releases HTML 中的真实 Release 卡片；与 Atom
-    // 不同，这里不会把仅有 Tag 的 unmerged/v2.04 等引用误当成正式发布。
-    var latestPublished = await _fetchLatestPublishedReleaseFromHtml(
-      emulator,
-      owner,
-      repo,
-    );
-
-    // 少数条目把 nightly/开发版放在另一个 GitHub 仓库（例如 Citron CI）。
-    // 这些仓库也属于同一条目的可用发布渠道，必须跨仓库比较发布时间。
-    for (final channel in _configuredGitHubChannelRepos(
-      emulator,
-      primaryOwner: owner,
-      primaryRepo: repo,
-    )) {
-      final candidate = await _fetchLatestPublishedReleaseFromHtml(
+    // 保证发布时间最大。完整检查遍历 Releases HTML 中的真实 Release 卡片；
+    // 轻量检查必须在重定向后立即返回，否则每个条目仍会下载约 700KB 页面。
+    VersionInfo? latestPublished;
+    if (includeDetails) {
+      latestPublished = await _fetchLatestPublishedReleaseFromHtml(
         emulator,
-        channel.owner,
-        channel.repo,
+        owner,
+        repo,
       );
-      final candidateDate = candidate?.releaseDate;
-      final selectedDate = latestPublished?.releaseDate;
-      if (candidate != null &&
-          (latestPublished == null ||
-              (candidateDate != null &&
-                  (selectedDate == null ||
-                      candidateDate.isAfter(selectedDate))))) {
-        latestPublished = candidate;
+
+      // 少数条目把 nightly/开发版放在另一个 GitHub 仓库（例如 Citron CI）。
+      // 这些仓库也属于同一条目的可用发布渠道，必须跨仓库比较发布时间。
+      for (final channel in _configuredGitHubChannelRepos(
+        emulator,
+        primaryOwner: owner,
+        primaryRepo: repo,
+      )) {
+        final candidate = await _fetchLatestPublishedReleaseFromHtml(
+          emulator,
+          channel.owner,
+          channel.repo,
+        );
+        final candidateDate = candidate?.releaseDate;
+        final selectedDate = latestPublished?.releaseDate;
+        if (candidate != null &&
+            (latestPublished == null ||
+                (candidateDate != null &&
+                    (selectedDate == null ||
+                        candidateDate.isAfter(selectedDate))))) {
+          latestPublished = candidate;
+        }
       }
     }
 
@@ -265,7 +273,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     // 仅对明确配置了开发版或 nightly 渠道的条目检查预发布版，避免批量
     // 检查时为所有 GitHub 仓库下载体积较大的 releases 列表页。
     // nightlyUrl 与 devUrl 都代表用户希望跟踪的非稳定发布渠道。
-    if (result != null && tracksGitHubPrerelease) {
+    if (includeDetails && result != null && tracksGitHubPrerelease) {
       // 优先复用已缓存的 Atom Feed，避免再下载体积较大的
       // Releases HTML。Feed 无法识别某些无特征标签时，再回退 HTML/API。
       var devInfo = await _fetchPrereleaseInfoFromAtom(owner, repo);
@@ -467,13 +475,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// - 返回 404（完全无 releases）→ 需要策略 3
   /// - 网络错误
   ///
-  /// 成功后仅请求轻量的 `expanded_assets` HTML 片段解析 APK，不请求完整
-  /// release 页面或 API。更新说明会在必要的回退路径中补充。
+  /// 轻量检查成功后立即返回 tag；详情检查才请求 `expanded_assets` 解析
+  /// APK。两种路径都不在这里请求完整 release 页面或 API。
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
-    String repo,
-  ) async {
+    String repo, {
+    required bool includeAssets,
+  }) async {
     try {
       final response = await _dio.head(
         'https://github.com/$owner/$repo/releases/latest',
@@ -496,15 +505,16 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
-      var dynamicDownloadUrl = await _fetchApkUrlFromExpandedAssets(
-        owner, repo, tag,
-      );
-      // expanded_assets 也失败 → 尝试从静态 URL 动态构造
-      if (dynamicDownloadUrl == null) {
-        dynamicDownloadUrl = _buildDynamicDownloadUrl(
-          emulator, owner, repo, tag,
+      String? dynamicDownloadUrl;
+      if (includeAssets) {
+        dynamicDownloadUrl = await _fetchApkUrlFromExpandedAssets(
+          owner, repo, tag,
         );
       }
+      // 轻量检查不请求 assets；静态文件名可安全动态化时直接构造。
+      dynamicDownloadUrl ??= _buildDynamicDownloadUrl(
+        emulator, owner, repo, tag,
+      );
 
       return VersionInfo(
         emulatorId: emulator.id,

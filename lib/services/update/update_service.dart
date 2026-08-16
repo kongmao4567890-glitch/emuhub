@@ -8,6 +8,7 @@ import 'github_adapter.dart';
 import 'gitlab_adapter.dart';
 import 'playstore_adapter.dart';
 import 'version_adapter.dart';
+import 'version_catalog_service.dart';
 import 'version_comparator.dart';
 import 'website_adapter.dart';
 
@@ -36,6 +37,14 @@ class CheckResult {
   bool get hasUpdates => updated.isNotEmpty;
 }
 
+/// Incremental progress emitted after each completed request batch.
+class CheckProgress {
+  const CheckProgress({required this.completed, required this.total});
+
+  final int completed;
+  final int total;
+}
+
 /// 更新检查编排服务。
 ///
 /// 依赖 [CachedVersionsDao] 与五个数据源适配器（GitHub / GitLab / Forgejo / Play Store / Website），
@@ -60,6 +69,7 @@ class UpdateService {
     VersionAdapter? forgejoAdapter,
     VersionAdapter? playStoreAdapter,
     VersionAdapter? websiteAdapter,
+    VersionCatalogService? versionCatalog,
     int maxConcurrency = 10,
     Duration requestDelay = const Duration(milliseconds: 150),
     int maxFetchAttempts = 2,
@@ -70,6 +80,7 @@ class UpdateService {
         _forgejoAdapter = forgejoAdapter ?? ForgejoReleasesAdapter(),
         _playStoreAdapter = playStoreAdapter ?? PlayStoreAdapter(),
         _websiteAdapter = websiteAdapter ?? WebsiteAdapter(),
+        _versionCatalog = versionCatalog,
         _maxConcurrency = maxConcurrency,
         _requestDelay = requestDelay,
         _maxFetchAttempts = maxFetchAttempts,
@@ -81,6 +92,7 @@ class UpdateService {
   final VersionAdapter _forgejoAdapter;
   final VersionAdapter _playStoreAdapter;
   final VersionAdapter _websiteAdapter;
+  final VersionCatalogService? _versionCatalog;
   final int _maxConcurrency;
   final Duration _requestDelay;
   final int _maxFetchAttempts;
@@ -134,17 +146,46 @@ class UpdateService {
   Future<CheckResult> checkAll(
     List<Emulator> emulators, {
     bool reconcileUnread = false,
+    void Function(CheckProgress progress)? onProgress,
   }) async {
     final updated = <VersionInfo>[];
     final failed = <String>[];
     final sharedFetches = <String, Future<VersionInfo?>>{};
     var checked = 0;
 
+    // 聚合目录可瞬间返回绝大部分 GitHub 条目。优先处理它们，避免少数
+    // 官网/商店超时把前面的批次卡住，用户可以先看到已有版本逐批回填。
+    Set<String> catalogIds = const <String>{};
+    if (_versionCatalog != null) {
+      try {
+        catalogIds = await _versionCatalog!.availableEmulatorIds();
+      } catch (_) {
+        // Direct adapters remain available when catalog loading fails.
+      }
+    }
+
+    final orderedEmulators = List<Emulator>.of(emulators)
+      ..sort((a, b) {
+        int priority(Emulator emulator) {
+          if (catalogIds.contains(emulator.id) &&
+              emulator.playStoreId.isEmpty) {
+            return 0;
+          }
+          if (catalogIds.contains(emulator.id)) return 1;
+          if (emulator.sourceType == 'github') return 2;
+          return 3;
+        }
+
+        final aPriority = priority(a);
+        final bPriority = priority(b);
+        return aPriority.compareTo(bPriority);
+      });
+
     // 分批
     final batches = <List<Emulator>>[];
-    for (var i = 0; i < emulators.length; i += _maxConcurrency) {
-      final end = min(i + _maxConcurrency, emulators.length);
-      batches.add(emulators.sublist(i, end));
+    for (var i = 0; i < orderedEmulators.length; i += _maxConcurrency) {
+      final end = min(i + _maxConcurrency, orderedEmulators.length);
+      batches.add(orderedEmulators.sublist(i, end));
     }
 
     for (var batchIndex = 0; batchIndex < batches.length; batchIndex++) {
@@ -177,6 +218,12 @@ class UpdateService {
           updated.add(info);
         }
       }
+      onProgress?.call(
+        CheckProgress(
+          completed: min((batchIndex + 1) * _maxConcurrency, emulators.length),
+          total: emulators.length,
+        ),
+      );
     }
 
     return CheckResult(
@@ -195,6 +242,7 @@ class UpdateService {
       emulator,
       includeDetails: true,
       forceDetails: true,
+      allowCatalog: false,
     );
     return outcome.versionInfo;
   }
@@ -211,6 +259,7 @@ class UpdateService {
     bool includeDetails = false,
     bool forceDetails = false,
     bool reconcileUnread = false,
+    bool allowCatalog = true,
   }) async {
     try {
       final adapter = _selectAdapter(emulator);
@@ -225,12 +274,14 @@ class UpdateService {
               emulator,
               adapter,
               includeDetails: false,
+              allowCatalog: allowCatalog,
             ),
           ) ??
           _fetchLatestWithRetry(
             emulator,
             adapter,
             includeDetails: false,
+            allowCatalog: allowCatalog,
           );
       var latest = await fetch;
 
@@ -245,12 +296,14 @@ class UpdateService {
                 emulator,
                 adapter,
                 includeDetails: true,
+                allowCatalog: allowCatalog,
               ),
           ) ??
             _fetchLatestWithRetry(
               emulator,
               adapter,
               includeDetails: true,
+              allowCatalog: allowCatalog,
             );
         final detailed = await detailedFetch;
         if (detailed != null) latest = detailed;
@@ -455,7 +508,23 @@ class UpdateService {
     Emulator emulator,
     VersionAdapter adapter, {
     required bool includeDetails,
+    bool allowCatalog = true,
   }) async {
+    // GitHub Actions has already reduced all GitHub releases to one catalog,
+    // selecting the newest real publication time. This turns 261 per-repository
+    // page downloads into a single shared JSON request. A missing/stale entry
+    // never blocks the legacy adapter fallback below.
+    if (allowCatalog &&
+        adapter.adapterName == 'github' &&
+        _versionCatalog != null) {
+      try {
+        final catalogVersion = await _versionCatalog!.lookup(emulator);
+        if (catalogVersion != null) return catalogVersion;
+      } catch (_) {
+        // Fall through to direct source checks.
+      }
+    }
+
     final attempts = max(1, _maxFetchAttempts);
 
     for (var attempt = 0; attempt < attempts; attempt++) {

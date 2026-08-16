@@ -6,6 +6,7 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/data/models/version_info.dart';
 import 'package:emuhub/services/update/update_service.dart';
 import 'package:emuhub/services/update/version_adapter.dart';
+import 'package:emuhub/services/update/version_catalog_service.dart';
 
 void main() {
   late AppDatabase database;
@@ -309,6 +310,39 @@ void main() {
       await database.cachedVersionsDao.getCachedVersion(second.id),
       isNotNull,
     );
+  });
+
+  test('uses the shared version catalog without calling GitHub per item',
+      () async {
+    final directAdapter = _CountingUnavailableGitHubAdapter();
+    final catalog = VersionCatalogService(
+      loader: () async => <String, dynamic>{
+        'entries': <String, dynamic>{
+          'catalog-emu': <String, dynamic>{
+            'version': '3.2.1',
+            'releaseDate': '2026-08-15T12:00:00Z',
+            'releaseNotes': 'Catalog release',
+          },
+        },
+      },
+    );
+    final catalogService = UpdateService(
+      dao: database.cachedVersionsDao,
+      githubAdapter: directAdapter,
+      websiteAdapter: directAdapter,
+      versionCatalog: catalog,
+      requestDelay: Duration.zero,
+      retryDelay: Duration.zero,
+    );
+
+    final result = await catalogService.checkAll([_emulator('catalog-emu')]);
+    final cached = await database.cachedVersionsDao
+        .getCachedVersion('catalog-emu');
+
+    expect(result.checked, 1);
+    expect(cached?.currentVersion, '3.2.1');
+    expect(cached?.releaseNotes, 'Catalog release');
+    expect(directAdapter.calls, 0);
   });
 
   test('processes independent sources with the configured concurrency',
@@ -659,6 +693,19 @@ class _UnavailableAdapter implements VersionAdapter {
 class _UnavailableGitHubAdapter extends _UnavailableAdapter {
   @override
   String get adapterName => 'github';
+}
+
+class _CountingUnavailableGitHubAdapter extends _UnavailableGitHubAdapter {
+  int calls = 0;
+
+  @override
+  Future<VersionInfo?> fetchLatestVersion(
+    Emulator emulator, {
+    bool includeDetails = false,
+  }) async {
+    calls++;
+    return null;
+  }
 }
 
 class _WebsiteVersionAdapter implements VersionAdapter {

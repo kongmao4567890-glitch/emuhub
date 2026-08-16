@@ -1,0 +1,56 @@
+name: Refresh emulator version catalog
+
+on:
+  schedule:
+    # Keep the mobile client within two hours of newly published releases.
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: version-catalog
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build catalog from GitHub Releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_version_catalog.py
+
+      - name: Validate catalog
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog = json.loads(Path('data/version_catalog.json').read_text())
+          entries = catalog.get('entries', {})
+          if len(entries) < 150:
+              raise SystemExit(f'catalog unexpectedly small: {len(entries)} entries')
+          for emulator_id, entry in entries.items():
+              if not entry.get('version') or not entry.get('releaseDate'):
+                  raise SystemExit(f'incomplete catalog entry: {emulator_id}')
+          print(f'validated {len(entries)} entries')
+          PY
+
+      - name: Publish changed catalog
+        run: |
+          if git diff --quiet -- assets/version_catalog.json data/version_catalog.json; then
+            echo 'Catalog is already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/version_catalog.json data/version_catalog.json
+          git commit -m '自动刷新模拟器版本目录 [skip ci]'
+          git pull --rebase
+          git push

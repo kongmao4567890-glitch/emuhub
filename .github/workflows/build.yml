@@ -3,6 +3,9 @@ name: Build Android APK
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - 'assets/version_catalog.json'
+      - 'data/version_catalog.json'
   pull_request:
     branches: [main, master]
   workflow_dispatch:

@@ -9,6 +9,7 @@ import '../../data/models/console.dart';
 import '../../data/models/emulators_config.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
+import '../../services/update/update_service.dart';
 import '../../widgets/version_badge.dart';
 import '../consoles/consoles_page.dart' show vendorDisplayName;
 import '../emulator/emulator_detail_page.dart' show findEmulator;
@@ -32,6 +33,7 @@ class UpdateCenterPage extends ConsumerStatefulWidget {
 
 class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
   bool _checking = false;
+  CheckProgress? _checkProgress;
   String? _checkResultMessage;
 
   @override
@@ -183,7 +185,13 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
                     ),
                   )
                 : const Icon(Icons.refresh),
-            label: Text(_checking ? '正在检查...' : '立即检查更新'),
+            label: Text(
+              _checking && _checkProgress != null
+                  ? '正在检查 ${_checkProgress!.completed}/${_checkProgress!.total}'
+                  : _checking
+                      ? '正在加载版本目录...'
+                      : '立即检查更新',
+            ),
           ),
         ),
       ),
@@ -199,6 +207,7 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
 
     setState(() {
       _checking = true;
+      _checkProgress = null;
       _checkResultMessage = null;
     });
 
@@ -210,11 +219,16 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
       final result = await updateService.checkAll(
         allEmulators,
         reconcileUnread: true,
+        onProgress: (progress) {
+          if (!mounted) return;
+          setState(() => _checkProgress = progress);
+        },
       );
 
       if (mounted) {
         setState(() {
           _checking = false;
+          _checkProgress = null;
           _checkResultMessage =
               '检查完成：共检查 ${result.checked} 个，发现 ${result.updated.length} 个新版本'
               '${result.failed.isNotEmpty ? '，${result.failed.length} 个失败' : ''}';
@@ -224,6 +238,7 @@ class _UpdateCenterPageState extends ConsumerState<UpdateCenterPage> {
       if (mounted) {
         setState(() {
           _checking = false;
+          _checkProgress = null;
           _checkResultMessage = '检查失败：$e';
         });
       }

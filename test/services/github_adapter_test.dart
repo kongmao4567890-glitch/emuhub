@@ -5,6 +5,47 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
+  test('lightweight check only follows the latest redirect', () async {
+    final dio = Dio();
+    var nonHeadRequests = 0;
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          if (options.method == 'HEAD' &&
+              options.uri.path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 302,
+                headers: Headers.fromMap({
+                  'location': [
+                    'https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.4',
+                  ],
+                }),
+              ),
+            );
+            return;
+          }
+          nonHeadRequests++;
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _armsx2(),
+    );
+
+    expect(result?.version, '2.6.6.4');
+    expect(result?.releaseDate, isNull);
+    expect(nonHeadRequests, 0);
+  });
+
   test('uses the latest timestamp instead of the Releases page order',
       () async {
     final dio = Dio();
@@ -129,6 +170,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _armsx2(),
+      includeDetails: true,
     );
 
     expect(result?.version, 'nightly-20260805');
@@ -209,6 +251,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _nexium(),
+      includeDetails: true,
     );
 
     expect(result?.version, 'nightly-2026.07.16');
@@ -297,6 +340,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _citron(),
+      includeDetails: true,
     );
 
     expect(result?.version, 'nightly-20260805');
@@ -426,6 +470,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _x360Mobile(),
+      includeDetails: true,
     );
 
     expect(result?.version, '0.5.3_预览版');
@@ -694,6 +739,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _hatariB(),
+      includeDetails: true,
     );
 
     expect(result?.version, '0.3');
@@ -763,6 +809,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _winNative(),
+      includeDetails: true,
     );
 
     expect(result?.version, '0.3.1-beta');
