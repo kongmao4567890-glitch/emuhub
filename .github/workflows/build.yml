@@ -91,14 +91,17 @@ jobs:
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         run: |
           set -euo pipefail
-          expected=$(tr -d '[:space:]' < android/signing-certificate.sha256 | tr 'A-F' 'a-f')
+          expected=$(tr -d '[:space:]:' < android/signing-certificate.sha256 | tr 'A-F' 'a-f')
           apksigner=$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)
           test -x "$apksigner"
           actual=$("$apksigner" verify --print-certs build/app/outputs/flutter-apk/app-release.apk \
             | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' \
             | head -n 1 \
+            | tr -d '[:space:]:' \
             | tr 'A-F' 'a-f')
           test -n "$actual"
+          echo "Expected release signing certificate SHA-256: $expected"
+          echo "Actual APK signing certificate SHA-256: $actual"
           test "$actual" = "$expected"
           echo "Verified release signing certificate SHA-256: $actual"
 
