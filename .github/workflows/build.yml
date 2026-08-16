@@ -94,10 +94,16 @@ jobs:
           expected=$(tr -d '[:space:]:' < android/signing-certificate.sha256 | tr 'A-F' 'a-f')
           apksigner=$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)
           test -x "$apksigner"
-          actual=$("$apksigner" verify --print-certs build/app/outputs/flutter-apk/app-release.apk \
-            | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' \
-            | head -n 1 \
-            | tr -d '[:space:]:' \
+          if ! certificate_output=$("$apksigner" verify --verbose --print-certs \
+            build/app/outputs/flutter-apk/app-release.apk 2>&1); then
+            printf '%s\n' "$certificate_output"
+            exit 1
+          fi
+          printf '%s\n' "$certificate_output"
+          actual=$(printf '%s\n' "$certificate_output" \
+            | tr -d ':' \
+            | grep -Eio '[0-9a-f]{64}' \
+            | sed -n '1p' \
             | tr 'A-F' 'a-f')
           test -n "$actual"
           echo "Expected release signing certificate SHA-256: $expected"
