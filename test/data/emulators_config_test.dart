@@ -234,7 +234,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 313);
+    expect(emulatorIds.length, 314);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -336,6 +336,27 @@ void main() {
     final swiffIcon = await rootBundle.load(swiff.iconPath);
     expect(swiffIcon.lengthInBytes, greaterThan(0));
 
+    final winNative = config.consoles
+        .singleWhere((console) => console.id == 'dos')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'winnative');
+    expect(winNative.openSource, isTrue);
+    expect(winNative.sourceType, 'github');
+    expect(
+      winNative.sourceUrl,
+      'https://github.com/WinNative-Emu/WinNative',
+    );
+    expect(
+      winNative.downloadUrl,
+      'https://github.com/WinNative-Emu/WinNative/releases',
+    );
+    expect(winNative.core, 'Wine / Box64 / FEX');
+    expect(winNative.compatibility, 'medium');
+    expect(winNative.minAndroid, '8.0');
+    expect(winNative.platforms, ['android']);
+    final winNativeIcon = await rootBundle.load(winNative.iconPath);
+    expect(winNativeIcon.lengthInBytes, greaterThan(0));
+
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
@@ -378,6 +399,7 @@ void main() {
         'armsx3',
         'whitebelyash_turnip',
         'swiff',
+        'winnative',
       }),
     );
 

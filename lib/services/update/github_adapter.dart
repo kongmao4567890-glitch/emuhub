@@ -905,10 +905,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
   /// 从 GitHub releases 页面 HTML 提取 APK 下载链接。
   ///
-  /// 优先返回 arm64/aarch64 架构的 APK。
+  /// 优先返回 arm64/aarch64 架构且面向普通侧载的 APK。若同一 Release
+  /// 同时提供 Standard/Vanilla 与 Ludashi/Pubg/Antutu 等伪装包，必须
+  /// 选择前者，避免更新按钮默认下载改包名或强制性能模式的特殊变体。
   String? _extractApkUrlFromHtml(String html) {
-    String? arm64Apk;
-    String? anyApk;
+    String? selectedApk;
+    var selectedPriority = -(1 << 30);
 
     final apkPattern = RegExp(
       r'href="([^"]*\.apk)"',
@@ -920,16 +922,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
       if (url.startsWith('/')) {
         url = 'https://github.com$url';
       }
-      final name = url.toLowerCase();
-      if (name.contains('arm64') ||
-          name.contains('aarch64') ||
-          name.contains('arm64-v8a')) {
-        arm64Apk ??= url;
+      final priority = _apkAssetPriority(url);
+      if (selectedApk == null || priority > selectedPriority) {
+        selectedApk = url;
+        selectedPriority = priority;
       }
-      anyApk ??= url;
     }
 
-    return arm64Apk ?? anyApk;
+    return selectedApk;
   }
 
   /// 从 GitHub releases 页面 HTML 提取发布日期。
@@ -1206,17 +1206,17 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 从 release 的 `assets` 数组中提取第一个 `.apk` 文件的下载地址。
+  /// 从 release 的 `assets` 数组中提取最适合普通用户的 `.apk` 下载地址。
   ///
   /// GitHub API 的 release 对象包含 `assets` 数组，每个 asset 有
-  /// `browser_download_url` 字段。返回第一个以 `.apk` 结尾的 URL，
-  /// 优先选择 `arm64` / `aarch64` 架构的包。
+  /// `browser_download_url` 字段。优先选择 `arm64` / `aarch64` 架构，
+  /// 并优先 Standard/Vanilla/Universal，避开调速或包名伪装变体。
   String? _extractApkAssetUrl(Map<String, dynamic> release) {
     final assets = release['assets'];
     if (assets is! List) return null;
 
-    String? arm64Apk;
-    String? anyApk;
+    String? selectedApk;
+    var selectedPriority = -(1 << 30);
 
     for (final asset in assets) {
       final assetMap = _asMap(asset);
@@ -1224,17 +1224,40 @@ class GitHubReleasesAdapter implements VersionAdapter {
       if (url == null || url.isEmpty) continue;
       if (!url.toLowerCase().endsWith('.apk')) continue;
 
-      final name = (assetMap['name']?.toString() ?? '').toLowerCase();
-      // 优先选择 arm64/aarch64 架构的 APK
-      if (name.contains('arm64') ||
-          name.contains('aarch64') ||
-          name.contains('arm64-v8a')) {
-        arm64Apk = url;
+      final name = assetMap['name']?.toString() ?? url;
+      final priority = _apkAssetPriority(name);
+      if (selectedApk == null || priority > selectedPriority) {
+        selectedApk = url;
+        selectedPriority = priority;
       }
-      anyApk ??= url;
     }
 
-    return arm64Apk ?? anyApk;
+    return selectedApk;
+  }
+
+  int _apkAssetPriority(String rawName) {
+    final name = rawName.toLowerCase();
+    var score = 0;
+
+    if (name.contains('arm64') ||
+        name.contains('aarch64') ||
+        name.contains('arm64-v8a')) {
+      score += 100;
+    }
+    if (name.contains('standard') ||
+        name.contains('vanilla') ||
+        name.contains('universal')) {
+      score += 60;
+    }
+    if (name.contains('ludashi') ||
+        name.contains('pubg') ||
+        name.contains('antutu') ||
+        name.contains('benchmark')) {
+      score -= 80;
+    }
+    if (name.contains('debug')) score -= 120;
+
+    return score;
   }
 
   /// 构造动态下载链接。
