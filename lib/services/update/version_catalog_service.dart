@@ -92,7 +92,7 @@ class VersionCatalogService {
   }
 
   Future<Map<String, dynamic>> _loadCatalog() async {
-    if (_loader != null) return _loader!();
+    if (_loader != null) return _loader();
 
     try {
       // A small time bucket bypasses stale intermediary caches without causing

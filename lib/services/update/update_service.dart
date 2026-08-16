@@ -158,7 +158,7 @@ class UpdateService {
     Set<String> catalogIds = const <String>{};
     if (_versionCatalog != null) {
       try {
-        catalogIds = await _versionCatalog!.availableEmulatorIds();
+        catalogIds = await _versionCatalog.availableEmulatorIds();
       } catch (_) {
         // Direct adapters remain available when catalog loading fails.
       }
@@ -518,7 +518,7 @@ class UpdateService {
         adapter.adapterName == 'github' &&
         _versionCatalog != null) {
       try {
-        final catalogVersion = await _versionCatalog!.lookup(emulator);
+        final catalogVersion = await _versionCatalog.lookup(emulator);
         if (catalogVersion != null) return catalogVersion;
       } catch (_) {
         // Fall through to direct source checks.
