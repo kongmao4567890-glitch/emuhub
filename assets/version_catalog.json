@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T14:47:16Z",
+  "generatedAt": "2026-08-17T16:47:56Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -123,10 +123,10 @@
       "downloadUrl": "https://github.com/Wynx-1/chip8-emulator-android/releases/download/v1.0.0/Chip8-Emulator-v1.0.apk"
     },
     "citron_neo": {
-      "version": "nightly-windows",
-      "releaseDate": "2026-08-07T13:49:49Z",
-      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-windows",
-      "releaseNotes": "**Citron Upstream Commit:** [`22d5038`](https://github.com/citron-neo/emulator/commit/22d5038eca17d8aefc6f5e8f6140038e4fad2624)\n\nThis build is based on the latest Citron emulator source code from the upstream repository.\n\n**Build Details:**\n- Platform: Windows (x64)\n- Toolchains: Clangtron and native clang-cl/MSVC ABI\n- Build Type: Nightly\n- Date: 2026-08-07"
+      "version": "nightly-linux",
+      "releaseDate": "2026-08-17T13:25:50Z",
+      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-linux",
+      "releaseNotes": "**Citron Upstream Commit:** [`159e91b`](https://github.com/citron-neo/emulator/commit/159e91b735d634d1ab4da68b2aa6d7ce8283c935)\n\nThis build is based on the latest Citron emulator source code from the upstream repository.\n\n**Build Details:**\n- Platform: Linux (x86_64, x86_64_v3, aarch64)\n- Format: AppImage + tar.zst packages\n- Build Type: Nightly with optimizations\n- Date: 2026-08-17"
     },
     "coffee_gb_pc": {
       "version": "coffee-gb-2.0.4",
@@ -215,15 +215,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-08-17T09:07:24Z",
+      "releaseDate": "2026-08-17T14:25:29Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp: added the support to \"Chronavi, The (HB)\" (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• gba update from gab75 (dinkc64)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-08-17T09:07:24Z",
+      "releaseDate": "2026-08-17T14:25:29Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp: added the support to \"Chronavi, The (HB)\" (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• gba update from gab75 (dinkc64)"
     },
     "firebird": {
       "version": "1.6",
@@ -260,10 +260,10 @@
       "downloadUrl": "https://github.com/utkarshdalal/GameNative/releases/download/v1.1.1/gamenative-v1.1.1-legacy-xr.apk"
     },
     "gameplay_frontend": {
-      "version": "0.94",
-      "releaseDate": "2026-08-15T16:55:37Z",
-      "sourceUrl": "https://github.com/leniad/GamePlay/releases/tag/v0.94",
-      "releaseNotes": "- General\r\n    + Fixed window scaling\r\n    + Added a help button that displays the emulator's default key bindings\r\n    + Added a disc icon next to the name for games that come from the CD version\r\n    + Various visual improvements\r\n    + Updated Dosbox-X to latest version\r\n- MS-DOS: Fixed game setup for BAT files"
+      "version": "0.95",
+      "releaseDate": "2026-08-17T14:36:50Z",
+      "sourceUrl": "https://github.com/leniad/GamePlay/releases/tag/v0.95",
+      "releaseNotes": "- General\r\n    + Some cosmetic changes\r\n    + When a game is about to be launched, if it is detected that the game has been updated on the server, you can download the new version"
     },
     "gba_emu_ex": {
       "version": "Pre-release",
@@ -802,12 +802,12 @@
     },
     "nesd": {
       "version": "nightly",
-      "releaseDate": "2026-08-15T18:23:11Z",
+      "releaseDate": "2026-08-17T16:30:45Z",
       "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "releaseNotes": "### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them",
+      "releaseNotes": "### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later",
       "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
       "devDownloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
-      "devReleaseNotes": "### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them"
+      "devReleaseNotes": "### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later"
     },
     "nesoid": {
       "version": "2.5-4",
