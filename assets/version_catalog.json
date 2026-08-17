@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T16:47:56Z",
+  "generatedAt": "2026-08-17T19:00:15Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -884,11 +884,10 @@
       "releaseNotes": "openMSX 21.0 has many improvements on the new GUI introduced in openMSX 20.0 (especially the debugger) and several other smaller features. It also introduces the \"setups\" concept, which enables you to define an MSX setup (e.g. a Philips VG 8020 with an external disk drive and a joystick, data recorder and printer connected). These can be created, loaded, and automatically started. They can also be saved automatically when you exit.\r\n\r\nFurthermore, flash chip emulation has become a lot more accurate, thanks to Laurens Holst."
     },
     "padforge": {
-      "version": "latest-v4-dev",
-      "releaseDate": "2026-08-17T05:58:51Z",
-      "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/31999468862",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/31999468862"
+      "version": "4.2.0",
+      "releaseDate": "2026-08-10T04:55:16Z",
+      "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/v4.2.0",
+      "releaseNotes": "# PadForge 4.2.0\n\n<p align=\"center\">\n  <a href=\"https://www.softpedia.com/get/Gaming-Related/PadForge.shtml\"><img src=\"https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.2.0/screenshots/softpedia-excellent-editors-review-award.png\" alt=\"Softpedia Editor's Pick: rated 5 out of 5, Excellent\" height=\"120\"></a>\n</p>\n\n<p align=\"center\"><b>PadForge is a Softpedia Editor's Pick: rated 5/5, Excellent.</b><br>\n<i>\"PadForge shines best in its incredibly vast range of supported controller types.\"</i> (<a href=\"https://www.softpedia.com/get/Gaming-Related/PadForge.shtml\">Softpedia's editor review</a>)</p>\n\n**Virtual VR controllers** put a SteamVR hand pair on any input you already own, and PadForge installs the runtime itself. **Headset head tracking** turns Sony headphones with a head tracker into a motion source. **Controller audio and microphone** reach the DualSense through an opt-in virtual USB persona. **Thirteen starter profiles** cover a genre each, ready for whatever pad you plug in. The preview draws **controller finishes**, down to the Spider-Man 2 DualSense.\n\n| Virtual VR controllers | Headset head tracking |\n|:---:|:---:|\n| ![The VR slot preview showing both hands](https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.2.0/screenshots/vr-preview.jpg) | ![The SteamVR install card in Settings](https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.2.0/screenshots/settings-steamvr.jpg) |\n\n| Starter profiles | Controller finishes |\n|:---:|:---:|\n| ![The starter profile gallery](https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.2.0/screenshots/starter-profiles.jpg) | ![A DualSense in the Spider-Man 2 finish](https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.2.0/screenshots/colorway-dualsense-spiderman2.jpg) |\n\n## Virtual VR controllers\n\nAdd a **VR** slot and SteamVR sees a left hand and a right hand. What moves them is up to you: a gamepad, a flight stick, a keyboard, a phone over Wi-Fi. One slot serves both hands, so there is no left slot and right slot to keep in sync.\n\nEvery stick, trigger, grip and button is a mapping target, and triggers and grips stay genuinely analog rather than collapsing to on and off. When a game buzzes a hand, that pulse comes back out through the device you are actually holding.\n\nPadForge installs the SteamVR runtime itself if you do not have it, with no Steam account and no Steam client, to a folder you pick.\n\nStated plainly, because it decides whether this is useful to you: PadForge does not fabricate positional tracking. The driver parks both hands a fixed distance in front of the headset, so they follow where you look. What this gives you is the controls. One VR slot is the ceiling, and SteamVR's own Test Controller is not a reliable way to check one. (#49)\n\n## Headset head tracking\n\nSony headphones that carry a head tracker become a motion source, confirmed on the WH-1000XM5 family. The whole gyro pipeline takes it: gyro-to-stick, gyro-to-mouse, aim engage, calibration, and the DSU motion server. Discovery is by capability rather than a model list, so any headset exposing the same sensor collection is a candidate.\n\nOn these headsets the raw gyro channel streams zeros while the rotation vector carries the real motion, so PadForge derives an ordinary gyro rate from consecutive rotation samples and nothing downstream needs headset-specific handling. It reports rotation, never position. Pair it with Aim Engage, because head tracking that is always live is disorienting in most games. (#188)\n\n## Controller audio and microphone\n\nAn opt-in virtual USB persona carries the DualSense's voice-coil haptics, its speaker, and its microphone, so authored haptics and controller audio reach the pad the way a PS5 does it. (#255)\n\n## Thirteen starter profiles\n\nReady-made profiles for a whole genre: Desktop, WASD and Mouse, Hotbar, Point and Click, Strategy, Isometric RPG, Twin-Stick, Media Remote, Emulation, Fighting Games, Racing, Space Sim, and Gyro Aim. Pick one, assign any contr…"
     },
     "panda3ds": {
       "version": "0.9",
@@ -915,11 +914,11 @@
       "devReleaseNotes": "Attempted head seek improvements for Zen Nihon Joshi Pro Wres - Queen of Queens."
     },
     "pcsx2_pc": {
-      "version": "2.7.521",
-      "releaseDate": "2026-08-15T12:42:50Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.7.521",
-      "releaseNotes": "- [GS/HW: Fix some target detection and format issues](https://github.com/PCSX2/pcsx2/pull/14843)",
-      "devReleaseNotes": "- [GS/HW: Fix some target detection and format issues](https://github.com/PCSX2/pcsx2/pull/14843)"
+      "version": "2.7.522",
+      "releaseDate": "2026-08-17T16:52:33Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.7.522",
+      "releaseNotes": "- [Qt/macOS: Keep Fullscreen on the main window](https://github.com/PCSX2/pcsx2/pull/14841)",
+      "devReleaseNotes": "- [Qt/macOS: Keep Fullscreen on the main window](https://github.com/PCSX2/pcsx2/pull/14841)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.21",
