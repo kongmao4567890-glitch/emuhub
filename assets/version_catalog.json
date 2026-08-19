@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-18T22:44:13Z",
+  "generatedAt": "2026-08-19T01:54:56Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -215,15 +215,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-08-18T18:21:47Z",
+      "releaseDate": "2026-08-19T01:26:15Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_coleco.cpp, d_megadrive.cpp, d_snes.cpp, d_spectrum.cpp: various... (fprietog)\n• pcecd, fix debug logging, pt.2 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• fix ddux1 and altbeast6, rom mixup issue (dinkc64)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-08-18T18:21:47Z",
+      "releaseDate": "2026-08-19T01:26:15Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_coleco.cpp, d_megadrive.cpp, d_snes.cpp, d_spectrum.cpp: various... (fprietog)\n• pcecd, fix debug logging, pt.2 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• fix ddux1 and altbeast6, rom mixup issue (dinkc64)"
     },
     "firebird": {
       "version": "1.6",
@@ -328,10 +328,10 @@
       "devReleaseNotes": "- f723a19: LCDUI: refactoring (woesss)\r\n- 75130ae: LCDUI: refactor commands in Alert (woesss)\r\n- d2263e0: LCDUI: fix Display.setCurrent() for Alert (woesss)\r\n- bb0d217: Refactor start MidletThread (woesss)\r\n- 6c3b6f6: Don't send report from modded apk (woesss)\r\n- e41930b: Setting to enable workaround for MIDlets that do not support pause (fix crash after pause) (woesss)\r\n- 6d75447: LCDUI: another fix for List, ChoiceGroup (woesss)\r\n- 97783bc: Fix uri parsing in BT connections (woesss)\r\n- 209d345: Fix call notifyItemStateChanged() for TextField (woesss)\r\n- 49e7fd6: refactor start app (woesss)\r\n- 580ac80: Add more info to AppInstaller error report (woesss)\r\n- 1da39db: Update AGP (woesss)\r\n- cfb9c20: Update proguard rules (woesss)\r\n- ffc6f3c: Update readme (woesss)\r\n- 7a7dbce: MMAPI: add MIDIControl support for MIDI based content (fix nikita36078/J2ME-Loader#1072) (woesss)\r\n- c501ccb: Add com.mot.iden.multimedia package (#111) (woesss)\r\n- 4f5b09b: Share a single back buffer across all Canvas instances (fix #110) (woesss)\r\n- f10c8d9: M3G: execute M3gRunnable in single thread (woesss)\r\n- d826b76: M3G: generate texture mipmap by M3G code, as automatic generation by GL does not work correctly (#108) (woesss)\r\n- a5ec311: Update gradle files (woesss)\r\n- 723f464: PNGUtils: ignore invalid palette indexes, optimize (woesss)\r\n- 21b8805: Filter pointer events (woesss)\r\n- 42f6827: Copy pixels from GL in native (woesss)\r\n- 0f67e90: Touch GL in single thread in com.mexa.opgl.OpglGraphics (woesss)\r\n- 2c7290b: Replace loop detection in immediate mode of EventQueue (woesss)\r\n- 0234d04: fixup! Check descriptor when skip installer dialog (woesss)\r\n- eb2ffc4: Reimplement Nokia M3D on GLES20 (woesss)\r\n- 225c4a2: Fix mutable property of Image (woesss)\r\n- a2eaf4e: Merge pull request #107 from rmn20/dev (woesss)\r\n- 4532838: micro3d: more lenient BMP loading (woesss)\r\n- e42cff5: fix (rmn20)\r\n- a609ebd: micro3d: Fix for bmp files with invalid raster offset (rmn20)\r\n- 724b90a: Refactoring case-insensitive file extension checking (woesss)\r\n- 86d3435: Improve com.siemens.mp.lcdui.Image implementation (woesss)\r\n- 23d4d1e: Fix open FileConnection (woesss)\r\n- 2b3eb27: Use acra-http (woesss)\r\n- 3cc10ae: Improve error reports (woesss)\r\n- a222d4a: Update appcenter cert (Nikita Shakarun)\r\n- 7a6719b: Fix build without secret properties (woesss)\r\n- 190bb47: LCDUI: fix Item.notifyStateChanged() (woesss)\r\n- 5d18a8b: Remove minimum delay for key release (woesss)\r\n- 177c985: Fix ClassCastException in takeScreenshot() (woesss)\r\n- cc87cf5: Fixed saving of resolution presets (woesss)"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-08-18-5d83ce8",
-      "releaseDate": "2026-08-18T17:37:40Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-08-18-5d83ce8",
-      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-08-18-4fb72e9...KytyPS5-2026-08-18-5d83ce8"
+      "version": "KytyPS5-2026-08-18-7e42513",
+      "releaseDate": "2026-08-18T23:10:50Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-08-18-7e42513",
+      "releaseNotes": "## What's Changed\n* perf(shader): cache analysis by @Senaxx in https://github.com/KytyPS5/KytyPS5/pull/259\n\n## New Contributors\n* @Senaxx made their first contribution in https://github.com/KytyPS5/KytyPS5/pull/259\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-08-18-596ecdc...KytyPS5-2026-08-18-7e42513"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -885,10 +885,10 @@
     },
     "padforge": {
       "version": "latest-v4-dev",
-      "releaseDate": "2026-08-18T20:52:16Z",
+      "releaseDate": "2026-08-19T01:53:07Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32184099648",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32184099648"
+      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32206156546",
+      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32206156546"
     },
     "panda3ds": {
       "version": "0.9",
@@ -1031,11 +1031,11 @@
       "devReleaseNotes": "## What's Changed\n* Bump rust-toolchain from 1.97.0 to 1.97.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/802\n* Bump the rust-minor group across 1 directory with 41 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/803\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/801\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/804\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260717...0.260720"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-08-18",
-      "releaseDate": "2026-08-18T00:43:18Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-08-18",
-      "releaseNotes": "## What's Changed\n* debug_ui/avm2: Move Class information into its own window by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24456\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-08-16...nightly-2026-08-18",
-      "devReleaseNotes": "## What's Changed\n* debug_ui/avm2: Move Class information into its own window by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24456\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-08-16...nightly-2026-08-18"
+      "version": "nightly-2026-08-19",
+      "releaseDate": "2026-08-19T00:43:34Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-08-19",
+      "releaseNotes": "## What's Changed\n* tests: Add FreeType variants to more tests by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24479\n* chore: Update Linux dependencies by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24483\n* avm2: Add a method to ParametersExt to allow slicing it by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24477\n* core: Split font.rs into multiple files by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24482\n* swf: Support incorrect uncompressed lengths in LZMA SWFs by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24487\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-08-18...nightly-2026-08-19",
+      "devReleaseNotes": "## What's Changed\n* tests: Add FreeType variants to more tests by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24479\n* chore: Update Linux dependencies by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24483\n* avm2: Add a method to ParametersExt to allow slicing it by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24477\n* core: Split font.rs into multiple files by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24482\n* swf: Support incorrect uncompressed lengths in LZMA SWFs by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24487\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-08-18...nightly-2026-08-19"
     },
     "sameboy_core": {
       "version": "1.0.3",
