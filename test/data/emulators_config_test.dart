@@ -234,7 +234,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 314);
+    expect(emulatorIds.length, 317);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
