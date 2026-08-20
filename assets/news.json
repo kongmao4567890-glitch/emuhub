@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T09:15:22.851890Z",
+  "generatedAt": "2026-08-20T10:59:12.556937Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,75 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx2-nightly-20260820",
+      "title": "【Android更新】ARMSX2 nightly-20260820",
+      "originalTitle": "ARMSX2 nightly-20260820 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T09:15:13Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260820",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260820，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260820。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n用于社区测试的自动夜间构建（未签名）。\n\n每个下载都被命名为 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`，因此构建\n下载后，来自不同夜晚的内容将保持清晰可辨。\n\n- macOS arm64：macOS-arm64.tar.xz\n- Linux arm64：大多数发行版上的 Linux-arm64-4K-pages.AppImage，或 Asahi Linux 和其他 Apple Silicon 内核上的 16K 发行版（如果不确定，请运行 getconf PAGESIZE）\n- Windows arm64：Windows-arm64.zip\n- Linux arm64 上的 RetroArch：Linux-arm64-libretro-core.tar.zst，4K 页构建\n- 裸屏 kmsdrm 手持设备：Linux-arm64-SDL-handheld.tar.zst，4K 页构建（Rocknix 和 Batocera 运行合成器，因此请改用那里的 Qt AppImage）\n- Android：Android-arm64.apk，侧面加载它\n- iOS：iOS-arm64.ipa，未签名，旁加载\n\n## 新消息\n- UI：Qt 和 Big Picture 选择器中设置的 Android 内部分辨率\n\n完整变更日志：https://github.com/ARMSX2/ARMSX2/compare/nightly-20260819...dfef534426f522d3c9acd5e540a36f303a630018",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- UI: the Android internal-resolution set in the Qt and Big Picture pickers\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260819...dfef534426f522d3c9acd5e540a36f303a630018",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "1d6149ee3e7a628ad0649f10a1c79a64146ef73208d8f5d83aac56617c5e8f4f"
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T09:09:29Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n## 提交\n- 添加 HASH 超越超越 (#3782) [#3782](https://github.com/stenzek/duckstation/pull/3782) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/8de6b0ac7bb0f7627ce93c570ed2a2b18b3880d3))\n- 修复禁用开发日志记录时的 CPE 解析（[Nick Faro](https://github.com/stenzek/duckstation/commit/48719b86b5a6a199d9a600513c48710935848b8b)）\n- 修复添加时不遵守 m_manual_evict ([Stenzek](https://github.com/stenzek/duckstation/commit/96e0c4d389ccb9c6994648578b621c1f2b571608))\n- 添加自定义删除器覆盖（[Stenzek](https://github.com/stenzek/duckstation/commit/824a1072e298df171438bc960c8f50d9fe31db61)）\n- 删除shared_ptr的使用（[Stenzek](https://github.com/stenzek/duckstation/commit/0b28c198f7bf529d294742a7fe9bcde6b577b795)）",
+      "originalContent": "## Commits\n- Add HASH for Beyond the Beyond (#3782) [#3782](https://github.com/stenzek/duckstation/pull/3782) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/8de6b0ac7bb0f7627ce93c570ed2a2b18b3880d3))\n- Fix CPE parsing when dev logging is disabled ([Nick Faro](https://github.com/stenzek/duckstation/commit/48719b86b5a6a199d9a600513c48710935848b8b))\n- Fix m_manual_evict not respected when adding ([Stenzek](https://github.com/stenzek/duckstation/commit/96e0c4d389ccb9c6994648578b621c1f2b571608))\n- Add custom deleter override ([Stenzek](https://github.com/stenzek/duckstation/commit/824a1072e298df171438bc960c8f50d9fe31db61))\n- Remove shared_ptr usage ([Stenzek](https://github.com/stenzek/duckstation/commit/0b28c198f7bf529d294742a7fe9bcde6b577b795))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "3b9f0f19b51f6dae989e4de56824399917deca44bebe4f65a07c821ddbb97a19"
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T09:03:55Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 每晚 `499b229` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **提交** | [`499b229`](https://github.com/libretro/virtualjaguar-libretro/commit/499b2291a8d4a448b4d789a55606e3ebee194da2) |\n| **建成** | 2026-08-20 09:03 世界标准时间 |\n| **CI 运行** | [构建日志](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32348191834) |\n| **分行** | `develop` |\n\n> 自动构建 `develop` 尖端，每次推送时都会更换。它在所有 16 个目标上进行编译；它**未**通过测试套件或任何手动质量检查。为了获得稳定的版本，请使用[最新版本](https://github.com/libretro/virtualjaguar-libretro/releases/latest)。\n\n核心在启动时将其身份记录为 `v3.4.0 499b229` — 在报告此版本的错误时引用该行。\n\n### 自前一晚以来的变化\n\n```\n64aa5f0 文档（分析）：撤回“快可能会慢”的注释 (#511)\n98faff6 修复 (ci)：自动关闭工作流程中的 2 个空格 YAML 缩进\n80c4be1 样式（perf）：修复杂散的四空格右大括号\n69c92f0 修复（测试）：为 glibc 上的性能见证公开clock_gettime (#510)\n960efb4 修复 (ci)：不要提交性能见证二进制文件 (#510)\na7bc4ea feat(perf)：用于设备上分析的 RETRO_ENVIRONMENT_GET_PERF_INTERFACE (#510)\n```\n\n### 文物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每个平台都附带一个 `-debug.tar.gz` 的分割调试符号；将其提取到二进制文件旁边以获得符号化的回溯。\n\n### SHA-256 校验和\n使用 `sha256sum --check SHA256SUMS.txt` (Linux) 或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) 进行验证。请参阅 [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md)。\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332 cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134 cue2cdi-macos-universal\ne0afda2bef461eff6587d1bb974acfdf856a62d84a33f2690e81cf7e1ec20097 cue2cdi-windows-x86_64.exe\n47776ffbecf2036dd2fe265e9ab8a7cc9a9b4d040c4498ded30792b9f990aaba jagcd-tools-linux-x64.zip\n08754f9c3cdeb8e43120f2f694de2b76eb36ad173a1d39abd4f1bf2c5af2f8a4 jagcd-tools-macos.zip\nd96f7cb9c8fbfd9b168dec4c4f3d8cc58939a8251bf603211f96f3d817fe4e7e jagcd-tools-windows-x64.zip\n5049e713bb9750a3762c2d27bbfd32a1123de183119970e43a0f056641fc7012 virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\ncb13a1a071242cf980532b334f2617fe9bc4751c66de6e12c4b78980f66fa0c3 virtualjaguar_libretro-android-arm64-v8a.so\n9188b547…",
+      "originalContent": "### Nightly `499b229` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`499b229`](https://github.com/libretro/virtualjaguar-libretro/commit/499b2291a8d4a448b4d789a55606e3ebee194da2) |\n| **Built** | 2026-08-20 09:03 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32348191834) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.4.0 499b229` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n64aa5f0 docs(profiling): retract the 'fast may be slower' note (#511)\n98faff6 fix(ci): 2-space YAML indent in the auto-close workflow\n80c4be1 style(perf): fix a stray four-space closing brace\n69c92f0 fix(test): expose clock_gettime for the perf witness on glibc (#510)\n960efb4 fix(ci): don't commit the perf witness binary (#510)\na7bc4ea feat(perf): wire RETRO_ENVIRONMENT_GET_PERF_INTERFACE for on-device profiling (#510)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\ne0afda2bef461eff6587d1bb974acfdf856a62d84a33f2690e81cf7e1ec20097  cue2cdi-windows-x86_64.exe\n47776ffbecf2036dd2fe265e9ab8a7cc9a9b4d040c4498ded30792b9f990aaba  jagcd-tools-linux-x64.zip\n08754f9c3cdeb8e43120f2f694de2b76eb36ad173a1d39abd4f1bf2c5af2f8a4  jagcd-tools-macos.zip\nd96f7cb9c8fbfd9b168dec4c4f3d8cc58939a8251bf603211f96f3d817fe4e7e  jagcd-tools-windows-x64.zip\n5049e713bb9750a3762c2d27bbfd32a1123de183119970e43a0f056641fc7012  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\ncb13a1a071242cf980532b334f2617fe9bc4751c66de6e12c4b78980f66fa0c3  virtualjaguar_libretro-android-arm64-v8a.so\n9188b547…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "c95dbec1affd75ea2d13561fcb2f107acf7419bd40f48a489e4c31a98f173286"
+    },
     {
       "id": "136098",
       "title": "【家用机】Snes9x TestBuild v1.63 R1624",
@@ -28,29 +97,6 @@
         "snes9x_core"
       ],
       "contentHash": "4ae5f7480acecacd1ed7708643455e8730f0f0186853732a0a008596f9a2a689"
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T08:04:09Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 每晚 `0b5ba41` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **提交** | [`0b5ba41`](https://github.com/libretro/virtualjaguar-libretro/commit/0b5ba41368501cc1eb8370f29fde1392a81a0310) |\n| **建成** | 2026-08-20 08:03 世界标准时间 |\n| **CI 运行** | [构建日志](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32341161047) |\n| **分行** | `develop` |\n\n> 自动构建 `develop` 尖端，每次推送时都会更换。它在所有 16 个目标上进行编译；它**未**通过测试套件或任何手动质量检查。为了获得稳定的版本，请使用[最新版本](https://github.com/libretro/virtualjaguar-libretro/releases/latest)。\n\n核心在启动时将其身份记录为 `v3.4.0 0b5ba41` — 在报告此版本的错误时引用该行。\n\n### 自前一晚以来的变化\n\n```\nf17a206 修复(netlink)：在设备不匹配检查中比较已解析的主机 (#501)\nbd774f0 ci：从 release/* 分支发布滚动预发布 (#507)\na40246f 测试（工具）：用于编译标志更改的交错 A/B 工具\n7d02147 ci：关闭开发合并问题，并观看每晚是否陈旧\nb76bc2b 修复（build）：使 classic_armv7_a7 的 -Ofast 真正生效（#516）\ndbf98e7 文档（build）：不要声称 -O3 测量涵盖了 unix/win\nf92c531 版本：-O3 在其测量的平台上，通过 OPT_LEVEL 轴\n988af54 文档：更正 v3.4.0 的 BIOS 参考和外设声明\n74aef8d Chore(github)：将标签器和 dependentabot 指向去表情符号标签名称\n05f7ca2 文档：记录实时网站是从分叉发布的，而不是 pages.yml\ncf14f1b 文档（站点）：v3.4.0 复制通行证\n```\n\n### 文物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每个平台都附带一个 `-debug.tar.gz` 的分割调试符号；将其提取到二进制文件旁边以获得符号化的回溯。\n\n### SHA-256 校验和\n\n使用 `sha256sum --check SHA256SUMS.txt` (Linux) 或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) 进行验证。请参阅 [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md)。\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332 cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134 cue2cdi-macos-universal\n52becefd47d6356cb25218f35eef6a4dcd9661bdb5a2786e4ad37f89d4624c91 cue2cdi-windows-x86_64.exe\nb79f7cdc933955b66f0dc971a739dd7156e5bec36b1d6b4793bd5bb171924e16 virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\n9105996bd110dc86c4e51afab4983519b082d1b9bf6325ceda90fa145f659f74 vir…",
-      "originalContent": "### Nightly `0b5ba41` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`0b5ba41`](https://github.com/libretro/virtualjaguar-libretro/commit/0b5ba41368501cc1eb8370f29fde1392a81a0310) |\n| **Built** | 2026-08-20 08:03 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32341161047) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.4.0 0b5ba41` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\nf17a206 fix(netlink): compare the RESOLVED host in the device-mismatch check (#501)\nbd774f0 ci: publish a rolling prerelease from release/* branches (#507)\na40246f test(tools): interleaved A/B harness for compile-flag changes\n7d02147 ci: close issues on develop merges, and watch the nightly for staleness\nb76bc2b fix(build): make classic_armv7_a7's -Ofast actually take effect (#516)\ndbf98e7 docs(build): don't claim unix/win are covered by the -O3 measurement\nf92c531 build: -O3 on the platforms it was measured on, via an OPT_LEVEL axis\n988af54 docs: correct the BIOS reference and the peripheral claims for v3.4.0\n74aef8d chore(github): point labeler and dependabot at the de-emojied label names\n05f7ca2 docs: record that the live website is published from the fork, not pages.yml\ncf14f1b docs(site): v3.4.0 copy pass\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n52becefd47d6356cb25218f35eef6a4dcd9661bdb5a2786e4ad37f89d4624c91  cue2cdi-windows-x86_64.exe\nb79f7cdc933955b66f0dc971a739dd7156e5bec36b1d6b4793bd5bb171924e16  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\n9105996bd110dc86c4e51afab4983519b082d1b9bf6325ceda90fa145f659f74  vir…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "afc0c8e7d596fede419796984d5cd24c31268d1cfde2c3075c445c097c2d5c02"
     },
     {
       "id": "android-release-fbneo_core-latest",
@@ -255,29 +301,6 @@
       "contentHash": "4ad3e7ca078031ee4822f17bbf136b1e27cf811a95796799be3cb9e292f5c071"
     },
     {
-      "id": "android-release-armsx2-nightly-20260819",
-      "title": "【Android更新】ARMSX2 nightly-20260819",
-      "originalTitle": "ARMSX2 nightly-20260819 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-19T09:21:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260819",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260819，发布日期为2026年08月19日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260819。\n\n发布日期：2026年08月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n用于社区测试的自动夜间构建（未签名）。\n\n每个下载都被命名为 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`，因此构建\n下载后，来自不同夜晚的内容将保持清晰可辨。\n\n- macOS arm64：macOS-arm64.tar.xz\n- Linux arm64：大多数发行版上的 Linux-arm64-4K-pages.AppImage，或 Asahi Linux 和其他 Apple Silicon 内核上的 16K 发行版（如果不确定，请运行 getconf PAGESIZE）\n- Windows arm64：Windows-arm64.zip\n- Linux arm64 上的 RetroArch：Linux-arm64-libretro-core.tar.zst，4K 页构建\n- 裸屏 kmsdrm 手持设备：Linux-arm64-SDL-handheld.tar.zst，4K 页构建（Rocknix 和 Batocera 运行合成器，因此请改用那里的 Qt AppImage）\n- Android：Android-arm64.apk，侧面加载它\n- iOS：iOS-arm64.ipa，未签名，旁加载\n\n## 新消息\n- GameDB：由 DISPFB blit 为 NASCAR Thunder 2002 到 NASCAR 06 提供的内部 FPS\n- iOS：将“下载着色器”放在“预设”下，可以访问它\n- iOS：解码启动链接的文件名一次，而不是两次\n- iOS：从应用程序内部下载 RetroArch 着色器集合\n- iOS：分支审查发现三个缺陷，其中两个没有提及\n- iOS：在设备外解析着色器目录，并对可能发布的内容进行签名\n- iOS：让一款游戏保留自己的着色器预设\n- iOS：为着色器控件提供自己的页面和暂停菜单路线\n- iOS：固定着色器的预缩放，因此升级不会使帧变黑\n- iOS：将着色器链及其参数放入设置中\n- iOS：在 Metal 渲染器上运行 RetroArch 着色器链\n- EE 记录：也停止在未知 MMIO 上引发 TLB 未命中\n- 测试：固定 I 立即数以防止微存储器重写\n- microVU：在 IbitHack 下读取运行时的 I 立即数\n- EE rec：停止提高 TLB 未命中，匹配 x86\n- 测试：固定rec的TLB未命中转移，禁用\n- 测试：将 VU FMAC 的范围固定在控制台上\n\n完整变更日志：https://github.com/ARMSX2/ARMSX2/compare/nightly-20260817...7f0ae7a6c689b5b36eccc61b7adb480f65c7a3a3",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GameDB: internal FPS by DISPFB blit for NASCAR Thunder 2002 through NASCAR 06\n- iOS: put Download Shaders under Preset, where it can be reached\n- iOS: decode a launch link's filename once, not twice\n- iOS: download the RetroArch shader collection from inside the app\n- iOS: three defects the branch review found, two of them silent\n- iOS: resolve the shader catalogue off-device, and sign what it may ship\n- iOS: let one game keep its own shader preset\n- iOS: give the shader controls their own page and a pause-menu route\n- iOS: clamp a shader's prescale so upscaling cannot blacken the frame\n- iOS: put the shader chain and its parameters in settings\n- iOS: run RetroArch shader chains on the Metal renderer\n- EE rec: stop raising TLB misses on unknown MMIO too\n- Tests: pin the I immediate against a rewrite of micro memory\n- microVU: read the I immediate at run time under IbitHack\n- EE rec: stop raising TLB misses, matching x86\n- Tests: pin the rec's TLB-miss divert, disabled\n- Tests: pin the VU FMAC's range against the console\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260817...7f0ae7a6c689b5b36eccc61b7adb480f65c7a3a3",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "c75ccb42b82bd6ffd8fd720039a808268a147e88ff20f2c6513268eb197918b4"
-    },
-    {
       "id": "136066",
       "title": "【家用机】Redream v1.5.0.1239",
       "originalTitle": "[Consoles de salon] Redream v1.5.0.1239",
@@ -320,29 +343,6 @@
         "gamenative"
       ],
       "contentHash": "d59ec3f6a2b7d393780d8fb14bae767b607efc8e5a403543fb1c63fcc20c1e6f"
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-18T15:17:35Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月18日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n## 提交\n- 保存状态选择器关闭时清除列表（[Stenzek](https://github.com/stenzek/duckstation/commit/d954b7a3d51c364a9e74ce2214a882b3c48e5c5b)）\n- 不要立即修剪同一帧中排队的纹理（[Stenzek](https://github.com/stenzek/duckstation/commit/b25e2358b82ff0b2f91e2290dfff553b864bcb62)）\n- 添加动画以保存状态选择器（[Stenzek](https://github.com/stenzek/duckstation/commit/0bf64996cfd83d4c16e54e15026b98af27c3d7e3)）\n- 关闭设备开关上的保存状态选择器 ([Stenzek](https://github.com/stenzek/duckstation/commit/25783d844e3ef587237cfd1081b47b7f1d567487))",
-      "originalContent": "## Commits\n- Clear list on save state selector close ([Stenzek](https://github.com/stenzek/duckstation/commit/d954b7a3d51c364a9e74ce2214a882b3c48e5c5b))\n- Don't immediately trim textures queued in same frame ([Stenzek](https://github.com/stenzek/duckstation/commit/b25e2358b82ff0b2f91e2290dfff553b864bcb62))\n- Add animation to save state selector ([Stenzek](https://github.com/stenzek/duckstation/commit/0bf64996cfd83d4c16e54e15026b98af27c3d7e3))\n- Close save state selector on device switch ([Stenzek](https://github.com/stenzek/duckstation/commit/25783d844e3ef587237cfd1081b47b7f1d567487))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "19fac7ce10e0364c718cfc054961325ba3a707418894c3f17c3de0b439516676"
     },
     {
       "id": "136061",
@@ -1075,20 +1075,20 @@
       "contentHash": "354f04fc3e98e53b846e6c81b71f8af322017f19a221ff1cc7c0fbe6d8de9b01"
     },
     {
-      "id": "android-release-mame4droid-1-38-2",
-      "title": "【Android更新】MAME4droid 1.38.2",
-      "originalTitle": "MAME4droid 1.38.2 Android release",
+      "id": "android-release-mame4droid-1-38-3",
+      "title": "【Android更新】MAME4droid 1.38.3",
+      "originalTitle": "MAME4droid 1.38.3 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
       "publishedAt": "2026-08-03T11:30:56Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.38.2",
+      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.38.3",
       "imageUrl": "asset://assets/emulators/mame4droid.png",
       "officialUrl": "https://github.com/seleuco/MAME4droid-Current",
-      "summary": "MAME4droid 发布 Android 新版本 1.38.2，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
-      "content": "MAME4droid 已发布 Android 最新版本 1.38.2。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n1.38.2 中的新增功能：网络游戏菜单/Lua、触摸光枪修复、完整模拟区域和矢量优化\r\n\r\n网络游戏\r\n- MAME 的菜单和 Lua 插件现在可以在网络游戏期间使用：菜单组合是\r\n  通过侧通道拦截并从同步输入中剥离。\r\n- 新的“允许网络游戏中使用 Lua 插件”首选项，默认关闭\r\n\r\n触摸光枪\r\n- 将地图瞄准画布内的游戏屏幕而不是整个视图，\r\n  使用图稿或整个模拟区域修复向边缘的漂移。\r\n- 长按现在在实时计时器上运行，而不是等待触摸事件，并且\r\n  将踏板踩在物理或虚拟按钮上不再阻挡射击。\r\n\r\n视频和分辨率\r\n- 新的“完整模拟区域”首选项：手动 MAME 整个可用的区域\r\n  分辨率，以便可以缩放和裁剪艺术品。取代“缩放到窗口”。\r\n- 旋转时重新应用本机分辨率并使用真实的可绘制区域，\r\n  将横向画布固定为纵向和黑色边带。\r\n\r\n矢量和 HDR\r\n- 八角形 8 抽头绽放内核，具有 FBO 相对金字塔深度：圆形光晕\r\n  并且在任何分辨率或 FBO 尺度下都具有相同的光扩散。\n- 混合抗肥胖面膜，使饱和光束雕刻出像白色艺术品一样的艺术品，\r\n  加上 HDR 显示器上更受限制的光晕和自动曝光。\r\n\r\n****\r\n\r\n## 发生了什么变化\r\n\r\n* 最高可达 MAME 0.289，带有 Sega Model 1 改进：图形修复、更好的 Virtua Fighter 碰撞检测以及修复 Wing War 的 DSP 补丁。音频和核心稳定性：修复了使用 SCSP 声音芯片的游戏以及广泛使用的 PowerPC 和 68k CPU 系列的主要错误修复，使广泛的仿真系统受益。新增内容：世嘉的非传统街机游戏 Flash Beats 现在可以与新运行的类似 NES 的即插即用系统 (Lexibook) 一起玩。扩展硬件：支持 NS32000 系列 CPU 以及针对 NEC PC-6001 系列的大量修复。 （有关更改的完整列表，请访问 MAME 官方网站）\r\n\r\n* 修复 @FlykeSpice 上游 mame 破坏性更改后构建的 myosd 源文件 \r\n\r\n* 最高支持Android 17",
-      "originalContent": "New in 1.38.2: Netplay menu/Lua, touch lightgun fixes, full emulation area and vector polish\r\n\r\nNetplay\r\n- MAME's menu and Lua plugins now work during netplay: the menu combo is\r\n  intercepted through a side channel and stripped from the synced input.\r\n- New \"Allow Lua plugins in netplay\" preference, off by default\r\n\r\nTouch lightgun\r\n- Aiming maps to the game screen inside the canvas instead of the whole view,\r\n  fixing the drift towards the edges with artwork or the full emulation area.\r\n- Long press now runs on a real timer instead of waiting for touch events, and\r\n  holding the pedal on a physical or virtual button no longer blocks the shot.\r\n\r\nVideo and resolution\r\n- New \"Full emulation area\" preference: hands MAME the whole available\r\n  resolution so artworks can be zoomed and cropped. Replaces \"Zoom to window\".\r\n- Native resolution is re-applied on rotation and uses the real drawable area,\r\n  fixing the landscape-shaped canvas in portrait and the black side bands.\r\n\r\nVectors and HDR\r\n- Octagonal 8-tap bloom kernel with FBO-relative pyramid depth: round halos\r\n  and the same optical spread at any resolution or FBO scale.\r\n- Hybrid anti-fattening mask so saturated beams carve artwork like white ones,\r\n  plus a more restrained bloom and auto-exposure on HDR displays.\r\n\r\n****\r\n\r\n## What's Changed\r\n\r\n* Up to MAME 0.289 with Sega Model 1 Improvements: Graphical fixes, better collision detection for Virtua Fighter, and DSP patches fixing Wing War. Audio & Core Stability: Fixes for games using the SCSP sound chip and major bug fixes for the widely-used PowerPC and 68k CPU families, benefiting a wide range of emulated systems. New Additions: Sega's unconventional arcade game Flash Beats is now playable, alongside newly working NES-like plug-and-play systems (Lexibook). Expanded Hardware: Support for NS32000 family CPUs and numerous fixes for the NEC PC-6001 family. (For a full list of changes, visit the official MAME website)\r\n\r\n* Fix myosd source files build after upstream mame breaking changes by @FlykeSpice \r\n\r\n* Up to Android 17",
+      "summary": "MAME4droid 发布 Android 新版本 1.38.3，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
+      "content": "MAME4droid 已发布 Android 最新版本 1.38.3。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n1.38.3 中的新增功能：控制器返工：每个玩家 10 个按钮、编号命名和保存状态修复\r\n\r\n- 每个玩家有两个额外的游戏手柄按钮（总共 10 个），用于带有后拨片的游戏手柄\r\n  或全脸簇。\r\n- 映射屏幕中的按钮从字母重命名为数字（BTN1..BTN10），\r\n  屏幕艺术和 OSD，因此它们不再与键盘的 A/B/X/Y 发生冲突。\r\n- 删除保存状态现在通过SAF，所以它真的从\r\n  MAME 的列表而不是作为陈旧的缓存条目徘徊。\r\n- 保存/加载状态菜单：每个面按钮都可以命名一个插槽，BTN1和BTN2\r\n  包括在内。\r\n\r\n注意：自定义控制器映射在升级时重置为默认值，因为\r\n  添加的按钮会移动每个存储的索引。\r\n\r\n****\r\n\r\n1.38.2 中的新增功能：网络游戏菜单/Lua、触摸光枪修复、完整模拟区域和矢量优化\r\n\r\n网络游戏\r\n- MAME 的菜单和 Lua 插件现在可以在网络游戏期间使用：菜单组合是\r\n  通过侧通道拦截并从同步输入中剥离。\r\n- 新的“允许网络游戏中使用 Lua 插件”首选项，默认关闭\r\n\r\n触摸光枪\r\n- 将地图瞄准画布内的游戏屏幕而不是整个视图，\n使用图稿或整个模拟区域修复向边缘的漂移。\r\n- 长按现在在实时计时器上运行，而不是等待触摸事件，并且\r\n  将踏板踩在物理或虚拟按钮上不再阻挡射击。\r\n\r\n视频和分辨率\r\n- 新的“完整模拟区域”首选项：手动 MAME 整个可用的区域\r\n  分辨率，以便可以缩放和裁剪艺术品。取代“缩放到窗口”。\r\n- 旋转时重新应用本机分辨率并使用真实的可绘制区域，\r\n  将横向画布固定为纵向和黑色边带。\r\n\r\n矢量和 HDR\r\n- 八角形 8 抽头绽放内核，具有 FBO 相对金字塔深度：圆形光环\r\n  并且在任何分辨率或 FBO 尺度下都具有相同的光扩散。\r\n- 混合抗肥胖面膜，使饱和光束雕刻出像白色艺术品一样的艺术品，\r\n  加上 HDR 显示器上更受限制的光晕和自动曝光。\r\n\r\n****\r\n\r\n## 发生了什么变化\n* 最高可达 MAME 0.289，带有 Sega Model 1 改进：图形修复、更好的 Virtua Fighter 碰撞检测以及修复 Wing War 的 DSP 补丁。音频和核心稳定性：修复了使用 SCSP 声音芯片的游戏以及广泛使用的 PowerPC 和 68k CPU 系列的主要错误修复，使广泛的仿真系统受益。新增内容：世嘉的非传统街机游戏 Flash Beats 现在可以与新运行的类似 NES 的即插即用系统 (Lexibook) 一起玩。扩展硬件：支持 NS32000 系列 CPU 以及针对 NEC PC-6001 系列的大量修复。 （有关更改的完整列表，请访问 MAME 官方网站）\r\n\r\n* 修复 @FlykeSpice 上游 mame 破坏性更改后构建的 myosd 源文件 \r\n\r\n* 最高支持Android 17",
+      "originalContent": "New in 1.38.3: Controller rework: 10 buttons per player, numbered naming and savestate fixes\r\n\r\n- Two extra gamepad buttons per player (10 total), for pads with back paddles\r\n  or a full face cluster.\r\n- Buttons renamed from letters to numbers (BTN1..BTN10) in the mapping screen,\r\n  the on-screen art and the OSD, so they no longer clash with the pad's A/B/X/Y.\r\n- Deleting a savestate now goes through SAF, so it really disappears from\r\n  MAME's list instead of lingering as a stale cache entry.\r\n- Save/load state menus: every face button can name a slot, BTN1 and BTN2\r\n  included.\r\n\r\nNOTE: custom controller mappings reset to defaults on upgrade, since the\r\n  added buttons shifted every stored index.\r\n\r\n****\r\n\r\nNew in 1.38.2: Netplay menu/Lua, touch lightgun fixes, full emulation area and vector polish\r\n\r\nNetplay\r\n- MAME's menu and Lua plugins now work during netplay: the menu combo is\r\n  intercepted through a side channel and stripped from the synced input.\r\n- New \"Allow Lua plugins in netplay\" preference, off by default\r\n\r\nTouch lightgun\r\n- Aiming maps to the game screen inside the canvas instead of the whole view,\r\n  fixing the drift towards the edges with artwork or the full emulation area.\r\n- Long press now runs on a real timer instead of waiting for touch events, and\r\n  holding the pedal on a physical or virtual button no longer blocks the shot.\r\n\r\nVideo and resolution\r\n- New \"Full emulation area\" preference: hands MAME the whole available\r\n  resolution so artworks can be zoomed and cropped. Replaces \"Zoom to window\".\r\n- Native resolution is re-applied on rotation and uses the real drawable area,\r\n  fixing the landscape-shaped canvas in portrait and the black side bands.\r\n\r\nVectors and HDR\r\n- Octagonal 8-tap bloom kernel with FBO-relative pyramid depth: round halos\r\n  and the same optical spread at any resolution or FBO scale.\r\n- Hybrid anti-fattening mask so saturated beams carve artwork like white ones,\r\n  plus a more restrained bloom and auto-exposure on HDR displays.\r\n\r\n****\r\n\r\n## What's Changed\r\n\r\n* Up to MAME 0.289 with Sega Model 1 Improvements: Graphical fixes, better collision detection for Virtua Fighter, and DSP patches fixing Wing War. Audio & Core Stability: Fixes for games using the SCSP sound chip and major bug fixes for the widely-used PowerPC and 68k CPU families, benefiting a wide range of emulated systems. New Additions: Sega's unconventional arcade game Flash Beats is now playable, alongside newly working NES-like plug-and-play systems (Lexibook). Expanded Hardware: Support for NS32000 family CPUs and numerous fixes for the NEC PC-6001 family. (For a full list of changes, visit the official MAME website)\r\n\r\n* Fix myosd source files build after upstream mame breaking changes by @FlykeSpice \r\n\r\n* Up to Android 17",
       "platforms": [
         "android"
       ],
@@ -1096,7 +1096,7 @@
         "mame4droid",
         "mame4droid_neogeo"
       ],
-      "contentHash": "e571b82fbd2fc33d5edfddac845390316411fb7b52132ad211fc77bb90827f50"
+      "contentHash": "f0c54ada9ee34cf3bc11aefcea704c435db73e16d3fc76d9364e17d6fe1d1942"
     },
     {
       "id": "android-release-dosbox_x-dosbox-x-v2026-08-02",
