@@ -92,6 +92,12 @@ jobs:
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: flutter build apk --release --no-tree-shake-icons --build-number=${{ github.run_number }}
 
+      - name: Generate APK SHA-256
+        run: |
+          cd build/app/outputs/flutter-apk
+          sha256sum app-release.apk > app-release.apk.sha256
+          sha256sum --check app-release.apk.sha256
+
       - name: Verify fixed release signing certificate
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         run: |
@@ -130,7 +136,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: emuhub-apk
-          path: build/app/outputs/flutter-apk/*.apk
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-release.apk.sha256
           retention-days: 90
           if-no-files-found: error
 
@@ -140,7 +148,9 @@ jobs:
         with:
           tag_name: v1.0.${{ github.run_number }}
           name: EmuHub v1.0.${{ github.run_number }}
-          files: build/app/outputs/flutter-apk/app-release.apk
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-release.apk.sha256
           generate_release_notes: true
           draft: false
           prerelease: false

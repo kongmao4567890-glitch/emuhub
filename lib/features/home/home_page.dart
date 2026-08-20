@@ -10,6 +10,7 @@ import '../../data/models/console.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
+import '../app_update/app_update_prompt.dart';
 import '../emulator/emulator_detail_page.dart' show findEmulator;
 import '../news/news_widgets.dart';
 
@@ -47,12 +48,20 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   /// 是否已完成首次更新检查（防止重复触发）。
   bool _firstLaunchCheckDone = false;
+  bool _appUpdateCheckStarted = false;
 
   @override
   Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
     final cachedVersionsAsync =
         ref.watch(_cachedVersionsStreamProvider);
+
+    if (!_appUpdateCheckStarted) {
+      _appUpdateCheckStarted = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) checkAndShowAppUpdate(context, ref);
+      });
+    }
 
     // 配置加载完成后，触发首次更新检查。
     // 必须在帧结束后触发：_checkUpdatesOnFirstLaunch 会同步调用
