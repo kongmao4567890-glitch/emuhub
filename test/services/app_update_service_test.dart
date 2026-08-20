@@ -9,7 +9,7 @@ void main() {
 
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
-  test('selects the greatest valid release build with APK and checksum',
+  test('reads the latest release from the quota-free update manifest',
       () async {
     final preferences = await SharedPreferences.getInstance();
     final dio = Dio();
@@ -20,12 +20,7 @@ void main() {
             Response<dynamic>(
               requestOptions: options,
               statusCode: 200,
-              data: [
-                _release(210),
-                _release(212, checksum: false),
-                _release(211),
-                _release(220, draft: true),
-              ],
+              data: _manifest(211),
             ),
           );
         },
@@ -54,7 +49,7 @@ void main() {
           Response<dynamic>(
             requestOptions: options,
             statusCode: 200,
-            data: [_release(211)],
+            data: _manifest(211),
           ),
         ),
       ),
@@ -66,6 +61,41 @@ void main() {
     );
 
     expect((await service.checkForUpdate()).hasUpdate, isFalse);
+  });
+
+  test('turns GitHub 403 into a concise user-facing error', () async {
+    final preferences = await SharedPreferences.getInstance();
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) => handler.reject(
+          DioException(
+            requestOptions: options,
+            response: Response<dynamic>(
+              requestOptions: options,
+              statusCode: 403,
+            ),
+            type: DioExceptionType.badResponse,
+          ),
+        ),
+      ),
+    );
+    final service = AppUpdateService(
+      preferences: preferences,
+      dio: dio,
+      currentBuildLoader: () async => 1,
+    );
+
+    expect(
+      service.checkForUpdate(),
+      throwsA(
+        isA<AppUpdateException>().having(
+          (error) => error.toString(),
+          'message',
+          'GitHub 暂时拒绝访问，请稍后重试',
+        ),
+      ),
+    );
   });
 
   test('throttles automatic checks and repeated prompts', () async {
@@ -103,32 +133,17 @@ void main() {
   });
 }
 
-Map<String, dynamic> _release(
-  int build, {
-  bool checksum = true,
-  bool draft = false,
-}) {
+Map<String, dynamic> _manifest(int build) {
   return {
-    'tag_name': 'v1.0.$build',
+    'schemaVersion': 1,
+    'buildNumber': build,
+    'tagName': 'v1.0.$build',
     'name': 'EmuHub v1.0.$build',
-    'body': 'Release notes',
-    'draft': draft,
-    'prerelease': false,
-    'published_at': '2026-08-20T01:00:00Z',
-    'assets': [
-      {
-        'name': 'app-release.apk',
-        'size': 1024,
-        'browser_download_url':
-            'https://example.com/v1.0.$build/app-release.apk',
-      },
-      if (checksum)
-        {
-          'name': 'app-release.apk.sha256',
-          'size': 96,
-          'browser_download_url':
-              'https://example.com/v1.0.$build/app-release.apk.sha256',
-        },
-    ],
+    'notes': 'Release notes',
+    'publishedAt': '2026-08-20T01:00:00Z',
+    'apkSize': 1024,
+    'apkUrl': 'https://example.com/v1.0.$build/app-release.apk',
+    'checksumUrl':
+        'https://example.com/v1.0.$build/app-release.apk.sha256',
   };
 }

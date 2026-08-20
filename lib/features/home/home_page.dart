@@ -483,6 +483,8 @@ class _RecentUpdateCard extends StatelessWidget {
                       width: 20,
                       height: 20,
                       fit: BoxFit.cover,
+                      cacheWidth: 64,
+                      gaplessPlayback: true,
                       errorBuilder: (_, __, ___) => Text(
                         console.icon,
                         style: const TextStyle(fontSize: 16),
@@ -605,6 +607,9 @@ class _RecommendedConsoleCard extends StatelessWidget {
                 ? Image.asset(
                     console.imagePath,
                     fit: BoxFit.cover,
+                    cacheWidth: 512,
+                    gaplessPlayback: true,
+                    filterQuality: FilterQuality.medium,
                     errorBuilder: (_, __, ___) => _buildEmojiBg(cs),
                   )
                 : _buildEmojiBg(cs),

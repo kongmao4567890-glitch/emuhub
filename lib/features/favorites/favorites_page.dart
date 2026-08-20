@@ -140,6 +140,8 @@ class FavoritesPage extends ConsumerWidget {
                         width: 24,
                         height: 24,
                         fit: BoxFit.cover,
+                        cacheWidth: 72,
+                        gaplessPlayback: true,
                         errorBuilder: (_, __, ___) => Text(
                           console.icon,
                           style: const TextStyle(fontSize: 18),

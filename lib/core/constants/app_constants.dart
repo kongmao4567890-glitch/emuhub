@@ -17,8 +17,8 @@ class AppConstants {
 
   /// App 自身更新检查所使用的 GitHub 仓库地址。
   ///
-  /// 由 App 更新检查逻辑请求该仓库的 Releases 接口，
-  /// 与 [appVersion] 比较以判断是否有新版本。
+  /// 由 App 更新检查逻辑读取最新 Release 附带的轻量清单，
+  /// 避免匿名 GitHub API 配额导致 403。
   static const String githubRepo =
       'https://github.com/kongmao4567890-glitch/emuhub';
 

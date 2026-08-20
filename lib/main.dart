@@ -14,6 +14,12 @@ import 'services/notification_service.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // 封面图全部来自 APK 资源。按目标尺寸解码后允许缓存完整机种库，
+  // 避免滚动离屏后因默认 100 MB 上限被逐出并再次解码闪烁。
+  PaintingBinding.instance.imageCache
+    ..maximumSize = 600
+    ..maximumSizeBytes = 160 << 20;
+
   // 提前同步加载 SharedPreferences，并通过 override 注入 ProviderScope，
   // 使 settingsRepositoryProvider / appSettingsProvider 可以同步访问，
   // 避免异步加载期间的 requireValue 竞态崩溃。

@@ -51,6 +51,15 @@ class AppUpdateCheckResult {
   bool get hasUpdate => release != null;
 }
 
+class AppUpdateException implements Exception {
+  const AppUpdateException(this.message);
+
+  final String message;
+
+  @override
+  String toString() => message;
+}
+
 /// Checks, downloads, verifies and launches installation of EmuHub releases.
 ///
 /// The online build number is both the Android `versionCode` and the last
@@ -81,6 +90,7 @@ class AppUpdateService {
 
   static const MethodChannel _platform =
       MethodChannel('com.emuhub.app/app_update');
+  static const String _releaseManifestName = 'app-update.json';
   static const Duration automaticCheckInterval = Duration(hours: 6);
   static const Duration automaticPromptInterval = Duration(hours: 12);
   static const String _lastAutomaticCheckKey =
@@ -128,23 +138,32 @@ class AppUpdateService {
 
   Future<AppUpdateCheckResult> checkForUpdate() async {
     final installedBuild = await currentBuildNumber();
-    final response = await _dio.get<dynamic>(
-      '${AppConstants.githubRepo.replaceFirst('https://github.com/', 'https://api.github.com/repos/')}/releases',
-      queryParameters: const {'per_page': 20},
-    );
-    final releases = _asList(response.data)
-        .map(_asMap)
-        .map(_parseRelease)
-        .whereType<AppRelease>()
-        .toList()
-      ..sort((a, b) => b.buildNumber.compareTo(a.buildNumber));
+    final manifestUrl =
+        '${AppConstants.githubRepo}/releases/latest/download/'
+        '$_releaseManifestName';
+    AppRelease newest;
+    try {
+      final response = await _dio.get<dynamic>(
+        manifestUrl,
+        options: Options(
+          responseType: ResponseType.json,
+          headers: const {'Accept': 'application/json'},
+        ),
+      );
+      newest = _parseManifest(_asMap(response.data));
+    } on DioException catch (error) {
+      final status = error.response?.statusCode;
+      if (status == 403) {
+        throw const AppUpdateException('GitHub 暂时拒绝访问，请稍后重试');
+      }
+      throw const AppUpdateException('无法连接应用更新服务器，请检查网络后重试');
+    } on FormatException catch (error) {
+      throw AppUpdateException(error.message.toString());
+    }
 
-    final newest = releases.isEmpty ? null : releases.first;
     return AppUpdateCheckResult(
       installedBuildNumber: installedBuild,
-      release: newest != null && newest.buildNumber > installedBuild
-          ? newest
-          : null,
+      release: newest.buildNumber > installedBuild ? newest : null,
     );
   }
 
@@ -247,27 +266,19 @@ class AppUpdateService {
     return digest.toString().toLowerCase() == expectedHash.toLowerCase();
   }
 
-  AppRelease? _parseRelease(Map<String, dynamic> release) {
-    if (release['draft'] == true || release['prerelease'] == true) return null;
-    final tag = release['tag_name']?.toString().trim() ?? '';
+  AppRelease _parseManifest(Map<String, dynamic> release) {
+    final tag = release['tagName']?.toString().trim() ?? '';
     final buildMatch = RegExp(r'^v1\.0\.(\d+)$').firstMatch(tag);
-    final buildNumber = int.tryParse(buildMatch?.group(1) ?? '');
-    if (buildNumber == null) return null;
-
-    Map<String, dynamic>? apkAsset;
-    Map<String, dynamic>? checksumAsset;
-    for (final assetValue in _asList(release['assets'])) {
-      final asset = _asMap(assetValue);
-      final name = asset['name']?.toString() ?? '';
-      if (name == 'app-release.apk') apkAsset = asset;
-      if (name == 'app-release.apk.sha256') checksumAsset = asset;
+    final tagBuild = int.tryParse(buildMatch?.group(1) ?? '');
+    final buildNumber = _asInt(release['buildNumber']);
+    final apkUrl = release['apkUrl']?.toString() ?? '';
+    final checksumUrl = release['checksumUrl']?.toString() ?? '';
+    if (tagBuild == null || buildNumber <= 0 || tagBuild != buildNumber) {
+      throw const FormatException('应用更新清单的版本号无效');
     }
-    if (apkAsset == null || checksumAsset == null) return null;
-
-    final apkUrl = apkAsset['browser_download_url']?.toString() ?? '';
-    final checksumUrl =
-        checksumAsset['browser_download_url']?.toString() ?? '';
-    if (apkUrl.isEmpty || checksumUrl.isEmpty) return null;
+    if (apkUrl.isEmpty || checksumUrl.isEmpty) {
+      throw const FormatException('应用更新清单缺少下载地址');
+    }
 
     return AppRelease(
       buildNumber: buildNumber,
@@ -275,12 +286,12 @@ class AppUpdateService {
       name: release['name']?.toString().trim().isNotEmpty == true
           ? release['name'].toString().trim()
           : tag,
-      notes: release['body']?.toString().trim() ?? '',
+      notes: release['notes']?.toString().trim() ?? '',
       apkUrl: apkUrl,
       checksumUrl: checksumUrl,
-      apkSize: _asInt(apkAsset['size']),
+      apkSize: _asInt(release['apkSize']),
       publishedAt: DateTime.tryParse(
-        release['published_at']?.toString() ?? '',
+        release['publishedAt']?.toString() ?? '',
       ),
     );
   }
@@ -292,11 +303,6 @@ class AppUpdateService {
   int _asInt(dynamic value) {
     if (value is int) return value;
     return int.tryParse(value?.toString() ?? '') ?? 0;
-  }
-
-  List<dynamic> _asList(dynamic value) {
-    if (value is List) return value;
-    return const <dynamic>[];
   }
 
   Map<String, dynamic> _asMap(dynamic value) {

@@ -96,11 +96,27 @@ jobs:
           --build-number=${{ github.run_number }}
           --dart-define=APP_VERSION=1.0.${{ github.run_number }}
 
-      - name: Generate APK SHA-256
+      - name: Generate APK SHA-256 and update manifest
         run: |
           cd build/app/outputs/flutter-apk
           sha256sum app-release.apk > app-release.apk.sha256
           sha256sum --check app-release.apk.sha256
+          apk_size=$(stat -c '%s' app-release.apk)
+          published_at=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+          cat > app-update.json <<EOF
+          {
+            "schemaVersion": 1,
+            "buildNumber": ${{ github.run_number }},
+            "tagName": "v1.0.${{ github.run_number }}",
+            "name": "EmuHub v1.0.${{ github.run_number }}",
+            "notes": "请查看 GitHub Release 页面了解本次更新内容。",
+            "apkUrl": "https://github.com/${{ github.repository }}/releases/download/v1.0.${{ github.run_number }}/app-release.apk",
+            "checksumUrl": "https://github.com/${{ github.repository }}/releases/download/v1.0.${{ github.run_number }}/app-release.apk.sha256",
+            "apkSize": $apk_size,
+            "publishedAt": "$published_at"
+          }
+          EOF
+          python3 -m json.tool app-update.json >/dev/null
 
       - name: Verify fixed release signing certificate
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
@@ -143,6 +159,7 @@ jobs:
           path: |
             build/app/outputs/flutter-apk/app-release.apk
             build/app/outputs/flutter-apk/app-release.apk.sha256
+            build/app/outputs/flutter-apk/app-update.json
           retention-days: 90
           if-no-files-found: error
 
@@ -155,6 +172,7 @@ jobs:
           files: |
             build/app/outputs/flutter-apk/app-release.apk
             build/app/outputs/flutter-apk/app-release.apk.sha256
+            build/app/outputs/flutter-apk/app-update.json
           generate_release_notes: true
           draft: false
           prerelease: false
