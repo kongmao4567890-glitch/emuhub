@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T06:21:50.780990Z",
+  "retentionDays": 90,
+  "source": {
+    "name": "Emu-France",
+    "url": "https://www.emu-france.com/",
+    "feedUrl": "https://www.emu-france.com/flux/rss/"
+  },
+  "articles": [
+    {
+      "id": "136089",
+      "title": "【家用机】Flycast v2.7",
+      "originalTitle": "[Consoles de salon] Flycast v2.7",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T17:32:18Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136089-consoles-de-salon-flycast-v2-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2020/04/flycast.png",
+      "officialUrl": "https://github.com/flyinghead/flycast",
+      "summary": "Flycast 是基于 Reicast 的 Sega Dreamcast、Naomi 1 & 2、Sega SystemSP 和 Atomiswave 的跨平台模拟器。信息在这里。 它支持以下格式的游戏： - 世嘉 Dreamcast（CHD、CDI、GDI、CUE） - 使用 WinCE 的 SEGA Dreamcast - 世嘉 NAOMI / NAOMI 2（.zip、.7z、.dat/.lst） - SEGA NAOMI / N…",
+      "content": "Flycast 是基于 Reicast 的 Sega Dreamcast、Naomi 1 & 2、Sega SystemSP 和 Atomiswave 的跨平台模拟器。信息在这里。\n\n它支持以下格式的游戏：\n- 世嘉 Dreamcast（CHD、CDI、GDI、CUE）\n- 使用 WinCE 的 SEGA Dreamcast\n- 世嘉 NAOMI / NAOMI 2（.zip、.7z、.dat/.lst）\n- SEGA NAOMI / NAOMI 2 GD-ROM（.zip、.7z、.dat/.lst 和 .chd）\n- 解密的NAOMI游戏（.bin，不推荐）\n- Sammy Atomiswave (.zip, .7z)\n- SEGA 系统 SP（.zip、.7z、.dat/.lst 和 .chd）\n\n目前尚不支持 Hikaru 游戏。\n\n材质包可在此处获取。\n\n自 v2.6 以来的主要变化：\n\n新功能\n- 帧速率检测和节奏\n- 本地化（fr、hu、jp、pt_BR、sv）\n- 对 Airline Pilot、Sega Strike Fighter 和 Derby Owners Club 的多屏支持\n- 改进的调制解调器仿真\n- 通过 @RikkiGibson、@Tails86 和 @nexus382 改进了 DreamPicoPort 和 DreamPotato 支持\n- Android：Google 自动备份支持 VMU 保存和非易失性内存\n\n固定游戏\n- 航空公司飞行员（Naomi，多屏）\n- Cyber Troopers Virtual-On：清唱剧七巧板（日本，在线功能）\n-德比车主俱乐部（新）\n- 恐龙王（ZH，新）\n- DreamParaPara 作者：@dakrk（新）\n- F355 挑战（日本，在线功能）\n- 鱼的生活（新）\n- Love & Berry 3（ZH，新）\n- NFL 2K1、NFL 2K2、NBA 2K1、NBA 2K2（冻结）\n- Power Smash（在线延迟）\n- 符文玉（在线功能）\n- Samba de Amigo（Naomi，输入）\n- Sega Strike Fighter（娜奥米，多屏）\n\n此处提供了由西洋双陆棋定制的有关恢复用户界面中纹理过滤选项的构建（请参阅下文）。\n\n请注意，自提交 d450c84a 以来，纹理过滤/放大 (xBR) 选项已从界面中删除。开发人员解释这一选择的原因是，很少有游戏真正利用它，而且许多用户在任何地方都激活它，从而导致图形伪影、速度减慢、CPU 负载过高甚至崩溃，尤其是在移动设备上。但是，该功能仍然存在于引擎中，并且可以通过 emu.cfg 文件手动重新激活。涉及的参数有：\n\n渲染.TextureUpscale2 = 1\nrender.TextureUpscale = 1 # 最多 8\nrender.MaxFilteredTextureSize = 256 # 从 8 到 1024\npvr.MaxThreads = 3 # 从 1 到 8\n\n自动构建（调试）。",
+      "originalContent": "Flycast est un émulateur multiplateforme de Sega Dreamcast, Naomi 1 & 2, Sega SystemSP et Atomiswave qui est basé sur Reicast. Informations ici.\n\nIl prend en charge les jeux aux formats suivants:\n- SEGA Dreamcast (CHD, CDI, GDI, CUE)\n- SEGA Dreamcast utilisant WinCE\n- SEGA NAOMI / NAOMI 2 (.zip, .7z, .dat/.lst)\n- SEGA NAOMI / NAOMI 2 GD-ROM (.zip, .7z, .dat/.lst et .chd)\n- Jeux NAOMI décryptés (.bin, non recommandé)\n- Sammy Atomiswave (.zip, .7z)\n- SEGA System SP (.zip, .7z, .dat/.lst et .chd)\n\nIl ne prend pas encore en charge les jeux Hikaru.\n\nDes packs de textures sont disponibles ici.\n\nLes changements majeurs depuis la v2.6:\n\nNew features\n- Frame rate detection and pacing\n- Localization (fr, hu, jp, pt_BR, sv)\n- Multiscreen support for Airline Pilot, Sega Strike Fighter and Derby Owners Club\n- Improved modem emulation\n- improved DreamPicoPort and DreamPotato support by @RikkiGibson, @Tails86 and @nexus382\n- Android: Google Auto Backup support for VMU saves and non-volatile memory\n\nFixed Games\n- Airline Pilot (Naomi, multiscreen)\n- Cyber Troopers Virtual-On: Oratorio Tangram (JP, online features)\n- Derby Owners Club (new)\n- Dinosaur King (ZH, new)\n- DreamParaPara by @dakrk (new)\n- F355 Challenge (JP, online features)\n- Fish Life (new)\n- Love & Berry 3 (ZH, new)\n- NFL 2K1, NFL 2K2, NBA 2K1, NBA 2K2 (freeze)\n- Power Smash (online lag)\n- Rune Jade (online features)\n- Samba de Amigo (Naomi, inputs)\n- Sega Strike Fighter (Naomi, multiscreen)\n\nUn build customisé par Backgamon concernant la réintégration de l'option de filtrage de texture dans l'interface utilisateur (lire ci-dessous) est disponible ici.\n\nSachez que l’option de filtrage/upscaling des textures (xBR) a été retirée de l’interface depuis le commit d450c84a. Les développeurs expliquent ce choix par le fait que très peu de jeux en tirent réellement parti et que de nombreux utilisateurs l’activaient partout, provoquant des artefacts graphiques, des ralentissements, une forte charge CPU et même des crashs, surtout sur mobile. La fonctionnalité reste toutefois présente dans le moteur et peut être réactivée manuellement via le fichier emu.cfg. Les paramètres concernés sont:\n\nrend.TextureUpscale2 = 1\nrend.TextureUpscale = 1 # jusqu’à 8\nrend.MaxFilteredTextureSize = 256 # de 8 à 1024\npvr.MaxThreads = 3 # de 1 à 8\n\nBuilds automatiques (debug).",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "flycast",
+        "flycast_vmu_pc"
+      ],
+      "contentHash": "7396ee4eb3ab417fb3ca8820ea575cece6750c2c6969ce393f41f0969649147b"
+    },
+    {
+      "id": "136087",
+      "title": "【家用机】MesenCE v2.2.1 r20260819",
+      "originalTitle": "[Consoles de salon] MesenCE v2.2.1 r20260819",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-08-19T17:30:03Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136087-consoles-de-salon-mesence-v2-2-1-r20260819/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/mesen-ce.png",
+      "officialUrl": "https://github.com/nesdev-org/MesenCE",
+      "summary": "Mesen Community Edition 是一款适用于 Windows、Linux 和 macOS 的开源多系统模拟器，由 Mesen2 项目社区开发。它的目标是高精度、出色的兼容性，并为玩家和开发人员提供现代化的界面以及先进的工具。 MesenCE 最初是作为一个叉子诞生的，是为了弥补 Mesen2 的原始创建者 (Sour) 暂停开发的情况，现在已成为该项目的官方独家延续。",
+      "content": "Mesen Community Edition 是一款适用于 Windows、Linux 和 macOS 的开源多系统模拟器，由 Mesen2 项目社区开发。它的目标是高精度、出色的兼容性，并为玩家和开发人员提供现代化的界面以及先进的工具。\n\nMesenCE 最初是作为一个叉子诞生的，是为了弥补 Mesen2 的原始创建者 (Sour) 暂停开发的情况，现在已成为该项目的官方独家延续。面对社区的动态，Sour选择积极加入MesenCE团队，以便将未来的所有开发集中到那里。向完全社区管理的模型的转变允许更快地集成修复、改进的跨平台兼容性以及添加新功能，同时保留原始项目的卓越精神。\n\n变化：\n\nMesen 正在更名为 MesenCE，这是一个由 Sour 和各个社区成员维护的社区版本。所有的开发都将在这个新的分叉中进行，因此只要 Sour 离开项目，它就可以继续进行。\n- NES：彩虹映射器更新（#260）",
+      "originalContent": "Mesen Community Edition est un émulateur multi‑systèmes open‑source pour Windows, Linux et macOS, développé par la communauté à partir du projet Mesen2. Il vise une haute précision, une excellente compatibilité, et propose une interface moderne accompagnée d’outils avancés pour les joueurs comme pour les développeurs.\n\nNé initialement comme un fork pour pallier la mise en pause du développement de Mesen2 par son créateur original (Sour), MesenCE est désormais devenu la continuation officielle et exclusive du projet. Face à la dynamique communautaire, Sour a choisi de rejoindre activement l'équipe de MesenCE afin d'y centraliser tout le développement futur. Cette transition sous un modèle entièrement géré par la communauté permet d'intégrer plus rapidement les correctifs, d'améliorer la compatibilité multiplateforme et d'ajouter de nouvelles fonctionnalités, tout en préservant l’esprit d’excellence du projet d'origine.\n\nLes changements:\n\nMesen is becoming MesenCE, a Community Edition maintained by Sour and various community members. All development will occur in this new fork going forward so it can continue whenever Sour is away from the project.\n\n- NES: Rainbow mapper updates (#260)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mesence_pc"
+      ],
+      "contentHash": "c508c81b179fb4e0e5e911dc57a24309cb5c49b6f262463412cd13aadad51417"
+    },
+    {
+      "id": "136084",
+      "title": "【家用机】RPCN v1.9",
+      "originalTitle": "[Consoles de salon] RPCN v1.9",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T17:27:54Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136084-consoles-de-salon-rpcn-v1-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/09/rpcn.png",
+      "officialUrl": "https://github.com/RipleyTom/rpcn",
+      "summary": "它是一个在线研究和通信网络 (RPCN)，即与 RPCS3 一起使用的匹配服务器。 因此，GalCiv 引入了 RPCS3 中的网络游戏，GalCiv 开发了 RPCN，这是一个模拟 PlayStation 3 上执行的 P2P 匹配的开源服务器。RPCN 还可以用于与需要专用服务器来实现多人游戏功能的游戏的私有服务器进行通信。在这方面，需要自定义服务器的游戏将无法运行，除非设置了粉丝制作的私服。这超出了模拟器的范围，需要由社区开发。",
+      "content": "它是一个在线研究和通信网络 (RPCN)，即与 RPCS3 一起使用的匹配服务器。\n\n因此，GalCiv 引入了 RPCS3 中的网络游戏，GalCiv 开发了 RPCN，这是一个模拟 PlayStation 3 上执行的 P2P 匹配的开源服务器。RPCN 还可以用于与需要专用服务器来实现多人游戏功能的游戏的私有服务器进行通信。在这方面，需要自定义服务器的游戏将无法运行，除非设置了粉丝制作的私服。这超出了模拟器的范围，需要由社区开发。\n\n该版本的变化有：\n\n已添加\n- FlexBy：添加了奖杯同步命令\n\n杂项\n- 更新了依赖项\n- 修复了杂项\n\n兼容性列表在这里。\n更多信息请点击这里。",
+      "originalContent": "Il s'agit d'un réseau de recherche et de communication en ligne (RPCN), c'est à dire un serveur de matchmaking destiné à être utilisé avec RPCS3.\n\nLe Netplay dans RPCS3 est donc introduit par GalCiv, qui a développé RPCN, un serveur open-source qui émule le match-making P2P réalisé sur la PlayStation 3. RPCN peut également être utilisé pour communiquer avec des serveurs privés pour les jeux qui nécessitent un serveur dédié pour les fonctions multijoueurs. À cet égard, les jeux qui nécessitent un serveur personnalisé ne fonctionneront pas, à moins qu'un serveur privé créé par des fans ne soit mis en place. Cela sort du cadre de l'émulateur et devra être développé par la communauté.\n\nLes changements dans cette version sont:\n\nAdded\n- FlexBy: Added trophy sync commands\n\nMisc\n- Updated dependencies\n- Misc fixes\n\nListe de compatibilité ici.\nPlus d'infos ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "fe428373503063cb3a1dc21f007d766734b253f2b07cbed0730d7fb545e58f49"
+    },
+    {
+      "id": "136082",
+      "title": "【街机】PCSX2x6 v0.2.22",
+      "originalTitle": "[Arcade] PCSX2x6 v0.2.22",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T17:26:37Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136082-arcade-pcsx2x6-v0-2-22/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/pcsx2x6-logo.png",
+      "officialUrl": "https://github.com/PS2Homebrew-arcade/pcsx2x6",
+      "summary": "它是 PCSX2 模拟器的一个分支，可以模拟基于 PlayStation 2 架构的街机系统，即 System 246、System 256 和 Super System 256。最终，该项目还可以支持系统 147 和 148，以及 Konami Python 1 和 Python 2 平台及其 Bemani 变体（更多信息请点击此处）。",
+      "content": "它是 PCSX2 模拟器的一个分支，可以模拟基于 PlayStation 2 架构的街机系统，即 System 246、System 256 和 Super System 256。最终，该项目还可以支持系统 147 和 148，以及 Konami Python 1 和 Python 2 平台及其 Bemani 变体（更多信息请点击此处）。\n\n它是 PCSX2 模拟器的一个实验性分支，开发的目的是支持 Namco 基于 PlayStation 2 架构的街机系统。虽然 PCSX2 主要是为家庭控制台模拟而设计的，但该分支适应并扩展了其操作，以便重现 PS2 衍生街机柜的特定硬件。\n主要针对的系统是 Namco System 246、Namco System 256 和 Namco Super System 256，这些都是 2000 年代广泛使用的街机平台。这些卡基于与 PlayStation 2 非常接近的架构，但集成了用于街机室操作的各种附加组件：专用输入/输出接口、安全系统、特定媒体播放器和特定于某些游戏的外围设备。\n\n该分叉也有可能最终或部分支持 System 147 和 System 148 系统，这些系统也与 PlayStation 2 硬件生态系统共享技术链接。然而，与这些平台的实际兼容性水平仍然缺乏记录。\n该项目的主要目标是通过重用围绕 PCSX2 积累的大型代码库和知识，执行和保存为这些系统开发的街机游戏。这种方法避免了开发全新的模拟器，同时受益于多年来对 Emotion Engine 处理器、图形合成器图形处理器和 PlayStation 2 的各种协处理器的模拟的改进。\n\n与这些系统相关的标志性游戏包括《铁拳》系列（从《铁拳 4》开始）、《剑魂 II》、《剑魂 III：街机版》、《时间危机 3》、《时间危机 4》、《Battle Gear》、《偶像大师》以及 Namco、Capcom 和 Banpresto 在 2000 年代开发的几款作品。\n\n兼容性列表在这里。\n游戏补丁在这里。\n\n变化：\n\n- 低延迟音频",
+      "originalContent": "Il s'agit d'un fork de l'émulateur PCSX2 permettant d'émuler les systèmes d'arcade basés sur l'architecture de la PlayStation 2, à savoir les System 246, System 256 et Super System 256. À terme, le projet pourrait également prendre en charge les systèmes 147 et 148, ainsi que les plateformes Konami Python 1 et Python 2 et leurs variantes Bemani (Plus d'infos ici).\n\nIl s'agit d'un fork expérimental de l'émulateur PCSX2, développé dans le but de prendre en charge les systèmes d'arcade de Namco basés sur l'architecture PlayStation 2. Alors que PCSX2 est principalement conçu pour l'émulation de la console domestique, cette branche adapte et étend son fonctionnement afin de reproduire le matériel spécifique des bornes d'arcade dérivées de la PS2.\n\nLes systèmes principalement visés sont les Namco System 246, Namco System 256 et Namco Super System 256, des plateformes d'arcade largement utilisées dans les années 2000. Ces cartes reposent sur une architecture très proche de celle de la PlayStation 2, mais intègrent divers composants additionnels destinés à l'exploitation en salle d'arcade : interfaces d'entrées/sorties dédiées, systèmes de sécurité, lecteurs de médias spécifiques et périphériques propres à certains jeux.\n\nIl est également probable que le fork puisse, à terme ou partiellement, prendre en charge les systèmes System 147 et System 148, qui partagent eux aussi des liens techniques avec l'écosystème matériel PlayStation 2. Cependant, le niveau réel de compatibilité avec ces plateformes reste peu documenté.\n\nL'objectif principal de ce projet est de permettre l'exécution et la préservation de jeux d'arcade développés pour ces systèmes, en réutilisant l'importante base de code et les connaissances accumulées autour de PCSX2. Cette approche évite de développer un émulateur entièrement nouveau tout en bénéficiant des améliorations apportées au fil des années à l'émulation du processeur Emotion Engine, du processeur graphique Graphics Synthesizer et des différents coprocesseurs de la PlayStation 2.\n\nParmi les jeux emblématiques associés à ces systèmes figurent notamment la série Tekken (à partir de Tekken 4), SoulCalibur II, SoulCalibur III: Arcade Edition, Time Crisis 3, Time Crisis 4, Battle Gear, The Idolmaster ou encore plusieurs productions de Namco, Capcom et Banpresto développées au cours des années 2000.\n\nListe de compatibilité ici.\nPatchs pour les jeux ici.\n\nLes changements:\n\n- Low Latency Audio",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "pcsx2_pc",
+        "pcsx2x6_arcade"
+      ],
+      "contentHash": "d0038e3c017123d86dc444cbed2cbc483f6d7a24bf903872d02e13d8cec576b6"
+    },
+    {
+      "id": "136077",
+      "title": "【街机】pEMU v7.2",
+      "originalTitle": "[Multi] pEMU v7.2",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T17:21:46Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136077-multi-pemu-v7-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/09/pemu.png",
+      "officialUrl": "https://github.com/Cpasjuste/pemu/releases",
+      "summary": "这些是 arcade/nes/snes/megadrive 模拟器的“便携式”版本，虽然主要用于控制台，但也可以在 Windows 下使用。 这些港口的主要目标是： - 提供基本但友好的用户界面 - 使用最新的渲染接口来支持速度和效果 - 代码可移植性和跨平台 - 轻松的核心更新（不修改原始源） 变化是： - 在 #319 中启用 @geonux 的 PGBA 过滤系统 - 在 #322 中添加 @john-tornblom 的 PS5…",
+      "content": "这些是 arcade/nes/snes/megadrive 模拟器的“便携式”版本，虽然主要用于控制台，但也可以在 Windows 下使用。\n\n这些港口的主要目标是：\n- 提供基本但友好的用户界面\n- 使用最新的渲染接口来支持速度和效果\n- 代码可移植性和跨平台\n- 轻松的核心更新（不修改原始源）\n\n变化是：\n- 在 #319 中启用 @geonux 的 PGBA 过滤系统\n- 在 #322 中添加 @john-tornblom 的 PS5 支持\n- 修复 PS4 启动黑屏和 pgen 4 玩家输入路由（由 @AgentRandy 在 #351 中修复）\n- pgen：修复 3604cfa 中的 .cue、.chd 和 .iso 支持\n- 配置：修复未保存在 f03def3 中的主要仿真设置",
+      "originalContent": "Il s'agit de versions \"portables\" d'émulateurs d'arcade/nes/snes/megadrive qui, bien que destinés principalement aux consoles, sont disponibles également sous Windows.\n\nLes principaux objectifs de ces ports sont:\n- Proposer une interface utilisateur basique mais conviviale\n- Utiliser une interface de rendu récente pour la prise en charge de la vitesse et des effets\n- Portabilité du code et multiplateforme\n- Mises à jour faciles des cores (aucune modification des sources originales)\n\nLes changements sont:\n- enable filter system for PGBA by @geonux in #319\n- add ps5 support by @john-tornblom in #322\n- fix PS4 startup black screen and pgen 4-player input routing by @AgentRandy in #351\n- pgen: fix .cue, .chd and .iso support in 3604cfa\n- config: fix main emulation settings not saved in f03def3",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "6b85bcc59333b7fcf9e9bc0ebff55692bb8d24ef3258f47849caa757fe3706b1"
+    },
+    {
+      "id": "136066",
+      "title": "【家用机】Redream v1.5.0.1239",
+      "originalTitle": "[Consoles de salon] Redream v1.5.0.1239",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T07:16:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136066-consoles-de-salon-redream-v1-5-0-1239/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/redream.jpg",
+      "officialUrl": "https://gitlab.com/inolen/redream",
+      "summary": "这是目前正在开发的 Sega Dreamcast 模拟器。 这些变化在这里也可见。 官方网站上提供付费版本（提供高清和超高清）。",
+      "content": "这是目前正在开发的 Sega Dreamcast 模拟器。\n\n这些变化在这里也可见。\n\n官方网站上提供付费版本（提供高清和超高清）。",
+      "originalContent": "Il s'agit d'un émulateur de Sega Dreamcast en cours de développement.\n\nLes changements sont également visibles ici.\n\nUne version payante (proposant la HD et UHD) est disponible sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "redream"
+      ],
+      "contentHash": "0d53987374c4322c4666ef29c0470ee5db3ef22b669b2170d87aec31126bdc6e"
+    },
+    {
+      "id": "136061",
+      "title": "【家用机】ShadPS4 v0.18",
+      "originalTitle": "[Consoles de salon] ShadPS4 v0.18",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:45:57Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136061-consoles-de-salon-shadps4-v0-18/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/09/ShadPS4.jpg",
+      "officialUrl": "https://shadps4.net/",
+      "summary": "ShadPS4 是适用于 Windows 和 Linux 的 PS4 预仿真器，由 Shadow 的 C++ 编写（名字为 Shadow），是 PCSX、PCSX2、PCSP、JPCSP、Arcadeflex、RPCS3 等知名项目的作者和贡献者... 注意网络游戏永久使用的模块是可配置的。 简历变更原则： 你好，好久不见了，是吗？虽然距离我们上一个稳定版本已经过去了没多久，但我们又带来了一个全新的版本。",
+      "content": "ShadPS4 是适用于 Windows 和 Linux 的 PS4 预仿真器，由 Shadow 的 C++ 编写（名字为 Shadow），是 PCSX、PCSX2、PCSP、JPCSP、Arcadeflex、RPCS3 等知名项目的作者和贡献者...\n\n注意网络游戏永久使用的模块是可配置的。\n\n简历变更原则：\n你好，好久不见了，是吗？虽然距离我们上一个稳定版本已经过去了没多久，但我们又带来了一个全新的版本。此版本的主要原因是 0.17.0 版本在某些情况下破坏了 shadNet 授权，但我们还有一些更有趣的新功能。\n\n首先，经过一些修复后，AvPlayer 现在可以作为 LLE 加载，这意味着您需要 libSceAvPlayer.sprx（和 libSceAvPlayerStreaming.sprx）模块，这使得一些游戏中损坏的视频现在可以正常工作。\n\n上述更改是通过在启动时调用 LLE LibcInternal 中的 sceLibcInternalMemoryMutexEnable 来启用的，这是由另一个 PS4 模拟器 ChonkyStation4 的开发者 @liuk7071 发现的。\n\n内核事件标志重写还修复了《旺达之影》经常在启动时挂起的问题，并且游戏现在始终可以进入菜单。\n另一个重要功能是实验性的 [red zone](https://en.wikipedia.org/wiki/Red_zone_%28computing%29) 保护，它修复了仅在 Windows 上第 12 代及以后的 Intel CPU 特有的问题，该问题导致许多游戏中崩溃和其他未定义的行为，而这些游戏不希望其堆栈的红色区域被 Windows 异常处理破坏。\n\nNpTus 也包含在这个新版本中，为 shadNet 带来更多功能。\n\n其中还包括一些关于 GPU 的修复，例如修复《女神异闻录》游戏中的阴影，或者修复《inFAMOUS》和《重力异想世界 2》中的一些效果。其他一些游戏中可能也有修复，这是你需要弄清楚的。\n\n您可以在下面找到 0.18.0 的完整更改列表。快乐测试:)。\n\n核心\n- 重写内核事件标志\n- 添加了 Windows 红区保护的实验性解决方法\n- 修复加载库的顺序（sceNpManager 之前的 libScePad），修复 shadNet 授权中的问题\n- 添加了 /dev/zero 设备\n- 添加了 VSH 所需的一些导出\n- 启动时调用 sceLibcInternalMemoryMutexEnable LLE\n- 添加 —mount 标志，使用大图片模式信息更新无标志弹出文本，并使用命令行解析修复一些边缘情况\n- 加载低于 4 GiB 的访客模块\n\n图书馆\n- Videodec：在数据包 EOF 上刷新编解码器缓冲区\n- NpWebApi2：修复 sceNpWebApi2GetHttpResponseHeader 函数\n- Libc_Internal：当 LLE libSceLibcInternal 不存在时添加回 HLE sceLibcHeapGetTraceInfo\n- 内核：实现 sceKernelIsDevkit 和 sceKernelIsCex\n- 内核：当空闲线程超过 MaxCachedThreads 时，不要双重销毁线程\n- AvPlayer：您现在可以使用 LLE\n- Sysmodule：启用一些更安全的库 LLE\n- 内核：如果提供了 oact，则仅清除 oact\n- NpTus：添加了 NpTus 支持\n- AudioOut：修复了停止时的死锁\n- NpTrophy：修复了与白金奖杯相关的问题\n\n视频核心\n- 添加了更多 FMask 格式\n- 尊重 GCN ReplaceOp 模板写入的 STENCILOPVAL\n\n着色器重新编译器\n- 修复了 FixCubeCoords 中的立方阵列层\n- 降低用户剪裁平面以剪裁距离\n- 对 v_mad* 操作使用 a*b+c 而不是 fma\n\n大图片模式\n- 在干净的进程中启动游戏\n- 添加了 zar 支持\n- 修复某些 zar/文件夹组合的更新检查器崩溃问题\n\n杂项\n- 修复了外部 fps 计数器\n- 添加了绘制调用和调度计数到帧信息叠加\n- 在 play_time.txt 中添加每场比赛的上次玩时间\n\n兼容性列表。",
+      "originalContent": "ShadPS4 est un émulateur préliminaire de PS4 pour Windows et Linux écrit en C++ créé par Shadow (d'ou il tire son nom), auteur et contributeur de projets prestigieux comme PCSX, PCSX2, PCSP, JPCSP, Arcadeflex, RPCS3...\n\nA noter qu'un module permettant l'utilisation du Netplay est disponible ici.\n\nLes changements principaux en résumé:\nHello there, it hasn’t been a while, has it? While not much time has passed since our last stable release, we are here again with a brand new one. The main reason for this release is broken shadNet authorization in certain cases on the 0.17.0 release, but we have some more interesting new features as well.\n\nFirstly, after some fixes, AvPlayer can be loaded now as LLE, meaning that you need the libSceAvPlayer.sprx (and libSceAvPlayerStreaming.sprx) module(s), which make broken videos in a few games are now work properly.\n\nThe above change was enabled by calling sceLibcInternalMemoryMutexEnable in LLE LibcInternal at boot, found by @liuk7071, the developer of ChonkyStation4, another PS4 emulator.\n\nA kernel event flag rewrite has also fixed Shadow of the Colossus often hanging on boot, and the game now consistently gets to menus.\n\nAnother big feature is the experimental [red zone](https://en.wikipedia.org/wiki/Red_zone_%28computing%29) protection, which fixes an issue specific to 12th generation and onwards Intel CPUs exclusively on Windows, that was causing crashes and other undefined behaviour in lots of games that were not expecting to have their stacks’ red zone clobbered by Windows exception handling.\n\nNpTus is also included in this new release bringing more functionality to shadNet.\n\nA few more fixes on GPU are included, such as fixing shadows in Persona games, or some effects in inFAMOUS and Gravity Rush 2. There’s probably fixes in some other games too, that’s your job to figure out.\n\nBelow you can find a full list of changes for 0.18.0. Happy Testing :).\n\nCore\n- Rewrote kernel event flags\n- Added experimental workaround for windows red-zone protection\n- Fix ordering of loading libs (libScePad before sceNpManager), fixed issues in shadNet authorization\n- Added /dev/zero device\n- Added some exports needed for VSH\n- Call sceLibcInternalMemoryMutexEnable LLE on startup\n- Add —mount flag, update the no flags popup text with Big Picture mode info, and fix a few edge cases with command line parsing\n- Load guest modules below 4 GiB\n\nLibraries\n- Videodec : Flush codec buffers on packet EOF\n- NpWebApi2: Fix sceNpWebApi2GetHttpResponseHeader functions\n- Libc_Internal: Add back HLE sceLibcHeapGetTraceInfo for when LLE libSceLibcInternal is not present\n- Kernel: Implement sceKernelIsDevkit and sceKernelIsCex\n- Kernel: Do not double destroy threads when free threads exceeds MaxCachedThreads\n- AvPlayer: You can now use LLE\n- Sysmodule: Enable some more safe library LLEs\n- Kernel : Only clear oact if oact is provided\n- NpTus: Added NpTus support\n- AudioOut: Fixed deadlocks on stop\n- NpTrophy: Fixed issues related to platinum trophies\n\nVideo Core\n- Added more FMask formats\n- Honor STENCILOPVAL for GCN ReplaceOp stencil writes\n\nShader Recompiler\n- Fixed cubed array layer in FixCubeCoords\n- Lower user clip planes to clip distances\n- Use a*b+c instead of fma for v_mad* ops\n\nBig Picture Mode\n- Launch game in clean process\n- Added zar support\n- Fix update checker crash with certain zar/folder combination\n\nMisc\n- Fixed external fps counters\n- Added draw call and dispatch counts to frame info overlay\n- Append last time played for each game in play_time.txt\n\nListe de compatibilité ici.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "shadps4_android"
+      ],
+      "contentHash": "07b0ce184bef82ccd3af48aa0edc37c47b8f8b625c622b5752736f7942bb1166"
+    },
+    {
+      "id": "136059",
+      "title": "【工具】ShadPS4 (GUI) v342",
+      "originalTitle": "[Utilitaires Multi-systemes] ShadPS4 (GUI) v342",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-08-18T13:43:22Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136059-utilitaires-multi-systemes-shadps4-gui-v342/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/shadps4-gui1.png",
+      "officialUrl": "https://shadps4.net/",
+      "summary": "shadPS4 是一款开源 PlayStation 4 模拟器。从0.12.1版本开始，它放弃了集成的图形界面，仅在命令行上操作。 为了方便使用，提供了外部接口。它允许您通过简单直观的可视化界面启动游戏、配置选项并监控性能。 该接口是单独开发的，并与 shadPS4 的未来版本保持兼容。 变化： - 不仅仅检查第一行来确定日志有效性 (#411) - 新的 Crowdin 更新 - 修复了杂项",
+      "content": "shadPS4 是一款开源 PlayStation 4 模拟器。从0.12.1版本开始，它放弃了集成的图形界面，仅在命令行上操作。\n\n为了方便使用，提供了外部接口。它允许您通过简单直观的可视化界面启动游戏、配置选项并监控性能。\n\n该接口是单独开发的，并与 shadPS4 的未来版本保持兼容。\n\n变化：\n- 不仅仅检查第一行来确定日志有效性 (#411)\n- 新的 Crowdin 更新\n- 修复了杂项",
+      "originalContent": "shadPS4 est un émulateur PlayStation 4 open-source. Depuis la version 0.12.1, il abandonne son interface graphique intégrée pour fonctionner uniquement en ligne de commande.\n\nPour faciliter son usage, une interface externe est disponible. Elle permet de lancer des jeux, configurer les options, et suivre les performances via une interface visuelle simple et intuitive.\n\nCette interface est développée séparément et reste compatible avec les futures versions de shadPS4.\n\nLes changements:\n- Check more than just the very first line for determining log validity (#411)\n- New Crowdin updates\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "shadps4_android"
+      ],
+      "contentHash": "6ebd30c6d259f25dea6158b5962f496649a5c7a94f5d575df777a8d516a12c65"
+    },
+    {
+      "id": "136057",
+      "title": "【家用机】Sharpemu v0.0.3 R3",
+      "originalTitle": "[Consoles de salon] Sharpemu v0.0.3 R3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:41:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136057-consoles-de-salon-sharpemu-v0-0-3-r3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/sharpemu-logo.png",
+      "officialUrl": "https://github.com/par274/sharpemu",
+      "summary": "SharpEmu 是 par274 开发的实验性 PlayStation 5 模拟器，完全用 C# 编写，设计用于 Windows、Linux 和 macOS，但开发主要集中在 Windows 上。该项目是从头开始编码的，没有使用其他模拟器，既可以作为模拟器，也可以作为研究 PS5 架构的平台。",
+      "content": "SharpEmu 是 par274 开发的实验性 PlayStation 5 模拟器，完全用 C# 编写，设计用于 Windows、Linux 和 macOS，但开发主要集中在 Windows 上。该项目是从头开始编码的，没有使用其他模拟器，既可以作为模拟器，也可以作为研究 PS5 架构的平台。\n\n该模拟器还很年轻：没有商业游戏可以玩，但它已经可以加载 eboot.bins、执行 CPU 指令、读取游戏元数据、加载系统模块并启动图形管道的某些步骤。一些经过测试的游戏达到了高级阶段，例如 sceVideoOut 或 AGC，这表明渲染已经开始工作，尽管仍然有限。\n\n开发工作正在积极进行，Windows 版本可用并且进展稳定。 SharpEmu 专注于建立坚实的技术基础，然后再追求高级兼容性或可玩性。\n\n总而言之，SharpEmu 是一个雄心勃勃、有条不紊、正在建设中的 PS5 项目，为未来的完整主机模拟奠定了必要的基础。\n\n以下是变化：\n- [asset] 添加 logo.psd 文件以供将来编辑和修改 (6b8f11a)\n- [资产]上传透明徽标图像（207441c）\n- 内核和 NpTrophy2 中的函数导出 (#749) (9e10d7c)\n- 修复非 GPU 计算调度路径上的 GuestDataPool 租约泄漏 (#759) (c086e32)\n- 修复（audioout2）：跳过提交跟踪计数器（#761）（418eb7e）\n- [AGC] 修复竞技场/围栏跟踪停顿并恢复丢失的 GPU 进度 (#770) (62c3852)\n- [HLE] 修复 AJM/ACM 无操作存根并接受 Gen5 AudioOut2 母带/批量调用 (#807) (4b8d455)\n- [HLE] 修复 AGC OOB、kevent 合并和 VideoOut 翻转/缓冲区注册错误 (#808) (498d402)\n- Astrobot - 构建时规范化修复和 ffmpeg 库 (#817) (1e96eca)\n- 测试（cpu）：覆盖 Gen5 原生返回烟雾路径（#818）（7caf430）\n- vplayer 修复 (#821) (1660111)\n- [Codec/Native] sceVideodec2 的真实 H.264 解码，修复 TLS 加载程序缺少主模块 (#824) (7521295)\n- VMovrelsB32 操作码修复 (#825) (ad115dd)\n- 杂务：将版本提升到 0.0.3-release.3 (#826) (d9b599a)",
+      "originalContent": "SharpEmu est un émulateur PlayStation 5 expérimental développé par par274, entièrement écrit en C# et conçu pour fonctionner sur Windows, Linux et macOS, même si le développement se concentre surtout sur Windows. Le projet est codé from scratch, sans reprendre d’autres émulateurs, et sert autant d’émulateur que de plateforme d’étude de l’architecture PS5.\n\nL’émulateur est encore très jeune: aucun jeu commercial n’est jouable, mais il peut déjà charger des eboot.bin, exécuter des instructions CPU, lire les métadonnées des jeux, charger des modules système et initier certaines étapes du pipeline graphique. Plusieurs jeux testés atteignent des stades avancés comme sceVideoOut ou AGC, ce qui montre que le rendu commence à fonctionner, même si encore limité.\n\nLe développement est actif, avec des builds Windows disponibles et des progrès réguliers. SharpEmu se concentre sur la mise en place d’une base technique solide avant de viser la compatibilité avancée ou la jouabilité.\n\nEn résumé, SharpEmu est un projet PS5 ambitieux, méthodique et en pleine construction, qui pose les fondations nécessaires pour une future émulation complète de la console.\n\nVoici les changements:\n- [asset] Add logo.psd file for future edits and modifications (6b8f11a)\n- [asset] upload transparent logo image (207441c)\n- Functions exports in kernel and NpTrophy2 (#749) (9e10d7c)\n- Fix GuestDataPool lease leak on non-GPU compute dispatch paths (#759) (c086e32)\n- fix(audioout2): wire skipped-submit trace counter (#761) (418eb7e)\n- [AGC] Fix arena/fence tracking stalls and recover lost GPU progress (#770) (62c3852)\n- [HLE] Fix AJM/ACM no-op stubs and accept Gen5 AudioOut2 mastering/batch calls (#807) (4b8d455)\n- [HLE] Fix AGC OOB, kevent coalescing, and VideoOut flip/buffer-registration bugs (#808) (498d402)\n- Astrobot - Canonicalize fix and ffmpeg library on build (#817) (1e96eca)\n- test(cpu): cover Gen5 native return smoke path (#818) (7caf430)\n- A vplayer fix (#821) (1660111)\n- [Codec/Native] Real H.264 decode for sceVideodec2, fix TLS loader missing the main module (#824) (7521295)\n- VMovrelsB32 opcode fix (#825) (ad115dd)\n- chore: bump version to 0.0.3-release.3 (#826) (d9b599a)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "sharpemu_pc"
+      ],
+      "contentHash": "1e94a387e80db6eabddc0cef38262de26fe5a6cc6d699a52ef7eb8c95bb215eb"
+    },
+    {
+      "id": "136055",
+      "title": "【电脑】Caprice32 v4.6.0 (2026/08/18)",
+      "originalTitle": "[Ordi.] Caprice32 v4.6.0 (2026/08/18)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:40:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136055-ordi-caprice32-v4-6-0-2026-08-18/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/Caprice32_v4.6.0_20260214.png",
+      "officialUrl": "https://github.com/ColinPitrat/caprice32/releases",
+      "summary": "该版本直接遵循 Ulrich Doewich 创建的先前版本，现在由 Colin Pitrat 维护。 Caprice 32 的最新版本，具有最新的炫酷功能和最新的错误。",
+      "content": "该版本直接遵循 Ulrich Doewich 创建的先前版本，现在由 Colin Pitrat 维护。\n\nCaprice 32 的最新版本，具有最新的炫酷功能和最新的错误。",
+      "originalContent": "Cette version fait directement suite aux précédentes créées par Ulrich Doewich et est à présent maintenue par Colin Pitrat.\n\nLatest build of Caprice 32, with the newest cool features and the most recent bugs.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "caprice32_cpc",
+        "caprice32_pc",
+        "caprice32_gx"
+      ],
+      "contentHash": "a1966b529019005b9b92b3f64fc06e72575471ea14ab2805aa285f93f1703a58"
+    },
+    {
+      "id": "136053",
+      "title": "【家用机】KytyPS5 r260818",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260818",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:38:31Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136053-consoles-de-salon-kytyps5-r260818/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
+      "officialUrl": "https://github.com/Nmzik/KytyPS5",
+      "summary": "KytyPS5 项目是一个适用于 Windows 的 PlayStation 5 模拟器，由 Nmzik 开发，它基于 InoriRus 创建的原始 Kyty 的大幅修改版本。它的目标是提供比原始项目更好的 PS5 兼容性，重点关注游戏启动、稳定性以及对商业游戏的渐进支持。该仿真器设计为无需外部 LLE 模块即可工作，从而简化了其使用并减少了技术依赖性。",
+      "content": "KytyPS5 项目是一个适用于 Windows 的 PlayStation 5 模拟器，由 Nmzik 开发，它基于 InoriRus 创建的原始 Kyty 的大幅修改版本。它的目标是提供比原始项目更好的 PS5 兼容性，重点关注游戏启动、稳定性以及对商业游戏的渐进支持。该仿真器设计为无需外部 LLE 模块即可工作，从而简化了其使用并减少了技术依赖性。开发商表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标很明确：在关注性能或图形精度之前提高兼容性。\nKytyPS5 仅在 Windows 上运行，并且似乎主要针对 NVIDIA 显卡进行了优化，尽管其他 GPU 的性能可能会有所不同。该项目采取了务实的方法：它首先寻求让游戏落地，即使这意味着牺牲第一个版本的视觉保真度或执行速度。该代码正在积极开发，更新频繁，使其成为当前最具活力的 PS5 项目之一。开发人员强调了对透明度的渴望，明确感谢 InoriRus 的原始项目，同时对代码进行了重大重写和修改。\n\n总而言之，KytyPS5 是一个非官方但假定的第一个 Kyty 的延续，转变为一个现代的、更雄心勃勃、功能更强大的 PS5 模拟器，旨在成为索尼游戏机模拟的参考。\n\n变化：\n-shader_recompiler：添加SSA\n- agc：修复异步 DMA 数据 ABI\n- 着色器：实现 RDNA2 v_cmp_gt_u64\n- 着色器：实施 RDNA2 subrev 借用\n- 着色器：掩码向量携带 exec 的输出\n- 着色器：处理禁用的 RDNA2 陷阱\n- 图形：将存储缓冲区钳位到已提交的内存\n- 图形：尊重原始重启状态\n- 图形：实现 RDNA2 对齐字节着色器操作码\n- 图形：接受 phi 介导的 SRT 循环\n- 图形：实现 RDNA2 64 位第一组位\n- 着色器：写入前快照宽 SMEM 源\n- 着色器：评估运行时描述符中的无符号最小值\n- 优化解码器\n- 修复操作码回归\n- 修复 SPIR-V 浮动控制合约（保留 FP32 Inf 和 NaN）\n- 着色器：实现 s_bfe_i32\n- 新的 ABI 存根\n- 着色器：修复 V_ADD_NC_U32\n- 图形：支持深度平铺颜色目标\n- 内核：允许重命名打开的保存文件\n- playgo：拒绝丢失的包元数据\n-dialog：实现常见的dialog使用情况查询\n- agc：实现所有者资源注销\n- 着色器：修复缺失的同构语义\n- 图形：接受非对称 Z 剪辑状态\n- 图形：接受强制 HTile 重新汇总\n- 图形：从着色器输出导出像素阶段活动\n- 图形：上传稀疏 PRT 图像支持\n- 图形：接受存储 mip 范围\n- 图形：支持动态存储mip写入\n- 图形：专门化不变的间接图像表\n- 图形：单独的标量地址绑定\n- 图形：接受SDWA字节转换源\n- 图形：支持动态间接图像表\n- 图形：纹理视图与资源 mips 相交\n- 图形：支持SDWA算术右移\n- 图形：支持有符号16位整数打包\n- 图形：支持RDNA2依赖等待\n- 图形：根据着色器状态计算 LDS 大小\n- 图形：符号扩展矢量位域提取\n- 图形：接受 AGC 仅顶点缓冲区着色器\n- agc：ABI 修复 - acb/dcb\n- agc：ABI 修复 - EventWrite/WriteData\n- 删除热路径中的日志记录\n- 重命名旧图形 -> Agc\n- 音频：废弃被毁坏的 NGS2 机架\n- 音频：提供实时 NGS2 系统信息\n- 图形：支持平铺渲染目标 mip 视图\n- 着色器：保留执行屏蔽的 FLAT 地址根\n\n（从这个分支编译的临时版本有待官方发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- shader_recompiler: add SSA\n- agc: fix async DMA data ABI\n- shader: implement RDNA2 v_cmp_gt_u64\n- shader: implement RDNA2 subrev borrow\n- shader: mask vector carry outputs by exec\n- shader: handle disabled RDNA2 traps\n- graphics: clamp storage buffers to committed memory\n- graphics: honor primitive restart state\n- graphics: implement RDNA2 alignbyte shader opcode\n- graphics: accept phi-mediated SRT cycles\n- graphics: implement RDNA2 64-bit first-set-bit\n- shader: snapshot wide SMEM sources before writes\n- shader: evaluate unsigned min in runtime descriptors\n- Optimize decoder\n- fix opcode regression\n- Fix SPIR-V float control contract (Preserve FP32 Inf and NaN)\n- shader: implement s_bfe_i32\n- new ABI stubs\n- shader: fix V_ADD_NC_U32\n- graphics: support depth-tiled color targets\n- kernel: allow renaming open save files\n- playgo: reject missing package metadata\n- dialog: implement common dialog usage query\n- agc: implement owner resource unregister\n- shader: fix missing homogeneous semantics\n- graphics: accept asymmetric Z clip state\n- graphics: accept forced HTile resummarization\n- graphics: derive pixel stage activity from shader outputs\n- graphics: upload sparse PRT image backing\n- graphics: accept storage mip ranges\n- graphics: support dynamic storage mip writes\n- graphics: specialize invariant indirect image tables\n- graphics: separate scalar address bindings\n- graphics: accept SDWA byte conversion sources\n- graphics: support dynamic indirect image tables\n- graphics: intersect texture views with resource mips\n- graphics: support SDWA arithmetic right shifts\n- graphics: support signed 16-bit integer packing\n- graphics: support RDNA2 dependency waits\n- graphics: size compute LDS from shader state\n- graphics: sign-extend vector bitfield extracts\n- graphics: accept AGC vertex-buffer-only shaders\n- agc: ABIs fix - acb/dcb\n- agc: ABIs fix - EventWrite/WriteData\n- remove logging in hot path\n- rename legacy Graphics -> Agc\n- audio: retire destroyed NGS2 racks\n- audio: provide live NGS2 system info\n- graphics: support tiled render target mip views\n- shader: preserve exec-masked FLAT address roots\n\n(Temporary build compiled from this fork pending official releases.)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "kytyps5_pc"
+      ],
+      "contentHash": "81540840319f5cc61eccdd18437854c7c134be80a6951bd1c6612c47037c576a"
+    },
+    {
+      "id": "136051",
+      "title": "【家用机】XaviXEmu v0.3.1",
+      "originalTitle": "[Consoles de salon] XaviXEmu v0.3.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:28:01Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136051-consoles-de-salon-xavixemu-v0-3-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/xavix.jpg",
+      "officialUrl": "https://github.com/BillyJr0127/XaviXEmu",
+      "summary": "XaviXEmu 是一个实验性的、开源的 Windows 模拟器，专用于选择 XaviX、XaviX 2000 和",
+      "content": "XaviXEmu 是一个实验性的、开源的 Windows 模拟器，专用于选择 XaviX、XaviX 2000 和",
+      "originalContent": "XaviXEmu est un émulateur expérimental et open source pour Windows, dédié à certains jeux télévisés XaviX, XaviX 2000 et XaviX 2. Le projet se concentre sur la documentation du comportement matériel, l’émulation des entrées de mouvement, les tests reproductibles et la préservation des recherches sur des systèmes dont les accessoires optiques d’origine sont difficiles à utiliser avec les écrans modernes.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xemu"
+      ],
+      "contentHash": "6a92d088834ec9944d9906c6e6918c1e6352459478eb1298f9567bf3795b31f1"
+    },
+    {
+      "id": "136049",
+      "title": "【其他】NC2000 (2026/08/17)",
+      "originalTitle": "[Processeurs] NC2000 (2026/08/17)",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:26:55Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136049-processeurs-nc2000-2026-08-17/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/12/nc2000.png",
+      "officialUrl": "https://github.com/wangyu-/NC2000",
+      "summary": "NC2000 项目是一个用于复古 nc2000/nc2600/nc1020 设备的开源仿真器，基于 6502 CPU。它允许运行从物理机转储的原始固件，并兼容 Windows/Linux/Mac。",
+      "content": "NC2000 项目是一个用于复古 nc2000/nc2600/nc1020 设备的开源仿真器，基于 6502 CPU。它允许运行从物理机转储的原始固件，并兼容 Windows/Linux/Mac。",
+      "originalContent": "Le projet NC2000 est un émulateur open-source pour les appareils rétro nc2000/nc2600/nc1020, basés sur un CPU 6502. Il permet d’exécuter les firmwares originaux dumpés des machines physiques, avec compatibilité Windows/Linux/Mac.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "924fcdcdff73c8caf70561def3e8b38ad9d7c4852e11bd6167fcbe7ce42540d5"
+    },
+    {
+      "id": "136047",
+      "title": "【工具】GamePlay v0.95b",
+      "originalTitle": "[Utilitaires Multi-systemes] GamePlay v0.95b",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-08-18T13:26:06Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136047-utilitaires-multi-systemes-gameplay-v0-95b/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/gameplay.jpg",
+      "officialUrl": "https://github.com/leniad/GamePlay",
+      "summary": "GamePlay 是一个集中了 DosBox、DosBox‑X、ScummVM 和 DSP Emulator 的界面，无需任何配置即可启动 MS‑DOS、Arcade、控制台和 8 位微电脑游戏。提供的游戏已经过优化，可提供最佳的渲染效果，您还可以通过简单地导入 ZIP 存档或 CD-ROM 来添加自己的游戏。该应用程序会自动检测语言，并通过编译在 Windows 以及 Linux 或 macOS 上运行。",
+      "content": "GamePlay 是一个集中了 DosBox、DosBox‑X、ScummVM 和 DSP Emulator 的界面，无需任何配置即可启动 MS‑DOS、Arcade、控制台和 8 位微电脑游戏。提供的游戏已经过优化，可提供最佳的渲染效果，您还可以通过简单地导入 ZIP 存档或 CD-ROM 来添加自己的游戏。该应用程序会自动检测语言，并通过编译在 Windows 以及 Linux 或 macOS 上运行。\n\n变化如下：\n\n一些外观上的改变\n- 游戏即将上线时，如果检测到服务器上游戏有更新，可以下载新版本\n\n可以在此处访问完整版本，包括图像、手册、模拟器等。",
+      "originalContent": "GamePlay est une interface qui centralise DosBox, DosBox‑X, ScummVM et DSP Emulator pour lancer des jeux MS‑DOS, Arcade, consoles et micro‑ordinateurs 8‑bits sans aucune configuration. Les jeux fournis sont déjà optimisés pour offrir le meilleur rendu possible, et vous pouvez aussi ajouter vos propres titres en important simplement une archive ZIP ou un CD‑ROM. L’application détecte automatiquement la langue et fonctionne aussi bien sous Windows que sous Linux ou macOS via compilation.\n\nLes changements sont les suivants:\n\nSome cosmetic changes\n- When a game is about to be launched, if it is detected that the game has been updated on the server, you can download the new version\n\nUne version intégrale comprenant des images, manuels, émulateurs et bien plus encore est accessible ici.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "05134b80de850495bfa41ac6d3d055077a64645059ed639ba53650cbbe140be5"
+    },
+    {
+      "id": "136045",
+      "title": "【家用机】Xenia Edge (2026/08/19)",
+      "originalTitle": "[Consoles de salon] Xenia Edge (2026/08/19)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:22:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136045-consoles-de-salon-xenia-edge-2026-08-19/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/xenia-edge-scaled.png",
+      "officialUrl": "https://github.com/has207/xenia-edge",
+      "summary": "xenia-edge GitHub 项目是 Xbox 360 模拟器 Xenia 的一个实验性分支，基于 Canary 分支。它的目标是将各种分叉的最新技术进步集中到一个包中。该项目旨在围绕 Xbox 360 仿真进行研究和实验，并兼容 Windows 和 Linux。它提供了一个自定义构建脚本 (xb) 来简化编译、一个社区维护的游戏兼容性列表以及通过 Buildbot 进行的持续集成。",
+      "content": "xenia-edge GitHub 项目是 Xbox 360 模拟器 Xenia 的一个实验性分支，基于 Canary 分支。它的目标是将各种分叉的最新技术进步集中到一个包中。该项目旨在围绕 Xbox 360 仿真进行研究和实验，并兼容 Windows 和 Linux。它提供了一个自定义构建脚本 (xb) 来简化编译、一个社区维护的游戏兼容性列表以及通过 Buildbot 进行的持续集成。代码主要是用 C++ 编写的，也有使用 Assembly、Python、Lua、HLSL 和 C# 编写的。该存储库包含有用的资源，例如快速入门指南、常见问题解答和编译说明。",
+      "originalContent": "Le projet GitHub xenia-edge est un fork expérimental de l’émulateur Xbox 360 Xenia, basé sur la branche Canary. Il vise à centraliser les dernières avancées techniques issues de divers forks dans un seul package. Le projet est conçu pour la recherche et l’expérimentation autour de l’émulation Xbox 360, avec une compatibilité Windows et Linux. Il propose un script de build personnalisé (xb) pour simplifier la compilation, une liste de compatibilité des jeux maintenue par la communauté, et une intégration continue via Buildbot. Le code est majoritairement écrit en C++, avec des contributions en Assembly, Python, Lua, HLSL et C#. Le dépôt contient des ressources utiles comme un guide de démarrage rapide, une FAQ et des instructions de compilation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xenia_pc",
+        "xenia_edge_pc"
+      ],
+      "contentHash": "e6fbce568308c388a0604716f9cd849bff4f986eae66672f385b643d383a3d15"
+    },
+    {
+      "id": "136043",
+      "title": "【家用机】Xenia v1.0.2844 (2026/08/18)",
+      "originalTitle": "[Consoles de salon] Xenia v1.0.2844 (2026/08/18)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T13:22:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136043-consoles-de-salon-xenia-v1-0-2844-2026-08-18/",
+      "imageUrl": "https://www.youtube.com/embed/r56tCTsijEw",
+      "officialUrl": "https://xenia.jp/",
+      "summary": "由 Ben Vanik 别名 Noxa（PSP 玩家）创建，这是一个开发 Xbox 360 模拟器的研究项目。请注意，您需要一台高性能机器才能流畅运行商业游戏。这里有更多信息，不要忘记那里的开发站点[master]。此处提供了用于管理 Xenia 模拟器的管理器。 - [其他] 随机优化。",
+      "content": "由 Ben Vanik 别名 Noxa（PSP 玩家）创建，这是一个开发 Xbox 360 模拟器的研究项目。请注意，您需要一台高性能机器才能流畅运行商业游戏。这里有更多信息，不要忘记那里的开发站点[master]。此处提供了用于管理 Xenia 模拟器的管理器。\n\n- [其他] 随机优化。\n- [D3D12] 修复 RTV 路径中的常量 alpha 混合\n- [GPU] 在运行时选择升级的 tfetch1D 布局\n- [D3D12] 修复批量获取寄存器写入的过度无效问题\n- [D3D12] 回退到不可过滤格式的点采样\n- [Vulkan] 添加spirv_disable_rounding_mode_rte\n- [Vulkan] 修复了draw_resolution_scaled_texture_offsets取消自身的问题\n- [GPU] 处理镶嵌三角形条和扇形绘制\n- [Vulkan] 仅剔除正面时选择背面模板参考/掩模\n- [Vulkan] 使用专用的 alpha 混合因子图进行 alpha srcb/dest 混合\n- [Vulkan] 钳位 Inf/NaN 坐标的堆叠纹理层索引\n- [GPU] 将越界顶点获取字限制为 0\n- [Vulkan] 跳过与 surface_pitch==0 匹配的绘制以匹配 D3D12\n- [Vulkan] 修复 FSI 2x-as-4x 样本掩码读取主机样本 2 而不是 3\n- [Vulkan] 将浮动控件应用于几何着色器以匹配 VS/PS\n- [GPU]从缩放的解析内存加载来宾解析的mips\n- [Vulkan] 持久绑定共享内存以进行纹理加载和解析\n- [Vulkan] 修复 2x MSAA alpha-to-coverage 示例布局\n- [Vulkan] 将标量 maxas/maxasf 地址寄存器钳位到 [0, 255]\n- [GPU] 在渲染目标打包/解包中模拟扩展范围的 float16\n- [Vulkan] 使源寄存器更改上的用户剪辑平面常量无效\n- [Vulkan] 修复自适应曲面细分问题\n- [内存] 重新设计来宾访问解析和未监视失效\n- [内核] 将 X_DISPATCHER_FLAGS 替换为 X_OBJECT_TYPES\n- [XEX] - 添加对破折号 1746 的支持\n- [杂项] C++20'ify 第 1 部分\n- [CPU]在条目表锁下发布JIT条目结果\n- [GPU] 将调试 cvar 移动到新的 TOML 块，杂项清理\n- 其他修复",
+      "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [Misc] Random optimizations.\n- [D3D12] Fix constant-alpha blending in the RTV path\n- [GPU] Select promoted tfetch1D layouts at runtime\n- [D3D12] Fix over-invalidation of bulk fetch register writes\n- [D3D12] Fall back to point sampling for non-filterable formats\n- [Vulkan] Add spirv_disable_rounding_mode_rte\n- [Vulkan] Fix draw_resolution_scaled_texture_offsets cancelling itself out\n- [GPU] Handle tessellated triangle strip and fan draws\n- [Vulkan] Select back-face stencil ref/mask when culling only front faces\n- [Vulkan] Use dedicated alpha blend factor map for alpha srcb/dest blend\n- [Vulkan] Clamp stacked-texture layer index for Inf/NaN coords\n- [GPU] Clamp out-of-bounds vertex fetch words to 0\n- [Vulkan] Skip draws with surface_pitch==0 to match D3D12\n- [Vulkan] Fix FSI 2x-as-4x sample mask reading host sample 2 instead of 3\n- [Vulkan] Apply float controls to geometry shaders to match VS/PS\n- [GPU] Load guest-resolved mips from scaled resolve memory\n- [Vulkan] Bind shared memory persistently for texture loads and resolves\n- [Vulkan] Fix 2x MSAA alpha-to-coverage sample layout\n- [Vulkan] Clamp scalar maxas/maxasf address register to [0, 255]\n- [GPU] Emulate extended-range float16 in render target pack/unpack\n- [Vulkan] Invalidate user clip plane constants on source registers change\n- [Vulkan] Fix adaptive tessellation issues\n- [Memory] Rework guest access resolution and unwatched invalidation\n- [Kernel] Replaced X_DISPATCHER_FLAGS with X_OBJECT_TYPES\n- [XEX] - Add support for dash 1746\n- [Misc] C++20'ify Part 1\n- [CPU] Publish JIT entry results under the entry table lock\n- [GPU] Move debug cvars to a new TOML block, misc cleanup\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "xenia_pc"
+      ],
+      "contentHash": "7b4473e3825174068f99c371a767df7d70c8b881800e3b9bad02a9480cb9a6ea"
+    },
+    {
+      "id": "136035",
+      "title": "【家用机】SuperZSNES v0.300",
+      "originalTitle": "[Consoles de salon] SuperZSNES v0.300",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T21:48:44Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136035-consoles-de-salon-superzsnes-v0-300/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/04/SuperZsnes-Logo.png",
+      "officialUrl": "https://www.zsnes.com/",
+      "summary": "SUPER ZSNES 是对标志性 ZSNES 模拟器的完整而现代的重写。 两位原创者再次重聚，正在开发一款现代的、GPU 加速的 SNES 模拟器，该模拟器更精确、更快，并配备了针对每款游戏的改进系统。 主要特点： - 比旧的 ZSNES 更精确的 CPU 和音频核心。",
+      "content": "SUPER ZSNES 是对标志性 ZSNES 模拟器的完整而现代的重写。\n两位原创者再次重聚，正在开发一款现代的、GPU 加速的 SNES 模拟器，该模拟器更精确、更快，并配备了针对每款游戏的改进系统。\n\n主要特点：\n\n- 比旧的 ZSNES 更精确的 CPU 和音频核心。\n\nGPU 加速 PPU：\n- 模式 7 高分辨率\n- 改进的特效\n- 变得更干净、更稳定\n\n经典 ZSNES 界面现代化：\n- 保留雪效果\n- 高清晰度\n- 改进的用户体验\n\n高级功能：\n- 快进\n-倒带\n- 保存状态\n- 自动保存历史记录\n- 书签\n- 作弊码\n- 快速加载\n\n- 没有现代框架的开发（经典风格）。\n\n超级增强引擎：\n- 每场比赛的改进系统，已在 10 款热门游戏中活跃。\n\n改进类型：\n\n高分辨率：\n- 内部渲染手动重绘\n- 干净、清晰的高分辨率细节\n\n纹理/法线贴图：\n- 添加了额外的细节\n- 外观更丰富、更深邃\n\n超频：\n- 删除了减速\n- 增加流动性\n\n宽屏（如果内部支持）：\n- 当游戏有部分或完整内码时激活宽屏\n\n未压缩音频替换：\n- 用未压缩版本替换压缩样本\n\n3D（7 视角模式）：\n- 用高度映射的 3D 数据替换图块\n- 使用透视模式 7 实现真实 3D 游戏效果\n\n所有增强功能都可以单独启用或禁用。\n增强文件不包含任何 ROM 摘录：它们仅包含附加数据，而不包含游戏本身的内容。\n\n即将推出：\n- 错误修复\n- 支持特殊芯片（DSP1、SuperFX等）\n- 回顾成就\n- 宽屏个性化补丁\n- 优化补充\n- 新改良类型\n-网络游戏\n- 其他\n\nhttps://www.youtube.com/watch?v=ARHSvJ87z9A\nhttps://www.youtube.com/watch?v=r5twUkvYFpA\n\n变化：\n\n- 塞尔达传说：链接到过去现已增强（感谢 fatbrowne 的保存状态帮助！）\n- tssf 的 Chrono Trigger 音频增强！谢谢tssf！\n\n用户界面改进：\n- 添加了禁用驱动器获取选项并禁用 UI 移动\n- 用户定义的 GUI 配色方案\n- 新的水和火效果\n- 不同的鼠标光标大小\n\n增强引擎改进：\n- 新的阴影/高光，允许更多样的细节，并且一旦我们开始更多地使用它，应该有助于消除褪色的外观。\n- 将法线贴图添加到固定颜色层\n- 洛克人 X 中添加了一些增强型游戏的宽屏镜像模式\n\n仿真改进：\n- SPC700 时序改进\n- SuperFX 修复\n- 中屏精灵更新修复\n- 多个计时和开放总线错误修复\n- 各种其他模拟修复\n\n新芯片仿真：\n- SA-1 仿真\n- Cx4 仿真\n- SuperFX3 仿真（特别感谢 Randy Linden！）\n\n每个游戏的超频设置\n- SNES 鼠标和 SuperScope（在每个游戏配置中启用此功能）以及手柄覆盖\n- 输入的多按钮/按键组合分配\n- 新的 3D 图层模式，可让您以 3D 视角查看每个 SNES 图层（在选项/图形模式下）\n- 新的退出输入快捷方式\n- 在加载对话框中使用双空格来选择随机游戏\n- 提高了保存游戏和 zsnes 保存数据的频率\n- 移动控件视图更加透明，障碍更少\n- 在仿真的各个领域进行了许多不同的性能优化\n注意：PC 版本可能会在某些病毒扫描程序中触发错误的木马警告。这种情况很常见，因为模拟器具有特定的模式，扫描仪会发现这些模式与特洛伊木马有时的工作方式类似。",
+      "originalContent": "SUPER ZSNES est une réécriture complète et moderne de l’emblématique émulateur ZSNES.\nRéunis à nouveau, les deux créateurs originaux développent un émulateur SNES moderne, accéléré par GPU, plus précis, plus rapide et doté d’un système d’améliorations spécifiques à chaque jeu.\n\nCaractéristiques principales:\n\n- Cœurs CPU et audio plus précis que l’ancien ZSNES.\n\nPPU accéléré par GPU:\n- Mode 7 haute résolution\n- Effets spéciaux améliorés\n- Rendu plus propre et plus stable\n\nInterface classique ZSNES modernisée:\n- Effet de neige conservé\n- Haute définition\n- UX améliorée\n\nFonctions avancées:\n- Fast forward\n- Rewind\n- Save states\n- Auto-save history\n- Bookmarks\n- Cheat codes\n- Quick load\n\n- Développement sans frameworks modernes (style classique).\n\nSuper Enhancement Engine:\n- Système d’améliorations par jeu, déjà actif sur 10 jeux populaires.\n\nTypes d’améliorations:\n\nHigh Resolution:\n- Rendu interne redessiné manuellement\n- Détails haute résolution propres et nets\n\nTexture / Normal Map:\n- Ajout de détails supplémentaires\n- Aspect plus riche et plus profond\n\nOverclock:\n- Suppression du slowdown\n- Fluidité accrue\n\nWidescreen (si support interne):\n- Activation du widescreen lorsque le jeu possède un code interne partiel ou complet\n\nUncompressed Audio Replacement:\n- Remplacement des samples compressés par des versions non compressées\n\n3D (Mode 7 perspective):\n- Remplacement des tiles par des données 3D height-mapped\n- Effet 3D réel sur les jeux utilisant le Mode 7 en perspective\n\nToutes les améliorations peuvent être activées ou désactivées individuellement.\nLes fichiers d’amélioration n’incluent aucun extrait de ROM: ils ne contiennent que des données additionnelles, jamais de contenu provenant du jeu lui‑même.\n\nÀ venir:\n- Corrections de bugs\n- Support des special chips (DSP1, SuperFX, etc.)\n- Retroachievements\n- Widescreen personnalisé pour les patches\n- Optimisations supplémentaires\n- Nouveaux types d’améliorations\n- Netplay\n- Autres\n\nhttps://www.youtube.com/watch?v=ARHSvJ87z9A\nhttps://www.youtube.com/watch?v=r5twUkvYFpA\n\nLes changements:\n\n- Zelda: Link to the Past now enhanced (Thanks fatbrowne for the saves state help!)\n- Chrono Trigger audio enhancement by tssf! Thanks tssf!\n\nUI Improvements:\n- Added disable drive fetching option & disable UI move\n- User defined GUI color schemes\n- New Water & Fire effects\n- Different mouse cursor sizes\n\nEnhancement Engine Improvements:\n- New Shadow/Highlights, allowing for more diverse details and should help with the washed out look once we start using this more.\n- Added normal maps to fixed color layer\n- Mirrored mode for wide screen on some enhanced games, added to Megaman X\n\nEmulation Improvements:\n- SPC700 timing improvements\n- SuperFX fixes\n- Mid-screen sprite update fixes\n- Multiple timing & open bus bug fixes\n- Various other emulation fixes\n\nNew chip emulation:\n- SA-1 emulation\n- Cx4 emulation\n- SuperFX3 emulation (Special thanks to Randy Linden!)\n\nPer game overclock settings\n- SNES Mouse & SuperScope (Enable this on the per game config) with joypad override\n- Multi-button/key press combo assignment for Input\n- New 3D layers mode, lets you view each SNES layer in 3D perspective (under options/graphics mode)\n- New input shortcut for exit\n- Use double space in loading dialog to select a random game\n- Improved frequency of saving game and zsnes save data\n- Mobile controls view is more transparent for less obstruction\n- Many different performance optimizations done on various areas in emulation\n\nNote: The PC version may trigger a false trojan warning in certain virus scanners. It's pretty common as emulators have a certain pattern in them that scanners find similar to how trojans sometimes work.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "2f5d305565a18eb748ff4bc1cbf37f1839ca8a815e244eaed258a74334cdcad6"
+    },
+    {
+      "id": "136033",
+      "title": "【家用机】Snes9x TestBuild v1.63 R1622",
+      "originalTitle": "[Consoles de salon] Snes9x TestBuild v1.63 R1622",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T21:35:44Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136033-consoles-de-salon-snes9x-testbuild-v1-63-r1622/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/snes9x.png",
+      "officialUrl": "http://www.s9x-w32.de/dl/testbuilds/",
+      "summary": "这是 Snes9x 的最后一个官方所谓的“不稳定”版本，添加了来自 GIT 源的最新功能、改进和/或修正。存档中有 32 位和 64 位版本。 Starfox 2（SNES迷你版）的一小部分？ ...或者也许是《圣剑传说圣剑传说》法语 iOS 版？ 算了，我会制作《时空之轮》的非官方续集：p 自上次构建以来的变化： - PPU：渲染 A.S.P.空袭巡逻队的光束竞速中扫描线效果 (#1079) - 快照：恢复后重建 SuperFX 指针…",
+      "content": "这是 Snes9x 的最后一个官方所谓的“不稳定”版本，添加了来自 GIT 源的最新功能、改进和/或修正。存档中有 32 位和 64 位版本。\n\nStarfox 2（SNES迷你版）的一小部分？\n\n...或者也许是《圣剑传说圣剑传说》法语 iOS 版？\n\n算了，我会制作《时空之轮》的非官方续集：p\n\n自上次构建以来的变化：\n\n- PPU：渲染 A.S.P.空袭巡逻队的光束竞速中扫描线效果 (#1079)\n- 快照：恢复后重建 SuperFX 指针\n- memmap：绑定多车 ROM 副本\n- Vlibretro：在 BS-X 探测之前验证 ROM 大小\n- 修复了杂项",
+      "originalContent": "Il s'agit de la dernière version officielle dite \"instable\" de Snes9x ajoutant les dernières nouveautés, améliorations et/ou corrections en provenance des sources GIT. Versions 32 et 64 bits dans l'archive.\n\nUne petite partie de Starfox 2 (SNES Mini Edition) ?\n\n...ou peut-être un Secret of Mana Français iOS Edition ?\n\nLaissez tomber, je vais me faire la suite non officielle de Chrono Trigger plutôt :p\n\nLes changements depuis le dernier build:\n\n- PPU: render A.S.P. Air Strike Patrol's beam-raced mid-scanline effects (#1079)\n- snapshot: rebuild SuperFX pointers after restore\n- memmap: bound multi-cart ROM copies\n- Vlibretro: validate ROM size before BS-X probing\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "snes9x_core"
+      ],
+      "contentHash": "2dc284054720591c3ba4811a4dbf1369ee7a0b301d1edfadfaaf292022d1298a"
+    },
+    {
+      "id": "136030",
+      "title": "【家用机】Nintendulator NRS v0.985 (2026/08/16)",
+      "originalTitle": "[Consoles de salon] Nintendulator NRS v0.985 (2026/08/16)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T21:24:04Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136030-consoles-de-salon-nintendulator-nrs-v0-985-2026-08-16/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/NintendulatorNRS.png",
+      "officialUrl": "http://symphoniae.com/",
+      "summary": "NintendulatorNRS 是一款适用于 Windows 的 Famicom/NES（及其衍生产品，例如 VRT 芯片组）模拟器。它是 NewRisingSun 维护的 Nintendulator（由 Quietust）的一个分支，提供极其广泛的兼容性。",
+      "content": "NintendulatorNRS 是一款适用于 Windows 的 Famicom/NES（及其衍生产品，例如 VRT 芯片组）模拟器。它是 NewRisingSun 维护的 Nintendulator（由 Quietust）的一个分支，提供极其广泛的兼容性。",
+      "originalContent": "NintendulatorNRS est un émulateur de Famicom / NES (et ses dérivés tels que les chipsets VRT) pour Windows. C'est une fourche de Nintendulator (par Quietust) maintenue par NewRisingSun et qui offre une compatibilité extrêmement large.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "d712076cf35d76b1821405b94b24ac07873bc145cf4889b0eae207532c716109"
+    },
+    {
+      "id": "136027",
+      "title": "【家用机】Ryujinx-Nextendo v1.7.6",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.7.6",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T12:23:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136027-consoles-de-salon-ryujinx-nextendo-v1-7-6/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
+      "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
+      "summary": "Ryujinx-Nextendo 是一款基于 Ryujinx 的 Nintendo Switch 模拟器，它原生集成了对 Nextendo Network 的支持，Nextendo Network 是一项旨在取代官方 Nintendo 服务的私人和社区在线服务。 该项目包括 Ryujinx 仿真核心，特别是处理器、GPU、音频、控件和文件系统。 Nextendo所做的改变主要涉及网络部分和用户界面。",
+      "content": "Ryujinx-Nextendo 是一款基于 Ryujinx 的 Nintendo Switch 模拟器，它原生集成了对 Nextendo Network 的支持，Nextendo Network 是一项旨在取代官方 Nintendo 服务的私人和社区在线服务。\n\n该项目包括 Ryujinx 仿真核心，特别是处理器、GPU、音频、控件和文件系统。 Nextendo所做的改变主要涉及网络部分和用户界面。\n\n其目标尤其是允许兼容游戏通过 Nextendo Network 重新获得在线游戏功能，而无需用户进行任何特定的手动配置、修改主机文件或绕过 SSL。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "861dffb54b63e38c1550d826ca40705ed7a4db37711b785bfb49b05edf8a4590"
+    },
+    {
+      "id": "136025",
+      "title": "【电脑】ASE v1.10",
+      "originalTitle": "[Ordi.] ASE v1.10",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T12:21:54Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136025-ordi-ase-v1-10/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/ASE-emu.png",
+      "officialUrl": "https://github.com/thebitculture/ase/",
+      "summary": "Atari System Emulator (ASE) 是用 C# 开发的 Atari ST 仿真器，支持 ST F/FM、Mega ST 和 STE 模型。它特别使用由 Dirk Hoffmann 博士创建的 Motorola 68000 Moira 处理器模拟器。 该项目来自 20 世纪 90 年代末用 C 语言和汇编语言开发的旧模拟器。此后大部分代码都被重写，其中一些元素也来自 Hatari。",
+      "content": "Atari System Emulator (ASE) 是用 C# 开发的 Atari ST 仿真器，支持 ST F/FM、Mega ST 和 STE 模型。它特别使用由 Dirk Hoffmann 博士创建的 Motorola 68000 Moira 处理器模拟器。\n\n该项目来自 20 世纪 90 年代末用 C 语言和汇编语言开发的旧模拟器。此后大部分代码都被重写，其中一些元素也来自 Hatari。\n\n最初，ASE 被设计为一个简单的项目，允许您了解和试验模拟器的工作原理。然而，在它的发展过程中，它已经大大丰富并成为一个更完整的模拟器。",
+      "originalContent": "Atari System Emulator (ASE) est un émulateur Atari ST développé en C#, prenant en charge les modèles ST F/FM, Mega ST et STE. Il utilise notamment l’émulateur de processeur Motorola 68000 Moira, créé par Dr. Dirk Hoffmann.\n\nLe projet est issu d’un ancien émulateur développé en C et assembleur à la fin des années 1990. Une grande partie du code a depuis été réécrite, avec également des éléments provenant de Hatari.\n\nÀ l’origine, ASE avait été conçu comme un projet simple permettant de comprendre et expérimenter le fonctionnement d’un émulateur. Au fil de son développement, il s’est toutefois considérablement enrichi et est devenu un émulateur plus complet.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "ef7a943a3ad8e4b3a80e3b927f778bfb88f80e3c6ea6a183941c4064675aa940"
+    },
+    {
+      "id": "136023",
+      "title": "【其他】Coffee GB v2.0.4",
+      "originalTitle": "[Consoles portables] Coffee GB v2.0.4",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T12:20:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136023-consoles-portables-coffee-gb-v2-0-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/coffee-gb-1.7.9.png",
+      "officialUrl": "https://github.com/trekawek/coffee-gb",
+      "summary": "Coffee GB 是一个用 Java 16（针对核心）和 Kotlin（针对图形界面）开发的 Game Boy Color 模拟器。它被视为个人项目和编程练习，其特点是雄心勃勃的技术方法：CPU 模拟是周期精确的，每条指令都被分解为以控制台的真实节奏执行的微操作。 尽管具有实验性质，Coffee GB 仍提供高兼容性，并通过著名的 Blagg 和 Mooneye GB 测试验证，保证行为忠实于原始控制台。",
+      "content": "Coffee GB 是一个用 Java 16（针对核心）和 Kotlin（针对图形界面）开发的 Game Boy Color 模拟器。它被视为个人项目和编程练习，其特点是雄心勃勃的技术方法：CPU 模拟是周期精确的，每条指令都被分解为以控制台的真实节奏执行的微操作。\n\n尽管具有实验性质，Coffee GB 仍提供高兼容性，并通过著名的 Blagg 和 Mooneye GB 测试验证，保证行为忠实于原始控制台。它支持带有 MBC1 至 MBC5 内存控制器的卡带以及电池保存功能，允许像真正的 Game Boy 一样保存游戏数据。\n\n该模拟器还读取压缩的 ROM (.zip)，通过 .properties 文件提供关键配置，并将网络游戏功能与回滚（仍处于实验阶段）集成，以实现状态同步的在线游戏。\n\n对于开发人员或对技术感兴趣的人来说，该项目包括通过 Maven 进行自动化测试，并且源代码可在 MIT 许可证下获得，可自由修改和可重用。",
+      "originalContent": "Coffee GB est un émulateur Game Boy Color développé en Java 16 (pour le cœur) et Kotlin (pour l’interface graphique). Conçu comme un projet personnel et un exercice de programmation, il se distingue par une approche technique ambitieuse: l’émulation du CPU est cycle-exacte, chaque instruction étant décomposée en micro-opérations exécutées à la cadence réelle de la console.\n\nMalgré son aspect expérimental, Coffee GB offre une compatibilité élevée, validée par les célèbres tests Blargg et Mooneye GB, garantissant un comportement fidèle à la console d’origine. Il prend en charge les cartouches avec les contrôleurs mémoire MBC1 à MBC5, ainsi que les sauvegardes sur batterie, permettant de conserver les données de jeu comme sur une vraie Game Boy.\n\nL’émulateur lit également les ROMs compressées (.zip), propose une configuration des touches via un fichier .properties, et intègre une fonctionnalité de netplay avec rollback (encore expérimentale) pour jouer en ligne avec synchronisation des états.\n\nPour les développeurs ou curieux techniques, le projet inclut des tests automatisés via Maven, et le code source est disponible sous licence MIT, librement modifiable et réutilisable.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "coffee_gb_pc"
+      ],
+      "contentHash": "6fb366f06be546f881dbf0db79832d3bdac4974017792c4202519d4013bae976"
+    },
+    {
+      "id": "136020",
+      "title": "【移动设备】EKA2L1 v0.0.9 r260819",
+      "originalTitle": "[PDA et TEL] EKA2L1 v0.0.9 r260819",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "tool",
+      "publishedAt": "2026-08-17T12:15:49Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136020-pda-et-tel-eka2l1-v0-0-9-r260819/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/05/EKA2L1.jpg",
+      "officialUrl": "https://github.com/EKA2L1/EKA2L1",
+      "summary": "Symbian OS 系统仿真器。 （构建自动装置） - 合并来自 yeatse/fix/icon-mask-and-mbm-bounds 的拉取请求 #589 - 外部：将 lunasvg 移至 3.5.0 - fbs：将二进制颜色键图标蒙版读取为模板，而不是 alpha 斜坡 - 加载程序：跳过文件没有的 MBM 位图索引 - 合并来自 yeatse/ci/required-check-gate 的拉取请求 #588 - ci：为分…",
+      "content": "Symbian OS 系统仿真器。 （构建自动装置）\n\n- 合并来自 yeatse/fix/icon-mask-and-mbm-bounds 的拉取请求 #589\n- 外部：将 lunasvg 移至 3.5.0\n- fbs：将二进制颜色键图标蒙版读取为模板，而不是 alpha 斜坡\n- 加载程序：跳过文件没有的 MBM 位图索引\n- 合并来自 yeatse/ci/required-check-gate 的拉取请求 #588\n- ci：为分支保护添加一项稳定检查以要求\n- 合并来自 yeatse/feat/ios-port 的拉取请求 #587\n- feat(ios)：添加 iOS 前端\n- 合并来自 Fluence58/patch-1 的拉取请求 #537\n- 更新 eka2l1_tr_TR.ts\n- 合并来自 symbuzzer/master 的拉取请求 #580\n- 更新manager.cpp\n- 更新sis_v1_installer.cpp\n- 更新sis_v1_installer.h\n- 合并来自 yeatse/fix/no-device-startup-crash 的拉取请求 #585\n- 系统：未设置设备时不初始化用户端\n- 合并来自 yeatse/build/cmake4 的拉取请求 #586\n- 构建：使工具链现代化，以便当前的跑步者图像正常工作\n- 合并来自 yeatse/ci/ekatests-in-ci 的拉取请求#584\n- 测试：恢复 ekatests 并在 CI 中运行\n- 合并来自 yeatse/ci/modernize-build-workflow 的拉取请求 #583\n- 保持 miniBAE 在 Clang 16 及更高版本上编译\n- 让 macOS 版本针对当前的 libc++ 进行编译\n- ci：将 CMake 固定到 3.31 并将 Windows 保留在 Visual Studio 2022 上\n- ci：修复恢复工作流程暴露的三个故障\n- ci：让构建工作流程恢复生机\n\nLes infos sur cette version sont ici.",
+      "originalContent": "Un émulateur du système Symbian OS. (Builds automatiques)\n\n- Merge pull request #589 from yeatse/fix/icon-mask-and-mbm-bounds\n- external: Move lunasvg to 3.5.0\n- fbs: Read a binary colour-key icon mask as a stencil, not an alpha ramp\n- loader: Skip an MBM bitmap index the file does not have\n- Merge pull request #588 from yeatse/ci/required-check-gate\n- ci: Add one stable check for branch protection to require\n- Merge pull request #587 from yeatse/feat/ios-port\n- feat(ios): Add an iOS frontend\n- Merge pull request #537 from Fluence58/patch-1\n- Update eka2l1_tr_TR.ts\n- Merge pull request #580 from symbuzzer/master\n- Update manager.cpp\n- Update sis_v1_installer.cpp\n- Update sis_v1_installer.h\n- Merge pull request #585 from yeatse/fix/no-device-startup-crash\n- system: Don't initialise the user side when no device is set up\n- Merge pull request #586 from yeatse/build/cmake4\n- build: Modernise the toolchain so the current runner images work\n- Merge pull request #584 from yeatse/ci/ekatests-in-ci\n- tests: Restore ekatests and run it in CI\n- Merge pull request #583 from yeatse/ci/modernize-build-workflow\n- Keep miniBAE compiling on Clang 16 and later\n- Let the macOS build compile against a current libc++\n- ci: Pin CMake to 3.31 and keep Windows on Visual Studio 2022\n- ci: Fix the three failures the revived workflow exposed\n- ci: Bring the build workflow back to life\n\nLes infos sur cette version sont ici.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "eka2l1"
+      ],
+      "contentHash": "df52eebe4401e7b4a8bd16c39854a67b49b3e7c2772dd397249b889568444783"
+    },
+    {
+      "id": "136018",
+      "title": "【家用机】GearColeco v1.6.10",
+      "originalTitle": "[Consoles de salon] GearColeco v1.6.10",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T12:04:15Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136018-consoles-de-salon-gearcoleco-v1-6-10/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/02/gearcoleco-qbert.png",
+      "officialUrl": "https://github.com/drhelius/Gearcoleco",
+      "summary": "Gearcoleco 是一款用 C++ 编写的高精度跨平台 ColecoVision 模拟器，可在 Windows、macOS、Linux、BSD、Raspberry Pi 和 RetroArch 上运行。 变化： 🎯 提高了 OCM 映射器的准确性 🔊 改进了 AY-3-8910 音频采样 🖥️ 添加了锐利双线性着色器 🎵 改进的 VGM 记录器 🐛 许多错误修复和改进",
+      "content": "Gearcoleco 是一款用 C++ 编写的高精度跨平台 ColecoVision 模拟器，可在 Windows、macOS、Linux、BSD、Raspberry Pi 和 RetroArch 上运行。\n\n变化：\n🎯 提高了 OCM 映射器的准确性\n🔊 改进了 AY-3-8910 音频采样\n🖥️ 添加了锐利双线性着色器\n🎵 改进的 VGM 记录器\n🐛 许多错误修复和改进",
+      "originalContent": "Gearcoleco est un émulateur ColecoVision multiplateforme très précis écrit en C++ qui fonctionne sous Windows, macOS, Linux, BSD, Raspberry Pi et RetroArch.\n\nLes changements:\n🎯 Improved OCM mapper accuracy\n🔊 Improved AY-3-8910 audio sampling\n🖥️ Added Sharp Bilinear shaders\n🎵 Improved VGM recorder\n🐛 Many bug fixes and improvements",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "gearcoleco_core"
+      ],
+      "contentHash": "18435199ba6912e4c7fef8d568ce1805b04704957c73c1a5e41b6c1d3768ee92"
+    },
+    {
+      "id": "136013",
+      "title": "【其他】Holani-Min v1.0",
+      "originalTitle": "[Consoles portables] Holani-Min v1.0",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T11:57:22Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136013-consoles-portables-holani-min-v1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/02/holani-min.png",
+      "officialUrl": "https://github.com/LLeny/holani-min/",
+      "summary": "这是带有命令行界面的 Atari Lynx Holani 模拟器。",
+      "content": "这是带有命令行界面的 Atari Lynx Holani 模拟器。",
+      "originalContent": "Il s'agit de l'émulateur Atari Lynx Holani avec une interface en ligne de commande.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "a7c2ef33710d05027c9945eb538dbff8835413fff1400bb0540a1e25467f013b"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+name: Update Chinese News Feed
+
+on:
+  schedule:
+    - cron: '37 */2 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: news-feed-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate translated news feed
+        run: python3 scripts/update_news_feed.py
+
+      - name: Validate feed
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          paths = [Path('assets/news.json'), Path('data/news.json')]
+          payloads = [json.loads(path.read_text(encoding='utf-8')) for path in paths]
+          assert payloads[0] == payloads[1]
+          payload = payloads[0]
+          assert payload['schemaVersion'] == 1
+          assert payload['retentionDays'] == 90
+          assert payload['source']['feedUrl'] == 'https://www.emu-france.com/flux/rss/'
+          articles = payload['articles']
+          assert len(articles) >= 5
+          assert len({item['id'] for item in articles}) == len(articles)
+          for item in articles:
+              assert item['title'] and item['content'] and item['publishedAt']
+              assert item['sourceUrl'].startswith('https://www.emu-france.com/news/')
+              assert item['title'].startswith('【')
+          PY
+
+      - name: Commit updated feed
+        run: |
+          if git diff --quiet -- assets/news.json data/news.json; then
+            echo 'News feed is already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/news.json data/news.json
+          git commit -m '自动刷新中文模拟器新闻 [skip ci]'
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

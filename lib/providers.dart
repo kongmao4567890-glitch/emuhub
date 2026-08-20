@@ -11,9 +11,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/constants/app_constants.dart';
 import 'data/database/database.dart';
 import 'data/models/emulators_config.dart';
+import 'data/models/news_article.dart';
 import 'data/repositories/settings_repository.dart';
 import 'services/background_task.dart';
 import 'services/notification_service.dart';
+import 'services/news/news_service.dart';
 import 'services/update/update_service.dart';
 import 'services/update/version_catalog_service.dart';
 
@@ -136,6 +138,13 @@ final Provider<UpdateService> updateServiceProvider =
 /// 下载，远端不可用时自动读取 APK 内置快照。
 final Provider<VersionCatalogService> versionCatalogServiceProvider =
     Provider<VersionCatalogService>((ref) => VersionCatalogService());
+
+/// 由定时任务翻译生成的模拟器新闻，远端优先、APK 快照兜底。
+final Provider<NewsService> newsServiceProvider =
+    Provider<NewsService>((ref) => NewsService());
+
+final FutureProvider<NewsFeed> newsFeedProvider =
+    FutureProvider<NewsFeed>((ref) => ref.watch(newsServiceProvider).load());
 
 /// 本地通知服务（单例）。
 ///
