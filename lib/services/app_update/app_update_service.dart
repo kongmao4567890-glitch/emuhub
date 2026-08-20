@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:crypto/crypto.dart';
@@ -143,14 +144,18 @@ class AppUpdateService {
         '$_releaseManifestName';
     AppRelease newest;
     try {
-      final response = await _dio.get<dynamic>(
+      final response = await _dio.get<String>(
         manifestUrl,
         options: Options(
-          responseType: ResponseType.json,
-          headers: const {'Accept': 'application/json'},
+          // GitHub Release 附件固定返回 application/octet-stream，不能依赖
+          // Dio 按 Content-Type 自动 JSON 解码。
+          responseType: ResponseType.plain,
+          headers: const {'Accept': 'application/octet-stream'},
         ),
       );
-      newest = _parseManifest(_asMap(response.data));
+      newest = _parseManifest(
+        _asMap(jsonDecode(response.data ?? '')),
+      );
     } on DioException catch (error) {
       final status = error.response?.statusCode;
       if (status == 403) {

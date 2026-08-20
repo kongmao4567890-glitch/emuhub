@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -20,7 +22,7 @@ void main() {
             Response<dynamic>(
               requestOptions: options,
               statusCode: 200,
-              data: _manifest(211),
+              data: jsonEncode(_manifest(211)),
             ),
           );
         },
@@ -49,7 +51,7 @@ void main() {
           Response<dynamic>(
             requestOptions: options,
             statusCode: 200,
-            data: _manifest(211),
+            data: jsonEncode(_manifest(211)),
           ),
         ),
       ),
