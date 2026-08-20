@@ -90,7 +90,11 @@ jobs:
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: flutter build apk --release --no-tree-shake-icons --build-number=${{ github.run_number }}
+        run: >-
+          flutter build apk --release --no-tree-shake-icons
+          --build-name=1.0.${{ github.run_number }}
+          --build-number=${{ github.run_number }}
+          --dart-define=APP_VERSION=1.0.${{ github.run_number }}
 
       - name: Generate APK SHA-256
         run: |

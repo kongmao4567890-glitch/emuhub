@@ -9,7 +9,11 @@ class AppConstants {
   static const String appName = 'EmuHub';
 
   /// 应用版本号（语义化版本）。
-  static const String appVersion = '1.0.34';
+  /// GitHub Actions 会用发布构建号注入该值，使关于页与 Release 标签一致。
+  static const String appVersion = String.fromEnvironment(
+    'APP_VERSION',
+    defaultValue: '1.0.34',
+  );
 
   /// App 自身更新检查所使用的 GitHub 仓库地址。
   ///
