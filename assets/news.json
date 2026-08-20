@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T10:59:12.556937Z",
+  "generatedAt": "2026-08-20T13:28:41.661772Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,120 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx3-0-9-3",
+      "title": "【Android更新】ARMSX3 0.9.3",
+      "originalTitle": "ARMSX3 0.9.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T12:41:58Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.3",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.3，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.3。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.3\r\n\r\n新内容： \r\n\r\n在线游戏（RPCN）： \r\n\r\nPSN 状态现在有三向选择，选择 RPCN 将打开完整的帐户屏幕：服务器、用户名、密码、电子邮件和激活令牌，以及用于创建帐户、重新发送令牌和重置密码的按钮。 RPCN 帐户是在应用程序内部创建的，而不是在网站上创建的，服务器通过电子邮件发送激活它的令牌。 \r\n\r\n已保存的服务器：保留多个服务器并在它们之间切换。官方服务器无法删除，并且可以一键重置回原来的服务器。还添加了用于 RPCN 的实验性 IPv6，它也无法打开，以及核心暴露的所有其他网络设置：DNS 服务器和主机名重定向、控制台 IP 地址、绑定地址 PSN 国家/地区、从 PSID 派生 MAC 和部落。前两个是定制游戏服务器所需要的。 RPCN 取代了索尼的 PSN，但发行商自己的服务器从来都不是 PSN，因此粉丝复兴意味着将其地址指向其他地方。这在以前的应用程序中是不可能的。\r\n\r\n注意：您的 RPCN 密码以纯文本形式存储在 rpcn.yml 中，与桌面 RPCS3 上的相同。不要重复使用您关心的密码。\r\n\r\n控制：\n振动现在可以使用。之前它什么也没做。 \r\n\r\nL2 和 R2 不再滞后、双火或向下摇杆。 \r\n\r\n同时以两种方式报告触发器的键盘不再需要两个作者争夺同一个按钮。\r\n\r\n稳定性： \r\n\r\n现在编译时内存不足就是这样说的。一款模块无法全部安装的游戏常常会挂在一个永远无法完成的进度条上，没有任何地方可以解释原因。它仍然故意停止，因为在没有丢失模块的情况下继续运行比解释器运行得慢，并且看起来像是一个损坏的游戏，但原因现在在屏幕上，以及要做什么：再次开始游戏。已编译的内容会被缓存，因此每次尝试都会更进一步。 （这主要针对像我这样的 8GB 及以下设备）。 \r\n\r\n报告 PKG 安装失败，而不是悄悄声明成功。写入未被检查，因此完整的设备会产生一个损坏的安装，看起来很好，直到游戏无法启动。\r\n\r\n游戏数据安装时首先检查空间并说出来，而不是在没有任何解释的情况下停止在某个百分比。\r\n\r\n表现：\n着色器编译与框架所依赖的核心无关。编译器线程根本不会设置关联性，因此在 big.LITTLE 手机上，着色器突发可能会满足相同的 RSX 核心需求。他们现在使用小集群，并且池的大小适合该集群而不是整个芯片，同时具有更高的编译吞吐量和更少的干扰。 \r\n\r\n兼容性： \r\n\r\n《如龙：死魂》现在效果更好了。两个单独的故障：加载屏幕挂起和稍后锁定。每个游戏的设置都会自动应用。\r\n\r\n上游：\r\n\r\n赶上了 RPCS3 的 98 次提交。",
+      "originalContent": "ARMSX3 0.9.3\r\n\r\nWhat's new: \r\n\r\nOnline play (RPCN): \r\n\r\nPSN status is a three-way choice now, and picking RPCN opens a full account screen: server, username, password, email and the activation token, with buttons to create an account, resend the token and reset a password. An RPCN account is made from inside the app, not on a website, the server emails a token that activates it. \r\n\r\nSaved servers: Keep more than one and switch between them. The official server cannot be removed, and there is a one-tap reset back to it. Also added Experimental IPv6 for RPCN, which also had no way of being switched on, as well as every other network setting the core exposes: DNS server and hostname redirects, Console IP address, bind address PSN country, derive MAC from PSID, and clans. The first two are what custom game servers need. RPCN replaces Sony's PSN, but a publisher's own servers were never PSN, so reaching a fan revival of one means pointing its addresses somewhere else. That was impossible in the app before.\r\n\r\nNote: your RPCN password is stored as plain text in rpcn.yml, the same as on desktop RPCS3. Don't reuse a password you care about.\r\n\r\nControls: \r\n\r\nVibration now works. It did nothing previously. \r\n\r\nL2 and R2 no longer lag, double-fire or stick down. \r\n\r\nPads that report their triggers two ways at once no longer have two writers fighting over the same button.\r\n\r\nStability: \r\n\r\nRunning out of memory while compiling now says so. A game whose modules would not all fit used to hang on a progress bar that never finished, with nothing anywhere explaining why. It still stops deliberately, because carrying on without the missing modules runs slower than the interpreter and looks like a broken game, but the reason is on screen now, along with what to do: start the game again. What already compiled is cached, so each attempt gets further. (This is mainly for the 8gb and under devices like myself). \r\n\r\nA failed PKG install is reported instead of quietly claiming success. Writes were not checked, so a full device produced a broken install that looked fine until the game would not start.\r\n\r\nGame data installs check for space first and say so, rather than stopping at some percentage with no explanation.\r\n\r\nPerformance: \r\n\r\nShader compilation is kept off the cores the frame depends on. The compiler threads never set an affinity at all, so on a big.LITTLE phone a shader burst could land on the same core RSX needs. They now use the little cluster, and the pool is sized to that cluster instead of to the whole chip, more compile throughput and less interference at the same time. \r\n\r\nCompatibility: \r\n\r\nYakuza: Dead Souls works better now. Two separate faults: the loading screen hang and a later lock-up. Per-game settings apply automatically.\r\n\r\nUpstream:\r\n\r\nCaught up with 98 commits from RPCS3.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "876a5a91f7e1f387f5e630f11e3d420382c488f1b5e7a3d3c00dcd1fbfc96b64"
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T11:32:03Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n## 提交\n- 显示时间戳时使用相对时间 ([Stenzek](https://github.com/stenzek/duckstation/commit/5422093cd09125d003bdf4b94310916f46b2ea43))\n- 添加多个游戏的哈希值 (#3784) [#3784](https://github.com/stenzek/duckstation/pull/3784) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/a444b1265b05bac24bf404d2363c5c6ced69c222))\n- 改进意大利语翻译 (#3783) [#3783](https://github.com/stenzek/duckstation/pull/3783) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/5f3db8ed0f101beea3f27063e5005faf3f065cb6))",
+      "originalContent": "## Commits\n- Use relative time when displaying timestamps ([Stenzek](https://github.com/stenzek/duckstation/commit/5422093cd09125d003bdf4b94310916f46b2ea43))\n- Add hashes for multiple games (#3784) [#3784](https://github.com/stenzek/duckstation/pull/3784) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/a444b1265b05bac24bf404d2363c5c6ced69c222))\n- Improve Italian translation (#3783) [#3783](https://github.com/stenzek/duckstation/pull/3783) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/5f3db8ed0f101beea3f27063e5005faf3f065cb6))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "9dadbd5e6052193a577389fbfde3e9710b5dd41accbf62550b9e8b5de3a70f02"
+    },
+    {
+      "id": "136105",
+      "title": "【其他】Visual PinMAME / PinMAME / PinMAME32 v3.7 build 407",
+      "originalTitle": "[Flippers] Visual PinMAME / PinMAME / PinMAME32 v3.7 build 407",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T11:15:32Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136105-flippers-visual-pinmame-pinmame-pinmame32-v3-7-build-407/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/vpinmame-hd.png",
+      "officialUrl": "https://github.com/vpinball/pinmame",
+      "summary": "类似于 PinMAME 的 MAME32。该版本是PinMAMEW在Windows下的真实移植。 PinMAME 模拟了从 CPU 控制机器早期（1970 年代中期）到 2014 年 (Stern SAM) 所创建的几乎所有固态弹球机中的硬件，模拟了大约 770 个独特的弹球机以及更多的克隆/修订版（总计超过 2700 套）。",
+      "content": "类似于 PinMAME 的 MAME32。该版本是PinMAMEW在Windows下的真实移植。\n\nPinMAME 模拟了从 CPU 控制机器早期（1970 年代中期）到 2014 年 (Stern SAM) 所创建的几乎所有固态弹球机中的硬件，模拟了大约 770 个独特的弹球机以及更多的克隆/修订版（总计超过 2700 套）。它有不同的形式：\n\n- 独立模拟器（PinMAME（命令行）、PinMAME32（UI））\n- COM 库 (VPinMAME) 用于控制 Visual Pinball 8/9/X 等模拟器\n- 用于驱动 VPE、VPX Standalone 等模拟器或 PPUC 等硬件替换解决方案的库 (libPinMAME)",
+      "originalContent": "Sorte d'équivalent de MAME32 pour PinMAME. Cette version est un vrai portage de PinMAMEW sous Windows.\n\nPinMAME émule le matériel présent dans presque toutes les machines à flipper à semi-conducteurs créées depuis les premiers jours des machines contrôlées par CPU (milieu des années 1970) jusqu'en 2014 (Stern SAM), avec environ 770 machines à flipper uniques émulation et bien plus de clones/révisions (au total plus de 2700 ensembles). Il est disponible sous différentes formes :\n\n- Émulateur autonome (PinMAME (ligne de commande), PinMAME32 (UI))\n- Bibliothèque COM (VPinMAME) pour piloter des simulateurs comme Visual Pinball 8/9/X\n- Bibliothèque (libPinMAME) pour piloter des simulateurs comme VPE, VPX Standalone, ou des solutions de remplacement matériel comme PPUC",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mame_pc",
+        "mame_gw_core",
+        "mame_arcadia_pc",
+        "mame_chip8_pc",
+        "mame_tamagotchi_pc",
+        "mame_apple2",
+        "mame_pc88",
+        "mame_pc98"
+      ],
+      "contentHash": "ca989ee81bd6ba522139fe43d172823a7cfbe9e35d58295737ec5c5ae7c001e9"
+    },
+    {
+      "id": "136103",
+      "title": "【家用机】Ryujinx-Nextendo v1.7.7",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.7.7",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T11:09:22Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136103-consoles-de-salon-ryujinx-nextendo-v1-7-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
+      "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
+      "summary": "Ryujinx-Nextendo 是一款基于 Ryujinx 的 Nintendo Switch 模拟器，它原生集成了对 Nextendo Network 的支持，Nextendo Network 是一项旨在取代官方 Nintendo 服务的私人和社区在线服务。 该项目包括 Ryujinx 仿真核心，特别是处理器、GPU、音频、控件和文件系统。 Nextendo所做的改变主要涉及网络部分和用户界面。",
+      "content": "Ryujinx-Nextendo 是一款基于 Ryujinx 的 Nintendo Switch 模拟器，它原生集成了对 Nextendo Network 的支持，Nextendo Network 是一项旨在取代官方 Nintendo 服务的私人和社区在线服务。\n\n该项目包括 Ryujinx 仿真核心，特别是处理器、GPU、音频、控件和文件系统。 Nextendo所做的改变主要涉及网络部分和用户界面。\n\n其目标尤其是允许兼容游戏通过 Nextendo Network 重新获得在线游戏功能，而无需用户进行任何特定的手动配置、修改主机文件或绕过 SSL。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "eddd769d279c7bad71e47c22087d5d5768958d31e4dab008bbc28a8049a0f606"
+    },
+    {
+      "id": "136101",
+      "title": "【工具】Turbo Stage v0.10.3",
+      "originalTitle": "[Utilitaires Multi-systemes] Turbo Stage v0.10.3",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-08-20T11:08:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136101-utilitaires-multi-systemes-turbo-stage-v0-10-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/04/Turbostage.png",
+      "officialUrl": "https://github.com/jberclaz/turbostage",
+      "summary": "这是 DOSBOX Staging 的前端。它的灵感来自 FS-Uae-Launcher。",
+      "content": "这是 DOSBOX Staging 的前端。它的灵感来自 FS-Uae-Launcher。",
+      "originalContent": "Il s'agit d'un frontend pour DOSBOX Staging. Il est inspiré par FS-Uae-Launcher.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "af90f43fd19cf2db6edc23ef604ed9cbc97617d72294fa544254c3b6a72fd126"
+    },
     {
       "id": "android-release-armsx2-nightly-20260820",
       "title": "【Android更新】ARMSX2 nightly-20260820",
@@ -30,29 +144,6 @@
         "armsx2"
       ],
       "contentHash": "1d6149ee3e7a628ad0649f10a1c79a64146ef73208d8f5d83aac56617c5e8f4f"
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T09:09:29Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n## 提交\n- 添加 HASH 超越超越 (#3782) [#3782](https://github.com/stenzek/duckstation/pull/3782) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/8de6b0ac7bb0f7627ce93c570ed2a2b18b3880d3))\n- 修复禁用开发日志记录时的 CPE 解析（[Nick Faro](https://github.com/stenzek/duckstation/commit/48719b86b5a6a199d9a600513c48710935848b8b)）\n- 修复添加时不遵守 m_manual_evict ([Stenzek](https://github.com/stenzek/duckstation/commit/96e0c4d389ccb9c6994648578b621c1f2b571608))\n- 添加自定义删除器覆盖（[Stenzek](https://github.com/stenzek/duckstation/commit/824a1072e298df171438bc960c8f50d9fe31db61)）\n- 删除shared_ptr的使用（[Stenzek](https://github.com/stenzek/duckstation/commit/0b28c198f7bf529d294742a7fe9bcde6b577b795)）",
-      "originalContent": "## Commits\n- Add HASH for Beyond the Beyond (#3782) [#3782](https://github.com/stenzek/duckstation/pull/3782) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/8de6b0ac7bb0f7627ce93c570ed2a2b18b3880d3))\n- Fix CPE parsing when dev logging is disabled ([Nick Faro](https://github.com/stenzek/duckstation/commit/48719b86b5a6a199d9a600513c48710935848b8b))\n- Fix m_manual_evict not respected when adding ([Stenzek](https://github.com/stenzek/duckstation/commit/96e0c4d389ccb9c6994648578b621c1f2b571608))\n- Add custom deleter override ([Stenzek](https://github.com/stenzek/duckstation/commit/824a1072e298df171438bc960c8f50d9fe31db61))\n- Remove shared_ptr usage ([Stenzek](https://github.com/stenzek/duckstation/commit/0b28c198f7bf529d294742a7fe9bcde6b577b795))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "3b9f0f19b51f6dae989e4de56824399917deca44bebe4f65a07c821ddbb97a19"
     },
     {
       "id": "android-release-virtual_jaguar_core-nightly",
@@ -144,29 +235,6 @@
         "nesd"
       ],
       "contentHash": "9bef716fe6cb932f09583dc33bb13d4758646708558e9a385df797afe3a806de"
-    },
-    {
-      "id": "android-release-armsx3-0-9-2",
-      "title": "【Android更新】ARMSX3 0.9.2",
-      "originalTitle": "ARMSX3 0.9.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-19T18:14:37Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.2",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.2，发布日期为2026年08月19日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.2。\n\n发布日期：2026年08月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.2\r\n\r\n新内容： \r\n\r\n以前无法启动的游戏现在可以启动了，PPU 处理原子内存操作的一个错误已得到修复，该错误导致一类游戏无法运行。当游戏代码申请锁时，它会保留一块内存，检查它，然后提交。在第一次成功提交后，ARMSX3 让线程的保留记录落后于实际情况一步，因此对同一块的第二次提交总是失败，并且一直失败。任何游戏的代码在一次传递中要求多个锁都会永远旋转。\r\n\r\n因此，《刺客信条》从未通过加载屏幕。钢铁侠 2 在世嘉标志出现后停在黑屏上。现在两者都可以启动并播放。\r\n\r\n如果游戏一直挂在黑屏上，没有错误也没有崩溃，那么值得在此版本上再次尝试。这次故障没有在任何地方留下任何痕迹，没有消息，没有崩溃，只是一场永远无法继续的游戏，因此无法从外部知道哪些游戏受到了影响。\r\n\r\n这不是 ARM 独有的问题，它今天出现在上游 RPCS3 中，修复程序已编写并与 Whatcookie 共享！ \r\n\r\n修复了悄悄忽略你的设置：\n所有核心设置现在都会显示它正在记住哪些设置，并让您忘记它们。每次在正常设置屏幕之后，都会记录并重新应用该屏幕上的任何更改。这是故意的（这就是它成为覆盖的原因），但它无法向您表明它正在发生，也无法撤消它。几个月前设置的值将永远默默地击败普通屏幕上的相同设置，屏幕上没有任何内容可以解释为什么两者不一致。现在，每个被覆盖的行都被标记，计数显示在顶部，并且每行都有一个“忘记”按钮，整个屏幕都有一个“忘记”按钮。忘记也会将值放回原处，而不是将其保留在覆盖留下的位置。一次性清理还可以清除过去调试时打开的残留物，包括 RSX 分析器，它会降低每款游戏的性能。\r\n\r\n键盘：\n模拟键盘现在可以正确到达游戏，并且游戏可以看到真实的键盘：这是某些游戏隐藏在一项需求后面的调试菜单，以及游戏内文本聊天所使用的键盘。现在，每当键盘打开时，Fn 切换后面就会出现 Android 键盘上没有的一行按键，例如 Esc、Tab、箭头、Space、Enter 和 F1-F12。调试菜单需要箭头来导航，需要空格来打开，而手机键盘则两者都没有。键盘按钮现在实际上抬起了键盘。它以全屏游戏允许拒绝的方式询问系统，因此关键行将出现在任何内容上。在网络设置中使用模拟 USB 键盘将其打开，然后使用屏幕键盘热键或游戏中的 KBD 触摸按钮。\r\n\r\n萝卜的图形： \r\nTurnip 驱动程序上的半精度着色器数学被错误关闭。它又亮了。测试中没有明显的差异，它只是停止了一些浪费的工作。",
-      "originalContent": "ARMSX3 0.9.2\r\n\r\nWhat's new: \r\n\r\nGames that could never boot, now boot, A bug in how the PPU handles atomic memory operations has been fixed, and it was stopping a whole class of games from working. When a game's code claims a lock, it reserves a chunk of memory, checks it, then commits. ARMSX3 was letting the thread's record of that reservation fall one step behind reality after the first successful commit, so the second commit to the same chunk always failed, and kept failing. Any game whose code claims several locks in one pass would spin there forever.\r\n\r\nAssassin's Creed never got past its loading screen because of this. Iron Man 2 stopped at a black screen after the Sega logo. Both now boot and play.\r\n\r\nIf a game has been hanging on a black screen with no error and no crash, it is worth another try on this build. The failure left no trace anywhere, no message, no crash, just a game that never continued,  so there is no way to know from the outside which titles were affected.\r\n\r\nThis is not an ARM-only problem, it is present in upstream RPCS3 today, and the fix has been written up and shared with Whatcookie! \r\n\r\nFixed settings that quietly ignored you: \r\n\r\nAll Core Settings now shows which settings it is remembering, and lets you forget them. Anything changed on that screen is recorded and re-applied after the normal settings screens, every time. That is intentional, (it is what makes it an override), but it had no way to show you it was happening and no way to undo it. A value set there months ago would silently beat the same setting on a normal screen forever, with nothing on screen to explain why the two disagreed. Every overridden row is now marked, the count is shown at the top, and there is a Forget button per row and one for the whole screen. Forgetting also puts the value back rather than leaving it where the override left it. A one-time cleanup also clears leftovers from past debugging that were shipping switched on, including the RSX profiler, which costs performance in every game.\r\n\r\nKeyboard: \r\n\r\nThe emulated keyboard now reaches games properly, and games see a real keyboard: this is what the debug menus some titles hide behind one need, and what in-game text chat uses. A row of the keys the Android keyboard does not have like Esc, Tab, arrows, Space, Enter, and F1–F12 behind an Fn toggle now appears whenever the keyboard is up. Debug menus need arrows to navigate and Space to open, a phone keyboard has neither. The keyboard button now actually raises the keyboard. It was asking the system in a way a fullscreen game is allowed to refuse, so the key row would appear over nothing. Turn it on with Emulate USB keyboard in Network settings, then use the On-Screen Keyboard hotkey or the KBD touch button in game.\r\n\r\nGraphics on Turnip: \r\nHalf-precision shader maths was being switched off by mistake on Turnip drivers. It is on again. No visible difference in testing, it just stops some wasted work.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "e60fb87ec2651a8390841a1bb7e454224f2369fbec54a6ec3b3b99bbc01597f2"
     },
     {
       "id": "136089",
