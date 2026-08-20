@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:02:49.369320Z",
+  "generatedAt": "2026-08-20T19:11:55.969636Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -15,21 +15,91 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-08-20T16:26:59Z",
+      "publishedAt": "2026-08-20T18:56:58Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
       "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
       "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 每晚 `ba58116` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **提交** | [`ba58116`](https://github.com/libretro/virtualjaguar-libretro/commit/ba5811678207c9cafb468398fd8fc157c9f43942) |\n| **建成** | 2026-08-20 16:26 世界标准时间 |\n| **CI 运行** | [构建日志](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32389411078) |\n| **分行** | `develop` |\n\n> 自动构建 `develop` 尖端，每次推送时都会更换。它在所有 16 个目标上进行编译；它**未**通过测试套件或任何手动质量检查。为了获得稳定的版本，请使用[最新版本](https://github.com/libretro/virtualjaguar-libretro/releases/latest)。\n\n核心在启动时将其身份记录为 `v3.4.0 ba58116` — 在报告此版本的错误时引用该行。\n\n### 自前一晚以来的变化\n\n```\n54a7859 修复（dsp）：在 TOM 的 C_JERENA 后面门控 DSP CPUINT 68K 中断\n```\n\n### 文物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每个平台都附带一个 `-debug.tar.gz` 的分割调试符号；将其提取到二进制文件旁边以获得符号化的回溯。\n\n### SHA-256 校验和\n\n使用 `sha256sum --check SHA256SUMS.txt` (Linux) 或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) 进行验证。请参阅 [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md)。\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332 cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134 cue2cdi-macos-universal\n90efc4387797bac2c548e20686facf86f4f9b021da895dd8fc058459e7b8af58 cue2cdi-windows-x86_64.exe\nd6aaf54ce0624802d5adee648875216b05a24c364f1d4978e190a9fc6b26bd80 jagcd-tools-linux-x64.zip\n25c736a0c560af649e1fd9776c488754a50beee20f982feb3f5a7b8fd1554406 jagcd-tools-macos.zip\n789d78aa2645342e9976859701482a6dbfd92af5e62cf829dfe9616f41c915b4 jagcd-tools-windows-x64.zip\n8b248b89fc5b19c7f23ff282f5dd147ab19ef456d8f917f66cb8ff7c58b0c5a2 virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nfffcbd5883e360a96acc4439ec2be92a38491eb7b0d6b31455f49d915802bf04 virtualjaguar_libretro-android-arm64-v8a.so\n3b0ff84378e64a0416e2d7aa93cca06fbc6267371d8ce52fd96b9e860abbc679 virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\n1cb65c90b29ac036010c5658a70ed2b9e793f51800b5e1d292199fd59abca74f virtualjaguar_libretro-android-armeabi-v7a.so\n0b968a46a40b73674261d0d82b165e80e87202f5816c977b80a4c505fd470337 virtualjaguar_libretro-android-x86-debug.tar.gz\n1f08e3354…",
-      "originalContent": "### Nightly `ba58116` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`ba58116`](https://github.com/libretro/virtualjaguar-libretro/commit/ba5811678207c9cafb468398fd8fc157c9f43942) |\n| **Built** | 2026-08-20 16:26 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32389411078) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.4.0 ba58116` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n54a7859 fix(dsp): gate the DSP CPUINT 68K interrupt behind TOM's C_JERENA\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n90efc4387797bac2c548e20686facf86f4f9b021da895dd8fc058459e7b8af58  cue2cdi-windows-x86_64.exe\nd6aaf54ce0624802d5adee648875216b05a24c364f1d4978e190a9fc6b26bd80  jagcd-tools-linux-x64.zip\n25c736a0c560af649e1fd9776c488754a50beee20f982feb3f5a7b8fd1554406  jagcd-tools-macos.zip\n789d78aa2645342e9976859701482a6dbfd92af5e62cf829dfe9616f41c915b4  jagcd-tools-windows-x64.zip\n8b248b89fc5b19c7f23ff282f5dd147ab19ef456d8f917f66cb8ff7c58b0c5a2  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nfffcbd5883e360a96acc4439ec2be92a38491eb7b0d6b31455f49d915802bf04  virtualjaguar_libretro-android-arm64-v8a.so\n3b0ff84378e64a0416e2d7aa93cca06fbc6267371d8ce52fd96b9e860abbc679  virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\n1cb65c90b29ac036010c5658a70ed2b9e793f51800b5e1d292199fd59abca74f  virtualjaguar_libretro-android-armeabi-v7a.so\n0b968a46a40b73674261d0d82b165e80e87202f5816c977b80a4c505fd470337  virtualjaguar_libretro-android-x86-debug.tar.gz\n1f08e3354…",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 每晚 `5c7ddec` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **提交** | [`5c7ddec`](https://github.com/libretro/virtualjaguar-libretro/commit/5c7ddeca2c0bf09af305bb4912fa7d44a30cda32) |\n| **建成** | 2026-08-20 18:56 世界标准时间 |\n| **CI 运行** | [构建日志](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32403434224) |\n| **分行** | `develop` |\n\n> 自动构建 `develop` 尖端，每次推送时都会更换。它在所有 16 个目标上进行编译；它**未**通过测试套件或任何手动质量检查。为了获得稳定的版本，请使用[最新版本](https://github.com/libretro/virtualjaguar-libretro/releases/latest)。\n\n核心在启动时将其身份记录为 `v3.4.0 5c7ddec` — 在报告此版本的错误时引用该行。\n\n### 自前一晚以来的变化\n\n```\n8b7ba83 测试（texreplace）：断言 1x 代表，文档纪元到期\nd282498 feat(texreplace)：>Nx 阴影表面上的 1x 包装艺术（#369 第 3 层）\n```\n\n### 文物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每个平台都附带一个 `-debug.tar.gz` 的分割调试符号；将其提取到二进制文件旁边以获得符号化的回溯。\n\n### SHA-256 校验和\n\n使用 `sha256sum --check SHA256SUMS.txt` (Linux) 或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) 进行验证。请参阅 [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md)。\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332 cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134 cue2cdi-macos-universal\n2246eede83125be13263e800d53b72225c945fb1ae20fe53e7a8ce10794fb6f9 cue2cdi-windows-x86_64.exe\nf13558f10313dc2a0d54291dc7497a59f7565389c33b56368b732fa014558e08 jagcd-tools-linux-x64.zip\n44b32d9cc1cc83b28374832aa3b4c6492f3ca3127c3c9df7d7a8183ae0752676 jagcd-tools-macos.zip\n1d24552f732b4252451d8a2e12cacae6b8a368de8b8b426bbbe1fb0c938620d9 jagcd-tools-windows-x64.zip\n2ab5f6f24f04d7bec129f876a45d4c7c682031cbfa08f02ae955f1b211e1df98 virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\n42751613c195817bb410554e4b94d62aad991e48d4152c038368e60fd065917c virtualjaguar_libretro-android-arm64-v8a.so\n7382108c958964641e73554b11254c627a32348eb129a2a2501d2348dcf22b6c virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\n8a7de4d2f3f77d217e13ad1d29bdb492c1a6efc0636197c700281b3192a5699b virtualjaguar_libretro-android-armeabi-v7a.so\n77b826cd8c9c2842063cf5f92018ea738a6288107…",
+      "originalContent": "### Nightly `5c7ddec` — `v3.4.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`5c7ddec`](https://github.com/libretro/virtualjaguar-libretro/commit/5c7ddeca2c0bf09af305bb4912fa7d44a30cda32) |\n| **Built** | 2026-08-20 18:56 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32403434224) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.4.0 5c7ddec` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n8b7ba83 test(texreplace): assert the 1x representative, document epoch expiry\nd282498 feat(texreplace): >1x pack art on the Nx shadow surface (#369 tier 3)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n2246eede83125be13263e800d53b72225c945fb1ae20fe53e7a8ce10794fb6f9  cue2cdi-windows-x86_64.exe\nf13558f10313dc2a0d54291dc7497a59f7565389c33b56368b732fa014558e08  jagcd-tools-linux-x64.zip\n44b32d9cc1cc83b28374832aa3b4c6492f3ca3127c3c9df7d7a8183ae0752676  jagcd-tools-macos.zip\n1d24552f732b4252451d8a2e12cacae6b8a368de8b8b426bbbe1fb0c938620d9  jagcd-tools-windows-x64.zip\n2ab5f6f24f04d7bec129f876a45d4c7c682031cbfa08f02ae955f1b211e1df98  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\n42751613c195817bb410554e4b94d62aad991e48d4152c038368e60fd065917c  virtualjaguar_libretro-android-arm64-v8a.so\n7382108c958964641e73554b11254c627a32348eb129a2a2501d2348dcf22b6c  virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\n8a7de4d2f3f77d217e13ad1d29bdb492c1a6efc0636197c700281b3192a5699b  virtualjaguar_libretro-android-armeabi-v7a.so\n77b826cd8c9c2842063cf5f92018ea738a6288107…",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "virtual_jaguar_core"
       ],
-      "contentHash": "c437deb2de383035dac98bdd4101298c1eb8a0f80dac0f9282f6d6e578928ac0"
+      "contentHash": "a2f01e74eaa56bd305c43c26e73faf826a722632eb6973a2ee1d364655317aef"
+    },
+    {
+      "id": "android-release-emucorev-0-1-9",
+      "title": "【Android更新】EmuCoreV 0.1.9",
+      "originalTitle": "EmuCoreV 0.1.9 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T18:34:04Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreV/releases/tag/v0.1.9",
+      "imageUrl": "asset://assets/emulators/emucorev.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreV",
+      "summary": "EmuCoreV 发布 Android 新版本 0.1.9，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreV 已发布 Android 最新版本 0.1.9。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n**完整变更日志**：https://github.com/sashkinbro/EmuCoreV/compare/v0.1.8...v0.1.9\r\n\r\n\r\n新消息：0.1.9\r\n\r\n- 更新到最新的 Vita3K 更改。\r\n- 其他修复和改进。\r\n建议进行干净安装。",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/compare/v0.1.8...v0.1.9\r\n\r\n\r\nWhat's New: 0.1.9\r\n\r\n- Updated to the latest Vita3K changes.\r\n- Other fixes and improvements.\r\nA clean installation is recommended.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorev"
+      ],
+      "contentHash": "910cd5ad7e018b278956df6594db3d5c123b7755cbd2c5479caa274896e6e893"
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T18:30:14Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• GBA：修复按开始后泡泡龙旧版和新版黑屏问题 (taoenwen)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• GBA: Fix Bubble Bobble Old & New black screen after pressing Start (taoenwen)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "a6a8b47bf1dfa8ac0791a6dc931fb5f7d98b2f4690ee3bb5a5379bd388643249"
+    },
+    {
+      "id": "android-release-armsx3-0-9-3-1",
+      "title": "【Android更新】ARMSX3 0.9.3.1",
+      "originalTitle": "ARMSX3 0.9.3.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T17:26:49Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.3.1",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.3.1，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.3.1。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n通过恢复 0.9.3. 中引入的上游 ISO 读取器更改，修复了游戏无法使用“InvalidFileOrFolder”加载的问题",
+      "originalContent": "Fixes games failing to load with \"InvalidFileOrFolder\" by reverting an upstream ISO reader change introduced in 0.9.3.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "de558fd95783c6795b9242dad76ab4c4be9a95d970d3d92002201aeb3ed1ac2b"
     },
     {
       "id": "android-release-nesd-nightly",
@@ -53,29 +123,6 @@
         "nesd"
       ],
       "contentHash": "c7dc910541ca5489e6e90ec8248a4113b013c37437ce1d397a8840b19e85bc80"
-    },
-    {
-      "id": "android-release-armsx3-0-9-3",
-      "title": "【Android更新】ARMSX3 0.9.3",
-      "originalTitle": "ARMSX3 0.9.3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T12:41:58Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.3",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.3，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.3。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.3\r\n\r\n新内容： \r\n\r\n在线游戏（RPCN）： \r\n\r\nPSN 状态现在有三向选择，选择 RPCN 将打开完整的帐户屏幕：服务器、用户名、密码、电子邮件和激活令牌，以及用于创建帐户、重新发送令牌和重置密码的按钮。 RPCN 帐户是在应用程序内部创建的，而不是在网站上创建的，服务器通过电子邮件发送激活它的令牌。 \r\n\r\n已保存的服务器：保留多个服务器并在它们之间切换。官方服务器无法删除，并且可以一键重置回原来的服务器。还添加了用于 RPCN 的实验性 IPv6，它也无法打开，以及核心暴露的所有其他网络设置：DNS 服务器和主机名重定向、控制台 IP 地址、绑定地址 PSN 国家/地区、从 PSID 派生 MAC 和部落。前两个是定制游戏服务器所需要的。 RPCN 取代了索尼的 PSN，但发行商自己的服务器从来都不是 PSN，因此粉丝复兴意味着将其地址指向其他地方。这在以前的应用程序中是不可能的。\r\n\r\n注意：您的 RPCN 密码以纯文本形式存储在 rpcn.yml 中，与桌面 RPCS3 上的相同。不要重复使用您关心的密码。\r\n\r\n控制：\n振动现在可以使用。之前它什么也没做。 \r\n\r\nL2 和 R2 不再滞后、双火或向下摇杆。 \r\n\r\n同时以两种方式报告触发器的键盘不再需要两个作者争夺同一个按钮。\r\n\r\n稳定性： \r\n\r\n现在编译时内存不足就是这样说的。一款模块无法全部安装的游戏常常会挂在一个永远无法完成的进度条上，没有任何地方可以解释原因。它仍然故意停止，因为在没有丢失模块的情况下继续运行比解释器运行得慢，并且看起来像是一个损坏的游戏，但原因现在在屏幕上，以及要做什么：再次开始游戏。已编译的内容会被缓存，因此每次尝试都会更进一步。 （这主要针对像我这样的 8GB 及以下设备）。 \r\n\r\n报告 PKG 安装失败，而不是悄悄声明成功。写入未被检查，因此完整的设备会产生一个损坏的安装，看起来很好，直到游戏无法启动。\r\n\r\n游戏数据安装时首先检查空间并说出来，而不是在没有任何解释的情况下停止在某个百分比。\r\n\r\n表现：\n着色器编译与框架所依赖的核心无关。编译器线程根本不会设置关联性，因此在 big.LITTLE 手机上，着色器突发可能会满足相同的 RSX 核心需求。他们现在使用小集群，并且池的大小适合该集群而不是整个芯片，同时具有更高的编译吞吐量和更少的干扰。 \r\n\r\n兼容性： \r\n\r\n《如龙：死魂》现在效果更好了。两个单独的故障：加载屏幕挂起和稍后锁定。每个游戏的设置都会自动应用。\r\n\r\n上游：\r\n\r\n赶上了 RPCS3 的 98 次提交。",
-      "originalContent": "ARMSX3 0.9.3\r\n\r\nWhat's new: \r\n\r\nOnline play (RPCN): \r\n\r\nPSN status is a three-way choice now, and picking RPCN opens a full account screen: server, username, password, email and the activation token, with buttons to create an account, resend the token and reset a password. An RPCN account is made from inside the app, not on a website, the server emails a token that activates it. \r\n\r\nSaved servers: Keep more than one and switch between them. The official server cannot be removed, and there is a one-tap reset back to it. Also added Experimental IPv6 for RPCN, which also had no way of being switched on, as well as every other network setting the core exposes: DNS server and hostname redirects, Console IP address, bind address PSN country, derive MAC from PSID, and clans. The first two are what custom game servers need. RPCN replaces Sony's PSN, but a publisher's own servers were never PSN, so reaching a fan revival of one means pointing its addresses somewhere else. That was impossible in the app before.\r\n\r\nNote: your RPCN password is stored as plain text in rpcn.yml, the same as on desktop RPCS3. Don't reuse a password you care about.\r\n\r\nControls: \r\n\r\nVibration now works. It did nothing previously. \r\n\r\nL2 and R2 no longer lag, double-fire or stick down. \r\n\r\nPads that report their triggers two ways at once no longer have two writers fighting over the same button.\r\n\r\nStability: \r\n\r\nRunning out of memory while compiling now says so. A game whose modules would not all fit used to hang on a progress bar that never finished, with nothing anywhere explaining why. It still stops deliberately, because carrying on without the missing modules runs slower than the interpreter and looks like a broken game, but the reason is on screen now, along with what to do: start the game again. What already compiled is cached, so each attempt gets further. (This is mainly for the 8gb and under devices like myself). \r\n\r\nA failed PKG install is reported instead of quietly claiming success. Writes were not checked, so a full device produced a broken install that looked fine until the game would not start.\r\n\r\nGame data installs check for space first and say so, rather than stopping at some percentage with no explanation.\r\n\r\nPerformance: \r\n\r\nShader compilation is kept off the cores the frame depends on. The compiler threads never set an affinity at all, so on a big.LITTLE phone a shader burst could land on the same core RSX needs. They now use the little cluster, and the pool is sized to that cluster instead of to the whole chip, more compile throughput and less interference at the same time. \r\n\r\nCompatibility: \r\n\r\nYakuza: Dead Souls works better now. Two separate faults: the loading screen hang and a later lock-up. Per-game settings apply automatically.\r\n\r\nUpstream:\r\n\r\nCaught up with 98 commits from RPCS3.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "876a5a91f7e1f387f5e630f11e3d420382c488f1b5e7a3d3c00dcd1fbfc96b64"
     },
     {
       "id": "android-release-duckstation-preview",
@@ -211,30 +258,6 @@
         "snes9x_core"
       ],
       "contentHash": "4ae5f7480acecacd1ed7708643455e8730f0f0186853732a0a008596f9a2a689"
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T02:55:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• d_gba.cpp、d_msx.cpp：各种... (fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp, d_msx.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "8fbc87c4a7ec8250b153f904db1f1de15bd25bc024ca07180ccb597516c16eb0"
     },
     {
       "id": "136089",
@@ -1003,29 +1026,6 @@
         "azahar"
       ],
       "contentHash": "910529a8b276fe81a3a13ece6614f480dd763b4a6ac3da772553d6af4bb01c94"
-    },
-    {
-      "id": "android-release-emucorev-0-1-8",
-      "title": "【Android更新】EmuCoreV 0.1.8",
-      "originalTitle": "EmuCoreV 0.1.8 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-10T07:51:40Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreV/releases/tag/v0.1.8",
-      "imageUrl": "asset://assets/emulators/emucorev.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreV",
-      "summary": "EmuCoreV 发布 Android 新版本 0.1.8，发布日期为2026年08月10日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreV 已发布 Android 最新版本 0.1.8。\n\n发布日期：2026年08月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n**完整变更日志**：https://github.com/sashkinbro/EmuCoreV/compare/v0.1.7...v0.1.8\r\n\r\n新消息：0.1.8\r\n\r\n- 错误修复和优化。\r\n建议全新安装以避免更新后出现错误和问题。",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/compare/v0.1.7...v0.1.8\r\n\r\nWhat's New: 0.1.8\r\n\r\n- Bug fixes and optimizations.\r\nA clean installation is recommended to avoid bugs and issues after updating.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorev"
-      ],
-      "contentHash": "29f00aa4dc78ba9466bdfdcfe9a0bea78c3ebf9d4b017a7018704614989e4c15"
     },
     {
       "id": "android-release-noods-release",
