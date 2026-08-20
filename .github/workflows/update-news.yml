@@ -52,6 +52,9 @@ jobs:
                   assert item['category'] == 'android_update'
                   assert item['platforms'] == ['android']
                   assert item['relatedEmulatorIds']
+                  assert '官方更新说明（中文）：' in item['content']
+                  assert '官方更新说明（原文）：' not in item['content']
+                  assert item['originalContent']
               else:
                   assert item['sourceUrl'].startswith('https://www.emu-france.com/news/')
           PY

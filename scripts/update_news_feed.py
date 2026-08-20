@@ -34,6 +34,7 @@ SOURCE_URL = "https://www.emu-france.com/"
 RETENTION_DAYS = 90
 ANDROID_NEWS_LIMIT = 30
 ANDROID_NEWS_PREFIX = "android-release-"
+ANDROID_TRANSLATION_VERSION = 2
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
 )
@@ -233,7 +234,7 @@ def parse_iso_datetime(value: Any) -> datetime | None:
 def build_android_release_articles(
     existing_articles: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    """Turn recent catalog releases into Android news without API requests."""
+    """Turn recent catalog releases into fully translated Android news."""
     catalog_path = ROOT / "data" / "version_catalog.json"
     if not catalog_path.exists():
         catalog_path = ROOT / "assets" / "version_catalog.json"
@@ -241,6 +242,11 @@ def build_android_release_articles(
     entries = catalog.get("entries", {})
     emulators = load_android_emulators()
     cutoff = datetime.now(timezone.utc) - timedelta(days=RETENTION_DAYS)
+    previous_generated = {
+        str(article.get("id")): article
+        for article in existing_articles
+        if str(article.get("id", "")).startswith(ANDROID_NEWS_PREFIX)
+    }
 
     # An Emu-France Android article published within three days of the tracked
     # release already covers the same event and should win over generated news.
@@ -283,9 +289,38 @@ def build_android_release_articles(
         ):
             continue
 
-        name = emulator["name"]
-        release_notes = str(entry.get("releaseNotes", "")).strip()
-        trimmed_notes = release_notes[:5000]
+        # Several catalog IDs can point to the exact same upstream release.
+        # Merge them before translating so one changelog is translated once.
+        release_key = (source_url, version, published.isoformat())
+        duplicate = by_release.get(release_key)
+        if duplicate is not None:
+            duplicate["relatedEmulatorIds"].append(emulator_id)
+            continue
+
+        candidate = {
+            "emulatorId": emulator_id,
+            "emulator": emulator,
+            "version": version,
+            "published": published,
+            "sourceUrl": source_url,
+            "releaseNotes": str(entry.get("releaseNotes", "")).strip(),
+            "relatedEmulatorIds": [emulator_id],
+        }
+        by_release[release_key] = candidate
+        candidates.append((published, candidate))
+
+    # Select the visible window before translation. Candidates just outside the
+    # 30-item limit must not consume translation calls on every scheduled run.
+    candidates.sort(key=lambda item: item[0], reverse=True)
+    articles: list[dict[str, Any]] = []
+    for _, candidate in candidates[:ANDROID_NEWS_LIMIT]:
+        emulator_id = str(candidate["emulatorId"])
+        emulator = candidate["emulator"]
+        version = str(candidate["version"])
+        published = candidate["published"]
+        source_url = str(candidate["sourceUrl"])
+        release_notes = str(candidate["releaseNotes"])
+        name = str(emulator["name"])
         published_label = published.strftime("%Y年%m月%d日")
         intro = (
             f"{name} 已发布 Android 最新版本 {version}。\n\n"
@@ -294,16 +329,33 @@ def build_android_release_articles(
             "可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求"
             "请以项目官方说明为准。"
         )
-        content = intro
-        if trimmed_notes:
-            content += f"\n\n官方更新说明（原文）：\n\n{trimmed_notes}"
         original = release_notes or f"{name} {version} Android release."
         digest = hashlib.sha256(
-            f"{emulator_id}\n{version}\n{published.isoformat()}".encode("utf-8")
+            (
+                f"translation-v{ANDROID_TRANSLATION_VERSION}\n"
+                f"{emulator_id}\n{version}\n{published.isoformat()}\n"
+                f"{release_notes}"
+            ).encode("utf-8")
         ).hexdigest()
         safe_version = re.sub(r"[^a-zA-Z0-9]+", "-", version).strip("-")[:40]
+        article_id = f"{ANDROID_NEWS_PREFIX}{emulator_id}-{safe_version or digest[:10]}"
+        previous_article = previous_generated.get(article_id)
+        previous_content = str((previous_article or {}).get("content", ""))
+        if (
+            previous_article
+            and previous_article.get("contentHash") == digest
+            and "官方更新说明（中文）：" in previous_content
+        ):
+            content = previous_content
+        else:
+            chinese_notes = (
+                translate_release_notes(release_notes)
+                if release_notes
+                else "官方未提供详细更新说明。"
+            )
+            content = f"{intro}\n\n官方更新说明（中文）：\n\n{chinese_notes}"
         article = {
-            "id": f"{ANDROID_NEWS_PREFIX}{emulator_id}-{safe_version or digest[:10]}",
+            "id": article_id,
             "title": f"【Android更新】{name} {version}",
             "originalTitle": f"{name} {version} Android release",
             "category": "android_update",
@@ -323,19 +375,12 @@ def build_android_release_articles(
             "content": content,
             "originalContent": original,
             "platforms": ["android"],
-            "relatedEmulatorIds": [emulator_id],
+            "relatedEmulatorIds": candidate["relatedEmulatorIds"],
             "contentHash": digest,
         }
-        release_key = (source_url, version, published.isoformat())
-        duplicate = by_release.get(release_key)
-        if duplicate is not None:
-            duplicate["relatedEmulatorIds"].append(emulator_id)
-            continue
-        by_release[release_key] = article
-        candidates.append((published, article))
+        articles.append(article)
 
-    candidates.sort(key=lambda item: item[0], reverse=True)
-    return [item[1] for item in candidates[:ANDROID_NEWS_LIMIT]]
+    return articles
 
 
 def related_ids(title: str, emulator_names: list[tuple[str, str]]) -> list[str]:
@@ -397,6 +442,54 @@ def translate(value: str) -> str:
         translated.append(translate_chunk(chunk))
         time.sleep(0.12)
     return "\n".join(translated).strip()
+
+
+def translate_release_notes(value: str) -> str:
+    """Translate prose while preserving Markdown and technical identifiers."""
+    protected: list[tuple[str, str]] = []
+
+    def stash(raw: str) -> str:
+        token = f"ZZEMUHUBTOKEN{len(protected):05d}ZZ"
+        protected.append((token, raw))
+        return token
+
+    # Preserve fence delimiters and identifier-only lines inside code blocks.
+    # Commit lines still contain spaces, so their human-readable messages are
+    # translated while hashes and other tokens below remain untouched.
+    lines: list[str] = []
+    inside_fence = False
+    for line in value.splitlines(keepends=True):
+        body = line.rstrip("\r\n")
+        ending = line[len(body):]
+        stripped = body.strip()
+        if stripped.startswith("```"):
+            lines.append(stash(body) + ending)
+            inside_fence = not inside_fence
+        elif inside_fence and stripped and re.fullmatch(r"\S+", stripped):
+            prefix = body[: len(body) - len(body.lstrip())]
+            suffix = body[len(body.rstrip()):]
+            lines.append(prefix + stash(stripped) + suffix + ending)
+        else:
+            lines.append(line)
+    shielded = "".join(lines)
+
+    patterns = (
+        r"`[^`\r\n]+`",
+        r"https?://[^\s)>\]]+",
+        r"(?m)(?<=  )\S+$",
+        r"(?<![\w/])[\w@+.-]+(?:/[\w@+.-]+)*\.[A-Za-z0-9][\w.-]*(?!\w)",
+        r"\b[0-9a-fA-F]{7,64}\b",
+        r"(?m)^[|:\- ]{3,}$",
+    )
+    for pattern in patterns:
+        shielded = re.sub(pattern, lambda match: stash(match.group(0)), shielded)
+
+    translated = translate(shielded)
+    for token, raw in protected:
+        if token not in translated:
+            raise RuntimeError(f"translation damaged protected token: {token}")
+        translated = translated.replace(token, raw)
+    return translated.strip()
 
 
 def summary_for(content: str, limit: int = 220) -> str:
@@ -564,14 +657,14 @@ def main() -> int:
             else:
                 print(f"warning: skipped {raw['id']}: {error}", file=sys.stderr)
 
-    # Generated entries are rebuilt from the latest catalog on every run, so
-    # superseded versions disappear instead of accumulating for 90 days.
+    # Build before removing old generated entries so unchanged translations can
+    # be reused. Superseded versions are still removed on every run.
+    generated_android = build_android_release_articles(list(merged.values()))
     merged = {
         key: value
         for key, value in merged.items()
         if not str(key).startswith(ANDROID_NEWS_PREFIX)
     }
-    generated_android = build_android_release_articles(list(merged.values()))
     for article in generated_android:
         merged[str(article["id"])] = article
 

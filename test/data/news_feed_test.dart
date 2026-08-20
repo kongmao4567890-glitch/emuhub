@@ -28,6 +28,16 @@ void main() {
         expect(article.isAndroid, isTrue, reason: article.id);
         expect(article.category, 'android_update', reason: article.id);
         expect(article.relatedEmulatorIds, isNotEmpty, reason: article.id);
+        expect(
+          article.content,
+          contains('官方更新说明（中文）：'),
+          reason: article.id,
+        );
+        expect(
+          article.content,
+          isNot(contains('官方更新说明（原文）：')),
+          reason: article.id,
+        );
       } else {
         expect(
           article.sourceUrl,
