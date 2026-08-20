@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T13:28:41.661772Z",
+  "generatedAt": "2026-08-20T15:07:11.107832Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,29 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T14:07:53Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n**寻找Android测试人员！**  \nGoogle Play 需要 12 名测试人员选择加入并实际使用该应用 14 天，然后才能发布新应用。如果您想帮助 NESd 进入 Play 商店，请在 [讨论](https://github.com/jpjonte/NESd/discussions/322) 中注册。\n\n### 添加\n- 内置图形过滤器：CRT 和平滑\n- 显示工具：在游戏运行时调整滤镜、缩放、宽高比和边框\n- 支持映射器 45 (GA23C)，由基于 MMC3 的多卡盒使用\n- 文件选择器搜索栏中的模糊匹配，首先列出最佳匹配\n- 日志查看器（设置 → 调试 → 查看日志），具有每行上下文、副本和文件导出，以及滚动日志文件\n\n### 已更改\n- 调试工具现在可以从“工具”下的游戏菜单而不是“调试设置”选项卡打开，并且可以绑定到按键或游戏手柄按钮。您打开的面板将被保留\n- 执行日志现在共享调试工具列，而不是占用自己的列\n- 游戏手柄输入现在使用上游游戏手柄插件，并在所有平台上具有标准化按钮和轴名称。保存的游戏手柄绑定会在可能的情况下自动翻译\n- 升级到 Flutter 3.47 和 Dart 3.13. 现在支持的最低 macOS 版本是 12.0 (Monterey)\n\n### 已修复\n- 修复了触摸屏上的控制绑定在点击后立即停用的问题，从而无法通过触摸分配绑定\n- 修复了主菜单上的 ROM 网格和保存状态屏幕在手机和狭窄窗口上溢出的问题\n- 修正了在狭窄的窗口中打开调试工具将游戏显示压缩为空的问题\n- 修复了同时打开多个调试工具时相互重叠的问题\n- 修复了发布页面中缺少的 arm64 deb 和 flatpak，因为 x64 文件覆盖了它们\n- 修复了 macOS 上的倒带在 Intel Mac 和早于 26.4 的 macOS 上不可用的问题，因为捆绑的 LZ4 库仅针对 Apple Silicon 构建。它现在是在 macOS 12.0 及更高版本上运行的通用二进制文件\n- 修复了 macOS 上的 GPU 渲染默默回退到 CPU 渲染器的问题\n- 修复了倒带时显示黑框和闪烁的问题\n- 修复了通过从主菜单启动游戏加载保存状态时电池供电游戏中的图形损坏的问题\n- 修复了 Android 上 ROM 缩略图保持黑色的问题",
+      "originalContent": "**Looking for Android testers!**  \nGoogle Play requires 12 testers to opt in and actually use the app for 14 days before a new app can be published. If you'd like to help NESd get onto the Play Store, sign up in [Discussions](https://github.com/jpjonte/NESd/discussions/322).\n\n### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "c7dc910541ca5489e6e90ec8248a4113b013c37437ce1d397a8840b19e85bc80"
+    },
     {
       "id": "android-release-armsx3-0-9-3",
       "title": "【Android更新】ARMSX3 0.9.3",
@@ -212,29 +235,6 @@
         "fbneo_neogeo"
       ],
       "contentHash": "8fbc87c4a7ec8250b153f904db1f1de15bd25bc024ca07180ccb597516c16eb0"
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T01:25:50Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 添加\n- 内置图形过滤器：CRT 和平滑\n- 显示工具：在游戏运行时调整滤镜、缩放、宽高比和边框\n- 支持映射器 45 (GA23C)，由基于 MMC3 的多卡盒使用\n- 文件选择器搜索栏中的模糊匹配，首先列出最佳匹配\n- 日志查看器（设置 → 调试 → 查看日志），具有每行上下文、副本和文件导出，以及滚动日志文件\n\n### 已更改\n- 调试工具现在可以从“工具”下的游戏菜单而不是“调试设置”选项卡打开，并且可以绑定到按键或游戏手柄按钮。您打开的面板将被保留\n- 执行日志现在共享调试工具列，而不是占用自己的列\n- 游戏手柄输入现在使用上游游戏手柄插件，并在所有平台上具有标准化按钮和轴名称。保存的游戏手柄绑定会在可能的情况下自动翻译\n- 升级到 Flutter 3.47 和 Dart 3.13. 现在支持的最低 macOS 版本是 12.0 (Monterey)\n\n### 已修复\n- 修复了触摸屏上的控制绑定在点击后立即停用的问题，从而无法通过触摸分配绑定\n- 修复了主菜单上的 ROM 网格和保存状态屏幕在手机和狭窄窗口上溢出的问题\n- 修正了在狭窄的窗口中打开调试工具将游戏显示压缩为空的问题\n- 修复了同时打开多个调试工具时相互重叠的问题\n- 修复了发布页面中缺少的 arm64 deb 和 flatpak，因为 x64 文件覆盖了它们\n- 修复了 macOS 上的倒带在 Intel Mac 和早于 26.4 的 macOS 上不可用的问题，因为捆绑的 LZ4 库仅针对 Apple Silicon 构建。它现在是在 macOS 12.0 及更高版本上运行的通用二进制文件\n- 修复了 macOS 上的 GPU 渲染默默回退到 CPU 渲染器的问题\n- 修复了倒带时显示黑框和闪烁的问题\n- 修复了通过从主菜单启动游戏加载保存状态时电池供电游戏中的图形损坏的问题\n- 修复了 Android 上 ROM 缩略图保持黑色的问题",
-      "originalContent": "### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "9bef716fe6cb932f09583dc33bb13d4758646708558e9a385df797afe3a806de"
     },
     {
       "id": "136089",
