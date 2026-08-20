@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T06:21:50.780990Z",
+  "generatedAt": "2026-08-20T08:48:00.266569Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,99 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T03:39:18Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n### Nightly `f9dc350` — `v3.4.0` development build\n\n| | |\n|---|---|\n| **Commit** | [`f9dc350`](https://github.com/libretro/virtualjaguar-libretro/commit/f9dc35053082b3bafb2c08bcd1b3ae906b49102b) |\n| **Built** | 2026-08-20 03:39 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32327684082) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.4.0 f9dc350` at startup — quote that line when reporting a bug against a nightly.\n\n### Changes since the previous nightly\n\n```\nf9dc350 docs: post-v3.4.0 pass — fix stale status headers, drop shipped SDD plan\n058e6ba ci(chdman): disable the Qt debugger and stop picking the regtests directory\nd1d3eb5 ci: repair chdman-tools.yml — my dependency step split the msys2 step\n8583b0a ci: unbreak the nightly — install chdman deps, stop tools gating the publish\n931b9b9 docs: voice modem verified over netplay too, by play-testing\n631a44e docs: add AGENTS.md with Cursor Cloud environment notes\n0e2c84b fix(jerry): report no ADC fitted at $F17C00, not a centred one\n909bc6b test(netlink): probe broadcast capability from the real binary, skip if absent\nf2d8457 docs: correct the analog-controller claim — BattleSphere uses the other ADC\n3cbd7a9 docs(tasks): stop calling a closed snapshot the source of truth\nf555a9b docs: prune docs/ ahead of v3.4.0 — verify triage-scanner leads\n199afa9 fix(netlink): build under strict c99 on glibc, and beacon to loopback\n68d43ae docs: release notes for the network link work and the modem video fix\n5f07a24 fix(netlink): use a monotonic clock for link and discovery timing\ne96e05f test(netlink): let the discovery port be overridden, PID-spread it in tests\nda1cefd docs(netlink): reconcile design doc with shipped behaviour\n1e5762b fix(netlink): surface discovery bind failures, gate rebuild success on frontend ack, close device-mismatch load-order gap\nf53ae8a docs(netlink): document link modes and vj_netlink.txt format\nf0b512c feat(netlink): narrate link state on the OSD\n68d57c4 gitignore netlink_discover_probe netlink_rebuil_witness\nea42736 fix(uart): gate the ASI 68K interrupt behind TOM's C_JERENA\n992b98d fix(netlink): generalize option visibility force-push, add rebuild witness test\n6c8ad69 docs(voice-modem): correct the parity claim, prove 19200 is fixed\n4aee6c2 feat(netlink): populate host picker from LAN discovery\n24030b6 fix(netlink): idempotent discovery start, no discovery in auto mode\n99d454b feat(netlink): automatic link mode and per-mode option visibility\nff3e982 docs(netlink): record the Local Network permission testing trap\n6e7a8f7 feat(netlink): UDP discovery beacon and listener\n3695764 feat(netlink): discovery beacon codec and peer table\n0a5b184 docs(netlink): fix unsatisfiable peer-expiry test case in the plan\nb93bc40 docs(netlink): pre-flight corrections to the UX plan\nf922165 docs: implementation plan for network link UX\n01b4680 docs: design for usable network link setup (JagLink/CatBox/Voice Modem)\n2e03bac fix(netlink): say \"built-in TCP link disabled\", not just \"disabled\"\nd3e5caa fix(netlink): log resolved link config and peer state\nfe24c4b test(voicemodem): wire the Ultra Vortek full-game modem test into make test\n12a51d6 chore: bump version to v3.4.0, add release notes\n822c264 test(netlink): fail fast when mktemp cannot make the probe log\n1c75a3e test(input): make light gun failures attributable (#438)\n4063978 test(input): end-to-end light gun test, Balloons-gated (#438)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvir…",
+      "originalContent": "### Nightly `f9dc350` — `v3.4.0` development build\n\n| | |\n|---|---|\n| **Commit** | [`f9dc350`](https://github.com/libretro/virtualjaguar-libretro/commit/f9dc35053082b3bafb2c08bcd1b3ae906b49102b) |\n| **Built** | 2026-08-20 03:39 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32327684082) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.4.0 f9dc350` at startup — quote that line when reporting a bug against a nightly.\n\n### Changes since the previous nightly\n\n```\nf9dc350 docs: post-v3.4.0 pass — fix stale status headers, drop shipped SDD plan\n058e6ba ci(chdman): disable the Qt debugger and stop picking the regtests directory\nd1d3eb5 ci: repair chdman-tools.yml — my dependency step split the msys2 step\n8583b0a ci: unbreak the nightly — install chdman deps, stop tools gating the publish\n931b9b9 docs: voice modem verified over netplay too, by play-testing\n631a44e docs: add AGENTS.md with Cursor Cloud environment notes\n0e2c84b fix(jerry): report no ADC fitted at $F17C00, not a centred one\n909bc6b test(netlink): probe broadcast capability from the real binary, skip if absent\nf2d8457 docs: correct the analog-controller claim — BattleSphere uses the other ADC\n3cbd7a9 docs(tasks): stop calling a closed snapshot the source of truth\nf555a9b docs: prune docs/ ahead of v3.4.0 — verify triage-scanner leads\n199afa9 fix(netlink): build under strict c99 on glibc, and beacon to loopback\n68d43ae docs: release notes for the network link work and the modem video fix\n5f07a24 fix(netlink): use a monotonic clock for link and discovery timing\ne96e05f test(netlink): let the discovery port be overridden, PID-spread it in tests\nda1cefd docs(netlink): reconcile design doc with shipped behaviour\n1e5762b fix(netlink): surface discovery bind failures, gate rebuild success on frontend ack, close device-mismatch load-order gap\nf53ae8a docs(netlink): document link modes and vj_netlink.txt format\nf0b512c feat(netlink): narrate link state on the OSD\n68d57c4 gitignore netlink_discover_probe netlink_rebuil_witness\nea42736 fix(uart): gate the ASI 68K interrupt behind TOM's C_JERENA\n992b98d fix(netlink): generalize option visibility force-push, add rebuild witness test\n6c8ad69 docs(voice-modem): correct the parity claim, prove 19200 is fixed\n4aee6c2 feat(netlink): populate host picker from LAN discovery\n24030b6 fix(netlink): idempotent discovery start, no discovery in auto mode\n99d454b feat(netlink): automatic link mode and per-mode option visibility\nff3e982 docs(netlink): record the Local Network permission testing trap\n6e7a8f7 feat(netlink): UDP discovery beacon and listener\n3695764 feat(netlink): discovery beacon codec and peer table\n0a5b184 docs(netlink): fix unsatisfiable peer-expiry test case in the plan\nb93bc40 docs(netlink): pre-flight corrections to the UX plan\nf922165 docs: implementation plan for network link UX\n01b4680 docs: design for usable network link setup (JagLink/CatBox/Voice Modem)\n2e03bac fix(netlink): say \"built-in TCP link disabled\", not just \"disabled\"\nd3e5caa fix(netlink): log resolved link config and peer state\nfe24c4b test(voicemodem): wire the Ultra Vortek full-game modem test into make test\n12a51d6 chore: bump version to v3.4.0, add release notes\n822c264 test(netlink): fail fast when mktemp cannot make the probe log\n1c75a3e test(input): make light gun failures attributable (#438)\n4063978 test(input): end-to-end light gun test, Balloons-gated (#438)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvir…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "36760a9005f2aa887f766a9b69f13dd343f8542670b127bff3db481e40f67d7c"
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T02:55:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp, d_msx.cpp: various... (fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp, d_msx.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "1f773c160bda4c5d247d390560db9b8bd7f562ad274d8af6f4f33ba4cbb5e375"
+    },
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-20T01:25:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android",
+      "originalContent": "### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "5213c3c9b35c6b36025157c1c80678ee074d4dcda41bc71f98d842f203cd499c"
+    },
+    {
+      "id": "android-release-armsx3-0-9-2",
+      "title": "【Android更新】ARMSX3 0.9.2",
+      "originalTitle": "ARMSX3 0.9.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T18:14:37Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.2",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.2，发布日期为2026年08月19日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.2。\n\n发布日期：2026年08月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nARMSX3 0.9.2\r\n\r\nWhat's new: \r\n\r\nGames that could never boot, now boot, A bug in how the PPU handles atomic memory operations has been fixed, and it was stopping a whole class of games from working. When a game's code claims a lock, it reserves a chunk of memory, checks it, then commits. ARMSX3 was letting the thread's record of that reservation fall one step behind reality after the first successful commit, so the second commit to the same chunk always failed, and kept failing. Any game whose code claims several locks in one pass would spin there forever.\r\n\r\nAssassin's Creed never got past its loading screen because of this. Iron Man 2 stopped at a black screen after the Sega logo. Both now boot and play.\r\n\r\nIf a game has been hanging on a black screen with no error and no crash, it is worth another try on this build. The failure left no trace anywhere, no message, no crash, just a game that never continued,  so there is no way to know from the outside which titles were affected.\r\n\r\nThis is not an ARM-only problem, it is present in upstream RPCS3 today, and the fix has been written up and shared with Whatcookie! \r\n\r\nFixed settings that quietly ignored you: \r\n\r\nAll Core Settings now shows which settings it is remembering, and lets you forget them. Anything changed on that screen is recorded and re-applied after the normal settings screens, every time. That is intentional, (it is what makes it an override), but it had no way to show you it was happening and no way to undo it. A value set there months ago would silently beat the same setting on a normal screen forever, with nothing on screen to explain why the two disagreed. Every overridden row is now marked, the count is shown at the top, and there is a Forget button per row and one for the whole screen. Forgetting also puts the value back rather than leaving it where the override left it. A one-time cleanup also clears leftovers from past debugging that were shipping switched on, including the RSX profiler, which costs performance in every game.\r\n\r\nKeyboard: \r\n\r\nThe emulated keyboard now reaches games properly, and games see a real keyboard: this is what the debug menus some titles hide behind one need, and what in-game text chat uses. A row of the keys the Android keyboard does not have like Esc, Tab, arrows, Space, Enter, and F1–F12 behind an Fn toggle now appears whenever the keyboard is up. Debug menus need arrows to navigate and Space to open, a phone keyboard has neither. The keyboard button now actually raises the keyboard. It was asking the system in a way a fullscreen game is allowed to refuse, so the key row would appear over nothing. Turn it on with Emulate USB keyboard in Network settings, then use the On-Screen Keyboard hotkey or the KBD touch button in game.\r\n\r\nGraphics on Turnip: \r\nHalf-precision shader maths was being switched off by mistake on Turnip drivers. It is on again. No visible difference in testing, it just stops some wasted work.",
+      "originalContent": "ARMSX3 0.9.2\r\n\r\nWhat's new: \r\n\r\nGames that could never boot, now boot, A bug in how the PPU handles atomic memory operations has been fixed, and it was stopping a whole class of games from working. When a game's code claims a lock, it reserves a chunk of memory, checks it, then commits. ARMSX3 was letting the thread's record of that reservation fall one step behind reality after the first successful commit, so the second commit to the same chunk always failed, and kept failing. Any game whose code claims several locks in one pass would spin there forever.\r\n\r\nAssassin's Creed never got past its loading screen because of this. Iron Man 2 stopped at a black screen after the Sega logo. Both now boot and play.\r\n\r\nIf a game has been hanging on a black screen with no error and no crash, it is worth another try on this build. The failure left no trace anywhere, no message, no crash, just a game that never continued,  so there is no way to know from the outside which titles were affected.\r\n\r\nThis is not an ARM-only problem, it is present in upstream RPCS3 today, and the fix has been written up and shared with Whatcookie! \r\n\r\nFixed settings that quietly ignored you: \r\n\r\nAll Core Settings now shows which settings it is remembering, and lets you forget them. Anything changed on that screen is recorded and re-applied after the normal settings screens, every time. That is intentional, (it is what makes it an override), but it had no way to show you it was happening and no way to undo it. A value set there months ago would silently beat the same setting on a normal screen forever, with nothing on screen to explain why the two disagreed. Every overridden row is now marked, the count is shown at the top, and there is a Forget button per row and one for the whole screen. Forgetting also puts the value back rather than leaving it where the override left it. A one-time cleanup also clears leftovers from past debugging that were shipping switched on, including the RSX profiler, which costs performance in every game.\r\n\r\nKeyboard: \r\n\r\nThe emulated keyboard now reaches games properly, and games see a real keyboard: this is what the debug menus some titles hide behind one need, and what in-game text chat uses. A row of the keys the Android keyboard does not have like Esc, Tab, arrows, Space, Enter, and F1–F12 behind an Fn toggle now appears whenever the keyboard is up. Debug menus need arrows to navigate and Space to open, a phone keyboard has neither. The keyboard button now actually raises the keyboard. It was asking the system in a way a fullscreen game is allowed to refuse, so the key row would appear over nothing. Turn it on with Emulate USB keyboard in Network settings, then use the On-Screen Keyboard hotkey or the KBD touch button in game.\r\n\r\nGraphics on Turnip: \r\nHalf-precision shader maths was being switched off by mistake on Turnip drivers. It is on again. No visible difference in testing, it just stops some wasted work.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "28070693a9094811a00090b693be537baaa281b21796b274bfb8e33f2022e842"
+    },
     {
       "id": "136089",
       "title": "【家用机】Flycast v2.7",
@@ -118,6 +211,52 @@
       "contentHash": "6b85bcc59333b7fcf9e9bc0ebff55692bb8d24ef3258f47849caa757fe3706b1"
     },
     {
+      "id": "android-release-winlator-11-2-0",
+      "title": "【Android更新】Winlator 11.2.0",
+      "originalTitle": "Winlator 11.2.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T11:06:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/brunodev85/winlator/releases/tag/v11.2.0",
+      "imageUrl": "asset://assets/emulators/winlator.png",
+      "officialUrl": "https://github.com/brunodev85/winlator",
+      "summary": "Winlator 发布 Android 新版本 11.2.0，发布日期为2026年08月19日。点击查看官方版本信息与更新说明。",
+      "content": "Winlator 已发布 Android 最新版本 11.2.0。\n\n发布日期：2026年08月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n- Fixed gamepad input lag\r\n- Added Box64 v0.4.4 (release)\r\n- Improved Vortek:\r\n\t└─ Improved texture decoding (it was not handling mipmaps correctly)\r\n\t└─ Some improvements were added for the Xclipse GPU\r\n- Improved Gladio:\r\n\t└─ Added a better way to handle active textures\r\n\t└─ Improved the OpenGL 1.X emulation (Half-Life is now rendering correctly)\r\n\t└─ Improved ARB vertex/fragment programs (Digimon Story Cyber ​​Sleuth makes heavy use of them and is now rendering correctly)\r\n\t└─ Added fixes for shader compilation on the Xclipse GPU",
+      "originalContent": "- Fixed gamepad input lag\r\n- Added Box64 v0.4.4 (release)\r\n- Improved Vortek:\r\n\t└─ Improved texture decoding (it was not handling mipmaps correctly)\r\n\t└─ Some improvements were added for the Xclipse GPU\r\n- Improved Gladio:\r\n\t└─ Added a better way to handle active textures\r\n\t└─ Improved the OpenGL 1.X emulation (Half-Life is now rendering correctly)\r\n\t└─ Improved ARB vertex/fragment programs (Digimon Story Cyber ​​Sleuth makes heavy use of them and is now rendering correctly)\r\n\t└─ Added fixes for shader compilation on the Xclipse GPU",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "winlator"
+      ],
+      "contentHash": "4fc954c1082fea7b66c17539198b3ca791177180e4df4250b69185d1fe327685"
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260819",
+      "title": "【Android更新】ARMSX2 nightly-20260819",
+      "originalTitle": "ARMSX2 nightly-20260819 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T09:21:00Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260819",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260819，发布日期为2026年08月19日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260819。\n\n发布日期：2026年08月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nAutomated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GameDB: internal FPS by DISPFB blit for NASCAR Thunder 2002 through NASCAR 06\n- iOS: put Download Shaders under Preset, where it can be reached\n- iOS: decode a launch link's filename once, not twice\n- iOS: download the RetroArch shader collection from inside the app\n- iOS: three defects the branch review found, two of them silent\n- iOS: resolve the shader catalogue off-device, and sign what it may ship\n- iOS: let one game keep its own shader preset\n- iOS: give the shader controls their own page and a pause-menu route\n- iOS: clamp a shader's prescale so upscaling cannot blacken the frame\n- iOS: put the shader chain and its parameters in settings\n- iOS: run RetroArch shader chains on the Metal renderer\n- EE rec: stop raising TLB misses on unknown MMIO too\n- Tests: pin the I immediate against a rewrite of micro memory\n- microVU: read the I immediate at run time under IbitHack\n- EE rec: stop raising TLB misses, matching x86\n- Tests: pin the rec's TLB-miss divert, disabled\n- Tests: pin the VU FMAC's range against the console\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260817...7f0ae7a6c689b5b36eccc61b7adb480f65c7a3a3",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GameDB: internal FPS by DISPFB blit for NASCAR Thunder 2002 through NASCAR 06\n- iOS: put Download Shaders under Preset, where it can be reached\n- iOS: decode a launch link's filename once, not twice\n- iOS: download the RetroArch shader collection from inside the app\n- iOS: three defects the branch review found, two of them silent\n- iOS: resolve the shader catalogue off-device, and sign what it may ship\n- iOS: let one game keep its own shader preset\n- iOS: give the shader controls their own page and a pause-menu route\n- iOS: clamp a shader's prescale so upscaling cannot blacken the frame\n- iOS: put the shader chain and its parameters in settings\n- iOS: run RetroArch shader chains on the Metal renderer\n- EE rec: stop raising TLB misses on unknown MMIO too\n- Tests: pin the I immediate against a rewrite of micro memory\n- microVU: read the I immediate at run time under IbitHack\n- EE rec: stop raising TLB misses, matching x86\n- Tests: pin the rec's TLB-miss divert, disabled\n- Tests: pin the VU FMAC's range against the console\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260817...7f0ae7a6c689b5b36eccc61b7adb480f65c7a3a3",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "a4342eeba5cad5c77ebdeaced90063e4639a55ef159153adccec67efd5a599b8"
+    },
+    {
       "id": "136066",
       "title": "【家用机】Redream v1.5.0.1239",
       "originalTitle": "[Consoles de salon] Redream v1.5.0.1239",
@@ -137,6 +276,52 @@
         "redream"
       ],
       "contentHash": "0d53987374c4322c4666ef29c0470ee5db3ef22b669b2170d87aec31126bdc6e"
+    },
+    {
+      "id": "android-release-gamenative-1-2-0-prerelease",
+      "title": "【Android更新】GameNative 1.2.0-prerelease",
+      "originalTitle": "GameNative 1.2.0-prerelease Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-19T06:13:06Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/utkarshdalal/GameNative/releases/tag/v1.2.0-prerelease",
+      "imageUrl": "asset://assets/emulators/gamenative.png",
+      "officialUrl": "https://github.com/utkarshdalal/GameNative",
+      "summary": "GameNative 发布 Android 新版本 1.2.0-prerelease，发布日期为2026年08月19日。点击查看官方版本信息与更新说明。",
+      "content": "GameNative 已发布 Android 最新版本 1.2.0-prerelease。\n\n发布日期：2026年08月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n## Downloads\r\n- **`gamenative-v1.2.0-prerelease.apk`** — Standard build. Recommended for most users.\r\n- **`gamenative-v1.2.0-prerelease-legacy-xr.apk`** — XR build for Quest headsets.\r\n\r\n\r\n## What's Changed\r\n* feat: Add automatic CPU / GPU power control to AYN, Retroid Pocket and Samsung Devices, reduces heat, thermal throttling and power consumption by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1698\r\n* Significant speed up to external storage loading https://github.com/utkarshdalal/GameNative/pull/1779\r\n* Allow inviting users to games using Steam overlay when Bionic Steam enabled in https://github.com/utkarshdalal/GameNative/pull/1783\r\n* Fixes for Quest - games can launch in immersive mode (improving performance) and we can use touch controllers as XBOX controller by @moi952  in https://github.com/utkarshdalal/GameNative/pull/1831\r\n* Fixed lsfg-vk on 8 elite and other devices with frame capping, made lsfg work with the power management in https://github.com/utkarshdalal/GameNative/pull/1819\r\n* Fixed installing games on external storage for GOG and Epic in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Fixed games that require EOSOverlay (Eg FNAF Into the Pit) in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Fixed controller mapping that was broken by multicontroller changes (long-pressing remapped button would press the original) in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Add in-app community config browser by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1782\r\n* Support custom games on the modern build without all-files access in https://github.com/utkarshdalal/GameNative/pull/1798\r\n* Add favorites tab by @jmarti326 in https://github.com/utkarshdalal/GameNative/pull/1712\r\n* Fixed bug where local saves were lost in https://github.com/utkarshdalal/GameNative/pull/1801\r\n* Fix gametime tracking in https://github.com/utkarshdalal/GameNative/pull/1803\r\n* Optimize download performance for external storage by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1785\r\n* Fix fps limiting on non-directx games (eg Balatro, Brotato) in https://github.com/utkarshdalal/GameNative/pull/1820\r\n* Enhance Lossless Scaling Frame Generation (LSFG) integration (prevent freeze, save storage space) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1822\r\n* Improve power control and system metrics for Odin 3, add support for Retroid Pocket Nova, updated UX by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1824\r\n* Respect Nexus Mods Adult Content Preferences (to add back Nexus API) by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1793\r\n* Add default screen size detection and 960p screen size option (e.g. retroid pocket nova) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1730\r\n* Fix touch D-pad remapping for shared-axis inputs by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1788\r\n* Fix mouse dragging in Crushed in Time by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1809\r\n* Make membership popups less frequent in https://github.com/utkarshdalal/GameNative/pull/1827\r\n* stretched spinner fix by @abesmon in https://github.com/utkarshdalal/GameNative/pull/1794\r\n* Support Look-through buttons outside shooter mode by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1787\r\n* Add depot fetching progress indicator by @jamierajewski in https://github.com/utkarshdalal/GameNative/pull/1775\r\n* fix: gog game install path detection to prefer stored value by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1808\r\n* Added bionic steam client gamefixes for Whisk and Whisk Demo in https://github.com/utkarshdalal/GameNative/pull/1813\r\n* Fix broken star history chart in README by @SimonFoobar648 in https://github.com/utkarshdalal/GameNative/pull/1826\r\n* Improved personalized recommendations + disclosure in https://github.com/utkarshdalal/GameNative/p…",
+      "originalContent": "## Downloads\r\n- **`gamenative-v1.2.0-prerelease.apk`** — Standard build. Recommended for most users.\r\n- **`gamenative-v1.2.0-prerelease-legacy-xr.apk`** — XR build for Quest headsets.\r\n\r\n\r\n## What's Changed\r\n* feat: Add automatic CPU / GPU power control to AYN, Retroid Pocket and Samsung Devices, reduces heat, thermal throttling and power consumption by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1698\r\n* Significant speed up to external storage loading https://github.com/utkarshdalal/GameNative/pull/1779\r\n* Allow inviting users to games using Steam overlay when Bionic Steam enabled in https://github.com/utkarshdalal/GameNative/pull/1783\r\n* Fixes for Quest - games can launch in immersive mode (improving performance) and we can use touch controllers as XBOX controller by @moi952  in https://github.com/utkarshdalal/GameNative/pull/1831\r\n* Fixed lsfg-vk on 8 elite and other devices with frame capping, made lsfg work with the power management in https://github.com/utkarshdalal/GameNative/pull/1819\r\n* Fixed installing games on external storage for GOG and Epic in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Fixed games that require EOSOverlay (Eg FNAF Into the Pit) in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Fixed controller mapping that was broken by multicontroller changes (long-pressing remapped button would press the original) in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Add in-app community config browser by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1782\r\n* Support custom games on the modern build without all-files access in https://github.com/utkarshdalal/GameNative/pull/1798\r\n* Add favorites tab by @jmarti326 in https://github.com/utkarshdalal/GameNative/pull/1712\r\n* Fixed bug where local saves were lost in https://github.com/utkarshdalal/GameNative/pull/1801\r\n* Fix gametime tracking in https://github.com/utkarshdalal/GameNative/pull/1803\r\n* Optimize download performance for external storage by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1785\r\n* Fix fps limiting on non-directx games (eg Balatro, Brotato) in https://github.com/utkarshdalal/GameNative/pull/1820\r\n* Enhance Lossless Scaling Frame Generation (LSFG) integration (prevent freeze, save storage space) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1822\r\n* Improve power control and system metrics for Odin 3, add support for Retroid Pocket Nova, updated UX by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1824\r\n* Respect Nexus Mods Adult Content Preferences (to add back Nexus API) by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1793\r\n* Add default screen size detection and 960p screen size option (e.g. retroid pocket nova) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1730\r\n* Fix touch D-pad remapping for shared-axis inputs by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1788\r\n* Fix mouse dragging in Crushed in Time by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1809\r\n* Make membership popups less frequent in https://github.com/utkarshdalal/GameNative/pull/1827\r\n* stretched spinner fix by @abesmon in https://github.com/utkarshdalal/GameNative/pull/1794\r\n* Support Look-through buttons outside shooter mode by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1787\r\n* Add depot fetching progress indicator by @jamierajewski in https://github.com/utkarshdalal/GameNative/pull/1775\r\n* fix: gog game install path detection to prefer stored value by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1808\r\n* Added bionic steam client gamefixes for Whisk and Whisk Demo in https://github.com/utkarshdalal/GameNative/pull/1813\r\n* Fix broken star history chart in README by @SimonFoobar648 in https://github.com/utkarshdalal/GameNative/pull/1826\r\n* Improved personalized recommendations + disclosure in https://github.com/utkarshdalal/GameNative/p…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gamenative"
+      ],
+      "contentHash": "a14f3414b3ae933d5b32eeee5cb20ec517b340ba83e49a30b73dc55cf7e91a8a"
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T15:17:35Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月18日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n## Commits\n- Clear list on save state selector close ([Stenzek](https://github.com/stenzek/duckstation/commit/d954b7a3d51c364a9e74ce2214a882b3c48e5c5b))\n- Don't immediately trim textures queued in same frame ([Stenzek](https://github.com/stenzek/duckstation/commit/b25e2358b82ff0b2f91e2290dfff553b864bcb62))\n- Add animation to save state selector ([Stenzek](https://github.com/stenzek/duckstation/commit/0bf64996cfd83d4c16e54e15026b98af27c3d7e3))\n- Close save state selector on device switch ([Stenzek](https://github.com/stenzek/duckstation/commit/25783d844e3ef587237cfd1081b47b7f1d567487))",
+      "originalContent": "## Commits\n- Clear list on save state selector close ([Stenzek](https://github.com/stenzek/duckstation/commit/d954b7a3d51c364a9e74ce2214a882b3c48e5c5b))\n- Don't immediately trim textures queued in same frame ([Stenzek](https://github.com/stenzek/duckstation/commit/b25e2358b82ff0b2f91e2290dfff553b864bcb62))\n- Add animation to save state selector ([Stenzek](https://github.com/stenzek/duckstation/commit/0bf64996cfd83d4c16e54e15026b98af27c3d7e3))\n- Close save state selector on device switch ([Stenzek](https://github.com/stenzek/duckstation/commit/25783d844e3ef587237cfd1081b47b7f1d567487))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "58f1e54aac6b849348506252f8e721fa60a5d087c601d729879dce45662b58a7"
     },
     {
       "id": "136061",
@@ -362,6 +547,52 @@
       "contentHash": "7b4473e3825174068f99c371a767df7d70c8b881800e3b9bad02a9480cb9a6ea"
     },
     {
+      "id": "android-release-nethersx2_lsfg-12812639",
+      "title": "【Android更新】NetherSX2 LSFG (Slushii Turnip Fix) 12812639",
+      "originalTitle": "NetherSX2 LSFG (Slushii Turnip Fix) 12812639 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T07:47:58Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases/tag/v12812639",
+      "imageUrl": "asset://assets/emulators/nethersx2_lsfg.png",
+      "officialUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
+      "summary": "NetherSX2 LSFG (Slushii Turnip Fix) 发布 Android 新版本 12812639，发布日期为2026年08月18日。点击查看官方版本信息与更新说明。",
+      "content": "NetherSX2 LSFG (Slushii Turnip Fix) 已发布 Android 最新版本 12812639。\n\n发布日期：2026年08月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nBuild **12812639** (pink, `xyz.aethersx2.cpink02`).\n\n### Fixed\n\n**Frame generation ran at the wrong capture resolution, and fought itself doing it.**\nThe capture default was derived from `user_ir.txt`, a file written by one code path\nonly and unwritable by the app if it was ever pushed with `adb push`. On the test\ndevice it was frozen at IR 2.5 while the real setting was 1.5, so the capture buffers\nwere built 1280x1120 while the GS target was 768x672. The two then flipped against\neach other on every boot, rebuilding the LSFG context each time, with an\n`AHB MISMATCH ... picture would be corner-boxed` warning in the log.\n\nThe internal resolution is now read from PCSX2's own live setting, the same source the\nGS expectation uses, so the two cannot disagree. Measured after the fix:\n`frame generation LIVE at 768x672 (ctx built 768x672, out told 768x672)` — context,\ncapture and the value handed to LSFG all agree, with no flips.\n\nA previous note held that the 512x448 x IR formula \"does not describe this renderer\".\nIt does. 1280x1120 was this bug, not the renderer.\n\n**The letterbox / game-rect route was never dead — it was never installed.**\nThe viewport hooks had one install site, behind a switch tied to an old FSR-era\nconfig key that the app now strips, so they were never registered. A silent probe\ninside them had been read as \"PCSX2 never calls vkCmdSetViewport\" and the whole route\nretired on it. They install under frame generation now and fire immediately.\n\n**Driver picker:** its listing is logged, so what it enumerates is verifiable without\nopening the dialog, and the row's fallback lookup searched for a title the row does\nnot have (\"Turnip Driver\" vs \"Vulkan Driver\"), which is fixed.\n\n**Frame generation cost guard** logs when it arms, so a guard that is watching is\ndistinguishable from one that never got to.\n\n### Known / not verified in this build\n\n- **Which viewport is the on-screen one is unresolved.** With the hooks live, four\n  distinct rects rotate every frame (measured on GTA Vice City: 1280x960, 960x672,\n  960x336, 960x360, near-equal counts). This build reports a histogram once per\n  window and deliberately claims no game rect while the window is ambiguous;\n  it only issues a letterbox verdict when a window shows exactly one rect.\n  Picking the right one needs the present pass identified.\n- The capture-extent fix and the viewport hooks were measured in game on 12812637.\n  12812639 differs from it only in how one native function throttles its logging\n  (that build emitted 30,831 log lines in two minutes), and that change was not\n  re-verified in gameplay — the test game would not boot by intent on the last\n  attempt.\n- The frame generation self-gate at IR 2.5 remains unverified.",
+      "originalContent": "Build **12812639** (pink, `xyz.aethersx2.cpink02`).\n\n### Fixed\n\n**Frame generation ran at the wrong capture resolution, and fought itself doing it.**\nThe capture default was derived from `user_ir.txt`, a file written by one code path\nonly and unwritable by the app if it was ever pushed with `adb push`. On the test\ndevice it was frozen at IR 2.5 while the real setting was 1.5, so the capture buffers\nwere built 1280x1120 while the GS target was 768x672. The two then flipped against\neach other on every boot, rebuilding the LSFG context each time, with an\n`AHB MISMATCH ... picture would be corner-boxed` warning in the log.\n\nThe internal resolution is now read from PCSX2's own live setting, the same source the\nGS expectation uses, so the two cannot disagree. Measured after the fix:\n`frame generation LIVE at 768x672 (ctx built 768x672, out told 768x672)` — context,\ncapture and the value handed to LSFG all agree, with no flips.\n\nA previous note held that the 512x448 x IR formula \"does not describe this renderer\".\nIt does. 1280x1120 was this bug, not the renderer.\n\n**The letterbox / game-rect route was never dead — it was never installed.**\nThe viewport hooks had one install site, behind a switch tied to an old FSR-era\nconfig key that the app now strips, so they were never registered. A silent probe\ninside them had been read as \"PCSX2 never calls vkCmdSetViewport\" and the whole route\nretired on it. They install under frame generation now and fire immediately.\n\n**Driver picker:** its listing is logged, so what it enumerates is verifiable without\nopening the dialog, and the row's fallback lookup searched for a title the row does\nnot have (\"Turnip Driver\" vs \"Vulkan Driver\"), which is fixed.\n\n**Frame generation cost guard** logs when it arms, so a guard that is watching is\ndistinguishable from one that never got to.\n\n### Known / not verified in this build\n\n- **Which viewport is the on-screen one is unresolved.** With the hooks live, four\n  distinct rects rotate every frame (measured on GTA Vice City: 1280x960, 960x672,\n  960x336, 960x360, near-equal counts). This build reports a histogram once per\n  window and deliberately claims no game rect while the window is ambiguous;\n  it only issues a letterbox verdict when a window shows exactly one rect.\n  Picking the right one needs the present pass identified.\n- The capture-extent fix and the viewport hooks were measured in game on 12812637.\n  12812639 differs from it only in how one native function throttles its logging\n  (that build emitted 30,831 log lines in two minutes), and that change was not\n  re-verified in gameplay — the test game would not boot by intent on the last\n  attempt.\n- The frame generation self-gate at IR 2.5 remains unverified.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nethersx2_lsfg"
+      ],
+      "contentHash": "ad750c887e41185b4413cafc2801b9cd5765a8392cb70666d25d15ddd1504f2e"
+    },
+    {
+      "id": "android-release-bachata_s4-0-1-8",
+      "title": "【Android更新】Bachata S4 0.1.8",
+      "originalTitle": "Bachata S4 0.1.8 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-18T01:52:17Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.1.8",
+      "imageUrl": "asset://assets/emulators/bachata_s4.png",
+      "officialUrl": "https://github.com/JICA98/Bachata-S4",
+      "summary": "Bachata S4 发布 Android 新版本 0.1.8，发布日期为2026年08月18日。点击查看官方版本信息与更新说明。",
+      "content": "Bachata S4 已发布 Android 最新版本 0.1.8。\n\n发布日期：2026年08月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n### 🎮 Game Compatibility & Emulation Fixes\n- **SnowRunner:**\n  - Resolved startup crash (exit 133) by handling GfxEop IrqC replacement gracefully.\n  - Automatically open pad contexts when games omit explicit scePadOpen calls.\n  - Deliver UserService login state via asynchronous callbacks.\n  - Clamped combined clip/cull limit to 8 and mapped reserved GCN anisotropic modes (5–7 → 16) to avoid driver crashes.\n- **TMNT: Shredder's Revenge:**\n  - Mapped guest pthread stacks safely away from host usrstack.\n  - Added null-parameter tolerance for libSceMouse initialization.\n  - Forwarded Network Platform (NP) state callbacks across the FEX guest boundary.\n  - Retired scanout labels properly so WaitVoLabel syncs without stalling.\n- **Dragon's Crown & Bloodborne Performance Groundwork:**\n  - Registered __cxa_guard_* symbols under libSceLibcInternal to resolve C++ runtime initialization stalls.\n  - Routed font allocations and libc string routines through the guest CPU boundary.\n  - Reduced FEX bridge overhead and gated verbose HLE logging behind BACHATA_FEX_HLE_TRACE.\n\n──────\n### 🚀 Core & HLE Modules\n\n- libSceJpegDec: Added full High-Level Emulation (HLE) module for software JPEG decoding.\n- AVPlayer Improvements: Implemented buffering hysteresis, frame counting, and bounded diagnostics for smoother in-game video playback.\n- USB / Peripheral Subsystem: Added null-context safety guards for libSceUsbd event loops.\n- Kernel & Synchronization: Cleaned up semaphore timeout handling, enhanced thread stack management, and ensured safe kernel time queries before InitHLELibs.\n- FIOS2: Added support for flexible FIOS2 filesystem I/O module selection.\n──────\n### 📱 Android Experience & UI Enhancements\n\n- Home Screen Shortcuts & Direct Game Launch:\n  - Support pinning installed game shortcuts directly to the Android home screen.\n  - Added direct launch intents to jump straight into games from the launcher.\n- Landscape Two-Panel Settings UI:\n  - Redesigned the settings screen in landscape with a dedicated navigation rail (SettingsRail) and split options pane.\n  - Added full gamepad navigation and joystick axis mapping for settings.\n  - Streamlined UI chrome by removing redundant back buttons and landscape headers.\n- Motion Controls (Gyro & Accelerometer):\n  - Integrated phone motion sensors mapped into the DualShock 4 motion snapshot protocol for tilt/gyro-supported games.\n  - Fixed touch overlay touch-event routing to properly pass controller inputs to the guest.\n\n──────\n### 🖼️ Vulkan & Graphics Pipeline\n\n- Added legacy vertex attributes fallback path.\n- Expanded sampler descriptor and image info storage limits to eliminate descriptor table overflows.\n- Added swapchain initialization tracing and automatic diagnostic screenshot triggers.",
+      "originalContent": "### 🎮 Game Compatibility & Emulation Fixes\n- **SnowRunner:**\n  - Resolved startup crash (exit 133) by handling GfxEop IrqC replacement gracefully.\n  - Automatically open pad contexts when games omit explicit scePadOpen calls.\n  - Deliver UserService login state via asynchronous callbacks.\n  - Clamped combined clip/cull limit to 8 and mapped reserved GCN anisotropic modes (5–7 → 16) to avoid driver crashes.\n- **TMNT: Shredder's Revenge:**\n  - Mapped guest pthread stacks safely away from host usrstack.\n  - Added null-parameter tolerance for libSceMouse initialization.\n  - Forwarded Network Platform (NP) state callbacks across the FEX guest boundary.\n  - Retired scanout labels properly so WaitVoLabel syncs without stalling.\n- **Dragon's Crown & Bloodborne Performance Groundwork:**\n  - Registered __cxa_guard_* symbols under libSceLibcInternal to resolve C++ runtime initialization stalls.\n  - Routed font allocations and libc string routines through the guest CPU boundary.\n  - Reduced FEX bridge overhead and gated verbose HLE logging behind BACHATA_FEX_HLE_TRACE.\n\n──────\n### 🚀 Core & HLE Modules\n\n- libSceJpegDec: Added full High-Level Emulation (HLE) module for software JPEG decoding.\n- AVPlayer Improvements: Implemented buffering hysteresis, frame counting, and bounded diagnostics for smoother in-game video playback.\n- USB / Peripheral Subsystem: Added null-context safety guards for libSceUsbd event loops.\n- Kernel & Synchronization: Cleaned up semaphore timeout handling, enhanced thread stack management, and ensured safe kernel time queries before InitHLELibs.\n- FIOS2: Added support for flexible FIOS2 filesystem I/O module selection.\n──────\n### 📱 Android Experience & UI Enhancements\n\n- Home Screen Shortcuts & Direct Game Launch:\n  - Support pinning installed game shortcuts directly to the Android home screen.\n  - Added direct launch intents to jump straight into games from the launcher.\n- Landscape Two-Panel Settings UI:\n  - Redesigned the settings screen in landscape with a dedicated navigation rail (SettingsRail) and split options pane.\n  - Added full gamepad navigation and joystick axis mapping for settings.\n  - Streamlined UI chrome by removing redundant back buttons and landscape headers.\n- Motion Controls (Gyro & Accelerometer):\n  - Integrated phone motion sensors mapped into the DualShock 4 motion snapshot protocol for tilt/gyro-supported games.\n  - Fixed touch overlay touch-event routing to properly pass controller inputs to the guest.\n\n──────\n### 🖼️ Vulkan & Graphics Pipeline\n\n- Added legacy vertex attributes fallback path.\n- Expanded sampler descriptor and image info storage limits to eliminate descriptor table overflows.\n- Added swapchain initialization tracing and automatic diagnostic screenshot triggers.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "bachata_s4"
+      ],
+      "contentHash": "ab5c2bdcfd0cfdadaea13b876e8e7cba2a6c74ff5f88644928fdd1d67833c9f0"
+    },
+    {
       "id": "136035",
       "title": "【家用机】SuperZSNES v0.300",
       "originalTitle": "[Consoles de salon] SuperZSNES v0.300",
@@ -421,6 +652,29 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "d712076cf35d76b1821405b94b24ac07873bc145cf4889b0eae207532c716109"
+    },
+    {
+      "id": "android-release-x360_mobile-0-6-3",
+      "title": "【Android更新】X360 Mobile 0.6.3",
+      "originalTitle": "X360 Mobile 0.6.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T19:30:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.6.3",
+      "imageUrl": "asset://assets/emulators/x360_mobile.png",
+      "officialUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL",
+      "summary": "X360 Mobile 发布 Android 新版本 0.6.3，发布日期为2026年08月17日。点击查看官方版本信息与更新说明。",
+      "content": "X360 Mobile 已发布 Android 最新版本 0.6.3。\n\n发布日期：2026年08月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n# X360 Mobile 0.6.3 and X360 Companion 0.1.0\n\nX360 Mobile 0.6.3 introduces local wireless multiplayer through the new X360\nCompanion application, alongside Android Home shortcuts, a clearer driver\ncatalog and a unified touch-control system.\n\n## X360 Companion 0.1.0\n\n- Added X360 Companion, a separate Android application that turns a phone on\n  the same local network or a paired Bluetooth device into a remote XInput\n  controller.\n- Up to three companions can be assigned independently to P2, P3 or P4. P1\n  remains protected from remote assignment unless the host explicitly enables\n  remote-only play.\n- Added user-confirmed pairing, trusted-host management, connection recovery,\n  per-player rumble and GamerProfile selection on the host.\n- Added a shared, localized touch-control editor with compatible TOML\n  import/export, presets, Xbox player indicator and controller artwork.\n- LAN gameplay was validated between Odin3 and Honor through Gears of War 2.\n  Bluetooth remains experimental and device-dependent.\n\n## Library, shortcuts and input\n\n- Added per-game Android Home shortcuts. A shortcut uses a title image embedded\n  in supported game content when available, opens the direct-game loading\n  screen, applies the game's saved settings and returns to the launcher when\n  the game exits.\n- Unified the host and Companion touch artwork, layout model and edge-aware\n  factory placement. Standard layouts now preserve intended controls that\n  extend partially beyond a screen edge on every supported aspect ratio.\n- Expanded the integrated driver catalog with release descriptions so users can\n  review maintainer compatibility notes before downloading a driver.\n\n## Packages\n\n- **X360 Mobile:** `emu.x360mobile.com`, version `0.6.3` (`versionCode 6039000`),\n  asset `x360-mobile-0.6.3.apk`.\n- **X360 Companion:** `emu.x360mobile.controller`, version `0.1.0`\n  (`versionCode 11002`), asset `x360-companion-0.1.0.apk`.\n\nBoth APKs are signed with the established X360 Mobile Release identity. The\nemulator uses APK Signature Scheme v3 with a local v4 sidecar; the Companion\nalso includes v2 for Android 8-12 compatibility.\n\nX360 Mobile remains experimental software. It is not affiliated with Microsoft\nor Xbox and must be used only with games and content the user legally owns.",
+      "originalContent": "# X360 Mobile 0.6.3 and X360 Companion 0.1.0\n\nX360 Mobile 0.6.3 introduces local wireless multiplayer through the new X360\nCompanion application, alongside Android Home shortcuts, a clearer driver\ncatalog and a unified touch-control system.\n\n## X360 Companion 0.1.0\n\n- Added X360 Companion, a separate Android application that turns a phone on\n  the same local network or a paired Bluetooth device into a remote XInput\n  controller.\n- Up to three companions can be assigned independently to P2, P3 or P4. P1\n  remains protected from remote assignment unless the host explicitly enables\n  remote-only play.\n- Added user-confirmed pairing, trusted-host management, connection recovery,\n  per-player rumble and GamerProfile selection on the host.\n- Added a shared, localized touch-control editor with compatible TOML\n  import/export, presets, Xbox player indicator and controller artwork.\n- LAN gameplay was validated between Odin3 and Honor through Gears of War 2.\n  Bluetooth remains experimental and device-dependent.\n\n## Library, shortcuts and input\n\n- Added per-game Android Home shortcuts. A shortcut uses a title image embedded\n  in supported game content when available, opens the direct-game loading\n  screen, applies the game's saved settings and returns to the launcher when\n  the game exits.\n- Unified the host and Companion touch artwork, layout model and edge-aware\n  factory placement. Standard layouts now preserve intended controls that\n  extend partially beyond a screen edge on every supported aspect ratio.\n- Expanded the integrated driver catalog with release descriptions so users can\n  review maintainer compatibility notes before downloading a driver.\n\n## Packages\n\n- **X360 Mobile:** `emu.x360mobile.com`, version `0.6.3` (`versionCode 6039000`),\n  asset `x360-mobile-0.6.3.apk`.\n- **X360 Companion:** `emu.x360mobile.controller`, version `0.1.0`\n  (`versionCode 11002`), asset `x360-companion-0.1.0.apk`.\n\nBoth APKs are signed with the established X360 Mobile Release identity. The\nemulator uses APK Signature Scheme v3 with a local v4 sidecar; the Companion\nalso includes v2 for Android 8-12 compatibility.\n\nX360 Mobile remains experimental software. It is not affiliated with Microsoft\nor Xbox and must be used only with games and content the user legally owns.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "x360_mobile"
+      ],
+      "contentHash": "6bbce08d4b8eb3e5d2151e58b173985b082554f0ffa2e0d2701412d1333305d9"
     },
     {
       "id": "136027",
@@ -545,6 +799,444 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "a7c2ef33710d05027c9945eb538dbff8835413fff1400bb0540a1e25467f013b"
+    },
+    {
+      "id": "android-release-gearcoleco_core-1-6-10",
+      "title": "【Android更新】Gearcoleco (RetroArch 核心) 1.6.10",
+      "originalTitle": "Gearcoleco (RetroArch 核心) 1.6.10 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T01:44:13Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/drhelius/Gearcoleco/releases/tag/1.6.10",
+      "imageUrl": "asset://assets/emulators/gearcoleco_core.png",
+      "officialUrl": "https://github.com/drhelius/Gearcoleco",
+      "summary": "Gearcoleco (RetroArch 核心) 发布 Android 新版本 1.6.10，发布日期为2026年08月17日。点击查看官方版本信息与更新说明。",
+      "content": "Gearcoleco (RetroArch 核心) 已发布 Android 最新版本 1.6.10。\n\n发布日期：2026年08月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n- 🎯 Improved OCM mapper accuracy\r\n- 🔊 Improved AY-3-8910 audio sampling\r\n- 🖥️ Added Sharp Bilinear shaders\r\n- 🎵 Improved VGM recorder\r\n- 🐛 Many bug fixes and improvements\r\n\r\n**Full Changelog**: https://github.com/drhelius/Gearcoleco/compare/1.6.9...1.6.10",
+      "originalContent": "- 🎯 Improved OCM mapper accuracy\r\n- 🔊 Improved AY-3-8910 audio sampling\r\n- 🖥️ Added Sharp Bilinear shaders\r\n- 🎵 Improved VGM recorder\r\n- 🐛 Many bug fixes and improvements\r\n\r\n**Full Changelog**: https://github.com/drhelius/Gearcoleco/compare/1.6.9...1.6.10",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gearcoleco_core"
+      ],
+      "contentHash": "3cbf03c9a70c8640c6bacb2802dce880b14018a17339cab68edcabf90a729ded"
+    },
+    {
+      "id": "android-release-psx2_izzy-1-2-8",
+      "title": "【Android更新】PSX2 1.2.8",
+      "originalTitle": "PSX2 1.2.8 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-15T19:26:25Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.2.8",
+      "imageUrl": "asset://assets/emulators/psx2_izzy.png",
+      "officialUrl": "https://github.com/izzy2lost/PSX2",
+      "summary": "PSX2 发布 Android 新版本 1.2.8，发布日期为2026年08月15日。点击查看官方版本信息与更新说明。",
+      "content": "PSX2 已发布 Android 最新版本 1.2.8。\n\n发布日期：2026年08月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n**Updated to the latest PCSX2 commit\r\nBetter Performance.**",
+      "originalContent": "**Updated to the latest PCSX2 commit\r\nBetter Performance.**",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "psx2_izzy"
+      ],
+      "contentHash": "839a4f4636096405acdf77a11a5a98ae1cf3e0e041f9329696f1aedfdea25e9c"
+    },
+    {
+      "id": "android-release-xendroid-XenDroid-0b11201",
+      "title": "【Android更新】XenDroid XenDroid-0b11201",
+      "originalTitle": "XenDroid XenDroid-0b11201 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-14T16:33:54Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/rfandango/XenDroid/releases/tag/XenDroid-0b11201",
+      "imageUrl": "asset://assets/emulators/xendroid.png",
+      "officialUrl": "https://github.com/rfandango/XenDroid",
+      "summary": "XenDroid 发布 Android 新版本 XenDroid-0b11201，发布日期为2026年08月14日。点击查看官方版本信息与更新说明。",
+      "content": "XenDroid 已发布 Android 最新版本 XenDroid-0b11201。\n\n发布日期：2026年08月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n## What's Changed\n* [Kernel] Allow guest sockets by default by @rfandango in https://github.com/rfandango/XenDroid/pull/80\n\n\n**Full Changelog**: https://github.com/rfandango/XenDroid/compare/XenDroid-c4f6863...XenDroid-0b11201",
+      "originalContent": "## What's Changed\n* [Kernel] Allow guest sockets by default by @rfandango in https://github.com/rfandango/XenDroid/pull/80\n\n\n**Full Changelog**: https://github.com/rfandango/XenDroid/compare/XenDroid-c4f6863...XenDroid-0b11201",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "xendroid"
+      ],
+      "contentHash": "59a744df4691944c69254eff44249d3627fa4319baed4cd1f8f366db39d230ae"
+    },
+    {
+      "id": "android-release-emucorex-0-3-4",
+      "title": "【Android更新】EmuCoreX 0.3.4",
+      "originalTitle": "EmuCoreX 0.3.4 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-13T07:31:25Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.3.4",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.3.4，发布日期为2026年08月13日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.3.4。\n\n发布日期：2026年08月13日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.3.3...v0.3.4\r\n\r\nWhat's New: 0.3.4\r\n\r\n- Added support for Namco System 246/256.\r\n- Added RetroArch shaders with presets.\r\n- Added side backgrounds for emulation.\r\n- Improved touch controls.\r\n- Added the ability to change discs directly in-game.\r\n- Added Discord integration.\r\n- Added local Split Screen multiplayer.\r\n- Other improvements and optimizations. \r\nA clean installation is recommended.",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.3.3...v0.3.4\r\n\r\nWhat's New: 0.3.4\r\n\r\n- Added support for Namco System 246/256.\r\n- Added RetroArch shaders with presets.\r\n- Added side backgrounds for emulation.\r\n- Improved touch controls.\r\n- Added the ability to change discs directly in-game.\r\n- Added Discord integration.\r\n- Added local Split Screen multiplayer.\r\n- Other improvements and optimizations. \r\nA clean installation is recommended.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "5bbe807b520f7fb0bae40452966cbecc05b6ea1a5fb180ea20b5c62526fe80ed"
+    },
+    {
+      "id": "android-release-azahar-2126-0",
+      "title": "【Android更新】Azahar 2126.0",
+      "originalTitle": "Azahar 2126.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-10T16:12:14Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2126.0",
+      "imageUrl": "asset://assets/emulators/azahar.png",
+      "officialUrl": "https://github.com/azahar-emu/azahar",
+      "summary": "Azahar 发布 Android 新版本 2126.0，发布日期为2026年08月10日。点击查看官方版本信息与更新说明。",
+      "content": "Azahar 已发布 Android 最新版本 2126.0。\n\n发布日期：2026年08月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n### Known Issue Notice\r\n\r\nThere is a minor known issue in the new MXE build for Windows where frame pacing may be slightly inconsistent. A potential fix for this issue has already been implemented, but requires additional testing. This fix will be included in the 2126.1 update.\r\n\r\n**Most users likely won't notice this issue**, so use of the MXE build is still encouraged.\r\nThe MXE build will replace the MSYS2 build in 2127.0.\r\n\r\nThank you for your understanding.\r\n\r\n---\r\n\r\n# Azahar 2126.0 Changelog\r\n\r\n# All\r\n- Improved GPU interrupt queue & GPU timing emulation. This feature is highly experimental and is disabled by default, the toggle for it can be found in the graphics settings: \"Simulate 3DS GPU timings\". | @PabloMK7 #2095, #2145\r\n  - This change improves emulation accuracy by more closely mirroring the behaviour of real hardware.\r\n    - This PR is known to fix GPU timing issues in Luigi's Mansion 2: Dark Moon, which is now made playable without use of the \"delay render thread\" option, but likely impacts many other games as well.\r\n  - This PR also introduces a fix for an issue in Super Mario 3D Land which would prevent users from loading a save file after completing the game.\r\n  - This is a big change behind the scenes, and may inadvertently introduce issues due to its large scope. Please report any issues which may have been introduced by the new behaviour.\r\n  - Games that use dynamic FPS and don't reach 60 FPS on real hardware will also not reach 60 FPS on Azahar with this feature enabled.\r\n  - The PR description contains an in-depth technical explanation of the changes.\r\n- Completely revamped the implementation of GDB functionality, with numerous debugging improvements and new debugging features. | @PabloMK7 #2086 \r\n  - The PR description for this change goes into extensive detail about the changes, so read there for more information if curious.\r\n- Refactored how filesystem access is handled for special files (such as Z3DS files), in preparation for changes coming in Azahar 2127. | @PabloMK7 #2352\r\n    - Fixes compressed 3DSX files (`.z3dsx`) with an embedded RomFS failing to load properly. \r\n    - Users should not expect any visible changes as this is only an internal restructuring of the code. If that is not the case please consider [filing a bug report](https://github.com/azahar-emu/azahar/issues).\r\n    - **NOTE: Due to internal changes on how system files are stored, system files set up on Azahar 2126 or newer will become incompatible with older Azahar versions. On the other hand, system files set up on versions older than Azahar 2126 will remain backwards compatible for the foreseeable future**.\r\n    - More details on why this change is neccessary can be found in the pull request.\r\n- Fixed an issue where screenshots produced by Azahar could have their colour channels swapped on certain platforms and system configurations. | @mal-cap #2170\r\n- Added a setting to skip presenting duplicate frames, which is enabled by default. | @KojoZero #1867\r\n  - This makes frame generation software work properly with Azahar. \r\n- Added a new option which allows users to toggle whether the emulated 3DS system thinks headphones are plugged in. | @PabloMK7 #2099 \r\n  - A very small number of games have altered behaviour when using wired headphones. For example, when headphones are plugged in while playing Super Mario 3D Land, the audio playback is slightly altered.\r\n- In multiplayer rooms, users' usernames are now pulled directly from the username set in the System tab in Azahar's settings instead of being a separate option.\r\n- Fixed a crash which could occur when an application submits a vertex array with an invalid base address. | @PabloMK7 #2299\r\n  - Known to fix a crash in the credits of Mario & Luigi: Superstar Saga. May fix other problems elsewhere.\r\n- Adjusted rom loading error messages displayed to users to be more easily understandable and user-friendly. | @PabloMK7 #2097 \r\n- LG2/EX2 subroutine functions are now only emitted for s…",
+      "originalContent": "### Known Issue Notice\r\n\r\nThere is a minor known issue in the new MXE build for Windows where frame pacing may be slightly inconsistent. A potential fix for this issue has already been implemented, but requires additional testing. This fix will be included in the 2126.1 update.\r\n\r\n**Most users likely won't notice this issue**, so use of the MXE build is still encouraged.\r\nThe MXE build will replace the MSYS2 build in 2127.0.\r\n\r\nThank you for your understanding.\r\n\r\n---\r\n\r\n# Azahar 2126.0 Changelog\r\n\r\n# All\r\n- Improved GPU interrupt queue & GPU timing emulation. This feature is highly experimental and is disabled by default, the toggle for it can be found in the graphics settings: \"Simulate 3DS GPU timings\". | @PabloMK7 #2095, #2145\r\n  - This change improves emulation accuracy by more closely mirroring the behaviour of real hardware.\r\n    - This PR is known to fix GPU timing issues in Luigi's Mansion 2: Dark Moon, which is now made playable without use of the \"delay render thread\" option, but likely impacts many other games as well.\r\n  - This PR also introduces a fix for an issue in Super Mario 3D Land which would prevent users from loading a save file after completing the game.\r\n  - This is a big change behind the scenes, and may inadvertently introduce issues due to its large scope. Please report any issues which may have been introduced by the new behaviour.\r\n  - Games that use dynamic FPS and don't reach 60 FPS on real hardware will also not reach 60 FPS on Azahar with this feature enabled.\r\n  - The PR description contains an in-depth technical explanation of the changes.\r\n- Completely revamped the implementation of GDB functionality, with numerous debugging improvements and new debugging features. | @PabloMK7 #2086 \r\n  - The PR description for this change goes into extensive detail about the changes, so read there for more information if curious.\r\n- Refactored how filesystem access is handled for special files (such as Z3DS files), in preparation for changes coming in Azahar 2127. | @PabloMK7 #2352\r\n    - Fixes compressed 3DSX files (`.z3dsx`) with an embedded RomFS failing to load properly. \r\n    - Users should not expect any visible changes as this is only an internal restructuring of the code. If that is not the case please consider [filing a bug report](https://github.com/azahar-emu/azahar/issues).\r\n    - **NOTE: Due to internal changes on how system files are stored, system files set up on Azahar 2126 or newer will become incompatible with older Azahar versions. On the other hand, system files set up on versions older than Azahar 2126 will remain backwards compatible for the foreseeable future**.\r\n    - More details on why this change is neccessary can be found in the pull request.\r\n- Fixed an issue where screenshots produced by Azahar could have their colour channels swapped on certain platforms and system configurations. | @mal-cap #2170\r\n- Added a setting to skip presenting duplicate frames, which is enabled by default. | @KojoZero #1867\r\n  - This makes frame generation software work properly with Azahar. \r\n- Added a new option which allows users to toggle whether the emulated 3DS system thinks headphones are plugged in. | @PabloMK7 #2099 \r\n  - A very small number of games have altered behaviour when using wired headphones. For example, when headphones are plugged in while playing Super Mario 3D Land, the audio playback is slightly altered.\r\n- In multiplayer rooms, users' usernames are now pulled directly from the username set in the System tab in Azahar's settings instead of being a separate option.\r\n- Fixed a crash which could occur when an application submits a vertex array with an invalid base address. | @PabloMK7 #2299\r\n  - Known to fix a crash in the credits of Mario & Luigi: Superstar Saga. May fix other problems elsewhere.\r\n- Adjusted rom loading error messages displayed to users to be more easily understandable and user-friendly. | @PabloMK7 #2097 \r\n- LG2/EX2 subroutine functions are now only emitted for s…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar"
+      ],
+      "contentHash": "790ba60aa607f62e22d2e80289289fb45bc038f4654cbfab217601700e9f7103"
+    },
+    {
+      "id": "android-release-emucorev-0-1-8",
+      "title": "【Android更新】EmuCoreV 0.1.8",
+      "originalTitle": "EmuCoreV 0.1.8 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-10T07:51:40Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreV/releases/tag/v0.1.8",
+      "imageUrl": "asset://assets/emulators/emucorev.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreV",
+      "summary": "EmuCoreV 发布 Android 新版本 0.1.8，发布日期为2026年08月10日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreV 已发布 Android 最新版本 0.1.8。\n\n发布日期：2026年08月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/compare/v0.1.7...v0.1.8\r\n\r\nWhat's New: 0.1.8\r\n\r\n- Bug fixes and optimizations.\r\nA clean installation is recommended to avoid bugs and issues after updating.",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/compare/v0.1.7...v0.1.8\r\n\r\nWhat's New: 0.1.8\r\n\r\n- Bug fixes and optimizations.\r\nA clean installation is recommended to avoid bugs and issues after updating.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorev"
+      ],
+      "contentHash": "20f3b57f0b887703f77da63609de4595eb0017a98e85ef828fd1dc2beeba8e40"
+    },
+    {
+      "id": "android-release-noods-release",
+      "title": "【Android更新】NooDS release",
+      "originalTitle": "NooDS release Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-09T19:30:22Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Hydr8gon/NooDS/releases/tag/release",
+      "imageUrl": "asset://assets/emulators/noods.png",
+      "officialUrl": "https://github.com/Hydr8gon/NooDS",
+      "summary": "NooDS 发布 Android 新版本 release，发布日期为2026年08月09日。点击查看官方版本信息与更新说明。",
+      "content": "NooDS 已发布 Android 最新版本 release。\n\n发布日期：2026年08月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nThese are automatically updated builds of the latest commit.",
+      "originalContent": "These are automatically updated builds of the latest commit.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "noods"
+      ],
+      "contentHash": "1931a6e4d90bb574d17a1376797bcc78a28b4433a5a10bda959a01fffd2337fb"
+    },
+    {
+      "id": "android-release-swiff-1-3-0",
+      "title": "【Android更新】Swiff 1.3.0",
+      "originalTitle": "Swiff 1.3.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-09T17:49:17Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/NaviVani-dev/Swiff/releases/tag/v1.3.0",
+      "imageUrl": "asset://assets/emulators/swiff.png",
+      "officialUrl": "https://github.com/NaviVani-dev/Swiff",
+      "summary": "Swiff 发布 Android 新版本 1.3.0，发布日期为2026年08月09日。点击查看官方版本信息与更新说明。",
+      "content": "Swiff 已发布 Android 最新版本 1.3.0。\n\n发布日期：2026年08月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n# Version 1.3.0\r\n\r\nAfter a LOT of work, version 1.3.0 is here! This is a huge update for Swiff, made possible thanks to all of your support.\r\n\r\n## Original Flash Player added!\r\n\r\nThanks to new technologies like FEX and projects like [Winlator Ludashi](https://github.com/StevenMXZ/Winlator-Ludashi), Swiff can now run the original Adobe Flash Player to play your favourite Flash games! The app handles the hard part for you, all you need to do is click download and play. If for some reason a game doesn't work with the Flash Player app, you can still use the Flashpoint Navigator and the Flash Player web plugin, just like the old days!\r\n\r\n> [!WARNING]\r\n> This is a heavy download since this feature requires technologies like Wine and Linux dependencies. It's only recommended if you have an extra 3-4GB to spare, if some of your games don't work properly with Ruffle/AwayFL, or if you want the best possible compatibility.\r\n\r\n## J2ME games\r\n\r\nEven though Swiff was originally made exclusively for Flash games, during development I noticed there were no good alternatives for other platforms, and the few apps that do exist don't offer half the features Swiff provides. So why not add more optional platforms?\r\n\r\nUsing [J2ME-Loader](https://github.com/nikita36078/j2me-loader) and the [Kahvibreak](https://bluemaxima.org/kahvibreak/) database, you can now enjoy J2ME games inside Swiff without any issues, dead simple.\r\n\r\n## Scratch games\r\n\r\nNow, if you add a valid Scratch URL to the \"Import URL\" popup in your Library, Swiff will download it and let you play it easily. All the usual features like on-screen controls and frontend exports are included, just search the Scratch website for your favourite games and play.\r\n\r\n## Web shortcuts\r\n\r\nIn case you can only find some games on websites like Poki or Y8 Games, you can import the URL into Swiff to create **Web Shortcuts**! This opens the page inside Swiff while still letting you keep features like gamepad support or the virtual mouse, and if you use the Flashpoint Navigator, you can even load old pages with the original Flash Player plugin!\r\n\r\n## Playlists\r\n\r\nLike organizing things? You can now create playlists inside Swiff to organize your games easily. It even includes a \"Liked games\" playlist, just hit the heart button on a game's details page to add it, and you're done.\r\n\r\n## Features\r\n\r\n- Added a Linux rootfs to Swiff (needed for the Flash Player, Flashpoint Navigator, and Wine emulation)\r\n- Added the original Flash Player as a Flash runtime\r\n- Added the Flashpoint Navigator as a web runtime\r\n- Added an option to choose your preferred runtime for web content\r\n- Added J2ME-Loader as a J2ME runtime\r\n- Added the ability to download individual platforms from the Flashpoint archive instead of forcing all of them\r\n- Added the ability to download the Kahvibreak database for J2ME games\r\n- Merged the Games and Animations tabs into a single Search tab\r\n- Added playlists to organize games inside Swiff\r\n- Added the option to like games\r\n- You can now import Scratch games with a URL\r\n- You can now import Flashpoint URLs to find a game\r\n- You can now create web shortcuts when importing a URL\r\n- You can now edit a game's metadata\r\n- Added the ability to enter \"Select mode\" inside the Library page\r\n  - Select mode lets you select multiple items in your library for easy management\r\n  - You can delete items in bulk while in Select mode\r\n  - You can add items to a playlist in bulk while in Select mode\r\n- Changed the game settings popup to a side panel\r\n- Added an option to delete save files\r\n- Added a page to manage downloads inside the app\r\n  - Go to Settings > Library > Data management to manage any content downloaded by Swiff\r\n  - This page shows you how much storage each item on Swiff is using\r\n  - You can delete dependencies or games directly from this screen\r\n- Added an option to block ads on the WebView\r\n- Added an option to show only the game on screen (useful for web shortcuts, where fullscreen isn't avai…",
+      "originalContent": "# Version 1.3.0\r\n\r\nAfter a LOT of work, version 1.3.0 is here! This is a huge update for Swiff, made possible thanks to all of your support.\r\n\r\n## Original Flash Player added!\r\n\r\nThanks to new technologies like FEX and projects like [Winlator Ludashi](https://github.com/StevenMXZ/Winlator-Ludashi), Swiff can now run the original Adobe Flash Player to play your favourite Flash games! The app handles the hard part for you, all you need to do is click download and play. If for some reason a game doesn't work with the Flash Player app, you can still use the Flashpoint Navigator and the Flash Player web plugin, just like the old days!\r\n\r\n> [!WARNING]\r\n> This is a heavy download since this feature requires technologies like Wine and Linux dependencies. It's only recommended if you have an extra 3-4GB to spare, if some of your games don't work properly with Ruffle/AwayFL, or if you want the best possible compatibility.\r\n\r\n## J2ME games\r\n\r\nEven though Swiff was originally made exclusively for Flash games, during development I noticed there were no good alternatives for other platforms, and the few apps that do exist don't offer half the features Swiff provides. So why not add more optional platforms?\r\n\r\nUsing [J2ME-Loader](https://github.com/nikita36078/j2me-loader) and the [Kahvibreak](https://bluemaxima.org/kahvibreak/) database, you can now enjoy J2ME games inside Swiff without any issues, dead simple.\r\n\r\n## Scratch games\r\n\r\nNow, if you add a valid Scratch URL to the \"Import URL\" popup in your Library, Swiff will download it and let you play it easily. All the usual features like on-screen controls and frontend exports are included, just search the Scratch website for your favourite games and play.\r\n\r\n## Web shortcuts\r\n\r\nIn case you can only find some games on websites like Poki or Y8 Games, you can import the URL into Swiff to create **Web Shortcuts**! This opens the page inside Swiff while still letting you keep features like gamepad support or the virtual mouse, and if you use the Flashpoint Navigator, you can even load old pages with the original Flash Player plugin!\r\n\r\n## Playlists\r\n\r\nLike organizing things? You can now create playlists inside Swiff to organize your games easily. It even includes a \"Liked games\" playlist, just hit the heart button on a game's details page to add it, and you're done.\r\n\r\n## Features\r\n\r\n- Added a Linux rootfs to Swiff (needed for the Flash Player, Flashpoint Navigator, and Wine emulation)\r\n- Added the original Flash Player as a Flash runtime\r\n- Added the Flashpoint Navigator as a web runtime\r\n- Added an option to choose your preferred runtime for web content\r\n- Added J2ME-Loader as a J2ME runtime\r\n- Added the ability to download individual platforms from the Flashpoint archive instead of forcing all of them\r\n- Added the ability to download the Kahvibreak database for J2ME games\r\n- Merged the Games and Animations tabs into a single Search tab\r\n- Added playlists to organize games inside Swiff\r\n- Added the option to like games\r\n- You can now import Scratch games with a URL\r\n- You can now import Flashpoint URLs to find a game\r\n- You can now create web shortcuts when importing a URL\r\n- You can now edit a game's metadata\r\n- Added the ability to enter \"Select mode\" inside the Library page\r\n  - Select mode lets you select multiple items in your library for easy management\r\n  - You can delete items in bulk while in Select mode\r\n  - You can add items to a playlist in bulk while in Select mode\r\n- Changed the game settings popup to a side panel\r\n- Added an option to delete save files\r\n- Added a page to manage downloads inside the app\r\n  - Go to Settings > Library > Data management to manage any content downloaded by Swiff\r\n  - This page shows you how much storage each item on Swiff is using\r\n  - You can delete dependencies or games directly from this screen\r\n- Added an option to block ads on the WebView\r\n- Added an option to show only the game on screen (useful for web shortcuts, where fullscreen isn't avai…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "swiff"
+      ],
+      "contentHash": "ae2ff8747ebec1004aa8d93557de3b512978c47cc924fbcd11dd1946d8630e0d"
+    },
+    {
+      "id": "android-release-melondualds-0-7-0",
+      "title": "【Android更新】WatermelonDS 0.7.0",
+      "originalTitle": "WatermelonDS 0.7.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-08T03:19:00Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/SapphireRhodonite/WatermelonDS/releases/tag/0.7.0",
+      "imageUrl": "asset://assets/emulators/watermelonds.png",
+      "officialUrl": "https://github.com/SapphireRhodonite/WatermelonDS",
+      "summary": "WatermelonDS 发布 Android 新版本 0.7.0，发布日期为2026年08月08日。点击查看官方版本信息与更新说明。",
+      "content": "WatermelonDS 已发布 Android 最新版本 0.7.0。\n\n发布日期：2026年08月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n## This is a very special release.\r\n\r\nAfter several release candidates under the **melonDualDS** name, the project is now officially renamed to:\r\n\r\n# WatermelonDS\r\n\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205316\" src=\"https://github.com/user-attachments/assets/4743d5c3-1331-49f9-8b9e-54e542040e8b\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205306\" src=\"https://github.com/user-attachments/assets/bb76defe-d347-48ed-82aa-afd5d4cb7c6d\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205118\" src=\"https://github.com/user-attachments/assets/b0fb3be2-2e11-499d-b53a-b2a6ac80ed2a\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205328\" src=\"https://github.com/user-attachments/assets/93c6b7d9-7ef4-4698-8f35-78b5c9bc458c\" />\r\n\r\n\r\nThis is the final **0.7.0** release and the first public release with the new WatermelonDS identity.\r\n\r\nWatermelonDS keeps the same goal as before: providing a powerful Nintendo DS emulator experience on Android, with modern Android features, RetroAchievements support, Vulkan rendering, shader support, and a lot of customization.\r\n\r\nThis release includes a new name, a refreshed visual identity, a much improved interface, RetroArch shader preset support across renderers, and a new experimental Vulkan feature called **FastPath**.\r\n\r\n---\r\n\r\n## What’s New\r\n\r\n### 1. The project is now WatermelonDS\r\n\r\nThe emulator has now fully moved from the old **melonDualDS** name to **WatermelonDS**.\r\n\r\nThis includes:\r\n\r\n- New project identity!!!\r\n- New app name\r\n- New launcher icon\r\n- Updated splash screen\r\n- Updated app visuals\r\n- Updated UI style\r\n\r\nThis is more than a simple name change. The goal is to give the project its own identity while continuing to build on top of the melonDS Android foundation.\r\n\r\n---\r\n\r\n### 2. New user interface\r\n\r\nWatermelonDS 0.7.0 includes a major UI refresh.\r\n\r\nThe new interface is designed to feel cleaner, more modern, and more consistent across the app.\r\n\r\nThis includes improvements such as:\r\n\r\n- New WatermelonDS visual style\r\n- Updated theme\r\n- New design tokens\r\n- Better visual consistency\r\n- Updated icons and branding\r\n- Improved ROM list presentation\r\n- Better box art usage in the continue shelf\r\n- ROM icons scaled to fill their cards more naturally\r\n- Updated RetroAchievements presentation\r\n- Improved account and score display in settings\r\n\r\nThe goal is to make WatermelonDS feel more polished and easier to use without losing the advanced options that make the emulator flexible.\r\n\r\n---\r\n\r\n### 3. RetroArch shader presets for all renderers\r\n\r\nThis is one of the biggest improvements in this release.\r\n\r\nWatermelonDS now supports **RetroArch shader presets across all renderers**.\r\n\r\nThis means shader preset support is no longer limited to only one rendering path.\r\n\r\nYou can now use RetroArch-style shader presets with the available renderers, making it easier to customize the final image and get the visual style you prefer.\r\n\r\nThis is great news for users who like:\r\n\r\n- CRT-style filters\r\n- LCD-style shaders\r\n- Pixel smoothing\r\n- Color correction\r\n- Handheld-style presentation\r\n- Custom visual presets\r\n\r\nShader support is an important part of making DS games look better on modern Android screens, especially on high-resolution handhelds and external displays.\r\n\r\n---\r\n\r\n### 4. Experimental Vulkan FastPath\r\n\r\nWatermelonDS 0.7.0 introduces a new Vulkan feature called:\r\n\r\n**FastPath**\r\n\r\nFastPath is designed to improve performance, especially when using higher internal resolutions.\r\n\r\nIn some cases, this can help games run much faster at resolutions such as:\r\n\r\n- 4x\r\n- 6x\r\n- 8x\r\n\r\nThis can be especially useful for users who want higher-resolution rendering, better performance on less powerful chips, or improved battery efficiency by reducing rendering overhead.\r\n\r\nHowever, please read this carefully:\r\n\r\n# FastPath is extremely experimental.\r\n\r\nFastPath is still in a very early beta state.\r\n\r\nThere are many known and unknown bugs, and some games may…",
+      "originalContent": "## This is a very special release.\r\n\r\nAfter several release candidates under the **melonDualDS** name, the project is now officially renamed to:\r\n\r\n# WatermelonDS\r\n\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205316\" src=\"https://github.com/user-attachments/assets/4743d5c3-1331-49f9-8b9e-54e542040e8b\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205306\" src=\"https://github.com/user-attachments/assets/bb76defe-d347-48ed-82aa-afd5d4cb7c6d\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205118\" src=\"https://github.com/user-attachments/assets/b0fb3be2-2e11-499d-b53a-b2a6ac80ed2a\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205328\" src=\"https://github.com/user-attachments/assets/93c6b7d9-7ef4-4698-8f35-78b5c9bc458c\" />\r\n\r\n\r\nThis is the final **0.7.0** release and the first public release with the new WatermelonDS identity.\r\n\r\nWatermelonDS keeps the same goal as before: providing a powerful Nintendo DS emulator experience on Android, with modern Android features, RetroAchievements support, Vulkan rendering, shader support, and a lot of customization.\r\n\r\nThis release includes a new name, a refreshed visual identity, a much improved interface, RetroArch shader preset support across renderers, and a new experimental Vulkan feature called **FastPath**.\r\n\r\n---\r\n\r\n## What’s New\r\n\r\n### 1. The project is now WatermelonDS\r\n\r\nThe emulator has now fully moved from the old **melonDualDS** name to **WatermelonDS**.\r\n\r\nThis includes:\r\n\r\n- New project identity!!!\r\n- New app name\r\n- New launcher icon\r\n- Updated splash screen\r\n- Updated app visuals\r\n- Updated UI style\r\n\r\nThis is more than a simple name change. The goal is to give the project its own identity while continuing to build on top of the melonDS Android foundation.\r\n\r\n---\r\n\r\n### 2. New user interface\r\n\r\nWatermelonDS 0.7.0 includes a major UI refresh.\r\n\r\nThe new interface is designed to feel cleaner, more modern, and more consistent across the app.\r\n\r\nThis includes improvements such as:\r\n\r\n- New WatermelonDS visual style\r\n- Updated theme\r\n- New design tokens\r\n- Better visual consistency\r\n- Updated icons and branding\r\n- Improved ROM list presentation\r\n- Better box art usage in the continue shelf\r\n- ROM icons scaled to fill their cards more naturally\r\n- Updated RetroAchievements presentation\r\n- Improved account and score display in settings\r\n\r\nThe goal is to make WatermelonDS feel more polished and easier to use without losing the advanced options that make the emulator flexible.\r\n\r\n---\r\n\r\n### 3. RetroArch shader presets for all renderers\r\n\r\nThis is one of the biggest improvements in this release.\r\n\r\nWatermelonDS now supports **RetroArch shader presets across all renderers**.\r\n\r\nThis means shader preset support is no longer limited to only one rendering path.\r\n\r\nYou can now use RetroArch-style shader presets with the available renderers, making it easier to customize the final image and get the visual style you prefer.\r\n\r\nThis is great news for users who like:\r\n\r\n- CRT-style filters\r\n- LCD-style shaders\r\n- Pixel smoothing\r\n- Color correction\r\n- Handheld-style presentation\r\n- Custom visual presets\r\n\r\nShader support is an important part of making DS games look better on modern Android screens, especially on high-resolution handhelds and external displays.\r\n\r\n---\r\n\r\n### 4. Experimental Vulkan FastPath\r\n\r\nWatermelonDS 0.7.0 introduces a new Vulkan feature called:\r\n\r\n**FastPath**\r\n\r\nFastPath is designed to improve performance, especially when using higher internal resolutions.\r\n\r\nIn some cases, this can help games run much faster at resolutions such as:\r\n\r\n- 4x\r\n- 6x\r\n- 8x\r\n\r\nThis can be especially useful for users who want higher-resolution rendering, better performance on less powerful chips, or improved battery efficiency by reducing rendering overhead.\r\n\r\nHowever, please read this carefully:\r\n\r\n# FastPath is extremely experimental.\r\n\r\nFastPath is still in a very early beta state.\r\n\r\nThere are many known and unknown bugs, and some games may…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "melondualds"
+      ],
+      "contentHash": "2e3f636e59b7290cb07138a264e73ef8b0f6603ffac8fe9894b7444af31e0acc"
+    },
+    {
+      "id": "android-release-gearsystem-3-9-15",
+      "title": "【Android更新】Gearsystem 3.9.15",
+      "originalTitle": "Gearsystem 3.9.15 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-07T13:25:55Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/drhelius/Gearsystem/releases/tag/3.9.15",
+      "imageUrl": "asset://assets/emulators/gearsystem.png",
+      "officialUrl": "https://github.com/drhelius/Gearsystem",
+      "summary": "Gearsystem 发布 Android 新版本 3.9.15，发布日期为2026年08月07日。点击查看官方版本信息与更新说明。",
+      "content": "Gearsystem 已发布 Android 最新版本 3.9.15。\n\n发布日期：2026年08月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n- 🎯 Extensive Z80 accuracy improvements\r\n- 📂 Added command-line option for portable mode\r\n- 🧠 Improved MCP Server implementation\r\n- 🕹️ libretro VFS support\r\n- 📦 Improved compatibility in Dev Containers\r\n- 🎮 Updated Game Controller DB\r\n- 🐛 Many bug fixes and improvements\r\n\r\n**Full Changelog**: https://github.com/drhelius/Gearsystem/compare/3.9.14...3.9.15",
+      "originalContent": "- 🎯 Extensive Z80 accuracy improvements\r\n- 📂 Added command-line option for portable mode\r\n- 🧠 Improved MCP Server implementation\r\n- 🕹️ libretro VFS support\r\n- 📦 Improved compatibility in Dev Containers\r\n- 🎮 Updated Game Controller DB\r\n- 🐛 Many bug fixes and improvements\r\n\r\n**Full Changelog**: https://github.com/drhelius/Gearsystem/compare/3.9.14...3.9.15",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gearsystem"
+      ],
+      "contentHash": "e15b9b8aa61ec499bfd260186d6d63877a749ef1ad98acf493e9ccac52c51cfc"
+    },
+    {
+      "id": "android-release-armsx1-0-1-3",
+      "title": "【Android更新】ARMSX1 0.1.3",
+      "originalTitle": "ARMSX1 0.1.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-05T22:50:44Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/0.1.3",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 0.1.3，发布日期为2026年08月05日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 0.1.3。\n\n发布日期：2026年08月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nARMSX1 0.1.3\r\n\r\nfixes crashes and bugs",
+      "originalContent": "ARMSX1 0.1.3\r\n\r\nfixes crashes and bugs",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "d256daab75c1db6c89d0ccae94dd55423c397724ca4cbdee8ad6a1f73521737f"
+    },
+    {
+      "id": "android-release-mame4droid-1-38-2",
+      "title": "【Android更新】MAME4droid 1.38.2",
+      "originalTitle": "MAME4droid 1.38.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-03T11:30:56Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.38.2",
+      "imageUrl": "asset://assets/emulators/mame4droid.png",
+      "officialUrl": "https://github.com/seleuco/MAME4droid-Current",
+      "summary": "MAME4droid 发布 Android 新版本 1.38.2，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
+      "content": "MAME4droid 已发布 Android 最新版本 1.38.2。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nNew in 1.38.2: Netplay menu/Lua, touch lightgun fixes, full emulation area and vector polish\r\n\r\nNetplay\r\n- MAME's menu and Lua plugins now work during netplay: the menu combo is\r\n  intercepted through a side channel and stripped from the synced input.\r\n- New \"Allow Lua plugins in netplay\" preference, off by default\r\n\r\nTouch lightgun\r\n- Aiming maps to the game screen inside the canvas instead of the whole view,\r\n  fixing the drift towards the edges with artwork or the full emulation area.\r\n- Long press now runs on a real timer instead of waiting for touch events, and\r\n  holding the pedal on a physical or virtual button no longer blocks the shot.\r\n\r\nVideo and resolution\r\n- New \"Full emulation area\" preference: hands MAME the whole available\r\n  resolution so artworks can be zoomed and cropped. Replaces \"Zoom to window\".\r\n- Native resolution is re-applied on rotation and uses the real drawable area,\r\n  fixing the landscape-shaped canvas in portrait and the black side bands.\r\n\r\nVectors and HDR\r\n- Octagonal 8-tap bloom kernel with FBO-relative pyramid depth: round halos\r\n  and the same optical spread at any resolution or FBO scale.\r\n- Hybrid anti-fattening mask so saturated beams carve artwork like white ones,\r\n  plus a more restrained bloom and auto-exposure on HDR displays.\r\n\r\n****\r\n\r\n## What's Changed\r\n\r\n* Up to MAME 0.289 with Sega Model 1 Improvements: Graphical fixes, better collision detection for Virtua Fighter, and DSP patches fixing Wing War. Audio & Core Stability: Fixes for games using the SCSP sound chip and major bug fixes for the widely-used PowerPC and 68k CPU families, benefiting a wide range of emulated systems. New Additions: Sega's unconventional arcade game Flash Beats is now playable, alongside newly working NES-like plug-and-play systems (Lexibook). Expanded Hardware: Support for NS32000 family CPUs and numerous fixes for the NEC PC-6001 family. (For a full list of changes, visit the official MAME website)\r\n\r\n* Fix myosd source files build after upstream mame breaking changes by @FlykeSpice \r\n\r\n* Up to Android 17",
+      "originalContent": "New in 1.38.2: Netplay menu/Lua, touch lightgun fixes, full emulation area and vector polish\r\n\r\nNetplay\r\n- MAME's menu and Lua plugins now work during netplay: the menu combo is\r\n  intercepted through a side channel and stripped from the synced input.\r\n- New \"Allow Lua plugins in netplay\" preference, off by default\r\n\r\nTouch lightgun\r\n- Aiming maps to the game screen inside the canvas instead of the whole view,\r\n  fixing the drift towards the edges with artwork or the full emulation area.\r\n- Long press now runs on a real timer instead of waiting for touch events, and\r\n  holding the pedal on a physical or virtual button no longer blocks the shot.\r\n\r\nVideo and resolution\r\n- New \"Full emulation area\" preference: hands MAME the whole available\r\n  resolution so artworks can be zoomed and cropped. Replaces \"Zoom to window\".\r\n- Native resolution is re-applied on rotation and uses the real drawable area,\r\n  fixing the landscape-shaped canvas in portrait and the black side bands.\r\n\r\nVectors and HDR\r\n- Octagonal 8-tap bloom kernel with FBO-relative pyramid depth: round halos\r\n  and the same optical spread at any resolution or FBO scale.\r\n- Hybrid anti-fattening mask so saturated beams carve artwork like white ones,\r\n  plus a more restrained bloom and auto-exposure on HDR displays.\r\n\r\n****\r\n\r\n## What's Changed\r\n\r\n* Up to MAME 0.289 with Sega Model 1 Improvements: Graphical fixes, better collision detection for Virtua Fighter, and DSP patches fixing Wing War. Audio & Core Stability: Fixes for games using the SCSP sound chip and major bug fixes for the widely-used PowerPC and 68k CPU families, benefiting a wide range of emulated systems. New Additions: Sega's unconventional arcade game Flash Beats is now playable, alongside newly working NES-like plug-and-play systems (Lexibook). Expanded Hardware: Support for NS32000 family CPUs and numerous fixes for the NEC PC-6001 family. (For a full list of changes, visit the official MAME website)\r\n\r\n* Fix myosd source files build after upstream mame breaking changes by @FlykeSpice \r\n\r\n* Up to Android 17",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "mame4droid",
+        "mame4droid_neogeo"
+      ],
+      "contentHash": "8fc9f306dc23f74441ba078baff1f0e1f8c95035ef0fb29ab40b1f564a6f4cf5"
+    },
+    {
+      "id": "android-release-dosbox_x-dosbox-x-v2026-08-02",
+      "title": "【Android更新】DOSBox-X dosbox-x-v2026.08.02",
+      "originalTitle": "DOSBox-X dosbox-x-v2026.08.02 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-03T04:31:29Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/joncampbell123/dosbox-x/releases/tag/dosbox-x-v2026.08.02",
+      "imageUrl": "asset://assets/emulators/dosbox_x.png",
+      "officialUrl": "https://github.com/joncampbell123/dosbox-x",
+      "summary": "DOSBox-X 发布 Android 新版本 dosbox-x-v2026.08.02，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
+      "content": "DOSBox-X 已发布 Android 最新版本 dosbox-x-v2026.08.02。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n2026.08.02\r\n  - Debugger: normalize 16-bit segmented offsets for address display/lookup and\r\n    avoid false \"[illegal]\" memory operand reports in AnalyzeInstruction()\r\n    (cimarronm)\r\n  - Fixed character rendering and mouse cursor display in DOS/V Japanese mode.\r\n    (nanshiki)\r\n  - Fixed build error of OSFREE release builds (maron2000)\r\n  - Added floppy BPB sanity check, and rearranged existing floppy BPB check code\r\n    (maron2000)\r\n  - Fixed window resizing (OpenGL, SDL2) (misty7666)\r\n  - Updated Nuked-OPL3-fast to v1.8-fast.3 (tgies)\r\n  - Added support for nested subdirectories in Z drive (maron2000)\r\n  - Added experimental \"ethnet\" command and protocol for NE2000 emulation. Instead\r\n    of using the pcap promiscious mode, which doesn't work over Wi-fi, a client\r\n    server setup can be configured to emulate a private lan between instances of\r\n    DOSBox-X either on localhost or on the local area network. The ethnet command\r\n    is deliberately built so that client and server set up is the same command\r\n    structure as the \"ipx\" command used to set up an IPX network in DOSBox and\r\n    DOSBox-X. (joncampbell123)\r\n  - FAT driver performance improvements, at least for directory enumeration,\r\n    file creation, reading, and writing (joncampbell123).\r\n  - Added PC3270 and Olivetti machine types (firevaran).\r\n  - Fixed fatDrive error paths so truncated boot-sector reads no longer look\r\n    like successful mounts, and early returns now close diskfile handles\r\n    instead of leaking them. (cimarronm)\r\n  - INT 33h: In PC-98 mode, do not maintain a hide/show display count to match\r\n    real mouse driver behavior (nanshiki)",
+      "originalContent": "2026.08.02\r\n  - Debugger: normalize 16-bit segmented offsets for address display/lookup and\r\n    avoid false \"[illegal]\" memory operand reports in AnalyzeInstruction()\r\n    (cimarronm)\r\n  - Fixed character rendering and mouse cursor display in DOS/V Japanese mode.\r\n    (nanshiki)\r\n  - Fixed build error of OSFREE release builds (maron2000)\r\n  - Added floppy BPB sanity check, and rearranged existing floppy BPB check code\r\n    (maron2000)\r\n  - Fixed window resizing (OpenGL, SDL2) (misty7666)\r\n  - Updated Nuked-OPL3-fast to v1.8-fast.3 (tgies)\r\n  - Added support for nested subdirectories in Z drive (maron2000)\r\n  - Added experimental \"ethnet\" command and protocol for NE2000 emulation. Instead\r\n    of using the pcap promiscious mode, which doesn't work over Wi-fi, a client\r\n    server setup can be configured to emulate a private lan between instances of\r\n    DOSBox-X either on localhost or on the local area network. The ethnet command\r\n    is deliberately built so that client and server set up is the same command\r\n    structure as the \"ipx\" command used to set up an IPX network in DOSBox and\r\n    DOSBox-X. (joncampbell123)\r\n  - FAT driver performance improvements, at least for directory enumeration,\r\n    file creation, reading, and writing (joncampbell123).\r\n  - Added PC3270 and Olivetti machine types (firevaran).\r\n  - Fixed fatDrive error paths so truncated boot-sector reads no longer look\r\n    like successful mounts, and early returns now close diskfile handles\r\n    instead of leaking them. (cimarronm)\r\n  - INT 33h: In PC-98 mode, do not maintain a hide/show display count to match\r\n    real mouse driver behavior (nanshiki)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "dosbox_x"
+      ],
+      "contentHash": "01a746422de9e7850f634938af603c871158a779ad1c7df06ca7e70ec8e8fd53"
+    },
+    {
+      "id": "android-release-xm8-2-0-0",
+      "title": "【Android更新】XM8M 2.0.0",
+      "originalTitle": "XM8M 2.0.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-03T01:50:03Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/bubio/xm8m/releases/tag/2.0.0",
+      "imageUrl": "asset://assets/emulators/xm8.png",
+      "officialUrl": "https://github.com/bubio/xm8m",
+      "summary": "XM8M 发布 Android 新版本 2.0.0，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
+      "content": "XM8M 已发布 Android 最新版本 2.0.0。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n## 動作環境\r\n| Platform | CPU | 最小OSバージョン |\r\n| ------------- | ------------------- | ------------- |\r\n| Mac | x86_64 | macOS 10.13 High Sierra |\r\n| Mac | Apple Silicon | macOS 11 Big Sur |\r\n| Windows | x86_64 | Windows 10 |\r\n| Windows | x86_32 | Windows 10 |\r\n| Linux | x86_64 | Ubuntu 22.04以降（.deb） / Fedora 36以降（.rpm） |\r\n| Raspberry Pi OS | armhf | Bookworm以降 |\r\n| Android | Arm | Android 4.4 |\r\n\r\n<br />　\r\n\r\n## 変更点\r\n- アプリ名称変更(XM8 for Mac -> XM8M)。\r\n- アプリアイコンを変更しました。\r\n- Androidのビルド環境を更新しました。\r\n- Androidの縦画面に対応しました。\r\n- m3u/m3u8ファイルの対応を拡充し、メニューなどからも開けるようにしました。\r\n- Linuxはflatpakでの配布を追加しました。\r\n- *🎖️[RetroAchievements](https://retroachievements.org)　に対応しました。*\r\n\r\n<br />　\r\n\r\n## 既知の問題\r\n- 特にありません。",
+      "originalContent": "## 動作環境\r\n| Platform | CPU | 最小OSバージョン |\r\n| ------------- | ------------------- | ------------- |\r\n| Mac | x86_64 | macOS 10.13 High Sierra |\r\n| Mac | Apple Silicon | macOS 11 Big Sur |\r\n| Windows | x86_64 | Windows 10 |\r\n| Windows | x86_32 | Windows 10 |\r\n| Linux | x86_64 | Ubuntu 22.04以降（.deb） / Fedora 36以降（.rpm） |\r\n| Raspberry Pi OS | armhf | Bookworm以降 |\r\n| Android | Arm | Android 4.4 |\r\n\r\n<br />　\r\n\r\n## 変更点\r\n- アプリ名称変更(XM8 for Mac -> XM8M)。\r\n- アプリアイコンを変更しました。\r\n- Androidのビルド環境を更新しました。\r\n- Androidの縦画面に対応しました。\r\n- m3u/m3u8ファイルの対応を拡充し、メニューなどからも開けるようにしました。\r\n- Linuxはflatpakでの配布を追加しました。\r\n- *🎖️[RetroAchievements](https://retroachievements.org)　に対応しました。*\r\n\r\n<br />　\r\n\r\n## 既知の問題\r\n- 特にありません。",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "xm8"
+      ],
+      "contentHash": "3a148eee9c7019ece3497f5c546b9d80590b985cb5f14de242eeca53570eddeb"
+    },
+    {
+      "id": "android-release-aps3e-2-41",
+      "title": "【Android更新】aPS3e 2.41",
+      "originalTitle": "aPS3e 2.41 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-07-30T11:03:42Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/aenu1/aps3e/releases/tag/2.41",
+      "imageUrl": "asset://assets/emulators/aps3e.png",
+      "officialUrl": "https://github.com/aenu1/aps3e",
+      "summary": "aPS3e 发布 Android 新版本 2.41，发布日期为2026年07月30日。点击查看官方版本信息与更新说明。",
+      "content": "aPS3e 已发布 Android 最新版本 2.41。\n\n发布日期：2026年07月30日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。",
+      "originalContent": "aPS3e 2.41 Android release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "aps3e"
+      ],
+      "contentHash": "63994fa5497897428b0ca8c7c6c0dc6419ed4f08ec7910f88d4f77dc10fd425d"
+    },
+    {
+      "id": "android-release-bkemu-bkemu-1-2-2",
+      "title": "【Android更新】BkEmu bkemu-1.2.2",
+      "originalTitle": "BkEmu bkemu-1.2.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-07-22T15:52:44Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/3cky/bkemu-android/releases/tag/bkemu-1.2.2",
+      "imageUrl": "asset://assets/emulators/bkemu.png",
+      "officialUrl": "https://github.com/3cky/bkemu-android",
+      "summary": "BkEmu 发布 Android 新版本 bkemu-1.2.2，发布日期为2026年07月22日。点击查看官方版本信息与更新说明。",
+      "content": "BkEmu 已发布 Android 最新版本 bkemu-1.2.2。\n\n发布日期：2026年07月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n* Улучшена эмуляция контроллера IDE.\n\n**Полный список изменений**: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.1...bkemu-1.2.2\n\n---\n* Improved IDE controller emulation.\n\n**Full Changelog**: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.1...bkemu-1.2.2",
+      "originalContent": "* Улучшена эмуляция контроллера IDE.\n\n**Полный список изменений**: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.1...bkemu-1.2.2\n\n---\n* Improved IDE controller emulation.\n\n**Full Changelog**: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.1...bkemu-1.2.2",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "bkemu"
+      ],
+      "contentHash": "6deeb8edf18a7bbb80f55b5d30d5d3531abc8e7e05f48487a63c372bce7805a7"
+    },
+    {
+      "id": "android-release-ruffle_android-0-260720",
+      "title": "【Android更新】Ruffle (Android) 0.260720",
+      "originalTitle": "Ruffle (Android) 0.260720 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-07-20T13:18:59Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.260720",
+      "imageUrl": "asset://assets/emulators/ruffle_android.png",
+      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
+      "summary": "Ruffle (Android) 发布 Android 新版本 0.260720，发布日期为2026年07月20日。点击查看官方版本信息与更新说明。",
+      "content": "Ruffle (Android) 已发布 Android 最新版本 0.260720。\n\n发布日期：2026年07月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n## What's Changed\n* Bump rust-toolchain from 1.97.0 to 1.97.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/802\n* Bump the rust-minor group across 1 directory with 41 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/803\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/801\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/804\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260717...0.260720",
+      "originalContent": "## What's Changed\n* Bump rust-toolchain from 1.97.0 to 1.97.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/802\n* Bump the rust-minor group across 1 directory with 41 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/803\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/801\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/804\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260717...0.260720",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "ruffle_android"
+      ],
+      "contentHash": "fec1e6bb5da70e9a7f8bc917b395f038d9c74fa68e5e169aa7e15cb42b97fa32"
+    },
+    {
+      "id": "android-release-azahar_plus-AZAHAR-PLUS-2126-0-A",
+      "title": "【Android更新】AzaharPlus AZAHAR_PLUS_2126_0_A",
+      "originalTitle": "AzaharPlus AZAHAR_PLUS_2126_0_A Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-07-19T07:12:39Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/AzaharPlus/AzaharPlus/releases/tag/AZAHAR_PLUS_2126_0_A",
+      "imageUrl": "asset://assets/emulators/azahar_plus.png",
+      "officialUrl": "https://github.com/AzaharPlus/AzaharPlus",
+      "summary": "AzaharPlus 发布 Android 新版本 AZAHAR_PLUS_2126_0_A，发布日期为2026年07月19日。点击查看官方版本信息与更新说明。",
+      "content": "AzaharPlus 已发布 Android 最新版本 AZAHAR_PLUS_2126_0_A。\n\n发布日期：2026年07月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\nAzaharPlus 2126.0-A is the same as Azahar 2126.0 RC3 except for this:\r\n\r\n- Compatibility with all game files. If a file works with any Citra fork, it works with AzaharPlus.\r\n- Ability to download system files from official servers. No need for an actual 3DS.\r\n- Compatibility with older CPUs (no SSE4.2 required)\r\n- Compatibility with Android 9\r\n- ZipPass: A new way to exchange StreetPass data through zip files\r\n- Built in cheats\r\n- Amiibo generation\r\n- Better multiplayer compatibility with other Citra forks\r\n\r\nThe Android build is available in 2 flavors.\r\n\r\nOne that has the same application id as Azahar, so it will replace it on the device.\r\nIts display name is \"AzaharPlus\" and its icon background is blue.\r\nUse this one if you have other apps that target Azahar, like a frontend for example.\r\n\r\nThe other has a new application id so it can coexist with Azahar without issues.\r\nIts display name is \"+AzaharPlus+\" and its icon background is red.",
+      "originalContent": "AzaharPlus 2126.0-A is the same as Azahar 2126.0 RC3 except for this:\r\n\r\n- Compatibility with all game files. If a file works with any Citra fork, it works with AzaharPlus.\r\n- Ability to download system files from official servers. No need for an actual 3DS.\r\n- Compatibility with older CPUs (no SSE4.2 required)\r\n- Compatibility with Android 9\r\n- ZipPass: A new way to exchange StreetPass data through zip files\r\n- Built in cheats\r\n- Amiibo generation\r\n- Better multiplayer compatibility with other Citra forks\r\n\r\nThe Android build is available in 2 flavors.\r\n\r\nOne that has the same application id as Azahar, so it will replace it on the device.\r\nIts display name is \"AzaharPlus\" and its icon background is blue.\r\nUse this one if you have other apps that target Azahar, like a frontend for example.\r\n\r\nThe other has a new application id so it can coexist with Azahar without issues.\r\nIts display name is \"+AzaharPlus+\" and its icon background is red.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar_plus"
+      ],
+      "contentHash": "a4a13843502bdabf060989f6eaa5cfd636a88dc89ad22e9a1511b4b1f289d1f6"
+    },
+    {
+      "id": "android-release-winnative-0-3-1-beta",
+      "title": "【Android更新】WinNative 0.3.1-beta",
+      "originalTitle": "WinNative 0.3.1-beta Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-07-14T16:02:48Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/WinNative-Emu/WinNative/releases/tag/v0.3.1-beta",
+      "imageUrl": "asset://assets/emulators/winnative.png",
+      "officialUrl": "https://github.com/WinNative-Emu/WinNative",
+      "summary": "WinNative 发布 Android 新版本 0.3.1-beta，发布日期为2026年07月14日。点击查看官方版本信息与更新说明。",
+      "content": "WinNative 已发布 Android 最新版本 0.3.1-beta。\n\n发布日期：2026年07月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（原文）：\n\n### (Hotfix):\r\n\r\n**Bug Fixes**\r\n\r\n* Container Installation: Resolved issues that prevented container install components from working correctly which was for Gecko/Components Installer.\r\n* Mouse Input: Fixed a tracking bug tied to 60Hz refresh rates.\r\n* Steam Glitches: Fixed an issue causing Steam download errors and resolved glitches within the Steam Library interface.\r\n* Save Imports: Fixed a bug where importing save files via `.zip` archives would fail.\r\n* Background Visuals: Resolved an issue where the background blur effect was not rendering properly.\r\n* UI Resizing: Fixed dynamic resizing behaviors for the Xserver menu and the Container UI.\r\n* Setup Wizard: Corrected display sizing issues encountered during the initial setup wizard.\r\n* Performance Logging: Stopped the system from writing a CSV log file on every single boot; this is now correctly gated and only runs when performance logging is enabled.\r\n* CPU Issue was due to Blur image was re-rendered for every frame up to 120 FPS while sitting idle in Library.\r\n\r\n**System Tweaks & Adjustments**\r\n\r\n* Engine & Wrapper Updates: Pushed automatic updates for Mono and Gecko, updated the GameNative wrapper, and bumped the Ajay Prefix to the 1.8 hotfix.\r\n* Hardware Accuracy: Improved CPU accuracy and reporting metrics.\r\n* Steam Sync & Chat: Adjusted Steam Cloud Save syncing and added an optional toggle for Steam Chat.\r\n* Library Stability: Hardened the library components list and added a manual refresh button for better reliability.\r\n* Environment Variables: Added **Shader Model 6.9** and **Wine Fast Yield** as easily selectable options in the variables list.\r\n* Application Logs: Enabled support for multiple application log saves.\r\n* Locales & Language: Expanded localization with new locales and added support for store game language selection, 8 more Locales!. ( Shout-out to @TWCM for PR 580! )\r\n\r\n### Contributors\r\n\r\n * @Xnick417x \r\n * @maxjivi05 \r\n * @TWCM \r\n\r\n### New Contributors\r\n * @TWCM \r\n\r\n**Full Changelog**: https://github.com/WinNative-Emu/WinNative/compare/v0.3.0-beta...v0.3.1-beta",
+      "originalContent": "### (Hotfix):\r\n\r\n**Bug Fixes**\r\n\r\n* Container Installation: Resolved issues that prevented container install components from working correctly which was for Gecko/Components Installer.\r\n* Mouse Input: Fixed a tracking bug tied to 60Hz refresh rates.\r\n* Steam Glitches: Fixed an issue causing Steam download errors and resolved glitches within the Steam Library interface.\r\n* Save Imports: Fixed a bug where importing save files via `.zip` archives would fail.\r\n* Background Visuals: Resolved an issue where the background blur effect was not rendering properly.\r\n* UI Resizing: Fixed dynamic resizing behaviors for the Xserver menu and the Container UI.\r\n* Setup Wizard: Corrected display sizing issues encountered during the initial setup wizard.\r\n* Performance Logging: Stopped the system from writing a CSV log file on every single boot; this is now correctly gated and only runs when performance logging is enabled.\r\n* CPU Issue was due to Blur image was re-rendered for every frame up to 120 FPS while sitting idle in Library.\r\n\r\n**System Tweaks & Adjustments**\r\n\r\n* Engine & Wrapper Updates: Pushed automatic updates for Mono and Gecko, updated the GameNative wrapper, and bumped the Ajay Prefix to the 1.8 hotfix.\r\n* Hardware Accuracy: Improved CPU accuracy and reporting metrics.\r\n* Steam Sync & Chat: Adjusted Steam Cloud Save syncing and added an optional toggle for Steam Chat.\r\n* Library Stability: Hardened the library components list and added a manual refresh button for better reliability.\r\n* Environment Variables: Added **Shader Model 6.9** and **Wine Fast Yield** as easily selectable options in the variables list.\r\n* Application Logs: Enabled support for multiple application log saves.\r\n* Locales & Language: Expanded localization with new locales and added support for store game language selection, 8 more Locales!. ( Shout-out to @TWCM for PR 580! )\r\n\r\n### Contributors\r\n\r\n * @Xnick417x \r\n * @maxjivi05 \r\n * @TWCM \r\n\r\n### New Contributors\r\n * @TWCM \r\n\r\n**Full Changelog**: https://github.com/WinNative-Emu/WinNative/compare/v0.3.0-beta...v0.3.1-beta",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "winnative"
+      ],
+      "contentHash": "80aacc7438858f559a87253f8f4a1f91f732ad331648cd5310a75235f2b04f81"
     }
   ]
 }

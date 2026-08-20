@@ -33,6 +33,29 @@ class NewsNetworkImage extends StatelessWidget {
       ),
     );
     if (url.isEmpty) return fallback;
+    const assetPrefix = 'asset://';
+    if (url.startsWith(assetPrefix)) {
+      final assetPath = url.substring(assetPrefix.length);
+      final decodedWidth = width == null
+          ? 720
+          : (width! * 3).round().clamp(96, 720).toInt();
+      return Container(
+        width: width,
+        height: height,
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+        alignment: Alignment.center,
+        child: Image.asset(
+          assetPath,
+          width: width,
+          height: height,
+          fit: BoxFit.contain,
+          cacheWidth: decodedWidth,
+          gaplessPlayback: true,
+          filterQuality: FilterQuality.medium,
+          errorBuilder: (_, __, ___) => fallback,
+        ),
+      );
+    }
     return Image.network(
       url,
       width: width,

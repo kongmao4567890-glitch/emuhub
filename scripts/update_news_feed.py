@@ -32,6 +32,8 @@ DATA_PATH = ROOT / "data" / "news.json"
 FEED_URL = "https://www.emu-france.com/flux/rss/"
 SOURCE_URL = "https://www.emu-france.com/"
 RETENTION_DAYS = 90
+ANDROID_NEWS_LIMIT = 30
+ANDROID_NEWS_PREFIX = "android-release-"
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
 )
@@ -184,6 +186,156 @@ def load_emulator_names() -> list[tuple[str, str]]:
             if len(token) >= 4:
                 values.append((str(emulator.get("id", "")), token))
     return values
+
+
+def load_android_emulators() -> dict[str, dict[str, str]]:
+    """Return unique Android emulator metadata used for generated news."""
+    config = json.loads((ROOT / "assets" / "emulators.json").read_text(encoding="utf-8"))
+    values: dict[str, dict[str, str]] = {}
+    excluded_consoles = {"gpu_drivers", "emulation_tools"}
+    for console in config.get("consoles", []):
+        console_id = str(console.get("id", ""))
+        if console_id in excluded_consoles:
+            continue
+        for emulator in console.get("emulators", []):
+            emulator_id = str(emulator.get("id", ""))
+            platforms = [str(value) for value in emulator.get("platforms", [])]
+            if (
+                not emulator_id
+                or emulator_id.endswith("_pc")
+                or "android" not in platforms
+            ):
+                continue
+            values.setdefault(
+                emulator_id,
+                {
+                    "id": emulator_id,
+                    "name": str(emulator.get("name", emulator_id)),
+                    "iconPath": str(emulator.get("iconPath", "")),
+                    "officialUrl": str(
+                        emulator.get("sourceUrl") or emulator.get("website") or ""
+                    ),
+                },
+            )
+    return values
+
+
+def parse_iso_datetime(value: Any) -> datetime | None:
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
+def build_android_release_articles(
+    existing_articles: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Turn recent catalog releases into Android news without API requests."""
+    catalog_path = ROOT / "data" / "version_catalog.json"
+    if not catalog_path.exists():
+        catalog_path = ROOT / "assets" / "version_catalog.json"
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    entries = catalog.get("entries", {})
+    emulators = load_android_emulators()
+    cutoff = datetime.now(timezone.utc) - timedelta(days=RETENTION_DAYS)
+
+    # An Emu-France Android article published within three days of the tracked
+    # release already covers the same event and should win over generated news.
+    covered: dict[str, list[datetime]] = {}
+    for article in existing_articles:
+        if str(article.get("id", "")).startswith(ANDROID_NEWS_PREFIX):
+            continue
+        if "android" not in article.get("platforms", []):
+            continue
+        published = parse_iso_datetime(article.get("publishedAt"))
+        if published is None:
+            continue
+        for emulator_id in article.get("relatedEmulatorIds", []):
+            covered.setdefault(str(emulator_id), []).append(published)
+
+    candidates: list[tuple[datetime, dict[str, Any]]] = []
+    by_release: dict[tuple[str, str, str], dict[str, Any]] = {}
+    for emulator_id, emulator in emulators.items():
+        entry = entries.get(emulator_id)
+        if not isinstance(entry, dict):
+            continue
+        version = str(entry.get("version", "")).strip()
+        version_key = version.casefold()
+        published = parse_iso_datetime(entry.get("releaseDate"))
+        source_url = str(entry.get("sourceUrl", "")).strip()
+        if (
+            not version
+            or any(
+                marker in version_key
+                for marker in ("linux", "windows", "macos", "appimage")
+            )
+            or published is None
+            or published < cutoff
+            or not source_url
+        ):
+            continue
+        if any(
+            abs((published - source_date).total_seconds()) <= 3 * 24 * 60 * 60
+            for source_date in covered.get(emulator_id, [])
+        ):
+            continue
+
+        name = emulator["name"]
+        release_notes = str(entry.get("releaseNotes", "")).strip()
+        trimmed_notes = release_notes[:5000]
+        published_label = published.strftime("%Y年%m月%d日")
+        intro = (
+            f"{name} 已发布 Android 最新版本 {version}。\n\n"
+            f"发布日期：{published_label}\n"
+            "适用平台：Android\n\n"
+            "可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求"
+            "请以项目官方说明为准。"
+        )
+        content = intro
+        if trimmed_notes:
+            content += f"\n\n官方更新说明（原文）：\n\n{trimmed_notes}"
+        original = release_notes or f"{name} {version} Android release."
+        digest = hashlib.sha256(
+            f"{emulator_id}\n{version}\n{published.isoformat()}".encode("utf-8")
+        ).hexdigest()
+        safe_version = re.sub(r"[^a-zA-Z0-9]+", "-", version).strip("-")[:40]
+        article = {
+            "id": f"{ANDROID_NEWS_PREFIX}{emulator_id}-{safe_version or digest[:10]}",
+            "title": f"【Android更新】{name} {version}",
+            "originalTitle": f"{name} {version} Android release",
+            "category": "android_update",
+            "categoryLabel": "Android更新",
+            "kind": "emulator",
+            "publishedAt": published.isoformat().replace("+00:00", "Z"),
+            "sourceName": "EmuHub 版本追踪",
+            "sourceUrl": source_url,
+            "imageUrl": (
+                f"asset://{emulator['iconPath']}" if emulator["iconPath"] else ""
+            ),
+            "officialUrl": emulator["officialUrl"],
+            "summary": (
+                f"{name} 发布 Android 新版本 {version}，发布日期为"
+                f"{published_label}。点击查看官方版本信息与更新说明。"
+            ),
+            "content": content,
+            "originalContent": original,
+            "platforms": ["android"],
+            "relatedEmulatorIds": [emulator_id],
+            "contentHash": digest,
+        }
+        release_key = (source_url, version, published.isoformat())
+        duplicate = by_release.get(release_key)
+        if duplicate is not None:
+            duplicate["relatedEmulatorIds"].append(emulator_id)
+            continue
+        by_release[release_key] = article
+        candidates.append((published, article))
+
+    candidates.sort(key=lambda item: item[0], reverse=True)
+    return [item[1] for item in candidates[:ANDROID_NEWS_LIMIT]]
 
 
 def related_ids(title: str, emulator_names: list[tuple[str, str]]) -> list[str]:
@@ -384,12 +536,17 @@ def main() -> int:
         default=0,
         help="process only the first N RSS items (for local smoke tests)",
     )
+    parser.add_argument(
+        "--catalog-only",
+        action="store_true",
+        help="keep existing RSS articles and only refresh generated Android news",
+    )
     args = parser.parse_args()
 
     existing_payload = load_existing_payload()
     previous = load_previous()
     emulator_names = load_emulator_names()
-    incoming = parse_feed()
+    incoming = [] if args.catalog_only else parse_feed()
     if args.limit > 0:
         incoming = incoming[: args.limit]
 
@@ -406,6 +563,17 @@ def main() -> int:
                 print(f"warning: retained old translation for {raw['id']}: {error}", file=sys.stderr)
             else:
                 print(f"warning: skipped {raw['id']}: {error}", file=sys.stderr)
+
+    # Generated entries are rebuilt from the latest catalog on every run, so
+    # superseded versions disappear instead of accumulating for 90 days.
+    merged = {
+        key: value
+        for key, value in merged.items()
+        if not str(key).startswith(ANDROID_NEWS_PREFIX)
+    }
+    generated_android = build_android_release_articles(list(merged.values()))
+    for article in generated_android:
+        merged[str(article["id"])] = article
 
     cutoff = datetime.now(timezone.utc) - timedelta(days=RETENTION_DAYS)
     articles = []
@@ -439,7 +607,10 @@ def main() -> int:
     if existing_comparable == candidate_comparable and existing_payload.get("generatedAt"):
         payload["generatedAt"] = existing_payload["generatedAt"]
     write_payload(payload)
-    print(f"wrote {len(articles)} articles ({updated} refreshed)")
+    print(
+        f"wrote {len(articles)} articles "
+        f"({updated} RSS refreshed, {len(generated_android)} Android releases)"
+    )
     return 0
 
 

@@ -24,7 +24,21 @@ void main() {
       expect(article.title, startsWith('【'), reason: article.id);
       expect(article.content, isNotEmpty, reason: article.id);
       expect(article.originalContent, isNotEmpty, reason: article.id);
-      expect(article.sourceUrl, startsWith('https://www.emu-france.com/news/'));
+      if (article.id.startsWith('android-release-')) {
+        expect(article.isAndroid, isTrue, reason: article.id);
+        expect(article.category, 'android_update', reason: article.id);
+        expect(article.relatedEmulatorIds, isNotEmpty, reason: article.id);
+      } else {
+        expect(
+          article.sourceUrl,
+          startsWith('https://www.emu-france.com/news/'),
+          reason: article.id,
+        );
+      }
     }
+    expect(
+      feed.articles.where((article) => article.isAndroid).length,
+      greaterThanOrEqualTo(10),
+    );
   });
 }

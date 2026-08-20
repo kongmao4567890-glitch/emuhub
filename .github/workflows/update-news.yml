@@ -40,10 +40,20 @@ jobs:
           articles = payload['articles']
           assert len(articles) >= 5
           assert len({item['id'] for item in articles}) == len(articles)
+          android_releases = [
+              item for item in articles
+              if item['id'].startswith('android-release-')
+          ]
+          assert len(android_releases) >= 10
           for item in articles:
               assert item['title'] and item['content'] and item['publishedAt']
-              assert item['sourceUrl'].startswith('https://www.emu-france.com/news/')
               assert item['title'].startswith('【')
+              if item['id'].startswith('android-release-'):
+                  assert item['category'] == 'android_update'
+                  assert item['platforms'] == ['android']
+                  assert item['relatedEmulatorIds']
+              else:
+                  assert item['sourceUrl'].startswith('https://www.emu-france.com/news/')
           PY
 
       - name: Commit updated feed
