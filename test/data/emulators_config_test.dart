@@ -357,6 +357,54 @@ void main() {
     final winNativeIcon = await rootBundle.load(winNative.iconPath);
     expect(winNativeIcon.lengthInBytes, greaterThan(0));
 
+    final netherSx2Lsfg = config.consoles
+        .singleWhere((console) => console.id == 'ps2')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'nethersx2_lsfg');
+    expect(netherSx2Lsfg.openSource, isFalse);
+    expect(netherSx2Lsfg.sourceType, 'github');
+    expect(
+      netherSx2Lsfg.sourceUrl,
+      'https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix',
+    );
+    expect(netherSx2Lsfg.core, 'AetherSX2 4248 / LSFG');
+    expect(netherSx2Lsfg.compatibility, 'medium');
+    expect(netherSx2Lsfg.minAndroid, '8.0');
+    expect(netherSx2Lsfg.platforms, ['android']);
+    final netherSx2LsfgIcon = await rootBundle.load(netherSx2Lsfg.iconPath);
+    expect(netherSx2LsfgIcon.lengthInBytes, greaterThan(0));
+
+    final winlator = config.consoles
+        .singleWhere((console) => console.id == 'dos')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'winlator');
+    expect(winlator.openSource, isTrue);
+    expect(winlator.sourceType, 'github');
+    expect(winlator.sourceUrl, 'https://github.com/brunodev85/winlator');
+    expect(winlator.core, 'Wine / Box86 / Box64');
+    expect(winlator.compatibility, 'high');
+    expect(winlator.minAndroid, '8.0');
+    expect(winlator.platforms, ['android']);
+    final winlatorIcon = await rootBundle.load(winlator.iconPath);
+    expect(winlatorIcon.lengthInBytes, greaterThan(0));
+
+    final joiPlay = config.consoles
+        .singleWhere((console) => console.id == 'rpgmaker')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'joiplay');
+    expect(joiPlay.openSource, isFalse);
+    expect(joiPlay.sourceType, 'website');
+    expect(
+      joiPlay.sourceUrl,
+      'https://joiplay.net/assets/json/downloads.json',
+    );
+    expect(joiPlay.website, 'https://joiplay.net/');
+    expect(joiPlay.core, 'RPG Maker / Ren\'Py / Ruffle / Godot');
+    expect(joiPlay.minAndroid, '5.0');
+    expect(joiPlay.platforms, ['android']);
+    final joiPlayIcon = await rootBundle.load(joiPlay.iconPath);
+    expect(joiPlayIcon.lengthInBytes, greaterThan(0));
+
     expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
     expect(
       emulatorIds,
@@ -400,6 +448,9 @@ void main() {
         'whitebelyash_turnip',
         'swiff',
         'winnative',
+        'nethersx2_lsfg',
+        'winlator',
+        'joiplay',
       }),
     );
 
