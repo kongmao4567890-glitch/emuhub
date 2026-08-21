@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T19:07:42.084267Z",
+  "generatedAt": "2026-08-21T20:52:33.321434Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,49 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "136140",
+      "title": "【家用机】Mupen64 RR Lua v1.4.0-8",
+      "originalTitle": "[Consoles de salon] Mupen64 RR Lua v1.4.0-8",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-21T20:42:04Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136140-consoles-de-salon-mupen64-rr-lua-v1-4-0-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/mupen64-lua.png",
+      "officialUrl": "",
+      "summary": "Mupen64 RR Lua（或 Mupen64 Re-recording Lua）是 Mupen64 永久注册视频的分支（le 3eme）。 变化如下： 🐞 错误修复 - 核心：使用空行编译作弊时崩溃（#853） - 插件初始化期间的竞争条件 (#850) - 插件版本不符合规范定义的范围 (#847) - 核心：超快进地参与意外情况（#841） - 在捕获期间寻找重整输出（#839） - FFmpegEncode：输出路径中的空格导…",
+      "content": "Mupen64 RR Lua（或 Mupen64 Re-recording Lua）是 Mupen64 永久注册视频的分支（le 3eme）。\n\n变化如下：\n\n🐞 错误修复\n- 核心：使用空行编译作弊时崩溃（#853）\n- 插件初始化期间的竞争条件 (#850)\n- 插件版本不符合规范定义的范围 (#847)\n- 核心：超快进地参与意外情况（#841）\n- 在捕获期间寻找重整输出（#839）\n- FFmpegEncode：输出路径中的空格导致捕获失败（#946）\n\n本站原创。叉子 1. 叉子 2. 叉子 3.",
+      "originalContent": "Mupen64 RR Lua (ou Mupen64 Re-recording Lua) est un fork (le 3eme) de Mupen64 permettant l'enregistrement de vidéo.\n\nLes changements sont:\n\n🐞 Bugfixes\n- Core: Crash when compiling cheats with empty lines (#853)\n- Race condition during plugin initialization (#850)\n- Plugin version not fitting in spec-defined bounds (#847)\n- Core: Ultra fast-forward engaging in unintended cases (#841)\n- Seek during capture mangling output (#839)\n- FFmpegEncode: Space in output path causing capture failure (#946)\n\nSite original. Fork 1. Fork 2. Fork 3.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "469877fdc46b8adaa8b96eab6f53c56b7a32b6379751612cf046a16e47db89c0"
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-21T19:24:53Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月21日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• GBA：解决 FC Mini 重新出现的帧卡顿问题 (taoenwen)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• GBA: Resolve reintroduced frame stuttering issues for FC Mini (taoenwen)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "39083262ebbd5ef9f191bda2227d08e454b64a9d72c2ad53006106685ee0b73d"
+    },
     {
       "id": "android-release-psx2_izzy-1-2-9",
       "title": "【Android更新】PSX2 1.2.9",
@@ -200,30 +243,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "3e8e2e05366ee8f75bb3908355c39c90ba9ad7f6bf1c3ba9e320defa2723d76e"
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-21T08:58:54Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月21日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• d_nes.cpp、d_megadrive.cpp、d_snes.cpp：各种... (fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_nes.cpp, d_megadrive.cpp, d_snes.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "d85f00fd9a6275249731462a96c02421ef97b35438050eb859fe3fc302661ee0"
     },
     {
       "id": "136121",
