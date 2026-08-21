@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T16:53:59Z",
+  "generatedAt": "2026-08-21T18:59:14Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -896,10 +896,10 @@
     },
     "padforge": {
       "version": "latest-v4-dev",
-      "releaseDate": "2026-08-21T02:38:27Z",
+      "releaseDate": "2026-08-21T17:40:30Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32440179862",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32440179862"
+      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32508811406",
+      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32508811406"
     },
     "panda3ds": {
       "version": "0.9",
@@ -926,11 +926,11 @@
       "devReleaseNotes": "Attempted head seek improvements for Zen Nihon Joshi Pro Wres - Queen of Queens."
     },
     "pcsx2_pc": {
-      "version": "2.7.523",
-      "releaseDate": "2026-08-19T12:17:38Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.7.523",
-      "releaseNotes": "- [SPU2: Pass IOP cycle count at 64bit](https://github.com/PCSX2/pcsx2/pull/14866)",
-      "devReleaseNotes": "- [SPU2: Pass IOP cycle count at 64bit](https://github.com/PCSX2/pcsx2/pull/14866)"
+      "version": "2.7.524",
+      "releaseDate": "2026-08-21T18:11:04Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.7.524",
+      "releaseNotes": "- [translations: Syncing Crowdin translations](https://github.com/PCSX2/pcsx2/pull/14864)",
+      "devReleaseNotes": "- [translations: Syncing Crowdin translations](https://github.com/PCSX2/pcsx2/pull/14864)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.22",
@@ -964,11 +964,11 @@
       "releaseNotes": "PPSSPP is a cross-platform PSP emulator. Visit PPSSPP [official website](https://ppsspp.org) for a [full changelog](https://ppsspp.org/index.html#news) as well as the [downloads section](https://ppsspp.org/downloads.html) for other platforms."
     },
     "psx2_izzy": {
-      "version": "1.2.8",
-      "releaseDate": "2026-08-15T19:26:25Z",
-      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.2.8",
-      "releaseNotes": "**Updated to the latest PCSX2 commit\r\nBetter Performance.**",
-      "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/download/1.2.8/PSX2_30_202608151524-release.apk"
+      "version": "1.2.9",
+      "releaseDate": "2026-08-21T18:15:35Z",
+      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.2.9",
+      "releaseNotes": "**Fixed lots of crashes. \r\nController mapping in settings. \r\nRetroAchievements fixed. \r\nFixed texture packs. \r\nFix crop on the edges.**",
+      "downloadUrl": "https://github.com/izzy2lost/PSX2/releases/download/1.2.9/PSX2_31_202608211411-release.apk"
     },
     "purple_turnip": {
       "version": "turnip_mrpurple_T30-toasted.adpkg",
@@ -1121,11 +1121,11 @@
       "releaseNotes": "# Emulation\r\n\r\n## Voicer-kun\r\n   - Play Voicer-kun enabled games by attaching the included audio CDs with the game (can be in cue/bin files format,  or .zip containing cue/bin); \r\n   - Voicer-kun IR peripheral is fully emulated so the games drive the CD themselves.\r\n   - Menu placed under Sound => \"Voicer-kun\"\r\n   - Only one disc can be attached in the drive at a time (EMIT requires to change CDs during the game).\r\n   - Port 2 is forced to a joypad as attached device so that the voicer-kun device is detected.\r\n   - IR burst looped so the learn wizard registers keys automatically, port 2 reports only the device id, not player buttons.\r\n   - IR burst will work when selecting the game's automatic mode (not manual)\r\n   - Supported voicer-kun games:\r\n     - EMIT Vol. 1 (CD1, CD2)\r\n     - EMIT Vol. 2 (CD1, CD2)\r\n     - EMIT Vol. 3 (CD1, CD2)\r\n     - Angelique (CD1)\r\n\r\n## GB / GBC / SuperGameBoy\r\n   - Optional `no-sprite-limit` for the BIOS-less GB/GBC core added to `Hacks...` window. This fixes the sprite limitation of the actual hardware.\r\n   - `Allow Invalid VRAM Access` override for games that need it, surfaced in Win32/GTK/Qt with proper enable/gray-out handling.\r\n   - GB/SGB BIOS-mode audio repaired on GTK/Qt.\r\n   - libretro: SGB BIOS-mode SPC starvation no longer causes 60 Hz audio crackle.\r\n   - Emulator holds 60 fps in GB/SGB even when sound is muted.\r\n   - Sound => Mute now toggles the real mute instead of reducing volume to 0%.\r\n   - Video timing is set on the BIOS-less GB load path.\r\n   - Staged boot ROM is dropped when switching bios.\r\n\r\n# Audio\r\n## Audio Fidelity / Resampling (SRC)\r\nAudio Resampling (Sample Rate Conversion) translates the native hardware sound frequency to your host system's target output rate (e.g., 48 kHz). Higher-quality algorithms (like Windowed-Sinc) eliminate high-frequency aliasing and harsh distortion rather than simple pitch shifting, which is particularly evident when scaling up lower native sample rates.\r\n\r\nAnything below 32040 Hz (8000, 11025, 16000, 22050). The old Hermite kernel had no anti-alias filter at all when downsampling, so everything above the output Nyquist folded straight into the audible band. The sinc kernel scales its cutoff and tap count with the ratio (hitting the RESAMPLER_MAX_HALF ceiling of 160 taps at 8 kHz output), so this is where the difference is night-and-day.\r\n\r\n- Added selectable Audio Fidelity (Resampler) in Sound Settings:\r\n  - Herminte (Legacy)\r\n  - Windowed-Sinc\r\n - Added 32040 Hz \"native\" playback rate (works with WavOut audio driver).\r\n - Playback rates list is now filtered per audio driver and mode (snes/gb/gbc/sgb).\r\n\r\n## Sound settings\r\n - Added Pre-amp (gain) sliders.\r\n - Live feedback as you change the sliders.\r\n - Changed Sound Settings dialog to modeless (doesn't pause emulation).\r\n - Fixed WaveOut pacing bug whiced caused the emulator to stutter and lag. (Upstream [PR](https://github.com/snes9xgit/snes9x/pull/1078))\r\n\r\n# Linux:\r\n## General\r\n - Linux tooling/re-packaging & rebranding support.\r\n - Qt/Gtk AppImage packaging with an Ubuntu 20.04 shipping baseline\r\n - Android NDK build script for the libretro core\r\n\r\n## Qt/GTK\r\n- Added \"Voicer-kun\" support (matches win32.)\r\n- Added Pre-amp (gain) sliders.\r\n- Qt 6.2 compatibility restored for the 22.0g missing QAction includes.\r\n- Docker AppImage build made clean and PCH-f.\r\n- RetroAchievements upgrades  (matches win32.)\r\n\r\n# Win32\r\n- Added new file type icons registration via `Hacks...` dialog window.\r\n- Added Per-console icons for SNES, Game Boy, Satellaview and Sufami Turbo ROMs.\r\n- File type extension association support.\r\n- Hacks warning now moved into the actual dialog itself (no more irritating dialog window.)\r\n- Duplicate controller names are now numbered in the device list to avoid confusion.\r\n\r\n# OSX\r\n- Added macos tooling for building universal self-signed Qt app and libretro core.\r\n\r\n# Localization\r\n- Dialogs that overwrite their text in WM_INITDIALOG now localize correctly.\r\n- Japanese trans…"
     },
     "swiff": {
-      "version": "1.3.0",
-      "releaseDate": "2026-08-09T17:49:17Z",
-      "sourceUrl": "https://github.com/NaviVani-dev/Swiff/releases/tag/v1.3.0",
-      "releaseNotes": "# Version 1.3.0\r\n\r\nAfter a LOT of work, version 1.3.0 is here! This is a huge update for Swiff, made possible thanks to all of your support.\r\n\r\n## Original Flash Player added!\r\n\r\nThanks to new technologies like FEX and projects like [Winlator Ludashi](https://github.com/StevenMXZ/Winlator-Ludashi), Swiff can now run the original Adobe Flash Player to play your favourite Flash games! The app handles the hard part for you, all you need to do is click download and play. If for some reason a game doesn't work with the Flash Player app, you can still use the Flashpoint Navigator and the Flash Player web plugin, just like the old days!\r\n\r\n> [!WARNING]\r\n> This is a heavy download since this feature requires technologies like Wine and Linux dependencies. It's only recommended if you have an extra 3-4GB to spare, if some of your games don't work properly with Ruffle/AwayFL, or if you want the best possible compatibility.\r\n\r\n## J2ME games\r\n\r\nEven though Swiff was originally made exclusively for Flash games, during development I noticed there were no good alternatives for other platforms, and the few apps that do exist don't offer half the features Swiff provides. So why not add more optional platforms?\r\n\r\nUsing [J2ME-Loader](https://github.com/nikita36078/j2me-loader) and the [Kahvibreak](https://bluemaxima.org/kahvibreak/) database, you can now enjoy J2ME games inside Swiff without any issues, dead simple.\r\n\r\n## Scratch games\r\n\r\nNow, if you add a valid Scratch URL to the \"Import URL\" popup in your Library, Swiff will download it and let you play it easily. All the usual features like on-screen controls and frontend exports are included, just search the Scratch website for your favourite games and play.\r\n\r\n## Web shortcuts\r\n\r\nIn case you can only find some games on websites like Poki or Y8 Games, you can import the URL into Swiff to create **Web Shortcuts**! This opens the page inside Swiff while still letting you keep features like gamepad support or the virtual mouse, and if you use the Flashpoint Navigator, you can even load old pages with the original Flash Player plugin!\r\n\r\n## Playlists\r\n\r\nLike organizing things? You can now create playlists inside Swiff to organize your games easily. It even includes a \"Liked games\" playlist, just hit the heart button on a game's details page to add it, and you're done.\r\n\r\n## Features\r\n\r\n- Added a Linux rootfs to Swiff (needed for the Flash Player, Flashpoint Navigator, and Wine emulation)\r\n- Added the original Flash Player as a Flash runtime\r\n- Added the Flashpoint Navigator as a web runtime\r\n- Added an option to choose your preferred runtime for web content\r\n- Added J2ME-Loader as a J2ME runtime\r\n- Added the ability to download individual platforms from the Flashpoint archive instead of forcing all of them\r\n- Added the ability to download the Kahvibreak database for J2ME games\r\n- Merged the Games and Animations tabs into a single Search tab\r\n- Added playlists to organize games inside Swiff\r\n- Added the option to like games\r\n- You can now import Scratch games with a URL\r\n- You can now import Flashpoint URLs to find a game\r\n- You can now create web shortcuts when importing a URL\r\n- You can now edit a game's metadata\r\n- Added the ability to enter \"Select mode\" inside the Library page\r\n  - Select mode lets you select multiple items in your library for easy management\r\n  - You can delete items in bulk while in Select mode\r\n  - You can add items to a playlist in bulk while in Select mode\r\n- Changed the game settings popup to a side panel\r\n- Added an option to delete save files\r\n- Added a page to manage downloads inside the app\r\n  - Go to Settings > Library > Data management to manage any content downloaded by Swiff\r\n  - This page shows you how much storage each item on Swiff is using\r\n  - You can delete dependencies or games directly from this screen\r\n- Added an option to block ads on the WebView\r\n- Added an option to show only the game on screen (useful for web shortcuts, where fullscreen isn't avai…",
-      "downloadUrl": "https://github.com/NaviVani-dev/Swiff/releases/download/v1.3.0/swiff-release-1-3-0.apk"
+      "version": "1.3.2",
+      "releaseDate": "2026-08-21T17:40:08Z",
+      "sourceUrl": "https://github.com/NaviVani-dev/Swiff/releases/tag/v1.3.2",
+      "releaseNotes": "# Version 1.3.2\r\n> [!WARNING]\r\n> For everyone that updated to Version 1.3.1 and now Swiff doesn't boot, this update should fix the issues automatically. App may take a while to boot after installing so give it some time, after that boots should be faster for everyone!\r\n\r\n# What's new\r\n- Upgraded rootfs to version 1.2 (Smaller package size with some fixes)\r\n\r\n## Fixes\r\n- Fixed an issue with database migration not being applied correctly and crashing the app\r\n\r\nI'm so sorry that the last update was a mess, I will make sure to test the app properly on each release from now on.",
+      "downloadUrl": "https://github.com/NaviVani-dev/Swiff/releases/download/v1.3.2/swiff-release-1-3-2.apk"
     },
     "tamadroid": {
       "version": "0.2.1",
@@ -1249,10 +1249,10 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_edge_pc": {
-      "version": "36566cb",
-      "releaseDate": "2026-08-21T15:48:57Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/36566cb",
-      "releaseNotes": "### Changes\n\n- Merge commit 'cdd60494d730502b0476aa9913db7401cbd43d06' into edge (`36566cb`)\n- [XEX] - Add support for dash 1746 (`cdd6049`)\n- [Misc] C++20'ify Part 1 (`5cf409d`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/1c2fc4a...36566cb"
+      "version": "2a45b23",
+      "releaseDate": "2026-08-21T17:56:27Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/2a45b23",
+      "releaseNotes": "### Changes\n\n- Merge remote-tracking branch 'upstream/canary_experimental' into edge (`2a45b23`)\n- Merge commit '7cd47947b07de30b649fb4224418a659890eab73' into edge (`cd4eacc`)\n- Merge commit '59c08cd4' into edge (`2f1ee31`)\n- [Misc] Random optimizations. (`a5a18f5`)\n- [D3D12] Fix constant-alpha blending in the RTV path (`4cc584f`)\n- [GPU] Select promoted tfetch1D layouts at runtime (`7cd4794`)\n- [D3D12] Fix over-invalidation of bulk fetch register writes (`95545f8`)\n- [D3D12] Fall back to point sampling for non-filterable formats (`197929d`)\n- [Vulkan] Add spirv_disable_rounding_mode_rte (`61a8aa3`)\n- [Vulkan] Fix draw_resolution_scaled_texture_offsets cancelling itself out (`3116868`)\n- [GPU] Handle tessellated triangle strip and fan draws (`3eab2b8`)\n- [Vulkan] Select back-face stencil ref/mask when culling only front faces (`77597d6`)\n- [Vulkan] Use dedicated alpha blend factor map for alpha srcb/dest blend (`53061c6`)\n- [Vulkan] Clamp stacked-texture layer index for Inf/NaN coords (`2d5b410`)\n- [GPU] Clamp out-of-bounds vertex fetch words to 0 (`9e9d3cd`)\n- [Vulkan] Skip draws with surface_pitch==0 to match D3D12 (`e6bdb0f`)\n- [Vulkan] Fix FSI 2x-as-4x sample mask reading host sample 2 instead of 3 (`654a8ca`)\n- [Vulkan] Apply float controls to geometry shaders to match VS/PS (`0d38781`)\n- [GPU] Load guest-resolved mips from scaled resolve memory (`f25003c`)\n- [Vulkan] Bind shared memory persistently for texture loads and resolves (`7101021`)\n- [Vulkan] Fix 2x MSAA alpha-to-coverage sample layout (`cb24056`)\n- [Vulkan] Clamp scalar maxas/maxasf address register to [0, 255] (`4aeb518`)\n- [GPU] Emulate extended-range float16 in render target pack/unpack (`3ff230d`)\n- [Vulkan] Invalidate user clip plane constants on source registers change (`2b071d9`)\n- [Vulkan] Fix adaptive tessellation issues (`66779fb`)\n- [Memory] Rework guest access resolution and unwatched invalidation (`aed81ca`)\n- [Kernel] Replaced X_DISPATCHER_FLAGS with X_OBJECT_TYPES (`59c08cd`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/36566cb...2a45b23"
     },
     "xenia_manager": {
       "version": "4.3.2",
