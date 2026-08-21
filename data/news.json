@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T07:25:56.237525Z",
+  "generatedAt": "2026-08-21T09:10:03.960909Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,122 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-21T08:58:54Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月21日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• d_nes.cpp、d_megadrive.cpp、d_snes.cpp：各种... (fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_nes.cpp, d_megadrive.cpp, d_snes.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "d85f00fd9a6275249731462a96c02421ef97b35438050eb859fe3fc302661ee0"
+    },
+    {
+      "id": "136121",
+      "title": "【家用机】Snes9xRD v0.3",
+      "originalTitle": "[Consoles de salon] Snes9xRD v0.3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-21T08:55:06Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136121-consoles-de-salon-snes9xrd-v0-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/snes9xrd.png",
+      "officialUrl": "https://github.com/Deathsoul56/snes9xrd",
+      "summary": "Snes9xrd 是超级任天堂 Snes9x 模拟器的个人分支。它完全保留了官方仿真核心以及 GTK、Win32、macOS 和 libretro 前端，同时对 Qt 前端进行了重大修改，使其更完整、更一致、更易用。 该分支的主要目标之一是通过重新引入 Qt 所缺乏的功能来使 Qt 界面与 Win32 界面一样完整。现在可以从 Qt 完全访问显示设置、透明度选项、着色器、软件过滤器、跳帧和高级音频设置。",
+      "content": "Snes9xrd 是超级任天堂 Snes9x 模拟器的个人分支。它完全保留了官方仿真核心以及 GTK、Win32、macOS 和 libretro 前端，同时对 Qt 前端进行了重大修改，使其更完整、更一致、更易用。\n\n该分支的主要目标之一是通过重新引入 Qt 所缺乏的功能来使 Qt 界面与 Win32 界面一样完整。现在可以从 Qt 完全访问显示设置、透明度选项、着色器、软件过滤器、跳帧和高级音频设置。仿真和配置菜单也经过重新组织，以提供更清晰、更直观和更一致的呈现。\nSnes9xrd 还对控制器管理带来了一些改进。 SNES 控制器小部件现在可以准确指示按下的按钮，不会突出显示错误，同时在视觉上与界面的整体主题融为一体。控制器配置更加可靠：正确区分不同类型的输入（按钮、模拟轴和方向），可以保存和恢复按键关联而不会丢失信息，并且显示的按钮忠实对应于实际检测到的输入。\n\n通用界面也得到了简化。实验性侧边栏已被删除，取而代之的是围绕经典菜单栏组织的更传统的主窗口。 “帮助 → 关于”菜单已重新引入，现在包括特定于分叉的积分，从而增强了整体一致性。\n总而言之，Snes9xrd 并没有修改 SNES 仿真本身，但最重要的目标是通过改进 Qt 界面来现代化和稳定用户体验，使控制器管理更加可靠，并提供更干净、更完整和更愉快的使用环境。\n\n变化如下：\n\nQt 前端\n- AVI 录制：在“文件”菜单中添加了“开始/停止 AVI 录制”，并具有可选的高分辨率模式（“仿真设置”>“录制”），可以以高分辨率和隔行扫描游戏使用的本机双分辨率进行录制。\n- 现在，当 ROM 更改（打开文件、加载 MultiCart）时，AVI 录制会自动停止并最终确定文件，而不是继续从新 ROM 录制不匹配的帧。\n- 旧版文件菜单奇偶校验：添加了最近文件子菜单、加载 MultiCart 和每个插槽保存/加载游戏位置子菜单，并由状态预览对话框（缩略图 + 插槽选择器）支持，与旧版 Win32 UI 相匹配。\n- 添加了可从旧式菜单访问的 Hacks 对话框（SuperFX 时钟速度、超频、声音插值滤波器、允许无效 VRAM 访问、单独的回声缓冲区、禁用精灵限制）。\n- 在现有的作弊列表对话框旁边添加了作弊搜索对话框（按值搜索/重置/添加作弊）。\n- 目录面板：添加了电影、SPC 转储和 Satellaview 内存包（ROM/配置/自定义）的专用文件夹位置，与现有的 SRAM/States/Cheats/Patches 模式相匹配。\n- 修复了 SPC 转储文件夹错误解析为导出文件夹的问题。\n- 将“自动保存 SRAM”间隔控件从“目录”面板移至“常规”面板，并使其实际应用于正在运行的核心（之前仅适用于 UI）。\n- 使 SRAM 间隔旋转框的向上/向下箭头在深色主题中更加明显。\n- 游戏库：加宽了“大小”列的默认宽度。\n\n修复\n- 修复了崩溃：将倒带“步骤之间的帧”设置为 0 可能会被零除。\n- 修复了模拟线程与共享音频环形缓冲区上的 SDL 音频回调线程之间的数据争用。\n- 修复了模拟线程状态标志及其跨线程主循环回调上的数据争用。",
+      "originalContent": "Snes9xrd est un fork personnel de l’émulateur Super Nintendo Snes9x. Il conserve intégralement le cœur d’émulation officiel ainsi que les front-ends GTK, Win32, macOS et libretro, tout en proposant une refonte importante du front-end Qt afin de le rendre plus complet, plus cohérent et plus agréable à utiliser.\n\nL’un des principaux objectifs de ce fork est de rendre l’interface Qt aussi complète que l’interface Win32 en y réintroduisant les fonctionnalités qui lui faisaient défaut. Les paramètres d’affichage, les options de transparence, les shaders, les filtres logiciels, le frame skipping ainsi que les réglages audio avancés sont désormais entièrement accessibles depuis Qt. Les menus d’émulation et de configuration ont également été réorganisés afin d’offrir une présentation plus claire, plus intuitive et plus homogène.\n\nSnes9xrd apporte également plusieurs améliorations à la gestion des contrôleurs. Le widget représentant la manette SNES indique désormais avec précision le bouton pressé, sans erreurs de surbrillance, tout en s’intégrant visuellement au thème général de l’interface. La configuration des manettes a été rendue plus fiable: les différents types d’entrées (boutons, axes analogiques et directions) sont correctement distingués, les associations de touches peuvent être sauvegardées et restaurées sans perte d’informations, et les boutons affichés correspondent fidèlement aux entrées réellement détectées.\n\nL’interface générale a également été simplifiée. La sidebar expérimentale a été supprimée au profit d’une fenêtre principale plus traditionnelle, organisée autour d’une barre de menus classique. Le menu « Help → About » a été réintroduit et inclut désormais les crédits spécifiques au fork, renforçant ainsi la cohérence de l’ensemble.\n\nEn résumé, Snes9xrd ne modifie pas l’émulation SNES elle-même, mais vise avant tout à moderniser et à stabiliser l’expérience utilisateur en améliorant l’interface Qt, en fiabilisant la gestion des contrôleurs et en proposant un environnement plus propre, plus complet et plus agréable à utiliser.\n\nLes changements sont les suivants:\n\nQt frontend\n- AVI recording: added Start/Stop AVI Recording to the File menu, with an optional Hi-Res mode (Emulation Settings > Recording) that records at the native double resolution used by hi-res and interlaced games.\n- AVI recording now stops and finalizes the file automatically when the ROM changes (Open File, Load MultiCart), instead of continuing to record mismatched frames from the new ROM.\n- Legacy file menu parity: added a Recent Files submenu, Load MultiCart, and per-slot Save/Load Game Position submenus backed by a state preview dialog (thumbnail + slot picker), matching the legacy Win32 UI.\n- Added a Hacks dialog (SuperFX clock speed, overclock, sound interpolation filter, allow invalid VRAM access, separate echo buffer, disable sprite limit) reachable from the legacy-style menu.\n- Added a Cheat Search dialog (search/reset/add cheat by value) alongside the existing Cheats list dialog.\n- Directories panel: added dedicated folder locations for Movies, SPC dumps, and Satellaview memory packs (ROM/Config/Custom), matching the existing SRAM/States/Cheats/Patches pattern.\n- Fixed the SPC dump folder incorrectly resolving to the Export folder.\n- Moved the \"Auto-Save SRAM\" interval control from the Directories panel to the General panel, and made it actually apply to the running core (previously UI-only).\n- Made the SRAM interval spinbox's up/down arrows more visible in the dark theme.\n- Game library: widened the Size column's default width.\n\nFixes\n- Fixed a crash: setting the rewind \"Frames between steps\" to 0 could divide by zero.\n- Fixed a data race between the emulation thread and the SDL audio callback thread over the shared audio ring buffer.\n- Fixed a data race on the emulation thread's status flags and its cross-thread main loop callback.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "snes9x_core"
+      ],
+      "contentHash": "17eb1a0a09f8d8c4ed929ca35999e821a3c98465e7fbecd13587d0799aeec0f3"
+    },
+    {
+      "id": "136119",
+      "title": "【工具】PadForge v4.3.0",
+      "originalTitle": "[Utilitaires Divers] PadForge v4.3.0",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-08-21T08:53:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136119-utilitaires-divers-padforge-v4-3-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/04/pad-forge-scaled.png",
+      "officialUrl": "https://github.com/hifihedgehog/PadForge",
+      "summary": "PadForge 是一款适用于 Windows 的现代控制器映射实用程序，可将任何输入设备（游戏手柄、操纵杆、键盘、鼠标或触摸屏）转变为被游戏和应用程序识别为真实硬件的虚拟控制器。它依靠 ViGEmBus、vJoy 和 Windows MIDI 服务来传输 Xbox 360、DualShock 4 控制器、个性化 DirectInput、MIDI 甚至虚拟键盘+鼠标对。",
+      "content": "PadForge 是一款适用于 Windows 的现代控制器映射实用程序，可将任何输入设备（游戏手柄、操纵杆、键盘、鼠标或触摸屏）转变为被游戏和应用程序识别为真实硬件的虚拟控制器。它依靠 ViGEmBus、vJoy 和 Windows MIDI 服务来传输 Xbox 360、DualShock 4 控制器、个性化 DirectInput、MIDI 甚至虚拟键盘+鼠标对。\n\n该工具允许将所有输入自由路由到最多 16 个同步虚拟控制器，并提供 2D 和 3D 实时可视化、轴、按钮、触发器和运动传感器的检查。通过直接记录、从详尽列表中选择或通过“全部映射”模式来配置映射，支持灵敏度曲线、高级死区、反死区、偏移以及用于摇杆和触发器的多种算法。\nPadForge 管理来自音频低音的力反馈、隆隆声、振动合成，以及到 vJoy 的 DirectInput 力反馈传输。它包括一个完整的宏系统，允许您根据多种触发模式组合按钮、轴和 POV 方向来触发操作序列（键盘、鼠标、延迟、音量、轴操作）。\n\n该应用程序可以根据当前程序自动激活配置文件，通过控制器快捷方式切换配置文件，使用 HidHide 隐藏物理控制器，以及直接从界面安装或删除必要的驱动程序。集成的网络服务器还允许您将触摸屏转变为具有视觉反馈和振动的虚拟控制器。\n\nPadForge 在 Windows 10/11 (x64) 上运行，作为独立可执行文件部署，提供 1000 Hz 轮询、动态本地化、通知区域中的最小化模式和 Fluent Design 界面。该项目是在 CC BY-NC-SA 4.0 许可下开源的，并依赖于众多第三方组件（SDL3、ViGEmBus、vJoy、HelixToolkit、ModernWpf 等）。",
+      "originalContent": "PadForge est un utilitaire moderne de mappage de contrôleurs pour Windows permettant de transformer n’importe quel périphérique d’entrée — manette, joystick, clavier, souris ou écran tactile — en un contrôleur virtuel reconnu comme du matériel réel par les jeux et applications. Il s’appuie sur ViGEmBus, vJoy et Windows MIDI Services pour émettre des contrôleurs Xbox 360, DualShock 4, DirectInput personnalisés, MIDI ou encore un couple clavier+souris virtuel.\n\nL’outil autorise le routage libre de toutes les entrées vers jusqu’à seize contrôleurs virtuels simultanés, avec visualisation en temps réel en 2D et 3D, inspection des axes, boutons, triggers et capteurs de mouvement. Les mappages se configurent par enregistrement direct, sélection dans des listes exhaustives ou via un mode « Map All », avec prise en charge des courbes de sensibilité, deadzones avancées, anti-deadzones, offsets, et algorithmes multiples pour sticks et gâchettes.\n\nPadForge gère le retour de force, le rumble, la synthèse de vibrations à partir des basses audio, ainsi que la transmission du force feedback DirectInput vers vJoy. Il inclut un système complet de macros permettant de combiner boutons, axes et directions de POV pour déclencher des séquences d’actions (clavier, souris, délais, volume, manipulations d’axes) selon plusieurs modes de déclenchement.\n\nL’application peut activer automatiquement des profils selon le programme en cours, basculer de profil via des raccourcis manette, masquer les contrôleurs physiques grâce à HidHide, et installer ou retirer les drivers nécessaires directement depuis l’interface. Un serveur Web intégré permet également de transformer un écran tactile en manette virtuelle avec retour visuel et vibration.\n\nPadForge fonctionne sur Windows 10/11 (x64), se déploie en exécutable autonome, propose un polling à 1000 Hz, une localisation dynamique, un mode minimisé en zone de notification et une interface Fluent Design. Le projet est open source sous licence CC BY-NC-SA 4.0 et repose sur de nombreux composants tiers (SDL3, ViGEmBus, vJoy, HelixToolkit, ModernWpf, etc.).",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "padforge"
+      ],
+      "contentHash": "3bab721e4b5bc99613bfbe38018c4a51cdf5ecb5cdba132d52414139460760b8"
+    },
+    {
+      "id": "136117",
+      "title": "【家用机】KytyPS5 r260821",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260821",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-21T08:51:43Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136117-consoles-de-salon-kytyps5-r260821/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
+      "officialUrl": "https://github.com/Nmzik/KytyPS5",
+      "summary": "KytyPS5 项目是一个适用于 Windows 的 PlayStation 5 模拟器，由 Nmzik 开发，它基于 InoriRus 创建的原始 Kyty 的大幅修改版本。它的目标是提供比原始项目更好的 PS5 兼容性，重点关注游戏启动、稳定性以及对商业游戏的逐步支持。该仿真器设计为无需外部 LLE 模块即可工作，从而简化了其使用并减少了技术依赖性。",
+      "content": "KytyPS5 项目是一个适用于 Windows 的 PlayStation 5 模拟器，由 Nmzik 开发，它基于 InoriRus 创建的原始 Kyty 的大幅修改版本。它的目标是提供比原始项目更好的 PS5 兼容性，重点关注游戏启动、稳定性以及对商业游戏的逐步支持。该仿真器设计为无需外部 LLE 模块即可工作，从而简化了其使用并减少了技术依赖性。开发商表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标很明确：在关注性能或图形精度之前提高兼容性。\nKytyPS5 仅在 Windows 上运行，并且似乎主要针对 NVIDIA 显卡进行了优化，尽管其他 GPU 的性能可能会有所不同。该项目采取了务实的方法：它首先寻求让游戏落地，即使这意味着牺牲第一个版本的视觉保真度或执行速度。该代码正在积极开发，更新频繁，使其成为当前最具活力的 PS5 项目之一。开发人员强调了对透明度的渴望，明确感谢 InoriRus 的原始项目，同时对代码进行了重大重写和修改。\n\n总而言之，KytyPS5 是一个非官方但假定的第一个 Kyty 的延续，转变为一个现代的、更雄心勃勃、功能更强大的 PS5 模拟器，旨在成为索尼游戏机模拟的参考。\n\n变化：\n- 修复（renderdoc）：捕获完整的访客帧\n- 测试（着色器）：建立 SPIR-V 尺寸基线\n- 重构（着色器）：删除寄存器状态兼容性路径\n- 重构（着色器）：按需发出 SPIR-V 声明\n- 重构（着色器）：原生发出结构化 phi\n- 重构（着色器）：简化缓冲区访问发射\n- 重构（着色器）：保留本机宽缓冲区操作\n- 重构（着色器）：紧凑的整体四边形掩模降低\n- 重构（着色器）：保留本机范围的共享操作\n- 重构（着色器）：保留本机标量内存操作\n- 重构（着色器）：紧凑配对 64 位降低\n- 重构（着色器）：减少调度程序状态开销\n- 重构（着色器）：集中类型化资源元数据\n- 着色器：规范化 CFG 循环头\n- 着色器：在图形调试模式下转储原始 RDNA2 二进制文件\n- 着色器：修复共享终端选择合并\n- 实现 RDNA2 每次调用暂存存储器\n- 图形：接受独立的模板掩模写入\n- 图形：从调度模式导出计算波大小\n- 图形：继续计算本机子组大小\n- 着色器：从活动子组初始化计算 EXEC\n- 着色器：结构化嵌套的提前退出尾部\n- 着色器：拒绝重新加入提前退出的路线\n- 图形：增长尺寸较小的渲染目标支持\n- 渲染文档：修复\n- 着色器：实现 RDNA2 标量四掩模缩减\n- 图形：支持具有只读支持的深度目标\n- 图形：保留原始 D16 uint 纹理读取\n- 图形：接受纹理兼容的 FMASK 元数据模式\n- 着色器：规范化 SampleAdjust 采样器暂存位\n- 图形：保留连贯的分层深度布局\n- 图形：尊重只读模板目标\n- 图形：实现RDNA2 D16图像打包\n- 图形：保留 FP16 内联常量\n- 视频输出：支持PS5辅助总线\n- agc：新的 ABI\n- 着色器：尊重 RDNA2 128 位图像描述符\n- GPU：通过处理程序路由直接着色器寄存器范围\n- GPU：处理部分保护带寄存器范围\n- agc：发出本机等待地址数据包\n- 启动器：窗口标题修复\n- GPU：处理本机混合颜色寄存器写入\n- agc：初始化插值映射寄存器\n- GPU：描述打包的 11-11-10 uint 纹理\n- 着色器：支持位封装图像表面\n- 着色器：将无格式存储与图像原子分开\n- 着色器：接受字节选择的 CNDMASK SDWA 操作数\n- 着色器：对齐地址内存缓冲区绑定\n- agc：新的 ABI\n- 命令处理器：写入数据修复\n\n（从这个分支编译的临时版本有待官方发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- fix(renderdoc): capture complete guest frames\n- test(shader): establish SPIR-V size baselines\n- refactor(shader): remove register-state compatibility paths\n- refactor(shader): emit SPIR-V declarations on demand\n- refactor(shader): emit structured phis natively\n- refactor(shader): simplify buffer access emission\n- refactor(shader): preserve native wide buffer operations\n- refactor(shader): compact whole-quad mask lowering\n- refactor(shader): preserve native wide shared operations\n- refactor(shader): preserve native scalar memory operations\n- refactor(shader): compact paired 64-bit lowering\n- refactor(shader): reduce dispatcher state overhead\n- refactor(shader): centralize typed resource metadata\n- shader: canonicalize CFG loop headers\n- shader: dump original RDNA2 binaries in graphics debug mode\n- shader: fix shared-terminal selection merges\n- Implement RDNA2 per-invocation scratch memory\n- graphics: accept independent stencil mask writes\n- graphics: derive compute wave size from dispatch mode\n- graphics: continue compute on native subgroup size\n- shader: initialize compute EXEC from active subgroup\n- shader: structurize nested early-exit tails\n- shader: reject rejoining early-exit routes\n- graphics: grow undersized render target backings\n- renderdoc: fix\n- shader: implement RDNA2 scalar quad-mask reduction\n- graphics: support depth targets with read-only backing\n- graphics: preserve raw D16 uint texture reads\n- graphics: accept texture-compatible FMASK metadata mode\n- shader: canonicalize SampleAdjust sampler scratch bits\n- graphics: preserve coherent layered depth layouts\n- graphics: honor read-only stencil targets\n- graphics: implement RDNA2 D16 image packing\n- graphics: preserve FP16 inline constants\n- videoout: support PS5 auxiliary buses\n- agc: new ABIs\n- shader: honor RDNA2 128-bit image descriptors\n- gpu: route direct shader register ranges through handlers\n- gpu: handle partial guard-band register ranges\n- agc: emit native wait-on-address packets\n- launcher: window title fix\n- gpu: handle native blend-color register writes\n- agc: initialize interpolant mapping registers\n- gpu: describe packed 11-11-10 uint textures\n- shader: support bit-packed image surfaces\n- shader: separate formatless storage from image atomics\n- shader: accept byte-selected CNDMASK SDWA operands\n- shader: align address-memory buffer bindings\n- agc: new ABI\n- commandProcessor: WriteData fix\n\n(Temporary build compiled from this fork pending official releases.)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "kytyps5_pc"
+      ],
+      "contentHash": "e2f19c438894d38e7364dcf350283a454661dd56a5e182929c9b76dcc3b87d7f"
+    },
+    {
+      "id": "136114",
+      "title": "【电脑】Xpeccy v0.6 (2026/08/20)",
+      "originalTitle": "[Ordi.] Xpeccy v0.6 (2026/08/20)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-08-21T08:48:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136114-ordi-xpeccy-v0-6-2026-08-20/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/10/xpeccy.png",
+      "officialUrl": "https://github.com/samstyle/Xpeccy",
+      "summary": "Xpeccy 是一款优秀且完整的 Linux 模拟器： - ZX光谱48K - 光谱+2 - 光谱+3 - 五角大楼 (128-512K) - 五角大楼 1024 SL - ZS Scorpion (256,1024) + ProfROM - 五角大楼 1024SL - ZXM 凤凰 - 专业人士 - ATM 涡轮增压 2+ - ZXEvo BaseConf - ZXEvo TSConf - 阿尔夫电视游戏 - MSX1（测试版） -…",
+      "content": "Xpeccy 是一款优秀且完整的 Linux 模拟器：\n\n- ZX光谱48K\n- 光谱+2\n- 光谱+3\n- 五角大楼 (128-512K)\n- 五角大楼 1024 SL\n- ZS Scorpion (256,1024) + ProfROM\n- 五角大楼 1024SL\n- ZXM 凤凰\n- 专业人士\n- ATM 涡轮增压 2+\n- ZXEvo BaseConf\n- ZXEvo TSConf\n- 阿尔夫电视游戏\n- MSX1（测试版）\n- MSX2（测试版）\n- 游戏男孩颜色\n- NES/Dendy（测试版）\n- Commodore 64（预阿尔法）\n- БК0010/БК0011M（阿尔法前）\n- IBM PC/AT (286)（预阿尔法）\n\n替代论坛",
+      "originalContent": "Également disponible sous Linux, Xpeccy est un excellent et complet émulateur de:\n\n- ZX Spectrum 48K\n- Spectrum +2\n- Spectrum +3\n- Pentagon (128-512K)\n- Pentagon 1024 SL\n- ZS Scorpion (256,1024) + ProfROM\n- Pentagon 1024SL\n- ZXM Phoenix\n- Profi\n- ATM Turbo 2+\n- ZXEvo BaseConf\n- ZXEvo TSConf\n- Alf TV Games\n- MSX1 (beta)\n- MSX2 (beta)\n- Gameboy color\n- NES/Dendy (beta)\n- Commodore 64 (pre-alpha)\n- БК0010/БК0011M (pre-alpha)\n- IBM PC/AT (286) (pre-alpha)\n\nForum alternatif",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xpeccy_pc"
+      ],
+      "contentHash": "439ce4217446921de42b4d5a43f7dbbfbe4710880b356091804129c9ea0a1dd9"
+    },
     {
       "id": "android-release-virtual_jaguar_core-nightly",
       "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
@@ -30,30 +146,6 @@
         "virtual_jaguar_core"
       ],
       "contentHash": "08fea14dc46041fb5d98c8f3890c9e3d02038afda5cd6c9d6866109125a04bef"
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-21T06:45:48Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月21日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• gba 更新来自 gab75 (dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• gba update from gab75 (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "e204878e53dc90befb92771d1442545ebbfc5dd52cafd66ac5e61f9dcde84947"
     },
     {
       "id": "136109",
