@@ -10,6 +10,12 @@ on:
       - 'data/news.json'
   pull_request:
     branches: [main, master]
+  # The news and version-catalog bots refresh data frequently, but their
+  # GITHUB_TOKEN pushes intentionally do not start another workflow. Package
+  # the latest accumulated data once per day so installed apps receive a new
+  # signed APK without creating up to twelve releases every day.
+  schedule:
+    - cron: '17 23 * * *'
   workflow_dispatch:
 
 concurrency:
