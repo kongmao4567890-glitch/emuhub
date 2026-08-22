@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T03:21:36.587133Z",
+  "generatedAt": "2026-08-22T05:01:04.822610Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,75 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx2-2-6-6-8",
+      "title": "【Android更新】ARMSX2 2.6.6.8",
+      "originalTitle": "ARMSX2 2.6.6.8 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-22T04:14:36Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.8",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 2.6.6.8，发布日期为2026年08月22日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 2.6.6.8。\n\n发布日期：2026年08月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.6.6.8\r\n\r\n新内容：\r\n\r\n帧生成已在 Eden 的 Camille 实现上进行了重写，这与上次更新的内容有所不同。这些通道在我们自己的 Vulkan 当前路径中本地运行，而不是通过翻译库，并且它为每个渲染的帧生成完整的插值帧。再次感谢@CamilleLaVey。您仍然需要自己的无损缩放副本，就像以前一样。插值着色器在运行时从您自己的 Lossless.dll. 中读取。另外一个新功能是自适应帧节奏，当游戏自己的帧速率不稳定时，它可以使您看到的内容保持稳定。它不是固定的 x2，而是生成达到屏幕刷新率所需的尽可能多的帧。\n修复了卡可能被损坏的三种方式，并且卡现在可以自动备份。卡写入是读取-修改-写入的过程，当读取失败时，我们将其记录下来并继续，将新数据合并到先前写入缓冲区中剩余的数据中，并将其保存到卡中。游戏从未要求触及的部分却出现了错误。后台操作也可能会彻底失去保存。文件夹卡将写入内容保存在内存中，并在最后一帧之后刷新几帧，计算每帧的滴答声，因此暂停不会延迟刷新，而是阻止了刷新的发生。文件卡根本没有被冲洗过。现在，当应用程序进入后台（BIOS 已保存其 NVRAM 的位置旁边）时，两者都会刷新。最重要的是，每张卡在每次启动之前都会进行快照并保持循环，并在存储卡屏幕上进行恢复。验证失败的卡永远不会被快照到好的卡上，这就是重点，如果五次重新启动覆盖了您的最后一个干净副本，则轮换是无用的。感谢@bmdhacks (#608)。\n更改游戏自己的设置屏幕中的设置，现在就需要了。对于数据库有条目的任何游戏，数据库都会在之后立即覆盖您的选择，唯一的出路是两个全有或全无的开关，它们通过丢弃游戏所需的所有其他修复来挽救您的一个设置。现在，您为一款特定游戏设置的设置比数据库的排名更高，一次一项设置。感谢@bmdhacks (#593)。\r\n\r\n复制全局设置必须与它一起修复。它从未复制您可以复制的设置\r\n看，它通过一个无条件写入每个键的包装器运行整个配置，\r\n在文件、网络适配器和跟踪日志记录中留下大约七百个\r\n没有设置页面显示的部分。现在它只写入您实际决定的内容，跳过仍然是库存默认值或游戏数据库无论如何都要设置的任何内容。感谢@bmdhacks (#593)。\r\n\r\n另外六个动画背景：\n《Flurry》，Calum Robinson's，2002 年。八种预设：水、火、迷幻、RGB、二进制、经典、疯狂以及随机。 Flux、Plasma、SolarWinds、Hyperspace、Lattice 和 Skyrocket 加入 Flurry，所有这些都可以在本地运行 Terry Welsh 的 Very Slick Screensavers。设置 --> 应用程序，在动画背景开关下，每个附带预设的设置都可以让您在它们之间进行选择。\r\n\r\n图书馆：\r\n\r\n封面艺术区域现在是每场比赛。长按游戏 --> 覆盖区域。\r\n\r\n无需启动即可玩游戏的存储卡。长按游戏 --> 存储卡。\r\n\r\n从库中保存状态。长按包含它们的游戏 --> 加载状态，这会打开真正的保存管理器及其缩略图，而不是精简列表。\r\n\r\n游戏中：\r\n\r\n快捷菜单可以停靠在左侧或右侧。\r\n\r\n性能覆盖层可以放置在您喜欢的任何角落。\r\n\r\n模拟摇杆设置位于快捷菜单中，因此反转摇杆不再意味着每次都必须进入“所有设置”。 \r\n\r\n显示刷新率是一个可绑定的热键，可以循环面板实际具有的任何模式。\n当您更改设置时，OSD 不再消失。任何设置更改都会覆盖您激活的模式，这通常表现为覆盖层消失。\r\n\r\n第二个屏幕：\r\n\r\n该面板不再位于游戏顶部。它…",
+      "originalContent": "ARMSX2 2.6.6.8\r\n\r\nWhat's new:\r\n\r\nFrame generation has been rewritten on Camille's implementation from Eden, and it is a different thing to what shipped last update. The passes run natively in our own Vulkan present path instead of going through a translated library, and it generates a full interpolated frame for every rendered one. Thanks again to @CamilleLaVey. You still need your own copy of Lossless Scaling, exactly as before. The interpolation shaders are read at runtime out of your own Lossless.dll. Also new is Adaptive frame pacing, it keeps what you see steady when the game's own frame rate is not. Instead of a fixed x2, it generates as many frames as it needs to reach your screen's refresh rate.\r\n\r\nThree ways a card could be corrupted are fixed, and cards are now backed up automatically. A card write is a read-modify-write, and when the read failed we logged it and carried on, merging the new data into whatever was left in the buffer from an earlier write and saving that to the card. A sector the game never asked to touch came back wrong. Backgrounding could also lose a save outright. Folder cards hold writes in memory and flush a couple of frames after the last one, counted off a per-frame tick, so pausing did not delay that flush, it stopped it happening. File cards never flushed at all. Both flush now when the app goes to the background, next to where the BIOS already saves its NVRAM. On top of that, every card is snapshotted before each launch and kept in a rotation, with restore on the memory card screen. A card that fails verification is never snapshotted over a good one, which is the whole point, the rotation is useless if five relaunches overwrite your last clean copy. Thanks to @bmdhacks (#608).\r\n\r\nChange a setting in a game's own settings screen and it now takes. For any game the database has an entry for, the database used to overwrite your choice straight afterwards, and the only ways out were two all-or-nothing switches that rescued your one setting by throwing away every other fix that game needed. A setting you set for one specific game now outranks the database, one setting at a time. Thanks to @bmdhacks (#593).\r\n\r\nCopy Global Settings had to be fixed alongside it. It never copied the settings you can\r\nsee, it ran the whole configuration through a wrapper that wrote every key unconditionally,\r\nleaving about seven hundred of them in the file, network adapters and trace logging and\r\nsections no settings page ever shows. It now writes only what you actually decided, skipping anything that is still the stock default or that the game database was going to set anyway. Thanks to @bmdhacks (#593).\r\n\r\nSix more animated backgrounds: \r\n\r\nFlurry, Calum Robinson's, 2002. Eight presets: Water, Fire, Psychedelic, RGB, Binary, Classic, Insane, plus random. Flux, Plasma, SolarWinds, Hyperspace, Lattice and Skyrocket join Flurry, all of them Terry Welsh's Really Slick Screensavers running natively. Settings --> App, under the animated background switch, and each one that ships presets lets you pick between them.\r\n\r\nLibrary:\r\n\r\nCover art region is now per game. Long-press a game --> Cover region.\r\n\r\nMemory cards for a game without booting it. Long-press a game --> Memory Cards.\r\n\r\nSave states from the library. Long-press a game that has them --> Load state, which opens the real Save Manager with its thumbnails rather than a stripped-down list.\r\n\r\nIn-game:\r\n\r\nThe quick menu can dock to the left or the right.\r\n\r\nThe performance overlay can sit in any corner you like.\r\n\r\nAnalog stick settings are in the quick menu, so inverting a stick no longer means having to go to All settings every time. \r\n\r\nDisplay refresh rate is a bindable hotkey, cycling whatever modes your panel actually has.\r\n\r\nThe OSD no longer disappears when you change a setting. Any settings change at all was overwriting the mode you had active, which usually reads as the overlay vanishing.\r\n\r\nSecond screen:\r\n\r\nThe panel no longer lands on top of the game. It…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "501d7c232b0c4ecc037c71953731a435ce385d32aedf311ce0b76077f5a1c3ea"
+    },
+    {
+      "id": "android-release-armsx3-0-9-4-1",
+      "title": "【Android更新】ARMSX3 0.9.4.1",
+      "originalTitle": "ARMSX3 0.9.4.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-22T04:12:15Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.4.1",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.4.1，发布日期为2026年08月22日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.4.1。\n\n发布日期：2026年08月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.4.1\r\n\r\n新内容： \r\n\r\n新的动画库背景：七个屏幕保护程序现在在游戏库后面实时运行，默认情况下关闭。设置 --> 应用程序 --> 动画背景，然后选择一个和一个预设。 （这些背景与 XMB 背景和简单的动画背景是分开的）。 《Flurry》，Calum Robinson's，2002 年。八种预设：水、火、迷幻、RGB、二进制、经典、疯狂以及随机。 Flux、Plasma、SolarWinds、Hyperspace、Lattice、Skyrocket、Terry Welsh 的非常漂亮的屏幕保护程序。每个有六个预设。这些是源端口，而不是仿真或视频：为 Android 编译并在 GLES2 上运行的原始 C/C++ 渲染器。如果 GL 由于任何原因无法启动，库将回退到现有的 2D 波形，因此无法运行它们的设备不会丢失任何内容。它们是实时粒子模拟，因此它们的成本比静态图像更高。这就是他们选择加入的原因。\r\n\r\nARMv8.0 设备现在会收到一条消息，解释 CPU 不受支持，而不是在没有任何解释的情况下死于非法指令。\r\n\r\nPKG 安装程序：修复了安装结果的不同步读取。故障路径可能会在写入字符串时读取该字符串并出现段错误。\n保存状态：在写入状态时模拟器不再恢复，这可能会损坏状态。\r\n\r\n音频：双簧管后端可能会失败一次，然后在会话的其余部分保持沉默。\r\n\r\n游戏和设置： \r\n\r\nTales of Symphonia 现在应该以预期的 60fps 运行 (#77)。每个标题的覆盖现在存在于 ARMSX3 本地配置数据库中，因此像这样的修复随应用程序一起提供。\r\n\r\nPS3 Native 可以从 FPS 上限行中选择，即控制台自己的帧节奏。 \r\n\r\n保存状态：现在可以实际删除插槽。\r\n\r\n在线：以太网地址是在 Android 上派生的，而不是简单地查找失败，从而阻止了某些设备上的 RPCN 登录。\r\n\r\n音频：音量基线在一段安静的通道后恢复而不是锁定，不会对瞬时闪烁做出反应。\r\n\r\n对于处理不当的驱动程序，现在可以在运行时关闭驱动程序管道缓存。\r\n\r\n应用程序数据文件夹中的设置镜像现在为 armsx3-settings.json（原为 armsx2-settings.json，#82）。旧文件仍会被读取，仍包含在新备份中，并与新备份一起删除，现有设置和旧备份存档不受影响。\n应用程序实际上无法阅读的游戏现在会失败并给出解释，而不是挂在第一个加载屏幕上。如果游戏行为不当、缺少封面、无法启动、中途锁定，请将它们移至始终可读的 ARMSX3/config/games 中。\r\n\r\n光盘不再因为单次读取不足而被拒绝，这可能会将标题路由到错误的安装路径。\r\n\r\n将所有上游 ISO 更改恢复为 0.8 基线。",
+      "originalContent": "ARMSX3 0.9.4.1\r\n\r\nWhat's new: \r\n\r\nNew Animated library backgrounds: Seven screensavers now run live behind the game library, off by default. Settings --> App --> Animated background, then pick one and a preset. (These are separate from the XMB backgrounds and the simple animated backgrounds). Flurry, Calum Robinson's, 2002. Eight presets: Water, Fire, Psychedelic, RGB, Binary, Classic, Insane, plus random. Flux, Plasma, SolarWinds, Hyperspace, Lattice, Skyrocket, Terry Welsh's Really Slick Screensavers. Six presets each. These are source ports, not emulation or video: the original C/C++ renderers compiled for Android and running on GLES2. If GL fails to start for any reason the library falls back to the existing 2D wave, so a device that cannot run them loses nothing. They are live particle simulations, so they cost more than a static image. That is why they are opt-in.\r\n\r\nARMv8.0 devices now get a message explaining the CPU is unsupported, instead of dying on an illegal instruction with no explanation.\r\n\r\nPKG installer: fixed an unsynchronised read of the install result. The failure path could read a string while it was still being written and segfault.\r\n\r\nSave states: the emulator no longer resumes while a state is being written, which could corrupt it.\r\n\r\nAudio: the Oboe backend could fail once and then stay silent for the rest of the session.\r\n\r\nGames and settings: \r\n\r\nTales of Symphonia should now run at its intended 60fps (#77). Per-title overrides now live in an ARMSX3-local config database, so fixes like this ship with the app.\r\n\r\nPS3 Native is selectable from the FPS cap row, the console's own frame pacing. \r\n\r\nSave states: slots can now actually be deleted.\r\n\r\nOnline: an Ethernet address is derived on Android instead of the lookup simply failing, which blocked RPCN sign-in on some devices.\r\n\r\nAudio: the volume baseline recovers after a quiet passage instead of latching, without reacting to momentary flickers.\r\n\r\nThe driver pipeline cache can now be switched off at runtime, for drivers that mishandle it.\r\n\r\nThe settings mirror in the app data folder is now armsx3-settings.json (was armsx2-settings.json, #82). The old file is still read, still included in new backups, and removed alongside the new one, existing settings and older backup archives are unaffected.\r\n\r\nA game the app cannot actually read now fails with an explanation instead of hanging on its first loading screen. If games misbehave, missing cover art, failing to launch, locking up part-way, move them into ARMSX3/config/games, which is always readable.\r\n\r\nA disc is no longer rejected because a single read came up short, which could route a title down the wrong mount path.\r\n\r\nReverted all upstream ISO changes to 0.8 baseline.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "259a9d868b790d3ec99816fbe2a0e50d2658f7491a799428d48d3d6536e7f61f"
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-22T03:55:28Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月22日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n## 提交\n- 12e5752：dep/rcheevos：替换 rc_json_get_datetime() 中 sscanf() 的使用 (Stenzek)\n- 再次更新意大利语翻译 (#3785) [#3785](https://github.com/stenzek/duckstation/pull/3785) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/8bc6dc8d4ddd33063a20c8f7320339386474bc87))\n- 在提交时间工具提示中使用标题格式（[Stenzek](https://github.com/stenzek/duckstation/commit/7940507f0ccad13067272cd6235066b16425e340)）\n- 确保在加载状态之前识别成就游戏（[Stenzek](https://github.com/stenzek/duckstation/commit/ad2a8a637c3289d3bfbf58c27828dd06bc42f590)）",
+      "originalContent": "## Commits\n- 12e5752: dep/rcheevos: Replace usage of sscanf() in rc_json_get_datetime() (Stenzek)\n- Update Italian translation again (#3785) [#3785](https://github.com/stenzek/duckstation/pull/3785) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/8bc6dc8d4ddd33063a20c8f7320339386474bc87))\n- Use title format in submit time tooltip ([Stenzek](https://github.com/stenzek/duckstation/commit/7940507f0ccad13067272cd6235066b16425e340))\n- Ensure achievements game is identified before loading state ([Stenzek](https://github.com/stenzek/duckstation/commit/ad2a8a637c3289d3bfbf58c27828dd06bc42f590))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "513fa558eb20ec46954e6940b14f94e85062f30bcae1c19e1b1ca8bbb86288c5"
+    },
     {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
@@ -405,29 +474,6 @@
       "contentHash": "64ea3e75aa62fcb2bb2b7240036561cdaa56cc93a2c57f0ea733f37606213248"
     },
     {
-      "id": "android-release-armsx3-0-9-4",
-      "title": "【Android更新】ARMSX3 0.9.4",
-      "originalTitle": "ARMSX3 0.9.4 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T22:17:12Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.4",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.4，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.4。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.4\r\n\r\n新内容： \r\n\r\n修复了模拟器在播放过程中一次停顿几秒钟的问题。 SPU 重新编译器为每个编译块和每个 MFC 指令编写诊断信息，每秒最多可写入 2,473 行日志，直接存储到存储中。这些爆发恰好发生在游戏已经忙于编译新代码的时候。移步追迹。在游戏原型中发现了这一点。 \r\n\r\n修复了《Tales of Xillia 2》每隔几分钟就会挂起的问题。游戏循环轮询内存系统调用，19 分钟内调用了 20,000 多次，一秒内调用了 5,123 个，并且每个调用都被写入日志。 （报告为#76，可能但尚未确认为该确切问题。）\r\n\r\n修复了当你不玩游戏时 RPCN 会烧毁整个 CPU 核心的问题。在菜单上或在标题之间登录时，客户端线程在其空闲路径中没有等待并连续旋转。\r\n\r\n修复了关闭另一个游戏后启动游戏时应用程序冻结在最后一帧的问题。启动检查将“仍在关闭”视为“已停止”，因此新游戏可以在尚未完成拆除的虚拟机上启动。\n修复了当线程重新进入停止路径时关闭会淹没日志的问题（每秒大约 100,000 行），这会导致其报告的关闭停止。\r\n\r\n来自@sashkinbro： \r\n\r\nVulkan 管道现在缓存到磁盘并在会话之间重复使用，因此着色器编译停顿在游戏首次运行后会缩小。驱动程序或设备更改后自动重建。\r\n\r\n计算着色器现在在 Adreno 上运行 64 宽，与硬件波前匹配。之前，每波的一半都闲置在纹理上传和解旋上。 \r\n\r\n上游：\r\n\r\n合并了当前的 RPCS3，包括跨两个渲染器的 kd-11 的 ROP 输出重新映射工作、PKG 安装修复和 ISO magic-check 修复。 （如果您仍然遇到 ISO 读取问题，请告诉我）。",
-      "originalContent": "ARMSX3 0.9.4\r\n\r\nWhat's new: \r\n\r\nFixed the emulator stalling for seconds at a time during play. The SPU recompiler was writing diagnostics for every compiled block and every MFC instruction, up to 2,473 log lines in a single second, straight to storage. The bursts landed exactly when a game was already busy compiling new code. Moved to trace. Caught this in the game Prototype. \r\n\r\nFixed Tales of Xillia 2 hanging every few minutes. The game polls a memory syscall in a loop, over 20,000 calls in 19 minutes, 5,123 inside one second,  and each one was written to the log. (Reported as #76, likely but not yet confirmed as that exact issue.)\r\n\r\nFixed RPCN burning a full CPU core whenever you weren't in a game. Signed in at the menu or between titles, the client thread had no wait in its idle path and spun continuously.\r\n\r\nFixed the app freezing on the last frame when launching a game after closing another. The boot check treated \"still shutting down\" as \"stopped\", so a new game could start on top of a VM that hadn't finished tearing down.\r\n\r\nFixed shutdown flooding the log when a thread re-entered the stop path, around 100,000 lines a second, which stalled the very shutdown it was reporting.\r\n\r\nFrom @sashkinbro : \r\n\r\nVulkan pipelines are now cached to disk and reused across sessions, so shader compilation stalls shrink after a title's first run. Rebuilds automatically after a driver or device change.\r\n\r\nCompute shaders now run 64-wide on Adreno, matching the hardware wavefront. Previously half of every wave sat idle on texture uploads and deswizzles. \r\n\r\nUpstream:\r\n\r\nMerged current RPCS3, including kd-11's ROP output remap work across both renderers, PKG install fixes, and an ISO magic-check fix. (If you're still having issues with ISO reading, please tell me).",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "e9adb6f55857aa69a9f3f71e46b5a0ee0f7aa7b6d0aabd0e2961a13c94118d5a"
-    },
-    {
       "id": "android-release-azahar-2126-1-alpha1",
       "title": "【Android更新】Azahar 2126.1-alpha1",
       "originalTitle": "Azahar 2126.1-alpha1 Android release",
@@ -497,29 +543,6 @@
       "contentHash": "c7dc910541ca5489e6e90ec8248a4113b013c37437ce1d397a8840b19e85bc80"
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T11:32:03Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n## 提交\n- 显示时间戳时使用相对时间 ([Stenzek](https://github.com/stenzek/duckstation/commit/5422093cd09125d003bdf4b94310916f46b2ea43))\n- 添加多个游戏的哈希值 (#3784) [#3784](https://github.com/stenzek/duckstation/pull/3784) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/a444b1265b05bac24bf404d2363c5c6ced69c222))\n- 改进意大利语翻译 (#3783) [#3783](https://github.com/stenzek/duckstation/pull/3783) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/5f3db8ed0f101beea3f27063e5005faf3f065cb6))",
-      "originalContent": "## Commits\n- Use relative time when displaying timestamps ([Stenzek](https://github.com/stenzek/duckstation/commit/5422093cd09125d003bdf4b94310916f46b2ea43))\n- Add hashes for multiple games (#3784) [#3784](https://github.com/stenzek/duckstation/pull/3784) ([fakkuyuu](https://github.com/stenzek/duckstation/commit/a444b1265b05bac24bf404d2363c5c6ced69c222))\n- Improve Italian translation (#3783) [#3783](https://github.com/stenzek/duckstation/pull/3783) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/5f3db8ed0f101beea3f27063e5005faf3f065cb6))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "9dadbd5e6052193a577389fbfde3e9710b5dd41accbf62550b9e8b5de3a70f02"
-    },
-    {
       "id": "136105",
       "title": "【其他】Visual PinMAME / PinMAME / PinMAME32 v3.7 build 407",
       "originalTitle": "[Flippers] Visual PinMAME / PinMAME / PinMAME32 v3.7 build 407",
@@ -586,29 +609,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "af90f43fd19cf2db6edc23ef604ed9cbc97617d72294fa544254c3b6a72fd126"
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260820",
-      "title": "【Android更新】ARMSX2 nightly-20260820",
-      "originalTitle": "ARMSX2 nightly-20260820 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-20T09:15:13Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260820",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260820，发布日期为2026年08月20日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260820。\n\n发布日期：2026年08月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n用于社区测试的自动夜间构建（未签名）。\n\n每个下载都被命名为 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`，因此构建\n下载后，来自不同夜晚的内容将保持清晰可辨。\n\n- macOS arm64：macOS-arm64.tar.xz\n- Linux arm64：大多数发行版上的 Linux-arm64-4K-pages.AppImage，或 Asahi Linux 和其他 Apple Silicon 内核上的 16K 发行版（如果不确定，请运行 getconf PAGESIZE）\n- Windows arm64：Windows-arm64.zip\n- Linux arm64 上的 RetroArch：Linux-arm64-libretro-core.tar.zst，4K 页构建\n- 裸屏 kmsdrm 手持设备：Linux-arm64-SDL-handheld.tar.zst，4K 页构建（Rocknix 和 Batocera 运行合成器，因此请改用那里的 Qt AppImage）\n- Android：Android-arm64.apk，侧面加载它\n- iOS：iOS-arm64.ipa，未签名，旁加载\n\n## 新消息\n- UI：Qt 和 Big Picture 选择器中设置的 Android 内部分辨率\n\n完整变更日志：https://github.com/ARMSX2/ARMSX2/compare/nightly-20260819...dfef534426f522d3c9acd5e540a36f303a630018",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- UI: the Android internal-resolution set in the Qt and Big Picture pickers\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260819...dfef534426f522d3c9acd5e540a36f303a630018",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "1d6149ee3e7a628ad0649f10a1c79a64146ef73208d8f5d83aac56617c5e8f4f"
     },
     {
       "id": "136098",
