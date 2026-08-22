@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T14:50:45.775553Z",
+  "generatedAt": "2026-08-22T18:59:31.784530Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,30 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-22T16:43:48Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月22日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• gba：将BIOS选项添加到dipswitch（taoenwen）\n• 将 tlcs90_intf.cpp 中的文件静态函数指针读/写重命名为 tlcs90_read / tlcs90_write (taoenwen)\n• d_snes：女士跟踪者 (#2719) (Igor-Arabe)\n• 恢复“修复构建”(taoenwen)\n• 修复构建 (taoenwen)\n• d_megadrive.cpp：添加了对“Heavy Recoil (HB)”的支持(fprietog)\n• pce：添加对 CD 系统的多 BIOS 支持 (barbudreadmon)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• gba: add BIOS options to dipswitch (taoenwen)\n• Renamed the file-static function pointers read / write in tlcs90_intf.cpp to tlcs90_read / tlcs90_write (taoenwen)\n• d_snes: lady stalker (#2719) (Igor-Arabe)\n• Revert \"fix build\" (taoenwen)\n• fix build (taoenwen)\n• d_megadrive.cpp: added the support to \"Heavy Recoil (HB)\" (fprietog)\n• pce: add multi-bios support for CD system (barbudreadmon)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "f7e04bf7a046adb63477d16dfd77073f84b58fd769c33154bb305f268fceb60a"
+    },
     {
       "id": "android-release-armsx3-0-9-4-2",
       "title": "【Android更新】ARMSX3 0.9.4.2",
@@ -248,30 +272,6 @@
         "nesd"
       ],
       "contentHash": "8d85fa4444c456963607654a31f2834049cba524939785ca1449d928b579d9c3"
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-22T02:55:53Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月22日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n### 注释\n• macos 和 linux 独立端口没有得到积极维护，并且可能缺少重要功能，使用我们的 libretro 端口或通过 wine/crossover 运行 Windows 构建被认为是这些平台的更安全选择\n• macos 构建可能首先需要从终端运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 以避免出现“FinalBurn Neo 已损坏”错误\n\n### 自前一晚以来提交\n• 修复gba核心：CPSR mask和音频批处理（taoenwen）",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Fix gba core: CPSR mask and audio batching (taoenwen)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "cfd7d5d8cb537b8f558bf4b8df30d805a2185994fc5147d2a488b688313d9e6d"
     },
     {
       "id": "android-release-winnative-0-4-1",
