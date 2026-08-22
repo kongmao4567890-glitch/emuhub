@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T01:52:37Z",
+  "generatedAt": "2026-08-22T03:09:39Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -217,15 +217,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-08-21T19:24:53Z",
+      "releaseDate": "2026-08-22T02:55:53Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• GBA: Resolve reintroduced frame stuttering issues for FC Mini (taoenwen)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Fix gba core: CPSR mask and audio batching (taoenwen)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-08-21T19:24:53Z",
+      "releaseDate": "2026-08-22T02:55:53Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• GBA: Resolve reintroduced frame stuttering issues for FC Mini (taoenwen)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Fix gba core: CPSR mask and audio batching (taoenwen)"
     },
     "firebird": {
       "version": "1.6",
@@ -332,10 +332,10 @@
       "devReleaseNotes": "- f723a19: LCDUI: refactoring (woesss)\r\n- 75130ae: LCDUI: refactor commands in Alert (woesss)\r\n- d2263e0: LCDUI: fix Display.setCurrent() for Alert (woesss)\r\n- bb0d217: Refactor start MidletThread (woesss)\r\n- 6c3b6f6: Don't send report from modded apk (woesss)\r\n- e41930b: Setting to enable workaround for MIDlets that do not support pause (fix crash after pause) (woesss)\r\n- 6d75447: LCDUI: another fix for List, ChoiceGroup (woesss)\r\n- 97783bc: Fix uri parsing in BT connections (woesss)\r\n- 209d345: Fix call notifyItemStateChanged() for TextField (woesss)\r\n- 49e7fd6: refactor start app (woesss)\r\n- 580ac80: Add more info to AppInstaller error report (woesss)\r\n- 1da39db: Update AGP (woesss)\r\n- cfb9c20: Update proguard rules (woesss)\r\n- ffc6f3c: Update readme (woesss)\r\n- 7a7dbce: MMAPI: add MIDIControl support for MIDI based content (fix nikita36078/J2ME-Loader#1072) (woesss)\r\n- c501ccb: Add com.mot.iden.multimedia package (#111) (woesss)\r\n- 4f5b09b: Share a single back buffer across all Canvas instances (fix #110) (woesss)\r\n- f10c8d9: M3G: execute M3gRunnable in single thread (woesss)\r\n- d826b76: M3G: generate texture mipmap by M3G code, as automatic generation by GL does not work correctly (#108) (woesss)\r\n- a5ec311: Update gradle files (woesss)\r\n- 723f464: PNGUtils: ignore invalid palette indexes, optimize (woesss)\r\n- 21b8805: Filter pointer events (woesss)\r\n- 42f6827: Copy pixels from GL in native (woesss)\r\n- 0f67e90: Touch GL in single thread in com.mexa.opgl.OpglGraphics (woesss)\r\n- 2c7290b: Replace loop detection in immediate mode of EventQueue (woesss)\r\n- 0234d04: fixup! Check descriptor when skip installer dialog (woesss)\r\n- eb2ffc4: Reimplement Nokia M3D on GLES20 (woesss)\r\n- 225c4a2: Fix mutable property of Image (woesss)\r\n- a2eaf4e: Merge pull request #107 from rmn20/dev (woesss)\r\n- 4532838: micro3d: more lenient BMP loading (woesss)\r\n- e42cff5: fix (rmn20)\r\n- a609ebd: micro3d: Fix for bmp files with invalid raster offset (rmn20)\r\n- 724b90a: Refactoring case-insensitive file extension checking (woesss)\r\n- 86d3435: Improve com.siemens.mp.lcdui.Image implementation (woesss)\r\n- 23d4d1e: Fix open FileConnection (woesss)\r\n- 2b3eb27: Use acra-http (woesss)\r\n- 3cc10ae: Improve error reports (woesss)\r\n- a222d4a: Update appcenter cert (Nikita Shakarun)\r\n- 7a6719b: Fix build without secret properties (woesss)\r\n- 190bb47: LCDUI: fix Item.notifyStateChanged() (woesss)\r\n- 5d18a8b: Remove minimum delay for key release (woesss)\r\n- 177c985: Fix ClassCastException in takeScreenshot() (woesss)\r\n- cc87cf5: Fixed saving of resolution presets (woesss)"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-08-21-7022afa",
-      "releaseDate": "2026-08-21T01:49:05Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-08-21-7022afa",
-      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-08-18-7e42513...KytyPS5-2026-08-21-7022afa"
+      "version": "KytyPS5-2026-08-22-4179bb5",
+      "releaseDate": "2026-08-22T02:31:27Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-08-22-4179bb5",
+      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-08-21-7022afa...KytyPS5-2026-08-22-4179bb5"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -488,7 +488,7 @@
       "version": "3.7.3",
       "releaseDate": "2026-08-15T13:31:37Z",
       "sourceUrl": "https://github.com/Luna-Project64/Luna-Project64/releases/tag/v3.7.3",
-      "releaseNotes": "* Fixed RA Hardcore exploit allowing Star Display to modify star counts.\r\n * Improved memory decommit logic to fix rare cases when emulator is unable to allocate RAM after restart.\r\n * Luna PJ64 v3.7.3 is required for RA Hardcore, Star Display + Luna combo is now allowed."
+      "releaseNotes": "* Fixed RA Hardcore exploit allowing Star Display to modify star counts.\r\n * Improved memory decommit logic to fix rare cases when emulator is unable to allocate RAM after restart.\r\n * Fixed state saving/loading edge cases potentially deadlocking emulator.\r\n * Luna PJ64 v3.7.3 is required for RA Hardcore, Star Display + Luna combo is now allowed."
     },
     "mame4droid": {
       "version": "1.38.3",
