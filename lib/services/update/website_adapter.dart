@@ -6,8 +6,9 @@ import 'version_adapter.dart';
 
 /// 基于官网页面的版本适配器。
 ///
-/// 适用于 [Emulator.sourceType] 为 `website` 的模拟器。请求 [Emulator.website]
-/// 指向的页面，尝试用正则从 HTML / 纯文本中提取版本号。
+/// 适用于 [Emulator.sourceType] 为 `website` 的模拟器。优先请求
+/// [Emulator.sourceUrl] 指向的机器可读发布源，未配置时回退到
+/// [Emulator.website]，再尝试用正则从 HTML / JSON / 纯文本中提取版本号。
 ///
 /// 支持的版本号模式（按优先级）：
 /// 1. `version 1.2.3` / `Version: 1.2` 等带关键字的形式；
@@ -37,7 +38,9 @@ class WebsiteAdapter implements VersionAdapter {
     Emulator emulator, {
     bool includeDetails = false,
   }) async {
-    final url = emulator.website;
+    final url = emulator.sourceUrl.trim().isNotEmpty
+        ? emulator.sourceUrl.trim()
+        : emulator.website.trim();
     if (url.isEmpty) return null;
 
     try {

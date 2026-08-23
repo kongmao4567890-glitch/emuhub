@@ -7,6 +7,8 @@ import '../../features/consoles/consoles_page.dart';
 import '../../features/emulator/emulator_detail_page.dart';
 import '../../features/favorites/favorites_page.dart';
 import '../../features/home/home_page.dart';
+import '../../features/news/news_detail_page.dart';
+import '../../features/news/news_page.dart';
 import '../../features/settings/settings_page.dart';
 import '../../features/updates/update_center_page.dart';
 
@@ -93,6 +95,16 @@ final GoRouter appRouter = GoRouter(
         emulatorId: state.pathParameters['id']!,
       ),
     ),
+    GoRoute(
+      path: AppRoutes.news,
+      builder: (context, state) => const NewsPage(),
+    ),
+    GoRoute(
+      path: AppRoutes.newsDetail,
+      builder: (context, state) => NewsDetailPage(
+        articleId: state.pathParameters['id']!,
+      ),
+    ),
   ],
 );
 
@@ -117,12 +129,16 @@ class AppRoutes {
   static const String updates = '/updates';
   static const String favorites = '/favorites';
   static const String settings = '/settings';
+  static const String news = '/news';
+  static const String newsDetail = '/news/:id';
 
   /// 拼接机种详情路径。
   static String consoleDetailOf(String id) => '/console/$id';
 
   /// 拼接模拟器详情路径。
   static String emulatorDetailOf(String id) => '/emulator/$id';
+
+  static String newsDetailOf(String id) => '/news/$id';
 }
 
 /// 底部导航栏外壳。

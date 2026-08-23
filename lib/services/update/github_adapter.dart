@@ -111,7 +111,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
     VersionInfo? result;
 
     // 策略 1：轻量重定向法（不消耗 API 配额，也不下载完整 release 页面）
-    result = await _fetchViaRedirect(emulator, owner, repo);
+    result = await _fetchViaRedirect(
+      emulator,
+      owner,
+      repo,
+      includeAssets: includeDetails,
+    );
 
     // 策略 2：HTML 解析法（仅作为无 latest 重定向时的回退）
     if (result == null) {
@@ -145,34 +150,37 @@ class GitHubReleasesAdapter implements VersionAdapter {
     );
 
     // `/releases/latest` 只代表 GitHub 标记的 Latest 稳定版，页面第一条也不
-    // 保证发布时间最大。遍历 Releases HTML 中的真实 Release 卡片；与 Atom
-    // 不同，这里不会把仅有 Tag 的 unmerged/v2.04 等引用误当成正式发布。
-    var latestPublished = await _fetchLatestPublishedReleaseFromHtml(
-      emulator,
-      owner,
-      repo,
-    );
-
-    // 少数条目把 nightly/开发版放在另一个 GitHub 仓库（例如 Citron CI）。
-    // 这些仓库也属于同一条目的可用发布渠道，必须跨仓库比较发布时间。
-    for (final channel in _configuredGitHubChannelRepos(
-      emulator,
-      primaryOwner: owner,
-      primaryRepo: repo,
-    )) {
-      final candidate = await _fetchLatestPublishedReleaseFromHtml(
+    // 保证发布时间最大。完整检查遍历 Releases HTML 中的真实 Release 卡片；
+    // 轻量检查必须在重定向后立即返回，否则每个条目仍会下载约 700KB 页面。
+    VersionInfo? latestPublished;
+    if (includeDetails) {
+      latestPublished = await _fetchLatestPublishedReleaseFromHtml(
         emulator,
-        channel.owner,
-        channel.repo,
+        owner,
+        repo,
       );
-      final candidateDate = candidate?.releaseDate;
-      final selectedDate = latestPublished?.releaseDate;
-      if (candidate != null &&
-          (latestPublished == null ||
-              (candidateDate != null &&
-                  (selectedDate == null ||
-                      candidateDate.isAfter(selectedDate))))) {
-        latestPublished = candidate;
+
+      // 少数条目把 nightly/开发版放在另一个 GitHub 仓库（例如 Citron CI）。
+      // 这些仓库也属于同一条目的可用发布渠道，必须跨仓库比较发布时间。
+      for (final channel in _configuredGitHubChannelRepos(
+        emulator,
+        primaryOwner: owner,
+        primaryRepo: repo,
+      )) {
+        final candidate = await _fetchLatestPublishedReleaseFromHtml(
+          emulator,
+          channel.owner,
+          channel.repo,
+        );
+        final candidateDate = candidate?.releaseDate;
+        final selectedDate = latestPublished?.releaseDate;
+        if (candidate != null &&
+            (latestPublished == null ||
+                (candidateDate != null &&
+                    (selectedDate == null ||
+                        candidateDate.isAfter(selectedDate))))) {
+          latestPublished = candidate;
+        }
       }
     }
 
@@ -265,7 +273,7 @@ class GitHubReleasesAdapter implements VersionAdapter {
     // 仅对明确配置了开发版或 nightly 渠道的条目检查预发布版，避免批量
     // 检查时为所有 GitHub 仓库下载体积较大的 releases 列表页。
     // nightlyUrl 与 devUrl 都代表用户希望跟踪的非稳定发布渠道。
-    if (result != null && tracksGitHubPrerelease) {
+    if (includeDetails && result != null && tracksGitHubPrerelease) {
       // 优先复用已缓存的 Atom Feed，避免再下载体积较大的
       // Releases HTML。Feed 无法识别某些无特征标签时，再回退 HTML/API。
       var devInfo = await _fetchPrereleaseInfoFromAtom(owner, repo);
@@ -467,13 +475,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
   /// - 返回 404（完全无 releases）→ 需要策略 3
   /// - 网络错误
   ///
-  /// 成功后仅请求轻量的 `expanded_assets` HTML 片段解析 APK，不请求完整
-  /// release 页面或 API。更新说明会在必要的回退路径中补充。
+  /// 轻量检查成功后立即返回 tag；详情检查才请求 `expanded_assets` 解析
+  /// APK。两种路径都不在这里请求完整 release 页面或 API。
   Future<VersionInfo?> _fetchViaRedirect(
     Emulator emulator,
     String owner,
-    String repo,
-  ) async {
+    String repo, {
+    required bool includeAssets,
+  }) async {
     try {
       final response = await _dio.head(
         'https://github.com/$owner/$repo/releases/latest',
@@ -496,15 +505,16 @@ class GitHubReleasesAdapter implements VersionAdapter {
       final version = _stripVPrefix(tag);
       if (version.isEmpty) return null;
 
-      var dynamicDownloadUrl = await _fetchApkUrlFromExpandedAssets(
-        owner, repo, tag,
-      );
-      // expanded_assets 也失败 → 尝试从静态 URL 动态构造
-      if (dynamicDownloadUrl == null) {
-        dynamicDownloadUrl = _buildDynamicDownloadUrl(
-          emulator, owner, repo, tag,
+      String? dynamicDownloadUrl;
+      if (includeAssets) {
+        dynamicDownloadUrl = await _fetchApkUrlFromExpandedAssets(
+          owner, repo, tag,
         );
       }
+      // 轻量检查不请求 assets；静态文件名可安全动态化时直接构造。
+      dynamicDownloadUrl ??= _buildDynamicDownloadUrl(
+        emulator, owner, repo, tag,
+      );
 
       return VersionInfo(
         emulatorId: emulator.id,
@@ -905,10 +915,12 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
   /// 从 GitHub releases 页面 HTML 提取 APK 下载链接。
   ///
-  /// 优先返回 arm64/aarch64 架构的 APK。
+  /// 优先返回 arm64/aarch64 架构且面向普通侧载的 APK。若同一 Release
+  /// 同时提供 Standard/Vanilla 与 Ludashi/Pubg/Antutu 等伪装包，必须
+  /// 选择前者，避免更新按钮默认下载改包名或强制性能模式的特殊变体。
   String? _extractApkUrlFromHtml(String html) {
-    String? arm64Apk;
-    String? anyApk;
+    String? selectedApk;
+    var selectedPriority = -(1 << 30);
 
     final apkPattern = RegExp(
       r'href="([^"]*\.apk)"',
@@ -920,16 +932,14 @@ class GitHubReleasesAdapter implements VersionAdapter {
       if (url.startsWith('/')) {
         url = 'https://github.com$url';
       }
-      final name = url.toLowerCase();
-      if (name.contains('arm64') ||
-          name.contains('aarch64') ||
-          name.contains('arm64-v8a')) {
-        arm64Apk ??= url;
+      final priority = _apkAssetPriority(url);
+      if (selectedApk == null || priority > selectedPriority) {
+        selectedApk = url;
+        selectedPriority = priority;
       }
-      anyApk ??= url;
     }
 
-    return arm64Apk ?? anyApk;
+    return selectedApk;
   }
 
   /// 从 GitHub releases 页面 HTML 提取发布日期。
@@ -1206,17 +1216,17 @@ class GitHubReleasesAdapter implements VersionAdapter {
     }
   }
 
-  /// 从 release 的 `assets` 数组中提取第一个 `.apk` 文件的下载地址。
+  /// 从 release 的 `assets` 数组中提取最适合普通用户的 `.apk` 下载地址。
   ///
   /// GitHub API 的 release 对象包含 `assets` 数组，每个 asset 有
-  /// `browser_download_url` 字段。返回第一个以 `.apk` 结尾的 URL，
-  /// 优先选择 `arm64` / `aarch64` 架构的包。
+  /// `browser_download_url` 字段。优先选择 `arm64` / `aarch64` 架构，
+  /// 并优先 Standard/Vanilla/Universal，避开调速或包名伪装变体。
   String? _extractApkAssetUrl(Map<String, dynamic> release) {
     final assets = release['assets'];
     if (assets is! List) return null;
 
-    String? arm64Apk;
-    String? anyApk;
+    String? selectedApk;
+    var selectedPriority = -(1 << 30);
 
     for (final asset in assets) {
       final assetMap = _asMap(asset);
@@ -1224,17 +1234,40 @@ class GitHubReleasesAdapter implements VersionAdapter {
       if (url == null || url.isEmpty) continue;
       if (!url.toLowerCase().endsWith('.apk')) continue;
 
-      final name = (assetMap['name']?.toString() ?? '').toLowerCase();
-      // 优先选择 arm64/aarch64 架构的 APK
-      if (name.contains('arm64') ||
-          name.contains('aarch64') ||
-          name.contains('arm64-v8a')) {
-        arm64Apk = url;
+      final name = assetMap['name']?.toString() ?? url;
+      final priority = _apkAssetPriority(name);
+      if (selectedApk == null || priority > selectedPriority) {
+        selectedApk = url;
+        selectedPriority = priority;
       }
-      anyApk ??= url;
     }
 
-    return arm64Apk ?? anyApk;
+    return selectedApk;
+  }
+
+  int _apkAssetPriority(String rawName) {
+    final name = rawName.toLowerCase();
+    var score = 0;
+
+    if (name.contains('arm64') ||
+        name.contains('aarch64') ||
+        name.contains('arm64-v8a')) {
+      score += 100;
+    }
+    if (name.contains('standard') ||
+        name.contains('vanilla') ||
+        name.contains('universal')) {
+      score += 60;
+    }
+    if (name.contains('ludashi') ||
+        name.contains('pubg') ||
+        name.contains('antutu') ||
+        name.contains('benchmark')) {
+      score -= 80;
+    }
+    if (name.contains('debug')) score -= 120;
+
+    return score;
   }
 
   /// 构造动态下载链接。

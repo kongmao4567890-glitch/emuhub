@@ -5,6 +5,47 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
+  test('lightweight check only follows the latest redirect', () async {
+    final dio = Dio();
+    var nonHeadRequests = 0;
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          if (options.method == 'HEAD' &&
+              options.uri.path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 302,
+                headers: Headers.fromMap({
+                  'location': [
+                    'https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.4',
+                  ],
+                }),
+              ),
+            );
+            return;
+          }
+          nonHeadRequests++;
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _armsx2(),
+    );
+
+    expect(result?.version, '2.6.6.4');
+    expect(result?.releaseDate, isNull);
+    expect(nonHeadRequests, 0);
+  });
+
   test('uses the latest timestamp instead of the Releases page order',
       () async {
     final dio = Dio();
@@ -129,6 +170,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _armsx2(),
+      includeDetails: true,
     );
 
     expect(result?.version, 'nightly-20260805');
@@ -209,6 +251,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _nexium(),
+      includeDetails: true,
     );
 
     expect(result?.version, 'nightly-2026.07.16');
@@ -297,6 +340,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _citron(),
+      includeDetails: true,
     );
 
     expect(result?.version, 'nightly-20260805');
@@ -426,6 +470,7 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _x360Mobile(),
+      includeDetails: true,
     );
 
     expect(result?.version, '0.5.3_预览版');
@@ -694,11 +739,86 @@ void main() {
 
     final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
       _hatariB(),
+      includeDetails: true,
     );
 
     expect(result?.version, '0.3');
     expect(result?.releaseDate, DateTime.parse('2024-04-15T06:26:12Z'));
     expect(result?.releaseNotes, 'The third public release of hatariB.');
+  });
+
+  test('prefers the standard APK over package-spoofing variants', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (options.method == 'HEAD' && path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 302,
+                headers: Headers.fromMap({
+                  'location': [
+                    'https://github.com/WinNative-Emu/WinNative/releases/tag/'
+                        'v0.3.1-beta',
+                  ],
+                }),
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/v0.3.1-beta')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''
+<a href="/WinNative-Emu/WinNative/releases/download/v0.3.1-beta/WinNative-v0.3.1-beta-Ludashi-signed.apk">Ludashi</a>
+<a href="/WinNative-Emu/WinNative/releases/download/v0.3.1-beta/WinNative-v0.3.1-beta-Pubg-signed.apk">Pubg</a>
+<a href="/WinNative-Emu/WinNative/releases/download/v0.3.1-beta/WinNative-v0.3.1-beta-Standard-signed.apk">Standard</a>
+''',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/WinNative-Emu/WinNative/releases/tag/v0.3.1-beta',
+                  'v0.3.1-beta',
+                  '2026-07-14T16:02:48Z',
+                  'WinNative hotfix',
+                ),
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _winNative(),
+      includeDetails: true,
+    );
+
+    expect(result?.version, '0.3.1-beta');
+    expect(result?.releaseDate, DateTime.parse('2026-07-14T16:02:48Z'));
+    expect(
+      result?.downloadUrl,
+      'https://github.com/WinNative-Emu/WinNative/releases/download/'
+      'v0.3.1-beta/WinNative-v0.3.1-beta-Standard-signed.apk',
+    );
   });
 }
 
@@ -749,6 +869,23 @@ Emulator _hatariB() {
     minAndroid: '5.0',
     description: 'test',
     downloadUrl: 'https://github.com/bbbradsmith/hatariB/releases',
+  );
+}
+
+Emulator _winNative() {
+  return const Emulator(
+    id: 'winnative',
+    name: 'WinNative',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/WinNative-Emu/WinNative',
+    playStoreId: '',
+    website: '',
+    core: 'Wine / Box64 / FEX',
+    compatibility: 'medium',
+    minAndroid: '8.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/WinNative-Emu/WinNative/releases',
   );
 }
 

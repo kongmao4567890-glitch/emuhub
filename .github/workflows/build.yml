@@ -3,8 +3,19 @@ name: Build Android APK
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - 'assets/version_catalog.json'
+      - 'data/version_catalog.json'
+      - 'assets/news.json'
+      - 'data/news.json'
   pull_request:
     branches: [main, master]
+  # The news and version-catalog bots refresh data frequently, but their
+  # GITHUB_TOKEN pushes intentionally do not start another workflow. Package
+  # the latest accumulated data once per day so installed apps receive a new
+  # signed APK without creating up to twelve releases every day.
+  schedule:
+    - cron: '17 23 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -52,6 +63,22 @@ jobs:
           fi
           chmod +x android/gradlew
 
+      - name: Prepare fixed release signing
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          test -n "$ANDROID_KEYSTORE_PASSWORD"
+          test -n "$ANDROID_KEY_ALIAS"
+          test -n "$ANDROID_KEY_PASSWORD"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/emuhub-release.p12
+          test -s android/app/emuhub-release.p12
+
       - name: Generate code (freezed / json_serializable / drift)
         run: dart run build_runner build --delete-conflicting-outputs
 
@@ -64,7 +91,53 @@ jobs:
       - name: Build APK
         # versionCode 随 run_number 递增，否则所有 Release 的 versionCode 恒为 1，
         # 用户无法以“新版本”覆盖安装
-        run: flutter build apk --release --no-tree-shake-icons --build-number=${{ github.run_number }}
+        env:
+          ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/android/app/emuhub-release.p12
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: >-
+          flutter build apk --release --no-tree-shake-icons
+          --build-name=1.0.${{ github.run_number }}
+          --build-number=${{ github.run_number }}
+          --dart-define=APP_VERSION=1.0.${{ github.run_number }}
+
+      - name: Generate APK SHA-256
+        run: |
+          cd build/app/outputs/flutter-apk
+          sha256sum app-release.apk > app-release.apk.sha256
+          sha256sum --check app-release.apk.sha256
+
+      - name: Verify fixed release signing certificate
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          set -euo pipefail
+          expected=$(tr -d '[:space:]:' < android/signing-certificate.sha256 | tr 'A-F' 'a-f')
+          apksigner=$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)
+          test -x "$apksigner"
+          if ! certificate_output=$("$apksigner" verify --verbose --print-certs \
+            build/app/outputs/flutter-apk/app-release.apk 2>&1); then
+            printf '%s\n' "$certificate_output"
+            exit 1
+          fi
+          printf '%s\n' "$certificate_output"
+          actual=$(printf '%s\n' "$certificate_output" \
+            | tr -d ':' \
+            | grep -Eio '[0-9a-f]{64}' \
+            | sed -n '1p' \
+            | tr 'A-F' 'a-f')
+          test -n "$actual"
+          echo "Expected release signing certificate SHA-256: $expected"
+          echo "Actual APK signing certificate SHA-256: $actual"
+          test "$actual" = "$expected"
+          echo "Verified release signing certificate SHA-256: $actual"
+
+      - name: Remove decoded signing key
+        if: always()
+        run: |
+          if [ -f android/app/emuhub-release.p12 ]; then
+            shred -u android/app/emuhub-release.p12 || rm -f android/app/emuhub-release.p12
+          fi
 
       - name: List build output
         run: ls -lh build/app/outputs/flutter-apk/
@@ -73,7 +146,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: emuhub-apk
-          path: build/app/outputs/flutter-apk/*.apk
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-release.apk.sha256
           retention-days: 7
           if-no-files-found: error
 
@@ -83,7 +158,9 @@ jobs:
         with:
           tag_name: v1.0.${{ github.run_number }}
           name: EmuHub v1.0.${{ github.run_number }}
-          files: build/app/outputs/flutter-apk/app-release.apk
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-release.apk.sha256
           generate_release_notes: true
           draft: false
           prerelease: false

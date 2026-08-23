@@ -400,6 +400,8 @@ class _UpdateCard extends StatelessWidget {
                       fit: BoxFit.cover,
                       width: 48,
                       height: 48,
+                      cacheWidth: 144,
+                      gaplessPlayback: true,
                       errorBuilder: (_, __, ___) => Text(
                         console?.icon ?? '🎮',
                         style: const TextStyle(fontSize: 26),
@@ -600,6 +602,8 @@ class _UpToDateTile extends StatelessWidget {
                   ? Image.asset(
                       emulatorIconPath,
                       fit: BoxFit.cover,
+                      cacheWidth: 84,
+                      gaplessPlayback: true,
                       errorBuilder: (_, __, ___) => Text(
                         consoleIcon,
                         style: const TextStyle(fontSize: 20),

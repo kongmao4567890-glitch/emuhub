@@ -14,6 +14,7 @@ import '../data/models/emulators_config.dart';
 import '../data/repositories/settings_repository.dart';
 import 'notification_service.dart';
 import 'update/update_service.dart';
+import 'update/version_catalog_service.dart';
 
 /// 后台更新检查任务。
 ///
@@ -144,7 +145,10 @@ void callbackDispatcher() {
       };
 
       // 执行更新检查
-      final updateService = UpdateService(dao: db.cachedVersionsDao);
+      final updateService = UpdateService(
+        dao: db.cachedVersionsDao,
+        versionCatalog: VersionCatalogService(),
+      );
       final result = await updateService.checkAll(targets);
       final notifiableUpdates = result.updated
           .where((info) => notifiableIds.contains(info.emulatorId))

@@ -154,6 +154,7 @@ class SettingsPage extends ConsumerWidget {
                       );
                 },
               ),
+              const Divider(height: 1, indent: 16),
             ],
           ),
 

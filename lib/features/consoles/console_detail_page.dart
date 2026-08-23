@@ -103,6 +103,9 @@ class _ConsoleDetailPageState extends ConsumerState<ConsoleDetailPage> {
                       child: Image.asset(
                         console.imagePath,
                         fit: BoxFit.cover,
+                        cacheWidth: 1024,
+                        gaplessPlayback: true,
+                        filterQuality: FilterQuality.medium,
                         errorBuilder: (_, __, ___) => Container(
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
@@ -376,6 +379,8 @@ class _EmulatorListCard extends StatelessWidget {
                         fit: BoxFit.cover,
                         width: 44,
                         height: 44,
+                        cacheWidth: 144,
+                        gaplessPlayback: true,
                         errorBuilder: (_, __, ___) => Icon(
                             Icons.sports_esports,
                             color: cs.onPrimaryContainer),

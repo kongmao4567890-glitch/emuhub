@@ -10,6 +10,7 @@ import '../../data/models/console.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
 import '../emulator/emulator_detail_page.dart' show findEmulator;
+import '../news/news_widgets.dart';
 
 /// 监听全部版本缓存（文件私有），供首页 "最近更新" 区域使用。
 final _cachedVersionsStreamProvider =
@@ -61,6 +62,8 @@ class _HomePageState extends ConsumerState<HomePage> {
               children: [
                 const _WelcomeCard(),
                 const SizedBox(height: 24),
+                const _LatestNewsSection(),
+                const SizedBox(height: 24),
                 cachedVersionsAsync.when(
                   loading: () => const SizedBox.shrink(),
                   error: (_, __) => const SizedBox.shrink(),
@@ -108,6 +111,77 @@ class _HomePageState extends ConsumerState<HomePage> {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// 首页新闻只展示重点内容，完整筛选和长文阅读放在独立新闻页。
+class _LatestNewsSection extends ConsumerWidget {
+  const _LatestNewsSection();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final feedAsync = ref.watch(newsFeedProvider);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Icon(Icons.newspaper, color: theme.colorScheme.primary, size: 20),
+            const SizedBox(width: 8),
+            Text(
+              '最新资讯',
+              style: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const Spacer(),
+            TextButton(
+              onPressed: () => context.push('/news'),
+              child: const Text('查看全部'),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        feedAsync.when(
+          loading: () => const SizedBox(
+            height: 120,
+            child: Center(child: CircularProgressIndicator()),
+          ),
+          error: (_, __) => Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.surfaceContainerHighest,
+              borderRadius: BorderRadius.circular(AppTheme.cardRadius),
+            ),
+            child: Row(
+              children: [
+                const Expanded(child: Text('资讯暂时无法加载，可稍后重试')),
+                TextButton(
+                  onPressed: () {
+                    ref.invalidate(newsServiceProvider);
+                    ref.invalidate(newsFeedProvider);
+                  },
+                  child: const Text('重试'),
+                ),
+              ],
+            ),
+          ),
+          data: (feed) {
+            final articles = feed.articles.take(3).toList(growable: false);
+            if (articles.isEmpty) return const Text('暂无资讯');
+            return Column(
+              children: [
+                NewsArticleCard(article: articles.first),
+                for (final article in articles.skip(1))
+                  NewsArticleCard(article: article, compact: true),
+              ],
+            );
+          },
+        ),
+      ],
     );
   }
 }
@@ -287,6 +361,8 @@ class _RecentUpdateCard extends StatelessWidget {
                       width: 20,
                       height: 20,
                       fit: BoxFit.cover,
+                      cacheWidth: 64,
+                      gaplessPlayback: true,
                       errorBuilder: (_, __, ___) => Text(
                         console.icon,
                         style: const TextStyle(fontSize: 16),
@@ -409,6 +485,9 @@ class _RecommendedConsoleCard extends StatelessWidget {
                 ? Image.asset(
                     console.imagePath,
                     fit: BoxFit.cover,
+                    cacheWidth: 512,
+                    gaplessPlayback: true,
+                    filterQuality: FilterQuality.medium,
                     errorBuilder: (_, __, ___) => _buildEmojiBg(cs),
                   )
                 : _buildEmojiBg(cs),

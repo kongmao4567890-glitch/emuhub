@@ -454,6 +454,9 @@ class _ConsoleCard extends StatelessWidget {
                           child: Image.asset(
                             console.imagePath,
                             fit: BoxFit.cover,
+                            cacheWidth: 512,
+                            gaplessPlayback: true,
+                            filterQuality: FilterQuality.medium,
                             errorBuilder: (_, __, ___) => _buildEmojiFallback(
                                 cs, console.icon),
                           ),

@@ -207,6 +207,9 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                     emulator.iconPath,
                     fit: BoxFit.contain,
                     alignment: Alignment.center,
+                    cacheWidth: 512,
+                    gaplessPlayback: true,
+                    filterQuality: FilterQuality.medium,
                     errorBuilder: (_, __, ___) =>
                         _buildConsoleBg(console, cs),
                   ),
@@ -239,6 +242,9 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
       return Image.asset(
         console.imagePath,
         fit: BoxFit.cover,
+        cacheWidth: 1024,
+        gaplessPlayback: true,
+        filterQuality: FilterQuality.medium,
         errorBuilder: (_, __, ___) => _buildGradientBg(cs, console.icon),
       );
     }

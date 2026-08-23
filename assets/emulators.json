@@ -1,6 +1,6 @@
 {
-  "version": "3.8.5",
-  "lastUpdated": "2026-08-09",
+  "version": "3.8.7",
+  "lastUpdated": "2026-08-19",
   "consoles": [
     {
       "id": "multi_system",
@@ -1981,6 +1981,26 @@
           ]
         },
         {
+          "id": "nethersx2_lsfg",
+          "name": "NetherSX2 LSFG (Slushii Turnip Fix)",
+          "openSource": false,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
+          "playStoreId": "",
+          "website": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
+          "core": "AetherSX2 4248 / LSFG",
+          "compatibility": "medium",
+          "minAndroid": "8.0",
+          "description": "面向安卓掌机与Adreno GPU的NetherSX2实验分支，基于AetherSX2 4248，内置Turnip驱动并加入LSFG帧生成。开发者实测可将60 FPS源以2倍帧生成接近120 FPS，或将原生30 FPS游戏以4倍帧生成到120 FPS；功能默认关闭，需用户自行提供合法购买的Lossless Scaling中的Lossless.dll。输入延迟、续航与持续温度尚未完整测试，效果取决于游戏、GPU和高刷新率屏幕。",
+          "downloadUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases",
+          "devUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/nethersx2_lsfg.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
           "id": "psx2_izzy",
           "name": "PSX2",
           "openSource": true,
@@ -3315,6 +3335,46 @@
           "devUrl": "https://github.com/utkarshdalal/GameNative/releases",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/gamenative.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "winnative",
+          "name": "WinNative",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/WinNative-Emu/WinNative",
+          "playStoreId": "",
+          "website": "",
+          "core": "Wine / Box64 / FEX",
+          "compatibility": "medium",
+          "minAndroid": "8.0",
+          "description": "面向 ARM64 Android 的开源 Windows x86_64 游戏运行环境，融合 Winlator Bionic 与 Pluvia，支持 Wine、Box64、FEX/UnixLibs、Proton，以及 Steam、Epic、GOG 游戏库、云存档、触屏 HUD、手柄、外接显示器和组件下载。另可按需下载 Libretro、Dolphin 与 ARMSX2 等复古主机核心。",
+          "downloadUrl": "https://github.com/WinNative-Emu/WinNative/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/winnative.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "winlator",
+          "name": "Winlator",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/brunodev85/winlator",
+          "playStoreId": "",
+          "website": "https://winlator.org/",
+          "core": "Wine / Box86 / Box64",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "在Android上运行Windows x86/x86_64应用与游戏的开源兼容层，基于Wine、Box86/Box64、Turnip/Zink/VirGL。官方11.2 Beta修复手柄输入延迟，升级Box64 0.4.4，并改进Vortek纹理解码、Xclipse GPU兼容性及Gladio的OpenGL 1.x和ARB着色器支持。",
+          "downloadUrl": "https://github.com/brunodev85/winlator/releases",
+          "devUrl": "https://github.com/brunodev85/winlator/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/winlator.png",
           "platforms": [
             "android"
           ]
@@ -5882,12 +5942,12 @@
     },
     {
       "id": "rpgmaker",
-      "name": "RPG Maker (EasyRPG)",
+      "name": "RPG Maker / 游戏解释器",
       "vendor": "various",
       "year": 2000,
       "icon": "🎮",
       "imagePath": "assets/consoles/rpgmaker.jpg",
-      "description": "RPG Maker游戏引擎，由ASCII/Enterbrain开发。EasyRPG Player可运行RPG Maker 2000/2003制作的游戏，包括《青鬼》《Ib》《梦日记》等经典独立RPG。是日本独立游戏开发的起点，催生了大量同人创作",
+      "description": "RPG Maker及多类独立游戏引擎的移动运行方案。EasyRPG Player专注RPG Maker 2000/2003；JoiPlay通过插件支持RPG Maker XP/VX/Ace/MV/MZ、Ren'Py、TyranoBuilder、Construct、Godot、Flash与HTML5游戏。",
       "emulators": [
         {
           "id": "easyrpg",
@@ -5912,6 +5972,26 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "joiplay",
+          "name": "JoiPlay",
+          "openSource": false,
+          "sourceType": "website",
+          "sourceUrl": "https://joiplay.net/assets/json/downloads.json",
+          "playStoreId": "",
+          "website": "https://joiplay.net/",
+          "core": "RPG Maker / Ren'Py / Ruffle / Godot",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "Android多引擎游戏解释器与启动器，支持RPG Maker、Ren'Py、TyranoBuilder、Construct 2/3、Godot、Adobe Flash及HTML5游戏。主程序与对应引擎插件需分别安装；官网公开下载当前为1.21.000，Patreon另有较新的会员构建。",
+          "downloadUrl": "https://joiplay.net/#downloads",
+          "devUrl": "https://www.patreon.com/joiplay/posts/joiplay-1-22-000-159457758",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/joiplay.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },

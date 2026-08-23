@@ -9,12 +9,16 @@ class AppConstants {
   static const String appName = 'EmuHub';
 
   /// 应用版本号（语义化版本）。
-  static const String appVersion = '1.0.28';
+  /// GitHub Actions 会用发布构建号注入该值，使关于页与 Release 标签一致。
+  static const String appVersion = String.fromEnvironment(
+    'APP_VERSION',
+    defaultValue: '1.0.34',
+  );
 
   /// App 自身更新检查所使用的 GitHub 仓库地址。
   ///
-  /// 由 App 更新检查逻辑请求该仓库的 Releases 接口，
-  /// 与 [appVersion] 比较以判断是否有新版本。
+  /// 由 App 更新检查逻辑读取最新 Release 附带的轻量清单，
+  /// 避免匿名 GitHub API 配额导致 403。
   static const String githubRepo =
       'https://github.com/kongmao4567890-glitch/emuhub';
 
