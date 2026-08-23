@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T14:43:06Z",
+  "generatedAt": "2026-08-23T16:45:02Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -41,18 +41,18 @@
       "downloadUrl": "https://github.com/ARMSX2/ARMSX1/releases/download/0.1.3/ARMSX1-0.1.3-release.apk"
     },
     "armsx2": {
-      "version": "nightly-20260823",
-      "releaseDate": "2026-08-23T08:57:58Z",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260823",
-      "releaseNotes": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: give CI builds the RetroAchievements client identity\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260822...1b737e25f07ffc7c9b08938024d121467b507f7b",
-      "devReleaseNotes": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: give CI builds the RetroAchievements client identity\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260822...1b737e25f07ffc7c9b08938024d121467b507f7b"
+      "version": "2.6.6.8.2",
+      "releaseDate": "2026-08-23T14:50:58Z",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.6.8.2",
+      "releaseNotes": "ARMSX2 2.6.6.8.2\r\n\r\nWhat's new:\r\n\r\nTap to hold now works on physical buttons, not just the on-screen ones. Bind a button, then Settings --> Controller --> Tap to hold, under Turbo. Press once to hold it down, press again to release, which makes games that want a button held while you work another control playable one-handed. Turn on Turbo as well and a tap toggles autofire instead. \r\n\r\nSome of the new animated backgrounds could crash the app and lock you out of the app. The saver runs native graphics code, and if it crashed, the app crashed with it before the library screen finished drawing, on every launch, with Settings sitting behind the screen that was dying. Two things changed: the crash itself is fixed, and the setting now switches itself off if the last run died with a saver on screen and tells you which one it was. \r\n\r\nJapanese titles and sorting are tidier: numbered entries sort in order instead of scattering, and a few titles now match what is actually on the box. Done by @nassau-tk (#614).",
+      "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases/download/2.6.6.8.2/ARMSX2-2.6.6.8.2-a11-armv8.2-sdk30.apk"
     },
     "armsx3": {
-      "version": "0.9.4.2",
-      "releaseDate": "2026-08-22T14:21:07Z",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.4.2",
-      "releaseNotes": "improvements to RPC: The ARMSX3 logo now appears beside the cover art, as it does in ARMSX2. and redid the FG implementation to match closer to @CamilleLaVey implementation (still a WIP, and often times in testing I find my adreno 740 doesn't have the gpu headroom for ps3 emulation + LSFG, but still trying to see how i can improve it)",
-      "downloadUrl": "https://github.com/ARMSX2/ARMSX3/releases/download/0.9.4.2/ARMSX3-0.9.4.2-a11-armv8.2-sdk30.apk"
+      "version": "0.9.4.3",
+      "releaseDate": "2026-08-23T14:50:36Z",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.4.3",
+      "releaseNotes": "ARMSX3 0.9.4.3\r\n\r\nWhat's new: \r\n\r\nSome of the new animated backgrounds could crash the app and lock you out of the app. The saver runs native graphics code, and if it crashed, the app crashed with it before the library screen finished drawing, on every launch, with Settings sitting behind the screen that was dying. Two things changed: the crash itself is fixed, and the setting now switches itself off if the last run died with a saver on screen and tells you which one it was. \r\n\r\nRumble goes to your controller, not just the phone's motor. New \"Vibrate the phone\" toggle under Controls.\r\n\r\nDiscs that fail to boot now say why, a missing or rejected disc key is named as such instead of a bare \"InvalidFileOrFolder\".\r\n\r\nAudio no longer slowly drifts out of sync on devices that can't run at the game's sample rate.",
+      "downloadUrl": "https://github.com/ARMSX2/ARMSX3/releases/download/0.9.4.3/ARMSX3-0.9.4.3-a11-armv8.2-sdk30.apk"
     },
     "azahar": {
       "version": "2126.1-alpha1",
@@ -174,10 +174,10 @@
     },
     "duckstation": {
       "version": "preview",
-      "releaseDate": "2026-08-23T02:29:57Z",
+      "releaseDate": "2026-08-23T15:22:21Z",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "releaseNotes": "## Commits\n- Clarify RetroAchievements login message [#3788](https://github.com/stenzek/duckstation/pull/3788) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/614faf7d35761f8ddbdb08e4a6cf8e1810f24541))\n- Use variadic arg() instead of chaining multiple invocations [#3788](https://github.com/stenzek/duckstation/pull/3788) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/04187ba0c53a3f2dc1d748296d7186bf80272cfc))",
-      "devReleaseNotes": "## Commits\n- Clarify RetroAchievements login message [#3788](https://github.com/stenzek/duckstation/pull/3788) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/614faf7d35761f8ddbdb08e4a6cf8e1810f24541))\n- Use variadic arg() instead of chaining multiple invocations [#3788](https://github.com/stenzek/duckstation/pull/3788) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/04187ba0c53a3f2dc1d748296d7186bf80272cfc))"
+      "releaseNotes": "## Commits\n- Group toolbar-related menu items into a submenu (#3789) [#3789](https://github.com/stenzek/duckstation/pull/3789) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/939918806c61062f1c43622cc484a14d2e2efe6d))",
+      "devReleaseNotes": "## Commits\n- Group toolbar-related menu items into a submenu (#3789) [#3789](https://github.com/stenzek/duckstation/pull/3789) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/939918806c61062f1c43622cc484a14d2e2efe6d))"
     },
     "duckstation_gpl": {
       "version": "preview",
@@ -215,15 +215,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-08-23T13:44:20Z",
+      "releaseDate": "2026-08-23T16:33:00Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)\n• gba update from gab75 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp: fixed BIOS for \"Voltorb's Escape (HB)\" (fprietog)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-08-23T13:44:20Z",
+      "releaseDate": "2026-08-23T16:33:00Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)\n• gba update from gab75 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp: fixed BIOS for \"Voltorb's Escape (HB)\" (fprietog)"
     },
     "firebird": {
       "version": "1.6",
@@ -803,13 +803,11 @@
       "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases/tag/Pre-release"
     },
     "nesd": {
-      "version": "nightly",
-      "releaseDate": "2026-08-23T14:18:48Z",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "version": "0.17.0",
+      "releaseDate": "2026-08-23T15:14:53Z",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/0.17.0",
       "releaseNotes": "**Looking for Android testers!**  \nGoogle Play requires 12 testers to opt in and actually use the app for 14 days before a new app can be published. If you'd like to help NESd get onto the Play Store, sign up in [Discussions](https://github.com/jpjonte/NESd/discussions/322).\n\n### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Nightly Linux builds are now a separate `dev` flavor. Existing nightly Flatpak installs are migrated automatically\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android",
-      "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
-      "devDownloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
-      "devReleaseNotes": "**Looking for Android testers!**  \nGoogle Play requires 12 testers to opt in and actually use the app for 14 days before a new app can be published. If you'd like to help NESd get onto the Play Store, sign up in [Discussions](https://github.com/jpjonte/NESd/discussions/322).\n\n### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Nightly Linux builds are now a separate `dev` flavor. Existing nightly Flatpak installs are migrated automatically\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android"
+      "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/0.17.0/nesd.0.17.0.android.apk"
     },
     "nesoid": {
       "version": "2.5-4",
@@ -893,11 +891,10 @@
       "releaseNotes": "openMSX 21.0 has many improvements on the new GUI introduced in openMSX 20.0 (especially the debugger) and several other smaller features. It also introduces the \"setups\" concept, which enables you to define an MSX setup (e.g. a Philips VG 8020 with an external disk drive and a joystick, data recorder and printer connected). These can be created, loaded, and automatically started. They can also be saved automatically when you exit.\r\n\r\nFurthermore, flash chip emulation has become a lot more accurate, thanks to Laurens Holst."
     },
     "padforge": {
-      "version": "latest-v4-dev",
-      "releaseDate": "2026-08-23T14:17:38Z",
-      "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32644630615",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/32644630615"
+      "version": "4.3.2",
+      "releaseDate": "2026-08-23T16:37:21Z",
+      "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/v4.3.2",
+      "releaseNotes": "<p align=\"center\">\r\n  <a href=\"https://www.softpedia.com/get/Gaming-Related/PadForge.shtml\"><img src=\"https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.3.2/screenshots/softpedia-excellent-editors-review-award.png\" alt=\"Softpedia Editor's Pick: rated 5 out of 5, Excellent\" height=\"120\"></a>\r\n</p>\r\n\r\n<p align=\"center\"><b>PadForge is a Softpedia Editor's Pick: rated 5/5, Excellent.</b><br>\r\n<i>\"PadForge shines best in its incredibly vast range of supported controller types.\"</i> (<a href=\"https://www.softpedia.com/get/Gaming-Related/PadForge.shtml\">Softpedia's editor review</a>)</p>\r\n\r\nThe DualSense headset jack gets a processing chain: **crossfeed, a graphic parametric EQ with AutoEq import, and a limiter**. **Follow Headphone Jack** works without a virtual DualSense on the slot. And **slot Copy and Paste carry the whole slot**, macros included.\r\n\r\n| Crossfeed, the graphic EQ, and the limiter | The Audio tab |\r\n|:---:|:---:|\r\n| ![The Audio tab scrolled to the crossfeed picker, the EQ curve, and the limiter](https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.3.2/screenshots/audio-dsp.jpg) | ![The Audio tab with its mirror source picker and master volume](https://raw.githubusercontent.com/hifihedgehog/PadForge/v4.3.2/screenshots/audio.jpg) |\r\n\r\n## A processing chain for the DualSense headset jack\r\n\r\nUnder Output Path on the Audio tab, three stages run on everything the slot plays, mirror audio and macro sounds alike, before the pad encodes it. All three are per pad per slot, and every row has a reset button.\r\n\r\n**Crossfeed.** Headphones hand each ear one channel and nothing of the other, which never happens with speakers and is part of why hard-panned game audio wears on you over the jack. Crossfeed mixes a little of each channel into the other the way a room does. The picker carries bs2b's six classic presets, each shown with the cutoff and feed it stores, plus Jan Meier (650 Hz at 9.5 dB, the one most headphone listeners reach for), the bs2b default, and a Custom level with its own Cutoff and Feed sliders on libbs2b's own ranges. It runs only on a genuine stereo route: Default, Headphones (Stereo), or Follow Headphone Jack with something plugged in. The mono headset paths and Speaker Only are skipped rather than run over a mono mix.\r\n\r\n**A graphic parametric EQ.** Turn it on and a log-frequency curve from 20 Hz to 20 kHz appears with the summed response drawn across it and one handle per band. Drag a handle to move its frequency and gain. Roll the wheel over it to widen or narrow it. Under the curve each band has a row you can type into: on, type, frequency, gain, Q. Six band types: Peak, Low Shelf, High Shelf, High Pass, Low Pass, Notch.\r\n\r\n**AutoEq import.** Open autoeq.app, choose your headphones, download the Custom Parametric Eq, and click Import from file. The bands, the preamp AutoEq ships so its boosts do not clip, and the enable all land, and a status line under the buttons says what it did. The Graphic Eq download carries no filter lines and cannot be imported, and the status line says so instead of doing nothing. Import from clipboard stays for profiles that arrive as text.\r\n\r\n**A limiter.** On by default, with a Ceiling slider. The chain sits upstream of the pad's audio encoder, so a band boosted by a few dB without a limiter clips the encoder, and encoder clipping sounds far worse than the boost sounds better.\r\n\r\nThe crossfeed filter is a C# port of Boris Mikhaylov's bs2b as vendored in openal-soft, MIT, attributed on the About page, in LICENSE, and in the README. Its coefficients come from libbs2b's own derivation rather than a hardcoded table, and the two filters sum to exactly unity at DC, which the tests use as a precise check across every preset and the whole Custom range.\r\n\r\n## Follow Headphone Jack, without a virtual DualSense\r\n\r\nThe jack bit was only ever read by the virtual-pad lane. With no virtual DualSense on the slot it was never observed, Follow Headphone Jack resolved to the firmware…"
     },
     "panda3ds": {
       "version": "0.9",
@@ -1247,10 +1244,10 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_edge_pc": {
-      "version": "ed0e061",
-      "releaseDate": "2026-08-23T05:49:24Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/ed0e061",
-      "releaseNotes": "### Changes\n\n- [VFS] Hide the package thumbnail from guest enumeration (`ed0e061`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/d624e09...ed0e061"
+      "version": "f63a300",
+      "releaseDate": "2026-08-23T15:53:52Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/f63a300",
+      "releaseNotes": "### Changes\n\n- Merge commit 'e87321b06' into edge (`f63a300`)\n- [GPU] Fix 2x-as-4x cvar typo (`e87321b`)\n- [Base/VFS] Collate ListFiles so directory order is portable (`accaef3`)\n- [Base] Fix upper_ascii lowercasing instead of uppercasing (`a7a3eab`)\n- [VFS] Refresh host entry timestamps on update (`211e7d9`)\n- [XboxKrnl/IO] Refresh entry info in NtQueryFullAttributesFile (`33f3a47`)\n- [MISC] - Replace magic numbers with named error codes (`a5262a9`)\n- [Linux] use memfd by default, fallback to shm_open, add use_shm_open cvar (`cfb81bf`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/ed0e061...f63a300"
     },
     "xenia_manager": {
       "version": "4.3.2",
