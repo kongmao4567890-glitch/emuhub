@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T10:55:47Z",
+  "generatedAt": "2026-08-24T13:16:08Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -805,11 +805,11 @@
       "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases/tag/Pre-release"
     },
     "nesd": {
-      "version": "0.17.0",
-      "releaseDate": "2026-08-23T15:14:53Z",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/0.17.0",
-      "releaseNotes": "**Looking for Android testers!**  \nGoogle Play requires 12 testers to opt in and actually use the app for 14 days before a new app can be published. If you'd like to help NESd get onto the Play Store, sign up in [Discussions](https://github.com/jpjonte/NESd/discussions/322).\n\n### Added\n- Built in graphics filters: CRT and smooth\n- Display tool: adjust filter, scaling, aspect ratio and border while the game is running\n- Support for mapper 45 (GA23C), used by MMC3-based multicart cartridges\n- Fuzzy matching in the file picker search bar, with the best matches listed first\n- A log viewer (Settings → Debug → View log) with per-line context, copy and file export, plus a rolling log file\n\n### Changed\n- Nightly Linux builds are now a separate `dev` flavor. Existing nightly Flatpak installs are migrated automatically\n- Debug tools are now opened from the in-game menu under \"Tools\" instead of the Debug settings tab, and can be bound to keys or gamepad buttons. Panels you had open are carried over\n- The execution log now shares the debug tool column instead of taking a column of its own\n- Gamepad input now uses the upstream gamepads plugin with normalized button and axis names on all platforms. Saved gamepad bindings are translated automatically where possible\n- Upgraded to Flutter 3.47 and Dart 3.13. The minimum supported macOS version is now 12.0 (Monterey)\n\n### Fixed\n- Fixed control binders on touch screens deactivating right after being tapped, making it impossible to assign a binding by touch\n- Fixed the ROM grid on the main menu and the save state screen overflowing on phones and narrow windows\n- Fixed opening a debug tool in a narrow window squeezing the game display down to nothing\n- Fixed the debug tools overlapping each other when several are open at once\n- Fixed the arm64 deb and flatpak missing from release pages because the x64 files overwrote them\n- Fixed rewind on macOS being unavailable on Intel Macs and on macOS older than 26.4, because the bundled LZ4 library was built only for Apple Silicon. It is now a universal binary that runs on macOS 12.0 and later\n- Fixed GPU rendering on macOS silently falling back to the CPU renderer\n- Fixed rewinding showing black frames and flickering\n- Fixed graphics corrupting in battery-backed games when a save state was loaded by starting the game from the main menu\n- Fixed ROM thumbnails staying black on Android",
-      "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/0.17.0/nesd.0.17.0.android.apk"
+      "version": "nightly",
+      "releaseDate": "2026-08-24T13:15:31Z",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
+      "devDownloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk"
     },
     "nesoid": {
       "version": "2.5-4",
@@ -974,10 +974,10 @@
       "releaseNotes": "• Turnip Driver Unified MrPurple\n• Unified: A6XX, A7XX, A8XX\n• READ IT before all, please.\n━━━━━━ ×✕× ━━━━━━\n- Driver Version: 26.3.0-devel\n- Version: T-30\n- Vulkan Version: 1.4.359\n- By: Mr_Purple_666\n━━━━━━ ×✕× ━━━━━━\n- Changelog:\n•Upstream to latest Mesa source\n•All T-29 changes\n•Partially dropped A710 and A720 for now (there were several bugs related to these devices)\n•Fixed 6XX and A7XX Support\n•Fixed some weird bugs/problems that have in T29\n•Fixed graphical issues present in the test versions (and T-29).\n•Should be way more stable now\n\n• Eden, Vita3K, YUZU (and forks)(12+)  compatible\n• Check Note :)\n• Android 11+\n\nNOTE:\n•Test and tell me feedback\n•No AYN and RP testers showed up to test it in test phase.\n•Big thanks to DiskDVD\n•Thank you for still being here after so long ❤️\n•Just out of time, hope you like this :)\n• You can support me through Kofi:\n- https://ko-fi.com/mrpurple666\n\nACKNOWLEDGMENTS:\n- DiskDVD\n- Whitebelyash\n- Jose Elisio Neves\n- Moham900900\n- BGaming02\n- SweetKillerNyaaa\n- All testers"
     },
     "qualcomm_driver": {
-      "version": "26.3.0-R3",
-      "releaseDate": "2026-08-04T18:37:14Z",
-      "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v26.3.0-R3",
-      "releaseNotes": "for Adreno A7xx And A6xx\r\n\r\nBased on latest commits from mesa with latest fixes and improvements\r\n\r\nhttps://gitlab.freedesktop.org/mesa/mesa\r\n\r\nVulkan version: 1.4.358"
+      "version": "26.3.0-R4",
+      "releaseDate": "2026-08-24T12:44:02Z",
+      "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v26.3.0-R4",
+      "releaseNotes": "for Adreno A7xx And A6xx\r\n\r\nBased on latest commits from mesa with latest fixes and improvements\r\n\r\nhttps://gitlab.freedesktop.org/mesa/mesa\r\n\r\nVulkan version: 1.4.359"
     },
     "retroarch": {
       "version": "1.22.2",
@@ -1132,16 +1132,16 @@
       "downloadUrl": "https://github.com/twelvehouse/TamaDroid/releases/download/v0.2.1/TamaDroid-0.2.1.apk"
     },
     "turnip_adreno": {
-      "version": "26.3.0-R3",
-      "releaseDate": "2026-08-04T18:37:14Z",
-      "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v26.3.0-R3",
-      "releaseNotes": "for Adreno A7xx And A6xx\r\n\r\nBased on latest commits from mesa with latest fixes and improvements\r\n\r\nhttps://gitlab.freedesktop.org/mesa/mesa\r\n\r\nVulkan version: 1.4.358"
+      "version": "26.3.0-R4",
+      "releaseDate": "2026-08-24T12:44:02Z",
+      "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v26.3.0-R4",
+      "releaseNotes": "for Adreno A7xx And A6xx\r\n\r\nBased on latest commits from mesa with latest fixes and improvements\r\n\r\nhttps://gitlab.freedesktop.org/mesa/mesa\r\n\r\nVulkan version: 1.4.359"
     },
     "turnip_gen8": {
-      "version": "26.3.0-R3",
-      "releaseDate": "2026-08-04T18:37:14Z",
-      "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v26.3.0-R3",
-      "releaseNotes": "for Adreno A7xx And A6xx\r\n\r\nBased on latest commits from mesa with latest fixes and improvements\r\n\r\nhttps://gitlab.freedesktop.org/mesa/mesa\r\n\r\nVulkan version: 1.4.358"
+      "version": "26.3.0-R4",
+      "releaseDate": "2026-08-24T12:44:02Z",
+      "sourceUrl": "https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v26.3.0-R4",
+      "releaseNotes": "for Adreno A7xx And A6xx\r\n\r\nBased on latest commits from mesa with latest fixes and improvements\r\n\r\nhttps://gitlab.freedesktop.org/mesa/mesa\r\n\r\nVulkan version: 1.4.359"
     },
     "vavi_appleii": {
       "version": "1.1.0",
@@ -1246,10 +1246,10 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_edge_pc": {
-      "version": "bbb6063",
-      "releaseDate": "2026-08-24T07:56:40Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/bbb6063",
-      "releaseNotes": "### Changes\n\n- [GPU] Match Canary's alpha bias in 2_10_10_10_FLOAT resolves (`bbb6063`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/f63a300...bbb6063"
+      "version": "9d8210b",
+      "releaseDate": "2026-08-24T13:10:23Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/9d8210b",
+      "releaseNotes": "### Changes\n\n- [APU] Follow the sub-stream skip chain past frameless packets (`9d8210b`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/bbb6063...9d8210b"
     },
     "xenia_manager": {
       "version": "4.3.2",
