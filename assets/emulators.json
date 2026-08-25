@@ -1,6 +1,6 @@
 {
-  "version": "3.8.7",
-  "lastUpdated": "2026-08-19",
+  "version": "3.8.8",
+  "lastUpdated": "2026-08-25",
   "consoles": [
     {
       "id": "multi_system",
@@ -2281,6 +2281,28 @@
       "description": "索尼PlayStation Vita，2011年发售的掌机，搭载ARM Cortex-A9四核处理器和5寸OLED屏。双摇杆设计适合FPS和动作游戏，支持触摸屏和背触板， Remote Play可远程游玩PS4游戏。虽商业表现不佳但拥有大量精品独立游戏",
       "emulators": [
         {
+          "id": "vita3k_plus",
+          "name": "Vita3K+",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/nckstwrt/Vita3K-Plus",
+          "playStoreId": "",
+          "website": "https://vita3k.org/",
+          "core": "Vita3K",
+          "compatibility": "medium",
+          "minAndroid": "9.0",
+          "description": "Vita3K社区增强分支，重点补充游戏兼容性与渲染修复。v1.0改善《杀戮地带》《抵抗：燃烧苍穹》《刺客信条III：解放》《小小大星球》等游戏，主要面向高端设备；Android建议使用Adreno GPU与Turnip驱动。当前Release提供Android和Windows版本，实验性改动也可能令个别游戏回退",
+          "downloadUrl": "https://github.com/nckstwrt/Vita3K-Plus/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/vita3k.png",
+          "platforms": [
+            "android",
+            "windows"
+          ],
+          "desktopRequirements": "64位Windows 10/11；支持Vulkan的GPU，建议使用较高性能硬件"
+        },
+        {
           "id": "vita3k",
           "name": "Vita3K",
           "openSource": true,
@@ -3615,6 +3637,26 @@
       "description": "微软Xbox，2001年发售的第六世代家用主机，搭载Intel Pentium III处理器和Nvidia NV2A图形芯片。首创内置硬盘和Xbox Live在线服务，《光环》系列定义了主机FPS体验。销量超2400万台，标志微软进军游戏机市场",
       "emulators": [
         {
+          "id": "xenra_og",
+          "name": "Xenra",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Yebot32/xenra",
+          "playStoreId": "",
+          "website": "https://github.com/Yebot32/xenra",
+          "core": "x1 box / XenDroid",
+          "compatibility": "low",
+          "minAndroid": "10.0",
+          "description": "面向Android的原Xbox与Xbox 360双世代模拟器，由x1 box和XenDroid整合发展而来。v0.3.6官方发行说明称原Xbox模式已支持1.25×、1.5×和2×帧生成。仅支持XISO/ISO，需ARM64与Vulkan，建议6GB以上内存；项目仍处早期实验阶段",
+          "downloadUrl": "https://github.com/Yebot32/xenra/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xenra.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
           "id": "xemu",
           "name": "xemu",
           "openSource": true,
@@ -3825,6 +3867,26 @@
       "imagePath": "assets/consoles/xbox_360.jpg",
       "description": "微软Xbox 360，2005年发售的第七世代家用主机，搭载IBM PowerPC三核处理器和ATI Xenos GPU。以Xbox Live在线服务和高清游戏体验定义了第七世代，首发带来《完美黑暗零》《战争机器》系列。全球销量超8400万台",
       "emulators": [
+        {
+          "id": "xenra_360",
+          "name": "Xenra",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Yebot32/xenra",
+          "playStoreId": "",
+          "website": "https://github.com/Yebot32/xenra",
+          "core": "x1 box / XenDroid",
+          "compatibility": "low",
+          "minAndroid": "10.0",
+          "description": "面向Android的原Xbox与Xbox 360双世代模拟器。v0.3.6官方发行说明称Xbox 360模式已支持1.25×、1.5×和2×帧生成，并改进GTA V启动、GPU处理、存档导入及游戏数据管理。需ARM64、Vulkan与Android 10以上，建议6GB以上内存；兼容性仍在持续完善",
+          "downloadUrl": "https://github.com/Yebot32/xenra/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xenra.png",
+          "platforms": [
+            "android"
+          ]
+        },
         {
           "id": "ax360e",
           "name": "aX360e",

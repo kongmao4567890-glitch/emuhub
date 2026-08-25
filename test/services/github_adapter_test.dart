@@ -820,6 +820,145 @@ void main() {
       'v0.3.1-beta/WinNative-v0.3.1-beta-Standard-signed.apk',
     );
   });
+
+  test('prefers the free Green APK over a paid Gold variant', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (options.method == 'HEAD' && path.endsWith('/releases/latest')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 302,
+                headers: Headers.fromMap({
+                  'location': [
+                    'https://github.com/Yebot32/xenra/releases/tag/v0.3.6',
+                  ],
+                }),
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/v0.3.6')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '''
+<a href="/Yebot32/xenra/releases/download/v0.3.6/Xenra-GOLD-0.3.6-arm64-universal-release.apk">Gold</a>
+<a href="/Yebot32/xenra/releases/download/v0.3.6/Xenra-0.3.6-green-release.apk">Green</a>
+''',
+              ),
+            );
+            return;
+          }
+          if (path.endsWith('/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                  '/Yebot32/xenra/releases/tag/v0.3.6',
+                  'Xenra 0.3.6',
+                  '2026-08-24T11:15:16Z',
+                  'Frame generation for both Xbox generations.',
+                ),
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _xenra(),
+      includeDetails: true,
+    );
+
+    expect(result?.version, '0.3.6');
+    expect(result?.releaseDate, DateTime.parse('2026-08-24T11:15:16Z'));
+    expect(
+      result?.downloadUrl,
+      'https://github.com/Yebot32/xenra/releases/download/'
+      'v0.3.6/Xenra-0.3.6-green-release.apk',
+    );
+  });
+
+  test('prefers the free Green APK from GitHub API assets', () async {
+    final dio = Dio();
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          if (options.uri.host == 'api.github.com' &&
+              path.endsWith('/repos/Yebot32/xenra/releases')) {
+            handler.resolve(
+              Response<List<dynamic>>(
+                requestOptions: options,
+                statusCode: 200,
+                data: [
+                  {
+                    'tag_name': 'v0.3.6',
+                    'published_at': '2026-08-24T11:15:16Z',
+                    'body': 'Frame generation for both Xbox generations.',
+                    'assets': [
+                      {
+                        'name':
+                            'Xenra-GOLD-0.3.6-arm64-universal-release.apk',
+                        'browser_download_url':
+                            'https://github.com/Yebot32/xenra/releases/'
+                                'download/v0.3.6/'
+                                'Xenra-GOLD-0.3.6-arm64-universal-release.apk',
+                      },
+                      {
+                        'name': 'Xenra-0.3.6-green-release.apk',
+                        'browser_download_url':
+                            'https://github.com/Yebot32/xenra/releases/'
+                                'download/v0.3.6/'
+                                'Xenra-0.3.6-green-release.apk',
+                      },
+                    ],
+                  },
+                ],
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+              response: Response<void>(
+                requestOptions: options,
+                statusCode: 404,
+              ),
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _xenra(),
+    );
+
+    expect(result?.version, '0.3.6');
+    expect(result?.releaseDate, DateTime.parse('2026-08-24T11:15:16Z'));
+    expect(
+      result?.downloadUrl,
+      'https://github.com/Yebot32/xenra/releases/download/'
+      'v0.3.6/Xenra-0.3.6-green-release.apk',
+    );
+  });
 }
 
 String _releaseCard(
@@ -886,6 +1025,23 @@ Emulator _winNative() {
     minAndroid: '8.0',
     description: 'test',
     downloadUrl: 'https://github.com/WinNative-Emu/WinNative/releases',
+  );
+}
+
+Emulator _xenra() {
+  return const Emulator(
+    id: 'xenra_360',
+    name: 'Xenra',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/Yebot32/xenra',
+    playStoreId: '',
+    website: 'https://github.com/Yebot32/xenra',
+    core: 'x1 box / XenDroid',
+    compatibility: 'low',
+    minAndroid: '10.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/Yebot32/xenra/releases',
   );
 }
 

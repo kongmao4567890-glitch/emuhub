@@ -37,6 +37,51 @@ RETENTION_DAYS = 90
 ANDROID_NEWS_LIMIT = 30
 ANDROID_NEWS_PREFIX = "android-release-"
 ANDROID_TRANSLATION_VERSION = 3
+CURATED_ANDROID_RELEASE_NOTES = {
+    (
+        "https://github.com/nckstwrt/Vita3K-Plus/releases/tag/v1.0",
+        "1.0",
+    ): (
+        "• 首个增强与修复版本\n"
+        "• 《杀戮地带》《刺客信条 3》《使命召唤》《小小大星球》等游戏已可运行\n"
+        "• 主要面向高性能设备\n"
+        "• 当前仅提供 Windows 和 Android 版本"
+    ),
+    (
+        "https://github.com/Yebot32/xenra/releases/tag/v0.3.6",
+        "0.3.6",
+    ): (
+        "Xenra 0.3.6 带来了多项兼容性、性能和易用性改进，包括《GTA V》进入游戏、"
+        "Xbox 初代与 Xbox 360 双平台帧生成、GPU 处理优化、存档导入，以及重要的 "
+        "Xbox 360 修复。\n\n"
+        "重要升级提示\n"
+        "请直接覆盖安装 Xenra 0.3.6，不要卸载旧版，否则配置、用户档案和着色器缓存"
+        "会被删除。\n\n"
+        "游戏与性能\n"
+        "• 《GTA V》：修复 NetDll_select 调度问题导致的黑屏卡死；初步测试已能以约 "
+        "25 FPS 进入游戏。\n"
+        "• 帧生成：Xbox 初代和 Xbox 360 均新增 1.25 倍、1.5 倍和 2 倍帧生成模式。\n"
+        "• 核心性能：优化编译代码的同步，并精简多个高频执行路径。\n\n"
+        "图形与系统设置\n"
+        "• GPU 驱动：系统 GPU 驱动选择现在会在应用重启后正确保留。\n"
+        "• GPU 回读：修正 Adreno 设备默认的 Resolve 回读配置。\n"
+        "• 单游戏设置：重做设置界面，仅显示已覆盖的选项，并新增可搜索的设置选择器。\n"
+        "• HUD：修复强制最高 GPU 频率时错误显示“GPU 0%”的问题。\n\n"
+        "管理与兼容性\n"
+        "• 存档导入：可导入下载的 Xbox 360 存档包，并自动分配给当前登录的用户档案。\n"
+        "• Xbox 360 游戏数据：恢复游戏数据的安装和管理功能。\n"
+        "• 外部启动：修复从外部文件管理器打开 Xbox 360 游戏时未进入正确模拟器路径的"
+        "问题。\n\n"
+        "已知问题\n"
+        "• Xbox Live 功能仍不可用。\n"
+        "• NetDll_select 修复后，尚未重新测试 System Link 加入功能。\n"
+        "• 移动设备上的 Xbox 360 温控表现没有变化。\n"
+        "• 尚未支持多光盘切换。\n\n"
+        "构建信息\n"
+        "官方 Green 与 Gold 构建均使用 Xenra 官方发布密钥签名。本应用提供的下载链接"
+        "指向免费 Green 版本（Ali.Xanite.green，版本代码 30）。"
+    ),
+}
 MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
@@ -401,7 +446,11 @@ def build_android_release_articles(
         article_id = f"{ANDROID_NEWS_PREFIX}{emulator_id}-{safe_version or digest[:10]}"
         previous_article = previous_generated.get(article_id)
         previous_content = str((previous_article or {}).get("content", ""))
-        if (
+        curated_notes = CURATED_ANDROID_RELEASE_NOTES.get((source_url, version))
+        if curated_notes:
+            content = f"{intro}\n\n官方更新说明（中文）：\n\n{curated_notes}"
+            translation_pending = False
+        elif (
             previous_article
             and previous_article.get("contentHash") == digest
             and "官方更新说明（中文）：" in previous_content

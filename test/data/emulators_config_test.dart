@@ -223,6 +223,7 @@ void main() {
       'firebird': {'android', 'windows', 'linux', 'macos'},
       'ymir_pc': {'windows', 'linux', 'macos'},
       'duckstation_gpl': {'android', 'windows', 'linux', 'macos'},
+      'vita3k_plus': {'android', 'windows'},
       'vita3k_pc': {'android', 'windows', 'linux', 'macos'},
       'xenios': {'macos'},
     };
@@ -234,7 +235,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 317);
+    expect(emulatorIds.length, 320);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -271,6 +272,28 @@ void main() {
     final watermelonDSIcon = await rootBundle.load(watermelonDS.iconPath);
     expect(watermelonDSIcon.lengthInBytes, greaterThan(0));
 
+    final vita3kPlus = config.consoles
+        .singleWhere((console) => console.id == 'psvita')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'vita3k_plus');
+    expect(vita3kPlus.name, 'Vita3K+');
+    expect(vita3kPlus.openSource, isTrue);
+    expect(vita3kPlus.sourceType, 'github');
+    expect(
+      vita3kPlus.sourceUrl,
+      'https://github.com/nckstwrt/Vita3K-Plus',
+    );
+    expect(
+      vita3kPlus.downloadUrl,
+      'https://github.com/nckstwrt/Vita3K-Plus/releases',
+    );
+    expect(vita3kPlus.core, 'Vita3K');
+    expect(vita3kPlus.compatibility, 'medium');
+    expect(vita3kPlus.minAndroid, '9.0');
+    expect(vita3kPlus.platforms, ['android', 'windows']);
+    final vita3kPlusIcon = await rootBundle.load(vita3kPlus.iconPath);
+    expect(vita3kPlusIcon.lengthInBytes, greaterThan(0));
+
     final armsx3 = config.consoles
         .singleWhere((console) => console.id == 'ps3')
         .emulators
@@ -284,6 +307,31 @@ void main() {
     expect(armsx3.platforms, ['android']);
     final armsx3Icon = await rootBundle.load(armsx3.iconPath);
     expect(armsx3Icon.lengthInBytes, greaterThan(0));
+
+    final xenraOg = config.consoles
+        .singleWhere((console) => console.id == 'xbox')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'xenra_og');
+    final xenra360 = config.consoles
+        .singleWhere((console) => console.id == 'xbox_360')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'xenra_360');
+    for (final xenra in [xenraOg, xenra360]) {
+      expect(xenra.name, 'Xenra');
+      expect(xenra.openSource, isTrue);
+      expect(xenra.sourceType, 'github');
+      expect(xenra.sourceUrl, 'https://github.com/Yebot32/xenra');
+      expect(
+        xenra.downloadUrl,
+        'https://github.com/Yebot32/xenra/releases',
+      );
+      expect(xenra.core, 'x1 box / XenDroid');
+      expect(xenra.compatibility, 'low');
+      expect(xenra.minAndroid, '10.0');
+      expect(xenra.platforms, ['android']);
+      final xenraIcon = await rootBundle.load(xenra.iconPath);
+      expect(xenraIcon.lengthInBytes, greaterThan(0));
+    }
 
     final purpleTurnip = config.consoles
         .singleWhere((console) => console.id == 'gpu_drivers')
@@ -451,6 +499,9 @@ void main() {
         'nethersx2_lsfg',
         'winlator',
         'joiplay',
+        'vita3k_plus',
+        'xenra_og',
+        'xenra_360',
       }),
     );
 

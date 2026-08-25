@@ -124,11 +124,16 @@ def display_version(release: dict) -> str:
 
 def apk_priority(name: str) -> int:
     value = name.lower()
+    tokens = set(re.split(r"[^a-z0-9]+", value))
     score = 0
     if any(part in value for part in ("arm64", "aarch64", "arm64-v8a")):
         score += 100
     if any(part in value for part in ("standard", "vanilla", "universal")):
         score += 60
+    if tokens.intersection({"free", "green"}):
+        score += 20
+    if tokens.intersection({"gold", "paid", "patreon", "premium"}):
+        score -= 1000
     if any(part in value for part in ("ludashi", "pubg", "antutu", "benchmark")):
         score -= 80
     if "debug" in value:

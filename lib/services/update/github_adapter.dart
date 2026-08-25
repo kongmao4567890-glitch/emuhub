@@ -1247,6 +1247,10 @@ class GitHubReleasesAdapter implements VersionAdapter {
 
   int _apkAssetPriority(String rawName) {
     final name = rawName.toLowerCase();
+    final tokens = name
+        .split(RegExp(r'[^a-z0-9]+'))
+        .where((token) => token.isNotEmpty)
+        .toSet();
     var score = 0;
 
     if (name.contains('arm64') ||
@@ -1258,6 +1262,15 @@ class GitHubReleasesAdapter implements VersionAdapter {
         name.contains('vanilla') ||
         name.contains('universal')) {
       score += 60;
+    }
+    if (tokens.contains('free') || tokens.contains('green')) {
+      score += 20;
+    }
+    if (tokens.contains('gold') ||
+        tokens.contains('paid') ||
+        tokens.contains('patreon') ||
+        tokens.contains('premium')) {
+      score -= 1000;
     }
     if (name.contains('ludashi') ||
         name.contains('pubg') ||
