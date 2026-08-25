@@ -25,6 +25,19 @@ class _NewsPageState extends ConsumerState<NewsPage> {
   _NewsFilter _filter = _NewsFilter.all;
 
   @override
+  void initState() {
+    super.initState();
+    // The home page also watches the feed, so without invalidation opening the
+    // full news page can reuse an old in-memory result. Always check the cloud
+    // once when this page is opened; pull-to-refresh remains available too.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      ref.invalidate(newsServiceProvider);
+      ref.invalidate(newsFeedProvider);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final feedAsync = ref.watch(newsFeedProvider);
     final favorites = ref.watch(_favoriteEmulatorIdsProvider).valueOrNull ??

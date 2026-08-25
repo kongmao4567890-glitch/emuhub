@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:emuhub/services/news/news_service.dart';
@@ -46,5 +49,63 @@ void main() {
     expect(article.relatedEmulatorIds, <String>['flycast']);
     expect(second.articles.single.id, '136089');
     expect(loads, 1);
+  });
+
+  test('decodes the GitHub Contents API feed before raw fallback', () async {
+    final payload = <String, dynamic>{
+      'generatedAt': '2026-08-24T23:00:00Z',
+      'retentionDays': 90,
+      'articles': <Map<String, dynamic>>[
+        <String, dynamic>{
+          'id': 'fresh',
+          'title': '【Android更新】最新资讯',
+          'originalTitle': 'Latest news',
+          'category': 'android_update',
+          'categoryLabel': 'Android更新',
+          'kind': 'emulator',
+          'publishedAt': '2026-08-24T22:30:00Z',
+          'sourceName': 'EmuHub',
+          'sourceUrl': 'https://example.com/news',
+          'imageUrl': '',
+          'officialUrl': 'https://example.com',
+          'summary': '最新中文摘要',
+          'content': '最新中文正文',
+          'originalContent': 'Latest original content',
+          'platforms': <String>['android'],
+          'relatedEmulatorIds': <String>['fresh'],
+        },
+      ],
+    };
+    final dio = Dio();
+    final requests = <String>[];
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          requests.add(options.uri.toString());
+          handler.resolve(
+            Response<dynamic>(
+              requestOptions: options,
+              statusCode: 200,
+              data: <String, dynamic>{
+                'encoding': 'base64',
+                'content': base64Encode(utf8.encode(jsonEncode(payload))),
+              },
+            ),
+          );
+        },
+      ),
+    );
+    final service = NewsService(
+      dio: dio,
+      contentsUrl: 'https://api.github.test/contents/news.json?ref=main',
+      remoteUrl: 'https://raw.github.test/news.json',
+    );
+
+    final feed = await service.load(forceRefresh: true);
+
+    expect(feed.articles.single.id, 'fresh');
+    expect(requests, hasLength(1));
+    expect(requests.single, startsWith('https://api.github.test/'));
+    expect(requests.single, contains('&news='));
   });
 }

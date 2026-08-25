@@ -14,6 +14,7 @@ import hashlib
 import html
 from html.parser import HTMLParser
 import json
+import os
 import re
 import sys
 import time
@@ -21,6 +22,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
+from urllib.error import HTTPError
 from urllib.parse import urlencode, urljoin
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
@@ -35,6 +37,8 @@ RETENTION_DAYS = 90
 ANDROID_NEWS_LIMIT = 30
 ANDROID_NEWS_PREFIX = "android-release-"
 ANDROID_TRANSLATION_VERSION = 2
+GITHUB_MODELS_URL = "https://models.github.ai/inference/chat/completions"
+DEFAULT_GITHUB_MODEL = "openai/gpt-4.1"
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
 )
@@ -345,14 +349,28 @@ def build_android_release_articles(
             previous_article
             and previous_article.get("contentHash") == digest
             and "官方更新说明（中文）：" in previous_content
+            and not previous_article.get("translationPending", False)
         ):
             content = previous_content
+            translation_pending = False
         else:
-            chinese_notes = (
-                translate_release_notes(release_notes)
-                if release_notes
-                else "官方未提供详细更新说明。"
-            )
+            translation_pending = False
+            try:
+                chinese_notes = (
+                    translate_release_notes(release_notes)
+                    if release_notes
+                    else "官方未提供详细更新说明。"
+                )
+            except Exception as error:
+                translation_pending = True
+                chinese_notes = (
+                    "本版本已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮"
+                    "自动重试，您也可以切换到“原文”查看官方说明。"
+                )
+                print(
+                    f"warning: Android translation pending for {article_id}: {error}",
+                    file=sys.stderr,
+                )
             content = f"{intro}\n\n官方更新说明（中文）：\n\n{chinese_notes}"
         article = {
             "id": article_id,
@@ -377,6 +395,7 @@ def build_android_release_articles(
             "platforms": ["android"],
             "relatedEmulatorIds": candidate["relatedEmulatorIds"],
             "contentHash": digest,
+            "translationPending": translation_pending,
         }
         articles.append(article)
 
@@ -436,7 +455,80 @@ def translate_chunk(value: str) -> str:
     raise RuntimeError(f"translation failed: {last_error}")
 
 
-def translate(value: str) -> str:
+def translate_with_github_models(value: str, source_language: str) -> str:
+    """Translate one complete article with the workflow's GitHub token."""
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN is unavailable")
+    model = os.environ.get("GITHUB_MODEL", DEFAULT_GITHUB_MODEL).strip()
+    payload = json.dumps(
+        {
+            "model": model,
+            "temperature": 0.1,
+            "max_tokens": 8192,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a professional software-news translator. Translate the "
+                        f"following {source_language} text completely into Simplified "
+                        "Chinese. Do not summarize or omit anything. Return only the "
+                        "translation. Preserve paragraph breaks, Markdown, URLs, version "
+                        "numbers, filenames, code, hashes, product names, and every token "
+                        "matching ZZEMUHUBTOKEN00000ZZ exactly."
+                    ),
+                },
+                {"role": "user", "content": value},
+            ],
+        },
+        ensure_ascii=False,
+    ).encode("utf-8")
+    last_error: Exception | None = None
+    for attempt in range(5):
+        request = Request(
+            GITHUB_MODELS_URL,
+            data=payload,
+            method="POST",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "Content-Type": "application/json",
+                "X-GitHub-Api-Version": "2022-11-28",
+                "User-Agent": USER_AGENT,
+            },
+        )
+        try:
+            with urlopen(request, timeout=120) as response:
+                result = json.loads(response.read().decode("utf-8"))
+            choice = result["choices"][0]
+            translated = str(choice["message"]["content"]).strip()
+            if choice.get("finish_reason") == "length":
+                raise RuntimeError("GitHub Models translation was truncated")
+            if translated:
+                return translated
+            raise RuntimeError("GitHub Models returned an empty translation")
+        except HTTPError as error:
+            last_error = error
+            if error.code not in {408, 429, 500, 502, 503, 504}:
+                break
+            retry_after = error.headers.get("Retry-After", "")
+            delay = int(retry_after) if retry_after.isdigit() else 8 * (attempt + 1)
+            time.sleep(min(delay, 60))
+        except Exception as error:  # pragma: no cover - network retry path
+            last_error = error
+            time.sleep(4 * (attempt + 1))
+    raise RuntimeError(f"GitHub Models translation failed: {last_error}")
+
+
+def translate(value: str, source_language: str = "auto-detected") -> str:
+    # GitHub-hosted workflows use the authenticated Models API. This avoids the
+    # shared-IP HTTP 429 failures seen with anonymous Google Translate calls.
+    if os.environ.get("GITHUB_TOKEN", "").strip():
+        try:
+            return translate_with_github_models(value, source_language)
+        except Exception as error:
+            print(f"warning: GitHub Models fallback: {error}", file=sys.stderr)
+
     translated: list[str] = []
     for chunk in chunk_text(value):
         translated.append(translate_chunk(chunk))
@@ -484,7 +576,7 @@ def translate_release_notes(value: str) -> str:
     for pattern in patterns:
         shielded = re.sub(pattern, lambda match: stash(match.group(0)), shielded)
 
-    translated = translate(shielded)
+    translated = translate(shielded, source_language="English")
     for token, raw in protected:
         if token not in translated:
             raise RuntimeError(f"translation damaged protected token: {token}")
@@ -575,10 +667,28 @@ def build_article(
         f"{original_title}\n{original_content}".encode("utf-8")
     ).hexdigest()
 
-    if previous and previous.get("contentHash") == digest and previous.get("content"):
+    if (
+        previous
+        and previous.get("contentHash") == digest
+        and previous.get("content")
+        and not previous.get("translationPending", False)
+    ):
         chinese_content = str(previous["content"])
+        translation_pending = False
     else:
-        chinese_content = translate(original_content)
+        translation_pending = False
+        try:
+            chinese_content = translate(original_content, source_language="French")
+        except Exception as error:
+            translation_pending = True
+            chinese_content = (
+                "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮"
+                "自动重试，您也可以打开“原文”查看完整内容。"
+            )
+            print(
+                f"warning: RSS translation pending for {raw['id']}: {error}",
+                file=sys.stderr,
+            )
 
     image_url = str((previous or {}).get("imageUrl", ""))
     official_url = str((previous or {}).get("officialUrl", ""))
@@ -611,6 +721,7 @@ def build_article(
         "platforms": infer_platforms(clean_title, original_content),
         "relatedEmulatorIds": related_ids(clean_title, emulator_names),
         "contentHash": digest,
+        "translationPending": translation_pending,
     }
 
 
