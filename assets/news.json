@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T01:28:28.999750Z",
+  "generatedAt": "2026-08-25T01:59:59.406966Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -22,14 +22,14 @@
       "officialUrl": "https://github.com/ARMSX2/ARMSX2",
       "summary": "ARMSX2 发布 Android 新版本 2.6.6.8.3，发布日期为2026年08月24日。点击查看官方版本信息与更新说明。",
       "content": "ARMSX2 已发布 Android 最新版本 2.6.6.8.3。\n\n发布日期：2026年08月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n本版本已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以切换到“原文”查看官方说明。",
-      "originalContent": "ARMSX2 2.6.6.8.3\r\n\r\nWhat's new:\r\n\r\nSGSR (Snapdragon Game Super Resolution), upscaling, another option besides FSR 1 and the plain stretch, and the first one written for the hardware this actually runs on. Qualcomm built Snapdragon Game Super Resolution for Adreno, and it does its work in a single pass where FSR 1 takes two, so it costs less to get a sharper picture out of a low internal resolution. Set the resolution to native and pick it under Display upscaler, in Settings or in the in-game menu. Done by @CamilleLaVey, and based on his upstream work on it.\r\n\r\nRapid-fire on the on-screen buttons. Physical buttons have had turbo for a while and the on-screen ones never did. Enter the touch editor, pick a button, and the Turbo chip cycles off, fast, medium and slow. It runs on the same timer as a macro's Frequency, so the fastest settings still produce presses the emulator actually sees, and it stacks with Tap to hold: turn both on and one tap starts the autofire and the next tap stops it. \r\n\r\nDevice temperatures on the performance overlay, on by default. CPU, GPU and battery. Android has no proper API for this and every phone names its sensors differently, so a device that does not expose a usable one shows nothing rather than a made-up number. Can be disabled in the On-Screen tab. \r\n\r\nThe second screen has been improved some more and given some style. It now follows whichever theme you have picked, and changes with it. Also added is the game's cover art, and the rest of what RetroAchievements knows: points earned, your latest unlock, and the rich presence line that says where you actually are in the game. The achievement tile now says which mode those numbers are for, hardcore or casual.  More of the in-game overlay is available on it: VPS, EE, GS and GPU load, frame time, and the same CPU, GPU and battery temperatures.  Action tiles have icons. Pause and Fast Forward swap theirs to show what the tap will do, so a tile no longer grows taller the moment you use it and leaves the row ragged. The clock and battery moved into a bar across the top instead of taking two tiles, the panel scrolls when you put more on it than fits, and tile height is yours to set alongside the column count. Panel background is a choice: the theme's own, the library's backdrop, solid black for an OLED second screen, or an image of your own. A display can be told to stay out of it. Plug into a monitor you would rather not have the panel on, tap Not this screen on the panel itself, and it stays away, including after unplugging and plugging back in.\r\n\r\nThe touch editor panel gets out of the way. It can be collapsed to a single strip with one tap, so you can reach a button underneath it instead of dragging the panel somewhere else first, and it moves itself to the opposite side from whatever you have selected.\r\n\r\nImporting Lossless.dll could be rejected forever. The check was remembered against the path rather than the file, and the importer always writes to the same path, so if that path was ever looked at while nothing was there, the \"unreadable\" answer stuck, and every later import was turned away without the new file being read, and then deleted. It is remembered against the file now. Done by @warley-oliveira",
+      "originalContent": "ARMSX2 2.6.6.8.3\r\n\r\nWhat's new:\r\n\r\nSGSR (Snapdragon Game Super Resolution), upscaling, another option besides FSR 1 and the plain stretch, and the first one written for the hardware this actually runs on. Qualcomm built Snapdragon Game Super Resolution for Adreno, and it does its work in a single pass where FSR 1 takes two, so it costs less to get a sharper picture out of a low internal resolution. Set the resolution to native and pick it under Display upscaler, in Settings or in the in-game menu. Done by @CamilleLaVey, and @xinitrcn1 and based on the upstream work they did.\r\n\r\nRapid-fire on the on-screen buttons. Physical buttons have had turbo for a while and the on-screen ones never did. Enter the touch editor, pick a button, and the Turbo chip cycles off, fast, medium and slow. It runs on the same timer as a macro's Frequency, so the fastest settings still produce presses the emulator actually sees, and it stacks with Tap to hold: turn both on and one tap starts the autofire and the next tap stops it. \r\n\r\nDevice temperatures on the performance overlay, on by default. CPU, GPU and battery. Android has no proper API for this and every phone names its sensors differently, so a device that does not expose a usable one shows nothing rather than a made-up number. Can be disabled in the On-Screen tab. \r\n\r\nThe second screen has been improved some more and given some style. It now follows whichever theme you have picked, and changes with it. Also added is the game's cover art, and the rest of what RetroAchievements knows: points earned, your latest unlock, and the rich presence line that says where you actually are in the game. The achievement tile now says which mode those numbers are for, hardcore or casual.  More of the in-game overlay is available on it: VPS, EE, GS and GPU load, frame time, and the same CPU, GPU and battery temperatures.  Action tiles have icons. Pause and Fast Forward swap theirs to show what the tap will do, so a tile no longer grows taller the moment you use it and leaves the row ragged. The clock and battery moved into a bar across the top instead of taking two tiles, the panel scrolls when you put more on it than fits, and tile height is yours to set alongside the column count. Panel background is a choice: the theme's own, the library's backdrop, solid black for an OLED second screen, or an image of your own. A display can be told to stay out of it. Plug into a monitor you would rather not have the panel on, tap Not this screen on the panel itself, and it stays away, including after unplugging and plugging back in.\r\n\r\nThe touch editor panel gets out of the way. It can be collapsed to a single strip with one tap, so you can reach a button underneath it instead of dragging the panel somewhere else first, and it moves itself to the opposite side from whatever you have selected.\r\n\r\nImporting Lossless.dll could be rejected forever. The check was remembered against the path rather than the file, and the importer always writes to the same path, so if that path was ever looked at while nothing was there, the \"unreadable\" answer stuck, and every later import was turned away without the new file being read, and then deleted. It is remembered against the file now. Done by @warley-oliveira",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx2"
       ],
-      "contentHash": "69d852fd175ed66073ab4bdceb9e4f2e9cb0d0957ac0693a7ed986a8a8b06d69",
+      "contentHash": "95a44ebbb0dc5132e4e5d805739506dbbc5f4e4d7f204ad1e3152f6de64e6f63",
       "translationPending": true
     },
     {
@@ -46,14 +46,14 @@
       "officialUrl": "https://github.com/ARMSX2/ARMSX3",
       "summary": "ARMSX3 发布 Android 新版本 0.9.4.4，发布日期为2026年08月24日。点击查看官方版本信息与更新说明。",
       "content": "ARMSX3 已发布 Android 最新版本 0.9.4.4。\n\n发布日期：2026年08月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n本版本已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以切换到“原文”查看官方说明。",
-      "originalContent": "ARMSX3 0.9.4.4\r\n\r\nWhat's new: \r\n\r\nSGSR (Snapdragon Game Super Resolution), upscaling, another option besides FSR 1 and the plain stretch, and the first one written for the hardware this actually runs on. Qualcomm built Snapdragon Game Super Resolution for Adreno, and it does its work in a single pass where FSR 1 takes two, so it costs less to get a sharper picture out of a low internal resolution. Set the resolution to native and pick it under Display upscaler, in Settings or in the in-game menu. Done by @CamilleLaVey, and based on his upstream work on it. Sharpening now lives in the in-game menu too, not just the settings screen, and is named for whichever upscaler is selected.\r\n\r\nTales of Xillia no longer freezes (may help other games as well). \r\n\r\nTouch layout editor gets out of your way, the editing panel would cover the very buttons you were trying to move, and the only fix was dragging it aside every time. Two changes: a collapse toggle that hides the controls so you can reach what's underneath, and the panel now moves to the opposite half of the screen from whatever widget you select.\r\n\r\nDevice temperatures on the performance overlay: CPU, GPU and battery. On by default, devices that don't expose them show nothing. Can be disabled in the On-Screen tab. \r\n\r\nAudio buffer targeting fixed, a comparison between two different units meant the buffer never widened when it ran short. \r\n\r\nSome improvements to logging, (which help me) \r\n\r\nUpstream RPCS3 merged: flat shading, better DP3 precision, tiled region fixes, opencv 4.14 and more!",
+      "originalContent": "ARMSX3 0.9.4.4\r\n\r\nWhat's new: \r\n\r\nSGSR (Snapdragon Game Super Resolution), upscaling, another option besides FSR 1 and the plain stretch, and the first one written for the hardware this actually runs on. Qualcomm built Snapdragon Game Super Resolution for Adreno, and it does its work in a single pass where FSR 1 takes two, so it costs less to get a sharper picture out of a low internal resolution. Set the resolution to native and pick it under Display upscaler, in Settings or in the in-game menu. Done by @CamilleLaVey, and @xinitrcn1 and based on the upstream work on it. Sharpening now lives in the in-game menu too, not just the settings screen, and is named for whichever upscaler is selected.\r\n\r\nTales of Xillia no longer freezes (may help other games as well). \r\n\r\nTouch layout editor gets out of your way, the editing panel would cover the very buttons you were trying to move, and the only fix was dragging it aside every time. Two changes: a collapse toggle that hides the controls so you can reach what's underneath, and the panel now moves to the opposite half of the screen from whatever widget you select.\r\n\r\nDevice temperatures on the performance overlay: CPU, GPU and battery. On by default, devices that don't expose them show nothing. Can be disabled in the On-Screen tab. \r\n\r\nAudio buffer targeting fixed, a comparison between two different units meant the buffer never widened when it ran short. \r\n\r\nSome improvements to logging, (which help me) \r\n\r\nUpstream RPCS3 merged: flat shading, better DP3 precision, tiled region fixes, opencv 4.14 and more!",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx3"
       ],
-      "contentHash": "050f4785d09292671dde42d731c4f50f2b28bbf0eabab42939d19f2738fb05a8",
+      "contentHash": "2704265e3f13e93cccaacf1af4165118fbb86da9ae898f4265d78ba0b0a81425",
       "translationPending": true
     },
     {
@@ -92,8 +92,8 @@
       "sourceUrl": "https://www.emu-france.com/news/136218-console-winarcadia-v36-62/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/03/warcadia.png",
       "officialUrl": "http://amigan.1emu.net/releases/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "AmiArcadia是Tunix2001的增强型港口，前身为Amiga的“Win Arcadia 2001” （由Gavin Turner设计）。 由James Jacobs和Gavin Turner撰写，此版本实际上是Amiga端口的Windows端口（后端口） ！",
+      "content": "AmiArcadia是Tunix2001的增强型港口，前身为Amiga的“Win Arcadia 2001” （由Gavin Turner设计）。 由James Jacobs和Gavin Turner撰写，此版本实际上是Amiga端口的Windows端口（后端口） ！\n\n仿真系统：\n\n控制台：\n- Emerson Arcadia Family 2001 ： Bandai、Emerson、Grandstand、Hanimex、Intervision、Leisure-Vision、Leonardo、MPT-03、Ormatu、Palladium、Poppy、Robdajet、Rowtron、Tele-Fever、Tempest、Tryom、Tunix等。\n- Interton VC 4000和兼容产品： Acetronic、Cabel、Fountain、Hanimex、Interton、Prinztronic、Radofin、Rowtron、Voltmace、Waddingtons...\n- Elektor电视游戏电脑（ 1979年）\n\nPIPBUG/BINBUG机器：\n- Electronics Australia 77up2/78up5 ， Signetics Adaptable Board Computer ， Eurocard 2650...\n- Signetics Instructor 50 （ 1978年）\n- Signetics TWIN （ 1976年）\n-中央数据2650 （ 1977 ）\n- PHUNSY微型计算机（约1980年）\n- Ravensburger Selbstbaucomputer/2650最小计算机（ 1984年）\n- Hofacker MIKIT 2650 （ 1978年）\n\n街机：\n- Zaccaria Coin-Ops ： Astro Wars、Galaxia、Laser Battle、Lazarian\n- Coin-ops Kitronix ： Malzak 1和2\n\n电子游戏：\n- PONG控制台AY-3-8500/8550/8600 ：\n- Coleco Telstar Galaxy、Sheen TVG-201和其他AY-3-85xx系统\n\n电子教学机：\n- VTech Type-Right （ 1985 ）\n它需要Windows 9x/ME/NT/2000/XP ，也可以在Vista/8/10/11上运行。",
       "originalContent": "AmiArcadia est le port amélioré de Tunix2001 ex 'Win Arcadia 2001' (par Gavin Turner) pour Amiga. Ecrit par James Jacobs et Gavin Turner, cette version est en fait le port Windows du port Amiga (un backport) !\n\nSystèmes émulés:\n\nConsoles:\n- Famille Emerson Arcadia 2001 : Bandai, Emerson, Grandstand, Hanimex, Intervision, Leisure-Vision, Leonardo, MPT-03, Ormatu, Palladium, Poppy, Robdajet, Rowtron, Tele-Fever, Tempest, Tryom, Tunix, etc.\n- Interton VC 4000 et compatibles : Acetronic, Cabel, Fountain, Hanimex, Interton, Prinztronic, Radofin, Rowtron, Voltmace, Waddingtons…\n- Elektor TV Games Computer (1979)\n\nMachines PIPBUG/BINBUG:\n- Electronics Australia 77up2/78up5, Signetics Adaptable Board Computer, Eurocard 2650…\n- Signetics Instructor 50 (1978)\n- Signetics TWIN (1976)\n- Central Data 2650 (1977)\n- PHUNSY microcomputer (c.1980)\n- Ravensburger Selbstbaucomputer / 2650 Minimal Computer (1984)\n- Hofacker MIKIT 2650 (1978)\n\nMachines d'arcade:\n- Coin-ops Zaccaria : Astro Wars, Galaxia, Laser Battle, Lazarian\n- Coin-ops Kitronix : Malzak 1 & 2\n\nJeux électroniques:\n- Consoles Pong AY-3-8500/8550/8600:\n- Coleco Telstar Galaxy, Sheen TVG-201, et autres systèmes AY‑3‑85xx\n\nMachine éducative électronique:\n- VTech Type-Right (1985)\n\nIl nécessite Windows 9x/ME/NT/2000/XP et fonctionne également sous Vista/8/10/11.",
       "platforms": [
         "pc"
@@ -102,7 +102,7 @@
         "winarcadia_pc"
       ],
       "contentHash": "38f045e4db11267ddf8966d799a4013d54455b7f04d9cd35e6dfb49eb3719c8a",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "android-release-fbneo_core-latest",
@@ -141,8 +141,8 @@
       "sourceUrl": "https://www.emu-france.com/news/136214-utilitaires-multi-systemes-shadps4-gui-v347/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/shadps4-gui1.png",
       "officialUrl": "https://shadps4.net/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "shadPS4是一款开源PlayStation 4模拟器。 从0.12.1版开始，它放弃了内置的GUI ，只能在命令行上工作。 为便于使用，提供了一个外部接口。 它允许您通过简单直观的视觉界面启动游戏、配置选项和跟踪性能。 此接口是单独开发的，与shadPS4的未来版本保持兼容。 变更内容： -使用新的依赖项更新building-linux.md (# 421) - [ci skip] Qt GUI ：更新翻译。",
+      "content": "shadPS4是一款开源PlayStation 4模拟器。 从0.12.1版开始，它放弃了内置的GUI ，只能在命令行上工作。\n为便于使用，提供了一个外部接口。 它允许您通过简单直观的视觉界面启动游戏、配置选项和跟踪性能。\n\n此接口是单独开发的，与shadPS4的未来版本保持兼容。\n\n变更内容：\n-使用新的依赖项更新building-linux.md (# 421)\n- [ci skip] Qt GUI ：更新翻译。(# 419)\n-添加上下文菜单项以将游戏文件夹压缩到Zar (# 418)\n-新的Crowdin更新\n-固定杂项",
       "originalContent": "shadPS4 est un émulateur PlayStation 4 open-source. Depuis la version 0.12.1, il abandonne son interface graphique intégrée pour fonctionner uniquement en ligne de commande.\n\nPour faciliter son usage, une interface externe est disponible. Elle permet de lancer des jeux, configurer les options, et suivre les performances via une interface visuelle simple et intuitive.\n\nCette interface est développée séparément et reste compatible avec les futures versions de shadPS4.\n\nLes changements:\n- Update building-linux.md with new dependencies (#421)\n- [ci skip] Qt GUI: Update Translation. (#419)\n- add context menu item to compress game folders to Zar (#418)\n- New Crowdin updates\n- Misc fixes",
       "platforms": [
         "pc"
@@ -151,7 +151,7 @@
         "shadps4_android"
       ],
       "contentHash": "9b783b1cf08a0f81409ca387e52e32e6474553c5a3125895feeb4617f17aee23",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136212",
@@ -165,15 +165,15 @@
       "sourceUrl": "https://www.emu-france.com/news/136212-consoles-de-salon-xenia-v1-0-2844-2026-08-24/",
       "imageUrl": "https://www.youtube.com/embed/r56tCTsijEw",
       "officialUrl": "https://xenia.jp/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master] 。此处提供管理Xenia仿真器的管理器。 - [XContent]允许直接从包装加载内容。",
+      "content": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master]\n。此处提供管理Xenia仿真器的管理器。\n\n- [XContent]允许直接从包装加载内容。\n- [Base]在启动参数中正确支持非ANSI字符\n- [GPU]使用单独的mip页面修复基础地图选择\n- [其他] -更换放错位置的错误代码\n- [GPU]修复2x-as-4x cvar拼写错误\n-固定杂项",
       "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [XContent] Allow loading of content directly from packages.\n- [Base] Proper support for non ANSI characters in launch argument\n- [GPU] Fix base map selection with a separate mip page\n- [MISC] - Swap misplaced error code\n- [GPU] Fix 2x-as-4x cvar typo\n- Misc fixes",
       "platforms": [],
       "relatedEmulatorIds": [
         "xenia_pc"
       ],
       "contentHash": "d39aeddb662e5f8c2a9a738a235746ad963e52b4d0d85a1aa1f68ea7ddc6024c",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "android-release-bachata_s4-0-1-9",
@@ -211,8 +211,8 @@
       "sourceUrl": "https://www.emu-france.com/news/136207-consoles-de-salon-snes9x-testbuild-v1-63-r1626/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/snes9x.png",
       "officialUrl": "http://www.s9x-w32.de/dl/testbuilds/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。 Starfox 2 （ SNES迷你版）的一小部分？ ...或者是法力法语iOS版的秘密？ 算了，我改做《时空之轮》的非正式续集: p 自上次生成以来的更改： - gtk ：从AppImage中的主机获取GTK字体堆栈 -修复用于构建不带SYSTEM_ZIP的解压缩包括 -固定杂项",
+      "content": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。\n\nStarfox 2 （ SNES迷你版）的一小部分？\n\n...或者是法力法语iOS版的秘密？\n算了，我改做《时空之轮》的非正式续集: p\n\n自上次生成以来的更改：\n\n- gtk ：从AppImage中的主机获取GTK字体堆栈\n-修复用于构建不带SYSTEM_ZIP的解压缩包括\n-固定杂项",
       "originalContent": "Il s'agit de la dernière version officielle dite \"instable\" de Snes9x ajoutant les dernières nouveautés, améliorations et/ou corrections en provenance des sources GIT. Versions 32 et 64 bits dans l'archive.\n\nUne petite partie de Starfox 2 (SNES Mini Edition) ?\n\n...ou peut-être un Secret of Mana Français iOS Edition ?\n\nLaissez tomber, je vais me faire la suite non officielle de Chrono Trigger plutôt :p\n\nLes changements depuis le dernier build:\n\n- gtk: take the GTK font stack from the host in the AppImage\n- Fix unzip includes for building w/o SYSTEM_ZIP\n- Misc fixes",
       "platforms": [
         "pc"
@@ -221,7 +221,7 @@
         "snes9x_core"
       ],
       "contentHash": "844412b1352cb3fede342b753175d2fc878ca77ce06f8a45072abba016d4e18e",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136205",
@@ -235,15 +235,15 @@
       "sourceUrl": "https://www.emu-france.com/news/136205-ordi-bochs-v3-1/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2019/12/bochs.jpg",
       "officialUrl": "http://bochs.sourceforge.net/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "Bochs是运行Windows的PC模拟器，它是在开源环境中开发的。它用C + +编写，适用于大多数流行平台。它包括英特尔x86 CPU仿真、通用I/O设备和自定义BIOS 。目前， Bochs可以编译为模拟386、486、Pentium/PentiumII/PentiumIII/Pentium4或x86-64处理器，包括MMX选项、SSEX和3DNow!指令。",
+      "content": "Bochs是运行Windows的PC模拟器，它是在开源环境中开发的。它用C + +编写，适用于大多数流行平台。它包括英特尔x86 CPU仿真、通用I/O设备和自定义BIOS\n。目前， Bochs可以编译为模拟386、486、Pentium/PentiumII/PentiumIII/Pentium4或x86-64处理器，包括MMX选项、SSEX和3DNow!指令。Bochs能够运行模拟器内的大多数操作系统，包括Linux、DOS、Windows ® 95/98和Windows ® NT/2000/XP或Windows Vis\nta/7/8/10/11。\nBochs的“典型”用途是提供完整的x86 PC仿真，包括x86处理器、外设和内存。这使您可以在工作站上的模拟器中运行操作系统和软件，就像在机器内部安装机器一样\n。例如，假设您的工作站是UNIX/X11工作站，但您要运行Win '95应用程序。Bochs将允许您在UNIX/X11工作站上运行WIN 95和相关软件，在工作站上显示窗口，在PC上模拟监视器。",
       "originalContent": "Bochs est un émulateur PC tournant sous Windows, son développement s'effectue en Open Source. Ecrit en C + +, il fonctionne sur la plupart des plates-formes populaires. Il inclut l'émulation des CPU x86 d'Intel, les périphériques E / S courants et un BIOS personnalisé. Actuellement, Bochs peut être compilé pour émuler un processeur 386, 486, Pentium/PentiumII/PentiumIII/Pentium4 ou x86-64, y compris MMX option, SSEX et 3DNow! instructions. Bochs est capable d'exécuter la plupart des systèmes d'exploitation à l'intérieur de l'émulation, y compris Linux, DOS, Windows ® 95/98 et Windows ® NT/2000/XP ou Windows Vista/7/8/10/11.\n\nL'utilisation «typique» de Bochs est de fournir l'émulation PC x86 complète, y compris le processeur x86, des périphériques et la mémoire. Cela vous permet d'exécuter OS et des logiciels au sein de l'émulateur sur votre poste de travail, un peu comme si vous aviez une machine à l'intérieur d'une machine. Par exemple, disons que votre poste est un poste de travail Unix/X11, mais que vous souhaitez exécuter des applications Win'95. Bochs va vous permettre d'exécuter Win 95 et le logiciel associé sur votre poste de travail Unix/X11, affichant une fenêtre sur votre poste de travail, simulant un moniteur sur un PC.",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [],
       "contentHash": "97e682c264ed64c092e3e4c7f0bd4c9850670a74fb6a6302ccb792c67a0e88db",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136203",
@@ -257,13 +257,13 @@
       "sourceUrl": "https://www.emu-france.com/news/136203-ordi-pom2-v0-8-5/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/pom2-emu.png",
       "officialUrl": "https://github.com/habib256/pom2/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。 它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。",
+      "content": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。\n它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。\nPOM2的功能包括复合NTSC渲染、CRT/荧光粉效果、体素3D视图、倒带、模拟许多扩展卡（如Mockingboard、Phasor、Super Serial Card、CFFA 2.0和U Ethernet ） ，以及支持ImageWriter II打印机。\n模拟器支持多种格式的Apple II软盘和媒体（ .dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv ） ，并集成了对磁盘II的忠实模拟。它还通过以太网提供网络支持，甚至可以通过WebAssembly直接在浏览器中运行。",
       "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.",
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "b68f8d41ac62fa93bdb72efa7ff740ce092721249c7761ef377f34b5c062e692",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136199",
@@ -277,15 +277,15 @@
       "sourceUrl": "https://www.emu-france.com/news/136199-ordi-neost-v0-5-4/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/neost.png",
       "officialUrl": "https://github.com/habib256/neost",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "NeoST是基于GPLv3许可证的免费Atari ST/STE模拟器，采用C + +17开发，可通过WebAssembly在计算机上直接播放，如同在Web浏览器中一样（适用于Windows、Linux、MacOS、RasPi、Wasm ） 。",
+      "content": "NeoST是基于GPLv3许可证的免费Atari ST/STE模拟器，采用C + +17开发，可通过WebAssembly在计算机上直接播放，如同在Web浏览器中一样（适用于Windows、Linux、MacOS、RasPi、Wasm ）\n。由于集成了EmuTOS ，它可以立即启动，而无需复杂的配置，它可以管理四台机器（ 520 ST、MEGA ST、STE、MEGA STE从256 KB到4 MB的RAM ）及其专用硬件选项，例如高达16 MHz的处理器、协处理器FPU 68881、DMA声音和微线滤波器。\n在精度方面， NeoST重现了周期处理器（ Moira核心）的精确节奏以及每个硬件芯片的寄存器操作。为了确保绝对保真并运行无错误的图形演示或受保护的游戏（ .st、.msa、.dim、.stx/Pasti、GEMDOS和ACSI硬盘驱动器） ，对其显示进行了比较\n自动，逐帧和到最近的像素，与Hatari的模拟器，这里作为参考比较模型。 它还集成了高级调试器、完全备份状态和软盘驱动器的机械噪音。\nNeoST专为复古盒装复古游戏安装（例如插入电视的树莓派）量身定制，为Hatari带来了两大缺失：\n- 100 ％控制器全屏街机模式：它允许您导航菜单并更换热软盘，而无需键盘或重新启动。\n-智能自适应缩放：图像会自动锁定以删除不必要的边框，但一旦演示打开全屏幕（过度扫描） ，图像就会自动加宽，所有这些都通过着色器再现CRT屏幕的效果来增强。",
       "originalContent": "NeoST est un émulateur Atari ST/STE libre sous licence GPLv3, développé en C++17 et directement jouable sur ordinateur comme dans un navigateur web via WebAssembly (et disponible pour Windows, Linux, MacOS, RasPi, Wasm). Conçu pour démarrer immédiatement sans configuration complexe grâce à l'intégration d'EmuTOS, il gère quatre machines (520 ST, Mega ST, STE, Mega STE de 256 Ko à 4 Mo de RAM) avec leurs options matérielles dédiées, comme le processeur jusqu'à 16 MHz, le coprocesseur FPU 68881, le son DMA et les filtres Microwire.\n\nCôté précision, NeoST reproduit le rythme exact du processeur d'époque (cœur Moira) ainsi que le fonctionnement registre par registre de chaque puce matérielle. Pour garantir une fidélité absolue et faire tourner sans bug les démos graphiques ou les jeux protégés (.st, .msa, .dim, .stx/Pasti, disques durs GEMDOS et ACSI), son affichage est comparé automatiquement, image par image et au pixel près, avec celui d'Hatari, l'émulateur qui sert ici de modèle de comparaison de référence. Il intègre également un débogueur avancé, des états de sauvegarde complets et le bruit mécanique du lecteur de disquette.\n\nPensé sur mesure pour les installations rétrogaming de type « retro-box » (comme un Raspberry Pi branché sur la télévision), NeoST apporte deux atouts majeurs absents d'Hatari :\n\n- Un mode borne d'arcade plein écran 100 % manette : il permet de naviguer dans les menus et de changer de disquette à chaud sans jamais avoir besoin d'un clavier ni de redémarrer.\n- Un zoom adaptatif intelligent : l'image se cale d'elle-même pour supprimer les bordures inutiles, mais s'élargit automatiquement dès qu'une démo ouvre l'écran complet (overscan), le tout sublimé par des shaders reproduisant l'effet d'un écran cathodique (CRT).",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [],
       "contentHash": "cc796ba293a40294caab190423a588f0d294a2b8761c3f5b56d0c15730499016",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136197",
@@ -299,8 +299,8 @@
       "sourceUrl": "https://www.emu-france.com/news/136197-consoles-de-salon-nesd-v0-17/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/03/nesd.png",
       "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "用Dart和Flutter编写的NES模拟器。支持macOS、Windows、Android和Linux （已在Steam平台上测试）。",
+      "content": "用Dart和Flutter编写的NES模拟器。支持macOS、Windows、Android和Linux （已在Steam平台上测试）。",
       "originalContent": "Un émulateur NES écrit en Dart et Flutter. Supporte macOS, Windows, Android et Linux (testé sur Steam Deck).",
       "platforms": [
         "android",
@@ -310,7 +310,7 @@
         "nesd"
       ],
       "contentHash": "a0be8a71d1f1254c7908d98c224336a5ed68f5d58a100c4eed996bd32f8a7b66",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136195",
@@ -324,13 +324,13 @@
       "sourceUrl": "https://www.emu-france.com/news/136195-consoles-de-salon-nintendulator-32-64-bits-v0-985-beta-2026-08-22/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/12/nintendulator.png",
       "officialUrl": "http://www.qmtpro.com/~nes/nintendulator/",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "任天堂NES模拟器Nintendulator的最新测试版。",
+      "content": "任天堂NES模拟器Nintendulator的最新测试版。",
       "originalContent": "Les derniers builds betas de Nintendulator, l'émulateur Nintendo NES.",
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "1d93c535caff2fc7cd10f39daa28e4da616a02a8d490eb40c51a54c400af29ac",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "android-release-duckstation-preview",
@@ -392,13 +392,13 @@
       "sourceUrl": "https://www.emu-france.com/news/134721-mame-support-files-antopisa-s-folders-suite-v0-289/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/09/antopisa-folder-suite.png",
       "officialUrl": "http://www.progettosnaps.net",
-      "summary": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
-      "content": "本条资讯已抓取成功，但自动翻译服务暂时繁忙。系统将在下一轮自动重试，您也可以打开“原文”查看完整内容。",
+      "summary": "根据最新的MAME版本，适用于MAME/MAMEUI和/或前端的新版本Antopisa文件夹套件适用于MAME、前端或模拟器克隆。 BestGames.ini ：此文件受rankings.ini的启发，对MAME模拟的街机游戏进行评级。 请记住，这些是Antopisa的个人评估，不一定符合杂志中普遍接受的评论。",
+      "content": "根据最新的MAME版本，适用于MAME/MAMEUI和/或前端的新版本Antopisa文件夹套件适用于MAME、前端或模拟器克隆。\nBestGames.ini ：此文件受rankings.ini的启发，对MAME模拟的街机游戏进行评级。 请记住，这些是Antopisa的个人评估，不一定符合杂志中普遍接受的评论。\nCHD-Info ：在此存档中，您将找到三个文件： “CHD-Info_vXXX.txt” ，其中包含MAME中可用的所有CHD的详细信息； “CHD_diff_vXXX_vXXX.dat” ，这是管理人员的数据，指示MAME的最后两个已发布版本之间的变化；以及“MAME_CHD_vXXX.dat” ，这是ROM列表管理人员的数据\n所有冠心病患者。\n\nSeries.ini ：此MAMEUI文件夹文件允许您按系列对游戏进行排序。 当然，它应该放在MAME的文件夹子目录（ Arcade ）中。\n\nLanguages.ini ： MAME （ Arcade ）的INI文件，将告诉您游戏使用的语言：日语、英语、中文...\nVersion.ini ：这是一个用于MAMEUI （ Arcade +控制台+计算机）以及MAME （ v0.171及更高版本）的ini文件，可以了解每个游戏中添加它们的MAME版本。\n包含“version.ini”的包还提供专用于MAME的文件： Arcade.ini （街机游戏列表）、Arcade_NOBIOS.ini （街机游戏列表减去BIOS ）和MESS.ini （控制台/电脑游戏列表）。\nCategory.ini ：用于MAME/MAMEUI/MESSUI的文件，允许知道每个游戏中添加它们的MAME的版本或类别。 存档“category.zip”中提供的文件。\n\nMonochrome.ini ：\n这是MAMEUI/MESSUI以及MAME （ v0.171及更高版本）的文件夹，允许对黑白游戏进行分类。 存档“category.zip”中提供的文件。\nResolution.ini ：此文件列出由MAME模拟并按屏幕分辨率排序的所有机器。 放入模拟器的“文件夹”文件夹中。 存档“category.zip”中提供的文件。\nScreenless.ini ：此文件列出所有不显示视频信息的MAME模拟机器（或克隆）。 存档“category.zip”中提供的文件。\nCabinets.ini ：专用于MAME （仅限Arcade ） ，是一个用于按街机终端类型分类的文件（我们在这里讨论的是家具）。 存档“category.zip”中提供的文件。\nFreePlay.ini ：此文件专用于MAME （仅限Arcade ） ，允许您对具有“免费游戏”模式的游戏进行排序。 存档“category.zip”中提供的文件。\n\nDriver.ini ：此文件对MAME由驱动程序模拟的游戏进行分类。 存档“category.zip”中提供的文件。\nMechanicals Arcade ：机械街机列表（完成MAMEUI ）。 存档“category.zip”中提供的文件。\n\n非机械拱廊：非机械拱廊机器列表（完成MAMEUI ）。 存档“category.zip”中提供的文件。\nArcade Originals ：原始街机列表[父母/克隆] （以完成MAMEUI ）。 存档“category.zip”中提供的文件。\n\n街机克隆：街机[parent/clones]的克隆列表（用于完成MAMEUI ）。 存档“category.zip”中提供的文件。\n工作街机：工作的街机列表（完成MAMEUI ）。 存档“category.zip”中提供的文件。\n\n不工作的街机：不工作的街机列表（完成MAMEUI ）。 存档“category.zip”中提供的文件。\nCatlist/Catver.ini ：对MAME/MAMEUI （ FX/Plus ！ ）非常有用的文件夹集合，包含按流派非常完整的排序，以及版本、个人简介、外观、方向、分辨率...\nCatver主要用于前端。（这些是Antopisa的版本，正在等待官方版本）。\n游戏历史：这些是高质量的ini文件，适用于MAMEUI （ Arcade +游戏机+计算机） ，也适用于MAME ，始终是最新的，基于对50多万款游戏的25年研究。 这些文件不是来自Antopisa （但来自Fan2Mame ） ，完全适合本出版物。\n文件将随着您的进度而更新。",
       "originalContent": "Nouvelle version de la suite de folders d'Antopisa pour MAME/MAMEUI et/ou Frontends conforme à la dernière version de MAME en date et valable aussi bien pour MAME, les frontends ou les clones de l'émulateur.\n\nBestGames.ini: Inspiré du rankings.ini, ce fichier donne une note aux jeux d'arcade qu'émule MAME. Rappelez-vous que ce sont les évaluations personnelles d'Antopisa et que cela n'est pas forcément conforme aux avis généralement admis dans les magazines.\n\nCHD-Info: Dans cette archive, vous trouverez trois fichiers: \"CHD-Info_vXXX.txt\", avec des informations détaillées sur tous les CHDs disponible dans MAME; \"CHD_diff_vXXX_vXXX.dat\" qui est un dat pour managers indiquant les changements entre les deux dernières versions publiées de MAME et \"MAME_CHD_vXXX.dat\" qui est un dat pour managers de roms listant tous les CHDs.\n\nSeries.ini: Ce fichier folder pour MAMEUI vous permettra de trier vos jeux par séries. Il est bien sûr à mettre dans le sous-répertoire Folders de MAME(Arcade).\n\nLanguages.ini: Un fichier ini pour MAME(Arcade) qui vous dira le langage qu'utilise le jeu: Japonais, Anglais, Chinois...\n\nVersion.ini: Il s'agit d'un fichier ini destiné à MAMEUI (Arcade + consoles + ordinateurs) mais également à MAME (v0.171 et supérieur) et permettant de connaitre, pour chaque jeux, la version de Mame dans laquelle ils ont été ajoutés.\nLe pack qui inclut le \"version.ini\" propose également les fichiers dédiés à MAME: Arcade.ini (Liste des jeux d'arcade), Arcade_NOBIOS.ini (Liste des jeux d'arcade moins les BIOS) et MESS.ini (Liste des jeux consoles/ordinateurs).\n\nCategory.ini: Fichier destiné à MAME/MAMEUI/MESSUI et permettant de connaitre, pour chaque jeux, la version ou la catégorie de MAME dans laquelle ils ont été ajoutés. Fichier disponible dans l'archive \"category.zip\".\n\nMonochrome.ini:\nIl s'agit d'un folder pour MAMEUI/MESSUI mais aussi pour MAME (v0.171 et supérieur), permettant de classer les jeux qui sont en noir et blanc. Fichier disponible dans l'archive \"category.zip\".\n\nResolution.ini: Ce fichier répertorie toutes les machines émulées par MAME et triées par résolution d'écran. A mettre dans le dossier \"Folders\" de l'émulateur. Fichier disponible dans l'archive \"category.zip\".\n\nScreenless.ini: Ce fichier répertorie toutes les machines émulées par MAME (ou clones) qui n'affichent pas d'informations vidéo. Fichier disponible dans l'archive \"category.zip\".\n\nCabinets.ini: Dédié à MAME (Arcade uniquement), il s'agit d'un fichier permettant de trier par type de borne d'arcade (on parle ici du meuble). Fichier disponible dans l'archive \"category.zip\".\n\nFreePlay.ini: Ce fichier dédié à MAME (Arcade seulement) permet de trier les jeux qui possèdent un mode \"free-play\". Fichier disponible dans l'archive \"category.zip\".\n\nDriver.ini: Ce fichier classe les jeux qu'émule MAME par pilotes. Fichier disponible dans l'archive \"category.zip\".\n\nMechanicals Arcade: Liste des machines d'arcade mécanique (pour compléter MAMEUI). Fichier disponible dans l'archive \"category.zip\".\n\nNon Mechanicals Arcade: Liste des machines d'arcade non mécaniques (pour compléter MAMEUI). Fichier disponible dans l'archive \"category.zip\".\n\nOriginals Arcade: Liste des machines originales d'arcade [parents/clones] (pour compléter MAMEUI). Fichier disponible dans l'archive \"category.zip\".\n\nClones Arcade: Liste des clones des machines d'arcade [parents/clones] (pour compléter MAMEUI). Fichier disponible dans l'archive \"category.zip\".\n\nWorking Arcade: Liste des machines d'arcade qui fonctionnent (pour compléter MAMEUI). Fichier disponible dans l'archive \"category.zip\".\n\nNot Working Arcade: Liste des machines d'arcade qui ne fonctionne pas (pour compléter MAMEUI). Fichier disponible dans l'archive \"category.zip\".\n\nCatlist/Catver.ini: Collections de folders très utiles pour MAME/MAMEUI (FX/Plus!), contenant un tri par genre très complet, et aussi version, bios, aspect, orientation, résolution...\nLe Catver est principalement destiné aux frontends. (il s'agit des versions d'Antopisa, en attendant les versions officielles).\n\nGaming History: Il s'agit de fichiers ini de haute qualité destinés à MAMEUI (Arcade + consoles + ordinateurs) mais également à MAME, toujours à jour et basés sur plus de 25 ans de recherche sur plus de 500 000 jeux. Ces fichiers ne sont pas d'Antopisa (mais de Fan2Mame) et s'intègrent parfaitement dans cette publication.\n\nLes fichiers seront à jour au fur et à mesure.",
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "61eff768aa67290b49be618167a15c292662b8cb91e1bf510448ec59d16185b7",
-      "translationPending": true
+      "translationPending": false
     },
     {
       "id": "136191",
