@@ -41,6 +41,7 @@ MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
 )
+TRANSLATION_DISABLED_REASON = ""
 
 CATEGORY_RULES: tuple[tuple[str, str, str], ...] = (
     ("utilitaire", "tools", "工具"),
@@ -512,11 +513,15 @@ def translate(value: str, source_language: str = "auto-detected") -> str:
     # anonymous Google Translate. A failed translation is marked for the next
     # scheduled run rather than making the entire news refresh wait on another
     # rate-limited provider. Google can still be selected explicitly for repair.
+    global TRANSLATION_DISABLED_REASON
     if os.environ.get("TRANSLATION_PROVIDER", "").casefold() != "google":
+        if TRANSLATION_DISABLED_REASON:
+            raise RuntimeError(TRANSLATION_DISABLED_REASON)
         try:
             return translate_with_mymemory(value, source_language)
         except Exception as error:
-            raise RuntimeError(f"MyMemory translation failed: {error}") from error
+            TRANSLATION_DISABLED_REASON = f"MyMemory translation failed: {error}"
+            raise RuntimeError(TRANSLATION_DISABLED_REASON) from error
 
     translated: list[str] = []
     for chunk in chunk_text(value):
