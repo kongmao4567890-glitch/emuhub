@@ -37,8 +37,7 @@ RETENTION_DAYS = 90
 ANDROID_NEWS_LIMIT = 30
 ANDROID_NEWS_PREFIX = "android-release-"
 ANDROID_TRANSLATION_VERSION = 2
-GITHUB_MODELS_URL = "https://models.github.ai/inference/chat/completions"
-DEFAULT_GITHUB_MODEL = "openai/gpt-4.1"
+MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
 )
@@ -455,79 +454,69 @@ def translate_chunk(value: str) -> str:
     raise RuntimeError(f"translation failed: {last_error}")
 
 
-def translate_with_github_models(value: str, source_language: str) -> str:
-    """Translate one complete article with the workflow's GitHub token."""
-    token = os.environ.get("GITHUB_TOKEN", "").strip()
-    if not token:
-        raise RuntimeError("GITHUB_TOKEN is unavailable")
-    model = os.environ.get("GITHUB_MODEL", DEFAULT_GITHUB_MODEL).strip()
-    payload = json.dumps(
-        {
-            "model": model,
-            "temperature": 0.1,
-            "max_tokens": 8192,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": (
-                        "You are a professional software-news translator. Translate the "
-                        f"following {source_language} text completely into Simplified "
-                        "Chinese. Do not summarize or omit anything. Return only the "
-                        "translation. Preserve paragraph breaks, Markdown, URLs, version "
-                        "numbers, filenames, code, hashes, product names, and every token "
-                        "matching ZZEMUHUBTOKEN00000ZZ exactly."
-                    ),
-                },
-                {"role": "user", "content": value},
-            ],
-        },
-        ensure_ascii=False,
-    ).encode("utf-8")
+def translate_with_mymemory(value: str, source_language: str) -> str:
+    """Translate with MyMemory, chunking below its anonymous query limit."""
+    source = {
+        "french": "fr",
+        "english": "en",
+    }.get(source_language.casefold(), "en")
+    translated_chunks: list[str] = []
     last_error: Exception | None = None
-    for attempt in range(5):
-        request = Request(
-            GITHUB_MODELS_URL,
-            data=payload,
-            method="POST",
-            headers={
-                "Authorization": f"Bearer {token}",
-                "Accept": "application/vnd.github+json",
-                "Content-Type": "application/json",
-                "X-GitHub-Api-Version": "2022-11-28",
-                "User-Agent": USER_AGENT,
-            },
-        )
-        try:
-            with urlopen(request, timeout=120) as response:
-                result = json.loads(response.read().decode("utf-8"))
-            choice = result["choices"][0]
-            translated = str(choice["message"]["content"]).strip()
-            if choice.get("finish_reason") == "length":
-                raise RuntimeError("GitHub Models translation was truncated")
-            if translated:
-                return translated
-            raise RuntimeError("GitHub Models returned an empty translation")
-        except HTTPError as error:
-            last_error = error
-            if error.code not in {408, 429, 500, 502, 503, 504}:
-                break
-            retry_after = error.headers.get("Retry-After", "")
-            delay = int(retry_after) if retry_after.isdigit() else 8 * (attempt + 1)
-            time.sleep(min(delay, 60))
-        except Exception as error:  # pragma: no cover - network retry path
-            last_error = error
-            time.sleep(4 * (attempt + 1))
-    raise RuntimeError(f"GitHub Models translation failed: {last_error}")
+    for chunk in chunk_text(value, limit=350):
+        translated_chunk = ""
+        for attempt in range(3):
+            params = urlencode(
+                {
+                    "q": chunk,
+                    "langpair": f"{source}|zh-CN",
+                    "mt": "1",
+                }
+            )
+            request = Request(
+                f"{MYMEMORY_URL}?{params}",
+                headers={
+                    "User-Agent": USER_AGENT,
+                    "Accept": "application/json",
+                },
+            )
+            try:
+                with urlopen(request, timeout=30) as response:
+                    result = json.loads(response.read().decode("utf-8"))
+                status = str(result.get("responseStatus", ""))
+                translated = str(
+                    (result.get("responseData") or {}).get("translatedText", "")
+                ).strip()
+                if status == "200" and translated:
+                    translated_chunk = html.unescape(translated)
+                    break
+                raise RuntimeError(
+                    str(result.get("responseDetails") or "empty translation")
+                )
+            except HTTPError as error:
+                last_error = error
+                if error.code not in {408, 429, 500, 502, 503, 504}:
+                    break
+                time.sleep(2 * (attempt + 1))
+            except Exception as error:  # pragma: no cover - network retry path
+                last_error = error
+                time.sleep(1.5 * (attempt + 1))
+        if not translated_chunk:
+            raise RuntimeError(f"MyMemory translation failed: {last_error}")
+        translated_chunks.append(translated_chunk)
+        time.sleep(0.15)
+    return "\n".join(translated_chunks).strip()
 
 
 def translate(value: str, source_language: str = "auto-detected") -> str:
-    # GitHub-hosted workflows use the authenticated Models API. This avoids the
-    # shared-IP HTTP 429 failures seen with anonymous Google Translate calls.
-    if os.environ.get("GITHUB_TOKEN", "").strip():
+    # MyMemory avoids the shared GitHub-runner IP limits that frequently affect
+    # anonymous Google Translate. A failed translation is marked for the next
+    # scheduled run rather than making the entire news refresh wait on another
+    # rate-limited provider. Google can still be selected explicitly for repair.
+    if os.environ.get("TRANSLATION_PROVIDER", "").casefold() != "google":
         try:
-            return translate_with_github_models(value, source_language)
+            return translate_with_mymemory(value, source_language)
         except Exception as error:
-            print(f"warning: GitHub Models fallback: {error}", file=sys.stderr)
+            raise RuntimeError(f"MyMemory translation failed: {error}") from error
 
     translated: list[str] = []
     for chunk in chunk_text(value):

@@ -2,7 +2,8 @@ name: Update Chinese News Feed
 
 on:
   schedule:
-    - cron: '37 */2 * * *'
+    # Refresh twice per day; manual refresh remains available when needed.
+    - cron: '37 */12 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -14,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      models: read
 
     steps:
       - name: Checkout
@@ -23,9 +23,6 @@ jobs:
           fetch-depth: 0
 
       - name: Generate translated news feed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_MODEL: openai/gpt-4.1
         run: python3 scripts/update_news_feed.py
 
       - name: Validate feed

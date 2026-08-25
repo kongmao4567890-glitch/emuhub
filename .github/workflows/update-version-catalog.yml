@@ -2,8 +2,8 @@ name: Refresh emulator version catalog
 
 on:
   schedule:
-    # Keep the mobile client within two hours of newly published releases.
-    - cron: '17 */2 * * *'
+    # Refresh twice per day; manual refresh remains available when needed.
+    - cron: '17 */12 * * *'
   workflow_dispatch:
 
 concurrency:
