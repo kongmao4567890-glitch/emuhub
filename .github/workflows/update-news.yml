@@ -13,6 +13,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -22,7 +23,28 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/requirements-news.txt
+
+      - name: Install offline translation runtime
+        run: python3 -m pip install -r scripts/requirements-news.txt
+
+      - name: Cache offline translation models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/emuhub-translation
+          key: emuhub-translation-v1-${{ runner.os }}-${{ hashFiles('scripts/setup_translation_models.py') }}
+
+      - name: Prepare offline translation models
+        run: python3 scripts/setup_translation_models.py
+
       - name: Generate translated news feed
+        env:
+          TRANSLATION_PROVIDER: hybrid
         run: python3 scripts/update_news_feed.py
 
       - name: Validate feed
@@ -30,6 +52,7 @@ jobs:
           python3 - <<'PY'
           import json
           from pathlib import Path
+          from scripts.update_news_feed import has_untranslated_english_prose
 
           paths = [Path('assets/news.json'), Path('data/news.json')]
           payloads = [json.loads(path.read_text(encoding='utf-8')) for path in paths]
@@ -46,9 +69,17 @@ jobs:
               if item['id'].startswith('android-release-')
           ]
           assert len(android_releases) >= 10
+          pending = [item['id'] for item in articles if item.get('translationPending')]
+          assert not pending, f'translations still pending: {pending}'
           for item in articles:
               assert item['title'] and item['content'] and item['publishedAt']
               assert item['title'].startswith('【')
+              assert any('\u4e00' <= value <= '\u9fff' for value in item['content'])
+              assert not has_untranslated_english_prose(item['content']), (
+                  f"untranslated English prose remains: {item['id']}"
+              )
+              assert '自动翻译服务暂时繁忙' not in item['content']
+              assert 'EMUHUB' not in item['content']
               if item['id'].startswith('android-release-'):
                   assert item['category'] == 'android_update'
                   assert item['platforms'] == ['android']

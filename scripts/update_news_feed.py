@@ -3,8 +3,8 @@
 
 The app never translates articles on the phone.  This job fetches the feed,
 extracts useful metadata from each article, translates new or changed content,
-and merges it with the previous 90-day snapshot.  Only Python's standard
-library is used so the script can run in GitHub Actions without setup work.
+and merges it with the previous 90-day snapshot.  Scheduled runs use cached
+offline models when the network translation service is unavailable.
 """
 
 from __future__ import annotations
@@ -36,12 +36,49 @@ SOURCE_URL = "https://www.emu-france.com/"
 RETENTION_DAYS = 90
 ANDROID_NEWS_LIMIT = 30
 ANDROID_NEWS_PREFIX = "android-release-"
-ANDROID_TRANSLATION_VERSION = 2
+ANDROID_TRANSLATION_VERSION = 3
 MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 USER_AGENT = (
     "EmuHub-News/1.0 (+https://github.com/kongmao4567890-glitch/emuhub)"
 )
-TRANSLATION_DISABLED_REASON = ""
+REMOTE_TRANSLATION_DISABLED_REASON = ""
+OFFLINE_TRANSLATORS: dict[str, tuple[Any, Any]] = {}
+PROTECTED_PRODUCT_NAMES: tuple[str, ...] | None = None
+
+COMMON_ENGLISH_WORDS = frozenset(
+    {
+        "a", "an", "and", "are", "as", "at", "be", "been", "being",
+        "but", "by", "can", "could", "did", "do", "does", "for", "from",
+        "had", "has", "have", "if", "in", "into", "is", "it", "its",
+        "may", "might", "not", "of", "on", "or", "our", "should", "since",
+        "than", "that", "the", "their", "then", "there", "these", "this",
+        "those", "through", "to", "use", "used", "using", "was", "were",
+        "when", "which", "will", "with", "you", "your",
+    }
+)
+
+ENGLISH_AUXILIARY_WORDS = frozenset(
+    {
+        "are", "be", "been", "being", "can", "could", "did", "do", "does",
+        "had", "has", "have", "is", "may", "might", "should", "use", "used",
+        "using", "was", "were", "will",
+    }
+)
+
+RELEASE_LABELS = {
+    "artifacts": "构建产物",
+    "branch": "分支",
+    "built": "构建时间",
+    "changes since previous nightly": "自上一夜版以来的变更",
+    "changes since the previous nightly": "自上一夜版以来的变更",
+    "ci run": "CI 任务",
+    "commit": "提交",
+    "fixes": "修复内容",
+    "full changelog": "完整变更日志",
+    "notes": "说明",
+    "sha-256 checksums": "SHA-256 校验值",
+    "what's changed": "更新内容",
+}
 
 CATEGORY_RULES: tuple[tuple[str, str, str], ...] = (
     ("utilitaire", "tools", "工具"),
@@ -223,6 +260,25 @@ def load_android_emulators() -> dict[str, dict[str, str]]:
                 },
             )
     return values
+
+
+def load_protected_product_names() -> tuple[str, ...]:
+    global PROTECTED_PRODUCT_NAMES
+    if PROTECTED_PRODUCT_NAMES is not None:
+        return PROTECTED_PRODUCT_NAMES
+    config = json.loads(
+        (ROOT / "assets" / "emulators.json").read_text(encoding="utf-8")
+    )
+    names: set[str] = set()
+    for console in config.get("consoles", []):
+        for emulator in console.get("emulators", []):
+            name = str(emulator.get("name", "")).strip()
+            base_name = re.sub(r"\s*\([^)]*\)\s*$", "", name).strip()
+            for candidate in (name, base_name):
+                if len(candidate) >= 3:
+                    names.add(candidate)
+    PROTECTED_PRODUCT_NAMES = tuple(sorted(names, key=len, reverse=True))
+    return PROTECTED_PRODUCT_NAMES
 
 
 def parse_iso_datetime(value: Any) -> datetime | None:
@@ -431,6 +487,79 @@ def chunk_text(value: str, limit: int = 1200) -> list[str]:
     return chunks
 
 
+def normalize_release_markdown(value: str, stash: Any) -> str:
+    """Turn GitHub Markdown into stable plain text before machine translation.
+
+    The app displays news with ``SelectableText`` rather than a Markdown
+    renderer.  Keeping Markdown punctuation in the translation input both made
+    the result harder to read and confused small offline models.  URLs and code
+    are still restored verbatim by ``translate_release_notes``.
+    """
+
+    def replace_link(match: re.Match[str]) -> str:
+        image_prefix = "图片：" if match.group(1) else ""
+        label = match.group(2).strip()
+        target = stash(f"（{match.group(3).strip()}）")
+        if label:
+            return f"{image_prefix}{label}{target}"
+        return f"{image_prefix}{target}"
+
+    normalized_value = re.sub(
+        r"(!?)\[([^]\r\n]*)\]\((https?://[^)\s]+)\)",
+        replace_link,
+        value,
+    )
+    normalized_value = re.sub(r"</?[A-Za-z][^>]*>", "", normalized_value)
+
+    lines: list[str] = []
+    for raw_line in normalized_value.splitlines():
+        stripped = raw_line.strip()
+        if not stripped:
+            lines.append("")
+            continue
+        if re.fullmatch(r"\|?(?:\s*:?-{3,}:?\s*\|)+\s*", stripped):
+            continue
+        if stripped.startswith("|") and stripped.endswith("|"):
+            cells = [
+                re.sub(r"(?:\*\*|__|~~)", "", cell).strip()
+                for cell in stripped.strip("|").split("|")
+            ]
+            cells = [cell for cell in cells if cell]
+            if not cells:
+                continue
+            cells = [RELEASE_LABELS.get(cell.casefold(), cell) for cell in cells]
+            lines.append("：".join(cells))
+            continue
+
+        line = re.sub(r"^\s*#{1,6}\s*", "", raw_line)
+        line = re.sub(r"^\s*>\s?", "提示：", line)
+        line = re.sub(r"^\s*[-*+]\s+", "• ", line)
+        line = re.sub(r"(?:\*\*|__|~~)", "", line).strip()
+        line = RELEASE_LABELS.get(line.casefold(), line)
+        line = re.sub(r"(?i)^nightly(?=\s)", "夜间构建", line)
+        lines.append(line)
+    return "\n".join(lines).strip()
+
+
+def has_untranslated_english_prose(value: str) -> bool:
+    """Return whether readable English prose remains in localized content."""
+    cleaned = re.sub(r"```.*?```", " ", value, flags=re.DOTALL)
+    cleaned = re.sub(r"https?://\S+", " ", cleaned)
+    cleaned = re.sub(r"`[^`\r\n]+`", " ", cleaned)
+    cleaned = re.sub(
+        r"(?<![\w/])[\w@+.-]+(?:/[\w@+.-]+)*\.[A-Za-z0-9][\w.-]*(?!\w)",
+        " ",
+        cleaned,
+    )
+    for segment in re.split(r"[\n。！？；]", cleaned):
+        words = re.findall(r"\b[A-Za-z]{2,}\b", segment.casefold())
+        common = sum(word in COMMON_ENGLISH_WORDS for word in words)
+        auxiliaries = sum(word in ENGLISH_AUXILIARY_WORDS for word in words)
+        if len(words) >= 5 and (common >= 3 or (common >= 2 and auxiliaries)):
+            return True
+    return False
+
+
 def translate_chunk(value: str) -> str:
     params = urlencode(
         {
@@ -508,34 +637,230 @@ def translate_with_mymemory(value: str, source_language: str) -> str:
     return "\n".join(translated_chunks).strip()
 
 
+def offline_model_root() -> Path:
+    configured = os.environ.get("EMUHUB_TRANSLATION_MODELS", "").strip()
+    if configured:
+        return Path(configured).expanduser()
+    return Path.home() / ".cache" / "emuhub-translation" / "models"
+
+
+def load_offline_translator(pair: str) -> tuple[Any, Any]:
+    cached = OFFLINE_TRANSLATORS.get(pair)
+    if cached is not None:
+        return cached
+
+    try:
+        import ctranslate2
+        import sentencepiece as sentencepiece_module
+    except ImportError as error:  # pragma: no cover - workflow dependency guard
+        raise RuntimeError(
+            "offline translation dependencies are not installed"
+        ) from error
+
+    package_path = offline_model_root() / pair
+    model_path = package_path / "model"
+    tokenizer_path = package_path / "sentencepiece.model"
+    if not (model_path / "model.bin").is_file() or not tokenizer_path.is_file():
+        raise RuntimeError(f"offline translation model is missing: {pair}")
+
+    translator = ctranslate2.Translator(
+        str(model_path),
+        device="cpu",
+        compute_type="int8",
+        inter_threads=1,
+        intra_threads=max(1, min(4, os.cpu_count() or 1)),
+    )
+    tokenizer = sentencepiece_module.SentencePieceProcessor(
+        model_file=str(tokenizer_path)
+    )
+    OFFLINE_TRANSLATORS[pair] = (translator, tokenizer)
+    return translator, tokenizer
+
+
+def offline_translate_batch(
+    chunks: list[str],
+    translator: Any,
+    tokenizer: Any,
+) -> list[str]:
+    tokenized = [tokenizer.encode(value, out_type=str) for value in chunks]
+    results = translator.translate_batch(
+        tokenized,
+        replace_unknowns=True,
+        max_batch_size=16,
+        batch_type="examples",
+        beam_size=4,
+        num_hypotheses=1,
+        length_penalty=0.2,
+    )
+    translated: list[str] = []
+    for result in results:
+        if not result.hypotheses:
+            raise RuntimeError("offline translation returned no result")
+        value = tokenizer.decode_pieces(result.hypotheses[0])
+        translated.append(value.replace("▁", " ").lstrip())
+    return translated
+
+
+def offline_translate_chunks(chunks: list[str], pair: str) -> list[str]:
+    if not chunks:
+        return []
+    translator, tokenizer = load_offline_translator(pair)
+    translated = offline_translate_batch(chunks, translator, tokenizer)
+
+    # Small OPUS models occasionally copy the first English clause and
+    # translate only the remainder of a sentence.  Retry just those copied
+    # prose spans. Technical identifiers are already outside these chunks.
+    span_pattern = re.compile(r"[A-Za-z][A-Za-z0-9'’.,;:!?() /+\-]{8,}")
+    for index, value in enumerate(translated):
+        replacements: list[tuple[int, int, str]] = []
+        candidates: list[str] = []
+        for match in span_pattern.finditer(value):
+            candidate = match.group(0).strip()
+            words = re.findall(r"\b[A-Za-z]{2,}\b", candidate.casefold())
+            common = sum(word in COMMON_ENGLISH_WORDS for word in words)
+            auxiliaries = sum(
+                word in ENGLISH_AUXILIARY_WORDS for word in words
+            )
+            if not (
+                len(words) >= 5
+                and (common >= 3 or (common >= 2 and auxiliaries))
+            ):
+                continue
+            replacements.append((match.start(), match.end(), candidate))
+            candidates.append(candidate)
+        if not candidates:
+            continue
+        retried = offline_translate_batch(candidates, translator, tokenizer)
+        for (start, end, _), replacement in reversed(
+            list(zip(replacements, retried))
+        ):
+            value = value[:start] + replacement + value[end:]
+        translated[index] = value
+    return translated
+
+
+def translate_with_offline_models(value: str, source_language: str) -> str:
+    """Translate locally with the cached Argos CTranslate2 model packages."""
+    pieces: list[tuple[bool, str]] = []
+    chunks: list[str] = []
+    token_pattern = re.compile(r"EMUHUB\d+TOKEN")
+
+    def append_translatable(raw: str) -> None:
+        if not raw:
+            return
+        leading = raw[: len(raw) - len(raw.lstrip())]
+        trailing = raw[len(raw.rstrip()):]
+        core = raw.strip()
+        if not core:
+            pieces.append((False, raw))
+            return
+        if not re.search(r"[a-zà-ÿ]{3,}", core):
+            pieces.append((False, raw))
+            return
+        sentences = re.split(r"(?<=[.!?;。！？；])\s+(?=[A-Z0-9])", core)
+        values = [
+            chunk
+            for sentence in sentences
+            for chunk in chunk_text(sentence, limit=180)
+            if chunk
+        ]
+        for index, chunk in enumerate(values):
+            if index:
+                pieces.append((False, " "))
+            prefix = leading if index == 0 else ""
+            suffix = trailing if index == len(values) - 1 else ""
+            pieces.append((False, prefix))
+            pieces.append((True, chunk))
+            pieces.append((False, suffix))
+            chunks.append(chunk)
+
+    for line_index, line in enumerate(value.split("\n")):
+        if line_index:
+            pieces.append((False, "\n"))
+        parts = re.split(r"(EMUHUB\d+TOKEN)", line)
+        for part in parts:
+            if token_pattern.fullmatch(part):
+                pieces.append((False, part))
+                continue
+            append_translatable(part)
+
+    source = source_language.casefold()
+    if source == "french":
+        chunks = offline_translate_chunks(chunks, "translate-fr_en-1_9")
+    chunks = offline_translate_chunks(chunks, "translate-en_zh-1_9")
+
+    translated = iter(chunks)
+    output = [
+        next(translated) if should_translate else piece
+        for should_translate, piece in pieces
+    ]
+    result = "".join(output).strip()
+    replacements = {
+        "清洁室": "洁净室",
+        "窃听器": "错误",
+        "坠机": "崩溃",
+        "夜来": "nightly",
+        "修好了崩溃": "修复了崩溃问题",
+    }
+    for old, new in replacements.items():
+        result = result.replace(old, new)
+    result = re.sub(r"固定(?=崩溃|坠毁|错误|问题)", "修复", result)
+    result = re.sub(r"发射(?=游戏|模拟器|应用|程序)", "启动", result)
+    result = re.sub(r"\s+([，。！？；：])", r"\1", result)
+    result = re.sub(r"(?<=[\u4e00-\u9fff])\.(?=\s|$)", "。", result)
+    return result
+
+
 def translate(value: str, source_language: str = "auto-detected") -> str:
-    # MyMemory avoids the shared GitHub-runner IP limits that frequently affect
-    # anonymous Google Translate. A failed translation is marked for the next
-    # scheduled run rather than making the entire news refresh wait on another
-    # rate-limited provider. Google can still be selected explicitly for repair.
-    global TRANSLATION_DISABLED_REASON
-    if os.environ.get("TRANSLATION_PROVIDER", "").casefold() != "google":
-        if TRANSLATION_DISABLED_REASON:
-            raise RuntimeError(TRANSLATION_DISABLED_REASON)
+    # The scheduled workflow uses local CTranslate2 models, so publishing news
+    # never depends on a third-party translation quota. MyMemory is retained as
+    # a lightweight fallback, while Google can be selected for manual repair.
+    global REMOTE_TRANSLATION_DISABLED_REASON
+    provider = os.environ.get("TRANSLATION_PROVIDER", "").casefold()
+    if provider == "google":
+        translated: list[str] = []
+        for chunk in chunk_text(value):
+            translated.append(translate_chunk(chunk))
+            time.sleep(0.12)
+        return "\n".join(translated).strip()
+
+    if provider == "hybrid" and not REMOTE_TRANSLATION_DISABLED_REASON:
         try:
             return translate_with_mymemory(value, source_language)
         except Exception as error:
-            TRANSLATION_DISABLED_REASON = f"MyMemory translation failed: {error}"
-            raise RuntimeError(TRANSLATION_DISABLED_REASON) from error
+            REMOTE_TRANSLATION_DISABLED_REASON = (
+                f"MyMemory translation failed: {error}"
+            )
+            print(
+                f"warning: switching to offline translation: {error}",
+                file=sys.stderr,
+            )
 
-    translated: list[str] = []
-    for chunk in chunk_text(value):
-        translated.append(translate_chunk(chunk))
-        time.sleep(0.12)
-    return "\n".join(translated).strip()
+    if provider in {"offline", "hybrid"}:
+        return translate_with_offline_models(value, source_language)
+
+    if provider != "google":
+        if REMOTE_TRANSLATION_DISABLED_REASON:
+            raise RuntimeError(REMOTE_TRANSLATION_DISABLED_REASON)
+        try:
+            return translate_with_mymemory(value, source_language)
+        except Exception as error:
+            REMOTE_TRANSLATION_DISABLED_REASON = (
+                f"MyMemory translation failed: {error}"
+            )
+            raise RuntimeError(REMOTE_TRANSLATION_DISABLED_REASON) from error
+    raise RuntimeError(f"unsupported translation provider: {provider}")
 
 
-def translate_release_notes(value: str) -> str:
+def translate_release_notes(
+    value: str,
+    source_language: str = "English",
+) -> str:
     """Translate prose while preserving Markdown and technical identifiers."""
     protected: list[tuple[str, str]] = []
 
     def stash(raw: str) -> str:
-        token = f"ZZEMUHUBTOKEN{len(protected):05d}ZZ"
+        token = f"EMUHUB{len(protected)}TOKEN"
         protected.append((token, raw))
         return token
 
@@ -557,7 +882,21 @@ def translate_release_notes(value: str) -> str:
             lines.append(prefix + stash(stripped) + suffix + ending)
         else:
             lines.append(line)
-    shielded = "".join(lines)
+    shielded = normalize_release_markdown("".join(lines), stash)
+
+    product_names = load_protected_product_names()
+    if product_names:
+        product_pattern = (
+            r"(?<![\w])(?:"
+            + "|".join(re.escape(name) for name in product_names)
+            + r")(?![\w])"
+        )
+        shielded = re.sub(
+            product_pattern,
+            lambda match: stash(match.group(0)),
+            shielded,
+            flags=re.IGNORECASE,
+        )
 
     patterns = (
         r"`[^`\r\n]+`",
@@ -570,12 +909,26 @@ def translate_release_notes(value: str) -> str:
     for pattern in patterns:
         shielded = re.sub(pattern, lambda match: stash(match.group(0)), shielded)
 
-    translated = translate(shielded, source_language="English")
-    for token, raw in protected:
+    translated = translate(shielded, source_language=source_language)
+    missing_tokens = [token for token, _ in protected if token not in translated]
+    needs_offline_retry = missing_tokens or has_untranslated_english_prose(
+        translated
+    )
+    if (
+        needs_offline_retry
+        and os.environ.get("TRANSLATION_PROVIDER", "").casefold() == "hybrid"
+    ):
+        translated = translate_with_offline_models(shielded, source_language)
+    # Restore in reverse order because a later protected span can contain an
+    # earlier product-name token (for example, a command containing an app name).
+    for token, raw in reversed(protected):
         if token not in translated:
             raise RuntimeError(f"translation damaged protected token: {token}")
         translated = translated.replace(token, raw)
-    return translated.strip()
+    translated = translated.strip()
+    if has_untranslated_english_prose(translated):
+        raise RuntimeError("translation still contains untranslated English prose")
+    return translated
 
 
 def summary_for(content: str, limit: int = 220) -> str:
@@ -672,7 +1025,10 @@ def build_article(
     else:
         translation_pending = False
         try:
-            chinese_content = translate(original_content, source_language="French")
+            chinese_content = translate_release_notes(
+                original_content,
+                source_language="French",
+            )
         except Exception as error:
             translation_pending = True
             chinese_content = (
@@ -687,7 +1043,7 @@ def build_article(
     image_url = str((previous or {}).get("imageUrl", ""))
     official_url = str((previous or {}).get("officialUrl", ""))
     # An article's cover and official URL are effectively immutable. Reusing
-    # the previous values makes routine two-hour refreshes finish in seconds.
+    # the previous values makes routine twelve-hour refreshes finish in seconds.
     if previous is None:
         try:
             parser = ArticleMetaParser(raw["link"])
