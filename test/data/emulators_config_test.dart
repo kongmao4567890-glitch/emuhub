@@ -222,6 +222,7 @@ void main() {
       'kytyps5_pc': {'windows', 'linux', 'macos'},
       'firebird': {'android', 'windows', 'linux', 'macos'},
       'ymir_pc': {'windows', 'linux', 'macos'},
+      'erings_pc': {'windows', 'linux', 'macos'},
       'duckstation_gpl': {'android', 'windows', 'linux', 'macos'},
       'vita3k_plus': {'android', 'windows'},
       'vita3k_pc': {'android', 'windows', 'linux', 'macos'},
@@ -235,7 +236,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 320);
+    expect(emulatorIds.length, 321);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -293,6 +294,24 @@ void main() {
     expect(vita3kPlus.platforms, ['android', 'windows']);
     final vita3kPlusIcon = await rootBundle.load(vita3kPlus.iconPath);
     expect(vita3kPlusIcon.lengthInBytes, greaterThan(0));
+
+    final erings = config.consoles
+        .singleWhere((console) => console.id == 'saturn')
+        .emulators
+        .singleWhere((emulator) => emulator.id == 'erings_pc');
+    expect(erings.name, 'erings');
+    expect(erings.openSource, isTrue);
+    expect(erings.sourceType, 'github');
+    expect(erings.sourceUrl, 'https://github.com/user-none/erings');
+    expect(
+      erings.downloadUrl,
+      'https://github.com/user-none/erings/releases',
+    );
+    expect(erings.compatibility, 'medium');
+    expect(erings.minAndroid, isEmpty);
+    expect(erings.platforms, ['windows', 'linux', 'macos']);
+    final eringsIcon = await rootBundle.load(erings.iconPath);
+    expect(eringsIcon.lengthInBytes, greaterThan(0));
 
     final armsx3 = config.consoles
         .singleWhere((console) => console.id == 'ps3')
@@ -502,6 +521,7 @@ void main() {
         'vita3k_plus',
         'xenra_og',
         'xenra_360',
+        'erings_pc',
       }),
     );
 
