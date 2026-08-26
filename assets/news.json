@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T02:12:53.602593Z",
+  "generatedAt": "2026-08-26T13:40:05.662550Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,186 @@
   },
   "articles": [
     {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-08-26T01:50:52Z",
+      "publishedAt": "2026-08-26T11:30:50Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `6767bed` — `v3.5.1` (`develop`)\n\n提交：`6767bed`（https://github.com/libretro/virtualjaguar-libretro/commit/6767bed49fb6557fedf38a691b826be5dc3aafbd）\n构建时间：2026-08-26 01:50 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/32919619330）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何手工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为: `v3.5.1 6767bed` 启动时 —— 在报告此构建时引用此行。\n\n自上一夜版以来的变更\n\n```\nc0b7d94 docs(站点):计时运动没有版本,没有 v4.0.0\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` 以获得符号回溯跟踪。\n\nSHA-256 校验值\n\n用 `sha256sum --check SHA256SUMS.txt` (Linux)或 (英语). `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\nbb74545a5202eafe52b99d0a105c644beb866c210e03d06d6ec48054c5e91c8b  cue2cdi-windows-x86_64.exe\nc94a7edaf5e967c8…",
-      "originalContent": "### Nightly `6767bed` — `v3.5.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`6767bed`](https://github.com/libretro/virtualjaguar-libretro/commit/6767bed49fb6557fedf38a691b826be5dc3aafbd) |\n| **Built** | 2026-08-26 01:50 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32919619330) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.5.1 6767bed` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\nc0b7d94 docs(site): timing campaign is non-versioned, not v4.0.0\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\nbb74545a5202eafe52b99d0a105c644beb866c210e03d06d6ec48054c5e91c8b  cue2cdi-windows-x86_64.exe\nc94a7edaf5e967c8…",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• aea63ce ：西班牙语（西班牙）翻译更新2026/08/25 (# 3790) (Víctor \"IlDucci) # 3790（https://github.com/stenzek/duckstation/pull/3790）",
+      "originalContent": "## Commits\n- aea63ce: Spanish (Spain) translation update 2026/08/25 (#3790) (Víctor \"IlDucci) [#3790](https://github.com/stenzek/duckstation/pull/3790)",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
-        "virtual_jaguar_core"
+        "duckstation"
       ],
-      "contentHash": "035dd73632a25186b9dca8a3ee090d4fa06ad1e5077a388a369ac62269fa736d",
+      "contentHash": "f5b295eaf0d27d43ca0b048ca704a483a508146e2e7273224c3993b98cf16477",
+      "translationPending": false
+    },
+    {
+      "id": "136263",
+      "title": "【工具】x360ce v4.18.7",
+      "originalTitle": "[Utilitaires Divers] x360ce v4.18.7",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-08-26T11:16:48Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136263-utilitaires-divers-x360ce-v4-18-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/x360ce_General-300x253.png",
+      "officialUrl": "https://github.com/x360ce/x360ce",
+      "summary": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。 换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！ 更多信息请访问官方网站。",
+      "content": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。\n\n换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！\n更多信息请访问官方网站。",
+      "originalContent": "'Xbox 360 Controller Emulator' est une bibliothèque de wrappers qui traduit les appels XInput en appels DirectInput, et permet le support des pads non-compatibles XInput dans les applications (surtout des jeux).\n\nEn d'autres termes: x360ce vous permet d'utiliser n'importe quel pad dans les jeux qui supportent à la base uniquement le pad XBOX360 !\n\nPlus d'infos sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "1ef81320acaa7417128e96947bcf1a97a7fe619411f863209ad9ae7431f9e666",
+      "translationPending": false
+    },
+    {
+      "id": "136261",
+      "title": "【工具】ShadPS4 (GUI) v350",
+      "originalTitle": "[Utilitaires Multi-systemes] ShadPS4 (GUI) v350",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-08-26T11:14:50Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136261-utilitaires-multi-systemes-shadps4-gui-v350/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/shadps4-gui1.png",
+      "officialUrl": "https://shadps4.net/",
+      "summary": "shadPS4是一款开源PlayStation 4模拟器。 自0.12.1版本以来，它放弃了集成的图形界面，只能在命令行上工作。 为便于使用，提供了一个外部接口。 它允许您通过简单直观的视觉界面启动游戏、配置选项和跟踪性能。 此界面单独开发，与shadPS4的未来版本保持兼容。 变更内容： •修复播放时间排序(# 425) • [ci skip] Qt GUI ：更新翻译。(# 424) •新的Crowdin更新 •固定杂项",
+      "content": "shadPS4是一款开源PlayStation 4模拟器。 自0.12.1版本以来，它放弃了集成的图形界面，只能在命令行上工作。\n为便于使用，提供了一个外部接口。 它允许您通过简单直观的视觉界面启动游戏、配置选项和跟踪性能。\n\n此界面单独开发，与shadPS4的未来版本保持兼容。\n\n变更内容：\n•修复播放时间排序(# 425)\n• [ci skip] Qt GUI ：更新翻译。(# 424)\n•新的Crowdin更新\n•固定杂项",
+      "originalContent": "shadPS4 est un émulateur PlayStation 4 open-source. Depuis la version 0.12.1, il abandonne son interface graphique intégrée pour fonctionner uniquement en ligne de commande.\n\nPour faciliter son usage, une interface externe est disponible. Elle permet de lancer des jeux, configurer les options, et suivre les performances via une interface visuelle simple et intuitive.\n\nCette interface est développée séparément et reste compatible avec les futures versions de shadPS4.\n\nLes changements:\n- Fix play time sorting (#425)\n- [ci skip] Qt GUI: Update Translation. (#424)\n- New Crowdin updates\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "shadps4_android"
+      ],
+      "contentHash": "db59373133a9423a24a33e7b72d21d53d006bfd5373eb98608a193a6faf6e571",
+      "translationPending": false
+    },
+    {
+      "id": "136259",
+      "title": "【家用机】Xenia Edge (2026/08/26)",
+      "originalTitle": "[Consoles de salon] Xenia Edge (2026/08/26)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T11:12:26Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136259-consoles-de-salon-xenia-edge-2026-08-26/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/xenia-edge-scaled.png",
+      "officialUrl": "https://github.com/has207/xenia-edge",
+      "summary": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中 。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成 。",
+      "content": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中\n。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成\n。代码主要用C + +编写，在Assembly、Python、Lua、HLSL和C #中有贡献。存储库包含有用的资源，如快速入门指南、常见问题解答和编译说明。",
+      "originalContent": "Le projet GitHub xenia-edge est un fork expérimental de l’émulateur Xbox 360 Xenia, basé sur la branche Canary. Il vise à centraliser les dernières avancées techniques issues de divers forks dans un seul package. Le projet est conçu pour la recherche et l’expérimentation autour de l’émulation Xbox 360, avec une compatibilité Windows et Linux. Il propose un script de build personnalisé (xb) pour simplifier la compilation, une liste de compatibilité des jeux maintenue par la communauté, et une intégration continue via Buildbot. Le code est majoritairement écrit en C++, avec des contributions en Assembly, Python, Lua, HLSL et C#. Le dépôt contient des ressources utiles comme un guide de démarrage rapide, une FAQ et des instructions de compilation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xenia_pc",
+        "xenia_edge_pc"
+      ],
+      "contentHash": "0475d9540bf607bac5ea5e0fb6a542fa5d72eb6c81ec2fa70470d3c21318f0b2",
+      "translationPending": false
+    },
+    {
+      "id": "136257",
+      "title": "【家用机】Xenia v1.0.2844 (2026/08/26)",
+      "originalTitle": "[Consoles de salon] Xenia v1.0.2844 (2026/08/26)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T11:11:34Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136257-consoles-de-salon-xenia-v1-0-2844-2026-08-26/",
+      "imageUrl": "https://www.youtube.com/embed/r56tCTsijEw",
+      "officialUrl": "https://xenia.jp/",
+      "summary": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master] 。此处提供管理Xenia仿真器的管理器。",
+      "content": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master]\n。此处提供管理Xenia仿真器的管理器。\n\n• [XMA]在结束XMA工作循环之前排出当前帧\n• [内核]初始XMP通知\n• [内核]默认情况下禁用ALLOW_INCOMPORTABLE_TITLE_UPDATE并在应用时\n•固定杂项",
+      "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [XMA] Drain the current frame before ending the XMA work loop\n- [Kernel] Initial XMP Notifications\n- [Kernel] Disable allow_incompatible_title_update by default and log when applied\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "xenia_pc"
+      ],
+      "contentHash": "a74af6c329711dfda4e5b333f57f7080c504bde246ae5522395068f52c685f77",
+      "translationPending": false
+    },
+    {
+      "id": "136254",
+      "title": "【其他】NC2000 (2026/08/25)",
+      "originalTitle": "[Processeurs] NC2000 (2026/08/25)",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T09:48:36Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136254-processeurs-nc2000-2026-08-25/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/12/nc2000.png",
+      "officialUrl": "https://github.com/wangyu-/NC2000",
+      "summary": "NC2000项目是基于CPU 6502的复古设备nc2000/nc2600/nc1020的开源模拟器。它允许运行物理机转储的原始固件，与Windows/Linux/Mac兼容。",
+      "content": "NC2000项目是基于CPU 6502的复古设备nc2000/nc2600/nc1020的开源模拟器。它允许运行物理机转储的原始固件，与Windows/Linux/Mac兼容。",
+      "originalContent": "Le projet NC2000 est un émulateur open-source pour les appareils rétro nc2000/nc2600/nc1020, basés sur un CPU 6502. Il permet d’exécuter les firmwares originaux dumpés des machines physiques, avec compatibilité Windows/Linux/Mac.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8b78e809aac14688660d77d9ea4469f0db8bcaf1bf3605389f0093ebfdd1c076",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorex-0-3-6",
+      "title": "【Android更新】EmuCoreX 0.3.6",
+      "originalTitle": "EmuCoreX 0.3.6 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T09:37:20Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.3.6",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.3.6，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.3.6。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.3.5...v0.3.6\n\n\n什么是新来: 0.3.6\n\n• 添加的帧生成——可用Adreno 7xx+设备获取。\n其他修正和改进。",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.3.5...v0.3.6\r\n\r\n\r\nWhat's New: 0.3.6\r\n\r\n- Added frame generation - available on devices with Adreno 7xx+.\r\nOther fixes and improvements.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "4be1b8ba5cf268d3e73f1ec435da2ada1291ead13d902eb2416c5e73dbb9f955",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260826",
+      "title": "【Android更新】ARMSX2 nightly-20260826",
+      "originalTitle": "ARMSX2 nightly-20260826 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T09:27:02Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260826",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260826，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260826。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• VU:说第四个夹子搭载什么\n• Vurunner:将-vu-clamp-mode扩展至模式4\n• VU:乘数的单ULP赤字,对两个发射体\n• VU测试:乘数家族其余部分的编码器\n• VU测试:在两个FMAC捕获中得分\n• VU FMAC:从操作中取下饱和的字号\n• VU Interp:保留一个流传中的FMAC一词\n• VU测试:FMAC从控制台2^-126下留下的东西\n• 微VU:在EE最大范围内饱和FMAC\n• COP2宏:在最大EE饱和FMAC\n• 微VU:在vuClampMode 4阅读EFU的模型\n• VU:每个操作码给EFU一个模型切入点\n• VU测试:在夹子模式中分数单位\n• 微VU:在vuClampMode 4读取分单元的算术\n• COP2宏:在vuClampMode 4读取分单元的算术\n• VU:给分割单元的模型一个调用常规的重编器\n• VU测试:启用MAC内流绊线\n• VU测试:在护卫面具捕获中得分微VU\n• 微VU:遮盖加员的警卫位数\n• VU:把护卫面具带回家\n• 微VU:提高精确的MAC U和MAC O\n• VU:给FMAC的MAC U和MAC O型号一个家\n• VU测试:启用宏状态绊线\n• COP2宏观:将MAC O提升到FMAC的溢出量上\n• 微型VU:业务方案遵守 \" 荒野 \" 原则\n• VU:业务方案遵守 \" 荒野 \" 原则\n• VU测试:衡量业务业务,而不是询问有关操作\n• COP2宏观:将MAC U提升到下流产品上\n• 微VU:取消主机的潜水器零测试\n• COP2宏:从主机上取消潜水器的零测试\n• 微VU:在EE最大时饱和分配单元\n• EE FPU溢出测试:纠正头部的坚固引擎列\n• COP2宏:在EE最大时饱和分配单位\n• COP2宏:遮盖添加器的守护位\n• VU:给钳子梯子第四径\n• VU:将乘积级标志带入粘性状态场\n• VU:在控制台上测量加员的警卫面具\n• VU测试:等待控制台探测器的运行\n• VU Interp:在分支延迟槽运行之前,保持一个 D/T 停止\n• VU Interp: 将 EFU 的 atan 和 exp 系列匹配到控制台\n• eerunner:报告引擎 -- -- 运行实际运行\n• VU:以单一精确评价EFU系列\n• VU Interp:在EE FPU的模型上运行EFU\n• VU Interp:将FMAC管道的状态发布到自己的位数\n• VU0 宏:窄的 CTC2 写到寄存器宽度\n• eerunner:在-liverrun下每帧写一个PNG\n• VU Interp:运行EE FPU模型上的div单元\n• eerunner:在-liverrun下运行一个VU的口译\n• VU Interp:在EE FPU的模型上运行 FMAC\n• 测试:让测试记录差异,而不是降低diff\n• VU Interp:将U提升到低于零的结果\n• COP2宏观:保持其标志的操作夹\n• COP2宏:将mVU_MUL的操作夹套在整个MUL家族上\n• EE建议:从环境中取回掉落的双虫开关\n• 微VU:在调度员检查时抓获,而不是通过\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260825...662b114168e1dc0be7b1354f948dbe0292f2a2ac",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- VU: say what the fourth clamp rung carries\n- vurunner: extend --vu-clamp-mode to mode 4\n- VU: the multiplier's one-ULP deficit, on both emitters\n- VU tests: encoders for the rest of the multiply family\n- VU tests: score microVU on the two FMAC captures\n- VU FMAC: take the saturated word's sign from the operands\n- VU interp: keep the word an underflowing FMAC produced\n- VU tests: what the FMAC leaves below 2^-126, from the console\n- microVU: saturate the FMAC at the EE's maximum\n- COP2 macro: saturate the FMAC at the EE's maximum\n- microVU: read the EFU's models at vuClampMode 4\n- VU: give the EFU one model entry point per opcode\n- VU tests: score the divide unit across the clamp modes\n- microVU: read the divide unit's arithmetic at vuClampMode 4\n- COP2 macro: read the divide unit's arithmetic at vuClampMode 4\n- VU: give the divide unit's model a recompiler calling convention\n- VU tests: enable the MAC underflow tripwire\n- VU tests: score microVU on the guard-mask capture\n- microVU: mask the adder's guard bits\n- VU: give the adder's guard mask one home\n- microVU: raise the exact MAC U and MAC O\n- VU: give the FMAC's MAC U and MAC O models one home\n- VU tests: enable the macro status tripwire\n- COP2 macro: raise MAC O on an overflowing FMAC\n- microVU: the OP ops honour the dest field\n- VU: the OP ops honour the dest field\n- VU tests: measure the OP ops instead of asking about them\n- COP2 macro: raise MAC U on an underflowing product\n- microVU: take the div unit's zero tests off the host\n- COP2 macro: take the div unit's zero tests off the host\n- microVU: saturate the div unit at the EE's maximum\n- EE FPU overflow tests: correct the header's stale engine columns\n- COP2 macro: saturate the div unit at the EE's maximum\n- COP2 macro: mask the adder's guard bits\n- VU: give the clamp ladder a fourth rung\n- VU: carry the multiply stage's sign into the sticky status field\n- VU: measure the adder's guard mask on the console\n- VU tests: wait for the running bit the way the console probe did\n- VU interp: hold a D/T stop until the branch delay slot has run\n- VU interp: match the EFU's atan and exp series to the console\n- eerunner: report the engines --liverun actually ran on\n- VU: evaluate the EFU's series in single precision\n- VU interp: run the EFU on the EE FPU's model\n- VU interp: narrow the FMAC pipe's status publish to its own bits\n- VU0 macro: narrow CTC2's writes to the register widths\n- eerunner: write a PNG per frame under --liverun\n- VU interp: run the div unit on the EE FPU's model\n- eerunner: run one VU on its interpreter under --liverun\n- VU interp: run the FMAC on the EE FPU's model\n- Tests: let a test record a divergence rather than drop the diff\n- VU interp: raise U on a result that underflowed to zero\n- COP2 macro: an operand clamp that keeps its sign\n- COP2 macro: carry mVU_MUL's operand clamp on the whole MUL family\n- EE rec: take the fallback bisect switch from the environment\n- microVU: capture at the dispatcher's lookup, not past it\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260825...662b114168e1dc0be7b1354f948dbe0292f2a2ac",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "ff583ef926ad46cdba80d9e0308cef054da48865b016094b2e2d6b9d1d4d3986",
       "translationPending": false
     },
     {
@@ -39,14 +198,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-08-25T16:36:27Z",
+      "publishedAt": "2026-08-26T07:16:34Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月25日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• pcecdlist_dink.h: 增加数(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• pcecdlist_dink.h: additions (fprietog)",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_coleco.cpp: 各种... (fprietog) .",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_coleco.cpp: various... (fprietog)",
       "platforms": [
         "android"
       ],
@@ -54,7 +213,55 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "dbeee17fc60ebbb3269fa66d098d95b13fbae1a81a83a43dc2aad06469394c5c",
+      "contentHash": "c6ade5874272f806fb70dc088a4bd705537ddc7d9c1ca6c7a8876785ef10afc5",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-nethersx2_lsfg-26500717",
+      "title": "【Android更新】NetherSX2 LSFG (Slushii Turnip Fix) 26500717",
+      "originalTitle": "NetherSX2 LSFG (Slushii Turnip Fix) 26500717 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T06:48:59Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases/tag/v26500717",
+      "imageUrl": "asset://assets/emulators/nethersx2_lsfg.png",
+      "officialUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
+      "summary": "NetherSX2 LSFG (Slushii Turnip Fix) 发布 Android 新版本 26500717，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
+      "content": "NetherSX2 LSFG (Slushii Turnip Fix) 已发布 Android 最新版本 26500717。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n取代了第26500697次 中途调查 上面写的两件事\n无法幸存的夜晚——见以下*更正*.\n\n框架生成现在可以关闭( 并恢复)\n\n`applyLsfgMode(false)` 从没跑过 开关状态在\n`VulkanShim/Lsfg` 优先级, 启动时无条件适用, 且 UI\n无法更改 : `findCheckedInActivity` 返回此模糊的APK, 相同\n限制 `ui60`/`uiFsr` 读作数月无效。 一个偏好卡在\n`true` 因此,超过每个配置编辑和切换,输出面板是\n被周期性勾选重新附着,速度与被移除的速度相同。\n\n`turnip.conf` 现在在两个方向上都具有权威性——用户和用户的层层。\nshim可以写 明确 `lsfg_overlay=on|off` 赢和偏好\n改为匹配。\n\n还固定在进场的路上:面板只在内部脱落 `if (act != null)`, so\n在没有可解析的活动的情况下,将它留在屏幕上,而代码记录为\n不见了。\n\n帧读取遵循 OSD 开关\n\n关闭所有六张股票 OSD 切换 离开绿盒在屏幕上。 门是对的\n一直写着: `anyStatOn=false` - 但下面两个倒下 扔了答案\n离开:一个回到真实的任何时候* 无论是何时* `fg_osd` or `lsfg_overlay` 开始,和\n其他情况是: `return osd != null`,这是自我优惠(一旦显示,它报告说\n它应该被显示,所以它永远不能隐藏。 可见度是现在的六个开关\n`fg_osd=force` 作为调试逃生舱门。\n\n已固定的抓取回归\n\nv26500697运送了能维持捕捉力的耐受度\n摇晃的像素——但下面的锁门仍然要求精确匹配,所以\n每个收到的图像都被拒绝, 锁链被扭曲, 并抓取重读一个框架\n永远`59 captures/s but 0 unique`) (中文(简体) ). 大门现在使用同样的容忍。\n\n游戏中没有 60 FPS 补丁的 Judder\n\n没有 pnach 的游戏继承了强制加载全球游戏(`EnableCheats`, `60FPSMode`,\n`EnableNoInterlacingPatches`)),而代码本身的评论警告了引起judder on.\n本地30个头衔。 策略存在, 但只运行了已存在的每局文件\n已经存在。 没有补丁的可识别游戏现在被固定在这些设置上。\n\n每个游戏配置文件也被写入模拟器忽略的文件名中。 写着\n`_.ini` 当盘片有串;赤色 `.ini` 默不作声\n应用——这也影响了Colossus配置的捆绑阴影。\n\nv26500697的更正\n\n• 其“帧生成工程”索赔是在一个游戏、一个装置和一个设备上测量的\n抓取在同一块建筑中运出的回归(见上文)。 将此释放视为\n首先是帧源既有效又可控制的地方。\n• 框架生成*启用*在该建筑中完全不能由用户控制。\n\n已知问题\n\n· 快速照相机运动的内插文物是技术所固有的。\n高孔边(建筑角,窗口网格)的摇摆是光学流\n猜错了运动界限。 测试了两把杠杆,两把都弄得更糟\na Snapdragon 8 Gen 2 : (英语). `fg_flow_scale=1.0` (重的judder)和不跳脱衣舞\n模式。 PS2 标题插值 30 - > 60, 因此每个生成的框架跨度\n33毫秒的运动——大约是PC帧生成处理的两倍。 框架生成\n套装缓展游戏;它对抗快速自由相机游戏。\n• Adreno 650上的帧生成崩溃(e.g. RP 迷你V2 被关在那里\n自动。 此发行的队列修饰是否也治愈了它未经测试。\n• 设置中的框架生成行仍然无法在这个APK上读取,所以\n`turnip.conf` 这是可靠的控制。",
+      "originalContent": "Supersedes **v26500697**, which shipped mid-investigation. Two things it described did\nnot survive the night — see *Corrections* below.\n\n## Frame generation can now be turned off (and back on)\n\n`applyLsfgMode(false)` had **never once run**. The switch state lived in the\n`VulkanShim/Lsfg` preference, which startup applied unconditionally and which the UI\ncould not change: `findCheckedInActivity` returns null on this obfuscated APK, the same\nlimitation that has had `ui60`/`uiFsr` reading null for months. A preference stuck at\n`true` therefore outlived every conf edit and every toggle, and the output panel was\nre-attached by the periodic tick as fast as it was removed.\n\n`turnip.conf` is now authoritative **in both directions** — the layer both the user and\nthe shim can actually write. An explicit `lsfg_overlay=on|off` wins and the preference\nis corrected to match.\n\nAlso fixed on the way in: the panel was only detached inside `if (act != null)`, so\ntoggling with no resolvable Activity left it on screen while the code recorded it as\ngone.\n\n## The framegen readout follows the OSD switches\n\nTurning all six stock OSD toggles off left the green box on screen. The gate was right\nall along — it read `anyStatOn=false` — but two fallbacks underneath threw that answer\naway: one returned true whenever *either* `fg_osd` or `lsfg_overlay` was on, and the\nother was `return osd != null`, which is self-referential (once shown, it reported that\nit should be shown, so it could never hide). Visibility is now the six switches, with\n`fg_osd=force` as the debugging escape hatch.\n\n## Capture regression fixed\n\nv26500697 shipped an extent-jitter tolerance that held the capture extent through a few\npixels of wobble — but the latch gate below it still demanded an **exact** match, so\nevery incoming image was refused, the latch went stale, and capture re-read one frame\nforever (`59 captures/s but 0 unique`). The gate now uses the same tolerance.\n\n## Judder on games without a 60 FPS patch\n\nGames with no pnach inherited the forced-on globals (`EnableCheats`, `60FPSMode`,\n`EnableNoInterlacingPatches`), which the code's own comment warns causes judder on\nnative-30 titles. The policy existed but only ran over per-game files that already\nexisted. Identifiable games without a patch are now pinned to those settings off.\n\n**Per-game profiles were also written under a filename the emulator ignores.** It reads\n`<SERIAL>_<CRC>.ini` when the disc has a serial; bare `<CRC>.ini` silently never\napplied — which also affected the bundled Shadow of the Colossus profiles.\n\n## Corrections to v26500697\n\n- Its \"frame generation works\" claim was measured on **one game, on one device**, and a\n  capture regression shipped in that same build (fixed above). Treat this release as the\n  first where framegen is both working and controllable.\n- Frame generation being *enabled* was not user-controllable in that build at all.\n\n## Known issues\n\n- **Interpolation artifacts on fast camera motion are inherent to the technique.**\n  Warping on high-contrast edges (building corners, window grids) is optical flow\n  guessing wrong at motion boundaries. Two levers were tested and BOTH made it worse on\n  a Snapdragon 8 Gen 2: `fg_flow_scale=1.0` (heavy judder) and a non-bobbing deinterlace\n  mode (microstutters). PS2 titles interpolate 30 -> 60, so each generated frame spans\n  33 ms of motion — roughly twice what PC frame generation deals with. Frame generation\n  suits slow-panning games; it fights fast free-camera games.\n- **Frame generation crashes on Adreno 650** (e.g. RP Mini V2) and is gated off there\n  automatically. Whether this release's queue fix also cures it is untested.\n- The Frame Generation row in Settings still cannot be read on this APK, so\n  `turnip.conf` is the reliable control.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nethersx2_lsfg"
+      ],
+      "contentHash": "00f1556efc6cb6d7275e96390e18d7b155765db08cecfb6ed867c90c801f5694",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-26T06:23:01Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `96d0b18` — `v3.5.1` (`develop`)\n\n提交：`96d0b18`（https://github.com/libretro/virtualjaguar-libretro/commit/96d0b1852f67e18fa0b1508ff541abe50c35c15c）\n构建时间：2026-08-26 06:22 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/32937388387）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为 `v3.5.1 96d0b18` 启动时 —— 报告此建构时引用该行。\n\n自上一夜版以来的变更\n\n```\n96d0b18 建设:承诺 version.h 无法运行脚本的构建系统后退\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` ,以获得符号化回溯跟踪。\n\nSHA-256 校验值\n\n校验 `sha256sum --check SHA256SUMS.txt` (林纳)或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n350db58adb30c61d78bb331789131c595c2c8867b05004c4d9d7c406a5d09239  cue2cdi-windows-x86_64…",
+      "originalContent": "### Nightly `96d0b18` — `v3.5.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`96d0b18`](https://github.com/libretro/virtualjaguar-libretro/commit/96d0b1852f67e18fa0b1508ff541abe50c35c15c) |\n| **Built** | 2026-08-26 06:22 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/32937388387) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.5.1 96d0b18` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n96d0b18 build: committed version.h fallback for build systems that can't run a script\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n350db58adb30c61d78bb331789131c595c2c8867b05004c4d9d7c406a5d09239  cue2cdi-windows-x86_64…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "4fa1e47209df136d18d6ce40d000a397e4fa0b2e0638232de3412b0f57f46275",
       "translationPending": false
     },
     {
@@ -83,26 +290,26 @@
     },
     {
       "id": "136246",
-      "title": "【家用机】KytyPS5 r260825",
-      "originalTitle": "[Consoles de salon] KytyPS5 r260825",
+      "title": "【家用机】KytyPS5 r260826",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260826",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-08-25T13:02:37Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136246-consoles-de-salon-kytyps5-r260825/",
+      "sourceUrl": "https://www.emu-france.com/news/136246-consoles-de-salon-kytyps5-r260826/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
       "officialUrl": "https://github.com/Nmzik/KytyPS5",
       "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
-      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•还原“加载器：保留TLS PATCH指令边界\n（从此分叉编译的临时版本正在等待正式发布。）",
-      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- Revert \"loader: preserve TLS patch instruction boundaries\n\n(Temporary build compiled from this fork pending official releases.)",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•还原“加载器：保留TLS PATCH指令边界\n•图形：将命令替换为时间轴重用\n\n（从此分叉编译的临时版本正在等待正式发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- Revert \"loader: preserve TLS patch instruction boundaries\n- graphics: replace command fences with timeline reuse\n\n(Temporary build compiled from this fork pending official releases.)",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [
         "kytyps5_pc"
       ],
-      "contentHash": "1d82fe19f14f34406d1227ba70e4088b1215adb847dc1bc0680187b433d52bbb",
+      "contentHash": "2b2f55c5eab85a60fb0900b7fbe00d3ac9a15fbf04b6e9a1d357e3a92c67132d",
       "translationPending": false
     },
     {
@@ -148,39 +355,15 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-25T12:26:34Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年08月25日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年08月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•修复util-tests大楼（ Stenzek（https://github.com/stenzek/duckstation/commit/78ff46ad1cb5596f755a5e340e16234748511fb1） ）\n•将全角字符替换为ASCII （ Stenzek（https://github.com/stenzek/duckstation/commit/bf5a6162daae48b1ecc20c33eb2011ace4102276） ）\n•修复了由于空路径而未检测到的游戏（ Stenzek（https://github.com/stenzek/duckstation/commit/c4e99c4aecdd14367289a4f4c28a2bcfac687c0c） ）\n•修复倒置参数（ Stenzek（https://github.com/stenzek/duckstation/commit/dbf928ff617e6843c437ca2c864ad6c55e07949b） ）\n•将文件名标识符替换为路径（ Stenzek（https://github.com/stenzek/duckstation/commit/c776dee9ed161503359f33c917d37c2531d0677b） ）",
-      "originalContent": "## Commits\n- Fix util-tests building ([Stenzek](https://github.com/stenzek/duckstation/commit/78ff46ad1cb5596f755a5e340e16234748511fb1))\n- Replace full-width characters with ASCII ([Stenzek](https://github.com/stenzek/duckstation/commit/bf5a6162daae48b1ecc20c33eb2011ace4102276))\n- Fix games not detecting due to empty path ([Stenzek](https://github.com/stenzek/duckstation/commit/c4e99c4aecdd14367289a4f4c28a2bcfac687c0c))\n- Fix inverted parameters ([Stenzek](https://github.com/stenzek/duckstation/commit/dbf928ff617e6843c437ca2c864ad6c55e07949b))\n- Replace filename identifier with path ([Stenzek](https://github.com/stenzek/duckstation/commit/c776dee9ed161503359f33c917d37c2531d0677b))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "92e855bd72ff714928b72757c1c44325403a187a27d4f6883cd884fa06d3630a",
-      "translationPending": false
-    },
-    {
       "id": "136233",
-      "title": "【家用机】Ryujinx-Ryubing v1.3.349",
-      "originalTitle": "[Consoles de salon] Ryujinx-Ryubing v1.3.349",
+      "title": "【家用机】Ryujinx-Ryubing v1.3.351",
+      "originalTitle": "[Consoles de salon] Ryujinx-Ryubing v1.3.351",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-08-25T12:08:50Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136233-consoles-de-salon-ryujinx-ryubing-v1-3-349/",
+      "sourceUrl": "https://www.emu-france.com/news/136233-consoles-de-salon-ryujinx-ryubing-v1-3-351/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/ryujinx-canary.png",
       "officialUrl": "https://ryujinx.app/",
       "summary": "Ryujinx-Ryubing （也称为Ryujinx ‑ Canary和GreemDev ）是用C #编写的开源任天堂Switch模拟器Ryujinx的社区分支。如今，它是Ryujinx项目最直接的延续，保留了其代码、架构和理念，同时积极追求其发展 压迫。 其目标是通过错误修复、兼容性改进、优化和其他功能来确保模拟器的连续性。",
@@ -190,19 +373,19 @@
       "relatedEmulatorIds": [
         "ryubing_pc"
       ],
-      "contentHash": "e892847c5c9bbb962df2ecb31776f8bf8227d6a5191cb7ae33d277eeca031f86",
+      "contentHash": "908d0c396e1b72626462e59824a9885c441c1cfd13b8f0e61b26d5bd8314164d",
       "translationPending": false
     },
     {
       "id": "136230",
-      "title": "【其他】NgpCraft Emulator v3.2",
-      "originalTitle": "[Consoles portables] NgpCraft Emulator v3.2",
+      "title": "【其他】NgpCraft Emulator v3.3",
+      "originalTitle": "[Consoles portables] NgpCraft Emulator v3.3",
       "category": "other",
       "categoryLabel": "其他",
       "kind": "emulator",
       "publishedAt": "2026-08-25T11:37:26Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136230-consoles-portables-ngpcraft-emulator-v3-2/",
+      "sourceUrl": "https://www.emu-france.com/news/136230-consoles-portables-ngpcraft-emulator-v3-3/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/NgpCraft.png",
       "officialUrl": "https://github.com/Tixul/Ngpcraft_emulator",
       "summary": "Ngpcraft是一款Neo Geo Pocket和Neo Geo Pocket Color模拟器，将原生C + +心脏的速度与PyQt6 GUI的优雅相结合。它的引擎经过精心校准到原始硬件，调整每个微处理器周期和闪存访问时间，用于Densha等自主时钟游戏 Go终于以每秒30帧的速度拍摄了。 得益于带有封面缩略图的动态库、高级搜索、按游戏时间排序和收藏夹管理，游戏体验特别整洁 。",
@@ -212,31 +395,7 @@
       "relatedEmulatorIds": [
         "ngpcraft_pc"
       ],
-      "contentHash": "927c5d83bc141c1f8078177774d4e733adfa9d25595352b784949821ecf3c958",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260825",
-      "title": "【Android更新】ARMSX2 nightly-20260825",
-      "originalTitle": "ARMSX2 nightly-20260825 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-25T09:25:29Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260825",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260825，发布日期为2026年08月25日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260825。\n\n发布日期：2026年08月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• SGSR:赋予它自己的清晰度,而不是分享FSR的\n• SGSR:增加边缘方向变体并达到 2.0 没有更宽的滑动器\n• LSFG:在导入重写后重新检查 DLL\n• 修正LSFG DLL 导入验证,以处理空流并改进文件验证\n• SGSR:该功能的 C++ 切入点中的 CamilleLaVey 信用\n• SGSR:用它正在驾驶的升降机后命名锐度滑轮\n• SGSR:也从游戏菜单中取出\n• GS:增加SGSR升级(Qualcomm Snapdragon游戏超级分辨率1)\n• Thermals:不读信差是一个正数\n• 第二屏幕:覆盖单元格相对于显示,而不是艺术\n• 第二屏幕:给封面一个真实的框,说明RA模式是活动的\n• 第二屏幕:装上封面、滚动面板、标记硬核对随意\n• 第二屏幕:将新瓷砖附加在现有布局上,而不只是原始的\n• 第二屏幕:默认布局中的封面和重现\n• 解决发射时的崩溃问题:在无无人机的情况下对成就进行了调查\n• 第二道屏幕:封面艺术和更多 \" 成就 \" 知识\n• 修正未到达面板的主题更改;可折叠的编辑工具栏\n• 第二屏幕和OSD:其余批次\n• 触摸编辑器:面板本身可以挡道\n• 第二屏幕:遵循应用程序的主题、平板图标、热能、背景\n• 第二屏幕:暂停,甚至瓷砖;屏幕上涡轮(# 619)\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260824...ab1df6fdd6ec663dfab5127497c9506c183b0d6d",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- SGSR: give it its own sharpness setting rather than sharing FSR's\n- SGSR: add the edge-direction variant, and reach 2.0 without a wider slider\n- LSFG: re-check the DLL after an import rewrites it in place\n- Fix LSFG DLL import verification to handle empty streams and improve file validation\n- SGSR: credit CamilleLaVey in the feature's C++ entry point\n- SGSR: name the sharpness slider after the upscaler it is driving\n- SGSR: reach it from the in-game menu too\n- GS: add SGSR upscaling (Qualcomm Snapdragon Game Super Resolution 1)\n- Thermals: the no-reading sentinel was a positive number\n- Second screen: size the cover cell against the display, not the artwork\n- Second screen: give the cover a real box, say which RA mode is active\n- Second screen: fit the cover, scroll the panel, mark hardcore vs casual\n- Second screen: append the new tiles to existing layouts, not just pristine ones\n- Second screen: cover and RetroAchievements in the default layout\n- Fix crash on launch: achievements polled with no VM\n- Second screen: cover art and more of what RetroAchievements knows\n- Fix theme changes not reaching the panel; collapsible editor toolbar\n- Second screen and OSD: the rest of the batch\n- Touch editor: the panel gets out of the way by itself\n- Second screen: follow the app's theme, tile icons, thermals, backgrounds\n- Second screen: pause that stays, even tiles; on-screen turbo (#619)\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260824...ab1df6fdd6ec663dfab5127497c9506c183b0d6d",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "d37924303efd0d1adcc3c7180ad69966b3870eb0ab115be570c80a47c4cb61ee",
+      "contentHash": "af141d80e577a2e1a30900f4f320bbb214c8d3a5d37f63122a2af53b347f8a3d",
       "translationPending": false
     },
     {
@@ -976,54 +1135,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "2fd289c29ca36b1500bec5ba64e01f7be68dc38a9126495a209be1fcb7d47e17",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-emucorex-0-3-5",
-      "title": "【Android更新】EmuCoreX 0.3.5",
-      "originalTitle": "EmuCoreX 0.3.5 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-23T07:32:50Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.3.5",
-      "imageUrl": "asset://assets/emulators/emucorex.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
-      "summary": "EmuCoreX 发布 Android 新版本 0.3.5，发布日期为2026年08月23日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreX 已发布 Android 最新版本 0.3.5。\n\n发布日期：2026年08月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.3.4...v0.3.5\n\n什么是新来: 0.3.5\n\n• 为Namco System 246/256推出固定游戏。\n• 其他修正和改进。\n建议进行清洁安装。",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.3.4...v0.3.5\r\n\r\nWhat's New: 0.3.5\r\n\r\n- Fixed game launches for Namco System 246/256.\r\n- Other fixes and improvements.\r\nA clean installation is recommended.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorex"
-      ],
-      "contentHash": "e14a06fb7cd142e90eaf46d1b34bc599a0a631da4d7d7deb3e89792f1ca40bce",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nethersx2_lsfg-26500697",
-      "title": "【Android更新】NetherSX2 LSFG (Slushii Turnip Fix) 26500697",
-      "originalTitle": "NetherSX2 LSFG (Slushii Turnip Fix) 26500697 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-23T04:49:18Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases/tag/v26500697",
-      "imageUrl": "asset://assets/emulators/nethersx2_lsfg.png",
-      "officialUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
-      "summary": "NetherSX2 LSFG (Slushii Turnip Fix) 发布 Android 新版本 26500697，发布日期为2026年08月23日。点击查看官方版本信息与更新说明。",
-      "content": "NetherSX2 LSFG (Slushii Turnip Fix) 已发布 Android 最新版本 26500697。\n\n发布日期：2026年08月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n框架生成实际起作用了\n\n4个独立的断层必须先修补,然后才能有一个插图框架到达\n屏幕。 测量于一个Retroid Pocket Nova(SD 8 Gen 2 / Adreno 740,120 Hz),\nGTA:San Andreas: real 59 + 生成 59 = 121 fps出局,模拟器仍以99%的速度运行。\n\n过错: 效果\nGS分类器需要512个全方位帧缓冲器(`w/512` 必须要匹配 `h/448`:640全方位的游戏被交给钩子每个框并丢弃。 这就是\"一些游戏中的帧是buggy\":是由帧缓冲器宽度决定的\n抓取从 *supposed * 版式转换出源: 错误 `oldLayout` 使内容未定义, 因此目的地从未改变\n第一个队列上提交的抓取 `vkGetDeviceQueue` 返回: 仿真器在另一架上制作, 因此复制件运行时没有针对帧图的顺序, 在绘图前读取\n`vkCmdDraw`/`vkCmdDrawIndexed`/`vkCmdPipelineBarrier` 仅在调试探测器下安装: 从未运行在正常操作中\n\n60 FPS补丁:+258游戏(共计515场)\n\n导入次数 `[60 FPS]` 区域 PCSX2/pcsx2_标点符号。 只有这节\n提取——每份 `patch=` 骗局一开就适用线条,所以传送整个文件\n将默默地强制宽屏和NTSC模式。 手取的补丁已经放在\n捆绑永远不会被覆盖。\n\nGTA:圣安德烈亚斯(NTSC-U)现在有一个。 之前运出的捆绑\n日文版,所以美国碟没有匹配 和60 FPS 切换没有补丁\n将适用。\n\n未标注游戏的Judder\n\n没有60个 FPS 补丁的游戏继承了强制操作的全局游戏( S)`EnableCheats`,\n`60FPSMode`, `EnableNoInterlacingPatches`这导致对30个土著头衔进行评分。\n政策已经存在,但只运行了已经存在的每个游戏文件—— i.e. 差点\n从来没有。 没有补丁的可识别游戏现在被固定在这些设置上。\n\n每个游戏配置文件都用模拟器忽略的名称写成。 写着\n`_.ini` 当盘片有串; 配置文件按空键 `.ini`\n默然不应用。 这也影响了捆绑的Colossus剖面图的影子。\n\n其他修正\n\n• 捕捉不再在微不足道的范围内重建(一个头衔在两者之间摇晃)\n1280x890/892/896;每个都被视为分辨率变化).\n• `fg_osd=off` 现在实际上隐藏了封面——每当帧源被活化时,它就被覆盖了。\n• 框架生成在无法运行的硬件上灰色化,有其原因\n(700以下的阿德雷诺,或90赫兹以下的面板)\n• No Lossless.dll 在无法生成帧的设备上提示\n• 架盖不再闪烁在图书馆屏幕上\n• Turnip Driver 打开选择器,而不是像开关一样行事;动作行号\n每个设置访问一次,然后死亡\n• 绿色对话框和设置文本替换为主题颜色\n• Snapdragon 探测器重写以按数字排列部分数字,所以新芯片\n不修改代码而正确分类\n• 建筑物不再需要附加设备\n\n应用程序ID上的注释\n\n这个建筑是 `xyz.aethersx2.cturnip`,其应用程序列表名称为\n\"NetherSX2 经典(Turnip)\",所以前端可以探测到。 家用屏幕的名字是\n不变。 它和旧的一起安装 `cpink02` 建立而不是更新它们。\n\n已知问题\n\n• Adreno 650上的帧生成崩溃(e.g. RP 迷你V2 (英语). 门都关了\n自动到那里, 因此模拟器是稳定的; 上面的队列是否也固定\n治其未试。\n• Adreno 740上用一款游戏验证帧生成。 覆盖面扩大没有经过测试。\n• 一个标题仍然显示纵向闪烁,与补丁无关;尚未解决。",
-      "originalContent": "## Frame generation actually works now\n\nFour separate faults had to be fixed before a single interpolated frame reached the\nscreen. Measured on a Retroid Pocket Nova (SD 8 Gen 2 / Adreno 740, 120 Hz),\nGTA: San Andreas: **real 59 + generated 59 = 121 fps out, emulator still at 99% speed.**\n\n| fault | effect |\n|---|---|\n| GS classifier required a 512-wide framebuffer (`w/512` had to match `h/448`) | 640-wide games were handed to the hook every frame and discarded. This is what \"framegen is buggy in some games\" was: it was decided by framebuffer width |\n| Capture transitioned the source from an *assumed* layout | wrong `oldLayout` makes contents undefined, so the destination never changed |\n| Capture submitted on the first queue `vkGetDeviceQueue` returned | the emulator renders on a different one, so the copy ran with no ordering against the frame's draws and read it before anything was drawn |\n| `vkCmdDraw`/`vkCmdDrawIndexed`/`vkCmdPipelineBarrier` installed only under a debug probe | never ran in normal operation |\n\n## 60 FPS patches: +258 games (515 total)\n\nImported every `[60 FPS]` section from PCSX2/pcsx2_patches. Only that section is\nextracted — every `patch=` line applies once cheats are on, so shipping whole files\nwould silently force Widescreen and NTSC Mode too. Hand-picked patches already in the\nbundle are never overwritten.\n\n**GTA: San Andreas (NTSC-U) now has one.** The bundle previously shipped only the\nJapanese release, so the USA disc matched nothing and the 60 FPS toggle had no patch\nto apply.\n\n## Judder on unpatched games\n\nGames with no 60 FPS patch inherited the forced-on globals (`EnableCheats`,\n`60FPSMode`, `EnableNoInterlacingPatches`), which causes judder on native-30 titles.\nThe policy existed but only ran over per-game files that already existed — i.e. almost\nnever. Identifiable games without a patch are now pinned to those settings off.\n\n**Per-game profiles were being written under a name the emulator ignores.** It reads\n`<SERIAL>_<CRC>.ini` when the disc has a serial; profiles keyed as bare `<CRC>.ini`\nsilently never applied. This also affected the bundled Shadow of the Colossus profiles.\n\n## Other fixes\n\n- Capture no longer rebuilds on trivial extent jitter (one title wobbled between\n  1280x890/892/896; each was treated as a resolution change)\n- `fg_osd=off` now actually hides the overlay — it was overridden whenever framegen was live\n- Frame Generation is greyed out, with a reason, on hardware that cannot run it\n  (Adreno below 700, or panels under 90 Hz)\n- No Lossless.dll prompt on devices where frame generation is impossible\n- The framegen overlay no longer flashes on the library screen at boot\n- Turnip Driver opens a chooser instead of behaving like a switch; action rows no\n  longer fire once per Settings visit and then go dead\n- Green dialog and settings text replaced with the theme colour\n- Snapdragon detection rewritten to order part numbers numerically, so new chips\n  classify correctly without a code change\n- Builds no longer require a device attached\n\n## Note on the app ID\n\nThis build is **`xyz.aethersx2.cturnip`**, and its app-list name is\n**\"NetherSX2 Classic (Turnip)\"** so frontends detect it. The home-screen name is\nunchanged. It installs alongside older `cpink02` builds rather than updating them.\n\n## Known issues\n\n- **Frame generation crashes on Adreno 650** (e.g. RP Mini V2). It is gated off\n  automatically there, so the emulator is stable; whether the queue fix above also\n  cures it is untested.\n- Frame generation is verified on Adreno 740 with one game. Wider coverage is untested.\n- One title still shows a vertical shimmer that is not patch-related; unresolved.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nethersx2_lsfg"
-      ],
-      "contentHash": "734b94279ea7728ecbd594d0896fe61a8a623a82bb3156036b47411cafa5e5f3",
       "translationPending": false
     },
     {
