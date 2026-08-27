@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_constants.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
-import '../app_update/app_update_prompt.dart';
 
 /// 设置页面。
 ///
@@ -156,28 +155,6 @@ class SettingsPage extends ConsumerWidget {
                 },
               ),
               const Divider(height: 1, indent: 16),
-              SwitchListTile(
-                title: const Text('应用自动更新'),
-                subtitle: const Text('启动时自动检查新版并提供覆盖安装'),
-                value: settings.appAutoUpdateEnabled,
-                onChanged: (value) {
-                  ref.read(appSettingsProvider.notifier).updateSettings(
-                        settings.copyWith(appAutoUpdateEnabled: value),
-                      );
-                },
-              ),
-              const Divider(height: 1, indent: 16),
-              ListTile(
-                leading: const Icon(Icons.system_update_alt),
-                title: const Text('立即检查应用更新'),
-                subtitle: const Text('从 GitHub Releases 获取固定签名 APK'),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () => checkAndShowAppUpdate(
-                  context,
-                  ref,
-                  manual: true,
-                ),
-              ),
             ],
           ),
 
