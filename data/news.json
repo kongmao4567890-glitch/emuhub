@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T12:12:07.458417Z",
+  "generatedAt": "2026-08-28T22:37:51.578879Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,197 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T22:07:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月28日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_coleco.cpp:更新支持为\"Beach Head (HB, v1.00)\"(fprietog) (英语:",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_coleco.cpp: updated the support to \"Beach Head (HB, v1.00)\" (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "9e07ea1d7f8b65f80134e9563b3bbcf64a812414539be4b17b0b2edd955e1f21",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T22:04:15Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年08月28日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 在Linux和Windows上执行GPU渲染\n• 游戏 NESd 在浏览器中 https://nesd.jpj.dev/play/, 带有可自我接受的多克图像( )ghcr.io/jpjonte/ (英语:nesd)\n• 快速前进,现在播放音频\n• 快速前进速度可配置:2x(默认)、3x、4x、最大(无音频)\n^ 文件拾取器现在支持在游戏盘上跳过信件:上/下个 Tab 动作跳转到上/下个起始信件\n• 向音频设置添加了低通道过滤器\n• 日志查看器现在显示日志级别和频道,并支持文本搜索\n• 夜行和分行建设现在显示About对话框和启动日志中的构建 ID\n• 视频过滤器(CRT和光滑)现在可用网页版本\n• 多个视频过滤器现在可以立即启动\n\n已更改\n• 在菜单中保留一个游戏板按钮,现在随着时间推移加快了重复率\n· 取消文件拾取器中的游戏板( 键盘上的逃脱) 现在向上跳出一个目录, 一旦拾取器回到它打开的目录上就关闭\n• 平板夜行会现在主要出版 jpj.dev 平盘回放。 独立的\"夜回\"退役。 已有的夜间安装显示一条指向新 repo 的信件\n• 视频过滤器(CRT,平滑)现在可以运行在GPU渲染器上方,而不是强迫CPU渲染器倒置\n• 退出按钮不再在Android上显示,其中应用背景而不是退出\n• 日志查看器现在在Info级别打开,并将遥测行标记为调试\n• 关于按钮从主菜单移至一般设置标签\n^ 主菜单按钮现在坐在最近的ROM列表下方的一行中,因此ROM网格在像Steam Deck这样的宽屏幕上得到更多的一行。\n• 更新新用户的默认设置:启用自动加载,并设定缩放为\"平稳\"\n\n固定\n• 将Zapper的点击次数固定在错误的目标上\n• 将CRT过滤器的扫描线固定为一巨型扫描线\n• 修补在命令行上通过的不自动开始的ROM路径\n• 固定最近的ROM上下文菜单中的“保存状态”条目,当没有游戏运行时不做任何事\n• 将并非所有建筑都固定在平板电脑上\n• 固定MMC1游戏(e.g. \"塞尔达传说\"倒行逆施后被冰冻\n• 固定控制器焦点被卡入取取文件器的搜索栏\n• 固定逃生退出主菜单,而不再在与 Enter 恢复游戏后打开游戏中菜单\n• Android状态和导航条现在默认被隐藏\n• 与游戏中不再触发UI快捷键无关的密钥(e.g. 当“ 打开菜单” 绑定到另一个密钥时退出主菜单\n在一些Android设备上固定地不断发声。 音频现在按照设备本身的速度被消耗, 运行中的恢复比以前更能填补缓冲\n• 由于定时器不统一而固定的口音",
+      "originalContent": "### Added\n- Implemented GPU rendering on Linux and Windows\n- Play NESd in the browser at https://nesd.jpj.dev/play/, with a self-hostable Docker image (ghcr.io/jpjonte/nesd)\n- Fast-forward now plays audio\n- Fast-forward speed is configurable: 2x (default), 3x, 4x, max (without audio)\n- The file picker now supports letter skipping on a gamepad: the Previous/Next Tab actions jump to the previous/next starting letter\n- Added a Low Pass Filter toggle to the Audio settings\n- The log viewer now colors log levels and channels and supports text search\n- Nightly and branch builds now show a build id in the About dialog and the startup log\n- The video filters (CRT and smooth) are now available in the web version\n- Multiple video filters can now be activated at once\n\n### Changed\n- Holding a gamepad button in menus now speeds up the repeat rate over time\n- Cancel on a gamepad (Escape on the keyboard) in the file picker now goes up one directory, and closes the picker once it is back at the directory it was opened at\n- Flatpak nightlies are now published to the main jpj.dev Flatpak repo. The separate nightly repo is retired. Existing nightly installs show a message pointing at the new repo\n- Video filters (CRT, smooth) can now run on top of the GPU renderer instead of forcing a fallback to the CPU renderer\n- The Quit button is no longer shown on Android, where apps background instead of quitting\n- The log viewer now opens at the Info level and tags telemetry lines as Debug\n- The About button moved from the main menu to the General settings tab\n- The main menu buttons now sit in a single row below the recent ROM list, so the ROM grid gets more rows on wide screens like the Steam Deck\n- Updated default settings for new users: Auto load is enabled and scaling is set to \"smooth\"\n\n### Fixed\n- Fixed the Zapper registering hits on the wrong target\n- Fixed the CRT filter's scanlines rendering as one giant scanline\n- Fixed a ROM path passed on the command line not starting automatically\n- Fixed the \"Save states\" entry in the recent ROM context menu doing nothing when no game is running\n- Fixed not all architectures being published to the Flatpak repo\n- Fixed MMC1 games (e.g. The Legend of Zelda) freezing after rewinding\n- Fixed controller focus getting stuck in the file picker's search bar\n- Fixed Escape quitting to the main menu instead of opening the in-game menu after resuming the game with Enter\n- The Android status and navigation bars are now hidden by default\n- Keys that are not bound to anything no longer trigger UI shortcuts while in game (e.g. Escape quitting to the main menu when \"Open Menu\" is bound to another key)\n- Fixed constant audio crackling on some Android devices. Audio is now consumed at the device's own pace, and underrun recovery fills the buffer further than before\n- Fixed audio stutters due to inconsistent timers",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "5f3aa70a88542eb53d41ff8deecff8012f0714c3fc406c171cecffec11d77c38",
+      "translationPending": false
+    },
+    {
+      "id": "136332",
+      "title": "【移动设备】Rejoignez-nous sur Discord ! / Join Us on Discord !",
+      "originalTitle": "[Auto Pub] Rejoignez-nous sur Discord ! / Join Us on Discord !",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T19:25:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136332-auto-pub-rejoignez-nous-sur-discord-join-us-on-discord/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/discord-ad2.png",
+      "officialUrl": "",
+      "summary": "想讨论模拟，关注新闻直播，还是只是在爱好者之间度过美好时光？ 我们的社区在官方Emu-France Discord上等着您。 快来讨论，提出您的问题，分享您的发现，并享受一个专门用于模仿和复古游戏的友好空间。 立即加入我们！ 想聊聊模拟，实时关注最新动态，或者只是和其他爱好者一起玩？ 我们的社区在官方Emu-France Discord服务器上等着您。 快来分享您的发现，提出问题，并享受一个专门用于模拟和复古游戏的温馨空间。",
+      "content": "想讨论模拟，关注新闻直播，还是只是在爱好者之间度过美好时光？\n\n我们的社区在官方Emu-France Discord上等着您。\n\n快来讨论，提出您的问题，分享您的发现，并享受一个专门用于模仿和复古游戏的友好空间。\n\n立即加入我们！\n想聊聊模拟，实时关注最新动态，或者只是和其他爱好者一起玩？\n我们的社区在官方Emu-France Discord服务器上等着您。\n\n快来分享您的发现，提出问题，并享受一个专门用于模拟和复古游戏的温馨空间。\n\n立即加入我们！ ！",
+      "originalContent": "Envie de discuter émulation, de suivre l’actu en direct ou simplement de passer un bon moment entre passionnés ?\n\nNotre communauté vous attend sur le Discord officiel d’Emu-France.\n\nVenez échanger, poser vos questions, partager vos trouvailles et profiter d’un espace convivial dédié à l’émulation et au rétro‑gaming.\n\nRejoignez-nous dès maintenant !\n\nWant to chat about emulation, follow the latest updates in real time, or just hang out with fellow enthusiasts?\nOur community is waiting for you on the official Emu‑France Discord server.\n\nCome share your discoveries, ask questions, and enjoy a welcoming space dedicated to emulation and retro gaming.\n\nJoin us now !!",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "8d7614404ee2b4a9b5f35cde9b8ad652caf1bb312085b63ada5b31f2fed1c6cf",
+      "translationPending": false
+    },
+    {
+      "id": "136328",
+      "title": "【电脑】emu6502 v0.9.8",
+      "originalTitle": "[Ordi.] emu6502 v0.9.8",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T19:10:15Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136328-ordi-emu6502-v0-9-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/11/emu6502.png",
+      "officialUrl": "https://github.com/univta0001/emu6502",
+      "summary": "这是Apple仿真器] [和Apple//e完全用Rust、SDL和HTML5编写。",
+      "content": "这是Apple仿真器] [和Apple//e完全用Rust、SDL和HTML5编写。",
+      "originalContent": "Il s'agit de l'émulateur Apple ][ et Apple //e entièrement écrit en Rust, SDL et HTML5.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "eac6f10b36f170347b090d76947b0fe77d0d1fc726fcf98b7ddb2463f0b4b61f",
+      "translationPending": false
+    },
+    {
+      "id": "136325",
+      "title": "【其他】NumWorks (Scientifique) v4.1.0",
+      "originalTitle": "[Calculatrices] NumWorks (Scientifique) v4.1.0",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T19:00:30Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136325-calculatrices-numworks-scientifique-v4-1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/numworks-scientifique.png",
+      "officialUrl": "https://www.numworks.com/fr/emulateur/scientifique/",
+      "summary": "NumWorks是一家法国公司，于2026年在法国推出了一款面向大学生的科学计算器。NumWorks科学计算器旨在通过简单直观的界面为6年级至3年级的学生提供帮助。",
+      "content": "NumWorks是一家法国公司，于2026年在法国推出了一款面向大学生的科学计算器。NumWorks科学计算器旨在通过简单直观的界面为6年级至3年级的学生提供帮助。",
+      "originalContent": "NumWorks est une société française qui a lancé en France en 2026 une calculatrice scientifique visant un public collégien. La calculatrice scientifique NumWorks a été conçue pour accompagner les élèves de la 6e à la 3e avec une interface simple et intuitive.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "e5dc207a5601699a66661e9b6c4ec2a78270fa855e5bf2d4ddeda51233100557",
+      "translationPending": false
+    },
+    {
+      "id": "136321",
+      "title": "【其他】NumWorks (Graphique) v26.3.0",
+      "originalTitle": "[Calculatrices] NumWorks (Graphique) v26.3.0",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T18:49:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136321-calculatrices-numworks-graphique-v26-3-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/numworks-graphique.png",
+      "officialUrl": "https://www.numworks.com/fr/emulateur/graphique/",
+      "summary": "NumWorks是一家法国公司，于2017年夏天在法国推出了一款针对高中生观众的图形计算器。NumWorks计算器很快被许多法国高中生采用，并已成为传统图形计算器的替代品。",
+      "content": "NumWorks是一家法国公司，于2017年夏天在法国推出了一款针对高中生观众的图形计算器。NumWorks计算器很快被许多法国高中生采用，并已成为传统图形计算器的替代品。",
+      "originalContent": "NumWorks est une société française qui a lancé en France à l'été 2017 une calculatrice graphique visant un public lycéen. La calculatrice NumWorks a été rapidement adoptée par de nombreux lycéens français et s'est depuis imposée comme une alternative aux calculatrices graphiques traditionnelles.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "fec2f14d42e79b5ed7b0a3090c60f3af0fa9b2c94bf67f5fefa40bd0f9b6bbe3",
+      "translationPending": false
+    },
+    {
+      "id": "136319",
+      "title": "【其他】Emu28 v1.40",
+      "originalTitle": "[Calculatrices] Emu28 v1.40",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T18:38:56Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136319-calculatrices-emu28-v1-40/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2019/08/HP28C.jpg",
+      "officialUrl": "http://hp.giesselink.com/emu28.htm",
+      "summary": "HP18C和HP28C的仿真器。",
+      "content": "HP18C和HP28C的仿真器。",
+      "originalContent": "Un émulateur d'HP18C et de HP28C.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "fa8158aa50e28e3f7f51591cb3f7fdf26ed88ccebc556bb0c86b04c09704e817",
+      "translationPending": false
+    },
+    {
+      "id": "136317",
+      "title": "【家用机】miniCDi v0.1",
+      "originalTitle": "[Consoles de salon] miniCDi v0.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T16:01:57Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136317-consoles-de-salon-minicdi-v0-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/miniCDi.png",
+      "officialUrl": "https://github.com/CatmanFan/miniCDi",
+      "summary": "它是用C + +17开发的飞利浦CD-i的跨平台模拟器。 以下是一些功能： •全面支持Mono-I卡（ CD-i 200、CD-i 220/20 ） ，可启动商业和自制游戏。 •部分支持Mono-II和Mono-IV卡。 •前置荧光显示器(FTD)仿真。 •部分音频支持。 •对CD-i控制器的实验性支持。 •兼容Windows、macOS、Wii、Wii U和任天堂3DS。 •使用MUSASHI 4.10进行68070处理器仿真。",
+      "content": "它是用C + +17开发的飞利浦CD-i的跨平台模拟器。\n\n以下是一些功能：\n•全面支持Mono-I卡（ CD-i 200、CD-i 220/20 ） ，可启动商业和自制游戏。\n•部分支持Mono-II和Mono-IV卡。\n•前置荧光显示器(FTD)仿真。\n•部分音频支持。\n•对CD-i控制器的实验性支持。\n•兼容Windows、macOS、Wii、Wii U和任天堂3DS。\n•使用MUSASHI 4.10进行68070处理器仿真。",
+      "originalContent": "Il s'agit d'un émulateur multiplateforme de Philips CD-i, développé en C++17.\n\nVoici quelques caractéristiques:\n- Support complet des cartes Mono-I (CD-i 200, CD-i 220/20), permettant de lancer des jeux commerciaux et homebrews.\n- Support partiel des cartes Mono-II et Mono-IV.\n- Émulation de l'afficheur fluorescent frontal (FTD).\n- Support audio partiel.\n- Support expérimental du contrôleur CD-i.\n- Compatible Windows, macOS, Wii, Wii U et Nintendo 3DS.\n- Utilise Musashi 4.10 pour l'émulation du processeur 68070.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "a8243913eb9af13ba059428d65da19bb35eb02170c55e668e002753c7c9ea507",
+      "translationPending": false
+    },
+    {
+      "id": "136314",
+      "title": "【家用机】CD-i Emulator v0.5.3 beta 10",
+      "originalTitle": "[Consoles de salon] CD-i Emulator v0.5.3 beta 10",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-28T15:56:56Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136314-consoles-de-salon-cd-i-emulator-v0-5-3-beta-10/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2018/08/CDI-emu.jpg",
+      "officialUrl": "http://www.cdiemu.org/",
+      "summary": "CD-i模拟器（ cdiemu ）提供了相当完整的CD-i播放器模拟器，它可能是同类产品中最好的模拟器，但它的使用时间仅限于3分钟（除非您已经在机器上激活了无限版本，或者您正在使用飞利浦Mono-I播放器设备） ，并且您不会 除非您为该计划付费以获得完整且不受限制的版本，否则请勿保存。 感谢Anna的镜头和潜意识信息;) 新增功能： •内置到期日已更新为2027/01/01。",
+      "content": "CD-i模拟器（ cdiemu ）提供了相当完整的CD-i播放器模拟器，它可能是同类产品中最好的模拟器，但它的使用时间仅限于3分钟（除非您已经在机器上激活了无限版本，或者您正在使用飞利浦Mono-I播放器设备） ，并且您不会\n除非您为该计划付费以获得完整且不受限制的版本，否则请勿保存。\n\n感谢Anna的镜头和潜意识信息;)\n\n新增功能：\n•内置到期日已更新为2027/01/01。\n\n• 44.1 kHz的立体声CD-DA音频错误地产生单声道输出；\n两个频道都在播放左频道音频。 此问题已得到解决。\n\n•请求的CD-DA音频光盘扇区扇区不正确\n光盘映像文件的格式；此问题已得到纠正。因此，\n现在可以从加扰的光盘映像中播放CD-DA音频。\n\n•通过替换之前的样本，改进了ADPCM音频上采样\n复制方法与多相后置过滤器，产生显著\n更流畅的音频输出。这在默认情况下是启用的，可以关闭\n使用-nopostfilteraudio选项。\n\n• CD-i CDIC硬件使用四个重复声音参数中的最后一个\n与音频扇区标头一起传输的字节；模拟器以前是\n使用第一个。这已被纠正，可能会影响音频解码\n一些头衔。\n\n•修复了DMA信道初始化问题： DMA信道1\n被视为通道0。\n\n• FMV中断状态寄存器中的VSYNC中断位现在\n正确模拟；这是正确的IMPEG和VMPEG FMV所必需的\n墨盒操作。音频流状态寄存器现在也\n正确实施。\n\n•已添加视频数据边界检查；以前，越界\ncD-i视频数据中的视频坐标可能会导致内存访问错误。\n\n•添加了新的-runshell选项，可立即启动OS-9 shell\n而无需通过正常的CD-i播放器启动序列。\n此选项仅适用于包含OS-9外壳模块的播放器ROM ；\n它适用于CD-i软件开发人员。\n\n•添加了新的调试器命令“unset”以清除模拟器变量\n先前使用“set”命令或命令行-set选项设置。\n•添加了新的调试器命令“ei”以显示OS-9 IRQ\n轮询表。\n\n•现在支持CD-i 200播放器的前面板LED显示屏。\n\n•扩展名为.scm的光盘映像文件现已包含在\n光盘映像文件选择对话框；某些人使用此扩展名\n用于加密光盘映像的光盘转储工具。\n•已添加对预标准JNMS光盘标签的支持；某些光盘使用\n早于已发布标准的光盘标签格式。\n\n•光盘目录和路径表读取中的缓冲区分配错误已被\n已修复；因此现在启用了调试窗口中的文件读取跟踪，\n它曾经导致内存损坏崩溃。\n•拆装机中PC相对地址和标签的显示具有\n已更正。\n\n•拆装器现在在地址上显示大小后缀：绝对字\n地址显示.W和绝对长地址显示.L;短分支\n说明（ BRA、BSR、Bcc ）现在显示.S后缀。\n• MA_CREATE和MA_PLAY OS-9陷阱的参数大小规格\n反汇编程序中显示的定义包含一个拼写错误；这已经被\n已更正。\n\n•在中添加或更正了几个OS-9陷阱定义。\n拆卸，包括额外的F $陷阱条目； SS_PS陷阱具有\n已重命名为SS_SL （ GetSlave/SetSlave ）以匹配正确的OS-9\n定义。\n\n•为分支和跳跃指令构建时钟循环表（ BRA、BSR、JMP、\nJSR ）已更正；助记符比较默默失败\n由于table语句中的重命名未反映在\n盘点周期代码。\n•调试器“d” （转储）命令的语法帮助文本已被\n已更正。\n\n•已修复内部文本格式中的缓冲区分配错误\n负动态字段宽度可能导致缓冲区溢出的代码。\n\n•从设备仿真中未初始化的指针可能导致\n随机崩溃；此问题已得到修复。\n•还进行了其他一些小修复：指针初始化和\n空指针修复、单字符模式通配符修复、\n更正CD-i 490播放器NVRAM大小（现在正确32\nkB ） ，对CD-i 740 IKAT固件版本的修正，以及\nscanModules的缓存模块无效修复。\nTgames注意：只有Beta 4及更高版本具有NVRAM实现，即您可以（最终）使用0.5.3版本保存！ 测试版3、2和1的作者自愿删除代码以进行保存，这是不可能的。\n\n有关更多信息，请查看专用部分...",
+      "originalContent": "L'émulateur de CD-i (cdiemu) fournit une émulation assez complète du lecteur de CD-i, il s'agit probablement du meilleur émulateur du genre, toutefois il est limité (sauf si vous avez déjà activé une édition illimitée sur votre machine ou que vous utilisez un appareil Philips Mono-I player) en durée d'utilisation à seulement 3 minutes et vous ne pourrez pas sauvegarder à moins de payer le programme pour obtenir une version complète et sans restriction.\n\nMerci Anna pour le shot et le message subliminal ;)\n\nLes nouveautés:\n- The built-in expiration date has been updated to 2027/01/01.\n\n- Stereo CD-DA audio at 44.1 kHz was incorrectly producing mono output;\nboth channels were playing left-channel audio. This has been fixed.\n\n- CD-DA audio disc sectors were being requested with an incorrect sector\nformat from disc image files; this has been corrected. As a result,\nplaying CD-DA audio from scrambled disc images now works.\n\n- ADPCM audio upsampling has been improved by replacing the previous sample\nduplication method with a polyphase post-filter, producing significantly\nsmoother audio output. This is enabled by default and can be turned off\nwith the -nopostfilteraudio option.\n\n- The CD-i CDIC hardware uses the last of four duplicate sound parameter\nbytes transmitted with audio sector headers; the emulator was previously\nusing the first. This has been corrected and may affect audio decoding\nfor some titles.\n\n- A DMA channel initialization problem has been fixed: DMA channel 1 was\nbeing treated as channel 0.\n\n- The VSYNC interrupt bit in the FMV interrupt status register is now\nemulated correctly; this is needed for correct IMPEG and VMPEG FMV\ncartridge operation. The audio stream status register is now also\nimplemented correctly.\n\n- Video data bounds checking has been added; previously, out-of-bounds\nvideo coordinates in CD-i video data could cause memory access errors.\n\n- A new -runshell option has been added to start an OS-9 shell immediately\nfrom ROM without going through the normal CD-i player startup sequence.\nThis option only works on player ROMs that include the OS-9 shell module;\nit is intended for CD-i software developers.\n\n- A new debugger command \"unset\" has been added to clear emulator variables\npreviously set with the \"set\" command or a command-line -set option.\n\n- A new debugger command \"ei\" has been added to display the OS-9 IRQ\npolling table.\n\n- The front panel LED display for the CD-i 200 player is now supported.\n\n- Disc image files with the .scm extension are now included in the\ndisc image file selection dialog; this extension is used by some\ndisc dumping tools for scrambled disc images.\n\n- Support for pre-standard JNMS disc labels has been added; some discs use\na disc label format that predates the published standard.\n\n- A buffer allocation bug in disc directory and path table reading has been\nfixed; file read tracing in the debug window is therefore now enabled,\nit used to result in memory corruption crashes.\n\n- The display of PC-relative addresses and labels in the disassembler has\nbeen corrected.\n\n- The disassembler now shows size suffixes on addresses: absolute word\naddresses show .W and absolute long addresses show .L; short branch\ninstructions (BRA, BSR, Bcc) now show a .S suffix.\n\n- The parameter size specifications for the MA_Create and MA_Play OS-9 trap\ndefinitions as shown in the disassembler contained a typo; this has been\ncorrected.\n\n- Several OS-9 trap definitions have been added or corrected in the\ndisassembler, including additional F$ trap entries; the SS_PS trap has\nbeen renamed to SS_SL (GetSlave/SetSlave) to match the correct OS-9\ndefinition.\n\n- Clock cycle table building for branch and jump instructions (BRA, BSR, JMP,\nJSR) has been corrected; the mnemonic comparisons were failing silently\ndue to a rename in the instruction table that was not reflected in the\ncycle counting code.\n\n- The syntax help text for the debugger \"d\" (dump) command has been\ncorrected.\n\n- A buffer allocation bug has been fixed in the internal text formatting\ncode where a negative dynamic field width could cause a buffer overrun.\n\n- An uninitialized pointer in the slave device emulation could cause\nrandom crashes; this has been fixed.\n\n- Several other minor fixes have been made: pointer initialization and\nnull pointer fixes, a single-character pattern wildcard fix, a\ncorrection to the CD-i 490 player NVRAM size (now correctly 32\nkilobytes), a correction to the CD-i 740 IKAT firmware version, and\na module cache invalidation fix for ScanModules.\n\nNB de Tgames: Seule la version Beta 4 et supérieur a l'implémentation de la NVRAM, c'est à dire que vous pouvez (enfin) sauvegarder avec la version 0.5.3 ! Chose impossible avec la Beta 3, 2 et 1 dont l'auteur avait volontairement supprimé le code permettant de sauvegarder.\n\nAllez voir la section dédiée pour plus d'infos...",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "42abd5551e8c998b95a19cf10a40fd8a11bfd43782659b221ac0f737172a1cac",
+      "translationPending": false
+    },
     {
       "id": "136309",
       "title": "【家用机】KytyPS5 r260828",
@@ -101,31 +292,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "e67b4772610d265540efc910d9434ca3742d92c486fedef10ead00941df60a7b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T09:00:11Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年08月28日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年08月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_gba.cpp, d_snes.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp, d_snes.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "ef1a9c01fd33e73b8a8a029b5d0a890a4605baa874bdeaf1f8d88f5ac01e7ec8",
       "translationPending": false
     },
     {
@@ -255,31 +421,31 @@
       "imageUrl": "asset://assets/emulators/armsx2.png",
       "officialUrl": "https://github.com/ARMSX2/ARMSX2",
       "summary": "ARMSX2 发布 Android 新版本 nightly-20260828，发布日期为2026年08月28日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260828。\n\n发布日期：2026年08月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• VU:乘积上方两个更小的指示\n• 微VU:与COP2宏观相同,裁定两个案件。\n• COP2宏观:决定2^-79以下的产品也不合规定\n• COP2宏:将乘数的操作存储点移出热道\n• VU测试:将边表分割成255\n• COP2宏:决定小的非零尾巴出线\n• VU测试:小于0x8000尾巴的表格\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260827...3eb3684e49084eccf0845fad5b1e86ea7f2a0946",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- VU: two fewer instructions in the multiply's ft predicate\n- microVU: decide the same two cases out of line as COP2 macro\n- COP2 macro: decide products below 2^-79 out of line as well\n- COP2 macro: move the multiply's operand stores off the hot path\n- VU tests: split the edge table at exponent 255\n- COP2 macro: decide small non-zero tails out of line\n- VU tests: a table for tails smaller than 0x8000\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260827...3eb3684e49084eccf0845fad5b1e86ea7f2a0946",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260828。\n\n发布日期：2026年08月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• GS:Vulkan和OpenGL ES的原生ASTC纹理替换\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260827...dec880e5c8ed08a85d9f242b19bc384d4150bab9",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GS: native ASTC texture replacements for Vulkan and OpenGL ES\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260827...dec880e5c8ed08a85d9f242b19bc384d4150bab9",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx2"
       ],
-      "contentHash": "95b7838770975702ffceb41c36930f0d5795aea13dc98085b9754efd72ca9251",
+      "contentHash": "e19aeebe59575a9c2ad51fbca34e2373cedc09ad93e9dafc33a616a0eed0f512",
       "translationPending": false
     },
     {
-      "id": "android-release-mame4droid-1-40",
-      "title": "【Android更新】MAME4droid 1.40",
-      "originalTitle": "MAME4droid 1.40 Android release",
+      "id": "android-release-mame4droid-1-40-1",
+      "title": "【Android更新】MAME4droid 1.40.1",
+      "originalTitle": "MAME4droid 1.40.1 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
       "publishedAt": "2026-08-27T23:52:02Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.40",
+      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.40.1",
       "imageUrl": "asset://assets/emulators/mame4droid.png",
       "officialUrl": "https://github.com/seleuco/MAME4droid-Current",
-      "summary": "MAME4droid 发布 Android 新版本 1.40，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
-      "content": "MAME4droid 已发布 Android 最新版本 1.40。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加NetPlay公共房间\n\n到目前为止， NetPlay在互联网上工作，没有帐户，没有中继，也没有值得信赖的服务。 它不能做的一件事就是找到你的对手：你仍然必须认识某人，并用手与他们交换IP地址。\n公共房间缺了一半。 这是一个可选的面板，体验达人可以在其中宣传他们正在举办的游戏，因此任何拥有相同ROM的人都可以轻触并连接。\n它*不是*是一个继电器。 董事会介绍两名玩家，然后让路--比赛仍然直接在两台设备之间进行，就像以前一样，没有任何关于它的信息通过我的任何服务器。\n\n在白板上\n\n•房间密码。每个房间都有一个短代码，您可以传递给朋友。\n•大头针房间。勾选*需要大头针* ，房间仍然显示，标记为受保护，但只有您告诉的人才能进入。PIN本身永远不会到达服务器—只有它的一个哈希才会到达。\n•颜色编码的连接预测。每个房间的绿色、琥珀色或红色，基于两台路由器的实际STUN测量值，而不是猜测值。两个无法通过的对称NAT显示红色并拒绝加入。\n•同一网络房间被标记，因此同一栋房子里有两台设备拨打局域网端，而不是外出上网。该匹配是在两个咸指纹之间进行的—任何设备的地址都不会透露给任何人。\n•加入前检查ROM。 应用程序会在您的ROM文件夹中查找游戏，并为丢失的文件命名，而不是让您加入并打破房东的房间。\n•无法使用的房间仍在列表中，但显示为灰色，而不是隐藏的。 即使此构建无法承受，知道匹配正在发生也是有价值的。\n\nDrop-in NetPlay\n等待某人出现曾经意味着盯着对话框屏幕。 现在，您可以勾选“立即开始” ，让任何人加入并简单地玩游戏。 当你这样做的时候，你的房间会留在黑板上，当有人声称它时，你的机器的状态就会被移交，你从那一刻起就一起继续下去。\n•当他们离开时，您会继续独自玩游戏，就好像NetPlay从未发生过一样。 再打开它，房间就恢复了。\n•仅回滚会话—使置入成为可能的状态传输在Lockstep中不存在。\n•在游戏中打开它可能会重新启动游戏，并且应用程序会在您提交之前发出警告。NetPlay在游戏启动时固定一组东西（您保存的设置和NVRAM ， Lua插件和作弊，声速， CHD的工作副本） ，其中没有一个可以应用于已运行的游戏\n。忽略它不会大声失败：两台机器只是在接下来的几分钟内漂移开来，没有错误可以指向。\n\n关于您的数据—简短的版本是没有任何\nMAME4droid由一人制作并赠送。 没有广告，没有解锁，没有订阅，也没有服务器预算。 Public Rooms是一个很好的折衷方案，它使找到对手成为可能：它在一个没有数据库的小型免费实例上运行，这对您没有任何影响。\n•选择加入。第一次询问您，如果您拒绝，我们永远不会联系董事会。手动NetPlay保持一如既往的工作状态。\n•您的地址绝不会写入日志。只有当你的房间空着时，它才会留在记忆中，交给加入你的一个玩家，然后与房间一起消失。服务器保留的会话记录根本不包含任何IP地址。\n•板上显示的地址没有人—甚至没有通过“相同的网络”徽章，这是两个盐渍指纹的比较。每次服务器启动时都会生成新鲜的盐，因此昨天的记录无法与今天的记录进行匹配，即使从内部也是如此。\n•无法识别您的设备。 没有帐户，没有登录，没有姓名，没有广告ID ，手机上没有其他会话可以识别的任何内容。 您的两次访问不会相互关联。\n•房间将在大约一米后过期……",
+      "summary": "MAME4droid 发布 Android 新版本 1.40.1，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
+      "content": "MAME4droid 已发布 Android 最新版本 1.40.1。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n添加的 NetPlay 公共房间\n\n直到现在,NetPlay在互联网上工作,没有帐户,没有中继,也没有信任的服务。 唯一不能做的就是给你找一个对手:你仍然必须已经认识一个人,然后用手交换一个IP地址。\n\n公共房间是失踪的一半。 这是一个可选的板子,主机在其中广告他们主机的游戏,所以任何拥有同一种ROM的人都可以将它相接并连接。\n\n它是什么 *不 * 是继电器。 棋盘引入了两个玩家,然后步出道来——比赛仍然在两个设备之间直接进行,完全如前作所为,没有任何关于它经过troug h 我的服务器。\n\n在董事会上\n\n• 房间代码。 每个房间都有一个简短的代码 你可以传递给朋友。\n• PIN会议室。 请检查date=中的日期值 (帮助) Tick * Require PIN * 房间仍然出现,标记为被保护,但只有你告诉的人才能进入。 PIN本身从来没有到达服务器——只有一散钱才有。\n• 颜色编码连接预报。 绿色,琥珀,或红色每个房间,基于STUN实际测量的两种路由器而不是猜测。 两个对称的NAT没有途径通过显示红色并拒绝加入。\n· 同一网络房间被标出,因此一个房子里有两个装置拨打局域网一侧,而不是去因特网和回网。 这种匹配是在两个有盐分的指纹之间作出的——两个设备的地址都没有透露给任何人。\n• 在加入前进行ROM检查。 该应用程序在您ROM文件夹中寻找游戏,并命名所缺少的文件,而不是让你加入并打破主机的房间。\n• 无法使用的房间保留在清单中,但灰出而不是隐藏。 即使这栋建筑无法承受,知道一场比赛正在发生也是值得的。\n\n滴入网络播放\n\n等待某人出现 曾经意味着盯着一个对话屏幕。 现在,你可以勾选 现在开始,让任何人加入 和简单的游戏。 你的房间留在板子上,当有人声称它, 你的机器的状态被交出, 从那个时刻起,你继续在一起。\n\n· 当他们离开时,你继续自己玩,好像NetPlay从未发生过一样。 再打开它,房间就会回升。\n· 仅回滚会话——在洛克斯德普(Lockstep)中不存在使入站成为可能的状态转移。\n^ 中场切换它可能会重启游戏,应用程序会在你承诺前警告你。 NetPlay在游戏靴子瞬间(您保存的设置和NVRAM、Lua插件和作弊、音速率、CDD的工作副本)中标注了一组东西,其中不能有一个是 应用到已经运行的游戏中。 忽视这一点不会大叫地失败:两台机器在接下来的几分钟里只是相去甚远,没有错。\n\n关于你的数据——短篇是没有任何\n\nMAME4droid 由一个人制作并赠送。 没有广告 没有解锁 没有订阅 没有服务器的预算 公共房间是一个很好的妥协, 而正是它使得找到一个对手成为可能: 它运行在一个没有数据库的小型自由实例上, 它不会保留任何关于你的东西。\n\n• 选入。 你第一次被问, 如果你拒绝, 董事会从来没有联系。 手动NetPlay一直和往常一样工作。\n• 您的地址从未写入日志。 它只生活在记忆中 当你的房间是上, 被交给一个玩家 谁加入你, 会话记录服务器保存的IP地址完全没有。\n• 董事会向任何人展示一个地址——甚至没有通过\"同名网络\"徽章,这是两个被盐化的指纹的比较。 每当服务器启动时,盐都会被产生出新鲜的盐分,因此昨天的记录甚至无法从内部与今天的记录相匹配。\n• 没有识别出你的装置。 没有账户,没有登录,没有名字,没有广告标识,没有存储在您手机上的、另一个会话可以识别的东西。 你们的两次拜访没有联系\n- 房间在大约一米之内过期...",
       "originalContent": "## Added NetPlay Public Rooms\r\n\r\nUntil now, NetPlay worked over the internet with no account, no relay, and no service to trust. The one thing it could not do was find you an opponent: you still had to know someone already, and swap an IP address with them by hand.\r\n\r\n**Public Rooms** is that missing half. It's an optional board where hosts advertise the game they are hosting, so anyone with the same ROM can tap it and connect.\r\n\r\nWhat it is *not* is a relay. The board introduces two players and then steps out of the way — the match still runs directly between the two devices, exactly as it did before, and nothing about it passes through any server of mine. \r\n\r\n### On the board\r\n\r\n* **Room codes.** Every room gets a short code you can pass to a friend. \r\n* **PIN rooms.** Tick *Require PIN* and the room still appears, marked as protected, but only the people you told can get in. The PIN itself never reaches the server — only a hash of it does.\r\n* **A color-coded connection forecast.** Green, amber, or red per room, based on what STUN actually measured about both routers rather than a guess. Two symmetric NATs with no way through show red and refuse the join.\r\n* **Same-network rooms are flagged**, so two devices in one house dial the LAN side instead of going out to the internet and back. That match is made between two salted fingerprints — neither device's address is ever revealed to anyone.\r\n* **A ROM check before you join.** The app looks for the game in your ROMs folder and names the missing file, instead of letting you join and break the host's room.\r\n* Unusable rooms stay listed but greyed out rather than hidden. Knowing a match is happening is worth something even when this build cannot take it.\r\n\r\n### Drop-in NetPlay\r\n\r\nWaiting for someone to turn up used to mean staring at a dialog screen. Now you can tick **Start now, let anyone join** and simply play. Your room stays on the board while you do, and when somebody claims it, your machine's state is handed over and you carry on together from that exact moment.\r\n\r\n* When they leave, you keep playing on your own as if NetPlay had never happened. Open it again and the room goes back up.\r\n* Rollback sessions only — the state transfer that makes drop-in possible does not exist in Lockstep.\r\n* Switching it on mid-game may restart the game, and the app warns you before you commit. NetPlay pins a set of things the instant a game boots (your saved settings and NVRAM, Lua plugins and cheats, the sound rate, the working copy of a CHD) and not one of them can be applied to a game already running. Ignoring that does not fail loudly: the two machines just drift apart over the following minutes with no error to point at.\r\n\r\n### About your data — the short version is that there isn't any\r\n\r\nMAME4droid is made by one person and given away. No ads, nothing to unlock, nothing to subscribe to, and no budget for servers either. Public Rooms is a good compromise, and it is what makes finding an opponent possible at all: it runs on a tiny free instance with no database, which keeps nothing about you.\r\n\r\n* **It is opt-in.** You are asked the first time, and if you decline, the board is never contacted. Manual NetPlay keeps working exactly as it always has.\r\n* **Your address is never written to a log.** It lives in memory only while your room is up, is handed to the one player who joins you, and disappears with the room. The session records the server does keep contain no IP addresses at all.\r\n* **The board shows an address to nobody** — not even through the \"same network\" badge, which is a comparison of two salted fingerprints. The salt is generated fresh every time the server starts, so yesterday's records cannot be matched against today's even from the inside.\r\n* **Nothing identifies your device.** No account, no login, no name, no advertising ID, nothing stored on your phone that another session could recognize. Two visits from you are not linked to each other.\r\n* **Rooms expire in about a m…",
       "platforms": [
         "android"
@@ -288,31 +454,7 @@
         "mame4droid",
         "mame4droid_neogeo"
       ],
-      "contentHash": "234b41ecf4540b354f8c5a2bbd82a43f011287f2fad74081bf088c6e71ab6bd6",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T21:50:26Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "NESd nightly Android release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "0b896bf14c411f9090e307e995eaed81490d54dd9a614bed54ba86ee328e223c",
+      "contentHash": "b1488b372495be90bcaede497b7cdffb63191c8967041269b9670ec9e7f48b4d",
       "translationPending": false
     },
     {
@@ -595,14 +737,14 @@
     },
     {
       "id": "136263",
-      "title": "【工具】x360ce v4.18.23",
-      "originalTitle": "[Utilitaires Divers] x360ce v4.18.23",
+      "title": "【工具】x360ce v4.18.40",
+      "originalTitle": "[Utilitaires Divers] x360ce v4.18.40",
       "category": "tools",
       "categoryLabel": "工具",
       "kind": "tool",
       "publishedAt": "2026-08-26T11:16:48Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136263-utilitaires-divers-x360ce-v4-18-23/",
+      "sourceUrl": "https://www.emu-france.com/news/136263-utilitaires-divers-x360ce-v4-18-40/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/x360ce_General-300x253.png",
       "officialUrl": "https://github.com/x360ce/x360ce",
       "summary": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。 换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！ 请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。 更多信息请访问官方网站。",
@@ -610,7 +752,7 @@
       "originalContent": "'Xbox 360 Controller Emulator' est une bibliothèque de wrappers qui traduit les appels XInput en appels DirectInput, et permet le support des pads non-compatibles XInput dans les applications (surtout des jeux).\n\nEn d'autres termes: x360ce vous permet d'utiliser n'importe quel pad dans les jeux qui supportent à la base uniquement le pad XBOX360 !\n\nNotez que la version AnyCPU s'exécute nativement en 32 ou 64 bits selon le système. Elle est donc la seule version à jour à privilégier.\n\nPlus d'infos sur le site officiel.",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "72bb6177185a1854f04a298742ba5e8098db0f4c7824176ef3047d164a79567f",
+      "contentHash": "a154ff8ba81f6609bc1e313e771e04410e4d180cb9a3e62498362a30f3c186f7",
       "translationPending": false
     },
     {
