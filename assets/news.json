@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T16:58:29.738099Z",
+  "generatedAt": "2026-08-31T06:05:10.760039Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,114 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx3-0-9-5",
+      "title": "【Android更新】ARMSX3 0.9.5",
+      "originalTitle": "ARMSX3 0.9.5 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-31T04:27:15Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.5",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.5，发布日期为2026年08月31日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.5。\n\n发布日期：2026年08月31日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.5\n\n新增功能：\n\n应用中现在可以使用保存数据管理器。 浏览您拥有的保存并卸载它们，而无需靠近文件管理器。 您可以在设置的“应用”标签卡中找到它。\n\n“信息”选项卡现在可以告诉您是否安装了标题更新，以及安装了哪个版本。\n修复了Sonic '06的口吃和脆脆的音频。SPU原子提交采用了一个阻止每个PPU线程死亡的屏障，因为为避免该屏障而存在的模式永远无法匹配其自己的白名单，其中一个条目长度为37个字符，与之比较的哈希值为28 ，因此没有任何内容可以与之匹配\n。在允许cellSync票证模式的情况下， PUTLLC从每帧62,768次调用变为851次，其中98.4 %调用失败到0.1 %。 会话中最差的帧从138ms到23ms以下，并且没有任何测量窗口的帧超过33ms。\nRatchet & Clank Future: A Crack in Time在我的测试中不再冻结（连续五次测试）。 相同的屏障，相同的固定。\n当您开始新游戏（连续五次测试）时，棘轮和叮当也不再挂起。这是游戏中的一个错误，而不是我们：它等待RSX完成其命令环，但在循环之前而不是在循环内部读取位置指针一次，所以如果RSX在那个时刻是一个命令短暂的，它将永远等待一个值，该值\n已经过去了。 硬件几乎每次都赢得比赛，我们输掉了大约一半的比赛。 它以捆绑补丁的形式提供，每次都会重新读取指针，这就是循环的目的。\n\n一个完整的vblank事件队列搁置了VBlank线程，该线程完全停止了vblank ，并带走了整个显示管道。\nRetroArch着色器不再锁定模拟器。RSX卸载器线程在启动时检查一次多线程RSX ，如果设置为关闭，则放弃，但在RSX已启动后应用每场比赛设置\n.配置打开选项的游戏因此在线程关闭时启动该线程，线程退出，然后设置在会话的其余部分继续读取，后面没有任何内容\n。所有交给卸载器的工作都信任设置，而不是线程，因此工作进入了没有人耗尽的队列， RSX永远等待着。着色器链击中它，因为它们记录了自己的渲染通道和刷新，更简单的向上缩放器移交了不需要等待的任何东西，这就是为什么只有着色器被破坏的原因\n。关键在于，多线程RSX一直没有为该配置中的任何人执行任何操作，现在它将执行任何操作。 （还要注意的是，有些着色器很重，特别是在已经很重的模拟器上，其中大多数设备在着色器发挥作用之前就已经被GPU绑定，尽管如此，它看起来还是不错的）。\nAndroid上的内存不足崩溃已修复。 Vulkan数据堆的上限为256MB ，不会尝试增长超过设备实际可以分配的内容，回收每个命令缓冲区而不是每个帧的环形内存，并在增长失败时报告原因，而不是直接杀死RSX线程。\n\n修复了应用内更新程序。\nPPU中的进位和溢位错误已修复： MFXER和MTXER已转置SO和CA位。 编译的PPU缓存因此而重建一次。\n每场比赛的设置现在在核心实际启动的序列下解析，因此它们适用于您设置的游戏。 精心策划的设置在发布时而不是在发布后应用， SPU XFloat会决定进行一次迁移，而不是两个相互竞争的迁移。\n\n修复陀螺仪后，垫片的SIXAXIS传感器实际上从未被送入。\n当模拟器暂停而不是运行时， Rumble现在停止。\n\nMali r44p1远离附件反馈循环路径，无法处理。\n\nPPU拒绝运行部分编译的可执行文件，而不是在以后以更奇怪的方式失败。\n\n保存导入处理松散的保存文件，而不仅仅是整个文件夹，并且保存",
+      "originalContent": "ARMSX3 0.9.5\r\n\r\nWhat's new: \r\n\r\nA save data manager is now available in the app. Browse the saves you have and uninstall them without going near a file manager. You can find it in the App tab of settings. \r\n\r\nThe Info tab now tells you whether a title update is installed, as well as which version is installed. \r\n\r\nSonic '06 stutters and crunchy audio are fixed. SPU atomic commits were taking a barrier that stops every PPU thread dead, because the pattern that exists to avoid that barrier could never match its own whitelist, the one entry in it was 37 characters long and the hash it is compared against is 28, so nothing could ever equal it. With the cellSync ticket pattern admitted, PUTLLC went from 62,768 calls a frame to 851, and from 98.4% of them failing to 0.1%. The worst frame in a session went from 138ms to under 23ms, and no measurement window has a frame over 33ms in it any more.\r\n\r\nRatchet & Clank Future: A Crack in Time no longer freezes during play from my testing (tested five times in a row). Same barrier, and the same fix. \r\n\r\nRatchet & Clank also no longer hangs when you start a New Game (tested five times in a row). That one is a bug in the game rather than in us: it waits for the RSX to finish its command ring, but reads the position pointer once before the loop instead of inside it, so if the RSX is one command short at that instant it waits forever for a value that has already gone past. Hardware wins that race nearly every time and we were losing it about half. It ships as a bundled patch that re-reads the pointer each time round, which is what the loop was meant to do.\r\n\r\nA full vblank event queue was stranding the VBlank thread, which stopped vblanks entirely and took the whole display pipeline with it. \r\n\r\nRetroArch shaders no longer lock up the emulator. The RSX offloader thread checks Multithreaded RSX once, at the moment it starts, and gave up if the setting was off, but per-game settings are applied after the RSX has already started. A game whose config turns the option on therefore starts that thread while it is still off, the thread exits, and the setting then reads on for the rest of the session with nothing behind it. Everything that hands work to the offloader trusted the setting rather than the thread, so work went onto a queue nobody was draining and the RSX waited forever. Shader chains hit it because they record their own render passes and flush, the simpler upscalers hand over nothing that has to be waited on, which is why only shaders were broken. The knock-on is that Multithreaded RSX has been silently doing nothing for anyone in that configuration, it now will. (Also a note that some shaders are HEAVY, especially on an already heavy emulator where a majority of devices are GPU bound before shaders even come into play, still, it looks nice). \r\n\r\nOut of memory crashes on Android are fixed. Vulkan data heaps are capped at 256MB, will not try to grow past what the device can actually allocate, reclaim ring memory per command buffer rather than per frame, and report a reason when a growth fails instead of killing the RSX thread outright.\r\n\r\nFixes to the in-app updater. \r\n\r\nA carry and overflow bug in the PPU is fixed: MFXER and MTXER had the SO and CA bits transposed. Compiled PPU caches are rebuilt once because of it.\r\n\r\nPer-game settings now resolve under the serial the core actually boots, so they apply to the game you set them on. Curated settings are applied at launch rather than after it, SPU XFloat settles on one migration instead of two that fought each other. \r\n\r\nFixes to gyro, the pad's SIXAXIS sensors were never actually being fed. \r\n\r\nRumble now stops while the emulator is paused instead of running on.\r\n\r\nMali r44p1 is kept off the attachment feedback loop path, which it does not handle.\r\n\r\nThe PPU refuses to run a partially compiled executable rather than failing in a stranger way later.\r\n\r\nSave import handles loose save files rather than only whole folders, and a save that is st…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "57ba34acb38de6a8d4c44f9fd5c1edde36b4002403337ea42d6a587b83681219",
+      "translationPending": false
+    },
+    {
+      "id": "136392",
+      "title": "【家用机】Sandopolis v0.1.0 alpha 8",
+      "originalTitle": "[Consoles de salon] Sandopolis v0.1.0 alpha 8",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-30T20:51:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136392-consoles-de-salon-sandopolis-v0-1-0-alpha-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/sandopolis.jpg",
+      "officialUrl": "https://github.com/pixel-clover/sandopolis",
+      "summary": "Sandopolis是一款正在开发的世嘉跨平台模拟器，能够模拟Mega Drive/Genesis、Master System、Game Gear和SG-1000。它是在Zig开发的，特别便携，可以在Zig兼容的平台上编译 。它还提供可配置的GUI ，包括控件、快捷方式和渲染的不同设置。Sandopolis有桌面版，但也可以直接在网络浏览器中工作 ，项目仍处于早期阶段，兼容性尚不完善，可能发生变化。 它是根据麻省理工学院的许可证分发的。",
+      "content": "Sandopolis是一款正在开发的世嘉跨平台模拟器，能够模拟Mega Drive/Genesis、Master System、Game Gear和SG-1000。它是在Zig开发的，特别便携，可以在Zig兼容的平台上编译\n。它还提供可配置的GUI ，包括控件、快捷方式和渲染的不同设置。Sandopolis有桌面版，但也可以直接在网络浏览器中工作\n，项目仍处于早期阶段，兼容性尚不完善，可能发生变化。 它是根据麻省理工学院的许可证分发的。\n\n此处为在线版本。",
+      "originalContent": "Sandopolis est un émulateur Sega multiplateforme en développement, capable d’émuler la Mega Drive/Genesis, la Master System, la Game Gear et la SG-1000. Développé en Zig, il se veut particulièrement portable et peut être compilé sur les plateformes compatibles avec Zig. Il propose également une interface graphique configurable, avec notamment différents réglages pour les contrôles, les raccourcis et le rendu. Sandopolis existe en version desktop, mais peut également fonctionner directement dans un navigateur web. Le projet est encore à un stade précoce, avec une compatibilité qui n’est donc pas encore parfaite et des changements susceptibles d’intervenir. Il est distribué sous licence MIT.\n\nVersion online ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "b56f2828bb516684d1926534768a0bafe4f18b5b771492fd1b267b1638210951",
+      "translationPending": false
+    },
+    {
+      "id": "136387",
+      "title": "【电脑】DOSBox Automation v0.85",
+      "originalTitle": "[Ordi.] DOSBox Automation v0.85",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-08-30T19:55:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136387-ordi-dosbox-automation-v0-85/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/dosbox-automation-scaled.png",
+      "officialUrl": "https://github.com/dosbox-automation/dosbox-automation/",
+      "summary": "DOSBox Automation是DOSBox Staging的一个分支，它将仿真器转变为强烈面向自动化和外部控制的环境。它特别添加了REST HTTP API、沙盒Lua脚本、录制和重放输入、音频/视频捕获、读取屏幕上显示的文本以及功能 访问和操作内存、CPU寄存器和I/O端口。它还集成了自动安装和磁盘更改的机制，并具有安全的安装策略。",
+      "content": "DOSBox Automation是DOSBox Staging的一个分支，它将仿真器转变为强烈面向自动化和外部控制的环境。它特别添加了REST HTTP API、沙盒Lua脚本、录制和重放输入、音频/视频捕获、读取屏幕上显示的文本以及功能\n访问和操作内存、CPU寄存器和I/O端口。它还集成了自动安装和磁盘更改的机制，并具有安全的安装策略。\n与DOSBox Staging的区别： Staging仍然主要是一个DOS模拟器，旨在运行具有现代模拟和兼容性的DOS软件和游戏。DOSBox Automation恢复其基础，但增加了一个重要的自动化、脚本和反思层，允许外部程序控制情绪\n并与其内部状态进行交互。因此，它主要针对启动器、自动化测试、开发工具、调试和逆向工程，而不是仅仅针对想要玩游戏的用户。",
+      "originalContent": "DOSBox Automation est un fork de DOSBox Staging qui transforme l'émulateur en un environnement fortement orienté vers l'automatisation et le contrôle externe. Il ajoute notamment une API HTTP REST, des scripts Lua sandboxés, l'enregistrement et la relecture des entrées, la capture audio/vidéo, la lecture du texte affiché à l'écran ainsi que des fonctions d'accès et de manipulation de la mémoire, des registres CPU et des ports d'E/S. Il intègre également des mécanismes pour automatiser les installations et les changements de disques, avec une politique de montage sécurisée.\n\nDifférence avec DOSBox Staging: Staging reste avant tout un émulateur DOS destiné à faire fonctionner les logiciels et jeux DOS avec une émulation et une compatibilité modernes. DOSBox Automation reprend sa base mais ajoute une importante couche d'automatisation, de scripting et d'introspection, permettant à des programmes externes de contrôler l'émulation et d'interagir avec son état interne. Il s'adresse donc principalement aux launchers, tests automatisés, outils de développement, debugging et reverse engineering, plutôt qu'à l'utilisateur qui cherche simplement à jouer.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "78e48d3208109022a605bd794da251267f5cfaba80db4dda7c2a7051d49e7b5d",
+      "translationPending": false
+    },
+    {
+      "id": "136382",
+      "title": "【家用机】Erings v0.4.1",
+      "originalTitle": "[Consoles de salon] Erings v0.4.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-08-30T19:05:46Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136382-consoles-de-salon-erings-v0-4-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/erings-v0.3.3.png",
+      "officialUrl": "https://github.com/user-none/erings",
+      "summary": "Erings是一款世嘉Saturn模拟器，主要设计为简单易用的游戏玩家，而不是完美的硬件模拟工具。其主要目的是让您在优良的条件下享受大部分官方目录，而无需担心复杂的技术设置或 不必要的发育障碍。 它通过时尚的eblitui桌面界面进行操作，经过全面优化，可在大屏幕上使用，并为单人玩家提供操纵杆导航。",
+      "content": "Erings是一款世嘉Saturn模拟器，主要设计为简单易用的游戏玩家，而不是完美的硬件模拟工具。其主要目的是让您在优良的条件下享受大部分官方目录，而无需担心复杂的技术设置或\n不必要的发育障碍。\n它通过时尚的eblitui桌面界面进行操作，经过全面优化，可在大屏幕上使用，并为单人玩家提供操纵杆导航。它支持.chd和.cue/.bin格式的磁盘映像，处理NTSC和PAL区域，集成RetroAchievements命中，并自动保持备份集成\n以及从一个会话到另一个会话的保存状态。\n在硬件方面，它包括4 MB RAM扩展盒和MPEG卡。为了简化您的生活，它包括一个HLE BIOS ，避免搜索外部文件，同时管理区域补丁（如果您使用原始BIOS ）\n简而言之，切换到全屏Erings ，舒适地安顿下来，轻松重启您最喜爱的土星游戏。\n\n改进包括：\n\n已修复：\nGoshed在紧密循环中被调用，当它只应在几毫秒后作为产量调用时\n\n更改：\n轻微性能转向\n\n游戏修复：\n• DUKE NUK 'EM （ MK-81071 ）\n• PANZER DRAGOON ZWEI （ MK-81022 ）\n•曼佳美X4 （ T-1219H ） | BATSUGUN （ T-20605G ） | RADIANT S.G （ T-32902G ）\n•曼佳美X4 (T-1219H)\n• ASTRA SUPERSTARS （ T-1521G ）\n• DAYTONA美国电路版（ GS-9100 ）\n•初始D （ T-25503G ）\n\n[wpfilebase tag = file id = 8365 tpl = simple3/]",
+      "originalContent": "Erings est un émulateur Sega Saturn conçu avant tout comme un lecteur de jeux simple et accessible, plutôt que comme un outil d'émulation matérielle parfaite. Son objectif principal est de vous permettre de profiter de la majorité du catalogue officiel dans d'excellentes conditions, sans vous soucier de réglages techniques complexes ou de fonctionnalités de développement inutiles.\n\nFonctionnant via l'interface bureau épurée eblitui, il est totalement optimisé pour une utilisation sur grand écran avec une navigation à la manette pour un joueur solo. Il prend en charge les images disque au format .chd et .cue/.bin, gère les zones NTSC et PAL, intègre les succès RetroAchievements, et conserve automatiquement vos sauvegardes internes ainsi que vos save states d'une session à l'autre.\n\nCôté matériel, il embarque la cartouche d'extension RAM 4 Mo et la carte MPEG. Pour vous simplifier la vie, il inclut un BIOS HLE évitant la recherche de fichiers externes, tout en gérant le patch de région si vous utilisez des BIOS originaux. En résumé, passez Erings en plein écran, installez-vous confortablement et relancez vos jeux Saturn préférés en toute simplicité.\n\nLes améliorations sont les suivantes:\n\nFixes:\nGoshed was called in a tight loop when it should only be called after a few ms as a yield\n\nChanges:\nMinor performance turning\n\nGame Fixes:\n- DUKE NUK'EM (MK-81071)\n- PANZER DRAGOON ZWEI (MK-81022)\n- MEGAMAN X4 (T-1219H) | BATSUGUN (T-20605G) | RADIANT S.G (T-32902G)\n- MEGAMAN X4 (T-1219H)\n- ASTRA SUPERSTARS (T-1521G)\n- DAYTONA USA CIRCUIT EDITION (GS-9100)\n- INITIAL D (T-25503G)\n\n[wpfilebase tag=file id=8365 tpl=simple3 /]",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "erings_pc"
+      ],
+      "contentHash": "7daad4ee2aa9bf0bc4476c4d13c52ddddcab6db1bdb17e09e9485010856d6d76",
+      "translationPending": false
+    },
+    {
+      "id": "136380",
+      "title": "【街机】Hypseus Singe v3.0.2",
+      "originalTitle": "[Arcade] Hypseus Singe v3.0.2",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-08-30T19:02:01Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136380-arcade-hypseus-singe-v3-0-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/10/hypseus-logo.png",
+      "officialUrl": "https://github.com/DirtBagXon/hypseus-singe",
+      "summary": "Hypseus是由Matt Ownby创建的Daphne分叉。 这是Daphne和Monkey的SDL2版本。 这是一个在PC、Mac或Raspberry Pi上玩Laserdisc街机游戏的程序。 此版本包括对Fan Made和American Laser Games的Monkey和Monkey2支持。",
+      "content": "Hypseus是由Matt Ownby创建的Daphne分叉。 这是Daphne和Monkey的SDL2版本。\n这是一个在PC、Mac或Raspberry Pi上玩Laserdisc街机游戏的程序。\n此版本包括对Fan Made和American Laser Games的Monkey和Monkey2支持。\n\n特点：\n\nSDL2支持\nMPEG2解码器已更新\n升级32位Daphne VLDP\n内置挡板支架（活动）\n支持Daphne和Monkey 4k 4Gb + M2V\n集成Monkey libretro仿真路径\n摇杆猴支架， Lightgun EV_ABS （鼠标） EV_ABS [鼠标]\n完全支持Monkey 2的32位叠加\n猴子游戏中的Sinden支持\n有关猴子游戏的列表，请参阅此处。\nDaphne的替代镶嵌选择\n支持多个游戏控制器（热插拔） ： config\n高级配置和多操纵杆支持：配置\n原始的“巢穴/王牌”硬件和软件公告板。\nWindows 64位和MacOS X端口\n使用Sun Microsystems Type 5c键盘专门在VIM中编码。\n\n演示视频\n历史记录：\n\n原作者马特·奥恩比（ Matt Ownby ）开创的开发项目在几年前就停止了。\n\nMonkey由Scott Duensing创建，作为Daphne玩American Laser Games的插件。\n此存储库是为了构建在Jeffrey Clark创建的Hypseus项目之上而创建的。 许多叠加层仍未在原始存储库中实现。 猴子也被移走了。\n\n将名称改为Hypseus ，以便Daphne的原始作者不会因请求支持而负担过重。\n非常感谢Matt Ownby、Scott Duensing、Jeffrey Clark、Manuel Alfayate、David Griffith以及为这个项目提供工作的许多其他开发人员。 没有他们，这个项目是不可能的。\n\nHypseus Monkey ， Super Multiple Arcade激光光盘模拟器\n版权所有(C) 2021 DirtBagXon\nHypseus ，多街机激光光盘模拟器\n版权所有(C) 2016 Jeffrey Clark\n\nDaphne ，有史以来第一款多街机激光光盘模拟器\n版权所有(C) 1999-2013 Matt Ownby\n\n变更内容：\n\n•微调vldp_audio_callback以高效使用SDL3流媒体。\n•添加了在API中检索连接的“相对鼠标”数量的功能\n•修改示例.ini文件，以便大多数用户可以直接复制。\n•检测到MAX_GAMECONTROLLER操纵杆时，删除了错位的SDL_FREE。\n•删除-sound_buffer以保留新的SDL3音频流计时。\n•在适当情况下更新了分布式gamecontrollerdb.txt。\n•改进了tms9128 Goal to Go游戏战术菜单中的对齐方式。\n•添加参数以保持非标准显示器中的视频纵横比。\n•修复了SDL3导致DAC声音驱动程序[MACH3]缓冲区溢出的问题。\n•现在支持在游戏挡板上模糊游戏叠加层。\n•通过Mutex LOCK_GUARDS序列化声音芯片更新。\n•添加API调用以翻转叠加层上的双线性缩放。\n•在自动生成的文件中修剪[GLOBAL] .ini部分。\n•为SDL3_TTF字体添加受控提示和混合。\n•在ZipROM中处理//，就像在文件系统上一样。\n•可能更多...\n\nPS ：请注意， MONKEY v2.1也已上市几个月，可在此处下载。\n\n此处为游戏收集边框。",
+      "originalContent": "Hypseus est un fork de Daphne créé par Matt Ownby. C'est une version SDL2 de Daphne et Singe.\nIl s'agit d'un programme pour jouer à des jeux d'arcade Laserdisc sur PC, Mac ou Raspberry Pi.\nCette version inclut la prise en charge de Singe et Singe2 pour les Fan Made et les American Laser Games.\n\nCaractéristiques:\n\nPrise en charge de SDL2\nDécodeur MPEG2 mis à jour\nMise à niveau de Daphne VLDP 32 bits\nSupport de bezels intégré (actif)\nSupport M2V 4k 4Gb+ de Daphne et Singe\nIntégration du chemin d'émulation libretro de Singe\nSupport Singe Joystick, Lightgun EV_ABS (souris)EV_ABS [souris]\nPrise en charge complète de la superposition 32 bits de Singe 2\nSupport de Sinden dans les jeux Singe\nPour la liste des jeux Singe, voir ici .\nChoix d'incrustations alternatives pour Daphne\nPrise en charge de plusieurs contrôleurs de jeu (hotplug): config\nConfiguration avancée et support multi-joystick: config\nTableaux d'affichage originaux matériels et logiciels « lair/ace » .\nPorts Windows 64 bits et MacOS X\nCodé exclusivement en vim à l'aide d'un clavier Sun Microsystems Type 5c.\n\nVidéos de démos\nHistoire:\n\nLe développement ouvert par l'auteur original, Matt Ownby, a cessé il y a des années.\n\nSinge a été créé par Scott Duensing en tant que plugin pour Daphne pour permettre de jouer aux Laser Games américains .\n\nCe référentiel a été créé pour s'appuyer sur le projet Hypseus créé par Jeffrey Clark . De nombreuses superpositions n'étaient toujours pas implémentée dans le référentiel d'origine. Singe avait également été retiré.\n\nLe nom a été changé en Hypseus afin que les auteurs originaux de Daphne ne soient pas surchargés de demandes de soutien.\n\nUn grand merci à Matt Ownby , Scott Duensing , Jeffrey Clark , Manuel Alfayate , David Griffith et les nombreux autres développeurs qui ont mis leur travail à disposition pour que ce projet puisse exister. Sans eux, ce projet ne serait pas possible.\n\nHypseus Singe, Super Multiple Arcade Laserdisc Emulator\nCopyright (C) 2021 DirtBagXon\n\nHypseus, Multiple Arcade Laserdisc Emulator\nCopyright (C) 2016 Jeffrey Clark\n\nDaphne, the First Ever Multiple Arcade Laserdisc Emulator\nCopyright (C) 1999-2013 Matt Ownby\n\nLes changements:\n\n- Fine tune vldp_audio_callback to utilize SDL3 streaming efficiently.\n- Added the ability to retrieve the number of connected \"relative mice\" in API\n- Altered example .ini files so direct copies are sane for most users.\n- Removed misplaced SDL_free when detecting MAX_GAMECONTROLLER Joysticks.\n- Removed -sound_buffer to preserve new SDL3 audio stream timing.\n- Updated distributed gamecontrollerdb.txt where appropriate.\n- Improved alignment in the tms9128 Goal to Go play tactic menu.\n- Argument added to preserve video aspect ratio in non-standard displays.\n- Fixed an SDL3 caused buffer overflow in the DAC sound driver [MACH3].\n- Blitting the game overlay on top of a game bezel is now supported.\n- Serialize the sound CHIP updates via Mutex lock_guards.\n- Add API call to flip bi-linear scaling on the overlay.\n- Trim [GLOBAL] .ini section in auto-generated files.\n- Add controlled HINTING and BLEND for SDL3_TTF fonts.\n- Treat // in ZipROM, as on a filesystem.\n- Probably more...\n\nPS: Noter que SINGE v2.1 est également disponible depuis quelques mois, téléchargeable ici.\n\nCollection de bezels pour les jeux ici.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "b0c1024d88e294504b01382cfe1dcb3c8ab819ff2a9c1670fd6ba330a71342fb",
+      "translationPending": false
+    },
     {
       "id": "136372",
       "title": "【家用机】Bcan v0.08",
@@ -774,19 +882,19 @@
       "translationPending": false
     },
     {
-      "id": "android-release-mame4droid-1-40-3",
-      "title": "【Android更新】MAME4droid 1.40.3",
-      "originalTitle": "MAME4droid 1.40.3 Android release",
+      "id": "android-release-mame4droid-1-140-4",
+      "title": "【Android更新】MAME4droid 1.140.4",
+      "originalTitle": "MAME4droid 1.140.4 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
       "publishedAt": "2026-08-27T23:52:02Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.40.3",
+      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.140.4",
       "imageUrl": "asset://assets/emulators/mame4droid.png",
       "officialUrl": "https://github.com/seleuco/MAME4droid-Current",
-      "summary": "MAME4droid 发布 Android 新版本 1.40.3，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
-      "content": "MAME4droid 已发布 Android 最新版本 1.40.3。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n添加的 NetPlay 公共房间\n\n直到现在,NetPlay在互联网上工作,没有帐户,没有中继,也没有信任的服务。 它唯一不能做的是给你找一个对手:你仍然需要认识一个人,然后用手交换一个IP地址。\n\n公共房间是失踪的一半。 它是一个可选的板子,主机在其中广告他们主机的游戏,因此任何拥有相同ROM的人都可以点击并连接。\n\n它是什么 *不 * 是继电器。 棋盘引入了两名玩家,然后步出前尘——比赛仍然直接运行在两个设备之间,与之前完全相同,没有任何关于它通过bestoug 我的任何服务器。\n\n在董事会上\n\n• 房间代码。 每个房间都有一个简短的代码 你可以传递给朋友。\n• PIN会议室。 Tick *Require PIN * 房间仍然出现,标记为受保护,但只有你告诉的人才能进入。 PIN本身从未到达服务器——只有一散钱才有。\n• 彩色编码连接预报。 绿色,琥珀,或红色每个房间,基于STUN实际测量的两种路由器而不是猜测。 两个对称的NAT没有途径通过显示红色并拒绝加入。\n· 同一网络房间被标上标记,因此一个房子里的两个装置拨打局域网一侧,而不是去因特网和回网。 这种吻合是在两个有盐味的指纹之间做的——两个设备的地址都没有透露给任何人。\n• 在加入前进行ROM检查。 该应用程序在您的ROM文件夹中寻找游戏,并命名缺失的文件,而不是让你加入并打破主机的房间。\n• 无法使用的房间保留在清单中,但灰色化而不是隐藏。 即使这栋大楼无法承受,知道一场比赛正在发生也是值得的。\n\n滴入网络播放\n\n等待有人出现 曾经意味着盯着一个对话框屏幕。 现在,你可以勾选 现在开始,让任何人加入 和简单的游戏。 你的房间留在板上,当你做, 当有人声称它, 你的机器状态 交接,你继续 从确切的时刻。\n\n• 当他们离开时,你继续独自玩,好像NetPlay从未发生过一样。 再打开它,房间就会回升。\n• 只回滚会话——在Lockstep中不存在允许落地的状态转移。\n^ 中场切换它可能会重启游戏,应用程序会在你承诺之前警告你。 NetPlay在游戏靴子瞬间(你的保存设置和NVRAM,Lua插件和欺骗,音速率,CDD的工作副本)中标注了一组东西,其中不能有一个是 应用到已经运行的游戏中。 忽略这一点不会大声的失败:两台机器在接下来的几分钟里只是飘散,没有出现任何错误。\n\n关于你的数据——简短的版本是没有任何\n\nMAME4droid 由一个人制作并赠送。 没有广告,没有解锁,没有订阅,也没有服务器的预算。 公共房间是一个很好的妥协, 而正是它使得找到对手成为可能: 它运行在一个没有数据库的微小的自由实例上, 它没有保存任何关于你的信息。\n\n• 选入。 你第一次被问, 如果你拒绝, 董事会从来没有联系。 手动 NetPlay 始终如一地运作。\n• 你的地址从不写在日志上。 它只生活在记忆里 当你的房间是上, 被交给一个玩家 谁加入你, 会话记录服务器保存的IP地址完全没有。\n• 董事会向任何人显示一个地址——甚至没有通过\"同一网络\"徽章,这是两个盐印的比较。 每当服务器启动时,盐都会生成新鲜的,所以昨天的记录甚至无法从内部与今天的记录相匹配。\n• 没有识别设备。 没有账户,没有登录,没有名字,没有广告ID,没有存储在您的手机上,其他会话可以识别到的东西。 你们的两次拜访是互不相连的。\n- 房间在大约...",
+      "summary": "MAME4droid 发布 Android 新版本 1.140.4，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
+      "content": "MAME4droid 已发布 Android 最新版本 1.140.4。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加NetPlay公共房间\n\n到目前为止， NetPlay在互联网上工作，没有帐户，没有中继，也没有值得信赖的服务。 它不能做的一件事就是找到你的对手：你仍然必须认识某人，并用手与他们交换IP地址。\n公共房间缺了一半。 这是一个可选的面板，体验达人可以在其中宣传他们正在举办的游戏，因此任何拥有相同ROM的人都可以轻触并连接。\n它*不是*是一个继电器。 董事会介绍两名玩家，然后让路--比赛仍然直接在两台设备之间进行，就像以前一样，没有任何关于它的信息通过我的任何服务器。\n\n在白板上\n\n•房间密码。每个房间都有一个短代码，您可以传递给朋友。\n•大头针房间。勾选*需要大头针* ，房间仍然显示，标记为受保护，但只有您告诉的人才能进入。PIN本身永远不会到达服务器—只有它的一个哈希才会到达。\n•颜色编码的连接预测。每个房间的绿色、琥珀色或红色，基于两台路由器的实际STUN测量值，而不是猜测值。两个无法通过的对称NAT显示红色并拒绝加入。\n•同一网络房间被标记，因此同一栋房子里有两台设备拨打局域网端，而不是外出上网。该匹配是在两个咸指纹之间进行的—任何设备的地址都不会透露给任何人。\n•加入前检查ROM。 应用程序会在您的ROM文件夹中查找游戏，并为丢失的文件命名，而不是让您加入并打破房东的房间。\n•无法使用的房间仍在列表中，但显示为灰色，而不是隐藏的。 即使此构建无法承受，知道匹配正在发生也是有价值的。\n\nDrop-in NetPlay\n等待某人出现曾经意味着盯着对话框屏幕。 现在，您可以勾选“立即开始” ，让任何人加入并简单地玩游戏。 当你这样做的时候，你的房间会留在黑板上，当有人声称它时，你的机器的状态就会被移交，你从那一刻起就一起继续下去。\n•当他们离开时，您会继续独自玩游戏，就好像NetPlay从未发生过一样。 再打开它，房间就恢复了。\n•仅回滚会话—使置入成为可能的状态传输在Lockstep中不存在。\n•在游戏中打开它可能会重新启动游戏，并且应用程序会在您提交之前发出警告。NetPlay在游戏启动时固定一组东西（您保存的设置和NVRAM ， Lua插件和作弊，声速， CHD的工作副本） ，其中没有一个可以应用于已运行的游戏\n。忽略它不会大声失败：两台机器只是在接下来的几分钟内漂移开来，没有错误可以指向。\n\n关于您的数据—简短的版本是没有任何\nMAME4droid由一人制作并赠送。 没有广告，没有解锁，没有订阅，也没有服务器预算。 Public Rooms是一个很好的折衷方案，它使找到对手成为可能：它在一个没有数据库的小型免费实例上运行，这对您没有任何影响。\n•选择加入。第一次询问您，如果您拒绝，我们永远不会联系董事会。手动NetPlay保持一如既往的工作状态。\n•您的地址绝不会写入日志。只有当你的房间空着时，它才会留在记忆中，交给加入你的一个玩家，然后与房间一起消失。服务器保留的会话记录根本不包含任何IP地址。\n•板上显示的地址没有人—甚至没有通过“相同的网络”徽章，这是两个盐渍指纹的比较。每次服务器启动时都会生成新鲜的盐，因此昨天的记录无法与今天的记录进行匹配，即使从内部也是如此。\n•无法识别您的设备。 没有帐户，没有登录，没有姓名，没有广告ID ，手机上没有其他会话可以识别的任何内容。 您的两次访问不会相互关联。\n•房间将在大约一米后过期……",
       "originalContent": "## Added NetPlay Public Rooms\r\n\r\nUntil now, NetPlay worked over the internet with no account, no relay, and no service to trust. The one thing it could not do was find you an opponent: you still had to know someone already, and swap an IP address with them by hand.\r\n\r\n**Public Rooms** is that missing half. It's an optional board where hosts advertise the game they are hosting, so anyone with the same ROM can tap it and connect.\r\n\r\nWhat it is *not* is a relay. The board introduces two players and then steps out of the way — the match still runs directly between the two devices, exactly as it did before, and nothing about it passes through any server of mine. \r\n\r\n### On the board\r\n\r\n* **Room codes.** Every room gets a short code you can pass to a friend. \r\n* **PIN rooms.** Tick *Require PIN* and the room still appears, marked as protected, but only the people you told can get in. The PIN itself never reaches the server — only a hash of it does.\r\n* **A color-coded connection forecast.** Green, amber, or red per room, based on what STUN actually measured about both routers rather than a guess. Two symmetric NATs with no way through show red and refuse the join.\r\n* **Same-network rooms are flagged**, so two devices in one house dial the LAN side instead of going out to the internet and back. That match is made between two salted fingerprints — neither device's address is ever revealed to anyone.\r\n* **A ROM check before you join.** The app looks for the game in your ROMs folder and names the missing file, instead of letting you join and break the host's room.\r\n* Unusable rooms stay listed but greyed out rather than hidden. Knowing a match is happening is worth something even when this build cannot take it.\r\n\r\n### Drop-in NetPlay\r\n\r\nWaiting for someone to turn up used to mean staring at a dialog screen. Now you can tick **Start now, let anyone join** and simply play. Your room stays on the board while you do, and when somebody claims it, your machine's state is handed over and you carry on together from that exact moment.\r\n\r\n* When they leave, you keep playing on your own as if NetPlay had never happened. Open it again and the room goes back up.\r\n* Rollback sessions only — the state transfer that makes drop-in possible does not exist in Lockstep.\r\n* Switching it on mid-game may restart the game, and the app warns you before you commit. NetPlay pins a set of things the instant a game boots (your saved settings and NVRAM, Lua plugins and cheats, the sound rate, the working copy of a CHD) and not one of them can be applied to a game already running. Ignoring that does not fail loudly: the two machines just drift apart over the following minutes with no error to point at.\r\n\r\n### About your data — the short version is that there isn't any\r\n\r\nMAME4droid is made by one person and given away. No ads, nothing to unlock, nothing to subscribe to, and no budget for servers either. Public Rooms is a good compromise, and it is what makes finding an opponent possible at all: it runs on a tiny free instance with no database, which keeps nothing about you.\r\n\r\n* **It is opt-in.** You are asked the first time, and if you decline, the board is never contacted. Manual NetPlay keeps working exactly as it always has.\r\n* **Your address is never written to a log.** It lives in memory only while your room is up, is handed to the one player who joins you, and disappears with the room. The session records the server does keep contain no IP addresses at all.\r\n* **The board shows an address to nobody** — not even through the \"same network\" badge, which is a comparison of two salted fingerprints. The salt is generated fresh every time the server starts, so yesterday's records cannot be matched against today's even from the inside.\r\n* **Nothing identifies your device.** No account, no login, no name, no advertising ID, nothing stored on your phone that another session could recognize. Two visits from you are not linked to each other.\r\n* **Rooms expire in about a m…",
       "platforms": [
         "android"
@@ -795,7 +903,7 @@
         "mame4droid",
         "mame4droid_neogeo"
       ],
-      "contentHash": "237d536bb69019978ee95cb22482a7fdea104f3037c38602ec4195d23f423f4a",
+      "contentHash": "9680b5d7a6372506ce9726f43f731439df9a80fab291b10e6cf043c526ad7bf6",
       "translationPending": false
     },
     {
@@ -1431,30 +1539,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "e7552edc9b36366ab6a47118951243aaaffd158dd159a5f06b0191f98af243f4",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-0-9-4-4b",
-      "title": "【Android更新】ARMSX3 0.9.4.4b",
-      "originalTitle": "ARMSX3 0.9.4.4b Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-25T02:03:24Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.4.4b",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.4.4b，发布日期为2026年08月25日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.4.4b。\n\n发布日期：2026年08月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.4.4b\n\nSGSR边缘方向,是最后一个传送更新的外加的第二个Qualcomm阴影器。 平坦的SGSR在每一个方向都磨亮同样数量的地方, 这个能用到每个像素下的边缘 沿着它磨亮。 它的成本更高,而且看起来更好,特别是在对角和文本方面。 由@CamilleLaVey和@xinitrcn1完成,\n\nSGSR现在有它自己的锐度,它达到了200%. Qualcomm的射程是FSR的两倍,100%是他们自己的默认,而不是最大,因此两个升级者不再共享一个设置。 FSR的滑动器在0-100时未受影响,而你已经拥有的每个FSR配置都意味着它之前所做的一切。\n\nRPCN的朋友\n从设置中添加、 删除并查看好友 -- > Network。\n\n单列出从不单独签名,空列表意味着没有会话,而不是朋友。",
-      "originalContent": "ARMSX3 0.9.4.4b \r\n\r\nSGSR Edge Direction, a second Qualcomm shader beside the one that shipped last update. Where plain SGSR sharpens the same amount in every direction, this one works out which way the edge under each pixel runs and sharpens along it. It costs more and it looks better, particularly on diagonals and text. It is its own entry under Display upscaler rather than a quality switch, (because that is what it is, a different shader), Done by @CamilleLaVey and @xinitrcn1\r\n\r\nSGSR has its own sharpness now, and it goes to 200%. Qualcomm's range runs to twice what FSR's does, and 100% is their own default rather than the maximum, so the two upscalers no longer share one setting. FSR's slider is untouched at 0-100 and every FSR configuration you already have means exactly what it did before.\r\n\r\nRPCN friends\r\nAdd, remove and see friends from Settings --> Network. \r\n\r\nListing never signs in by itself, an empty list means no session, not no friends.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "c44c7f7f5e8764f4bbf354014789acbac469b06190730b5acfaf443a2884d0a5",
       "translationPending": false
     },
     {
