@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T05:37:38.031654Z",
+  "generatedAt": "2026-09-01T16:55:05.493187Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,163 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-dosbox_x-dosbox-x-v2026-08-31",
+      "title": "【Android更新】DOSBox-X dosbox-x-v2026.08.31",
+      "originalTitle": "DOSBox-X dosbox-x-v2026.08.31 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-01T15:44:34Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/joncampbell123/dosbox-x/releases/tag/dosbox-x-v2026.08.31",
+      "imageUrl": "asset://assets/emulators/dosbox_x.png",
+      "officialUrl": "https://github.com/joncampbell123/dosbox-x",
+      "summary": "DOSBox-X 发布 Android 新版本 dosbox-x-v2026.08.31，发布日期为2026年09月01日。点击查看官方版本信息与更新说明。",
+      "content": "DOSBox-X 已发布 Android 最新版本 dosbox-x-v2026.08.31。\n\n发布日期：2026年09月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n2026.08.31 ：\n•增加了对装载TeleDisk (.td0)软盘映像文件的支持。(cimarronm)\n•修复了工作目录选项的提示(maron2000)\n•考虑特殊格式化的磁盘，放松软盘映像的理智检查\n（ maron2000 ）\n•磁盘扇区I/O现在返回键入的INT 13H状态代码，而不是\ncatch-all错误， INT 13h处理程序传播特定代码\n（寻道失败、控制器故障、CRC/数据错误等）进入寄存器\n读/写错误时的AH ，而不是将每个故障折叠到0x04。\n还修复了写入错误和VFD填充扇区导致AH过时的问题\n写下成功后报告的失败。（ cimarronm ）\n•在非MSC上，如果尚未定义，则仅定义最小值/最大值（ skitt ）\n•修复了目标目录为时FreeDOS XCOPY无法复制文件的问题\n未指定（ maron2000 ）\n• IMGMOUNT ：修正了未尝试加载IMGMAKE.IMG （如果没有）的回归\n指定了图像（ maron2000 ）\n•修复了FFmpeg升级到FFmpeg 9 （ maron2000 ）时的构建错误\n•修复了未找到保存标记文件时的冻结问题（ rebb ）\n•固定捕获和保存目录位置（ maron2000 ）\n•将imageDisk子类重构为自己的源文件和标头\n（ VFD、D88、NFD、空驱动器、INT 13h直通、El Torito软盘和\nMS-DOS块设备） ，保留基本imageDisk类和BIOS磁盘列表\nbios_disk中的管道。（ cimarronm ）\n• Shell初始化：分配COMMAND.COM环境块后分配\nshell_Init ()和CONFIGSHELL_INIT ()中的shell binary/PSP ，因此内存\n布局和所有权排序匹配预期的MCB链行为。（ cimarronm ）\n•调试器：固定反汇编器，显示字节大小的16位寄存器名称\n操作数。（ cimarronm ）\n•修复了软盘的INT 13H CHS解码，该解码错误地使用了硬盘\n磁盘布局（ 10位圆柱/6位扇区） ，而不是软盘布局\n（ CH中的8位圆柱体/CL中的8位扇区）读取、写入和获取驱动器\n参数。（ cimarronm ）\n•修复了Windows内部版本无法在Linux上加载的问题\nbuilds。DOS组件中的每个驱动器的Opts结构持有一个未签名的\n长，在Windows上为4个字节，在LP64主机上为8个字节，因此保存的流\n已取消同步，负载从组件的末尾运行。还修复了\nPOD_Load_DOS_Mscdex在超出范围的CD驱动器计数上永久循环，并且\n加载的驱动器路径在状态为时保留其Windows路径分隔符\n在非Windows主机上还原。（ ozy24 ）\n•修复了chs_write将高圆柱钻头打包到\n合成的MBR分区表，它损坏了磁盘的end-CHS条目\n端气缸高于255。（ cimarronm ）\n•软盘INT 13H扇区读/写现在尊重来自\niNT 1Eh指向的磁盘基准表，而不是假设512 ，允许\n重新编程INT 1Eh以访问非512媒体的房客。（ cimarronm ）\n•调试器：解析表达式中的命名变量（ zlatkok ）\n• OpenGL ：固定全屏和模式切换位置偏移。（ DieSkaarj ）\n•简化了DOS_Execute ()中的MCB文件名剥离逻辑。(cimarronm)\n•固定FAT卷标显示为8.3文件名。（ cimarronm ）\n•修复了由于使用AttachConsole ()而导致Win9x低端版本在启动时崩溃的问题\n函数(maron2000)\n•修复了drive_virtual.cpp (maron2000)中的超限数组访问错误",
+      "originalContent": "2026.08.31:\r\n  - Added support for mounting TeleDisk (.td0) floppy image files. (cimarronm)\r\n  - Fixed prompting of working directory option (maron2000)\r\n  - Relax sanity check of floppy image considering specially formatted disks\r\n    (maron2000)\r\n  - Disk sector I/O now returns typed INT 13h status codes instead of a\r\n    catch-all error, and the INT 13h handler propagates the specific code\r\n    (seek failed, controller failure, CRC/data error, etc.) into register\r\n    AH on read/write errors rather than collapsing every failure to 0x04.\r\n    Also fixes AH being left stale on write errors and a VFD fill-sector\r\n    write that reported failure after succeeding. (cimarronm)\r\n  - On non-MSC, only define MIN/MAX if not already defined (skitt)\r\n  - Fixed FreeDOS XCOPY failed to copy files when destination directory was\r\n    not specified (maron2000)\r\n  - IMGMOUNT: Fixed a regression that didn't try loading IMGMAKE.IMG if no \r\n    image was specified (maron2000)\r\n  - Fixed a build error when FFmpeg is upgraded to FFmpeg 9 (maron2000)\r\n  - Fixed freeze when savestate flagged file not found (rebb)\r\n  - Fixed capture and savestate directory locations (maron2000)\r\n  - Refactored the imageDisk subclasses into their own source files and headers\r\n    (VFD, D88, NFD, empty drive, INT 13h passthrough, El Torito floppy, and\r\n    MS-DOS block device), leaving the base imageDisk class and BIOS disk-list\r\n    plumbing in bios_disk. (cimarronm)\r\n  - Shell init: allocate the COMMAND.COM environment block after allocating the\r\n    shell binary/PSP in both SHELL_Init() and CONFIGSHELL_Init(), so memory\r\n    layout and ownership ordering match expected MCB-chain behavior. (cimarronm)\r\n  - Debugger: fixed disassembler showing 16-bit register names for byte-sized\r\n    operands. (cimarronm)\r\n  - Fixed INT 13h CHS decoding for floppies, which incorrectly used the hard\r\n    disk layout (10-bit cylinder / 6-bit sector) instead of the floppy layout\r\n    (8-bit cylinder in CH / 8-bit sector in CL) on read, write, and get drive\r\n    parameters. (cimarronm)\r\n  - Fixed savestates written by a Windows build failing to load on Linux\r\n    builds. The per-drive Opts struct in the DOS component held an unsigned\r\n    long, which is 4 bytes on Windows and 8 on LP64 hosts, so the saved stream\r\n    desynchronized and the load ran off the end of the component. Also fixed\r\n    POD_Load_DOS_Mscdex looping forever on an out-of-range CD drive count, and\r\n    mounted drive paths keeping their Windows path separators when a state is\r\n    restored on a non-Windows host. (ozy24)\r\n  - Fixed chs_write packing the high cylinder bits into the sector field of the\r\n    synthesized MBR partition table, which corrupted the end-CHS entry for disks\r\n    with an end cylinder above 255. (cimarronm)\r\n  - Floppy INT 13h sector reads/writes now honor the bytes-per-sector code from\r\n    the disk base table pointed to by INT 1Eh instead of assuming 512, allowing\r\n    guests that reprogram INT 1Eh to access non-512 media. (cimarronm)\r\n  - Debugger: Resolved named variables in expressions (zlatkok)\r\n  - OpenGL: Fixed fullscreen and modeswitching positional offsets. (DieSkaarj)\r\n  - Simplified the MCB filename-stripping logic in DOS_Execute(). (cimarronm)\r\n  - Fixed FAT volume labels being displayed as 8.3 filenames. (cimarronm)\r\n  - Fixed crash of Win9x lowend build at launch due to use of AttachConsole()\r\n    function (maron2000)\r\n  - Fixed a out-of-bounds array access bug in drive_virtual.cpp (maron2000)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "dosbox_x"
+      ],
+      "contentHash": "f3cb7210a173ca48cef1a451adbf971ed174891de94e5e5bc5cbf9a4f5400d18",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-01T14:20:30Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月01日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• Gab75(dinkc64)的gba更新",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• gba update from gab75 (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "aeee5e608f680641ddae388091954e14b4788735a2cf8699a66997534cd50d2a",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260901",
+      "title": "【Android更新】ARMSX2 nightly-20260901",
+      "originalTitle": "ARMSX2 nightly-20260901 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-01T14:09:27Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260901",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260901，发布日期为2026年09月01日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260901。\n\n发布日期：2026年09月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• iOS:放弃不再使用船舶的FFmpeg许可证入境\n• iOS: 放下OSD抓取写下留下的视频抓取删除\n• eerunner:将 FPU 口罩传递给分析组\n• GS:删除视频捕获,并由此消除ffmpeg依赖性\n• 触控:在使用垫子时不要自动隐藏\n• LSFG:当帧生成后开启时重建交换链\n• 快速加载:先对空间发出警告,然后允许去除空间\n• 快速装入:通过在盘子上实际运行找到四个修正\n• 快速加载:停止让用户重命名ELF\n• GS:不要在Android上制作视频记录\n• 突发快装:使主机:ELF方法在Android上发挥作用\n• 最新情况 SettingsRootView.swift 用于stosdebug 的\n• 最新情况 EmulatorSettingsView.swift 用于stosdebug 的\n• 最新情况 EmulatorBridge.swift 用于 Stos 调试\n• Qt:更新EE和VU再编译器设置描述\n• Qt:添加缺失的设置描述\n• GameDB:SCPS-15064港接通SCKA-20027的补丁\n• 图书馆:重命名和删除类别\n• 全屏UI:与 Qt 对齐设置描述\n• Qt:更新EE和VU再编译器设置描述\n• Qt:添加缺失的设置描述\n• 图书馆:自定义游戏类别\n• 减:起跳 `ffmpeg` to 9.0.1\n• Deps: 设置所需ffmpeg版本的最小值 7.1\n• Deps:完全取消树上ffmpeg头\n• 解码:不要硬化ffmpeg dlls路径\n• GSCapture:转换使用 `pix_fmts` 与 `avcodec_get_supported_config()`\n• PAD:更新最新控制器数据库。\n• VU:将打字固定在常数中\n• SW:Fix C光栅IIP向量包(签名->未签名)\n• GameDB: 修复日本标题和软件\n• GameDB:SCPS-15064港接通SCKA-20027的补丁\n• 游戏中设置:在承诺之前而不是之后写每场游戏的 INI\n• 皮肤:在浏览器中每行的创建者姓名\n• GS:MTL:为 Apple GPU 硬件错误添加工作包\n• 翻译:同步Crowdin翻译(# 14879)\n• 公关代码616和617中的信用过期\n• 让一个同伴应用程序请求每个呼叫者最近的游戏访问\n• Android:当一个 RetroAchievements 主机运行时关闭硬核\n• 无限性:按能力选择性能核心,并设定默认值\n• 保存状态:每个槽被写入时显示,而不是文件名\n• 分档日期:询问运行中的 VM 而不是文件名匹配器\n• 启动游戏:一个已经在那里的取取器菜单项\n• 每秒节能/装入热键,以及游戏中选档上的日期\n• 修复外出地垫上的隆起、景观上的宏观对话、可发现的热门弹出\n• SGSR:采用经修改的平面变体上游数学\n• PAD:更新最新控制器数据库。\n• 翻译:同步Crowdin翻译 2.8\n• SPU2: 64bit的通过 IOP周期计数\n• Qt:更新基地翻译。\n• Qt/macOS:在主窗口保持全屏\n• GameDB:在Steambot Chronicles上添加下深度修正的优先次序\n• GS/HW:避免发现作为目标格式真相来源的洗牌\n• GS/TC:在RT中改进单像素重叠检测\n• EE/IOP:通过相对路径修复装载精灵\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260830...6e1e8f0a18f2f5bbcd2e75344d89ff6ba03b5616",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: drop the FFmpeg license entry, which no longer ships\n- iOS: drop the OSD capture writes the video capture removal left behind\n- eerunner: pass the FPU mask through to ParseGroups\n- GS: remove video capture, and with it the ffmpeg dependency\n- Touch controls: don't auto-hide while the pad is being used\n- LSFG: rebuild the swap chain when frame generation turns on later\n- Quick loading: warn about the space first, and allow removing it after\n- Quick loading: four fixes found by actually running it on the disc\n- Quick loading: stop making the user rename the ELF\n- GS: don't build video capture on Android\n- Outbreak quick loading: make the host: ELF method work on Android\n- Update SettingsRootView.swift for stosdebug\n- Update EmulatorSettingsView.swift for stosdebug\n- Update EmulatorBridge.swift for StosDebug\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- Library: rename and delete categories\n- FullscreenUI: Align setting descriptions with Qt\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- Library: custom game categories\n- Deps: Bump `ffmpeg` to 9.0.1\n- Deps: Set minimum required ffmpeg version to 7.1\n- Deps: Get rid of the in-tree ffmpeg headers entirely\n- Deps: Dont hardcode the ffmpeg dlls path\n- GSCapture: Switch the use of `pix_fmts` with `avcodec_get_supported_config()`\n- PAD: Update to latest controller database.\n- VU: fix typo in a constant\n- SW: Fix C rasterizor IIP vector pack (signed->unsigned)\n- GameDB: Fix Japanese Title&Sort\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- In-game settings: write the per-game INI before the commit, not after\n- Skins: name the creator on each row in the browser\n- GS:MTL: Add workaround for Apple GPU hardware bug\n- translations: Syncing Crowdin translations (#14879)\n- Credit misantronic in code for PRs #616 and #617\n- Let a companion app request recent-games access per caller\n- Android: turn hardcore off while a RetroAchievements host override is active\n- Affinity: pick performance cores by capacity, and make that the default\n- Save states: show when each slot was written, not its filename\n- Slot dates: ask the running VM, not the filename matcher\n- Launch Game: a menu entry for the picker that was already there\n- Per-slot save/load hotkeys, and dates on the in-game slot picker\n- Fix rumble on external pads, macro dialog in landscape, hotkey pop-up discoverability\n- SGSR: adopt the revised upstream maths for the plain variant\n- PAD: Update to latest controller database.\n- Translations: Sync Crowdin translations for 2.8\n- SPU2: Pass IOP cycle count at 64bit\n- Qt: Update Base Translation.\n- Qt/macOS: Keep Fullscreen on the main window\n- GameDB: Add Prioritize Lower depth fix to Steambot Chronicles\n- GS/HW: Avoid detecting shuffles as source of truth for target format\n- GS/TC: Improve single pixel overlap detection in RT in RT\n- EE/IOP: Fix loading elf's through relative path\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260830...6e1e8f0a18f2f5bbcd2e75344d89ff6ba03b5616",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "8e509603eba6df56ab168d44a3abb8394c0fc802948cdc3f260383fb946374b2",
+      "translationPending": false
+    },
+    {
+      "id": "136453",
+      "title": "【电脑】XM6 Pro-68k Release 79 (260831)",
+      "originalTitle": "[Ordi.] XM6 Pro-68k Release 79 (260831)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "tool",
+      "publishedAt": "2026-09-01T12:40:50Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136453-ordi-xm6-pro-68k-release-79-260831/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2018/08/xm6pro.png",
+      "officialUrl": "http://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k.html",
+      "summary": "这款模拟器也是当今最全面的X68000开发工具。这是PI的XM6 v2.05仿真器的分支，具有众多新功能 。这些更改主要与用户界面有关，并且一直关注开发和调试功能，而不是模拟的准确性，但是有足够的改进，建议使用此版本而不是最终的XM6 v2.06。 变更内容： •提高了计划工作站(CPU)指令的定时精度。 此功能附带 cPU仿真性能略有下降，但我怀疑有人会注意到。 •汇编对话框现在加载十六进制表示，当二进制 光标处的数据不是有效的指令。",
+      "content": "这款模拟器也是当今最全面的X68000开发工具。这是PI的XM6 v2.05仿真器的分支，具有众多新功能\n。这些更改主要与用户界面有关，并且一直关注开发和调试功能，而不是模拟的准确性，但是有足够的改进，建议使用此版本而不是最终的XM6 v2.06。\n\n变更内容：\n•提高了计划工作站(CPU)指令的定时精度。 此功能附带\ncPU仿真性能略有下降，但我怀疑有人会注意到。\n•汇编对话框现在加载十六进制表示，当二进制\n光标处的数据不是有效的指令。 您也可以强制此行为\n按住Control键。\n• Unicode版本现在具有用于保存状态文件的临时选项，\n适用于与他人共享或与兼容程序进行比较：\n“已清理”省略状态文件中的所有文件路径，以保护您的隐私。\n“兼容”保存为XM6 2.06格式，无RLE （与MBCS版本相同）。\n•请注意，文件路径的字符串将转换为本地代码页，\n在可能的范围内。 这可能会导致加载状态时丢失文件\n文件，如果Unicode路径无法映射到本地代码页，尽管\n除非目标PC使用与源PC类似的文件系统布局，\n状态文件中引用的文件可能无论如何都找不到。\n\n修复了错误：\n•修复了CPU模拟器中的其他一些错误。 离完美又近了一步……\n•修复了仅在罕见且可预测的情况下发生的事件计时错误。\n•自R77以来，状态文件循环和浏览器菜单的行为有点不稳定。",
+      "originalContent": "Cet émulateur est également le plus complet des outils de développements X68000 existant aujourd'hui. Il s'agit d'un fork de l'émulateur XM6 v2.05 de PI avec une pléthore de nouvelles fonctionnalités. Les changements sont pour la plupart liés à l'interface utilisateur et un accent a été mis sur le développement et les fonctions de débogage plutôt que sur l'exactitude de l'émulation, cependant il y a suffisamment d'améliorations pour qu'il soit recommandé d'utiliser cette version plutôt que XM6 v2.06 finale.\n\nLes changements:\n\n- The timing accuracy for CPU instructions was improved. This features comes with\na slight decrease in CPU emulation performance, but I doubt anyone will notice.\n- The assembler dialog now loads the hexadecimal representation when the binary\ndata at the cursor is not a valid instruction. You can also force this behavior\nby holding Control.\n- The Unicode edition now has temporary options for saving state files,\nuseful for sharing with others or comparing with compatible programs:\n\"Sanitized\" omits all file paths from state files to protect your privacy.\n\"Compatible\" saves in XM6 2.06 format without RLE (same as the MBCS edition).\n- Note that the strings for file paths will be converted to the local code page,\nto the extent possible. This may result in missing files when loading the state\nfiles if the Unicode paths couldn't be mapped to the local code page, although\nunless the destination PC uses a similar file system layout as the source PC,\nthe files referenced in the state file probably couldn't have been found anyway.\n\nBug fixes:\n- Fixed some more bugs in the CPU emulator. One step closer to perfection...\n- Fixed an event timing error that only occurred in rare, predictable situations.\n- State file cycling and browser menus were behaving a bit erratically since R77..",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "05ac43b6a31cd8e0a29d02e5bf3608b2e456185e98bbc4cbaffc416540fd36a3",
+      "translationPending": false
+    },
+    {
+      "id": "136451",
+      "title": "【电脑】TRS80gp v2.5.8",
+      "originalTitle": "[Ordi.] TRS80gp v2.5.8",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-01T12:38:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136451-ordi-trs80gp-v2-5-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2022/10/trs80gp.png",
+      "officialUrl": "http://48k.ca/trs80gp.html",
+      "summary": "它是Tandy TRS80型号1,2,3,4,12,16,6000、MC-10、DT-1和Videotex的模拟器。 存档的旧站点。",
+      "content": "它是Tandy TRS80型号1,2,3,4,12,16,6000、MC-10、DT-1和Videotex的模拟器。\n\n存档的旧站点。",
+      "originalContent": "Il s'agit d'un émulateur de Tandy TRS80 Model 1,2,3,4,12,16,6000,MC-10,DT-1 et Videotex.\n\nAncien site pour archive.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "12856d1be864cd43b963ca4d11bab4355ca59f4f5b59395ef40893632deb5c9c",
+      "translationPending": false
+    },
+    {
+      "id": "136447",
+      "title": "【电脑】NeoST v0.6",
+      "originalTitle": "[Ordi.] NeoST v0.6",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-01T11:56:12Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136447-ordi-neost-v0-6/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/neost.png",
+      "officialUrl": "https://github.com/habib256/neost",
+      "summary": "NeoST是基于GPLv3许可证的免费Atari ST/STE模拟器，采用C + +17开发，可通过WebAssembly在计算机上直接播放，如同在Web浏览器中一样（适用于Windows、Linux、MacOS、RasPi、Wasm ） 。",
+      "content": "NeoST是基于GPLv3许可证的免费Atari ST/STE模拟器，采用C + +17开发，可通过WebAssembly在计算机上直接播放，如同在Web浏览器中一样（适用于Windows、Linux、MacOS、RasPi、Wasm ）\n。由于集成了EmuTOS ，它可以立即启动，而无需复杂的配置，它可以管理四台机器（ 520 ST、MEGA ST、STE、MEGA STE从256 KB到4 MB的RAM ）及其专用硬件选项，例如高达16 MHz的处理器、协处理器FPU 68881、DMA声音和微线滤波器。\n在精度方面， NeoST重现了周期处理器（ Moira核心）的精确节奏以及每个硬件芯片的寄存器操作。为了确保绝对保真并运行无错误的图形演示或受保护的游戏（ .st、.msa、.dim、.stx/Pasti、GEMDOS和ACSI硬盘驱动器） ，对其显示进行了比较\n与Hatari的模拟器（这里用作参考比较模型）的模拟器一帧一帧地自动连接到最近的像素。 它还集成了高级调试器、完全备份状态和软盘驱动器的机械噪音。\nNeoST专为复古盒复古游戏安装（例如插入电视的Raspberry Pi ）量身定制，为Hatari带来了两大缺失：\n• 100 ％控制器全屏街机模式：它允许您导航菜单并更换热软盘，而无需键盘或重新启动。\n•智能自适应缩放：图像会自动锁定以去除不必要的边框，但一旦演示打开全屏幕（过度扫描） ，图像就会自动变宽，所有这些都通过着色器再现CRT屏幕的效果来增强。",
+      "originalContent": "NeoST est un émulateur Atari ST/STE libre sous licence GPLv3, développé en C++17 et directement jouable sur ordinateur comme dans un navigateur web via WebAssembly (et disponible pour Windows, Linux, MacOS, RasPi, Wasm). Conçu pour démarrer immédiatement sans configuration complexe grâce à l'intégration d'EmuTOS, il gère quatre machines (520 ST, Mega ST, STE, Mega STE de 256 Ko à 4 Mo de RAM) avec leurs options matérielles dédiées, comme le processeur jusqu'à 16 MHz, le coprocesseur FPU 68881, le son DMA et les filtres Microwire.\n\nCôté précision, NeoST reproduit le rythme exact du processeur d'époque (cœur Moira) ainsi que le fonctionnement registre par registre de chaque puce matérielle. Pour garantir une fidélité absolue et faire tourner sans bug les démos graphiques ou les jeux protégés (.st, .msa, .dim, .stx/Pasti, disques durs GEMDOS et ACSI), son affichage est comparé automatiquement, image par image et au pixel près, avec celui d'Hatari, l'émulateur qui sert ici de modèle de comparaison de référence. Il intègre également un débogueur avancé, des états de sauvegarde complets et le bruit mécanique du lecteur de disquette.\n\nPensé sur mesure pour les installations rétrogaming de type « retro-box » (comme un Raspberry Pi branché sur la télévision), NeoST apporte deux atouts majeurs absents d'Hatari :\n\n- Un mode borne d'arcade plein écran 100 % manette : il permet de naviguer dans les menus et de changer de disquette à chaud sans jamais avoir besoin d'un clavier ni de redémarrer.\n- Un zoom adaptatif intelligent : l'image se cale d'elle-même pour supprimer les bordures inutiles, mais s'élargit automatiquement dès qu'une démo ouvre l'écran complet (overscan), le tout sublimé par des shaders reproduisant l'effet d'un écran cathodique (CRT).",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "92b409166cada4fce850705524f51d41c5bec00f4d7cc8f27443c303c758d701",
+      "translationPending": false
+    },
+    {
+      "id": "136435",
+      "title": "【电脑】Denise v2.9.0",
+      "originalTitle": "[Ordi.] Denise v2.9.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-01T05:45:51Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136435-ordi-denise-v2-9-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/denise-fusion.png",
+      "officialUrl": "https://sourceforge.net/projects/deniseemu/",
+      "summary": "Denise是一款精确的c64/Amiga仿真器，其项目受到Higan仿真器设计的影响。 官方提供法语版本。 变更内容： •着色器： koko-aio是Denise中C64/Amiga的首选着色器 •快速访问：演示文稿- >着色器- >星形图标 • Antonio的动态照明集成着色器，用于加载和供电LED ，并由Forum64社区提供图像 •如果设置，则在监视器旁边显示带有动态LED的软盘：图像几何形状- >缩放- >窗口 •着色器：参…",
+      "content": "Denise是一款精确的c64/Amiga仿真器，其项目受到Higan仿真器设计的影响。 官方提供法语版本。\n\n变更内容：\n\n•着色器： koko-aio是Denise中C64/Amiga的首选着色器\n•快速访问：演示文稿- >着色器- >星形图标\n• Antonio的动态照明集成着色器，用于加载和供电LED ，并由Forum64社区提供图像\n•如果设置，则在监视器旁边显示带有动态LED的软盘：图像几何形状- >缩放- >窗口\n•着色器：参数现在清晰地显示在可滚动列表中，并在叠加层中进行修改\n• C64 Studio ：在e.g. C64 Studio中添加用于调试器集成的二进制监视器（与VICE兼容）\n• C64 ：添加libresidfp （由Leandro提供）\n• C64 ： ClausS添加了对Trilogic Expert和Prophet64的支持\n• C64 ：添加选项以禁用精灵冲突\n• C64 ：为1541添加磁盘恶魔加速器\n• C64 ： LouD更新了USBSID-PICO库\nvmacOS ：改进UI小部件定位，修复应用切换时的输入问题\n•扭曲：添加速度可调的快进，在扭曲期间不再抑制着色器（可以停用）\n•空白磁盘、磁带、闪存、SRAM、EEPROM的创建现在直接集成到相应的UI中",
+      "originalContent": "Denise est un émulateur c64 / Amiga précis dont le projet est influencé par le design de l'émulateur higan. Version française incluse officiellement.\n\nLes changements:\n\n- Shader: koko-aio is the preferred shader in Denise for C64/Amiga\n- Quick access: Presentation -> Shader -> Star Icon\n- shader integration of dynamic lighting for loading and power LEDs by Antonio and providing images by Forum64 community\n- displays a floppy with dynamic LED next to the monitor, if set: Image geometry -> Scaling -> Window\n- Shader: parameters are now clearly displayed in a scrollable list and are modified in an overlay\n- C64 Studio: add binary monitor (compatible with VICE) for debugger integration, in e.g. C64 Studio\n- C64: add libresidfp (by Leandro)\n- C64: support for Trilogic Expert and Prophet64 was added by ClausS\n- C64: add options to disable Sprite collisions\n- C64: add Disk Demon speeder for 1541\n- C64: USBSID-PICO library was updated by LouD\nvmacOS: improve UI widget positioning, fix input problems when switching between apps\n- Warp: add Fast Forward with adjustable speed, Shaders are no longer suppressed during warp (can be deactivated)\n- creation of blank disks, tapes, Flash, SRAM, EEPROM is now directly integrated into the corresponding UI",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8641b162ee6ed746e7b471ee914dd2f9c36c09068e69171967ecf9b7fcdb0f06",
+      "translationPending": false
+    },
     {
       "id": "android-release-virtual_jaguar_core-nightly",
       "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
@@ -30,55 +187,6 @@
         "virtual_jaguar_core"
       ],
       "contentHash": "8df3df273d27b68775cd33c5e58bee1c07d51b41dd1dc318fcf0ff0263fd6f8d",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-01T00:39:37Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月01日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_sms (gg): 商船4gg (# 2740)(伊戈尔-阿拉伯)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_sms (gg): tetris4gg (#2740) (Igor-Arabe)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "946be00a6bf298fccec71e8e9ca906d9835778603c8259bdc7d0c8c9def5927c",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-2-6-7",
-      "title": "【Android更新】ARMSX2 2.6.7",
-      "originalTitle": "ARMSX2 2.6.7 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-31T23:43:33Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.7",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 2.6.7，发布日期为2026年08月31日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 2.6.7。\n\n发布日期：2026年08月31日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.6.7\n\n新增功能：\n\n上游到最新的PCSX2提交。 （ PCSX2 2.8/2.9.7 DEV BUILD。）\n\n快速加载生物危害爆发（主机： ELF方法） ：\nObsrv “快速加载”方法以前从未在Android上工作过。现在可以了，整个设置都在应用内进行。长按光盘-- >单击设置快速加载，从包中选择修改后的ELF ，然后ARMSX2执行其余操作：提取光盘本身的文件，将ELF放在它们旁边，并将其与光盘配对\n。在开始之前，您会被告知它需要多少空间（从该游戏自己的光盘中读取）以及您在内部存储上有多少空间（这是它安装的位置）。然后小精灵出现在您的库中，启动它并启动游戏\n。之后，无论出于何种原因，您都可以长按ELF文件-- > ，然后单击条目上的删除快速加载文件，这将再次删除所有内容。 有三件事阻止了它。\n\nVU精度：新的“精确”夹紧模式：\n@ pstef已经花费了55次时间对PS2的矢量单元的实际功能进行建模，并根据来自真实硬件的捕获进行建模，结果是第四个VU夹紧设置：精确。它涵盖了FMAC的饱和度和溢出产生的符号，在最小正常浮点数下存活的符号，加法器的保护位， MAC溢出和下溢fla\n以及除法单元和EFU自己的算法，在解释器、microVU和COP2宏路径上都是一样的，所以现在这三个都与控制台一致。特技演员是第一个自动设置的游戏，其中VU0的宏添加比控制台的加法器少了一个单位\n。其他人会在被识别时跟随，您也可以在“性能” - > “VU夹紧”下选择“确切自己” ，尽管它比“额外”慢，并且只有在游戏行为不当时才值得使用。@ bmdhacks还使VU夹紧选取器进入了Android上的新“确切”模式，如果没有这种模式，上面的设置将无法在此处选择\n。VU1现在也有自己的夹持选择器，因此需要VU0准确的游戏可以将VU1留在更便宜的东西上。 它默认为“与VU0相同” ，这是它之前的行为方式。 也感谢user @ gtaforever00的广泛测试！\n\n纹理替换：\n来自@ bmdhacks的Vulkan和OpenGL ES上的本机ASTC支持。高清纹理包以压缩的.astc格式加载，并保持压缩在GPU内存中，无需CPU解码步骤，在转换后的《战神2》包上， 4.5 GB DDS降至538 MB ，跨2708个纹理。没有ASTC的设备回退到游戏自身的纹理\n。纹理包安装程序接受.astc文件。bmd正在开发一个新的ASTC纹理包存储库，准备就绪后我们将分享更多内容！\n\n游戏类别：\n根据您的喜好对库进行分组。游戏可以随心所欲地归入多个类别。长按游戏-- >单击类别以创建新游戏，并在其下添加所选游戏。您还可以在游戏库中长按类别名称以重命名或删除它\n。在网格和货架视图中，每个类别都有自己的行，例如“最近播放” ，在列表视图中，您可以获得筛选器。\n\n保存状态：\n\n现在，每个插槽都会在游戏内菜单和完整的“保存/加载”屏幕中显示其写入时间。 已占用的插槽被标记。\n新的每个插槽热键，分别为十个插槽中的每个插槽绑定保存和加载，再加上上一个插槽。\n\n修复：\n\n游戏中应用的设置现在立即生效。 在具有自己每场比赛设置的游戏中更改RetroArch着色器或其他任何内容都需要重新启动应用才能显示。 提交每次都在读取旧的每场比赛文件。\n修复了在外部控制器（ # 433 ）上的隆隆声。 它不再让手机嗡嗡作响，也不再让您拿着的电极片嗡嗡作响。\n\n宏编辑器在横向中可访问，其按钮不在屏幕上。\n\n可以在底部的屏幕选项卡中禁用热键弹出窗口。\n\n启动游戏现在是一个菜单项，用于直接启动文件。\n修复了LSFG无法正常启动的问题。\n\n控制器外观：\n\n皮肤创作者将获得积分……",
-      "originalContent": "ARMSX2 2.6.7\r\n\r\nWhat's new: \r\n\r\nUpstreamed to latest PCSX2 commits. (PCSX2 2.8/2.9.7 dev build.) \r\n\r\nQuick loading for Biohazard Outbreak (host: ELF method):\r\n\r\nThe obsrv \"quick loading\" method has never worked on Android before. It does now, and the whole setup happens inside the app. Long-press your disc --> click set up quick loading, pick the modified ELF from the package, and ARMSX2 does the rest: it extracts the disc's files itself, drops the ELF in beside them, and pairs it with the disc. Before it starts, you're told how much space it needs (read from that game's own disc) and how much you have on internal storage (that's where it installs). The ELF then appears in your library, launch it and the game boots. Afterwards, if for whatever reason you wish to uninstall, you can long press your elf file --> and click remove quick-load files on the entry which deletes everything again. Three things were stopping it. \r\n\r\nVU accuracy: a new \"Exact\" clamping mode: \r\n\r\n@pstef has spent 55 commits modelling what the PS2's vector units actually do, against captures from real hardware, and the result is a fourth VU Clamping setting: Exact. It covers the FMAC's saturation and the sign an overflowing one produces, what survives below the smallest normal float, the adder's guard bits, the MAC overflow and underflow flags, and the divide unit and EFU's own arithmetic, across the interpreter, microVU and the COP2 macro path alike, so all three now agree with the console. Stuntman is the first game set to it automatically, where VU0's macro adds were landing one unit short of the console's adder. Others will follow as they are identified, you can also select Exact yourself under Performance --> VU Clamping, though it is slower than Extra and only worth reaching for when a game misbehaves. @bmdhacks also made the VU Clamping picker reach the new Exact mode on Android, without which the setting above would have been un-selectable here. VU1 also now has its own clamping picker, so a game that needs VU0 accurate can leave VU1 on something cheaper. It defaults to \"Same as VU0\", which is how it behaved before. Thanks also to user @gtaforever00 for extensive testing! \r\n\r\nTexture replacements: \r\n\r\nNative ASTC support on Vulkan and OpenGL ES, from @bmdhacks. HD texture packs load as compressed .astc and stay compressed in GPU memory, with no CPU decode step, on a converted God of War II pack that is 4.5 GB of DDS down to 538 MB, across 2708 textures. Devices without ASTC fall back to the game's own textures. The texture pack installer accepts .astc files. bmd is working on a new ASTC texture pack repo, we will share more when it's ready! \r\n\r\nGame categories:\r\n\r\nGroup your library however you like. A game can sit in as many categories as you want. Long-press a game --> click on categories to create a new one and add the selected game under it. You can also long-press a category name in your game library to rename or delete it. In grid and shelf views each category gets its own row, like Recently Played, in list view you get a filter instead.\r\n\r\nSave states: \r\n\r\nEvery slot now shows when it was written, in both the in-game menu and the full Save/Load screens. Occupied slots are marked.\r\n\r\nNew Per-slot hotkeys, bind save and load for each of the ten slots individually, plus the previous-slot.\r\n\r\nFixes: \r\n\r\nSettings applied in-game now take effect immediately. Changing a RetroArch shader, or anything else, on a game with its own per-game settings needed an app restart to show up. The commit was reading the old per-game file every time.\r\n\r\nFixes to rumble on external controllers (#433). It no longer buzzes the phone instead of the pad you're holding.\r\n\r\nThe macro editor is reachable in landscape, its buttons were off-screen. \r\n\r\nHotkey pop-ups can be disabled in the On-Screen tab at the bottom. \r\n\r\nLaunch Game is now a menu entry, for booting a file directly.\r\n\r\nFixes to LSFG not starting properly. \r\n\r\nController skins: \r\n\r\nSkin creators are credited…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "80125d28d51590ee6a2d3f1269b92196dc3a74f069c20b97c017af8419b00a00",
       "translationPending": false
     },
     {
@@ -261,26 +369,26 @@
     },
     {
       "id": "136405",
-      "title": "【家用机】KytyPS5 r260831",
-      "originalTitle": "[Consoles de salon] KytyPS5 r260831",
+      "title": "【家用机】KytyPS5 r260901",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260901",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-08-31T09:40:24Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136405-consoles-de-salon-kytyps5-r260831/",
+      "sourceUrl": "https://www.emu-france.com/news/136405-consoles-de-salon-kytyps5-r260901/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
       "officialUrl": "https://github.com/Nmzik/KytyPS5",
-      "summary": "项目 KytyPS5 是一款由Nmzik开发的用于Windows的PlayStation 5模拟器,它基于由InoriRus所创建的Kyty原作的被故意修改的版本。 它似乎提供了比原作项目高得多的PS5兼容性,专注于游戏的起动,稳定性和渐进支持。 他的商业头衔。 仿真器被设计为在没有外部LLE模块的情况下运行,这些模块简化了它的使用并减少了技术依赖。",
-      "content": "项目 KytyPS5 是一款由Nmzik开发的用于Windows的PlayStation 5模拟器,它基于由InoriRus所创建的Kyty原作的被故意修改的版本。 它似乎提供了比原作项目高得多的PS5兼容性,专注于游戏的起动,稳定性和渐进支持。 他的商业头衔。 仿真器被设计为在没有外部LLE模块的情况下运行,这些模块简化了它的使用并减少了技术依赖。 开发商表示该项目仍处于实验阶段,但仍能推出一些2D游戏和多款3D游戏,目标明确:改进comp 在注重性能或图形精度之前,可忽略不计。\n\nKytyPS5 完全在Windows下工作,并且似乎主要为NVIDIA图形卡进行优化,即使其他GPU能够以可变结果工作。 该项目采取务实的方法:它似乎首先开始游戏,甚至在第一个versio中牺牲视觉上的忠诚或执行速度 不详。 该代码被积极开发,经常更新,使其成为目前最能动的PS5项目之一。 开发者强调对透明度的渴望,明确比InoriRus对原始项目的要求要透明,同时假设对鳕鱼进行重大改写和重新设计 e. 资源\n\n总而言之, KytyPS5 是一个非官方的,但假设是第一个Kyty的续作,转变为一个现代的,更雄心勃勃的,功能更实用的PS5模拟器,这似乎成为了参考d. 多年的索尼控制台模拟。\n\n变化 :\n• 阴影:去除再编译器错误字符串传播\n\n(临时建筑编自此叉挂官方发布。",
-      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- shader: remove recompiler error-string propagation\n\n(Temporary build compiled from this fork pending official releases.)",
+      "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•渲染器：解码R32_SFLOAT包装颜色清除\n•图形：不要从读取-修改-写入调度中快速清除\n•渲染器： DECODE R32_SFLOAT PACKED COLOR CLEARS (# 436)\n• guest_gpu ：修复私有AGC着色器寄存器回归\n•恢复“着色器：保留S_MOV_B64中的原始VCC位(# 418)”\n•防止逃生\n•着色器：删除重新编译器错误字符串传播\n（从此分叉编译的临时版本正在等待正式发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- renderer: decode R32_SFLOAT packed colour clears\n- graphics: do not arm a fast clear from a read-modify-write dispatch\n- renderer: decode R32_SFLOAT packed colour clears (#436)\n- guest_gpu: fix private AGC shader register regression\n- Revert \"shader: preserve raw VCC bits in S_MOV_B64 (#418)\"\n- prevent Escape from exiting\n- shader: remove recompiler error-string propagation\n\n(Temporary build compiled from this fork pending official releases.)",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [
         "kytyps5_pc"
       ],
-      "contentHash": "5258b639869b2ed113f04f37e9f4870865b1d6d41cb77da7a7759f489d29daae",
+      "contentHash": "81ada7c3befbc1abd08a99afddcc64803f9c3c9bf1cf3117277ecd6679fb9c83",
       "translationPending": false
     },
     {
@@ -310,24 +418,24 @@
     },
     {
       "id": "136401",
-      "title": "【其他】Coffee GB v2.0.8",
-      "originalTitle": "[Consoles portables] Coffee GB v2.0.8",
+      "title": "【其他】Coffee GB v2.0.10",
+      "originalTitle": "[Consoles portables] Coffee GB v2.0.10",
       "category": "other",
       "categoryLabel": "其他",
       "kind": "emulator",
       "publishedAt": "2026-08-31T09:38:00Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136401-consoles-portables-coffee-gb-v2-0-8/",
+      "sourceUrl": "https://www.emu-france.com/news/136401-consoles-portables-coffee-gb-v2-0-10/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/coffee-gb-1.7.9.png",
       "officialUrl": "https://github.com/trekawek/coffee-gb",
-      "summary": "Coffee GB 是Game Boy Color模拟器,开发于Java 16(为心脏)和克特林(为图形界面). 设计为个人项目和编程工作,以雄心勃勃的技术方法加以区分: CPU的模拟是周期精确的,每个指令 en t分解为以控制台实际速度完成的微操作。 尽管实验性方面, Coffee GB 提供高相容性,由有名的Blargg和Mooneye GB测试验证,确保了对原控制台的事实行为。",
-      "content": "Coffee GB 是Game Boy Color模拟器,开发于Java 16(为心脏)和克特林(为图形界面). 设计为个人项目和编程工作,以雄心勃勃的技术方法加以区分: CPU的模拟是周期精确的,每个指令 en t分解为以控制台实际速度完成的微操作。\n\n尽管实验性方面, Coffee GB 提供高相容性,由有名的Blargg和Mooneye GB测试验证,确保了对原控制台的事实行为。 它支持带有MBC1到MBC5内存控制器的弹匣以及电池备份,允许将游戏数据保存在真实的G上。 灵魂男孩。\n\n仿真器还读取了压缩ROM(.zip),通过.properties文件提供了密钥配置,并加入了回滚(enc)的网玩特性。 矿石实验)与状态同步在线播放。\n\n对于开发者或好奇的技术,项目包括通过Maven进行自动化测试,源代码在MIT许可下可获取,可自由编辑并可再使用b 那个",
+      "summary": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在 控制台的真实外观。 尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台 。",
+      "content": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在\n控制台的真实外观。\n尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台\n。它支持带有MBC1到MBC5内存控制器的墨盒，以及电池备份，将游戏数据保留在真正的Game Boy上。\n模拟器还读取压缩的ROM （ .zip ） ，通过.properties文件提供密钥配置，并集成了具有回滚（仍然是实验性的）的netplay功能，以便通过状态同步在线播放。\n对于开发人员或好奇的技术人员，该项目包括通过Maven进行的自动化测试，源代码在麻省理工学院许可证下提供，可自由修改和可重用。",
       "originalContent": "Coffee GB est un émulateur Game Boy Color développé en Java 16 (pour le cœur) et Kotlin (pour l’interface graphique). Conçu comme un projet personnel et un exercice de programmation, il se distingue par une approche technique ambitieuse: l’émulation du CPU est cycle-exacte, chaque instruction étant décomposée en micro-opérations exécutées à la cadence réelle de la console.\n\nMalgré son aspect expérimental, Coffee GB offre une compatibilité élevée, validée par les célèbres tests Blargg et Mooneye GB, garantissant un comportement fidèle à la console d’origine. Il prend en charge les cartouches avec les contrôleurs mémoire MBC1 à MBC5, ainsi que les sauvegardes sur batterie, permettant de conserver les données de jeu comme sur une vraie Game Boy.\n\nL’émulateur lit également les ROMs compressées (.zip), propose une configuration des touches via un fichier .properties, et intègre une fonctionnalité de netplay avec rollback (encore expérimentale) pour jouer en ligne avec synchronisation des états.\n\nPour les développeurs ou curieux techniques, le projet inclut des tests automatisés via Maven, et le code source est disponible sous licence MIT, librement modifiable et réutilisable.",
       "platforms": [],
       "relatedEmulatorIds": [
         "coffee_gb_pc"
       ],
-      "contentHash": "648da897e647d60117d1047b7c3ef49176f65bd9419224828518456c0ddd21cf",
+      "contentHash": "357077781b283980fa5804bebb76f62c1cecaa5b89360e7ad70efb98f4aa85cc",
       "translationPending": false
     },
     {
@@ -3616,30 +3724,6 @@
         "armsx1"
       ],
       "contentHash": "37b872104e2d50966c8386a38de270769de966c884b52d54767268c631e95715",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-dosbox_x-dosbox-x-v2026-08-02",
-      "title": "【Android更新】DOSBox-X dosbox-x-v2026.08.02",
-      "originalTitle": "DOSBox-X dosbox-x-v2026.08.02 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-03T04:31:29Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/joncampbell123/dosbox-x/releases/tag/dosbox-x-v2026.08.02",
-      "imageUrl": "asset://assets/emulators/dosbox_x.png",
-      "officialUrl": "https://github.com/joncampbell123/dosbox-x",
-      "summary": "DOSBox-X 发布 Android 新版本 dosbox-x-v2026.08.02，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
-      "content": "DOSBox-X 已发布 Android 最新版本 dosbox-x-v2026.08.02。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n2026.08.02\n• 调试器:用于地址显示/查看的正常的16位分块偏移\n在分析指令中避免虚假的“[非法]”内存操作报告()\n(cimarronm) (英语).\n• DOS/V日本模式下的固定字符渲染和鼠标光标显示。\n(南齐纪).\n• 建造OSFREE释放的固定建造错误(2000年Maron)\n• 添加软盘BPB 理智检查,重新安排现有软盘BPB检查代码\n(马龙2000年)\n• 固定窗口调整大小(OpenGL、SDL2)(misty7666)\n• 更新Nuked-OPL3-快到 v1.8-fast.3 (tggies) (Tggies) (英语).\n• 增加Z驱动器中嵌入子目录的支持(2000年maron)\n· 为NE2000仿真添加实验性\"ethnet\"指令和协议。 相反\n使用 pcap 杂交模式, 它不会对一个客户端Wi-fi 工作\n服务器设置可以配置以在实例之间模拟一个私有的 lan。\nDOSBox-X 在本地主机或局域网。 ETnet 命令\n被刻意构建,以使客户端和服务器设置为相同的命令\n作为用于在DOSBox和\nDOSBox-X. (joncampbell123) (英语).\n• FAT驱动器性能的改进,至少用于目录的列出,\n文件创建、读取和写入(joncampbell123)。\n• 增加了PC3270和Olivetti机型(firevaran)。\n• 固定的脂肪驱动误差路径,因此短线区块不再看\n如成功挂载, 提前返回即可关闭磁盘文件控件\n而不是泄露出来\n• INT 33h:在PC-98模式下,不维持隐藏/显示显示数以匹配\n真正的鼠标驱动行为( 南希基)",
-      "originalContent": "2026.08.02\r\n  - Debugger: normalize 16-bit segmented offsets for address display/lookup and\r\n    avoid false \"[illegal]\" memory operand reports in AnalyzeInstruction()\r\n    (cimarronm)\r\n  - Fixed character rendering and mouse cursor display in DOS/V Japanese mode.\r\n    (nanshiki)\r\n  - Fixed build error of OSFREE release builds (maron2000)\r\n  - Added floppy BPB sanity check, and rearranged existing floppy BPB check code\r\n    (maron2000)\r\n  - Fixed window resizing (OpenGL, SDL2) (misty7666)\r\n  - Updated Nuked-OPL3-fast to v1.8-fast.3 (tgies)\r\n  - Added support for nested subdirectories in Z drive (maron2000)\r\n  - Added experimental \"ethnet\" command and protocol for NE2000 emulation. Instead\r\n    of using the pcap promiscious mode, which doesn't work over Wi-fi, a client\r\n    server setup can be configured to emulate a private lan between instances of\r\n    DOSBox-X either on localhost or on the local area network. The ethnet command\r\n    is deliberately built so that client and server set up is the same command\r\n    structure as the \"ipx\" command used to set up an IPX network in DOSBox and\r\n    DOSBox-X. (joncampbell123)\r\n  - FAT driver performance improvements, at least for directory enumeration,\r\n    file creation, reading, and writing (joncampbell123).\r\n  - Added PC3270 and Olivetti machine types (firevaran).\r\n  - Fixed fatDrive error paths so truncated boot-sector reads no longer look\r\n    like successful mounts, and early returns now close diskfile handles\r\n    instead of leaking them. (cimarronm)\r\n  - INT 33h: In PC-98 mode, do not maintain a hide/show display count to match\r\n    real mouse driver behavior (nanshiki)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "dosbox_x"
-      ],
-      "contentHash": "75aa99e51c9dfe57cfb3c64cfd002e76780dc22c3aec0b9a865842a1e1ba1f1b",
       "translationPending": false
     },
     {
