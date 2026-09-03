@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T16:53:26.066742Z",
+  "generatedAt": "2026-09-03T05:00:46.855276Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-virtual_jaguar_core-prerelease",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) prerelease",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) prerelease Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-03T04:14:17Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/prerelease",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 prerelease，发布日期为2026年09月03日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 prerelease。\n\n发布日期：2026年09月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n释放候选人 `0598768` — `v3.6.0` (`release/3.6.0`)\n\n提交：`0598768`（https://github.com/libretro/virtualjaguar-libretro/commit/0598768d18809efcd0fd1da3ef82d2ed58ed42c3）\n构建时间：2026-09-03 04:14 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/33713787177）\n分支：`release/3.6.0`\n\n提示:自动建造 `release/3.6.0` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何手工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。。。。 这是来自放行分支的RELASE CANDIDATE,而不是放行:它存在,所以16个平台矩阵运行在即将起运的代码上,而不是在标记上第一次遇到。\n\n核心记录其特性为: `v3.6.0 0598768` 启动时 —— 在报告此构建时引用此行。\n\n自上次公布以来的变化\n\n```\n0598768 feat(debug):用于GDB stub的选入局域网绑定,并有对等检查(# 652 (# 725))\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` 以获得符号回溯跟踪。\n\nSHA-256 校验值\n\n用 `sha256sum --check SHA256SUMS.txt` (Linux)或 (英语). `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478…",
+      "originalContent": "### Release candidate `0598768` — `v3.6.0` (`release/3.6.0`)\n\n| | |\n|---|---|\n| **Commit** | [`0598768`](https://github.com/libretro/virtualjaguar-libretro/commit/0598768d18809efcd0fd1da3ef82d2ed58ed42c3) |\n| **Built** | 2026-09-03 04:14 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/33713787177) |\n| **Branch** | `release/3.6.0` |\n\n> Automatic build of the `release/3.6.0` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest). This is a RELEASE CANDIDATE from a release branch, not a release: it exists so the 16-platform matrix runs on the code about to ship, instead of first meeting it at the tag.\n\nThe core logs its identity as `v3.6.0 0598768` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous release candidate\n\n```\n0598768 feat(debug): opt-in LAN binding for the GDB stub, with a peer check (#652) (#725)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "12e5d58b9b8e5ac38cd17f47a162515225298bb56dee1fc27b590e4613964bfc",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-02T14:50:18Z",
+      "publishedAt": "2026-09-03T00:31:06Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月02日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• msm5205,用于清除accu的锁链(fixes Super Air Zonk标准镜头音量随机变化)(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• msm5205, latch for clearing accu (fixes Super Air Zonk standard shot sound randomly changing in volume) (dinkc64)",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月03日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_spectrum.cpp: Freddy Hardest 英语游戏(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_spectrum.cpp: Freddy Hardest games in English (fprietog)",
       "platforms": [
         "android"
       ],
@@ -30,7 +54,99 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "36bdd0bbe4cf4046fa86e6e3019212520d676c6e8c2aac45e575c59f0afd27b2",
+      "contentHash": "ce92eb3f4a30ad27601a06a6dcdf7940bb3a7f51fc1910e9b86a8e3445f2a654",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-hatariB_core-0-5",
+      "title": "【Android更新】hatariB (RetroArch 核心) 0.5",
+      "originalTitle": "hatariB (RetroArch 核心) 0.5 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-02T21:49:05Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/0.5",
+      "imageUrl": "asset://assets/emulators/hatariB_core.png",
+      "officialUrl": "https://github.com/bbbradsmith/hatariB",
+      "summary": "hatariB (RetroArch 核心) 发布 Android 新版本 0.5，发布日期为2026年09月02日。点击查看官方版本信息与更新说明。",
+      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 0.5。\n\n发布日期：2026年09月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n第五次公开发布 hatariB 仿真器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意尝试 最新的改变。\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在本页的顶部,留下你的评论。 记得告诉我您用哪个建筑( 结尾的7个字母/ 数字会识别它)。\n\n变动 v0.4:\n• 隐藏状态栏时固定屏幕上键盘腐败/崩溃。 (74)（https://github.com/bbbradsmith/hatariB/issues/74）)\n· 取消SDL2依赖性,同时自定义重新实施所需的功能。\n• 使用全小写 `hatarib` 图书馆的内部名称。",
+      "originalContent": "The fifth public release of the hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment. Just make sure to tell me which build you used (those 7 letters/numbers on the end will identify it).\r\n\r\nChanges since v0.4:\r\n  * Fixed on-screen keyboard corruption/crash when status bar is hidden. ([74](https://github.com/bbbradsmith/hatariB/issues/74))\r\n  * Remove SDL2 dependency with custom re-implementation of needed functions.\r\n  * Use all-lowercase `hatarib` internal name for library.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "hatariB_core"
+      ],
+      "contentHash": "b1ff0739704728eb3e57436ed7f5e68c34ae54e5918cca98e5a89b57b4da51be",
+      "translationPending": false
+    },
+    {
+      "id": "136520",
+      "title": "【家用机】PS5PCEM v0.3.0 alpha 2",
+      "originalTitle": "[Consoles de salon] PS5PCEM v0.3.0 alpha 2",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-02T21:13:57Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136520-consoles-de-salon-ps5pcem-v0-3-0-alpha-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/PS5PCEM-menu.png",
+      "officialUrl": "https://github.com/iStark/PS5PCEM",
+      "summary": "PS5PCEM是一个实验性的PlayStation 5模拟器和互操作性研究项目，由Zig开发。 这包括x86-64代码的本地执行，加载解密的PS5可执行文件，执行AGC图形命令，将RDNA2着色器转换为SPIR-V ，以及通过Vulkan渲染。 功能 •在Windows上本机执行来宾x86-64代码。 •加载ELF/自执行文件、重新定位、模块链接和TLS管理。 •多个PS5固件功能的HLE。 •执行GPU的AGC命令流程。",
+      "content": "PS5PCEM是一个实验性的PlayStation 5模拟器和互操作性研究项目，由Zig开发。 这包括x86-64代码的本地执行，加载解密的PS5可执行文件，执行AGC图形命令，将RDNA2着色器转换为SPIR-V ，以及通过Vulkan渲染。\n\n功能\n•在Windows上本机执行来宾x86-64代码。\n•加载ELF/自执行文件、重新定位、模块链接和TLS管理。\n•多个PS5固件功能的HLE。\n•执行GPU的AGC命令流程。\n•将RDNA2着色器逐渐转换为SPIR-V。\n•具有渲染目标、深度/模板和MSAA管理的Vulkan渲染。\n•管理GPU内存和纹理，包括detiling。\n• VideoOut Vulkan支持。\n•通过FFmpeg播放音频和H.264/AAC。\n•通过HID支持DualSense和DualShock控制器。\n• XInput支持和键盘。\n•按标题管理备份。\n•具有本地封面、控制器配置文件和直接游戏启动的本机Windows启动器。\n•发射器中最多可以保存八个最近的标题。\n•一些游戏现在可以玩了，有些已经可以玩了，但兼容性、性能、图形、音频和稳定性仍然取决于游戏和硬件。\n\n达到不同操作级别的游戏\n•《终结者2D ：无缘无故》\n• Jets 'n' Guns 2\n• Asterix & Obelix ：全力以赴！\n• The Precinct\n•猫咪任务III\n•侏罗纪公园经典游戏系列\n\n项目提供的渔获量和结果是开发结果，不一定构成一般兼容性的指示。\n\n配置\nWindows 10 2004或更高版本。\n处理器x86-64。\nVulkan 1.2.兼容GPU\n当前提供的Windows x64版本： 0.3.0-alpha.2.\n\n开发\nPS5PCEM以Zig开发，并在GNU GPL v3或更高版本的许可证下分发。\n\n该项目不为控制台提供游戏、PS5固件、密钥或系统库。\n\n项目状态\nPS5PCEM仍在积极开发中。PS5模拟仍然不完整，游戏之间的兼容性差异很大。但是，该项目已经具备了PS5架构的几个重要元素的功能实现，包括x86-64执行、RDNA2/AGC图形系统、着色器转换和\nndu Vulkan.",
+      "originalContent": "PS5PCEM est un émulateur PlayStation 5 expérimental et un projet de recherche sur l’interopérabilité, développé en Zig. Il permet notamment l’exécution native de code x86-64, le chargement d’exécutables PS5 déchiffrés, l’exécution de commandes graphiques AGC, la traduction de shaders RDNA2 vers SPIR-V et le rendu via Vulkan.\n\nFonctionnalités\n- Exécution native du code x86-64 invité sous Windows.\n- Chargement des exécutables ELF/SELF, relocation, liaison des modules et gestion du TLS.\n- HLE de plusieurs fonctions du firmware PS5.\n- Exécution des flux de commandes AGC pour le GPU.\n- Traduction progressive des shaders RDNA2 vers SPIR-V.\n- Rendu Vulkan avec gestion des render targets, du depth/stencil et du MSAA.\n- Gestion de la mémoire GPU et des textures avec notamment le detiling.\n- Prise en charge du VideoOut Vulkan.\n- Audio hôte et lecture H.264/AAC via FFmpeg.\n- Support des contrôleurs DualSense et DualShock via HID.\n- Support XInput et clavier.\n- Gestion des sauvegardes par titre.\n- Lanceur Windows natif avec jaquettes locales, profils de contrôleurs et lancement direct des jeux.\n- Jusqu’à huit titres récents peuvent être conservés dans le lanceur.\n- Plusieurs jeux atteignent désormais le gameplay et certains sont déjà jouables, mais la compatibilité, les performances, les graphismes, l’audio et la stabilité restent variables selon les titres et le matériel.\n\nJeux ayant atteint différents niveaux de fonctionnement\n- Terminator 2D: No Fate\n- Jets 'n' Guns 2\n- Asterix & Obelix: Slap Them All!\n- The Precinct\n- Cat Quest III\n- Jurassic Park Classic Games Collection\n\nLes captures et résultats présentés par le projet sont des résultats de développement et ne constituent pas nécessairement des indications de compatibilité générale.\n\nConfiguration\nWindows 10 version 2004 ou ultérieure.\nProcesseur x86-64.\nGPU compatible Vulkan 1.2.\nVersion Windows x64 actuellement proposée : 0.3.0-alpha.2.\n\nDéveloppement\nPS5PCEM est développé en Zig et est distribué sous licence GNU GPL v3 ou ultérieure.\n\nLe projet ne fournit ni jeux, ni firmware PS5, ni clés, ni bibliothèques système de la console.\n\nÉtat du projet\nPS5PCEM est toujours en développement actif. L’émulation PS5 reste incomplète et la compatibilité varie fortement selon les jeux. Le projet dispose néanmoins déjà d’une implémentation fonctionnelle de plusieurs éléments importants de l’architecture PS5, notamment l’exécution x86-64, le système graphique RDNA2/AGC, la traduction des shaders et le rendu Vulkan.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "1902689621204b0d3840e32ad58083280040c548032941c1f99ad6ffa440d606",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260902",
+      "title": "【Android更新】ARMSX2 nightly-20260902",
+      "originalTitle": "ARMSX2 nightly-20260902 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-02T21:07:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260902",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260902，发布日期为2026年09月02日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260902。\n\n发布日期：2026年09月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• VU分机:把控制台天花板挡在钳子模式上\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260901...82b3e3ece4afa627e64d0cc01bc175d06029d2d8",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- VU div unit: gate the console ceiling on the clamp mode\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260901...82b3e3ece4afa627e64d0cc01bc175d06029d2d8",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "466bf5f598ee7b9f3fdaf4e6fb0b17c5ee31b7cc288fd5d82ee46035b77a208a",
+      "translationPending": false
+    },
+    {
+      "id": "136515",
+      "title": "【家用机】Prosper v0.2.2",
+      "originalTitle": "[Consoles de salon] Prosper v0.2.2",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-02T20:55:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136515-consoles-de-salon-prosper-v0-2-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/prosper.png",
+      "officialUrl": "https://github.com/mattias800/prosper",
+      "summary": "Prosper (ps5ys)是一个开源兼容层，用于在Linux和Windows上运行PS5软件和游戏。 它不是模拟器： PS5和PC共享相同的处理器架构（ x86-64 ） ，游戏代码在PC处理器上原生运行。Prosper的作用类似于Wine或Proton ，通过翻译PS5操作系统的系统调用、内部库和图形API （ AGC到Vulkan ） ，使其可被您的计算机读取 UR",
+      "content": "Prosper (ps5ys)是一个开源兼容层，用于在Linux和Windows上运行PS5软件和游戏。\n它不是模拟器： PS5和PC共享相同的处理器架构（ x86-64 ） ，游戏代码在PC处理器上原生运行。Prosper的作用类似于Wine或Proton ，通过翻译PS5操作系统的系统调用、内部库和图形API （ AGC到Vulkan ） ，使其可被您的计算机读取\nUR",
+      "originalContent": "Prosper (ps5ys) est une couche de compatibilité open-source permettant de faire tourner des logiciels et des jeux PS5 sous Linux et Windows.\n\nCe n'est pas un émulateur: la PS5 et les PC partageant la même architecture processeur (x86-64), le code des jeux tourne nativement sur le processeur du PC. Prosper agit comme Wine ou Proton en traduisant les appels système, les bibliothèques internes et l'API graphique (AGC vers Vulkan) de l'OS de la PS5 pour les rendre lisibles par votre ordinateur.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "410551407670068cd8d6e5becbc802628b65ad669a3d466b6f0b3f1fa60b4781",
       "translationPending": false
     },
     {
@@ -386,30 +502,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-virtual_jaguar_core-prerelease",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) prerelease",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) prerelease Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-02T08:41:53Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/prerelease",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 prerelease，发布日期为2026年09月02日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 prerelease。\n\n发布日期：2026年09月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n释放候选人 `026279c` — `v3.6.0` (`release/3.6.0`)\n\n提交：`026279c`（https://github.com/libretro/virtualjaguar-libretro/commit/026279c365d6266710c651d7a151dfed94b9a785）\n构建时间：2026-09-02 08:41 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/33609257569）\n分支：`release/3.6.0`\n\n提示:自动建造 `release/3.6.0` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。。。 这是来自放行分支的RELASE CANDIDATE,而不是放行:它存在,所以16平台矩阵运行在即将发运的代码上,而不是在标记上第一次见到它。\n\n核心记录其特性为 `v3.6.0 026279c` 启动时 —— 报告此建构时引用该行。\n\n自上次公布候选人以来的变化\n\n```\n026279c 构建: 解释 Have_ CDROM 而不是在已删除的标题上拖曳\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` ,以获得符号化回溯跟踪。\n\nSHA-256 校验值\n\n校验 `sha256sum --check SHA256SUMS.txt` (林纳)或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332…",
-      "originalContent": "### Release candidate `026279c` — `v3.6.0` (`release/3.6.0`)\n\n| | |\n|---|---|\n| **Commit** | [`026279c`](https://github.com/libretro/virtualjaguar-libretro/commit/026279c365d6266710c651d7a151dfed94b9a785) |\n| **Built** | 2026-09-02 08:41 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/33609257569) |\n| **Branch** | `release/3.6.0` |\n\n> Automatic build of the `release/3.6.0` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest). This is a RELEASE CANDIDATE from a release branch, not a release: it exists so the 16-platform matrix runs on the code about to ship, instead of first meeting it at the tag.\n\nThe core logs its identity as `v3.6.0 026279c` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous release candidate\n\n```\n026279c build: explain HAVE_CDROM instead of dangling on a deleted header\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "132ae8e032188cbf62c202547033090f6ac7cff637ec8ecf419c9ffc24291627",
-      "translationPending": false
-    },
-    {
       "id": "136470",
       "title": "【家用机】Ryu (2026/09/02)",
       "originalTitle": "[Consoles de salon] Ryu (2026/09/02)",
@@ -549,30 +641,6 @@
         "dosbox_x"
       ],
       "contentHash": "f3cb7210a173ca48cef1a451adbf971ed174891de94e5e5bc5cbf9a4f5400d18",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260901",
-      "title": "【Android更新】ARMSX2 nightly-20260901",
-      "originalTitle": "ARMSX2 nightly-20260901 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-01T14:09:27Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260901",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260901，发布日期为2026年09月01日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260901。\n\n发布日期：2026年09月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• iOS:放弃不再使用船舶的FFmpeg许可证入境\n• iOS: 放下OSD抓取写下留下的视频抓取删除\n• eerunner:将 FPU 口罩传递给分析组\n• GS:删除视频捕获,并由此消除ffmpeg依赖性\n• 触控:在使用垫子时不要自动隐藏\n• LSFG:当帧生成后开启时重建交换链\n• 快速加载:先对空间发出警告,然后允许去除空间\n• 快速装入:通过在盘子上实际运行找到四个修正\n• 快速加载:停止让用户重命名ELF\n• GS:不要在Android上制作视频记录\n• 突发快装:使主机:ELF方法在Android上发挥作用\n• 最新情况 SettingsRootView.swift 用于stosdebug 的\n• 最新情况 EmulatorSettingsView.swift 用于stosdebug 的\n• 最新情况 EmulatorBridge.swift 用于 Stos 调试\n• Qt:更新EE和VU再编译器设置描述\n• Qt:添加缺失的设置描述\n• GameDB:SCPS-15064港接通SCKA-20027的补丁\n• 图书馆:重命名和删除类别\n• 全屏UI:与 Qt 对齐设置描述\n• Qt:更新EE和VU再编译器设置描述\n• Qt:添加缺失的设置描述\n• 图书馆:自定义游戏类别\n• 减:起跳 `ffmpeg` to 9.0.1\n• Deps: 设置所需ffmpeg版本的最小值 7.1\n• Deps:完全取消树上ffmpeg头\n• 解码:不要硬化ffmpeg dlls路径\n• GSCapture:转换使用 `pix_fmts` 与 `avcodec_get_supported_config()`\n• PAD:更新最新控制器数据库。\n• VU:将打字固定在常数中\n• SW:Fix C光栅IIP向量包(签名->未签名)\n• GameDB: 修复日本标题和软件\n• GameDB:SCPS-15064港接通SCKA-20027的补丁\n• 游戏中设置:在承诺之前而不是之后写每场游戏的 INI\n• 皮肤:在浏览器中每行的创建者姓名\n• GS:MTL:为 Apple GPU 硬件错误添加工作包\n• 翻译:同步Crowdin翻译(# 14879)\n• 公关代码616和617中的信用过期\n• 让一个同伴应用程序请求每个呼叫者最近的游戏访问\n• Android:当一个 RetroAchievements 主机运行时关闭硬核\n• 无限性:按能力选择性能核心,并设定默认值\n• 保存状态:每个槽被写入时显示,而不是文件名\n• 分档日期:询问运行中的 VM 而不是文件名匹配器\n• 启动游戏:一个已经在那里的取取器菜单项\n• 每秒节能/装入热键,以及游戏中选档上的日期\n• 修复外出地垫上的隆起、景观上的宏观对话、可发现的热门弹出\n• SGSR:采用经修改的平面变体上游数学\n• PAD:更新最新控制器数据库。\n• 翻译:同步Crowdin翻译 2.8\n• SPU2: 64bit的通过 IOP周期计数\n• Qt:更新基地翻译。\n• Qt/macOS:在主窗口保持全屏\n• GameDB:在Steambot Chronicles上添加下深度修正的优先次序\n• GS/HW:避免发现作为目标格式真相来源的洗牌\n• GS/TC:在RT中改进单像素重叠检测\n• EE/IOP:通过相对路径修复装载精灵\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260830...6e1e8f0a18f2f5bbcd2e75344d89ff6ba03b5616",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: drop the FFmpeg license entry, which no longer ships\n- iOS: drop the OSD capture writes the video capture removal left behind\n- eerunner: pass the FPU mask through to ParseGroups\n- GS: remove video capture, and with it the ffmpeg dependency\n- Touch controls: don't auto-hide while the pad is being used\n- LSFG: rebuild the swap chain when frame generation turns on later\n- Quick loading: warn about the space first, and allow removing it after\n- Quick loading: four fixes found by actually running it on the disc\n- Quick loading: stop making the user rename the ELF\n- GS: don't build video capture on Android\n- Outbreak quick loading: make the host: ELF method work on Android\n- Update SettingsRootView.swift for stosdebug\n- Update EmulatorSettingsView.swift for stosdebug\n- Update EmulatorBridge.swift for StosDebug\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- Library: rename and delete categories\n- FullscreenUI: Align setting descriptions with Qt\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- Library: custom game categories\n- Deps: Bump `ffmpeg` to 9.0.1\n- Deps: Set minimum required ffmpeg version to 7.1\n- Deps: Get rid of the in-tree ffmpeg headers entirely\n- Deps: Dont hardcode the ffmpeg dlls path\n- GSCapture: Switch the use of `pix_fmts` with `avcodec_get_supported_config()`\n- PAD: Update to latest controller database.\n- VU: fix typo in a constant\n- SW: Fix C rasterizor IIP vector pack (signed->unsigned)\n- GameDB: Fix Japanese Title&Sort\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- In-game settings: write the per-game INI before the commit, not after\n- Skins: name the creator on each row in the browser\n- GS:MTL: Add workaround for Apple GPU hardware bug\n- translations: Syncing Crowdin translations (#14879)\n- Credit misantronic in code for PRs #616 and #617\n- Let a companion app request recent-games access per caller\n- Android: turn hardcore off while a RetroAchievements host override is active\n- Affinity: pick performance cores by capacity, and make that the default\n- Save states: show when each slot was written, not its filename\n- Slot dates: ask the running VM, not the filename matcher\n- Launch Game: a menu entry for the picker that was already there\n- Per-slot save/load hotkeys, and dates on the in-game slot picker\n- Fix rumble on external pads, macro dialog in landscape, hotkey pop-up discoverability\n- SGSR: adopt the revised upstream maths for the plain variant\n- PAD: Update to latest controller database.\n- Translations: Sync Crowdin translations for 2.8\n- SPU2: Pass IOP cycle count at 64bit\n- Qt: Update Base Translation.\n- Qt/macOS: Keep Fullscreen on the main window\n- GameDB: Add Prioritize Lower depth fix to Steambot Chronicles\n- GS/HW: Avoid detecting shuffles as source of truth for target format\n- GS/TC: Improve single pixel overlap detection in RT in RT\n- EE/IOP: Fix loading elf's through relative path\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260830...6e1e8f0a18f2f5bbcd2e75344d89ff6ba03b5616",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "8e509603eba6df56ab168d44a3abb8394c0fc802948cdc3f260383fb946374b2",
       "translationPending": false
     },
     {
@@ -2542,30 +2610,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "1d93c535caff2fc7cd10f39daa28e4da616a02a8d490eb40c51a54c400af29ac",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-hatariB_core-0-4",
-      "title": "【Android更新】hatariB (RetroArch 核心) 0.4",
-      "originalTitle": "hatariB (RetroArch 核心) 0.4 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-23T22:52:13Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/0.4",
-      "imageUrl": "asset://assets/emulators/hatariB_core.png",
-      "officialUrl": "https://github.com/bbbradsmith/hatariB",
-      "summary": "hatariB (RetroArch 核心) 发布 Android 新版本 0.4，发布日期为2026年08月23日。点击查看官方版本信息与更新说明。",
-      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 0.4。\n\n发布日期：2026年08月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n第四次公开发布 hatariB 模拟器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意试试最新的改变\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在此页的顶部,请留言。 只要告诉我您用过哪个建筑( 结尾的7个字母/ 数字会识别它)。\n\n变动 v0.4:\n• EmuTOS 1.4 ROMs.\n• 定制（https://github.com/bbbradsmith/emutos/tree/hatarib-custom-140） EmuTOS 1.4 允许ROM DESKTOP.INF 将被载入。\n• EmuTOS 192uk 被选为最佳兼容性的默认值。\n• SDL2 2.30.2 更新。\n• Hatari 2.6.1 更新。\n• 森林小组效仿方面的修复问题。\n· Raspberry Pi Building现在有可供顶点支持的 dlopen。\n• 多文件的ZIP/ZST支持,内部还有M3U播放列表。\n• 修复错误的“未设置最后使用的光碟......” RetroArch 通知。\n• 对大小超过2GB的硬盘图像增加支持。\n• M3U可用于在启动时设定分辨率(TOS) 1.04+).\n• 固定 `_stprintf` 使用 MinGW64 编译器更新构建问题。\n• 加强用户要求的冷靴,在一些碰撞后纠正无反应的模拟。\n· 清理核心伐木编码。\n• 改进RNG与Road Blasters的修复问题。",
-      "originalContent": "The fourth public release of the **hatariB** emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the **Atari ST** computer family, including the **ST**, **STE**, **TT**, and **Falcon**.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment. Just make sure to tell me which build you used (those 7 letters/numbers on the end will identify it).\r\n\r\nChanges since v0.4:\r\n  * EmuTOS 1.4 ROMs.\r\n  * [Customized](https://github.com/bbbradsmith/emutos/tree/hatarib-custom-140) EmuTOS 1.4 ROMs allowing DESKTOP.INF to be loaded.\r\n  * EmuTOS 192uk chosen as default for best compatibility.\r\n  * SDL2 2.30.2 update.\r\n  * Hatari 2.6.1 update.\r\n  * Fixed problems with IPF emulation.\r\n  * Raspberry Pi builds now have dlopen available for capsimg support.\r\n  * Multi-file ZIP/ZST support, also with M3U playlist inside.\r\n  * Fixed incorrect \"Failed to set last used disc...\" RetroArch notification.\r\n  * Added support for hard disk images over 2GB in size.\r\n  * M3U can be used to set resolution at boot (TOS 1.04+).\r\n  * Fixed `_stprintf` build issue with MinGW64 compiler update.\r\n  * Strengthen user-requested cold boot, fixes unresponsive emulation after some crashes.\r\n  * Cleanup of core logging code.\r\n  * Improved RNG fixes issue with Road Blasters.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "hatariB_core"
-      ],
-      "contentHash": "c883e1aee1d3517af7d3cb00ac33ed4eccd23a07fa09e9a843117cb7d7941f4e",
       "translationPending": false
     },
     {
