@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-04T05:03:32.611418Z",
+  "generatedAt": "2026-09-04T16:36:44.000885Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,105 @@
   },
   "articles": [
     {
-      "id": "android-release-armsx2-2-6-8",
-      "title": "【Android更新】ARMSX2 2.6.8",
-      "originalTitle": "ARMSX2 2.6.8 Android release",
+      "id": "android-release-azahar-2126-1-rc3",
+      "title": "【Android更新】Azahar 2126.1-rc3",
+      "originalTitle": "Azahar 2126.1-rc3 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-04T03:13:54Z",
+      "publishedAt": "2026-09-04T15:36:39Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.8",
+      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2126.1-rc3",
+      "imageUrl": "asset://assets/emulators/azahar.png",
+      "officialUrl": "https://github.com/azahar-emu/azahar",
+      "summary": "Azahar 发布 Android 新版本 2126.1-rc3，发布日期为2026年09月04日。点击查看官方版本信息与更新说明。",
+      "content": "Azahar 已发布 Android 最新版本 2126.1-rc3。\n\n发布日期：2026年09月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nQQ 重要发布候选人信息QQ\n\n\n这是一个释放候选人。 请在安装前, 将这个下拉扩展到更多内容。\n\n\n作为释放的候选者,这一建筑尚未被视为稳定的释放,而是一种建筑,如果经过充分测试而无 m,则可以晋升为稳定的释放。 ajor问题被发现。 理想的情况是,释放候选人的期限将持续7天,但如果发现重大问题,则将予以延长,以便进行额外测试,并更正释放c 约会\n\n尽管它具有发行前的建设地位,但还是鼓励用户测试这个版本,帮助我们抓住任何新引入的问题,然后才将建设推广到完全发行。 如果你确实注意到这些问题,请在GitHub上向我们报告,以便我们评估这些问题。\n\n如果你不愿容忍潜在的小问题,你最好等到释放候选人晋升为完全释放。\n\n建议用户支持其 Azahar 用户数据目录在使用预释构建之前。\n\n\n---\n\n这个释放候选人是对 2126.1-rc2. 它主要处理在以往报告中发现的问题。 2126.1 预释。\n\n若要更完整地了解最终版将包含的内容, 您可以在此看到第1版候选人的更改日志 :\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\n\n---\n\nAzahar 2126.1-rc3 更改日志\n\nAll\n\n• 修复首次见到的空难 2126.1 Alpha 1 在模拟过程中改变内部分辨率可能导致图形化文物和重大内存泄漏,导致崩溃。 @ @ Wunkolo #2489\n• 固定在游戏中在某些情况下可能发生的崩溃,同时使用自定义的纹理。 @ @ demetriospantaleao-del #2481\n• 纠正在其中引入的回归 2126.1 启用音频拉伸时, 可能会引起主要音频抖动的版本。 @ @ OpenSauce04 # 2487\n• 造成这一问题的原因是,以前曾试图在音频伸展时改进音频延迟性(# 2439)。 现在又重提这个问题。\n\n机器人\n\n• 显示游戏是属于或来自哪个区域的UI字符串(e.g. \"Europe, Australia\")现为非英语语言前端的变音。 @ @ OpenSauce04 #2497\n• 与所有翻译一样,这取决于社区为每种语言提供翻译,而且可能不会立即翻译。\n· 如果你精通我们所支持和愿意贡献的非英语语言,你可以加入我们的Transifex网页,在这里提供翻译: https://app.transifex.com/azahar/azahar/dashboard/",
+      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nThis release candidate is an amendment to 2126.1-rc2. It primarily addresses issues discovered in the prior 2126.1 prereleases.\r\n\r\nFor a more complete picture of what will be included in the final release, you can see the changelog for Release Candidate 1 here:\r\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\r\n\r\n---\r\n\r\n# Azahar 2126.1-rc3 Changelog\r\n\r\n# All\r\n\r\n- Fixed a crash first seen in 2126.1 Alpha 1 where changing the internal resolution during emulation could cause graphical artifacts and major memory leakage, resulting in a crash. | @Wunkolo #2489\r\n- Fixed a crash which could happen during gameplay under certain circumstances while using custom textures. | @demetriospantaleao-del #2481\r\n- Fixed a regression introduced in 2126.1 Release Candidate 1 which could cause major audio stuttering while audio stretching was enabled. | @OpenSauce04 #2487\r\n  - This issue was caused by a previously implemented attempt to improve audio latency while audio stretching was enabled (#2439). This has now been reverted.\r\n\r\n# Android\r\n\r\n- UI strings which indicate which region a game is for/from (e.g. \"Europe, Australia\") are now translatable in the frontend for non-English languages. | @OpenSauce04 #2497\r\n  - As with all translations, this relies on translations being provided for each language by the community, and may not be translated immediately.\r\n  - If you are proficient in a non-English language we support and would like to contribute, you can join our Transifex page and contribute translations here: https://app.transifex.com/azahar/azahar/dashboard/",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar"
+      ],
+      "contentHash": "4fd356f56b63f0974366784b388182734e2e5193ac090c402d8d683fd0c1566b",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T14:15:10Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月04日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_snes.cpp:更新了对\"Marvel Super Heroes: War of the Gems Redux (Hack, v2.1)\"(fprietog). (英语:",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_snes.cpp: updated the support to \"Marvel Super Heroes: War of the Gems Redux (Hack, v2.1)\" (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "44fb054f8b9d504cb63447b44e54f1689405bece51a77b2815e30065d7f7ba1c",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260904",
+      "title": "【Android更新】ARMSX2 nightly-20260904",
+      "originalTitle": "ARMSX2 nightly-20260904 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T13:12:31Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260904",
       "imageUrl": "asset://assets/emulators/armsx2.png",
       "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 2.6.8，发布日期为2026年09月04日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 2.6.8。\n\n发布日期：2026年09月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.6.8\n\n新增功能：\n\nARMSX2 2.6.8\n\n三项模拟修复：\n\n来自@ bmdhacks和@ pstef的三个核心修复。 除了少林和尚之外，他们几乎可以肯定修复了更多具有相同问题的游戏，而不仅仅是这些问题。\n狡猾3 ：狡猾呈现纯白色。 当硬件仅在某些夹紧模式下执行时， VU分隔单元无条件地应用控制平台的天花板行为。@ pstef正确选通了它（ # 645 ）。\n\nMortal Kombat ：少林僧侣向正无穷大划分，而EE默认情况下不会这样做。 现在在GameDB中。由@ bmdhacks完成\nTales of the Abyss和Metal Gear Solid 2/3 ： GS混合混合系数是假设FBA ，而不是从上下文中读取。由@ bmdhacks修复\n\n控制器：\n\n修复了控制器隆隆作响的问题。\n\nDualSense和DualShock 4 RUMBLE现在可以通过USB工作。\n（可选） ARMSX2可以完全使用有线PlayStation Pad （设置- > Pad - >直接USB控制） ，这可以让您独立使用电机和实际的模拟触发器。 默认情况下关闭：它声明了焊盘唯一的HID接口，因此自定义绑定在打开时不适用，您需要在关闭后重新插入。\nRumble还发现它曾经错过的发动机。 我们要求Android提供一个垫振动器，以便在反过来询问时使控制器静音，这些控制器工作正常。\n您现在可以将控制器分配给玩家插槽（设置- >焊盘）。 插槽曾经是先按下按钮的人，在手持设备上是内置的垫子，所以外部控制器不断降落在玩家2上。 跨重新连接的每个控制器的任务粘性。\n\n您还可以选择每个电极片的轰鸣位置：控制器、设备或关闭。\n不再为每个玩家提供一个平板。 一个无人认领的插槽回落到“最后触摸的垫子” ，它为每个端口指定了相同的控制器，因此一个DualSense可以吞噬两个玩家的隆隆声。\n\n控制器无法再访问抽屉行。\n\n其他改进项：\n持续性能现在覆盖了2.6.7默认的性能核心。 选择电池配置文件仍然在FAST集群上留下线程。\n\n如果您启用了自动隐藏功能，屏幕上的控件在您使用时将停止隐藏。 按住一个按钮被算作闲置，所以他们会在比赛中消失。\n2.6.7的快速加载使用更少的内存。提取的文件在写入时会从页面缓存中删除，而不是堆积起来，这会导致较低RAM的设备在设置过程中被杀死。",
-      "originalContent": "ARMSX2 2.6.8\r\n\r\nWhat's new: \r\n\r\nARMSX2 2.6.8\r\n\r\nThree emulation fixes:\r\n\r\nThree core fixes from @bmdhacks and @pstef. Other than Shaolin Monks, they almost certainly fix more games with the same issues than just these.\r\n\r\nSly 3: Sly rendered solid white. The VU divide unit applied the console's ceiling behaviour unconditionally when the hardware only does it in certain clamp modes. @pstef gated it properly (#645).\r\n\r\nMortal Kombat: Shaolin Monks divides toward positive infinity, which the EE doesn't do by default. Now in the GameDB. done by @bmdhacks \r\n\r\nTales of the Abyss and Metal Gear Solid 2/3: the GS blend-mix factor was assuming FBA instead of reading it from the context. Fixed by @bmdhacks \r\n\r\nControllers:\r\n\r\nFixes to controller rumble. \r\n\r\nDualSense and DualShock 4 rumble now works over USB. \r\n\r\nOptionally ARMSX2 can take a wired PlayStation pad over completely (Settings --> Pad --> Direct USB control), which gets you both motors independently and real analog triggers. Off by default: it claims the pad's only HID interface, so custom bindings don't apply while it's on, and you'll want to replug after turning it off.\r\n\r\nRumble also finds motors it used to miss. We were asking Android for a pad's vibrators in an order that silences controllers which work fine when asked the other way round.\r\n\r\nYou can now assign controllers to player slots (Settings --> Pad). Slots used to go to whoever pressed a button first, which on a handheld is the built-in pad, so external controllers kept landing on player 2. Assignments stick per controller across reconnects.\r\n\r\nYou can also pick where each pad's rumble goes: the controller, the device, or off.\r\n\r\nOne pad no longer answers for every player. An unclaimed slot fell back to \"whichever pad was touched last\", which names the same controller for every port, so one DualSense could swallow both players' rumble.\r\n\r\nDrawer rows can no longer become unreachable by controller.\r\n\r\nOther fixes:\r\n\r\nSustained Performance now overrides Performance Cores, which 2.6.7 made the default. Picking the battery profile was still leaving threads on the fast cluster.\r\n\r\nOn-screen controls stop hiding while you're using them if you have auto-hide enabled. Holding a button counted as idle, so they'd vanish mid-game.\r\n\r\n2.6.7's quick loading uses far less memory. Extracted files are dropped from the page cache as they're written instead of piling up, which was getting lower-RAM devices killed partway through setup.",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260904，发布日期为2026年09月04日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260904。\n\n发布日期：2026年09月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故使用Qt Appimage在那里)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• 帕德:拿过来 ARMSX3 控制器工作\n• Pad:让用户选择无机动垫的反弹(# 646)\n• 快速加载:从页面缓存中放下每个提取的文件\n• 无限:持续业绩胜于业绩核心\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260903...aa2a43fffc951d65807600edfc2ff85250677714",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- Pad: bring over the ARMSX3 controller work\n- Pad: let the user choose the rumble fallback for motorless pads (#646)\n- Quick loading: drop each extracted file from the page cache\n- Affinity: Sustained Performance wins over Performance Cores\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260903...aa2a43fffc951d65807600edfc2ff85250677714",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx2"
       ],
-      "contentHash": "8b88670921030bed355629dca2bd637849fa1bf2666ac085a822313c51488382",
+      "contentHash": "7788491163fd6633f0e2d8ddadfb4c35f03139f38aaca95901ceeffb77dfb7b3",
+      "translationPending": false
+    },
+    {
+      "id": "136594",
+      "title": "【家用机】MAME-NES v1.7",
+      "originalTitle": "[Consoles de salon] MAME-NES v1.7",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T12:18:29Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136594-consoles-de-salon-mame-nes-v1-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/mamenes.png",
+      "officialUrl": "https://github.com/theklap/mame_nes",
+      "summary": "MAME_NES项目是一个MAME分支，专门用于运行具有简化设置的任天堂娱乐系统（ NES ）游戏。它提供了MAME系统的轻量级版本，专注于NES仿真，以降低框架的通常复杂性并提供更直接的体验 适用于希望在不操纵整个MAME生态系统的情况下启动NES ROM的用户。 此分叉突出了最小构建，剥离了MAME支持的其他系统，允许更轻的可执行文件，更快的编译和更容易集成到第三方项目中 。",
+      "content": "MAME_NES项目是一个MAME分支，专门用于运行具有简化设置的任天堂娱乐系统（ NES ）游戏。它提供了MAME系统的轻量级版本，专注于NES仿真，以降低框架的通常复杂性并提供更直接的体验\n适用于希望在不操纵整个MAME生态系统的情况下启动NES ROM的用户。\n此分叉突出了最小构建，剥离了MAME支持的其他系统，允许更轻的可执行文件，更快的编译和更容易集成到第三方项目中\n。它还包括特定的调整，以提高兼容性，稳定执行，并促进在只需要NES仿真的环境中使用。\n存储库提供源文件、构建指令和预配置的二进制文件，允许通过MAME快速测试NES仿真，而无需完成主项目的完整设置\n。目标是为开发人员或爱好者提供一个干净、紧凑和合适的基础，以寻找专门针对NES的MAME的目标版本。\n\n变更内容：\n\n•主要映射器更新和PPU更新\n•重新设计了一些映射器\n• MMC5更像硬件\n•其他映射器已更新为新的PPU代码",
+      "originalContent": "Le projet mame_nes est un fork de MAME spécialement ajusté pour exécuter des jeux Nintendo Entertainment System (NES) avec une configuration simplifiée. Il propose une version allégée du système MAME, centrée uniquement sur l’émulation NES, afin de réduire la complexité habituelle du framework et d’offrir une expérience plus directe pour les utilisateurs qui souhaitent lancer des ROMs NES sans manipuler l’ensemble de l’écosystème MAME.\n\nCe fork met en avant une compilation minimale, débarrassée des autres systèmes pris en charge par MAME, ce qui permet un exécutable plus léger, plus rapide à compiler et plus simple à intégrer dans des projets tiers. Il inclut également des ajustements spécifiques pour améliorer la compatibilité, stabiliser l’exécution et faciliter l’utilisation dans des environnements où seule l’émulation NES est nécessaire.\n\nLe dépôt fournit les fichiers sources, les instructions de compilation et un binaire préconfiguré, permettant de tester rapidement l’émulation NES via MAME sans passer par la configuration complète du projet principal. L’objectif est de proposer une base propre, compacte et adaptée aux développeurs ou passionnés cherchant une version ciblée de MAME dédiée exclusivement au NES.\n\nLes changements:\n\n- Major Mapper updates and PPU Updates\n- Reworked some mappers\n- MMC5 is more hardware like\n- Other mappers have been updated for new PPU code",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "mame_pc",
+        "mame_gw_core",
+        "mame_arcadia_pc",
+        "mame_chip8_pc",
+        "mame_tamagotchi_pc",
+        "mame_apple2",
+        "mame_pc88",
+        "mame_pc98"
+      ],
+      "contentHash": "c9fcfc25f4f5e018142591a38905c710565bd69d5735e948a8153357f17b413e",
       "translationPending": false
     },
     {
@@ -39,21 +117,173 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-03T20:06:12Z",
+      "publishedAt": "2026-09-04T11:02:08Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
       "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月03日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n•为CPU和PPU实现了开放式总线\n•添加了多个调色板，可在图形设置中选择\n•实施了UNROM 512 （测绘器30 ）\n•现在可以从`.7z`档案中加载ROM\n•添加了xBR风格的放大视频滤镜\n•在音频设置中添加了音频混音器，每个通道都有音量控制\n•现在可以像浏览任何其他文件夹一样浏览存档中的文件夹\n\n固定\n•修复了游戏向PPU的OAM数据寄存器写入完整256字节时的崩溃问题\n•修复了PPU在关闭渲染时在奇数帧上跳过一个循环的问题\n•在PPU已在vblank中时打开NMI现在会立即触发NMI\n•修复了MMC3游戏中跳过的IRQ\n•修复了MMC3扫描线计数器关闭一\n•修复了在渲染关闭时精灵数据被丢弃的问题\n•固定的颜色强调应用倒置的色调\n• PAL上的固定颜色强调\n• ROM和存档文件扩展名现在不区分大小写，因此`GAME.NES`和`COLLECTION.ZIP`等文件可正确打开\n•修复了从Windows上的ZIP存档中打开ROM的问题\n•修复了ZIP归档处理不一致的问题，具体取决于您打开它的方式\n•修复了启动时损坏的设置崩溃NESd ，损坏的配置已备份\n•修复了Android启动屏幕上的徽标被剪切的问题",
-      "originalContent": "### Added\n- Implemented open bus for the CPU and PPU\n- Added multiple color palettes, selectable in Graphics settings\n- Implemented UNROM 512 (mapper 30)\n- ROMs can now be loaded from `.7z` archives\n- Added an xBR-style upscaling video filter\n- Added an audio mixer to Audio settings, with a volume control per channel\n- Folders inside an archive can now be browsed like any other folder\n\n### Fixed\n- Fixed a crash when a game writes a full 256 bytes to the PPU's OAM data register\n- Fixed the PPU skipping a cycle on odd frames while rendering is turned off\n- Turning NMI on while the PPU is already in vblank now triggers an NMI right away\n- Fixed skipped IRQs on MMC3 games\n- Fixed MMC3 scanline counter being off by one\n- Fixed sprite data getting discarded while rendering is off\n- Fixed color emphasis applying an inverted tint\n- Fixed color emphasis on PAL\n- ROM and archive file extensions are now matched case-insensitively, so files like `GAME.NES` and `COLLECTION.ZIP` open correctly\n- Fixed opening a ROM from inside a zip archive on Windows\n- Fixed inconsistent zip archive handling depending on how you opened it\n- Fixed broken settings crashing NESd on start, the broken configuration is backed up\n- Fixed the logo being cut off on the Android splash screen",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月04日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 执行CPU和PPU的公开总线\n• 添加多色调色板,可在图形设置中选择\n• 已执行的UNROM 512(30分)\n• 光盘现在可以装入 `.7z` 档案\n• 增加一个XBR式升级视频过滤器\n• 在音频设置中添加音频混音器,每个频道都有音量控制\n• 归档中的文件夹现在可以像其他文件夹一样浏览\n\n已更改\n• 模拟器现在运行在Android上最快的CPU核心上\n\n固定\n• 当游戏将一个完整的256字节写到PPU的OAM数据登记册时修复崩溃\n• 关闭渲染时将 PPU 在奇数框上跳过循环\n• 在PPU已经在vblank时启动NMI,现在立即触发NMI\n• MMC3游戏中固定跳转的IRQs\n• 固定的MMC3扫描台关闭一个\n• 固定图示数据在渲染关闭时被丢弃\n• 使用反向锡的固定颜色强调\n• 固定颜色强调PAL\n• ROM和归档文件扩展名现在在不敏感的情况下匹配,因此文件如 `GAME.NES` 和 `COLLECTION.ZIP` 正确打开\n• 从Windows上的拉链档案中固定打开一个ROM\n• 固定不连贯的拉链档案处理,取决于如何打开\n• 固定中断的设置崩溃 NESd 启动时, 损坏的配置会被备份\n• 在大波朗诵音频的装置上安装固定的音频故障\n• 低端设备的固定音频故障和减速,并允许倒带\n• 固定Android溅射屏幕上的标志",
+      "originalContent": "### Added\n- Implemented open bus for the CPU and PPU\n- Added multiple color palettes, selectable in Graphics settings\n- Implemented UNROM 512 (mapper 30)\n- ROMs can now be loaded from `.7z` archives\n- Added an xBR-style upscaling video filter\n- Added an audio mixer to Audio settings, with a volume control per channel\n- Folders inside an archive can now be browsed like any other folder\n\n### Changed\n- The emulator now runs on the fastest CPU cores on Android\n\n### Fixed\n- Fixed a crash when a game writes a full 256 bytes to the PPU's OAM data register\n- Fixed the PPU skipping a cycle on odd frames while rendering is turned off\n- Turning NMI on while the PPU is already in vblank now triggers an NMI right away\n- Fixed skipped IRQs on MMC3 games\n- Fixed MMC3 scanline counter being off by one\n- Fixed sprite data getting discarded while rendering is off\n- Fixed color emphasis applying an inverted tint\n- Fixed color emphasis on PAL\n- ROM and archive file extensions are now matched case-insensitively, so files like `GAME.NES` and `COLLECTION.ZIP` open correctly\n- Fixed opening a ROM from inside a zip archive on Windows\n- Fixed inconsistent zip archive handling depending on how you opened it\n- Fixed broken settings crashing NESd on start, the broken configuration is backed up\n- Fixed audio underruns on devices that read audio in large bursts\n- Fixed audio underruns and slowdown with rewind enabled on lower-end devices\n- Fixed the logo being cut off on the Android splash screen",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "nesd"
       ],
-      "contentHash": "a33ec398e02cedcdb7358e78ec7563ebbbb57d6c689045438e2f79cbb273d06c",
+      "contentHash": "5b5c3e871aec990cc81532cf4ddd9b37a7312d809e31911487c78bd2e2bfcc44",
+      "translationPending": false
+    },
+    {
+      "id": "136576",
+      "title": "【工具】dgVoodoo v2.87.4",
+      "originalTitle": "[Utilitaires Divers] dgVoodoo v2.87.4",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-04T09:14:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136576-utilitaires-divers-dgvoodoo-v2-87-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/dgvoodoo-hdpng.png",
+      "officialUrl": "http://dege.fw.hu/",
+      "summary": "dgVoodoo是一个滑动包装器，也是Direct3D11/12的DirectDraw/Direct3D包装器（ v1至7、8.1和9 ）。为了大大简化，它模拟了3DFX卡，该卡将能够管理Glide专有库（ Glide 2.11、Glide 2.45、Glide 3.1和Napalm ）以及旧的COMPA显卡 tibles DD/D3D v1至v9。",
+      "content": "dgVoodoo是一个滑动包装器，也是Direct3D11/12的DirectDraw/Direct3D包装器（ v1至7、8.1和9 ）。为了大大简化，它模拟了3DFX卡，该卡将能够管理Glide专有库（ Glide 2.11、Glide 2.45、Glide 3.1和Napalm ）以及旧的COMPA显卡\ntibles DD/D3D v1至v9。有什么意义？玩在新显卡上效果不佳的旧游戏（因为它们已针对Glide或旧版本的DirectX进行了优化，而不是针对OpenGL或DirectX v11或v12等其他API ）或仅使用也使用Glide的模拟器\n。此版本适用于安装了DirectX 11 （或更高版本）的Windows Vista/7/8/10/11 ，并且必须具有支持着色器模型v4或v5的显卡（兼容DirectX级别10.1 ）。\n\n您将需要这些库来启用某些图形功能。\n请注意，此处提供了某些游戏的补丁。\n\n变更内容：\n\n备注：\n•此版本的主要目的是修复Win11 26H1 +版本（ 28000.xxxx ）的崩溃\n•对于NV GPU ，至少使用616.56的驱动程序版本，以避免32位D3D12崩溃（尽管我尚未测试）\n• VirusTotal比率为2/67\n•更新：拥有最新情报版本的Defender （目前为1.459.28.0 ）将常规2_87_4 ZIP检测为恶意软件。\n•我刚刚将其提交给MS进行审核（如果需要，我通常会这样做）。\n\n更改：\n•使用Win11 26H1 +版本（版本28000.xxxx及更高版本）修复了崩溃问题\n•修复了Glide3 +中的镜像纹理寻址模式（ Project64 1.6 + Mission Impossible （美国） ）\n• Glide硬件名称和扩展字符串的微小变化\n• DDraw中IDDVideoPortContainer接口的初始版本，实现为空\n•将驱动程序字符串从“DirectX Wrapper”更改为“DX API Layer”\n•部分CPL改进\n•添加了一个额外的按钮，用于在文件资源管理器中打开当前配置文件夹\n•全局设置的可重写应用程序文件夹（用于特殊用途）\n• CPL设置现已保存并记住\n•再次编译工具集升级(v145)",
+      "originalContent": "dgVoodoo est un glide wrapper mais aussi un wrapper DirectDraw/Direct3D (v1 à 7, 8.1 et 9) vers Direct3D11/12. Pour simplifier grandement, ça émule une carte 3DFX qui va pouvoir gérer la bibliothèque propriétaire Glide (Glide 2.11, Glide 2.45, Glide 3.1 et Napalm) mais également les vieilles cartes graphiques compatibles DD/D3D v1 à v9. Quel est l'intérêt ? Jouer aux anciens jeux qui fonctionnent mal sur les nouvelles cartes graphiques (parce qu'ils ont été optimisés pour le Glide ou de vieilles versions de DirectX et non pour d'autres API telles que OpenGL ou DirectX v11 ou v12) ou tout simplement utiliser un émulateur qui lui aussi utilise le Glide. Cette version est destiné à Windows Vista/7/8/10/11 avec DirectX 11 (ou supérieur) d'installé et vous devez posséder une carte graphique (compatible DirectX Level 10.1) supportant les Shaders Model v4 ou v5.\n\nVous aurez besoin de ces bibliothèques pour activer certaines fonctions graphiques.\nA noter que des patchs pour certains jeux sont disponibles ici.\n\nLes changements:\n\nRemarks:\n- The main purpose of this release is to fix a crash with Win11 26H1+ builds (28000.xxxx)\n- For NV GPU's use driver version of at least 616.56 to avoid 32 bit D3D12 crashes (still untested by me though)\n- VirusTotal ratio is 2/67\n- Update: Defender with the latest intelligence version (1.459.28.0 as of now) detects the regular 2_87_4 zip as malware.\n- I've just submitted it to MS for review (I usually do it if needed).\n\nChanges:\n- Fixed the crash with Win11 26H1+ builds (version 28000.xxxx and above)\n- Fixed the mirrored texture addressing mode in Glide3+ (Project64 1.6 + Mission Impossible (USA))\n- Minor changes in Glide hw names and extension strings\n- Initial version of IDDVideoPortContainer interface in DDraw with empty implementation\n- Changed the driver string from “DirectX Wrapper” to “DX API Layer”\n- Some Cpl improvements\n- Added an extra button to open the current config folder in File Explorer\n- Overridable application folder for global settings (for special usage)\n- Cpl settings are now saved and remembered\n- Compiler toolset upgrade again (v145)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "51d38e1c821907ccdbe427f8ac9f991b8f795ab4dc740040537b8d4aae01c843",
+      "translationPending": false
+    },
+    {
+      "id": "136574",
+      "title": "【家用机】GearGRAFX v1.7.21",
+      "originalTitle": "[Consoles de salon] GearGRAFX v1.7.21",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T07:57:36Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136574-consoles-de-salon-geargrafx-v1-7-21/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/07/Geargrafx-1.6.0.png",
+      "officialUrl": "https://github.com/drhelius/Geargrafx",
+      "summary": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。 在CD-ROM图像💿中添加了Ogg Vorbis音频支持 🐛 修复了Bug",
+      "content": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。\n\n在CD-ROM图像💿中添加了Ogg Vorbis音频支持\n🐛 修复了Bug",
+      "originalContent": "Il s'agit d'un émulateur de PC Engine / TurboGrafx-16 / CD-ROM² / Super CD-ROM² et Arcade CD-ROM² / SuperGrafx multi plateformes.\n\n💿 Added Ogg Vorbis audio support in CD-ROM images\n🐛 Bug fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "83e17e9d01b0b4e2e879c1b1f3b51980343b6e3a9117736e4bfb314cf3405b67",
+      "translationPending": false
+    },
+    {
+      "id": "136572",
+      "title": "【其他】Coffee GB v2.1.1",
+      "originalTitle": "[Consoles portables] Coffee GB v2.1.1",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T07:55:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136572-consoles-portables-coffee-gb-v2-1-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/coffee-gb-1.7.9.png",
+      "officialUrl": "https://github.com/trekawek/coffee-gb",
+      "summary": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在 控制台的真实外观。 尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台 。",
+      "content": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在\n控制台的真实外观。\n尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台\n。它支持带有MBC1到MBC5内存控制器的墨盒，以及电池备份，将游戏数据保留在真正的Game Boy上。\n模拟器还读取压缩的ROM （ .zip ） ，通过.properties文件提供密钥配置，并集成了具有回滚（仍然是实验性的）的netplay功能，以便通过状态同步在线播放。\n对于开发人员或好奇的技术人员，该项目包括通过Maven进行的自动化测试，源代码在麻省理工学院许可证下提供，可自由修改和可重用。",
+      "originalContent": "Coffee GB est un émulateur Game Boy Color développé en Java 16 (pour le cœur) et Kotlin (pour l’interface graphique). Conçu comme un projet personnel et un exercice de programmation, il se distingue par une approche technique ambitieuse: l’émulation du CPU est cycle-exacte, chaque instruction étant décomposée en micro-opérations exécutées à la cadence réelle de la console.\n\nMalgré son aspect expérimental, Coffee GB offre une compatibilité élevée, validée par les célèbres tests Blargg et Mooneye GB, garantissant un comportement fidèle à la console d’origine. Il prend en charge les cartouches avec les contrôleurs mémoire MBC1 à MBC5, ainsi que les sauvegardes sur batterie, permettant de conserver les données de jeu comme sur une vraie Game Boy.\n\nL’émulateur lit également les ROMs compressées (.zip), propose une configuration des touches via un fichier .properties, et intègre une fonctionnalité de netplay avec rollback (encore expérimentale) pour jouer en ligne avec synchronisation des états.\n\nPour les développeurs ou curieux techniques, le projet inclut des tests automatisés via Maven, et le code source est disponible sous licence MIT, librement modifiable et réutilisable.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "coffee_gb_pc"
+      ],
+      "contentHash": "ce360ea6edd31799a0390e1e4f0383dcfae590f73797d14d0143c5ce7a21e2a0",
+      "translationPending": false
+    },
+    {
+      "id": "136570",
+      "title": "【家用机】Snes9xRD v0.5",
+      "originalTitle": "[Consoles de salon] Snes9xRD v0.5",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T07:54:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136570-consoles-de-salon-snes9xrd-v0-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/snes9xrd.png",
+      "officialUrl": "https://github.com/Deathsoul56/snes9xrd",
+      "summary": "Snes9xrd是超级任天堂模拟器Snes9x的个人分叉。 它完全保留了官方仿真核心以及GTK、Win32、macOS和libretro前端，同时对Qt前端进行了重大重新设计，使其更加完整、一致和愉快地使用。 此分叉的主要目标之一是通过重新引入它缺少的功能，使Qt界面像Win32界面一样完整。显示设置、透明度选项、着色器、软件滤镜、帧跳过以及高级音频设置现在可以完全访问 可从Qt转移。",
+      "content": "Snes9xrd是超级任天堂模拟器Snes9x的个人分叉。 它完全保留了官方仿真核心以及GTK、Win32、macOS和libretro前端，同时对Qt前端进行了重大重新设计，使其更加完整、一致和愉快地使用。\n此分叉的主要目标之一是通过重新引入它缺少的功能，使Qt界面像Win32界面一样完整。显示设置、透明度选项、着色器、软件滤镜、帧跳过以及高级音频设置现在可以完全访问\n可从Qt转移。仿真和配置菜单也进行了重组，以提供更清晰、更直观、更同质的呈现。\nSnes9xrd还对控制器管理进行了几项改进。代表SNES控制器的小部件现在可以准确地指示按下的按钮，而不会突出显示错误，同时在视觉上与界面的一般主题集成\n。控制器配置更加可靠：正确区分不同类型的输入（按钮、模拟轴和方向） ，可以保存和恢复关键关联，而不会丢失信息，显示的按钮与实际检测到的输入忠实对应。\n通用界面也得到了简化。 实验性侧边栏已被删除，转而采用更传统的主窗口，围绕经典菜单栏进行组织。 “帮助”菜单→已重新引入，现在包括分叉特定的积分，从而加强了整体的一致性。\n综上所述， Snes9xrd不修改SNES仿真本身，但首先旨在通过改进Qt界面来现代化和稳定用户体验，使控制器管理更可靠，并提供更干净，更完整，更舒适的使用环境。\n\n变更内容如下：\n🐛 修复了设置对话框和主窗口中持续存在的黑色矩形渲染错误（ theme.qss中的CSS级联顺序错误，以及几个缺少的小部件Qt:: WA_StyledBackground ）。\n🐛 修复了“设置”对话框的“取消”按钮未还原主题、“窗口未聚焦时允许游戏手柄输入”以及Windows注册表文件关联的问题。\n🎨 添加了新的AMOLED （黑色/紫色）主题。\n将“蓝云”主题✏️重命名为蓝云（白色/蓝色）。\n️ -为现有的撤消加载功能添加了撤消状态快捷方式（默认为Ctrl + U ）。\n️ -为每个声道声音切换添加了默认快捷方式： Alt +1-Alt +8 （声道1-8 ）和Alt +0 （所有声道）。\n🖥️ 加宽了“设置”对话框的默认大小。\n📖 README大修—现在记录了每个默认键盘快捷方式和分叉的完整功能集（倒带、保存状态/撤消、多绑定输入、每个声道声音、电影、秘籍、速度控制）。",
+      "originalContent": "Snes9xrd est un fork personnel de l’émulateur Super Nintendo Snes9x. Il conserve intégralement le cœur d’émulation officiel ainsi que les front-ends GTK, Win32, macOS et libretro, tout en proposant une refonte importante du front-end Qt afin de le rendre plus complet, plus cohérent et plus agréable à utiliser.\n\nL’un des principaux objectifs de ce fork est de rendre l’interface Qt aussi complète que l’interface Win32 en y réintroduisant les fonctionnalités qui lui faisaient défaut. Les paramètres d’affichage, les options de transparence, les shaders, les filtres logiciels, le frame skipping ainsi que les réglages audio avancés sont désormais entièrement accessibles depuis Qt. Les menus d’émulation et de configuration ont également été réorganisés afin d’offrir une présentation plus claire, plus intuitive et plus homogène.\n\nSnes9xrd apporte également plusieurs améliorations à la gestion des contrôleurs. Le widget représentant la manette SNES indique désormais avec précision le bouton pressé, sans erreurs de surbrillance, tout en s’intégrant visuellement au thème général de l’interface. La configuration des manettes a été rendue plus fiable: les différents types d’entrées (boutons, axes analogiques et directions) sont correctement distingués, les associations de touches peuvent être sauvegardées et restaurées sans perte d’informations, et les boutons affichés correspondent fidèlement aux entrées réellement détectées.\n\nL’interface générale a également été simplifiée. La sidebar expérimentale a été supprimée au profit d’une fenêtre principale plus traditionnelle, organisée autour d’une barre de menus classique. Le menu « Help → About » a été réintroduit et inclut désormais les crédits spécifiques au fork, renforçant ainsi la cohérence de l’ensemble.\n\nEn résumé, Snes9xrd ne modifie pas l’émulation SNES elle-même, mais vise avant tout à moderniser et à stabiliser l’expérience utilisateur en améliorant l’interface Qt, en fiabilisant la gestion des contrôleurs et en proposant un environnement plus propre, plus complet et plus agréable à utiliser.\n\nLes changements sont les suivants:\n\n🐛 Fixed a persistent black-rectangle rendering bug in the Settings dialog and main window (a CSS cascade-order bug in theme.qss, plus several widgets missing Qt::WA_StyledBackground).\n🐛 Fixed the Settings dialog's Cancel button not reverting the Theme, \"Allow gamepad input while window is not focused\", and the Windows registry file association.\n🎨 Added a new AMOLED (Black/Purple) theme.\n✏️ Renamed the \"Blue Cloud\" theme to Blue Cloud (White/Blue).\n⌨️ Added an Undo State shortcut (default Ctrl+U) for the existing undo-load feature.\n⌨️ Added default shortcuts for the per-channel sound toggles: Alt+1–Alt+8 (channels 1-8) and Alt+0 (all channels).\n🖥️ Widened the Settings dialog's default size.\n📖 README overhaul — every default keyboard shortcut and the fork's full feature set (rewind, save states/undo, multi-binding inputs, per-channel sound, movies, cheats, speed control) are now documented.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "snes9x_core"
+      ],
+      "contentHash": "7ef36fe16b092aec476599a9fcce2678907f9e29edea1ceb2ed704d6ca75eb2a",
+      "translationPending": false
+    },
+    {
+      "id": "136568",
+      "title": "【工具】Igir v5.4.1",
+      "originalTitle": "[Utilitaires Multi-systemes] Igir v5.4.1",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-04T07:52:44Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136568-utilitaires-multi-systemes-igir-v5-4-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/02/igir.png",
+      "officialUrl": "https://github.com/emmercm/igir",
+      "summary": "Igir是一款ROM集合管理器，允许对任何操作系统下任何大小的集合进行排序、过滤、提取或存档、修补和报告。",
+      "content": "Igir是一款ROM集合管理器，允许对任何操作系统下任何大小的集合进行排序、过滤、提取或存档、修补和报告。",
+      "originalContent": "Igir est un gestionnaire de collections de ROM qui permet de trier, de filtrer, d'extraire ou d'archiver, de patcher et d'établir des rapports sur des collections de toute taille sous n'importe quel système d'exploitation.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "igir"
+      ],
+      "contentHash": "4e195256140a0e4eab5ae0d0cdc49f6d8fdedd5026026655557134fab704d8d2",
+      "translationPending": false
+    },
+    {
+      "id": "136563",
+      "title": "【家用机】Snes9x TestBuild v1.63 R1635",
+      "originalTitle": "[Consoles de salon] Snes9x TestBuild v1.63 R1635",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T06:03:42Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136563-consoles-de-salon-snes9x-testbuild-v1-63-r1635/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/snes9x.png",
+      "officialUrl": "http://www.s9x-w32.de/dl/testbuilds/",
+      "summary": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。 Starfox 2 （ SNES迷你版）的一小部分？ ...ou也许是法力法语iOS版的秘密？ 算了，我改做《时空之轮》的非正式续集: p 自上次生成以来的更改： • bsx ：将内存包闪存擦除到0xFF ，而不是0x00 (# 1096) • qt ：添加文件名命令行参数。 •将imgui更新为最新master。",
+      "content": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。\n\nStarfox 2 （ SNES迷你版）的一小部分？\n\n...ou也许是法力法语iOS版的秘密？\n算了，我改做《时空之轮》的非正式续集: p\n\n自上次生成以来的更改：\n\n• bsx ：将内存包闪存擦除到0xFF ，而不是0x00 (# 1096)\n• qt ：添加文件名命令行参数。\n•将imgui更新为最新master。\n• qt/opengl ：在OpenGL线程的OpenGL画布上运行Qt paintEvent的绘图。\n• qt/vulkan ：继续允许Qt处理底层画布小部件绘图。\n•固定杂项",
+      "originalContent": "Il s'agit de la dernière version officielle dite \"instable\" de Snes9x ajoutant les dernières nouveautés, améliorations et/ou corrections en provenance des sources GIT. Versions 32 et 64 bits dans l'archive.\n\nUne petite partie de Starfox 2 (SNES Mini Edition) ?\n\n...ou peut-être un Secret of Mana Français iOS Edition ?\n\nLaissez tomber, je vais me faire la suite non officielle de Chrono Trigger plutôt :p\n\nLes changements depuis le dernier build:\n\n- bsx: erase the memory pack flash to 0xFF, not 0x00 (#1096)\n- qt: Add filename command line parameter.\n- Update imgui to latest master.\n- qt/opengl: Run drawing for Qt paintEvent on OpenGL canvas on OpenGL thread.\n- qt/vulkan: Continue allowing Qt to handle underlying canvas widget drawing.\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "snes9x_core"
+      ],
+      "contentHash": "076c9768e5379a7beaa81dec08a17836bf216b20757f16ebc743d2f65443b5f8",
+      "translationPending": false
+    },
+    {
+      "id": "136561",
+      "title": "【电脑】Altirra (Beta) v4.50 Test 19",
+      "originalTitle": "[Ordi.] Altirra (Beta) v4.50 Test 19",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-04T06:01:13Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136561-ordi-altirra-beta-v4-50-test-19/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/altirra-testbuild.png",
+      "officialUrl": "http://www.virtualdub.org/altirra.html",
+      "summary": "它是由Avery Lee （ VirtualDub的作者）创建的8位Atari模拟器（ 800/800XL/130XE ） ，提供32位和64位版本。 它有很多选择以及良好的兼容性。 它根据模拟支持受保护的游戏。 这是测试阶段的开发版本。 测试版的主题。",
+      "content": "它是由Avery Lee （ VirtualDub的作者）创建的8位Atari模拟器（ 800/800XL/130XE ） ，提供32位和64位版本。 它有很多选择以及良好的兼容性。 它根据模拟支持受保护的游戏。 这是测试阶段的开发版本。\n测试版的主题。",
+      "originalContent": "Créé par Avery Lee (l'auteur de VirtualDub), il s'agit d'un émulateur d'Atari 8 bits (800/800XL/130XE) disponible en 32 et 64 bits. Il dispose de beaucoup d'options ainsi que d'une bonne compatibilité. Il prend en charge les jeux protégés conformément à l'émulation. Il s'agit d'une version de développement au stade de béta.\n\nTopic des versions Beta.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "f4bc1c23ef64db962a8763bf7f88166a17d03a2fe6601144b2c00bc2b5eb3eb2",
       "translationPending": false
     },
     {
@@ -83,31 +313,6 @@
         "mame_pc98"
       ],
       "contentHash": "574823d62e9f1d4f065d605f075f5bb4242b342dcca5aa6ee4e8542f670ec85f",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-03T18:36:13Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月03日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_gba.cpp: 各种... (fprietog) .",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "b536c0118d5e9757cb8a2168460471e4178e9a42b19abbd062d20f838349a7df",
       "translationPending": false
     },
     {
@@ -160,14 +365,14 @@
     },
     {
       "id": "136543",
-      "title": "【家用机】PCSX Redux (2026/09/03)",
-      "originalTitle": "[Consoles de salon] PCSX Redux (2026/09/03)",
+      "title": "【家用机】PCSX Redux (2026/09/04)",
+      "originalTitle": "[Consoles de salon] PCSX Redux (2026/09/04)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-03T10:49:01Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136543-consoles-de-salon-pcsx-redux-2026-09-03/",
+      "sourceUrl": "https://www.emu-france.com/news/136543-consoles-de-salon-pcsx-redux-2026-09-04/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/09/psxredux.png",
       "officialUrl": "https://github.com/grumpycoders/pcsx-redux",
       "summary": "这是Playstation模拟器PCSX的分支。 目标大致如下： •带来符合当今标准的代码库。 •终止插件系统并启用单个单片代码库，以处理Playstation模拟的各个方面。 •使用SDL/OpenGL3 +/ImGui实现可移植性和可读性。 •改善调试体验。 •改善渲染体验。 这些是初步的二进制文件（以前在这里）。 注意：我指定这些是在时间T基于GIT构建的，作者没有提出任何稳定或最终确定的建议。",
@@ -177,7 +382,7 @@
       "relatedEmulatorIds": [
         "pcsx_redux_pc"
       ],
-      "contentHash": "8465f6d0849054805c15965c737c971c07b662db53ebf385029beb9d39eca612",
+      "contentHash": "fa9e25221a50faa6baaf815bb56001767581e61195c633ac4107be557127b0ad",
       "translationPending": false
     },
     {
@@ -248,26 +453,26 @@
     },
     {
       "id": "136533",
-      "title": "【家用机】KytyPS5 r260903",
-      "originalTitle": "[Consoles de salon] KytyPS5 r260903",
+      "title": "【家用机】KytyPS5 r260904",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260904",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-03T10:02:21Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136533-consoles-de-salon-kytyps5-r260903/",
+      "sourceUrl": "https://www.emu-france.com/news/136533-consoles-de-salon-kytyps5-r260904/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
       "officialUrl": "https://github.com/Nmzik/KytyPS5",
       "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
-      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•图形：在16位和浮动颜色焦油上使用荣誉DCC固定清除代码\n•启动器：固定光照模式，将设置分组到可调整大小的部分\n•图形：实现RDNA2缓冲原子OR x2\n•图形：统一原子特征和宽度处理\n•图形：实现RDNA2缓冲区原子交换x2\n•着色器：评估一致的第一通道采样器描述符\n•着色器：返工资源专业化和优化管道缓存\n•着色器：支持IMAGE_atomic_SWAP\n\n（从此分叉编译的临时版本正在等待正式发布。）",
-      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- graphics: honour DCC fixed clear codes on 16-bit and float colour tar\n- launcher: fix light mode, group settings into resizable sections\n- graphics: implement RDNA2 buffer atomic OR x2\n- graphics: unify atomic feature and width handling\n- graphics: implement RDNA2 buffer atomic swap x2\n- shader: evaluate uniform first-lane sampler descriptors\n- shader: rework resource specialization and optimize pipeline caching\n- shader: support IMAGE_ATOMIC_SWAP\n\n(Temporary build compiled from this fork pending official releases.)",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•文件抽象析构函数修复\n•着色器：单独的比较图像绑定\n•图形：创建用于比较纹理的深度图像\n•图形：保留不受限制的视口深度范围\n•测试：将GPU固定装置与绑定架构对齐\n•将更新检查器添加到启动器\n• libs: stub WebBrowserDialogGetStatus\n•着色器：共享SPIR-V原子更新降低\n•还原“图形：保留不受限制的视口深度范围”\n• gpu ：集中深度着色率处理\n•渲染器：接受非活动粗HTILE ；丢弃死MRT过滤器\n•内核：报告PS5基本操作模式\n•着色器：忽略非活动辅助位置导出\n• libPad ： ABI\n•还原“图形：为比较纹理创建深度图像”\n•还原“着色器：单独的比较图像绑定”\n•图形：在16位和浮动颜色焦油上使用荣誉DCC固定清除代码\n•启动器：固定光照模式，将设置分组到可调整大小的部分\n•图形：实现RDNA2缓冲原子OR x2\n•图形：统一原子特征和宽度处理\n•图形：实现RDNA2缓冲区原子交换x2\n•着色器：评估一致的第一通道采样器描述符\n•着色器：返工资源专业化和优化管道缓存\n•着色器：支持IMAGE_atomic_SWAP\n\n（从此分叉编译的临时版本正在等待正式发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- fix File abstraction destructor\n- shader: separate comparison image bindings\n- graphics: create depth images for comparison textures\n- graphics: preserve unrestricted viewport depth ranges\n- tests: align GPU fixtures with binding architecture\n- Add update checker to launcher\n- libs: stub WebBrowserDialogGetStatus\n- shader: share SPIR-V atomic update lowering\n- Revert \"graphics: preserve unrestricted viewport depth ranges\"\n- gpu: centralize depth shading-rate handling\n- renderer: accept inactive coarse HTILE; drop dead MRT filter\n- kernel: report PS5 Base operation mode\n- shader: ignore inactive auxiliary position exports\n- libPad: ABIs\n- Revert \"graphics: create depth images for comparison textures\"\n- Revert \"shader: separate comparison image bindings\"\n- graphics: honour DCC fixed clear codes on 16-bit and float colour tar\n- launcher: fix light mode, group settings into resizable sections\n- graphics: implement RDNA2 buffer atomic OR x2\n- graphics: unify atomic feature and width handling\n- graphics: implement RDNA2 buffer atomic swap x2\n- shader: evaluate uniform first-lane sampler descriptors\n- shader: rework resource specialization and optimize pipeline caching\n- shader: support IMAGE_ATOMIC_SWAP\n\n(Temporary build compiled from this fork pending official releases.)",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [
         "kytyps5_pc"
       ],
-      "contentHash": "02108ed698fff74d06e9686b9f05857850a51b49c1b7cd9c21cec896780105dc",
+      "contentHash": "8c8ab64ff1e91ba7c6569f064e5038a019cea4f300c0ee3219cf8c6894a1d152",
       "translationPending": false
     },
     {
@@ -488,14 +693,14 @@
     },
     {
       "id": "136494",
-      "title": "【家用机】Xenia Edge (2026/09/03)",
-      "originalTitle": "[Consoles de salon] Xenia Edge (2026/09/03)",
+      "title": "【家用机】Xenia Edge (2026/09/04)",
+      "originalTitle": "[Consoles de salon] Xenia Edge (2026/09/04)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-02T13:25:15Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136494-consoles-de-salon-xenia-edge-2026-09-03/",
+      "sourceUrl": "https://www.emu-france.com/news/136494-consoles-de-salon-xenia-edge-2026-09-04/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/xenia-edge-scaled.png",
       "officialUrl": "https://github.com/has207/xenia-edge",
       "summary": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中 。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成 。",
@@ -508,29 +713,29 @@
         "xenia_pc",
         "xenia_edge_pc"
       ],
-      "contentHash": "4d05db38049c3c3acd050d9e409aacd6997a30454a5ad4660f644b3fde969148",
+      "contentHash": "83f6db912ff20fc360f78206af0c59fe3ce42e039c679ec10ff7f81ebce94051",
       "translationPending": false
     },
     {
       "id": "136492",
-      "title": "【家用机】Xenia v1.0.2844 (2026/09/03)",
-      "originalTitle": "[Consoles de salon] Xenia v1.0.2844 (2026/09/03)",
+      "title": "【家用机】Xenia v1.0.2844 (2026/09/04)",
+      "originalTitle": "[Consoles de salon] Xenia v1.0.2844 (2026/09/04)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-02T13:24:23Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136492-consoles-de-salon-xenia-v1-0-2844-2026-09-03/",
+      "sourceUrl": "https://www.emu-france.com/news/136492-consoles-de-salon-xenia-v1-0-2844-2026-09-04/",
       "imageUrl": "https://www.youtube.com/embed/r56tCTsijEw",
       "officialUrl": "https://xenia.jp/",
-      "summary": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master] 。此处提供管理Xenia仿真器的管理器。",
-      "content": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master]\n。此处提供管理Xenia仿真器的管理器。\n\n• [Base]使WinSystemClock饱和至STEADY_CLOCK转换\n• [内容]修复了从包裹中应用多光盘TU的问题\n• [CPU/HIR]在int16折叠中选择与后端相同的vperm一半\n• [HID]通用键盘输入驱动程序\n•固定杂项",
-      "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [Base] Saturate the WinSystemClock to steady_clock conversion\n- [Content] Fixed applying multi-disc TUs from packages\n- [CPU/HIR] Select the same vperm half as the backend in the int16 fold\n- [HID] Generic keyboard input driver\n- Misc fixes",
+      "summary": "由Ben Vanik别名Nexa(PSP Player)创建,是一个开发Xbox 360模拟器的研究项目。 请注意,您需要一台高性能的机器来顺利推出商业游戏。 更多信息在此不忘开发网站[主]. 一个管理模拟器的管理员 Xenia 此处可使用。 • [克尔内尔]添加了XMic的一些细节。",
+      "content": "由Ben Vanik别名Nexa(PSP Player)创建,是一个开发Xbox 360模拟器的研究项目。 请注意,您需要一台高性能的机器来顺利推出商业游戏。 更多信息在此不忘开发网站[主]. 一个管理模拟器的管理员 Xenia 此处可使用。\n\n• [克尔内尔]添加了XMic的一些细节。 固定不正确的返回代码\n• [XCrypt] 离开SHA背景下的加成块\n• [HID]检查非个案敏感密钥绑定\n• [CPU]再次宣传VEC128环境值\n• [Base]土星将温氏时钟改为钢_小时转换\n• [有关]从包中固定多段应用TU\n• [CPU/HIR]在Int16折叠中选择与后端相同的 vperm 半\n• [HID]通用键盘输入驱动程序\n• 固定雾c",
+      "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [Kernel] Added some details about XMic. Fixed incorrect return code\n- [XCrypt] Leave the padded block in the SHA context\n- [HID] Check non-case sensitive key bindings\n- [CPU] Promote VEC128 context values again\n- [Base] Saturate the WinSystemClock to steady_clock conversion\n- [Content] Fixed applying multi-disc TUs from packages\n- [CPU/HIR] Select the same vperm half as the backend in the int16 fold\n- [HID] Generic keyboard input driver\n- Misc fixes",
       "platforms": [],
       "relatedEmulatorIds": [
         "xenia_pc"
       ],
-      "contentHash": "5bbf274d68a9cc7cde6d4dba7e4e5bbeda185a57ae790de67bfa375679467c17",
+      "contentHash": "acd114955d715effd44440d32ecaae91f56de88bfe860a6d186f9d48635a681c",
       "translationPending": false
     },
     {
@@ -2008,30 +2213,6 @@
         "winnative"
       ],
       "contentHash": "74f9643e9e8eafb22078f61f15c342d8b6d32ce4437160225beb6ec752f65c98",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-azahar-2126-1-rc2",
-      "title": "【Android更新】Azahar 2126.1-rc2",
-      "originalTitle": "Azahar 2126.1-rc2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T13:45:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2126.1-rc2",
-      "imageUrl": "asset://assets/emulators/azahar.png",
-      "officialUrl": "https://github.com/azahar-emu/azahar",
-      "summary": "Azahar 发布 Android 新版本 2126.1-rc2，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
-      "content": "Azahar 已发布 Android 最新版本 2126.1-rc2。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nQQ 重要发布候选人信息QQ\n\n\n这是一个释放候选人。 请在安装前, 将下拉扩展为更多关于这意味着什么。\n\n\n作为释放的候选者,这一建筑尚未被视为稳定的释放,而是一种建筑,如果经过充分测试,没有米,就可以晋升为稳定的释放。 ajor问题被发现。 理想的情况是,如果发现重大问题,将延长释放候选人的期限为7天,以便进行额外测试,并更正释放。 约会\n\n尽管它作为发行前的构建,但鼓励用户测试这个版本,帮助我们抓住任何新引入的问题,然后再将构建提升到全面发布。 如果你真的看到这些问题 请在GitHub上向我们报告 这样我们就可以评估它们\n\n如果你不愿意容忍潜在的小问题,你最好等到释放候选人晋升为完全释放。\n\n建议用户支持他们 Azahar 用户数据目录在使用预释构建之前。\n\n\n---\n\n这个释放候选人是对 2126.1-rc1. 它处理在Android构造中发现的回归。\n\n若要更完整地了解最终发行时将包含的内容, 您可以在此看到先前的更改日志 :\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\n\n---\n\nAzahar 2126.1-rc2 更改日志\n\n机器人\n\n• 使用新安装的回归 Azahar 或重置屏幕上控制器上覆盖, 将导致屏幕边缘部分定位覆盖布局, 用于安装自拍相机的设备 . @ OpenSauce04 #2465 (英语).\n• 受上述问题影响的用户在更新后,应使用侧面菜单重新设置屏幕控制器上覆盖布局。 然后,这个问题将得到解决。\n• 在启用“扩展至截断区域”设置时,虚拟 3DS 屏幕的任何触摸屏输入都将横向或纵向相抵,从而固定回归 使用自拍相机的设备。 @ @ openSauce04 # 2469\n• 略微调整了屏幕上控制器上覆盖的默认肖像布局中面部按钮的定位,以更好地进行人机工程。 @ @ OpenSauce04 #2468",
-      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nThis release candidate is an amendment to 2126.1-rc1. It addresses regressions discovered in the Android build.\r\n\r\nFor a more complete picture of what will be included in the final release, you can see the previous changelog here:\r\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\r\n\r\n---\r\n\r\n# Azahar 2126.1-rc2 Changelog\r\n\r\n# Android\r\n\r\n- Fixed a regression where using a fresh install of Azahar or resetting the on-screen controller overlay would result in the overlay layout being positioned partially off the edge of the screen for devices with a selfie camera. | @OpenSauce04 #2465\r\n  - Users affected by the aforementioned issue should reset their on-screen controller overlay layout using the side menu after updating. The issue will then be fixed.\r\n- Fixed a regression where, when the \"Expand to Cutout Area\" setting was enabled, any touchscreen inputs to the virtual 3DS screen would be either horizontally or vertically offset for devices with a selfie camera. | @OpenSauce04 #2469 \r\n- Slightly adjusted the positioning of the face buttons in the default portrait layout for the on-screen controller overlay for better ergonomics. | @OpenSauce04 #2468",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "azahar"
-      ],
-      "contentHash": "8373a32a2b5e990302ba0da06a0097c43cf919ac8e07140bb9e062dd7ab6c43b",
       "translationPending": false
     },
     {
