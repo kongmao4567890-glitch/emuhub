@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-05T15:32:22.617404Z",
+  "generatedAt": "2026-09-06T05:04:47.091794Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,44 +9,20 @@
   },
   "articles": [
     {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T15:12:28Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n•为CPU和PPU实现了开放式总线\n•添加了多个调色板，可在图形设置中选择\n•实施了UNROM 512 （测绘器30 ）\n•实现了VT03 OneBus （映射器256 ） ，由即插即用法米克隆使用\n•倒带现在有一个时间线洗涤器：拖动播放最后一分钟的胶片，并直接跳转到任何时刻\n•现在可以从`.7z`档案中加载ROM\n•添加了xBR风格的放大视频滤镜\n•在音频设置中添加了音频混音器，每个通道都有音量控制\n•现在可以像浏览任何其他文件夹一样浏览存档中的文件夹\n•游戏手柄现在可以使用默认映射开箱即用。 第二个游戏手柄自动控制玩家2\n已更改\n•模拟器现在运行在Android上最快的CPU内核上\n•游戏手柄固定器现在命名为插槽（ “游戏手柄1” ） ，而不是设备。 现有绑定被迁移，控件设置显示哪个游戏手柄在哪个插槽中\n\n固定\n•无法加载的保存状态不再阻止游戏开始：游戏从开机状态启动，报告故障，旁边保留不可读文件的副本\n•保存状态选择器将无法加载的保存状态显示为不可读，并允许您将其删除，而不是失败\n•修复了游戏向PPU的OAM数据寄存器写入完整256字节时的崩溃问题\n•修复了PPU在关闭渲染时在奇数帧上跳过一个循环的问题\n•在PPU已在vblank中时打开NMI现在会立即触发NMI\n•修复了MMC3游戏中跳过的IRQ\n•修复了MMC3扫描线计数器关闭一\n•修复了在渲染关闭时精灵数据被丢弃的问题\n•固定的颜色强调应用倒置的色调\n• PAL上的固定颜色强调\n• ROM和存档文件扩展名现在不区分大小写，因此`GAME.NES`和`COLLECTION.ZIP`等文件可正确打开\n•修复了从Windows上的ZIP存档中打开ROM的问题\n•修复了ZIP归档处理不一致的问题，具体取决于您打开它的方式\n•修复了启动时损坏的设置崩溃NESd ，损坏的配置已备份\n•修复了在大突发读取音频的设备上的音频不足\n•在低端设备上启用倒带功能时，修复了音频不足和速度下降的问题\n•修复了Android启动屏幕上的徽标被剪切的问题",
-      "originalContent": "### Added\n- Implemented open bus for the CPU and PPU\n- Added multiple color palettes, selectable in Graphics settings\n- Implemented UNROM 512 (mapper 30)\n- Implemented VT03 OneBus (mapper 256), used by plug-and-play famiclones\n- Rewind now has a timeline scrubber: drag through a filmstrip of the last minute of play and jump straight to any moment\n- ROMs can now be loaded from `.7z` archives\n- Added an xBR-style upscaling video filter\n- Added an audio mixer to Audio settings, with a volume control per channel\n- Folders inside an archive can now be browsed like any other folder\n- Gamepads now work out of the box with a default mapping. A second gamepad automatically controls player 2\n\n### Changed\n- The emulator now runs on the fastest CPU cores on Android\n- Gamepad bindings now name a slot (\"Gamepad 1\") instead of a device. Existing bindings are migrated, and the Controls settings show which gamepad is in which slot\n\n### Fixed\n- A save state that cannot be loaded no longer stops the game from starting: the game boots from power-on, the failure is reported, and a copy of the unreadable file is kept next to it\n- The save state picker shows a save state it cannot load as unreadable and lets you delete it, instead of failing\n- Fixed a crash when a game writes a full 256 bytes to the PPU's OAM data register\n- Fixed the PPU skipping a cycle on odd frames while rendering is turned off\n- Turning NMI on while the PPU is already in vblank now triggers an NMI right away\n- Fixed skipped IRQs on MMC3 games\n- Fixed MMC3 scanline counter being off by one\n- Fixed sprite data getting discarded while rendering is off\n- Fixed color emphasis applying an inverted tint\n- Fixed color emphasis on PAL\n- ROM and archive file extensions are now matched case-insensitively, so files like `GAME.NES` and `COLLECTION.ZIP` open correctly\n- Fixed opening a ROM from inside a zip archive on Windows\n- Fixed inconsistent zip archive handling depending on how you opened it\n- Fixed broken settings crashing NESd on start, the broken configuration is backed up\n- Fixed audio underruns on devices that read audio in large bursts\n- Fixed audio underruns and slowdown with rewind enabled on lower-end devices\n- Fixed the logo being cut off on the Android splash screen",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "38221e1f1ecf4544c1e60c7825b4486ccb186514e4a22dfcdabb371cddd99350",
-      "translationPending": false
-    },
-    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-05T14:03:42Z",
+      "publishedAt": "2026-09-06T03:56:18Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_megadrive.cpp: 各种... (fprietog) .",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: various... (fprietog)",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 守备GBA州防漂流布局(Taoenwen)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Guard GBA state layout against drift (taoenwen)",
       "platforms": [
         "android"
       ],
@@ -54,7 +30,276 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "8939c1240ba4e52a414b289cf071eabf2f590c3100e58ca4a6847981cdbf1a13",
+      "contentHash": "97f57a66732476c2a84932a40427b89c142155feca21dec6bb1c32af0b87b2b3",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-gamenative-1-2-1-prerelease",
+      "title": "【Android更新】GameNative 1.2.1-prerelease",
+      "originalTitle": "GameNative 1.2.1-prerelease Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T03:13:34Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/utkarshdalal/GameNative/releases/tag/v1.2.1-prerelease",
+      "imageUrl": "asset://assets/emulators/gamenative.png",
+      "officialUrl": "https://github.com/utkarshdalal/GameNative",
+      "summary": "GameNative 发布 Android 新版本 1.2.1-prerelease，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "GameNative 已发布 Android 最新版本 1.2.1-prerelease。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n下载\n• `gamenative-v1.2.1-prerelease.apk` ——标准建设。 推荐给大多数用户。\n• `gamenative-v1.2.1-prerelease-legacy-xr.apk` ——XR建设用于查询头像。\n\n\n更新内容\n• FPS限制器的固定性能回归(如Mewgenics等游戏) https://github.com/utkarshdalal/GameNative/pull/1862\n• 使外部更快地装入一个切换,而不是默认启用 - 用在外部存储上启动的游戏修复错误 1.2.0 in https://github.com/utkarshdalal/GameNative/pull/1865\n• 多控制器改变后添加的固定控制器回归(标记为P2的控制器永远不会变成P1) https://github.com/utkarshdalal/GameNative/pull/1864\n• 添加自动AI调试,用于制作游戏发布(目前仅限Ko-fi用户使用,因为我们要收取AI令牌) https://github.com/utkarshdalal/GameNative/pull/1877\n• 由@TheReal-Flo和我在XR架构中添加对XR游戏的初始支持 https://github.com/utkarshdalal/GameNative/pull/1879\n• 由@Nightwalker743 添加回 Nexus Mods 集成(不需要手动添加mods) https://github.com/utkarshdalal/GameNative/pull/1850\n• 增加可配置的陀螺仪瞄准和倾斜方向盘,由@Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1882\n• 在新屏幕上添加可选的、非屏蔽的赞助和建议(可从主要应用程序设置中关闭,但保持它可以使我们有资源进行调试) 无建筑物 GameNative) in https://github.com/utkarshdalal/GameNative/pull/1881\n• 在Steam库(RP Nova)中增加一个Cured 4:3过滤器,由@Producevity in https://github.com/utkarshdalal/GameNative/pull/1786\n• @phobos665和 @VinceBT in https://github.com/utkarshdalal/GameNative/pull/1695\n• 修复肖像模式 - 游戏在屏幕上运行,由 @pacoa- kdbg in https://github.com/utkarshdalal/GameNative/pull/1800\n• 为 v1 添加 GOG 安装器( 固定注册密钥, 旧游戏需要 CD 驱动器) https://github.com/utkarshdalal/GameNative/pull/1863\n• 别把复合HID键盘当作游戏控制器, https://github.com/utkarshdalal/GameNative/pull/1839\n• 增加由@Nightwalker743 组成的同时和相继的多动作绑定 https://github.com/utkarshdalal/GameNative/pull/1833\n• 固定(输入):由@eve-ai-dev in https://github.com/utkarshdalal/GameNative/pull/1870\n• 解决某些DLC的问题(例如Sally Face在选择季节性通行证时下载失败) https://github.com/utkarshdalal/GameNative/pull/1883\n• 让用户自定义由 @jmarti326 提供的图书馆标签 https://github.com/utkarshdalal/GameNative/pull/1799\n• 固定 (): 由 @phobos665 in 解析史诗游戏多保存 https://github.com/utkarshdalal/GameNative/pull/1790\n校对:Soup https://github.com/utkarshdalal/GameNative/pull/1781\n• 添加“ 残疾 Epic Overlay” 容器设置, 防止 CEF 虚拟内存在保存负载时崩溃。 @ Wavewash in https://github.com/utkarshdalal/GameNative/pull/1888\n\n新贡献者\n• @pacoa-kdbg在 https://github.com/utkarshdalal/GameNative/pull/1800\n• @mbarchein在 https://github.com/utkarshdalal/GameNative/pull/1839\n• @Producevity在下列领域作出了第一次贡献: https://github.com/utkarshdalal/GameNative/pull/1786\n• @eve-ai-dev在 https://github.com/utkarshdalal/GameNative/pull/1870\n• @ShadowFungi首次在 https://github.com/utkarshdalal/GameNative/pull/1781\n• @Wavewash在 https://github.com/utkarshdalal/GameNative/pull/1888\n\n完整更改日志 : https://github.com/utkarshdalal/GameNative/compare/v1.2.0...v1.2.1-prerelease",
+      "originalContent": "## Downloads\r\n- **`gamenative-v1.2.1-prerelease.apk`** — Standard build. Recommended for most users.\r\n- **`gamenative-v1.2.1-prerelease-legacy-xr.apk`** — XR build for Quest headsets.\r\n\r\n\r\n## What's Changed\r\n* Fixed performance regression from FPS limiter (in games like Mewgenics) in https://github.com/utkarshdalal/GameNative/pull/1862\r\n* Made faster external loading a toggle instead of enabled by default - fixes bugs with games launching on external storage in 1.2.0 in https://github.com/utkarshdalal/GameNative/pull/1865\r\n* Fixed controller regressions added by multicontroller change (controller marked as P2 could never become P1) in https://github.com/utkarshdalal/GameNative/pull/1864\r\n* Added automated AI debugging for making games launch (currently limited only to Ko-fi subscribers as we are charged for AI tokens) in https://github.com/utkarshdalal/GameNative/pull/1877\r\n* Added initial support for XR games for Quest in the XR builds by @TheReal-Flo and me in https://github.com/utkarshdalal/GameNative/pull/1879\r\n* Added back Nexus Mods integration (no need to manually add mods) by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1850\r\n* Add configurable gyro aiming and tilt steering by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1882\r\n* Added optional, non-blocking sponsorships and recommendations to boot screen (can be turned off from main app settings, but keeping it on allows us to have the resources to continue building GameNative) in https://github.com/utkarshdalal/GameNative/pull/1881\r\n* Add a Curated 4:3 filter to the Steam library (for RP Nova) by @Producdevity in https://github.com/utkarshdalal/GameNative/pull/1786\r\n* Added Steam achievements viewer by @phobos665 and @VinceBT in https://github.com/utkarshdalal/GameNative/pull/1695\r\n* Fix portrait mode - game runs at top of screen by @pacoa-kdbg in https://github.com/utkarshdalal/GameNative/pull/1800\r\n* Added GOG installer for v1 (fixes registry keys, needing CD drive for older games) in https://github.com/utkarshdalal/GameNative/pull/1863\r\n* Don't treat composite HID keyboards as game controllers by @mbarchein in https://github.com/utkarshdalal/GameNative/pull/1839\r\n* Add simultaneous and sequential multi-action bindings by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1833\r\n* fix(input): pair complementary Joy-Con controllers by @eve-ai-dev in https://github.com/utkarshdalal/GameNative/pull/1870\r\n* Fix issues with certain DLCs (eg Sally Face download failing when the Season Pass is selected) in https://github.com/utkarshdalal/GameNative/pull/1883\r\n* Let users customize library tabs by @jmarti326 in https://github.com/utkarshdalal/GameNative/pull/1799\r\n* fix(): resolve epic games multi-save by @phobos665 in https://github.com/utkarshdalal/GameNative/pull/1790\r\n* URI Implementation by @ShadowFungi in https://github.com/utkarshdalal/GameNative/pull/1781\r\n* Add 'Disable Epic Overlay' container setting to prevent CEF virtual memory crash on save load by @Wavewash in https://github.com/utkarshdalal/GameNative/pull/1888\r\n\r\n## New Contributors\r\n* @pacoa-kdbg made their first contribution in https://github.com/utkarshdalal/GameNative/pull/1800\r\n* @mbarchein made their first contribution in https://github.com/utkarshdalal/GameNative/pull/1839\r\n* @Producdevity made their first contribution in https://github.com/utkarshdalal/GameNative/pull/1786\r\n* @eve-ai-dev made their first contribution in https://github.com/utkarshdalal/GameNative/pull/1870\r\n* @ShadowFungi made their first contribution in https://github.com/utkarshdalal/GameNative/pull/1781\r\n* @Wavewash made their first contribution in https://github.com/utkarshdalal/GameNative/pull/1888\r\n\r\n**Full Changelog**: https://github.com/utkarshdalal/GameNative/compare/v1.2.0...v1.2.1-prerelease",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gamenative"
+      ],
+      "contentHash": "3895ca4b9a0dc237d39cd49a2685c02cacb8c62aadc619b990b97a3f28aa2356",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T02:39:55Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 如果设备初始化失败, 解决罕见的崩溃( Stenzek)（https://github.com/stenzek/duckstation/commit/5aeeb72e6e357be9381e4386bed8fb7577180e6e）)\n• 确保pcdrv_root为本地路径(Stenzek)（https://github.com/stenzek/duckstation/commit/0d33bd17776cfec46a2237a46f57081459ed0b13）)",
+      "originalContent": "## Commits\n- Fix rare crash if device initialization fails ([Stenzek](https://github.com/stenzek/duckstation/commit/5aeeb72e6e357be9381e4386bed8fb7577180e6e))\n- Ensure pcdrv_root is a native path ([Stenzek](https://github.com/stenzek/duckstation/commit/0d33bd17776cfec46a2237a46f57081459ed0b13))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "1a372143d0c38fe7884faa2fa9cf324d4e4d114e5fa88ac551f6ed27a4c9cacf",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260906",
+      "title": "【Android更新】ARMSX2 nightly-20260906",
+      "originalTitle": "ARMSX2 nightly-20260906 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T02:12:32Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260906",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260906，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260906。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,一个4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• GS/TC:保持16位的彩色目标更新不显示彩色->彩色bpp\n• GS/TC:纠正-签署-比较警告。\n• GS/HW:大号ST重写顶点。\n• GS/HW:改进源渠道对源头检索的要求\n• GS:HW:用FBMask遮掩ROV频道。\n• GS:HW:减少最高值。\n• GS/HW:将深度变暗器更新为底值\n• GS/HW:在目标更新忽略双线的情况下纠正回归\n• GS/TC:更新24bit目标阿尔法通道是脏的\n• GS/TC: GPU CLUT纹理严重错位\n• GS/TC:发现α信道宽度不匹配\n• GS/HW:在使用CSBW时考虑FBMSK组合\n• GS/HW:改进本地缩放递归绘图检查\n• GS/HW/NS:检测假双线裂变效应\n• GameDB: 添加需要的 GameDB 条目\n• GS/HW:改进“分离”模糊效应检测和处理\n• GS/HW:对轻度降级的原生放大探测和回信\n• GS/DX11:DS作为RT/UAV约束性修正。\n• GS:两个显示电路都停用时输出BGCOLOR\n• GS:清除遗留的仪器\n• GS:说出了哪个制造器\n• 一般事务人员:将抽取账簿放回上游\n• GS:放下绘图包标记\n• 自由:说出ARMSX2_USE_BUNDLED_SHADERC实际上在做什么\n• GS/HW:放弃α位已知来源和侵蚀普查\n• 自由:通过前端翻转,因为核心没有马达\n• GS/Vulkan:放下GPU等待账单\n• GS/Vulkan:缩小向一个横幅字段报告的串流内存\n• GS/Vulkan:减少流线冲洗统计\n• Gsrunner:降下变种旗帜\n• GS:放下制造器身份旗帜\n• GS:减少每帧字节普查\n• GS:删除前端解码记录器\n• 常见情况:离开PMU柜台作为主人拥有的柜台\n• gsrunner:评分脚本从树上移出\n• GS/SW: GSDepthWalk.h 包括它使用的定义\n• GS:重新审查后续行动\n• Libretro:连接荫影和树枝 JNI呼叫Android核心\n• 检查-msvc-文件列表:不接收任何封面覆盖项目\n• 放弃从两个驱动程序-工作方评论中引用的私语路径\n• 添加 SPDX 标题到 tools/rig/doctor.sh\n• 丢弃重复的 ClInclude 条目 ps2/eeHwTraceLog.inl\n• 在构建文件名单上登记8个净新一般事务/输入信头\n• GS:这个分支未格式化的两行线条格式\n• 一般事务人员:说明为什么自动浮动级别现在为每名降级者\n• GS:在中记录复刊前填写的包装标签不得发出\n• GS:拒绝无法与CPU扩展相匹配的GPU调色板道路\n• GS:新档案上一条版权持有人线\n• GS:删除残废的GSClut:阅读\n• GS:使解码记录器武装旗帜原子和通知书写失败\n• GS:重播 \" QOWERT \" 已运出\n• GS:说明前端解码记录器是什么\n• 一般事务:在评论中说明理由,而不是引用无人查阅的档案\n• GS: 放下只写 m_upload_writes_whole_rect旗\n• GS:将NaN-Q固定在NOP加载的三进制中\n• GS/SW:标定三项纹理规则\n• GS/SW:将ARM64区块光标硬码标定在 dw 上\n• GS/SW:只关闭此绘图打开的绘图行\n• GS/SW:删除深层飞机输出无声呼叫\n• GS/SW:保持......",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GS/TC: keep the 16-bit colour target update off the Color->Color bpp assert\n- GS/TC: Fix -Wsign-compare warning.\n- GS/HW: Rewrite vertices if large ST.\n- GS/HW: Improve source channel requirements for source lookups\n- GS:HW: Do ROV channel masking with FBMask.\n- GS:HW: Reduce primid max value.\n- GS/HW: Update depth conversion shader to floor value\n- GS/HW: Fix regression where target updates ignored bilinear\n- GS/TC: Update alpha channel of 24bit target is alpha is dirty\n- GS/TC: Disallow badly misaligned GPU CLUT textures\n- GS/TC: Detect alpha channel source width mismatches\n- GS/HW: Consider FBMSK combos when using CSBW\n- GS/HW: Improve Native Scaling recursive draw check\n- GS/HW/NS: Detect fake bilinear jiggle effect\n- GameDB: Add required GameDB Entries\n- GS/HW: Improve \"jiggle\" blur effect detection and handling\n- GS/HW: Native Scaling detection of mild downscale and write back\n- GS/DX11: DS as RT/UAV binding fixes.\n- GS: Output BGCOLOR when both display circuits are disabled\n- GS: tidy what the instrumentation removal left behind\n- GS: say which renderer came up\n- GS: put the draw-log ledger back to its upstream shape\n- GS: drop the draw-log packet mark\n- libretro: say what ARMSX2_USE_BUNDLED_SHADERC is actually doing\n- GS/HW: drop the alpha known-bits provenance and erosion census\n- libretro: rumble through the frontend, since the core owns no motors\n- GS/Vulkan: drop the GPU wait bills\n- GS/Vulkan: trim the stream-ring memory reporting to one banner field\n- GS/Vulkan: drop the stream-ring flush statistics\n- gsrunner: drop the -variant flag\n- GS: drop the renderer identity banner\n- GS: drop the per-frame byte census\n- GS: remove the front-end decode recorder\n- common: leave the PMU counters as master has them\n- gsrunner: the scoring scripts move out of the tree\n- GS/SW: GSDepthWalk.h includes the definitions it uses\n- GS: re-review follow-ups\n- libretro: link shaderc and stub the JNI calls on the Android core\n- check-msvc-filelist: accept None items for header coverage\n- Drop private-doc path citations from two driver-workaround comments\n- Add SPDX header to tools/rig/doctor.sh\n- Drop duplicate ClInclude entry for ps2/eeHwTraceLog.inl\n- Register eight net-new GS/Input headers in the build file lists\n- GS: clang-format the two lines this branch left unformatted\n- GS: say why the auto-flush level is per-renderer now\n- GS: a packed tag finished by the mid-record resume must not be dispatched\n- GS: refuse the GPU palette road where it cannot match the CPU expansion\n- GS: one copyright holder line on the new files\n- GS: delete the disabled GSClut::Read\n- GS: make the decode recorder's arming flag atomic and notice write failures\n- GS: ReplayPackedQword has a shipped caller now\n- GS: describe the front-end decode recorder as what it is\n- GS: state the rationale in the comments instead of citing files nobody has\n- GS: drop the write-only m_upload_writes_whole_rect flag\n- GS: apply the NaN-Q fix-up in the NOP-padded packed triple\n- GS/SW: pin the three texture rules nothing was testing\n- GS/SW: pin the dw stride the ARM64 block cursor hard-codes\n- GS/SW: only close a draw-log row this draw opened\n- GS/SW: delete the depth-plane export nothing calls\n- GS/SW: keep an…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "04a32108e2e448f6e4900df12a226587aff93647487a02384106c8d5a19a9df6",
+      "translationPending": false
+    },
+    {
+      "id": "136645",
+      "title": "【家用机】Ryujinx-Nextendo v1.8.0",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.8.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T21:48:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136645-consoles-de-salon-ryujinx-nextendo-v1-8-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
+      "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
+      "summary": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。 该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。",
+      "content": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。\n该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。\n其目的特别是允许兼容游戏通过Nextendo网络查找在线游戏功能，而无需用户进行特殊手动配置、修改HOSTS文件或绕过SSL。\n\n这些变化是：\n\nNew Home Launcher\n•添加了新的控制台风格主屏幕。\n•游戏在网格或旋转木马中显示为封面。\n•直接在游戏封面上添加了在线玩家计数。\n•经典游戏列表仍然可用。\n•为个人资料、Discord、新闻、Mii编辑器、控制器设置和模拟器设置添加了快速访问按钮。\n•现在可以保存首选主页视图：主页、列表或网格。\n\nNextendo个人资料\n•添加了专用的Nextendo个人资料屏幕。\n•显示您的用户名、好友代码和个人资料图片。\n•添加了“好友”、“最近遇到”和“播放历史记录”选项卡。\n•添加了通过好友代码添加好友的功能。\n•可以直接从模拟器接受或拒绝好友请求。\n•无需离开模拟器即可报告玩家。\n\nMii编辑器\n•修复了关闭Mii编辑器可能会使模拟器以0 fps的速度停留在黑屏上的问题。\n•正确关闭自己的小程序现在返回到启动器。\n\n接口\n•在主启动器上添加了对自定义壁纸的支持。\n•添加了从界面设置中选择背景图像的功能。\n•新界面已完全翻译成所有20种支持的语言。\n•改进了相对日期和时间的本地化。\n\n贡献者\n•由Mars-Hermetto提供新的发射器、配置文件界面和Mii编辑器修复。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.\n\nLes changements sont:\n\nNew Home Launcher\n- Added a new console-style home screen.\n- Games are displayed as covers in a grid or carousel.\n- Added online player counts directly on game covers.\n- The classic game list remains available.\n- Added quick-access buttons for the profile, Discord, news, Mii editor, controller settings and emulator settings.\n- The preferred home view can now be saved: Home, List or Grid.\n\nNextendo Profile\n- Added a dedicated Nextendo profile screen.\n- Displays your username, friend code and profile picture.\n- Added Friends, Recently Met and Play History tabs.\n- Added the ability to add friends by friend code.\n- Friend requests can be accepted or declined directly from the emulator.\n- Players can be reported without leaving the emulator.\n\nMii Editor\n- Fixed an issue where closing the Mii editor could leave the emulator stuck on a black screen at 0 FPS.\n- Applets that close themselves now correctly return to the launcher.\n\nInterface\n- Added support for custom wallpapers on the home launcher.\n- Added the ability to select a background image from Interface settings.\n- The new interface is fully translated into all 20 supported languages.\n- Improved localisation of relative dates and times.\n\nContributors\n- New launcher, profile interface and Mii editor fix contributed by Mars-Hermetto.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "05fc4739e50664776ce508260123225f7c18ab13b2da4bb2802f6e1796ea5713",
+      "translationPending": false
+    },
+    {
+      "id": "136643",
+      "title": "【家用机】NxEmu v0.7.0 build 589",
+      "originalTitle": "[Consoles de salon] NxEmu v0.7.0 build 589",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T21:43:45Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136643-consoles-de-salon-nxemu-v0-7-0-build-589/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/nxemu.png",
+      "officialUrl": "https://www.nxemu.com/",
+      "summary": "NXEmu是一款用C + + for Windows编写的开源Nintendo Switch模拟器。 它仍处于早期阶段。 N3XOX1于2018年开始在NXEmu上工作，进展缓慢但稳定。 现在他正在展示图形，作者认为这是展示他到目前为止所取得的成就的正确时机。 变更内容： 兼容性 •通过广泛的社区测试和修复，改善了各种游戏的兼容性。 •通过测试发现的许多问题已得到解决。 配置文件和用户管理 •添加了个人资料管理器。",
+      "content": "NXEmu是一款用C + + for Windows编写的开源Nintendo Switch模拟器。 它仍处于早期阶段。 N3XOX1于2018年开始在NXEmu上工作，进展缓慢但稳定。 现在他正在展示图形，作者认为这是展示他到目前为止所取得的成就的正确时机。\n\n变更内容：\n兼容性\n•通过广泛的社区测试和修复，改善了各种游戏的兼容性。\n•通过测试发现的许多问题已得到解决。\n\n配置文件和用户管理\n•添加了个人资料管理器。\n•使用单独的保存数据创建和管理多个用户配置文件。\n•选择活动的用户配置文件。\n•分配自定义个人资料图片或使用已安装固件中的头像。\n•增加了对启动时需要配置文件选择小程序的游戏的支持。\n\n键盘小程序\n•增加了对Switch键盘小程序的支持。\n•需要文本输入的游戏现在可以正确显示和使用虚拟键盘。\n•修复了游戏先前在请求用户输入时会停顿或使用默认文本的问题。\n\n兼容性报告\n•添加了NxEmu兼容性报告系统。\n•可以提交单个游戏或一般模拟器问题的报告。\n•报告包括正在使用的NxEmu版本。\n•直接从模拟器的“帮助”菜单添加了对报告系统的访问权限。\n•可以通过专用网站管理报告。\n\n附加组件/DLC/MOD\n•可配置的附加组件目录。\n•现在可以加载更新、DLC和改装配件，而无需修改基础游戏。\n•添加了对检测到的附加组件的每场比赛管理。\n•可以启用或禁用单个DLC和MOD。\n•添加了选择应用哪个游戏更新版本的功能。\n\nLinux/Android\n•添加了CMake构建系统。\n•扩展了Linux构建基础设施。\n•已添加初始Android/ARM64基础工作。\n•为未来的Linux和Android版本奠定了基础。\n\n生活质量\n•添加了显示当前正在运行的游戏的Discord Rich Presence。\n•添加了FPS解锁以禁用速度限制。\n•通过修复Windows计时器偶尔造成的50–55 FPS下降，提高了FPS精度。\n•增加了控制器振动支持。\n•在控制器设置中添加了振动配置。\n•增加了在玩游戏期间空闲时自动隐藏鼠标光标的功能。\n•添加了从UI上下文菜单直接访问保存和修改文件夹的权限。\n\n后续步骤\n•计划将Android版本作为下一个版本的主要重点。\n•持续的Linux开发。\n•计划提供多语言支持。\n•计划的每场比赛设置。\n•计划的Amiibo支持。\n•持续的兼容性改进。\n\n此处提供说明。",
+      "originalContent": "NXEmu est un émulateur Nintendo Switch open-source écrit en C++ pour Windows. Il en est encore à un stade précoce. N3XOX1 a commencé à travailler sur NXEmu en 2018 avec des progrès lents mais constants. Maintenant qu'il affiche des graphismes, l'auteur pense que c'est le bon moment pour montrer ce qu'il a réalisé jusqu'à présent.\n\nLes changements:\n\nCompatibility\n- Compatibility improved across a wide range of games thanks to extensive community testing and fixes.\n- Numerous issues identified through testing have been addressed.\n\nProfiles & User Management\n- Added a profile manager.\n- Create and manage multiple user profiles with separate save data.\n- Select the active user profile.\n- Assign a custom profile image or use avatars from installed firmware.\n- Added support for games requiring the profile selection applet at startup.\n\nKeyboard Applet\n- Added support for the Switch keyboard applet.\n- Games requiring text input can now properly display and use the virtual keyboard.\n- Fixed issues where games would previously stall or use default text when requesting user input.\n\nCompatibility Reporting\n- Added the NxEmu compatibility reporting system.\n- Reports can be submitted for individual games or general emulator issues.\n- Reports include the NxEmu build being used.\n- Added access to the reporting system directly from the emulator's Help menu.\n- Reports can be managed through the dedicated website.\n\nAdd-ons / DLC / Mods\n- Added configurable add-on directories.\n- Updates, DLC and mods can now be loaded without modifying the base game.\n- Added per-game management of detected add-ons.\n- Individual DLC and mods can be enabled or disabled.\n- Added the ability to select which game update version is applied.\n\nLinux / Android\n- Added a CMake build system.\n- Expanded the Linux build infrastructure.\n- Added initial Android/ARM64 groundwork.\n- Foundation laid for future Linux and Android versions.\n\nQuality of Life\n- Added Discord Rich Presence displaying the currently running game.\n- Added FPS Unlock to disable the speed limiter.\n- Improved FPS accuracy by fixing occasional 50–55 FPS drops caused by the Windows timer.\n- Added controller vibration support.\n- Added vibration configuration in controller settings.\n- Added automatic mouse cursor hiding when idle during gameplay.\n- Added direct access to save and mod folders from the UI context menu.\n\nNext Steps\n- Android build planned as the main focus for the next release.\n- Continued Linux development.\n- Planned multi-language support.\n- Planned per-game settings.\n- Planned Amiibo support.\n- Continued compatibility improvements.\n\nExplications ici.",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xemu"
+      ],
+      "contentHash": "553dbe96310a317d86bc0b3183b388116632c4bc51c76382baa72cd6d616b7f0",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-nightly-20260905-2",
+      "title": "【Android更新】ARMSX1 nightly-20260905.2",
+      "originalTitle": "ARMSX1 nightly-20260905.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T21:39:34Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260905.2",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260905.2，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260905.2。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n从 cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "a4f1ecd4716768c6f35c520a4904fcad5dd7087bf815f2505ad3f6a3e05ce190",
+      "translationPending": false
+    },
+    {
+      "id": "136640",
+      "title": "【家用机】NeXium (2026/09/05)",
+      "originalTitle": "[Consoles de salon] NeXium (2026/09/05)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T21:34:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136640-consoles-de-salon-nexium-2026-09-05/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/nexium-scaled.png",
+      "officialUrl": "https://nexium-emu.org/",
+      "summary": "NeXium是一款现代任天堂Switch仿真器，完全用Rust编写，它依赖于模块化架构。它结合了基于Vulkan的GPU和两个可互换的AArch64 JIT ， Dynarmic和Rustarmic ，可以在运行时动态选择 。模拟器已经允许以可玩的方式启动自制游戏，并且解密的商业容器现在可以启动到游戏的实际界面。",
+      "content": "NeXium是一款现代任天堂Switch仿真器，完全用Rust编写，它依赖于模块化架构。它结合了基于Vulkan的GPU和两个可互换的AArch64 JIT ， Dynarmic和Rustarmic ，可以在运行时动态选择\n。模拟器已经允许以可玩的方式启动自制游戏，并且解密的商业容器现在可以启动到游戏的实际界面。系统的每一层都保持足够的可见性和仪器化以进行调试，这使得Nexium成为一个既面向使用又非常适合分析的环境\n围绕交换机的技术和开发。",
+      "originalContent": "NeXium est un émulateur Nintendo Switch moderne, entièrement écrit en Rust, qui s’appuie sur une architecture modulaire. Il intègre un GPU basé sur Vulkan et deux JIT AArch64 interchangeables, Dynarmic et Rustarmic, que l’on peut choisir dynamiquement au moment de l’exécution. L’émulateur permet déjà de lancer des homebrews de manière jouable, et les conteneurs commerciaux déchiffrés démarrent désormais jusqu’à l’interface réelle des jeux. Chaque couche du système reste suffisamment visible et instrumentée pour être déboguée, ce qui fait de Nexium un environnement à la fois orienté usage et très adapté à l’analyse technique et au développement autour de la Switch.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "nexium_pc"
+      ],
+      "contentHash": "7b2f85e0d22942ed61129afa537ea5c9ea633971eaa5e360a900037a1cc2df7c",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T19:04:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 执行CPU和PPU的公开总线\n• 添加多色调色板,可在图形设置中选择\n• 调色板现在可以从下列来源进口: `.pal` 在图形设置中的文件\n• 已执行的UNROM 512(30分)\n• 已执行的VT03 OneBus(256马普),用于插件和游戏假名\n• 倒带现在有一个时间线洗涤器:拖过播放最后一分钟的电影,直跳到任何时刻\n• 光盘现在可以装入 `.7z` 档案\n• 增加一个XBR式升级视频过滤器\n• 在音频设置中添加音频混音器,每个频道都有音量控制\n• 归档中的文件夹现在可以像其他文件夹一样浏览\n^ Gamepads现在以默认映射方式在框中工作。 第二个游戏盘自动控制玩家 2\n\n已更改\n• 模拟器现在运行在Android上最快的CPU核心上\n^ Gamepad 绑定现在命名一个插槽(\"Gamepad 1\")而不是一个设备。 已存在的绑定被迁移, 控件设置显示哪个游戏板是哪个档位\n• 现在重置像控制台重置按钮\n\n固定\n• 无法装入的保存状态不再阻止游戏的开始: 游戏靴从电源启动, 失败被报告, 无法读取的文件副本被保存到下一个 t 欧\n• 保存状态拾取器显示保存状态,它不能装入不可读状态,并允许您删除它,而不是失败\n• 当游戏将一个完整的256字节写入PPU的 OAM 数据登记册时修复崩溃\n• 关闭渲染时将 PPU 在奇数框上跳过循环\n• 在PPU已经在vblank时启动NMI,现在立即触发NMI\n• MMC3游戏中固定跳转的IRQs\n• 固定的MMC3扫描台关闭一个\n• 固定图示数据在渲染关闭时被丢弃\n• 使用反向锡的固定颜色强调\n• 固定颜色强调PAL\n• ROM和归档文件扩展名现在在不敏感的情况下匹配,因此文件如 `GAME.NES` 和 `COLLECTION.ZIP` 正确打开\n• 从Windows上的拉链档案中固定打开一个ROM\n• 固定不连贯的拉链档案处理,取决于如何打开\n• 固定中断的设置崩溃 NESd 启动时, 损坏的配置会被备份\n• 在大波朗诵音频的装置上安装固定的音频故障\n• 低端设备有固定的音频故障和减速,并允许倒带\n• 固定Android溅射屏幕上的标志\n• 固定索引指示,在错误的地址读取他们的翻页假人\n• 固定的APU帧计时器\n• 固定的DMC样本每点播放一个CPU周期太慢\n• 固定国家海产期\n• 固定图示DMA提前完成一个CPU周期\n• 固定 DMC 样本获取因周期数错误而延缓CPU\n• 通过PPUDATA读取固定调色板\n• PPU 地址 0x3000-0x3eff 现在像真实的硬件一样映射命名表",
+      "originalContent": "### Added\n- Implemented open bus for the CPU and PPU\n- Added multiple color palettes, selectable in Graphics settings\n- Palettes can now be imported from `.pal` files in Graphics settings\n- Implemented UNROM 512 (mapper 30)\n- Implemented VT03 OneBus (mapper 256), used by plug-and-play famiclones\n- Rewind now has a timeline scrubber: drag through a filmstrip of the last minute of play and jump straight to any moment\n- ROMs can now be loaded from `.7z` archives\n- Added an xBR-style upscaling video filter\n- Added an audio mixer to Audio settings, with a volume control per channel\n- Folders inside an archive can now be browsed like any other folder\n- Gamepads now work out of the box with a default mapping. A second gamepad automatically controls player 2\n\n### Changed\n- The emulator now runs on the fastest CPU cores on Android\n- Gamepad bindings now name a slot (\"Gamepad 1\") instead of a device. Existing bindings are migrated, and the Controls settings show which gamepad is in which slot\n- Reset now behaves like the console's reset button\n\n### Fixed\n- A save state that cannot be loaded no longer stops the game from starting: the game boots from power-on, the failure is reported, and a copy of the unreadable file is kept next to it\n- The save state picker shows a save state it cannot load as unreadable and lets you delete it, instead of failing\n- Fixed a crash when a game writes a full 256 bytes to the PPU's OAM data register\n- Fixed the PPU skipping a cycle on odd frames while rendering is turned off\n- Turning NMI on while the PPU is already in vblank now triggers an NMI right away\n- Fixed skipped IRQs on MMC3 games\n- Fixed MMC3 scanline counter being off by one\n- Fixed sprite data getting discarded while rendering is off\n- Fixed color emphasis applying an inverted tint\n- Fixed color emphasis on PAL\n- ROM and archive file extensions are now matched case-insensitively, so files like `GAME.NES` and `COLLECTION.ZIP` open correctly\n- Fixed opening a ROM from inside a zip archive on Windows\n- Fixed inconsistent zip archive handling depending on how you opened it\n- Fixed broken settings crashing NESd on start, the broken configuration is backed up\n- Fixed audio underruns on devices that read audio in large bursts\n- Fixed audio underruns and slowdown with rewind enabled on lower-end devices\n- Fixed the logo being cut off on the Android splash screen\n- Fixed indexed instructions doing their page-crossing dummy read at the wrong address\n- Fixed APU frame counter timing\n- Fixed DMC samples playing one CPU cycle per bit too slowly\n- Fixed NMI timing\n- Fixed sprite DMA finishing one CPU cycle early\n- Fixed DMC sample fetches stalling the CPU for the wrong number of cycles\n- Fixed palette reads through PPUDATA\n- PPU addresses 0x3000-0x3eff now mirror the nametables like real hardware",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "5a668d11bd6c2bcb54611b624d7d74e06a3808a1d61cb101bf07bea98238c711",
+      "translationPending": false
+    },
+    {
+      "id": "136635",
+      "title": "【家用机】Ruzu v0.0.1",
+      "originalTitle": "[Consoles de salon] Ruzu v0.0.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T18:10:54Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136635-consoles-de-salon-ruzu-v0-0-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ruzu-scaled.png",
+      "officialUrl": "https://github.com/vricosti/ruzu-emu",
+      "summary": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。 该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系 以及C + +和Rust代码的不同部分。",
+      "content": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。\n该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系\n以及C + +和Rust代码的不同部分。\nRuzu包括一个带有调度器、光纤、IPC和服务的HLE内核、一个GPU命令处理器、一个着色器重新编译器和一个JIT。ARM代码的动态重新编译由Dynarmic的Rust端口rdynarmic提供，具有本机x86-64和ARM64后端\n。该项目还包括rxbyak ，这是Xbyak的Rust端口，用于生成x86-64机器码。\n\n模拟器已经能够启动和运行商业游戏，其既定目标是实现原始C + +实现的性能。 然而，该项目仍在开发中。\nRuzu还具有图形前端和命令行前端，可以在Windows、Linux、macOS和多个BSD系统上编译。",
+      "originalContent": "Ruzu est un émulateur Nintendo Switch écrit en Rust, développé comme une expérience visant à déterminer si l'IA, via des modèles de langage (LLM), pouvait réaliser le portage complet d'un projet logiciel de très grande taille de C++ vers Rust.\n\nLe projet est basé sur le code de yuzu/Eden et représente environ 500 000 lignes de code portées exclusivement avec l'aide de LLM, sur une période d'environ six mois. L'objectif n'était pas simplement d'obtenir un programme fonctionnel, mais de conserver au maximum la structure du projet original, avec une correspondance entre les fichiers et les différentes parties du code C++ et Rust.\n\nRuzu intègre notamment un kernel HLE avec ordonnanceur, fibres, IPC et services, un processeur de commandes GPU, un recompilateur de shaders et un JIT. La recompilation dynamique du code ARM est assurée par rdynarmic, un portage Rust de Dynarmic, avec des backends natifs x86-64 et ARM64. Le projet comprend également rxbyak, un portage Rust de Xbyak pour la génération de code machine x86-64.\n\nL'émulateur est déjà capable de démarrer et d'exécuter des jeux commerciaux, avec l'objectif affiché d'atteindre les performances de l'implémentation C++ originale. Le projet reste toutefois en développement.\n\nRuzu dispose également d'un frontend graphique ainsi que d'un frontend en ligne de commande, et peut être compilé sous Windows, Linux, macOS et plusieurs systèmes BSD.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "18c20a961aa1a9d9b4841db1466fda81524027ba9df3232c9eb61571d891291b",
+      "translationPending": false
+    },
+    {
+      "id": "136632",
+      "title": "【家用机】Bcan v0.08d",
+      "originalTitle": "[Consoles de salon] Bcan v0.08d",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T18:03:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136632-consoles-de-salon-bcan-v0-08d/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/Bcan008b.png",
+      "officialUrl": "https://www.facebook.com/profile.php?id=61579382638861",
+      "summary": "B 'can是台湾Super A' Can控制台的模拟器，由BillyJr开发，基于MAME 0.287. 该项目接管了Super A'Can的现有仿真，旨在纠正仍然存在的问题，特别是在显示和声音方面。 BillyJr表示，他在AI的帮助下多次接管并修复了代码，并表示所有当前已知的问题都已得到修复。 源代码仍在清理中。 然后， BillyJr计划将增强功能提交给MAME。 另一个与BillyJr无关的在线模拟项目可在此处找到。",
+      "content": "B 'can是台湾Super A' Can控制台的模拟器，由BillyJr开发，基于MAME 0.287.\n该项目接管了Super A'Can的现有仿真，旨在纠正仍然存在的问题，特别是在显示和声音方面。 BillyJr表示，他在AI的帮助下多次接管并修复了代码，并表示所有当前已知的问题都已得到修复。\n源代码仍在清理中。 然后， BillyJr计划将增强功能提交给MAME。\n\n另一个与BillyJr无关的在线模拟项目可在此处找到。\n\nhttps://www.youtube.com/watch?v=Kajm0UIzfOw\n\n以下是Super A'Can模拟的历史：\n\n2002年左右\n李先生帮忙爆爆動物園从墨盒上翻转游戏。 当时，超级A 'Can几乎没有任何研究专门用于模拟。\n\n2004\nBillyJr正在寻找研究Super A'Can的人，并联系WonderSwan Cygne仿真器开发人员Tomasz Slanina （ DOX ）。 Tomasz同意在控制台上工作。\n\n然后，他将这项工作委托给了彼得·特劳纳（ Peter Trauner ） ，他是MAME/MESS早期的重要开发人员。\n\n2004年12月17日\nPeter Trauner开始从的ROM开发Super A 'Can仿真爆爆動物園。 第一个版本仍然存在几个问题，特别是在CPU 68000和6502之间的声音、旋转、缩放和通信方面。\n\n2004年12月19日\n\nPeter告诉BillyJr爆爆動物園现在可以玩了。\n由于Peter没有Super A'Can ， BillyJr直接在台湾的控制台上进行测试，以便为他提供有关硬件和显示器实际操作的信息。\n\n2005年底\n\nPeter Trauner拥有10个Super A'Can游戏的备份。\n\n2010\nMESS 0.136正式整合了Super A'Can驱动程序。 威尔伯特·波尔是这一时期的重要贡献者之一。\n\n2019\nMAME开发商Ryan Holtz正在对Super A 'Can仿真进行重大重组。 特别是，它可以纠正精灵、声音CPU、复位和停止的行为，以及与控制器的通信。 它还纠正了有关第三和第四名球员支持的假设。\n\n2021\nRyan Holtz和superctr添加了Super A'Can声音模拟的第一个版本。\n\n2023\n\nRyan Holtz和wxhsplash将68000的Boot ROM集成到仿真中。\n\n2024\nAngelo Salese开始解决许多剩余问题，包括瓦片地图、精灵、过扫描、显示图层、滚动和墨盒备份内存。\n\nMAME 0.284\nSuper A'Can最终被正式归类为在MAME工作。 列出的两个主要贡献者是Angelo Salese和Ryan Holtz。\n\n2026年7月\nBillyJr在人工智能的帮助下，以MAME 0.287为基础，接管模拟工作。 他表示，他接管了代码50多次，并纠正了所有已知问题。\n源代码仍在重组中。 这项工作完成后， BillyJr说他想将他的改进提交给MAME。\n\n变更内容：\n\nBcan 0.0.8d\n•增加了对Gamate手持游戏的支持，可自动检测已知游戏。\n•也可以手动分配未知游戏，并记住所选内容。\n•修复了Gamate屏幕截图。\n•添加了防闪烁和作弊代码支持。\n• A 'Can和Gamate现在有单独的音量设置，这些设置是独立保存的。\n•增加了默认A 'Can音量。\n•添加了音量热键和屏幕音量条。\n•使用原始正方形像素，默认显示模式现在为完美像素。\n•添加了在原始方形像素显示屏和4: 3之间自由切换的选项。\n•屏幕截图和视频录制现在遵循所选的纵横比。\n•添加了完整的命令行支持，使Bcan更易于与外部前端一起使用。\n•为全屏/窗口模式和1倍至5倍缩放添加了命令行选项。\n•修复了配置的控制器/操纵杆未连接时发生的重大减速问题。\n•模拟器现在仅在配置的游戏杆丢失时显示一次警告，同时游戏继续正常运行。\n•重新连接时，系统会再次自动检测游戏杆。\n\n命令行选项\n\n• `-f1`至`-f5` ：全屏模式， 1倍至5倍缩放。\n• `-w1`至`-w5` ：窗口模式， 1倍至5倍缩放。\n• `-s` ：使用4: 3的纵横比。\n• `-s0` ：使用原始的方形像素显示屏。\n• `-h` ：显示命令行帮助。\n•无显示参数：使用存储在`Bcan.ini`中的设置。\n\n示例\n• `Bcan.exe -f3 -s \"F:\\emulator\\roms\\acan\\game.zip\"` —以4: 3的纵横比以3倍的比例全屏启动游戏。\n• `Bcan.exe -w2 -s0 \"F:\\emulator\\roms\\acan\\game.zip\"` —使用原始方形像素显示在2x窗口中启动游戏。\n• `Bcan.exe \"F:\\emulator\\roms\\acan\\game.zip\"` —使用现有的Bcan.ini设置启动游戏。\n\n其他\n•添加了一个小复活节彩蛋：在没有游戏运行时输入Konami代码会触发惊喜。\n•修复了一场Gamate棒球比赛中导致令人不快的高频声音的速度问题。",
+      "originalContent": "B'can est un émulateur de la console taïwanaise Super A'Can, développé par BillyJr et basé sur MAME 0.287.\n\nLe projet reprend l’émulation existante de la Super A'Can et vise à corriger les problèmes encore présents, notamment au niveau de l’affichage et du son. BillyJr indique avoir repris et corrigé le code à de nombreuses reprises avec l’aide de l’IA et affirme que tous les problèmes actuellement connus ont été corrigés.\n\nLe code source est encore en cours de nettoyage. BillyJr prévoit ensuite de soumettre les améliorations à MAME.\n\nUn autre projet (non lié à BillyJr) d'émulation online est disponible ici.\n\nhttps://www.youtube.com/watch?v=Kajm0UIzfOw\n\nVoici un historique de l’émulation de la Super A'Can:\n\nVers 2002\n\nMr. Lee aide à dumper le jeu 爆爆動物園 depuis une cartouche. À cette époque, la Super A'Can reste pratiquement sans recherches consacrées à son émulation.\n\n2004\n\nBillyJr cherche quelqu’un pour étudier la Super A'Can et contacte Tomasz Slanina (dox), développeur notamment de l’émulateur WonderSwan Cygne. Tomasz accepte de travailler sur la console.\n\nIl confie ensuite le travail à Peter Trauner, développeur important des débuts de MAME/MESS.\n\n17 décembre 2004\n\nPeter Trauner commence à développer l’émulation de la Super A'Can à partir de la ROM de 爆爆動物園. La première version présente encore plusieurs problèmes, notamment au niveau du son, de la rotation, du zoom et de la communication entre les CPU 68000 et 6502.\n\n19 décembre 2004\n\nPeter annonce à BillyJr que 爆爆動物園 est désormais jouable.\n\nComme Peter ne possède pas de Super A'Can, BillyJr effectue des tests directement sur la console à Taïwan afin de lui fournir des informations sur le fonctionnement réel du matériel et de l’affichage.\n\nFin 2005\n\nPeter Trauner dispose des sauvegardes de 10 jeux Super A'Can.\n\n2010\n\nMESS 0.136 intègre officiellement le driver Super A'Can. Wilbert Pol fait partie des contributeurs importants de cette période.\n\n2019\n\nLe développeur MAME Ryan Holtz entreprend une importante réorganisation de l’émulation de la Super A'Can. Il corrige notamment le comportement des sprites, le CPU sonore, le Reset et le Halt, ainsi que la communication avec les manettes. Il corrige également l’hypothèse concernant le support des troisième et quatrième joueurs.\n\n2021\n\nRyan Holtz et superctr ajoutent une première version de l’émulation sonore de la Super A'Can.\n\n2023\n\nRyan Holtz et wxhsplash intègrent le Boot ROM du 68000 de la console dans l’émulation.\n\n2024\n\nAngelo Salese commence à traiter de nombreux problèmes restants concernant notamment les Tilemaps, les Sprites, l’Overscan, les couches d’affichage, le défilement et la mémoire de sauvegarde des cartouches.\n\nMAME 0.284\n\nLa Super A'Can est finalement classée officiellement Working dans MAME. Les deux principaux contributeurs indiqués sont Angelo Salese et Ryan Holtz.\n\nJuillet 2026\n\nBillyJr reprend le travail sur l’émulation en utilisant MAME 0.287 comme base, avec l’aide de l’IA. Il indique avoir repris le code plus de 50 fois et avoir corrigé tous les problèmes connus.\n\nLe code source est encore en cours de réorganisation. Une fois ce travail terminé, BillyJr indique vouloir soumettre ses améliorations à MAME.\n\nLes changements:\n\nBcan 0.0.8d\n- Added support for **Gamate** handheld games, with automatic detection of known games.\n- Unknown games can also be manually assigned and the selection will be remembered.\n- Fixed Gamate screenshots.\n- Added anti-flicker and cheat code support.\n- A’Can and Gamate now have separate volume settings, which are saved independently.\n- Increased the default A’Can volume.\n- Added volume hotkeys and an on-screen volume bar.\n- The default display mode is now **pixel-perfect**, using the original square pixels.\n- Added an option to freely switch between the original square-pixel display and **4:3**.\n- Screenshots and video recordings now follow the selected aspect ratio.\n- Added full **command-line support**, making Bcan easier to use with external frontends.\n- Added command-line options for fullscreen/windowed mode and 1x to 5x scaling.\n- Fixed a major slowdown that occurred when a configured controller/joystick was not connected.\n- The emulator now only displays a warning once when the configured joystick is missing, while the game continues to run normally.\n- The joystick is automatically detected again when it is reconnected.\n\nCommand-line options\n\n* `-f1` to `-f5`: fullscreen mode with 1x to 5x scaling.\n* `-w1` to `-w5`: windowed mode with 1x to 5x scaling.\n* `-s`: use 4:3 aspect ratio.\n* `-s0`: use the original square-pixel display.\n* `-h`: display command-line help.\n* Without display parameters: use the settings stored in `Bcan.ini`.\n\nExamples\n- `Bcan.exe -f3 -s \"F:\\emulator\\roms\\acan\\game.zip\"` — launch a game in fullscreen at 3x scaling with a 4:3 aspect ratio.\n- `Bcan.exe -w2 -s0 \"F:\\emulator\\roms\\acan\\game.zip\"` — launch a game in a 2x window using the original square-pixel display.\n- `Bcan.exe \"F:\\emulator\\roms\\acan\\game.zip\"` — launch a game using the existing Bcan.ini settings.\n\nOther\n- Added a small Easter egg: entering the **Konami Code** when no game is running triggers a surprise.\n- Fixed a speed issue in one Gamate baseball game that was causing an unpleasant high-frequency sound.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "42d865a86fed9d04bbf195494135c89baca0d640fbe7af66d8aeff9b44045ef5",
+      "translationPending": false
+    },
+    {
+      "id": "136630",
+      "title": "【家用机】Gecko r20260905",
+      "originalTitle": "[Consoles de salon] Gecko r20260905",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T16:39:48Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136630-consoles-de-salon-gecko-r20260905/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/gecko.png",
+      "officialUrl": "https://github.com/ioncodes/gecko",
+      "summary": "Gecko是任天堂GameCube和Wii的现代跨平台模拟器和调试器，完全使用Rust语言开发。 该项目由单人开发商设计，没有与不可错过的Dolphin竞争的目标，仍在开发中，可能存在不兼容性，具体取决于游戏。 从技术上讲，它使用基于Cranelift的即时重新编译器，并依靠现代WGPU API进行图形渲染，这也允许将其编译为WebAssembly ，以便直接在Web浏览器中运行。",
+      "content": "Gecko是任天堂GameCube和Wii的现代跨平台模拟器和调试器，完全使用Rust语言开发。\n\n该项目由单人开发商设计，没有与不可错过的Dolphin竞争的目标，仍在开发中，可能存在不兼容性，具体取决于游戏。\n从技术上讲，它使用基于Cranelift的即时重新编译器，并依靠现代WGPU API进行图形渲染，这也允许将其编译为WebAssembly ，以便直接在Web浏览器中运行。\n除了读取ISO、RVZ或ZIP格式和管理Wii备份外，它还具有非常先进的逆向工程工具，包括优雅的egui调试界面、Lua脚本支持以及用于分析游戏代码和文件的工具箱。\n\n更新日志/大纲\n\n•修复了许多游戏\n• Savestates\n• Freecam",
+      "originalContent": "Gecko est un émulateur et débogueur multiplateforme moderne de Nintendo GameCube et Wii, entièrement développé en langage Rust.\n\nConçu par un développeur solo sans l'objectif de concurrencer l'incontournable Dolphin, ce projet est encore en cours de développement et peut présenter des incompatibilités selon les jeux.\nTechniquement, il utilise un recompilateur à la volée basé sur Cranelift et s'appuie sur l'API moderne WGPU pour son rendu graphique, ce qui lui permet également d'être compilé en WebAssembly pour tourner directement dans un navigateur web.\n\nEn plus de lire les formats ISO, RVZ ou ZIP et de gérer les sauvegardes Wii, il se distingue par des outils très poussés pour le reverse engineering, incluant une interface de débogage élégante en egui, le support de scripts Lua et une boîte à outils pour analyser le code et les fichiers des jeux.\n\nChangelog / Grandes lignes\n\n- Fixed many games\n- Savestates\n- Freecam",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "6fbaf1e081bd46ab82f99f7b62bbbe6201210bd15c93b7b7ee0cab896028e3be",
+      "translationPending": false
+    },
+    {
+      "id": "136628",
+      "title": "【电脑】POM2 v0.9",
+      "originalTitle": "[Ordi.] POM2 v0.9",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-05T16:35:40Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136628-ordi-pom2-v0-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/pom2-emu.png",
+      "officialUrl": "https://github.com/habib256/pom2/",
+      "summary": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。 它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。",
+      "content": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。\n它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。\n在其特点中， POM2提供复合NTSC渲染、CRT/磷光体效果、体素3D视图、倒带、许多扩展卡的仿真，如Mockingboard、Phasor、Super Serial Card、CFFA 2.0和U Ethernet ，以及对ImageWriter II打印机的支持。\n模拟器支持多种格式的Apple II软盘和媒体（ .dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv ） ，并集成了对磁盘II的忠实模拟。它还通过以太网提供网络支持，甚至可以通过WebAssembly直接在浏览器中运行。",
+      "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "7531e31373ffd8b019c6a65722c07fbd813061f568d22da21bf5f842b794f907",
       "translationPending": false
     },
     {
@@ -79,54 +324,6 @@
         "virtual_jaguar_core"
       ],
       "contentHash": "0e23a26f754b83932f9afa7bc6821de5f8d1fb70b9336bae09b06ef313f737b9",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260905",
-      "title": "【Android更新】ARMSX2 nightly-20260905",
-      "originalTitle": "ARMSX2 nightly-20260905 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T12:21:20Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260905",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260905，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260905。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• EE建议:将FPU守卫的岛屿划入冷场\n• GameDB: 放下少林和尚的四舍五入模式\n• EE FPU:ULP达到整数模式3的根和对等根\n• EE FPU:在ULP达到整数的方式3下除单位\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260904...6e884f11f486bca258efd2470ac09ad4c36a5a4b",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- EE rec: outline the FPU guards' islands into the cold arena\n- GameDB: drop the Shaolin Monks divide rounding mode\n- EE FPU: root and reciprocal root at mode 3 where the ULP reaches an integer\n- EE FPU: divide unit at mode 3 where the ULP reaches an integer\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260904...6e884f11f486bca258efd2470ac09ad4c36a5a4b",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "53fa6832e7246f159c76a782cac68df7947534695bf713bae988e7c42c472c7b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T12:14:03Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 使用静态操作器( ) (Stenzek)（https://github.com/stenzek/duckstation/commit/31948bcb527af52b99721b4b278eb55e98febf2c）)\n• 修复通知/清单中的粘贴(Stenzek)（https://github.com/stenzek/duckstation/commit/084bc6fb3af8b553e6a87b6c7a15f9798afac76c）)\n• 略有改进,以跟踪汇总清单(Stenzek)（https://github.com/stenzek/duckstation/commit/1cafea4e5b3e4062beef78bb53d15ffd5382f4c9）)\n• 在游戏属性中添加 RA 游戏 ID( Stenzek)（https://github.com/stenzek/duckstation/commit/b91b9b247f9096762816fb6999b7bbad60296b5d）)\n• 添加样式来选择盘式对话框(Stenzek)（https://github.com/stenzek/duckstation/commit/c05866d2b1ec3f5bfb31c989314c7c0783718e8d）)\n• 不要将非敏感的用户偏好复制到游戏设置( Stenzek)（https://github.com/stenzek/duckstation/commit/ebc51ff0c1f90c2961c235fa8d109069e659387a）)\n• 重置设置时禁用后处理(Stenzek)（https://github.com/stenzek/duckstation/commit/f1f8ee79795a7f688cf5c93fe23e2d21f3d17579）)\n• 7544894: dep/rcheevos: 跳转到 e871ef5 (施腾泽克).",
-      "originalContent": "## Commits\n- Use static operator() ([Stenzek](https://github.com/stenzek/duckstation/commit/31948bcb527af52b99721b4b278eb55e98febf2c))\n- Fix padding in notifications/lists ([Stenzek](https://github.com/stenzek/duckstation/commit/084bc6fb3af8b553e6a87b6c7a15f9798afac76c))\n- Slight improvement to track summary list ([Stenzek](https://github.com/stenzek/duckstation/commit/1cafea4e5b3e4062beef78bb53d15ffd5382f4c9))\n- Add RA Game ID to game properties ([Stenzek](https://github.com/stenzek/duckstation/commit/b91b9b247f9096762816fb6999b7bbad60296b5d))\n- Add styling to select disc dialog ([Stenzek](https://github.com/stenzek/duckstation/commit/c05866d2b1ec3f5bfb31c989314c7c0783718e8d))\n- Don't copy non-sensitive user preferences to game settings ([Stenzek](https://github.com/stenzek/duckstation/commit/ebc51ff0c1f90c2961c235fa8d109069e659387a))\n- Disable post-processing when resetting settings ([Stenzek](https://github.com/stenzek/duckstation/commit/f1f8ee79795a7f688cf5c93fe23e2d21f3d17579))\n- 7544894: dep/rcheevos: Bump to e871ef5 (Stenzek)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "ff5298c0e891e5f22d1f1eccf81a9e084c55be0a23d5da492bd53c8433f6a11a",
       "translationPending": false
     },
     {
@@ -2667,30 +2864,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-gamenative-1-2-0",
-      "title": "【Android更新】GameNative 1.2.0",
-      "originalTitle": "GameNative 1.2.0 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-25T14:04:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/utkarshdalal/GameNative/releases/tag/v1.2.0",
-      "imageUrl": "asset://assets/emulators/gamenative.png",
-      "officialUrl": "https://github.com/utkarshdalal/GameNative",
-      "summary": "GameNative 发布 Android 新版本 1.2.0，发布日期为2026年08月25日。点击查看官方版本信息与更新说明。",
-      "content": "GameNative 已发布 Android 最新版本 1.2.0。\n\n发布日期：2026年08月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n下载\n• `gamenative-v1.2.0.apk` ——标准建设。 建议大多数用户使用。\n• `gamenative-v1.2.0-legacy-xr.apk` ——XR为查询头像所建。\n\n\n更新内容\n\n自预发后增加\n• 允许在容器可执行路径中输入.bat文件 https://github.com/utkarshdalal/GameNative/pull/1837\n• 修正自定义游戏回归 https://github.com/utkarshdalal/GameNative/pull/1844\n• 解决由@joshuatam公司默认启用的电能控制引起的问题 https://github.com/utkarshdalal/GameNative/pull/1845\n• 改进XR版的性能 https://github.com/utkarshdalal/GameNative/pull/1846\n• 增加新花圈、新花圈、新盒64、新花圈64 https://github.com/utkarshdalal/GameNative/pull/1847\n由@Nightwalker743 校对:Soup https://github.com/utkarshdalal/GameNative/pull/1784\n• 固定:由@joshuatam in https://github.com/utkarshdalal/GameNative/pull/1848\n• 在使用 Bionic Steam 进行校验后修复游戏中断 https://github.com/utkarshdalal/GameNative/pull/1856\n\n从释放前\n• 功率:在AYN、Retroid Pocket和三星设备中增加自动CPU/GPU的电能控制,减少热能、热力减速和功能消耗,由@joshuatam in https://github.com/utkarshdalal/GameNative/pull/1698\n• 大大加快外部储存装载速度 https://github.com/utkarshdalal/GameNative/pull/1779\n• 允许在Bionic Steam启用时,邀请用户使用Steam overlay的游戏 https://github.com/utkarshdalal/GameNative/pull/1783\n• Quest的修复 - 游戏可以在浸润模式下启动(提高性能),我们可以使用触摸控制器作为XBOX控制器由 @moi952 in https://github.com/utkarshdalal/GameNative/pull/1831\n• 固定ISfg-vk上的8个精英设备和其他装有帧盖的设备,使ISfg与电力管理部门合作 https://github.com/utkarshdalal/GameNative/pull/1819\n• 为GOG和Epic的外部存储固定安装游戏 https://github.com/utkarshdalal/GameNative/pull/1829\n• 需要EOS重叠(Eg FNAF入坑)的固定游戏 https://github.com/utkarshdalal/GameNative/pull/1829\n• 被多控制器更改所打破的固定控制器映射(长压重压按钮将按出原样) https://github.com/utkarshdalal/GameNative/pull/1829\n• 由@Nightwalker743 in 添加 app 社区配置浏览器 https://github.com/utkarshdalal/GameNative/pull/1782\n• 支持现代建筑上的自定义游戏,但不包括所有文件 https://github.com/utkarshdalal/GameNative/pull/1798\n• 由 @jmarti326 添加最爱标签 https://github.com/utkarshdalal/GameNative/pull/1712\n• 本地储蓄丢失的修复错误 https://github.com/utkarshdalal/GameNative/pull/1801\n• 修复游戏时间跟踪 https://github.com/utkarshdalal/GameNative/pull/1803\n• 优化下载性能,供外部存储,由@joshuatam in https://github.com/utkarshdalal/GameNative/pull/1785\n• 修正限制非直接游戏(如Balatro、Brotato)的fps https://github.com/utkarshdalal/GameNative/pull/1820\n• 通过@joshuatam加强无损失放大框架生成集成(防止冻结、保存存储空间) https://github.com/utkarshdalal/GameNative/pull/1822\n• 改进Odin 3的电源控制和系统计量, https://github.com/utkarshdalal/GameNative/pull/1824\n• 尊重Nexus Mods成人内容首选(将Nexus API添加回),由@Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1793\n• 增加默认屏幕大小检测和960p屏幕大小选项(e.g. @joshuatam at com. https://github.com/utkarshdalal/GameNative/pull/1730\n• 由@Nightwalker743在 https://github.com/utkarshdalal/GameNative/pull/1788\n• 将鼠标拖入被粉碎的时间由 @ Nightwalker743 in https://github.com/utkarshd…",
-      "originalContent": "## Downloads\r\n- **`gamenative-v1.2.0.apk`** — Standard build. Recommended for most users.\r\n- **`gamenative-v1.2.0-legacy-xr.apk`** — XR build for Quest headsets.\r\n\r\n\r\n## What's Changed\r\n\r\n### Added since prerelease\r\n* Allow .bat files in container executable path dropdown in https://github.com/utkarshdalal/GameNative/pull/1837\r\n* Fix custom games regression in https://github.com/utkarshdalal/GameNative/pull/1844\r\n* Fix issues due to power control being enabled by default by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1845\r\n* Improved performance in XR release in https://github.com/utkarshdalal/GameNative/pull/1846\r\n* Added new turnips, new fex, new box64, new wowbox64 in https://github.com/utkarshdalal/GameNative/pull/1847\r\n* Fix Open Container file copy crashes in Wine by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1784\r\n* fix: handle lateinit exception in power manager by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1848\r\n* Fix games breaking after verifying while using Bionic Steam in https://github.com/utkarshdalal/GameNative/pull/1856\r\n\r\n### From prerelease\r\n* feat: Add automatic CPU / GPU power control to AYN, Retroid Pocket and Samsung Devices, reduces heat, thermal throttling and power consumption by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1698\r\n* Significant speed up to external storage loading https://github.com/utkarshdalal/GameNative/pull/1779\r\n* Allow inviting users to games using Steam overlay when Bionic Steam enabled in https://github.com/utkarshdalal/GameNative/pull/1783\r\n* Fixes for Quest - games can launch in immersive mode (improving performance) and we can use touch controllers as XBOX controller by @moi952  in https://github.com/utkarshdalal/GameNative/pull/1831\r\n* Fixed lsfg-vk on 8 elite and other devices with frame capping, made lsfg work with the power management in https://github.com/utkarshdalal/GameNative/pull/1819\r\n* Fixed installing games on external storage for GOG and Epic in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Fixed games that require EOSOverlay (Eg FNAF Into the Pit) in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Fixed controller mapping that was broken by multicontroller changes (long-pressing remapped button would press the original) in https://github.com/utkarshdalal/GameNative/pull/1829\r\n* Add in-app community config browser by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1782\r\n* Support custom games on the modern build without all-files access in https://github.com/utkarshdalal/GameNative/pull/1798\r\n* Add favorites tab by @jmarti326 in https://github.com/utkarshdalal/GameNative/pull/1712\r\n* Fixed bug where local saves were lost in https://github.com/utkarshdalal/GameNative/pull/1801\r\n* Fix gametime tracking in https://github.com/utkarshdalal/GameNative/pull/1803\r\n* Optimize download performance for external storage by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1785\r\n* Fix fps limiting on non-directx games (eg Balatro, Brotato) in https://github.com/utkarshdalal/GameNative/pull/1820\r\n* Enhance Lossless Scaling Frame Generation (LSFG) integration (prevent freeze, save storage space) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1822\r\n* Improve power control and system metrics for Odin 3, add support for Retroid Pocket Nova, updated UX by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1824\r\n* Respect Nexus Mods Adult Content Preferences (to add back Nexus API) by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1793\r\n* Add default screen size detection and 960p screen size option (e.g. retroid pocket nova) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/1730\r\n* Fix touch D-pad remapping for shared-axis inputs by @Nightwalker743 in https://github.com/utkarshdalal/GameNative/pull/1788\r\n* Fix mouse dragging in Crushed in Time by @Nightwalker743 in https://github.com/utkarshd…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "gamenative"
-      ],
-      "contentHash": "a0a5baf58e7815c13c4e3a66386eed80ab74a3a88b78e977ba9555f6af7e28d7",
-      "translationPending": false
-    },
-    {
       "id": "136246",
       "title": "【家用机】KytyPS5 r260826",
       "originalTitle": "[Consoles de salon] KytyPS5 r260826",
@@ -4620,30 +4793,6 @@
         "noods"
       ],
       "contentHash": "e84cb9d1861eab95ac6f8b07dcb9eeadf0ddaee11bac6eae85ca417e2400cd42",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-melondualds-0-7-0",
-      "title": "【Android更新】WatermelonDS 0.7.0",
-      "originalTitle": "WatermelonDS 0.7.0 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-08T03:19:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/SapphireRhodonite/WatermelonDS/releases/tag/0.7.0",
-      "imageUrl": "asset://assets/emulators/watermelonds.png",
-      "officialUrl": "https://github.com/SapphireRhodonite/WatermelonDS",
-      "summary": "WatermelonDS 发布 Android 新版本 0.7.0，发布日期为2026年08月08日。点击查看官方版本信息与更新说明。",
-      "content": "WatermelonDS 已发布 Android 最新版本 0.7.0。\n\n发布日期：2026年08月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n这是一个非常特殊的发布。\n\n在瓜瓜DualDS名称下的多个发布候选人后,该项目现在正式更名为:\n\nWatermelonDS\n\n\n\n\n\n\n\n这是最后 0.7.0 首次公开发布 WatermelonDS 身份证明。\n\nWatermelonDS 保持与之前相同的目标:在Android上提供强大的任天堂DS模拟器体验,具有现代Android特性,RetroAchievements支持,Vulkan渲染,Shader su Pport, 和很多定制。\n\n这个发布包括一个新的名称, 一个更新的视觉身份, 一个大大改进的界面, RetroArch 遮蔽器预设横跨渲染器的支持,以及一个新的实验Vulkan特性,称为FastPath.\n\n---\n\n什么样的新事物\n\n一、导 言 这个项目现在 WatermelonDS\n\n模拟器现已从旧的瓜瓜DualDS名称完全移到 WatermelonDS.\n\n这包括:\n\n• 新的项目身份!\n• 新应用程序名称\n• 新的发射器图标\n• 更新的溅射屏幕\n• 更新应用程序视觉\n• 更新的UI风格\n\n这不仅仅是一个简单的名称更改。 目标是使该项目具有其自身的特性,同时继续发展。 melonDS Android 基础。\n\n---\n\n2. 国家 新用户界面\n\nWatermelonDS 0.7.0 包括一个主要的用户界面刷新。\n\n新界面的设计是为了感觉更清洁,更现代,更一致的跨应用程序。\n\n这包括下列改进:\n\n• New WatermelonDS 视觉风格\n• 最新主题\n• 新的设计标志\n• 提高视觉一致性\n• 更新图标和品牌\n• 改进ROM清单的列报\n• 继续架上更好的盒式艺术品使用\n• 缩放ROM图标,以更自然地填充卡片\n• 更新的逆向预测列报\n• 改善在环境中的账户和分数显示\n\n目标是使 WatermelonDS 感觉更加抛光和容易使用而不失去使模拟器具有灵活性的高级选项。\n\n---\n\n3. RetroArch 所有渲染器的阴影预设\n\n这是这个发行中最大的改进之一。\n\nWatermelonDS 现在支持 RetroArch 遮蔽器预设在所有渲染器上。\n\n这意味着阴影预设支持不再仅限于一个渲染路径。\n\n你现在可以使用 RetroArch- 风格的遮蔽器预设有可用的渲染器,使得最终图像更容易自定义,并获得你喜欢的视觉风格。\n\n对于喜欢的用户来说,\n\n• CRT型过滤器\n• 液晶显示器式遮阳器\n• 像素平滑\n• 颜色校正\n• 手持式演示\n• 自定义视觉预设\n\n沙德支持是使DS游戏在现代Android屏幕上,特别是在高分辨率手持设备以及外部显示器上看起来更好的重要组成部分。\n\n---\n\n4个 实验 Vulkan FastPath\n\nWatermelonDS 0.7.0 引入一个新的 Vulkan 特性,称为:\n\n快报\n\nFastPath旨在改进性能,特别是在使用更高内部分辨率时。\n\n在某些情况下,这可以帮助游戏在分辨率上跑得更快,例如:\n\n• 4x\n• 6x\n• 8x\n\n这对希望更高分辨率渲染,在功率较小的芯片上表现更好,或通过降低渲染overhe来提高电池效率的用户特别有用。 广告。\n\n然而,请仔细阅读:\n\nFastPath极具实验性。\n\nFastPath仍然处于非常早期的β状态。\n\n有许多已知和未知的bug,一些游戏可能。",
-      "originalContent": "## This is a very special release.\r\n\r\nAfter several release candidates under the **melonDualDS** name, the project is now officially renamed to:\r\n\r\n# WatermelonDS\r\n\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205316\" src=\"https://github.com/user-attachments/assets/4743d5c3-1331-49f9-8b9e-54e542040e8b\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205306\" src=\"https://github.com/user-attachments/assets/bb76defe-d347-48ed-82aa-afd5d4cb7c6d\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205118\" src=\"https://github.com/user-attachments/assets/b0fb3be2-2e11-499d-b53a-b2a6ac80ed2a\" />\r\n<img width=\"350\" height=\"300\" alt=\"Screenshot_20260807-205328\" src=\"https://github.com/user-attachments/assets/93c6b7d9-7ef4-4698-8f35-78b5c9bc458c\" />\r\n\r\n\r\nThis is the final **0.7.0** release and the first public release with the new WatermelonDS identity.\r\n\r\nWatermelonDS keeps the same goal as before: providing a powerful Nintendo DS emulator experience on Android, with modern Android features, RetroAchievements support, Vulkan rendering, shader support, and a lot of customization.\r\n\r\nThis release includes a new name, a refreshed visual identity, a much improved interface, RetroArch shader preset support across renderers, and a new experimental Vulkan feature called **FastPath**.\r\n\r\n---\r\n\r\n## What’s New\r\n\r\n### 1. The project is now WatermelonDS\r\n\r\nThe emulator has now fully moved from the old **melonDualDS** name to **WatermelonDS**.\r\n\r\nThis includes:\r\n\r\n- New project identity!!!\r\n- New app name\r\n- New launcher icon\r\n- Updated splash screen\r\n- Updated app visuals\r\n- Updated UI style\r\n\r\nThis is more than a simple name change. The goal is to give the project its own identity while continuing to build on top of the melonDS Android foundation.\r\n\r\n---\r\n\r\n### 2. New user interface\r\n\r\nWatermelonDS 0.7.0 includes a major UI refresh.\r\n\r\nThe new interface is designed to feel cleaner, more modern, and more consistent across the app.\r\n\r\nThis includes improvements such as:\r\n\r\n- New WatermelonDS visual style\r\n- Updated theme\r\n- New design tokens\r\n- Better visual consistency\r\n- Updated icons and branding\r\n- Improved ROM list presentation\r\n- Better box art usage in the continue shelf\r\n- ROM icons scaled to fill their cards more naturally\r\n- Updated RetroAchievements presentation\r\n- Improved account and score display in settings\r\n\r\nThe goal is to make WatermelonDS feel more polished and easier to use without losing the advanced options that make the emulator flexible.\r\n\r\n---\r\n\r\n### 3. RetroArch shader presets for all renderers\r\n\r\nThis is one of the biggest improvements in this release.\r\n\r\nWatermelonDS now supports **RetroArch shader presets across all renderers**.\r\n\r\nThis means shader preset support is no longer limited to only one rendering path.\r\n\r\nYou can now use RetroArch-style shader presets with the available renderers, making it easier to customize the final image and get the visual style you prefer.\r\n\r\nThis is great news for users who like:\r\n\r\n- CRT-style filters\r\n- LCD-style shaders\r\n- Pixel smoothing\r\n- Color correction\r\n- Handheld-style presentation\r\n- Custom visual presets\r\n\r\nShader support is an important part of making DS games look better on modern Android screens, especially on high-resolution handhelds and external displays.\r\n\r\n---\r\n\r\n### 4. Experimental Vulkan FastPath\r\n\r\nWatermelonDS 0.7.0 introduces a new Vulkan feature called:\r\n\r\n**FastPath**\r\n\r\nFastPath is designed to improve performance, especially when using higher internal resolutions.\r\n\r\nIn some cases, this can help games run much faster at resolutions such as:\r\n\r\n- 4x\r\n- 6x\r\n- 8x\r\n\r\nThis can be especially useful for users who want higher-resolution rendering, better performance on less powerful chips, or improved battery efficiency by reducing rendering overhead.\r\n\r\nHowever, please read this carefully:\r\n\r\n# FastPath is extremely experimental.\r\n\r\nFastPath is still in a very early beta state.\r\n\r\nThere are many known and unknown bugs, and some games may…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "melondualds"
-      ],
-      "contentHash": "b9ed704fa650f48ea27c3ec524153a81cd284862e6ce979f31e05a1167f3703f",
       "translationPending": false
     }
   ]
