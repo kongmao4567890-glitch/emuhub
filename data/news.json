@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-06T05:04:47.091794Z",
+  "generatedAt": "2026-09-06T15:44:42.118638Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T14:42:16Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•添加音频CD类型（ Stenzek（https://github.com/stenzek/duckstation/commit/4973361c5809178d77bcb7867290e9456dedaac4） ）\n•使PSF/音频CD无法访问游戏属性（ Stenzek（https://github.com/stenzek/duckstation/commit/00989b7ec8128e8fd0be9ca7d61c7da80a882795） ）",
+      "originalContent": "## Commits\n- Add AudioCD type ([Stenzek](https://github.com/stenzek/duckstation/commit/4973361c5809178d77bcb7867290e9456dedaac4))\n- Make game properties inaccessible for PSF/Audio CDs ([Stenzek](https://github.com/stenzek/duckstation/commit/00989b7ec8128e8fd0be9ca7d61c7da80a882795))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "738fb1551abefd9d7bf63474d40a0b6262af917d15791e53d34d966240dd0c3a",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-06T03:56:18Z",
+      "publishedAt": "2026-09-06T14:20:10Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 守备GBA州防漂流布局(Taoenwen)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Guard GBA state layout against drift (taoenwen)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 合并“主管”分公司 https://github.com/finalburnneo/FBNeo (链接c64)\n• Gab75(dinkc64)的gba更新",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Merge branch 'master' of https://github.com/finalburnneo/FBNeo (dinkc64)\n• gba update from gab75 (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,7 +54,121 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "97f57a66732476c2a84932a40427b89c142155feca21dec6bb1c32af0b87b2b3",
+      "contentHash": "1fcec23b176e96a1d09b73d0710b6e1cb8de2987de388831fe6389e2c0244cff",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-nightly-20260906-3",
+      "title": "【Android更新】ARMSX1 nightly-20260906.3",
+      "originalTitle": "ARMSX1 nightly-20260906.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T12:06:08Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260906.3",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260906.3，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260906.3。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
+      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "7fc7fb0b13938000bedfa2223c4e17accc7d629de9f475c930740d093849a112",
+      "translationPending": false
+    },
+    {
+      "id": "136657",
+      "title": "【家用机】Citron Neo (2026/09/06)",
+      "originalTitle": "[Consoles de salon] Citron Neo (2026/09/06)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T08:36:57Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136657-consoles-de-salon-citron-neo-2026-09-06/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/04/citron-neo-scaled.jpg",
+      "officialUrl": "https://github.com/citron-neo/CI",
+      "summary": "这是Lemon Switch仿真器的一个分叉，准确地从其开发停止的地方拾取。 变更内容： •来自MgeeeeK/FIX/normal-fence-and-binary-wakeup的合并拉取请求# 330 • vulkan ：唤醒所有二元围栏蜱虫服务员 • video_core ：以正常精度恢复早期围栏回调 •固定杂项",
+      "content": "这是Lemon Switch仿真器的一个分叉，准确地从其开发停止的地方拾取。\n\n变更内容：\n•来自MgeeeeK/FIX/normal-fence-and-binary-wakeup的合并拉取请求# 330\n• vulkan ：唤醒所有二元围栏蜱虫服务员\n• video_core ：以正常精度恢复早期围栏回调\n•固定杂项",
+      "originalContent": "Il s'agit d'un fork de l’émulateur Switch Citron, repris exactement à l’endroit où son développement s’était arrêté.\n\nLes changements:\n- Merge pull request #330 from MgeeeeK/fix/normal-fence-and-binary-wakeup\n- vulkan: wake all binary fence tick waiters\n- video_core: restore early fence callbacks at normal accuracy\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "citron_neo"
+      ],
+      "contentHash": "db65f4baff86e022248a1f0f6b83d3737c74a02dfe382235514b768f37fe9a01",
+      "translationPending": false
+    },
+    {
+      "id": "136654",
+      "title": "【家用机】MesenCE v2.2.1 r20260906",
+      "originalTitle": "[Consoles de salon] MesenCE v2.2.1 r20260906",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-06T08:31:58Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136654-consoles-de-salon-mesence-v2-2-1-r20260906/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/mesen-ce.png",
+      "officialUrl": "https://github.com/nesdev-org/MesenCE",
+      "summary": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。 MesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续 。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。",
+      "content": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。\nMesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续\n。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。这种向完全社区管理模式的过渡有助于更快地集成补丁、提高跨平台兼容性并添加新功能\ntES ，同时保持原始项目的卓越精神。\n\n变更内容：\n\nMesen正在成为MesenCE ，这是一个由SOUR和各种社区成员维护的社区版本。 所有开发都将在这个新的分叉中进行，因此只要Sour离开项目，它就可以继续进行。\n• NES ： Rainbow -更新CPU周期IRQ以匹配硬件行为(# 267)\n• GBA ：固定REG_KEYCNT读取字节交换(# 268)",
+      "originalContent": "Mesen Community Edition est un émulateur multi‑systèmes open‑source pour Windows, Linux et macOS, développé par la communauté à partir du projet Mesen2. Il vise une haute précision, une excellente compatibilité, et propose une interface moderne accompagnée d’outils avancés pour les joueurs comme pour les développeurs.\n\nNé initialement comme un fork pour pallier la mise en pause du développement de Mesen2 par son créateur original (Sour), MesenCE est désormais devenu la continuation officielle et exclusive du projet. Face à la dynamique communautaire, Sour a choisi de rejoindre activement l'équipe de MesenCE afin d'y centraliser tout le développement futur. Cette transition sous un modèle entièrement géré par la communauté permet d'intégrer plus rapidement les correctifs, d'améliorer la compatibilité multiplateforme et d'ajouter de nouvelles fonctionnalités, tout en préservant l’esprit d’excellence du projet d'origine.\n\nLes changements:\n\nMesen is becoming MesenCE, a Community Edition maintained by Sour and various community members. All development will occur in this new fork going forward so it can continue whenever Sour is away from the project.\n\n- NES: Rainbow - updated CPU cycle IRQ to match hardware behavior (#267)\n- GBA: Fixed REG_KEYCNT reading byte swapped (#268)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mesence_pc"
+      ],
+      "contentHash": "4b186bcc0d9be3ee2c315c08b204fe324d9a9cbd023eab08837e41dd5d6bdb83",
+      "translationPending": false
+    },
+    {
+      "id": "136651",
+      "title": "【工具】Turbo Stage v0.11",
+      "originalTitle": "[Utilitaires Multi-systemes] Turbo Stage v0.11",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-06T08:26:44Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136651-utilitaires-multi-systemes-turbo-stage-v0-11/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/04/Turbostage.png",
+      "officialUrl": "https://github.com/jberclaz/turbostage",
+      "summary": "这是DOSBOX Staging的前端。灵感来自FS-Uae-Launcher。",
+      "content": "这是DOSBOX Staging的前端。灵感来自FS-Uae-Launcher。",
+      "originalContent": "Il s'agit d'un frontend pour DOSBOX Staging. Il est inspiré par FS-Uae-Launcher.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "0e804138846a2ad415e0e10d5c9df497217a5e513b3af03d3c97b943feeee7c6",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-bachata_s4-0-2-1",
+      "title": "【Android更新】Bachata S4 0.2.1",
+      "originalTitle": "Bachata S4 0.2.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T08:10:59Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.2.1",
+      "imageUrl": "asset://assets/emulators/bachata_s4.png",
+      "officialUrl": "https://github.com/JICA98/Bachata-S4",
+      "summary": "Bachata S4 发布 Android 新版本 0.2.1，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "Bachata S4 已发布 Android 最新版本 0.2.1。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n预发布Bachata S4 v0.2.1",
+      "originalContent": "Pre-release of Bachata S4 v0.2.1",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "bachata_s4"
+      ],
+      "contentHash": "1f07180a561d52f61032eb631271d15285c1094b23584befb4e05e9985e00bbe",
       "translationPending": false
     },
     {
@@ -58,30 +196,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-06T02:39:55Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 如果设备初始化失败, 解决罕见的崩溃( Stenzek)（https://github.com/stenzek/duckstation/commit/5aeeb72e6e357be9381e4386bed8fb7577180e6e）)\n• 确保pcdrv_root为本地路径(Stenzek)（https://github.com/stenzek/duckstation/commit/0d33bd17776cfec46a2237a46f57081459ed0b13）)",
-      "originalContent": "## Commits\n- Fix rare crash if device initialization fails ([Stenzek](https://github.com/stenzek/duckstation/commit/5aeeb72e6e357be9381e4386bed8fb7577180e6e))\n- Ensure pcdrv_root is a native path ([Stenzek](https://github.com/stenzek/duckstation/commit/0d33bd17776cfec46a2237a46f57081459ed0b13))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "1a372143d0c38fe7884faa2fa9cf324d4e4d114e5fa88ac551f6ed27a4c9cacf",
-      "translationPending": false
-    },
-    {
       "id": "android-release-armsx2-nightly-20260906",
       "title": "【Android更新】ARMSX2 nightly-20260906",
       "originalTitle": "ARMSX2 nightly-20260906 Android release",
@@ -94,15 +208,15 @@
       "imageUrl": "asset://assets/emulators/armsx2.png",
       "officialUrl": "https://github.com/ARMSX2/ARMSX2",
       "summary": "ARMSX2 发布 Android 新版本 nightly-20260906，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260906。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,一个4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• GS/TC:保持16位的彩色目标更新不显示彩色->彩色bpp\n• GS/TC:纠正-签署-比较警告。\n• GS/HW:大号ST重写顶点。\n• GS/HW:改进源渠道对源头检索的要求\n• GS:HW:用FBMask遮掩ROV频道。\n• GS:HW:减少最高值。\n• GS/HW:将深度变暗器更新为底值\n• GS/HW:在目标更新忽略双线的情况下纠正回归\n• GS/TC:更新24bit目标阿尔法通道是脏的\n• GS/TC: GPU CLUT纹理严重错位\n• GS/TC:发现α信道宽度不匹配\n• GS/HW:在使用CSBW时考虑FBMSK组合\n• GS/HW:改进本地缩放递归绘图检查\n• GS/HW/NS:检测假双线裂变效应\n• GameDB: 添加需要的 GameDB 条目\n• GS/HW:改进“分离”模糊效应检测和处理\n• GS/HW:对轻度降级的原生放大探测和回信\n• GS/DX11:DS作为RT/UAV约束性修正。\n• GS:两个显示电路都停用时输出BGCOLOR\n• GS:清除遗留的仪器\n• GS:说出了哪个制造器\n• 一般事务人员:将抽取账簿放回上游\n• GS:放下绘图包标记\n• 自由:说出ARMSX2_USE_BUNDLED_SHADERC实际上在做什么\n• GS/HW:放弃α位已知来源和侵蚀普查\n• 自由:通过前端翻转,因为核心没有马达\n• GS/Vulkan:放下GPU等待账单\n• GS/Vulkan:缩小向一个横幅字段报告的串流内存\n• GS/Vulkan:减少流线冲洗统计\n• Gsrunner:降下变种旗帜\n• GS:放下制造器身份旗帜\n• GS:减少每帧字节普查\n• GS:删除前端解码记录器\n• 常见情况:离开PMU柜台作为主人拥有的柜台\n• gsrunner:评分脚本从树上移出\n• GS/SW: GSDepthWalk.h 包括它使用的定义\n• GS:重新审查后续行动\n• Libretro:连接荫影和树枝 JNI呼叫Android核心\n• 检查-msvc-文件列表:不接收任何封面覆盖项目\n• 放弃从两个驱动程序-工作方评论中引用的私语路径\n• 添加 SPDX 标题到 tools/rig/doctor.sh\n• 丢弃重复的 ClInclude 条目 ps2/eeHwTraceLog.inl\n• 在构建文件名单上登记8个净新一般事务/输入信头\n• GS:这个分支未格式化的两行线条格式\n• 一般事务人员:说明为什么自动浮动级别现在为每名降级者\n• GS:在中记录复刊前填写的包装标签不得发出\n• GS:拒绝无法与CPU扩展相匹配的GPU调色板道路\n• GS:新档案上一条版权持有人线\n• GS:删除残废的GSClut:阅读\n• GS:使解码记录器武装旗帜原子和通知书写失败\n• GS:重播 \" QOWERT \" 已运出\n• GS:说明前端解码记录器是什么\n• 一般事务:在评论中说明理由,而不是引用无人查阅的档案\n• GS: 放下只写 m_upload_writes_whole_rect旗\n• GS:将NaN-Q固定在NOP加载的三进制中\n• GS/SW:标定三项纹理规则\n• GS/SW:将ARM64区块光标硬码标定在 dw 上\n• GS/SW:只关闭此绘图打开的绘图行\n• GS/SW:删除深层飞机输出无声呼叫\n• GS/SW:保持......",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GS/TC: keep the 16-bit colour target update off the Color->Color bpp assert\n- GS/TC: Fix -Wsign-compare warning.\n- GS/HW: Rewrite vertices if large ST.\n- GS/HW: Improve source channel requirements for source lookups\n- GS:HW: Do ROV channel masking with FBMask.\n- GS:HW: Reduce primid max value.\n- GS/HW: Update depth conversion shader to floor value\n- GS/HW: Fix regression where target updates ignored bilinear\n- GS/TC: Update alpha channel of 24bit target is alpha is dirty\n- GS/TC: Disallow badly misaligned GPU CLUT textures\n- GS/TC: Detect alpha channel source width mismatches\n- GS/HW: Consider FBMSK combos when using CSBW\n- GS/HW: Improve Native Scaling recursive draw check\n- GS/HW/NS: Detect fake bilinear jiggle effect\n- GameDB: Add required GameDB Entries\n- GS/HW: Improve \"jiggle\" blur effect detection and handling\n- GS/HW: Native Scaling detection of mild downscale and write back\n- GS/DX11: DS as RT/UAV binding fixes.\n- GS: Output BGCOLOR when both display circuits are disabled\n- GS: tidy what the instrumentation removal left behind\n- GS: say which renderer came up\n- GS: put the draw-log ledger back to its upstream shape\n- GS: drop the draw-log packet mark\n- libretro: say what ARMSX2_USE_BUNDLED_SHADERC is actually doing\n- GS/HW: drop the alpha known-bits provenance and erosion census\n- libretro: rumble through the frontend, since the core owns no motors\n- GS/Vulkan: drop the GPU wait bills\n- GS/Vulkan: trim the stream-ring memory reporting to one banner field\n- GS/Vulkan: drop the stream-ring flush statistics\n- gsrunner: drop the -variant flag\n- GS: drop the renderer identity banner\n- GS: drop the per-frame byte census\n- GS: remove the front-end decode recorder\n- common: leave the PMU counters as master has them\n- gsrunner: the scoring scripts move out of the tree\n- GS/SW: GSDepthWalk.h includes the definitions it uses\n- GS: re-review follow-ups\n- libretro: link shaderc and stub the JNI calls on the Android core\n- check-msvc-filelist: accept None items for header coverage\n- Drop private-doc path citations from two driver-workaround comments\n- Add SPDX header to tools/rig/doctor.sh\n- Drop duplicate ClInclude entry for ps2/eeHwTraceLog.inl\n- Register eight net-new GS/Input headers in the build file lists\n- GS: clang-format the two lines this branch left unformatted\n- GS: say why the auto-flush level is per-renderer now\n- GS: a packed tag finished by the mid-record resume must not be dispatched\n- GS: refuse the GPU palette road where it cannot match the CPU expansion\n- GS: one copyright holder line on the new files\n- GS: delete the disabled GSClut::Read\n- GS: make the decode recorder's arming flag atomic and notice write failures\n- GS: ReplayPackedQword has a shipped caller now\n- GS: describe the front-end decode recorder as what it is\n- GS: state the rationale in the comments instead of citing files nobody has\n- GS: drop the write-only m_upload_writes_whole_rect flag\n- GS: apply the NaN-Q fix-up in the NOP-padded packed triple\n- GS/SW: pin the three texture rules nothing was testing\n- GS/SW: pin the dw stride the ARM64 block cursor hard-codes\n- GS/SW: only close a draw-log row this draw opened\n- GS/SW: delete the depth-plane export nothing calls\n- GS/SW: keep an…",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260906。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• 自由:说出ARMSX2_USE_BUNDLED_SHADERC实际上在做什么\n• 自由:从前端翻来翻去,因为核心没有马达\n• Libretro:连接荫影和树接 JNI呼叫Android核心\n• 自由:建造没有Oboe的Android核心\n• 自由:在GL渲染器和肾上腺工具没有的地方建立核心\n• 自由:让操作系统回答主机无法操作的元数据,并停止支付两次\n• 自由:采用VFS版本,而不是它声称的版本\n• CMake:纠正探测-操作-系统中的Android分支注释\n• cake:附件 sripyuv 而不是覆盖 Webp 的链接界面\n• 自由:放下重复的ARMSX2_LIBRETRO定义\n• Libretro:审查修正——精确的文件大小,主机mkdir,VFS版本,GL风味\n• Libretro:审查修正 - Vulkan包括订单,Android页面大小,没有x86_64工作\n• Libretro:为Android(arm64-v8a)建造核心\n• 自由:为macOS建立核心(arm64)\n• Libretro:修补建机 Linux 的工作\n• Libretro:让核心通过前端的GL上下文渲染\n• Libretro:使用前端虚拟文件系统\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260905...90e0c882075a6bce75437ccd6d90ecac7969b206",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- libretro: say what ARMSX2_USE_BUNDLED_SHADERC is actually doing\n- libretro: rumble through the frontend, since the core owns no motors\n- libretro: link shaderc and stub the JNI calls on the Android core\n- libretro: build the Android core without Oboe\n- libretro: build the core where the GL renderer and adrenotools are not\n- libretro: let the OS answer metadata the host cannot, and stop paying twice\n- libretro: take the VFS version the frontend accepted, not the one it claims\n- cmake: correct the Android branch comment in detect_operating_system\n- cmake: append sharpyuv rather than overwrite webp's link interface\n- libretro: drop the duplicate ARMSX2_LIBRETRO define\n- Libretro: review fixes - exact file sizes, host mkdir, VFS version, GL flavour\n- Libretro: review fixes - Vulkan include order, Android page size, no x86_64 job\n- Libretro: build the core for Android (arm64-v8a)\n- Libretro: build the core for macOS (arm64)\n- Libretro: fix the buildbot Linux jobs\n- Libretro: let the core render through the frontend's GL context\n- Libretro: use the frontend's virtual file system\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260905...90e0c882075a6bce75437ccd6d90ecac7969b206",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx2"
       ],
-      "contentHash": "04a32108e2e448f6e4900df12a226587aff93647487a02384106c8d5a19a9df6",
+      "contentHash": "495341a57455bb6a05742b57a0c3c99bda5ad04c75a24bf6c8ce72568cec7047",
       "translationPending": false
     },
     {
@@ -148,30 +262,6 @@
         "xemu"
       ],
       "contentHash": "553dbe96310a317d86bc0b3183b388116632c4bc51c76382baa72cd6d616b7f0",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx1-nightly-20260905-2",
-      "title": "【Android更新】ARMSX1 nightly-20260905.2",
-      "originalTitle": "ARMSX1 nightly-20260905.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T21:39:34Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260905.2",
-      "imageUrl": "asset://assets/emulators/armsx1.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 nightly-20260905.2，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260905.2。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n从 cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx1"
-      ],
-      "contentHash": "a4f1ecd4716768c6f35c520a4904fcad5dd7087bf815f2505ad3f6a3e05ce190",
       "translationPending": false
     },
     {
@@ -264,14 +354,14 @@
     },
     {
       "id": "136630",
-      "title": "【家用机】Gecko r20260905",
-      "originalTitle": "[Consoles de salon] Gecko r20260905",
+      "title": "【家用机】Gecko r20260906",
+      "originalTitle": "[Consoles de salon] Gecko r20260906",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-05T16:39:48Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136630-consoles-de-salon-gecko-r20260905/",
+      "sourceUrl": "https://www.emu-france.com/news/136630-consoles-de-salon-gecko-r20260906/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/gecko.png",
       "officialUrl": "https://github.com/ioncodes/gecko",
       "summary": "Gecko是任天堂GameCube和Wii的现代跨平台模拟器和调试器，完全使用Rust语言开发。 该项目由单人开发商设计，没有与不可错过的Dolphin竞争的目标，仍在开发中，可能存在不兼容性，具体取决于游戏。 从技术上讲，它使用基于Cranelift的即时重新编译器，并依靠现代WGPU API进行图形渲染，这也允许将其编译为WebAssembly ，以便直接在Web浏览器中运行。",
@@ -279,7 +369,7 @@
       "originalContent": "Gecko est un émulateur et débogueur multiplateforme moderne de Nintendo GameCube et Wii, entièrement développé en langage Rust.\n\nConçu par un développeur solo sans l'objectif de concurrencer l'incontournable Dolphin, ce projet est encore en cours de développement et peut présenter des incompatibilités selon les jeux.\nTechniquement, il utilise un recompilateur à la volée basé sur Cranelift et s'appuie sur l'API moderne WGPU pour son rendu graphique, ce qui lui permet également d'être compilé en WebAssembly pour tourner directement dans un navigateur web.\n\nEn plus de lire les formats ISO, RVZ ou ZIP et de gérer les sauvegardes Wii, il se distingue par des outils très poussés pour le reverse engineering, incluant une interface de débogage élégante en egui, le support de scripts Lua et une boîte à outils pour analyser le code et les fichiers des jeux.\n\nChangelog / Grandes lignes\n\n- Fixed many games\n- Savestates\n- Freecam",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "6fbaf1e081bd46ab82f99f7b62bbbe6201210bd15c93b7b7ee0cab896028e3be",
+      "contentHash": "632bcfca7868acde899d84da0eb7d91ba18282d7512a17dec1d5209811ed1c19",
       "translationPending": false
     },
     {
@@ -376,14 +466,14 @@
     },
     {
       "id": "136622",
-      "title": "【其他】NgpCraft Emulator v3.5",
-      "originalTitle": "[Consoles portables] NgpCraft Emulator v3.5",
+      "title": "【其他】NgpCraft Emulator v3.6",
+      "originalTitle": "[Consoles portables] NgpCraft Emulator v3.6",
       "category": "other",
       "categoryLabel": "其他",
       "kind": "emulator",
       "publishedAt": "2026-09-05T10:22:14Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136622-consoles-portables-ngpcraft-emulator-v3-5/",
+      "sourceUrl": "https://www.emu-france.com/news/136622-consoles-portables-ngpcraft-emulator-v3-6/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/NgpCraft.png",
       "officialUrl": "https://github.com/Tixul/Ngpcraft_emulator",
       "summary": "Ngpcraft是一款Neo Geo Pocket和Neo Geo Pocket Color模拟器，将原生C + +心脏的速度与PyQt6 GUI的优雅相结合。它的引擎经过精心校准到原始硬件，调整每个微处理器周期和闪存访问时间，用于Densha等自主时钟游戏 Go终于以每秒30帧的速度拍摄了。 得益于带有封面缩略图的动态库、高级搜索、按游戏时间排序和收藏夹管理，游戏体验特别整洁 。",
@@ -393,7 +483,7 @@
       "relatedEmulatorIds": [
         "ngpcraft_pc"
       ],
-      "contentHash": "d6f73c7c1680ec899088a31d27d738887e77745725e7bf7e752ae13ed8fab1f1",
+      "contentHash": "62b205065b8dfecdc0a8f33c8bebccbe3f43c4e89003c6b4c303e28e205819b1",
       "translationPending": false
     },
     {
@@ -2166,30 +2256,6 @@
         "pcsx2_pc"
       ],
       "contentHash": "904e230a081a51434b756e3e4a6a5521f3b55b3b4502d594128c5bd3fbc67653",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-bachata_s4-0-1-8",
-      "title": "【Android更新】Bachata S4 0.1.8",
-      "originalTitle": "Bachata S4 0.1.8 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T07:43:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.1.8",
-      "imageUrl": "asset://assets/emulators/bachata_s4.png",
-      "officialUrl": "https://github.com/JICA98/Bachata-S4",
-      "summary": "Bachata S4 发布 Android 新版本 0.1.8，发布日期为2026年08月29日。点击查看官方版本信息与更新说明。",
-      "content": "Bachata S4 已发布 Android 最新版本 0.1.8。\n\n发布日期：2026年08月29日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n游戏兼容性和模拟修复\n• 雪车:\n• 通过优雅地处理GfxEop IrqC替换,解决启动崩溃(133出)问题。\n• 游戏省略清晰的scePad Open呼叫时自动打开垫上下文。\n• 通过同步调用提供用户服务登录状态。\n• 混合剪辑/剪辑限制为8,并绘制了预留的GCN异构模式(5-7 ~ 16),以避免司机坠毁。\n• TMNT:许瑞德的复仇:\n• 安全远离主机usrstack的磁带客串。\n• 增加libSceMouse初始化的无参数容忍度。\n——转发网络平台(NP)状态回调跨越FEX宾客边界。\n· 已退休的扫描标签正确无误,因此WaitVoLabel同步而不拖延。\n• 龙王冠和血源性能地面工作:\n^ 在 libSceLibcInternal 下注册的cxa_guardQQ符号,以解决 C++ 运行时间初始化摊位。\n• 通过嘉宾CPU边界路由字体分配和libc字符串常规。\n• 在BACHATA_FEXHLE_TRACE后面减少FEX桥面和门式动词HLE记录。\n\n──────\n* 核心和高层次模块\n\n• libSceJpegDec:为软件JPEG解码添加了完整的高级模组(HLE)模块。\n• AVPlayer改进:执行缓冲歇斯底里,帧计数,以及用于更平滑游戏中视频回放的定界诊断。\n• USB / 周边子系统:为 libSceUsbd 事件环路添加了无文本安全警卫。\n• Kernel & Synchronization:清理了semaphore超时处理,加强了线程堆栈管理,并确保了InitHLELibs前的安全内核时间查询。\n• FIOS2:添加了对灵活FIOS2文件系统I/O模块选择的支持。\n──────\n& UI 增强\n\n• 家屏幕快捷键和直接游戏启动:\n• 支持将安装的游戏快捷键直接插入Android家用屏幕。\n• 添加直接发射的意图,从发射器直接跳入游戏。\n• 景观两板设置\n• 用专用导航铁路(SettingsRail)重新设计景观中的设置屏幕,并拆分选项框。\n• 为设置添加了完整的游戏板导航和游戏杆轴映射。\n• 删除多余的后键和景观头,从而简化UI染色体。\n• 运动控制器(气体和加速仪):\n• 为倾斜/陀螺支持的游戏将综合电话运动传感器映射到DualShock 4运动快照协议中。\n• 固定的触摸线覆盖触摸事件路线,以适当传递控制器输入给客人。\n\n──────\n& 图形管道\n\n• 添加遗存顶点属性回落路径。\n• 扩大取样器描述和图像信息存储限制,以消除描述表外溢。\n• 添加互换链初始化追踪和自动诊断截图触发器。\n\n来源和历史下载\n\nARM64模拟器核心源 : https://github.com/zenithblue-oss/shadps4-arm64\n\n• bachatas4-0.1.8-release.apk ——历史下载:1941年。",
-      "originalContent": "### 🎮 Game Compatibility & Emulation Fixes\n- **SnowRunner:**\n  - Resolved startup crash (exit 133) by handling GfxEop IrqC replacement gracefully.\n  - Automatically open pad contexts when games omit explicit scePadOpen calls.\n  - Deliver UserService login state via asynchronous callbacks.\n  - Clamped combined clip/cull limit to 8 and mapped reserved GCN anisotropic modes (5–7 → 16) to avoid driver crashes.\n- **TMNT: Shredder's Revenge:**\n  - Mapped guest pthread stacks safely away from host usrstack.\n  - Added null-parameter tolerance for libSceMouse initialization.\n  - Forwarded Network Platform (NP) state callbacks across the FEX guest boundary.\n  - Retired scanout labels properly so WaitVoLabel syncs without stalling.\n- **Dragon's Crown & Bloodborne Performance Groundwork:**\n  - Registered __cxa_guard_* symbols under libSceLibcInternal to resolve C++ runtime initialization stalls.\n  - Routed font allocations and libc string routines through the guest CPU boundary.\n  - Reduced FEX bridge overhead and gated verbose HLE logging behind BACHATA_FEX_HLE_TRACE.\n\n──────\n### 🚀 Core & HLE Modules\n\n- libSceJpegDec: Added full High-Level Emulation (HLE) module for software JPEG decoding.\n- AVPlayer Improvements: Implemented buffering hysteresis, frame counting, and bounded diagnostics for smoother in-game video playback.\n- USB / Peripheral Subsystem: Added null-context safety guards for libSceUsbd event loops.\n- Kernel & Synchronization: Cleaned up semaphore timeout handling, enhanced thread stack management, and ensured safe kernel time queries before InitHLELibs.\n- FIOS2: Added support for flexible FIOS2 filesystem I/O module selection.\n──────\n### 📱 Android Experience & UI Enhancements\n\n- Home Screen Shortcuts & Direct Game Launch:\n  - Support pinning installed game shortcuts directly to the Android home screen.\n  - Added direct launch intents to jump straight into games from the launcher.\n- Landscape Two-Panel Settings UI:\n  - Redesigned the settings screen in landscape with a dedicated navigation rail (SettingsRail) and split options pane.\n  - Added full gamepad navigation and joystick axis mapping for settings.\n  - Streamlined UI chrome by removing redundant back buttons and landscape headers.\n- Motion Controls (Gyro & Accelerometer):\n  - Integrated phone motion sensors mapped into the DualShock 4 motion snapshot protocol for tilt/gyro-supported games.\n  - Fixed touch overlay touch-event routing to properly pass controller inputs to the guest.\n\n──────\n### 🖼️ Vulkan & Graphics Pipeline\n\n- Added legacy vertex attributes fallback path.\n- Expanded sampler descriptor and image info storage limits to eliminate descriptor table overflows.\n- Added swapchain initialization tracing and automatic diagnostic screenshot triggers.\n\n### Source and historical downloads\n\nARM64 emulator core source: https://github.com/zenithblue-oss/shadps4-arm64\n\n- bachatas4-0.1.8-release.apk — Historical downloads: 1941",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "bachata_s4"
-      ],
-      "contentHash": "ec057c98c1494f3c2d2bc1ee964c72218d0c0c3a98a9fa1802ae593d76cd5a06",
       "translationPending": false
     },
     {
