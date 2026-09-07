@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-06T15:44:42.118638Z",
+  "generatedAt": "2026-09-07T05:12:09.167245Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,27 @@
   },
   "articles": [
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
+      "id": "android-release-armsx3-0-9-7-1",
+      "title": "【Android更新】ARMSX3 0.9.7.1",
+      "originalTitle": "ARMSX3 0.9.7.1 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-06T14:42:16Z",
+      "publishedAt": "2026-09-07T04:07:43Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•添加音频CD类型（ Stenzek（https://github.com/stenzek/duckstation/commit/4973361c5809178d77bcb7867290e9456dedaac4） ）\n•使PSF/音频CD无法访问游戏属性（ Stenzek（https://github.com/stenzek/duckstation/commit/00989b7ec8128e8fd0be9ca7d61c7da80a882795） ）",
-      "originalContent": "## Commits\n- Add AudioCD type ([Stenzek](https://github.com/stenzek/duckstation/commit/4973361c5809178d77bcb7867290e9456dedaac4))\n- Make game properties inaccessible for PSF/Audio CDs ([Stenzek](https://github.com/stenzek/duckstation/commit/00989b7ec8128e8fd0be9ca7d61c7da80a882795))",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.7.1",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.7.1，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.7.1。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n恢复0.9.6的GOW3/提升性能",
+      "originalContent": "Restores GOW3/Ascension performance to 0.9.6",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
-        "duckstation"
+        "armsx3"
       ],
-      "contentHash": "738fb1551abefd9d7bf63474d40a0b6262af917d15791e53d34d966240dd0c3a",
+      "contentHash": "fcc8f23911377a4cc819aeb00dfeaa54ff9d4932b548f0db870f596d90db8144",
       "translationPending": false
     },
     {
@@ -39,14 +39,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-06T14:20:10Z",
+      "publishedAt": "2026-09-07T03:36:06Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 合并“主管”分公司 https://github.com/finalburnneo/FBNeo (链接c64)\n• Gab75(dinkc64)的gba更新",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Merge branch 'master' of https://github.com/finalburnneo/FBNeo (dinkc64)\n• gba update from gab75 (dinkc64)",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 燃烧器:将堆叠的溢出物加长的罗姆名(taoenwen)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• burner: fix stack overflow on load with long rom names (taoenwen)",
       "platforms": [
         "android"
       ],
@@ -54,7 +54,144 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "1fcec23b176e96a1d09b73d0710b6e1cb8de2987de388831fe6389e2c0244cff",
+      "contentHash": "b400fac784c600b5d5d3fb33795cc9d0427d06a501625015dcfc685e2890d574",
+      "translationPending": false
+    },
+    {
+      "id": "136670",
+      "title": "【工具】ZeuX v0.1.7",
+      "originalTitle": "[Utilitaires Multi-systemes] ZeuX v0.1.7",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-06T21:18:07Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136670-utilitaires-multi-systemes-zeux-v0-1-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/zeux.png",
+      "officialUrl": "https://github.com/DougCristiano/ZeuX",
+      "summary": "ZeuX是一个现代化的轻量级前端，旨在将整个模拟体验集中在单个界面中。它可以对不同控制台的ROM进行分组，并通过可用的主模拟器启动它们，从而避免多个程序、文件夹和配置之间的混乱 ZeuX旨在快速、直观和视觉上整洁，提供一体化的仿真方法，旨在提供简单且立即可用的体验。该项目完全免费，仍处于早期开发阶段。",
+      "content": "ZeuX是一个现代化的轻量级前端，旨在将整个模拟体验集中在单个界面中。它可以对不同控制台的ROM进行分组，并通过可用的主模拟器启动它们，从而避免多个程序、文件夹和配置之间的混乱\nZeuX旨在快速、直观和视觉上整洁，提供一体化的仿真方法，旨在提供简单且立即可用的体验。该项目完全免费，仍处于早期开发阶段。",
+      "originalContent": "ZeuX est un frontend moderne et léger conçu pour centraliser toute l'expérience d'émulation dans une interface unique. Il permet de regrouper les ROMs de différentes consoles et de les lancer à travers les principaux émulateurs disponibles, évitant ainsi de jongler entre plusieurs programmes, dossiers et configurations. Conçu pour être rapide, intuitif et visuellement soigné, ZeuX propose une approche tout-en-un de l'émulation, avec pour objectif de fournir une expérience simple et immédiatement utilisable. Le projet est entièrement gratuit et se trouve encore à un stade précoce de développement.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "97d285f865a69ed14ddd7cb01fdb0c07358c6e0a2fac423b6f6669f04a26f7b1",
+      "translationPending": false
+    },
+    {
+      "id": "136667",
+      "title": "【电脑】WinUAE (Public Beta) v6.1.0 Beta 13",
+      "originalTitle": "[Ordi.] WinUAE (Public Beta) v6.1.0 Beta 13",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T21:07:24Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136667-ordi-winuae-public-beta-v6-1-0-beta-13/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/09/winuae.png",
+      "officialUrl": "http://eab.abime.net",
+      "summary": "优秀的WinUAE的最新公测版本， Commodore Amiga仿真器。 译文由Tradu-France签名。 这里的变化。",
+      "content": "优秀的WinUAE的最新公测版本， Commodore Amiga仿真器。 译文由Tradu-France签名。\n\n这里的变化。",
+      "originalContent": "La dernière version béta publique de l'excellent WinUAE, l'émulateur Commodore Amiga. La traduction est signée Tradu-France.\n\nLes changements ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "winuae_pc"
+      ],
+      "contentHash": "e91c4d638b37277b42d758256763c860e7ec6adfcac6e4275cb0bb16e2e5ba01",
+      "translationPending": false
+    },
+    {
+      "id": "136665",
+      "title": "【电脑】Copperline v0.19.0",
+      "originalTitle": "[Ordi.] Copperline v0.19.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T21:04:46Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136665-ordi-copperline-v0-19-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
+      "officialUrl": "https://copperline.dev/",
+      "summary": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确） 。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "content": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确）\n。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "copperline_pc"
+      ],
+      "contentHash": "5c17c3a7b3dc007faaf4def2370d6c063364eacd4989755494431b4d8bd06c1f",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-xenra_og-0-4-0",
+      "title": "【Android更新】Xenra 0.4.0",
+      "originalTitle": "Xenra 0.4.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T18:53:12Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Yebot32/xenra/releases/tag/v0.4.0",
+      "imageUrl": "asset://assets/emulators/xenra.png",
+      "officialUrl": "https://github.com/Yebot32/xenra",
+      "summary": "Xenra 发布 Android 新版本 0.4.0，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "Xenra 已发布 Android 最新版本 0.4.0。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nXenra 0.4.0\n\n[帕特伦]（https://img.shields.io/badge/Patreon-Support_on_Patreon-FF424D?style=for-the-badge&logo=patreon）](https://www.patreon.com/cw/Xanite/membership)\n\nXenra 0.4.0 带来主线程响应传出, 自定义 Vulkan 驱动程序支持 Exynos (马里) 设备, 实验时间框架生成, FATX 保存流线, 以及合并 联 合 国 Xenra 进入一个自由的建筑。\n\n---\n\n升级通知\n\n• 直接安装:安装 Xenra 0.4.0 直接覆盖您已有的绿色安装。 不要先卸载, 否则您的配置、 配置文件及阴影缓存将被删除。\n• 黄金版 停止:黄金已退役 0.4.0. 安装绿色( E)`Ali.Xanite.green`)将同时安装Gold. 黄金数据在您设备上仍然完好无损,但在Green上需要一次性设置(选择BIOS,游戏路径,以及授予存储权限).\n\n---\n\n要点\n\n接口和响应性\n• 触摸和D-Pad导航:触摸目标分辨率推迟到 `ACTION_UP` 不走全景树。 D-pad 导航消除了每个按压的~170文件系统探测器进行即时库滚动。\n• 背景日志分析: `xe.log` 解析 崩溃日志检查 墓碑读取完全从主线上移出 跨越库和设置屏幕。\n• Game Data & HUD:用于保存文件夹的目录行走,CPU/热读功能HUD样本在没有UI stutter的专用背景道上进行性能。\n^ 零定位动画: Glow取景动画师使用已分解的,以生命周期为约束的缓存梯度,去除连续的vsync内存分配。\n· 冷起步优化:IPC许可回转从5个下至1个倒闭, `/proc/self/maps` 解析已移到背景线程。\n\n核心修补内存( M)\n• FATX 保存导入流:将导入流以 1 MiB 块来保存,而不是分配完整的内存。 超过4个 GiB FATX 限制的文件在转移前被干净地拒绝。\n• JIT Lock & Leak Fix:在提示缓存自动保存时写出闪光 `mmap_lock` (消除中场微站),并解决了~3 MB会话内存出漏。\n• Boot & Lifecycle Guarding:在内部同步纹理的通过使锁能阻止靴子上出现黑色/错误的帧闪光,并阻止方向变化上的双载。\n• 清洁出厂:在应用程序出厂时发出禁止无害的SDL线条撕裂警报,消除幻影 \"Xenra 坠毁的\"土司。\n\n自定义 GPU 驱动程序生成和框架\n• Exynos(马里)支助:Qualcomm KGSL检查不再开启自定义Vulkan司机装载(`/dev/kgsl-3d0`) (中文(简体) ). 马里装置(`/dev/mali`)现在可以装入社区驱动程序ZIP和每场游戏的覆盖。\n• 临时动能预测:添加实验运动矢量预测模式(默认关闭),以稳定快锅和平地地期间的帧生成。 切换通过亚行直播而不重启:\n`adb shell setprop debug.xanite.fg_temporal_pred 1` (1 = On, 0 = Off)\n• 驱动卡 UI:简化了GPU驱动卡,以显示活动的运行时驱动程序状态而无需运行日志解析操作。\n\nNetplay & UI 波兰语\n• Netplay Transport Bootstrap:固定的HTTPS在靴子上自动初始化为靴子拖放,而不是需要诊断屏幕。\n• 清理 Xbox OG 上下文菜单:原版 Xbox 游戏的上下文菜单只显示相关的选项(`Set Game Folder`),隐藏Xbox 360特定存储条目。\n\n---\n\n构建细节\n\n与官员签署 Xenra 释放密钥( E)`527f6eb59054f9b0a4f8c661f9b78a9fe80cf4a9ffaff43e0a3727b16226446f`).\n\n软件包名称: 构建 APK: Version 代码\n`Ali.Xanite.green`：`Xenra-0.4.0-green-release.apk`：`31`",
+      "originalContent": "# Xenra 0.4.0\r\n\r\n[![Patreon](https://img.shields.io/badge/Patreon-Support_on_Patreon-FF424D?style=for-the-badge&logo=patreon)](https://www.patreon.com/cw/Xanite/membership)\r\n\r\n**Xenra 0.4.0** brings a main-thread responsiveness pass, custom Vulkan driver support for Exynos (Mali) devices, experimental temporal frame generation, FATX save streaming, and the consolidation of Xenra into a single free build.\r\n\r\n---\r\n\r\n## Upgrade Notice\r\n\r\n* **Install Direct:** Install Xenra 0.4.0 directly over your existing Green installation. Do not uninstall first, or your configurations, profiles, and shader caches will be deleted.\r\n* **Gold Edition Discontinued:** Gold is retired as of 0.4.0. Installing Green (`Ali.Xanite.green`) will install alongside Gold. Gold data remains intact on your device, but a one-time setup (selecting BIOS, game paths, and granting storage permissions) is required on Green.\r\n\r\n---\r\n\r\n## Highlights\r\n\r\n### Interface & Responsiveness\r\n* **Touch & D-Pad Navigation:** Touch target resolution defers to `ACTION_UP` without walking full view trees. D-pad navigation eliminates ~170 filesystem probes per press for instant library scrolling.\r\n* **Background Log Parsing:** `xe.log` parsing, crash log checks, and tombstone reads moved completely off the main thread across Library and Settings screens.\r\n* **Game Data & HUD:** Directory walks for save folders and CPU/thermal reads for the performance HUD sample on dedicated background lanes without UI stutter.\r\n* **Zero-Allocation Animations:** Glow view animators use quantized, lifecycle-bound cached gradients, eliminating continuous vsync memory allocations.\r\n* **Cold Start Optimization:** IPC permission round-trips collapsed from 5 down to 1, and `/proc/self/maps` parsing moved to a background thread.\r\n\r\n### Core Fixes & Memory\r\n* **FATX Save Import Streaming:** Save imports stream in 1 MiB chunks instead of allocating full RAM. Files exceeding the 4 GiB FATX limit are cleanly rejected prior to transfer.\r\n* **JIT Lock & Leak Fix:** Flash writes during hint cache auto-saves no longer hold `mmap_lock` (eliminating mid-game micro-stalls), and a ~3 MB session memory leak was resolved.\r\n* **Boot & Lifecycle Guarding:** Synchronized texture adoption inside render locks to stop black/wrong frame flashes on boot, and prevented double-loads on orientation change.\r\n* **Clean Exits:** Suppressed benign SDL thread teardown alerts on application exit, eliminating phantom \"Xenra crashed\" toasts.\r\n\r\n### Custom GPU Drivers & Frame Generation\r\n* **Exynos (Mali) Support:** Custom Vulkan driver loading is no longer gated by Qualcomm KGSL checks (`/dev/kgsl-3d0`). Mali devices (`/dev/mali`) can now load community driver ZIPs and per-game overrides.\r\n* **Temporal Motion Prediction:** Added an experimental motion vector prediction mode (default off) to stabilize frame generation during fast pans and flat terrain. Toggle live via ADB without restarting:\r\n  `adb shell setprop debug.xanite.fg_temporal_pred 1` (1 = On, 0 = Off)\r\n* **Driver Card UI:** Simplified the GPU driver card to display active runtime driver status without running log parsing operations.\r\n\r\n### Netplay & UI Polish\r\n* **Netplay Transport Bootstrap:** Fixed HTTPS transport initialization to bootstrap automatically at boot rather than requiring the diagnostic screen.\r\n* **Cleaned Xbox OG Context Menu:** Context menus for Original Xbox games display only relevant options (`Set Game Folder`), hiding Xbox 360-specific storage entries.\r\n\r\n---\r\n\r\n## Build Details\r\n\r\nSigned with the official Xenra release key (`527f6eb59054f9b0a4f8c661f9b78a9fe80cf4a9ffaff43e0a3727b16226446f`).\r\n\r\n| Package Name | Build APK | Version Code |\r\n| :--- | :--- | :---: |\r\n| `Ali.Xanite.green` | `Xenra-0.4.0-green-release.apk` | `31` |",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "xenra_og",
+        "xenra_360"
+      ],
+      "contentHash": "6922db6673c7044cbab20754f54e1fe33c0f57b7154d133ab430895a38f2ec56",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T16:32:15Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•重新排序列表条目类型（ Stenzek（https://github.com/stenzek/duckstation/commit/0cb515fe449b8f0215177a77af3255df59a0e141） ）",
+      "originalContent": "## Commits\n- Reorder list entry types ([Stenzek](https://github.com/stenzek/duckstation/commit/0cb515fe449b8f0215177a77af3255df59a0e141))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "ce7473921389ed48f5ce1bcdfb3315d71959ed66521a3b425d8a0532f8f16a56",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-nesd-0-19-0",
+      "title": "【Android更新】NESd 0.19.0",
+      "originalTitle": "NESd 0.19.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-06T15:58:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/0.19.0",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 0.19.0，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 0.19.0。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提示：还需要一个Android测试人员！\n提示：\n提示：告诉你的朋友，告诉你的妈妈，告诉你的狗！\n答提示：一旦我们有12名测试人员， 14天的时间就开始了，我们将进入Play商店的最后阶段。\n提示：\n提示：在Discussions（https://github.com/jpjonte/NESd/discussions/322）注册！\n\n已添加\n•实施了UNROM 512 （测绘器30 ）\n•已实现VT03 OneBus （映射器256 ）\n•倒带现在有一个时间轴洗涤器\n•添加了多个调色板\n•现在可以从`.pal`文件导入调色板\n•现在可以从`.7z`档案中加载ROM\n•添加了xBR风格的升级过滤器\n•游戏手柄现在可以使用默认映射开箱即用\n•添加了混音器\n•现在可以浏览存档中的文件夹\n•为CPU和PPU实现了开放式总线\n\n已更改\n•模拟器现在运行在Android上最快的CPU内核上\n•整理了设置屏幕\n•游戏手柄固定器现在命名为插槽（ “游戏手柄1” ） ，而不是设备。 现有绑定已迁移\n•控制设置显示检测到的游戏手柄\n•重置现在的行为类似于控制台的重置按钮\n固定\n•修复了在大突发读取音频的设备上的音频不足\n•在低端设备上启用倒带功能时，修复了音频不足和速度下降的问题\n•中断的保存状态不再阻止游戏开始\n•在保存状态选择器中标记断开的保存状态\n•修复了Android启动屏幕上的徽标被剪切的问题\n•修复了游戏向PPU的OAM数据寄存器写入完整256字节时的崩溃问题\n•修复了PPU在关闭渲染时在奇数帧上跳过一个循环的问题\n•在PPU已在vblank中时打开NMI现在会立即触发NMI\n•修复了MMC3游戏中跳过的IRQ\n•修复了MMC3扫描线计数器关闭一\n•修复了在渲染关闭时精灵数据被丢弃的问题\n•固定的颜色强调应用倒置的色调\n• PAL上的固定颜色强调\n• ROM和归档文件扩展名现在不区分大小写\n•修复了从Windows上的ZIP存档中打开ROM的问题\n•修复了ZIP归档处理不一致的问题，具体取决于您打开它的方式\n•修复了启动时损坏的设置导致NESd崩溃的问题\n•修复了一些发生在错误地址的虚拟读取\n•固定APU帧计数器定时\n•修复了每位播放一个CPU周期太慢的DMC样本\n•固定NMI定时\n•修复了Sprite DMA提前完成一个CPU周期的问题\n•修复了DMC样本提取导致计划工作站(CPU)停滞错误循环次数的问题\n•通过PPUDATA读取固定调色板\n• PPU地址0x3000-0x3eff现在像真正的硬件一样镜像命名表",
+      "originalContent": "> **One more Android tester needed!**  \n> \n> Tell your friends, tell your mom, tell your dog!\n> Once we have twelve testers, the 14-day period begins, and we'll be on the final stretch to the Play Store.\n> \n> Sign up in [Discussions](https://github.com/jpjonte/NESd/discussions/322)!\n\n### Added\n- Implemented UNROM 512 (mapper 30)\n- Implemented VT03 OneBus (mapper 256)\n- Rewind now has a timeline scrubber\n- Added multiple color palettes\n- Palettes can now be imported from `.pal` files\n- ROMs can now be loaded from `.7z` archives\n- Added an xBR-style upscaling filter\n- Gamepads now work out of the box with a default mapping\n- Added an audio mixer\n- Folders inside an archive can now be browsed\n- Implemented open bus for the CPU and PPU\n\n### Changed\n- The emulator now runs on the fastest CPU cores on Android\n- Decluttered the settings screen\n- Gamepad bindings now name a slot (\"Gamepad 1\") instead of a device. Existing bindings are migrated\n- Controls settings show the detected gamepads\n- Reset now behaves like the console's reset button\n\n### Fixed\n- Fixed audio underruns on devices that read audio in large bursts\n- Fixed audio underruns and slowdown with rewind enabled on lower-end devices\n- Broken save states no longer stop games from starting\n- Broken save states are marked in the save state picker\n- Fixed the logo being cut off on the Android splash screen\n- Fixed a crash when a game writes a full 256 bytes to the PPU's OAM data register\n- Fixed the PPU skipping a cycle on odd frames while rendering is turned off\n- Turning NMI on while the PPU is already in vblank now triggers an NMI right away\n- Fixed skipped IRQs on MMC3 games\n- Fixed MMC3 scanline counter being off by one\n- Fixed sprite data getting discarded while rendering is off\n- Fixed color emphasis applying an inverted tint\n- Fixed color emphasis on PAL\n- ROM and archive file extensions are now matched case-insensitively\n- Fixed opening a ROM from inside a zip archive on Windows\n- Fixed inconsistent zip archive handling depending on how you opened it\n- Fixed broken settings crashing NESd on start\n- Fixed some dummy reads occurring at the wrong address\n- Fixed APU frame counter timing\n- Fixed DMC samples playing one CPU cycle per bit too slowly\n- Fixed NMI timing\n- Fixed sprite DMA finishing one CPU cycle early\n- Fixed DMC sample fetches stalling the CPU for the wrong number of cycles\n- Fixed palette reads through PPUDATA\n- PPU addresses 0x3000-0x3eff now mirror the nametables like real hardware",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "fd58fe3d2e1f8e9124d07df71ebc607344e2a083a21ccdcd906329f774e9ef16",
       "translationPending": false
     },
     {
@@ -208,15 +345,15 @@
       "imageUrl": "asset://assets/emulators/armsx2.png",
       "officialUrl": "https://github.com/ARMSX2/ARMSX2",
       "summary": "ARMSX2 发布 Android 新版本 nightly-20260906，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260906。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• 自由:说出ARMSX2_USE_BUNDLED_SHADERC实际上在做什么\n• 自由:从前端翻来翻去,因为核心没有马达\n• Libretro:连接荫影和树接 JNI呼叫Android核心\n• 自由:建造没有Oboe的Android核心\n• 自由:在GL渲染器和肾上腺工具没有的地方建立核心\n• 自由:让操作系统回答主机无法操作的元数据,并停止支付两次\n• 自由:采用VFS版本,而不是它声称的版本\n• CMake:纠正探测-操作-系统中的Android分支注释\n• cake:附件 sripyuv 而不是覆盖 Webp 的链接界面\n• 自由:放下重复的ARMSX2_LIBRETRO定义\n• Libretro:审查修正——精确的文件大小,主机mkdir,VFS版本,GL风味\n• Libretro:审查修正 - Vulkan包括订单,Android页面大小,没有x86_64工作\n• Libretro:为Android(arm64-v8a)建造核心\n• 自由:为macOS建立核心(arm64)\n• Libretro:修补建机 Linux 的工作\n• Libretro:让核心通过前端的GL上下文渲染\n• Libretro:使用前端虚拟文件系统\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260905...90e0c882075a6bce75437ccd6d90ecac7969b206",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- libretro: say what ARMSX2_USE_BUNDLED_SHADERC is actually doing\n- libretro: rumble through the frontend, since the core owns no motors\n- libretro: link shaderc and stub the JNI calls on the Android core\n- libretro: build the Android core without Oboe\n- libretro: build the core where the GL renderer and adrenotools are not\n- libretro: let the OS answer metadata the host cannot, and stop paying twice\n- libretro: take the VFS version the frontend accepted, not the one it claims\n- cmake: correct the Android branch comment in detect_operating_system\n- cmake: append sharpyuv rather than overwrite webp's link interface\n- libretro: drop the duplicate ARMSX2_LIBRETRO define\n- Libretro: review fixes - exact file sizes, host mkdir, VFS version, GL flavour\n- Libretro: review fixes - Vulkan include order, Android page size, no x86_64 job\n- Libretro: build the core for Android (arm64-v8a)\n- Libretro: build the core for macOS (arm64)\n- Libretro: fix the buildbot Linux jobs\n- Libretro: let the core render through the frontend's GL context\n- Libretro: use the frontend's virtual file system\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260905...90e0c882075a6bce75437ccd6d90ecac7969b206",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260906。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• GS/TC:保持16位彩色目标更新,不使用Color- >Color bpp\n• GS/TC:纠正-签章比较警告。\n• GS/HW:大号ST重写顶点。\n• GS/HW:改进源渠道对源查询的要求\n• GS:HW:用FBMask遮盖ROV频道。\n• GS:HW:减少最高值。\n• GS/HW:将深度转换为下限值\n• GS/HW:在目标更新忽略双线的情况下纠正回归\n• GS/TC:更新24bit目标的α通道为α是脏的\n• GS/TC:GPU CLUT纹理严重错位\n• GS/TC:检测到α信道的宽度不匹配\n• GS/HW:在使用CSBW时考虑FBMSK组合\n• GS/HW:改进本地缩放递归抽取检查\n• GS/HW/NS:检测假双线起落效应\n• GameDB: 添加需要的 GameDB 条目\n• GS/HW:改进“分离”模糊效应检测和处理\n• GS/HW:对轻度降级的原生放大探测并回信\n• GS/DX11:DS作为RT/UAV装订修正。\n• GS:在两个显示电路都停用时输出BGCOLOR\n• GS:清除遗留的仪器\n• GS:说出了哪个出炉器\n• GS:将抽取记录分类账恢复到上游形状\n• GS:放下绘图包标记\n• 自由:说出ARMSX2_USE_BUNDLED_SHADERC实际上在做什么\n• GS/HW:放弃α位已知出处和侵蚀普查\n• 自由:从前端翻来翻去,因为核心没有马达\n• GS/Vulkan:减少GPU等待账单\n• GS/Vulkan:将流环内存缩小到一个横幅领域\n• GS/Vulkan:减少流线冲积统计\n• Gsrunner:降下变相旗帜\n• GS:放下制造器身份旗帜\n• GS:减少每帧字节普查\n• GS:取出前端解码记录器\n• 常见:离开PMU柜台作为主人拥有的柜台\n• gsrunner:评分脚本从树上移出\n• GS/SW: GSDepthWalk.h 包括它使用的定义\n• GS:重新审查后续行动\n• Libretro:连接荫影和树接 JNI呼叫Android核心\n• 检查-msvc-文件列表:接受不包含标题的项目\n• 从两个驱动程序-工作方评论中去掉私家教路径引用\n• 添加 SPDX 标题到 tools/rig/doctor.sh\n• 丢弃重复的 ClInclude 条目 ps2/eeHwTraceLog.inl\n• 在构建文件名单上登记8个净新一般事务/输入信头\n• GS:该分行留下的两行未格式化\n• GS:说明为何自动浮动级别现在为每个级别\n• GS:不得发出中记录履历后完成的包装标签\n• GS:拒绝无法与CPU扩展相匹配的GPU调色板道\n• GS:新档案上一条版权持有人线\n• GS:删除残废的GSClut:读取\n• GS:使解码记录器武装旗帜原子和通知书写失败\n• GS:重放已装入 \" Q \" 字的呼叫器已运出\n• GS:说明前端解码记录器是什么\n• 一般事务:在评论中说明理由,而不是引用没有人有过的档案\n• GS: 放下只写 m_上载_ writs_whole_rect旗\n• GS:将NaN-Q固定在NOP所包装的三分之一中\n• GS/SW:确定三项纹理规则,没有任何测试\n• GS/SW:将 ARM64 块光标硬码标出 dw 脚步\n• GS/SW:只关闭此绘图打开的绘图行\n• GS/SW:删除深层飞机输出无声呼叫\n• GS/SW:保持......",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GS/TC: keep the 16-bit colour target update off the Color->Color bpp assert\n- GS/TC: Fix -Wsign-compare warning.\n- GS/HW: Rewrite vertices if large ST.\n- GS/HW: Improve source channel requirements for source lookups\n- GS:HW: Do ROV channel masking with FBMask.\n- GS:HW: Reduce primid max value.\n- GS/HW: Update depth conversion shader to floor value\n- GS/HW: Fix regression where target updates ignored bilinear\n- GS/TC: Update alpha channel of 24bit target is alpha is dirty\n- GS/TC: Disallow badly misaligned GPU CLUT textures\n- GS/TC: Detect alpha channel source width mismatches\n- GS/HW: Consider FBMSK combos when using CSBW\n- GS/HW: Improve Native Scaling recursive draw check\n- GS/HW/NS: Detect fake bilinear jiggle effect\n- GameDB: Add required GameDB Entries\n- GS/HW: Improve \"jiggle\" blur effect detection and handling\n- GS/HW: Native Scaling detection of mild downscale and write back\n- GS/DX11: DS as RT/UAV binding fixes.\n- GS: Output BGCOLOR when both display circuits are disabled\n- GS: tidy what the instrumentation removal left behind\n- GS: say which renderer came up\n- GS: put the draw-log ledger back to its upstream shape\n- GS: drop the draw-log packet mark\n- libretro: say what ARMSX2_USE_BUNDLED_SHADERC is actually doing\n- GS/HW: drop the alpha known-bits provenance and erosion census\n- libretro: rumble through the frontend, since the core owns no motors\n- GS/Vulkan: drop the GPU wait bills\n- GS/Vulkan: trim the stream-ring memory reporting to one banner field\n- GS/Vulkan: drop the stream-ring flush statistics\n- gsrunner: drop the -variant flag\n- GS: drop the renderer identity banner\n- GS: drop the per-frame byte census\n- GS: remove the front-end decode recorder\n- common: leave the PMU counters as master has them\n- gsrunner: the scoring scripts move out of the tree\n- GS/SW: GSDepthWalk.h includes the definitions it uses\n- GS: re-review follow-ups\n- libretro: link shaderc and stub the JNI calls on the Android core\n- check-msvc-filelist: accept None items for header coverage\n- Drop private-doc path citations from two driver-workaround comments\n- Add SPDX header to tools/rig/doctor.sh\n- Drop duplicate ClInclude entry for ps2/eeHwTraceLog.inl\n- Register eight net-new GS/Input headers in the build file lists\n- GS: clang-format the two lines this branch left unformatted\n- GS: say why the auto-flush level is per-renderer now\n- GS: a packed tag finished by the mid-record resume must not be dispatched\n- GS: refuse the GPU palette road where it cannot match the CPU expansion\n- GS: one copyright holder line on the new files\n- GS: delete the disabled GSClut::Read\n- GS: make the decode recorder's arming flag atomic and notice write failures\n- GS: ReplayPackedQword has a shipped caller now\n- GS: describe the front-end decode recorder as what it is\n- GS: state the rationale in the comments instead of citing files nobody has\n- GS: drop the write-only m_upload_writes_whole_rect flag\n- GS: apply the NaN-Q fix-up in the NOP-padded packed triple\n- GS/SW: pin the three texture rules nothing was testing\n- GS/SW: pin the dw stride the ARM64 block cursor hard-codes\n- GS/SW: only close a draw-log row this draw opened\n- GS/SW: delete the depth-plane export nothing calls\n- GS/SW: keep an…",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx2"
       ],
-      "contentHash": "495341a57455bb6a05742b57a0c3c99bda5ad04c75a24bf6c8ce72568cec7047",
+      "contentHash": "04a32108e2e448f6e4900df12a226587aff93647487a02384106c8d5a19a9df6",
       "translationPending": false
     },
     {
@@ -284,30 +421,6 @@
         "nexium_pc"
       ],
       "contentHash": "7b2f85e0d22942ed61129afa537ea5c9ea633971eaa5e360a900037a1cc2df7c",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T19:04:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 执行CPU和PPU的公开总线\n• 添加多色调色板,可在图形设置中选择\n• 调色板现在可以从下列来源进口: `.pal` 在图形设置中的文件\n• 已执行的UNROM 512(30分)\n• 已执行的VT03 OneBus(256马普),用于插件和游戏假名\n• 倒带现在有一个时间线洗涤器:拖过播放最后一分钟的电影,直跳到任何时刻\n• 光盘现在可以装入 `.7z` 档案\n• 增加一个XBR式升级视频过滤器\n• 在音频设置中添加音频混音器,每个频道都有音量控制\n• 归档中的文件夹现在可以像其他文件夹一样浏览\n^ Gamepads现在以默认映射方式在框中工作。 第二个游戏盘自动控制玩家 2\n\n已更改\n• 模拟器现在运行在Android上最快的CPU核心上\n^ Gamepad 绑定现在命名一个插槽(\"Gamepad 1\")而不是一个设备。 已存在的绑定被迁移, 控件设置显示哪个游戏板是哪个档位\n• 现在重置像控制台重置按钮\n\n固定\n• 无法装入的保存状态不再阻止游戏的开始: 游戏靴从电源启动, 失败被报告, 无法读取的文件副本被保存到下一个 t 欧\n• 保存状态拾取器显示保存状态,它不能装入不可读状态,并允许您删除它,而不是失败\n• 当游戏将一个完整的256字节写入PPU的 OAM 数据登记册时修复崩溃\n• 关闭渲染时将 PPU 在奇数框上跳过循环\n• 在PPU已经在vblank时启动NMI,现在立即触发NMI\n• MMC3游戏中固定跳转的IRQs\n• 固定的MMC3扫描台关闭一个\n• 固定图示数据在渲染关闭时被丢弃\n• 使用反向锡的固定颜色强调\n• 固定颜色强调PAL\n• ROM和归档文件扩展名现在在不敏感的情况下匹配,因此文件如 `GAME.NES` 和 `COLLECTION.ZIP` 正确打开\n• 从Windows上的拉链档案中固定打开一个ROM\n• 固定不连贯的拉链档案处理,取决于如何打开\n• 固定中断的设置崩溃 NESd 启动时, 损坏的配置会被备份\n• 在大波朗诵音频的装置上安装固定的音频故障\n• 低端设备有固定的音频故障和减速,并允许倒带\n• 固定Android溅射屏幕上的标志\n• 固定索引指示,在错误的地址读取他们的翻页假人\n• 固定的APU帧计时器\n• 固定的DMC样本每点播放一个CPU周期太慢\n• 固定国家海产期\n• 固定图示DMA提前完成一个CPU周期\n• 固定 DMC 样本获取因周期数错误而延缓CPU\n• 通过PPUDATA读取固定调色板\n• PPU 地址 0x3000-0x3eff 现在像真实的硬件一样映射命名表",
-      "originalContent": "### Added\n- Implemented open bus for the CPU and PPU\n- Added multiple color palettes, selectable in Graphics settings\n- Palettes can now be imported from `.pal` files in Graphics settings\n- Implemented UNROM 512 (mapper 30)\n- Implemented VT03 OneBus (mapper 256), used by plug-and-play famiclones\n- Rewind now has a timeline scrubber: drag through a filmstrip of the last minute of play and jump straight to any moment\n- ROMs can now be loaded from `.7z` archives\n- Added an xBR-style upscaling video filter\n- Added an audio mixer to Audio settings, with a volume control per channel\n- Folders inside an archive can now be browsed like any other folder\n- Gamepads now work out of the box with a default mapping. A second gamepad automatically controls player 2\n\n### Changed\n- The emulator now runs on the fastest CPU cores on Android\n- Gamepad bindings now name a slot (\"Gamepad 1\") instead of a device. Existing bindings are migrated, and the Controls settings show which gamepad is in which slot\n- Reset now behaves like the console's reset button\n\n### Fixed\n- A save state that cannot be loaded no longer stops the game from starting: the game boots from power-on, the failure is reported, and a copy of the unreadable file is kept next to it\n- The save state picker shows a save state it cannot load as unreadable and lets you delete it, instead of failing\n- Fixed a crash when a game writes a full 256 bytes to the PPU's OAM data register\n- Fixed the PPU skipping a cycle on odd frames while rendering is turned off\n- Turning NMI on while the PPU is already in vblank now triggers an NMI right away\n- Fixed skipped IRQs on MMC3 games\n- Fixed MMC3 scanline counter being off by one\n- Fixed sprite data getting discarded while rendering is off\n- Fixed color emphasis applying an inverted tint\n- Fixed color emphasis on PAL\n- ROM and archive file extensions are now matched case-insensitively, so files like `GAME.NES` and `COLLECTION.ZIP` open correctly\n- Fixed opening a ROM from inside a zip archive on Windows\n- Fixed inconsistent zip archive handling depending on how you opened it\n- Fixed broken settings crashing NESd on start, the broken configuration is backed up\n- Fixed audio underruns on devices that read audio in large bursts\n- Fixed audio underruns and slowdown with rewind enabled on lower-end devices\n- Fixed the logo being cut off on the Android splash screen\n- Fixed indexed instructions doing their page-crossing dummy read at the wrong address\n- Fixed APU frame counter timing\n- Fixed DMC samples playing one CPU cycle per bit too slowly\n- Fixed NMI timing\n- Fixed sprite DMA finishing one CPU cycle early\n- Fixed DMC sample fetches stalling the CPU for the wrong number of cycles\n- Fixed palette reads through PPUDATA\n- PPU addresses 0x3000-0x3eff now mirror the nametables like real hardware",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "5a668d11bd6c2bcb54611b624d7d74e06a3808a1d61cb101bf07bea98238c711",
       "translationPending": false
     },
     {
@@ -964,30 +1077,6 @@
         "padforge"
       ],
       "contentHash": "459305b11bac15850897aa38c7083d428675758b1a7ae7196f83594b6ca7bd38",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-0-9-6",
-      "title": "【Android更新】ARMSX3 0.9.6",
-      "originalTitle": "ARMSX3 0.9.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-03T09:27:32Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.6",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.6，发布日期为2026年09月03日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.6。\n\n发布日期：2026年09月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.6\n\n有什么新情况:\n\n每个Ratchet & Clank 游戏现在都有了冷冻固定补丁的船。 销毁工具,为靴子查询,及时破解,全部4 1,Nexus和进入Nexus,11个可执行文件以及22个区域和版本组合,捆绑并启用 默认在 ARMSX3。。。。 这些是Juhn从社区数据库里得到的补丁,其中乔纳森44062,Alexis,Epicalman,Haster和Joenn在个人游戏上,每个标题都挂着一些 e 没有他们。\n\nRPCN再次连接,将服务器协议更新为32(上流最新). 网络设置的 RPCN 部分也稍有改进, 已重组为面板, 您的登录状态和任何服务器错误都位于顶端而不是botto。 m. 登录字段一旦一个账户被保存就崩溃了,该段现在在控制器上工作。 还有一个\"删除\"同步奖杯按钮,该按钮澄清了您的账户上传到RPCN的内容(不影响您在设备上获得的奖杯).\n\n运动控制器如果支持的话,现在使用控制器自己的陀螺仪\n\n库中现在有自定义游戏类, 如 ARMSX2。。。。 长期按下游戏,单击分类,然后可以创建一个类别或选择一个现有的类别来分组您的游戏。 它在默认情况下出现,并像最近播放的分页一样,在架式视图中出现。 右上角的3个点菜单可用于过滤列表视图的类别。\n\n皮肤现在指名道姓的制作者 包括那些用应用程序运送的 以及控制器的皮肤下载器\n\n在游戏中暂停菜单的性能部分中添加了帧抓取按钮,在帧抓取下。 它记录一个帧值的图形命令,然后写到配置/抓取,然后暂停。 用于捕获图形错误。\n\n控制器可以被分配到玩家插槽。 设置 -- > 控制 -- > 玩家 & Rumble 列出您连接过的每个控制器, 并让您给每个玩家一个, 而不是给按下按键firs的人的插槽 T. (中文(简体) ). 每个控制器都会记住一个任务 并且可以继续重联\n\n我还增加了一个新的功能,叫做Direct USB Control, 用于DualSense或DualShock 4在有朗布尔的电缆上。 默认关闭, 在设置 -- > 控制 -- > 玩家 & Rumble 中, 而在自定义绑定上则不适用。\n\n修补 :\n\n修复外部控制器隆布尔。\n\n固定了一个难得的话题,即背景游戏可以把你踢回库中,而游戏则继续后跑,音频等等。\n\n屏幕控制器在使用时不再消失。 自动隐藏计时器将媒体当作一个瞬间,而不是你持有的东西,所以持棒或按键的时间长于被计算为闲置的时滞和控件。 在你的拇指下逐渐消失 它现在拒绝倒计时 当你积极使用触控。\n\n固定了一个帧生成错误,它冻结了Turnip驱动程序上的模拟器。 生成帧意味着显示的比游戏所绘制的更多,所以一个翻转询问显示两个或两个以上的图像,而第二个图像移交时特尼普崩溃 第一种情况 股票Qualcomm的车手接受,这就是为什么这只打击了一些人,为什么关闭帧代能修好。\n\n向振动管理器报告无电动机的控制员在隆波倒回电话前,再通过旧接口获得一次机会。 蓝牙上的一些DualShock和DualSense模式属于这一类别,被直接忽略。\n\n制作者发出中间通道的反馈屏障现在被正确拼出,以说明制作者的通行证申报内容。 三种错误方法中的两种可以产生严格驾驶员的未定义的行为。\n\n在全部 Core 设置棒中选择的框架限制。 默认的帧限制器 在每次发射时都写着“Auto”, 所以选择别的东西一直持续到关闭应用程序。\n\n压力调节器达到100%而不是停止...",
-      "originalContent": "ARMSX3 0.9.6\r\n\r\nWhat's new:\r\n\r\nEvery Ratchet & Clank game now ships with the freeze fix patch. Tools of Destruction, Quest for Booty, A Crack in Time, All 4 One, Nexus and Into the Nexus, eleven executables and twenty-two region and version combinations, bundled and enabled by default in ARMSX3. These are Juhn's patches from the community database, with Jonathan44062, Alexis, Epicalman, Hasster and Joenn on the individual games, and every one of those titles hangs somewhere without them. \r\n\r\nRPCN connects again, updated the server protocol to 32 (upstream latest). The RPCN section of Network settings has also been improved a bit, it has been reorganized into panels, with your sign-in state and any server error at the top instead of the bottom. The login fields collapse once an account is saved, and the section works on a controller now. There is also a Delete synced trophies button, which clears what your account has uploaded to RPCN (it doesn't affect the trophies you've earned on your device).\r\n\r\nMotion controls now use your controller's own gyro if it supports it\r\n\r\nThe library now has custom game categories like ARMSX2. Long-press a game, click on Categories, you can then create a category or select an existing one to group your games in. It shows up in default and shelf view like the Recently Played tab does. The 3 dot menu in the top right hand corner can be used to filter categories for list view. \r\n\r\nSkins now name whoever made them, both the ones that ship with the app and the ones in the controller skin downloader.\r\n\r\nAdded a frame capture button in the performance section of the in-game pause menu, under Frame capture. It records one frame's worth of graphics commands and writes them to config/captures, then pauses. Useful for capturing graphical bugs.\r\n\r\nControllers can be assigned to player slots. Settings --> Controls --> Player & Rumble lists every controller you have connected and lets you give each one a player, instead of the slots going to whoever presses a button first. An assignment is remembered per controller and survives reconnecting.\r\n\r\nI also added a new feature called Direct USB control, for a DualSense or DualShock 4 on a cable with rumble. Off by default, in Settings --> Controls --> Player & Rumble, while it is on custom bindings do not apply.\r\n\r\nFixes:\r\n\r\nFix to external controller rumble. \r\n\r\nFixed a rare issue where backgrounding a game could kick you back to the library while the game carried on running behind it, audio and all.\r\n\r\nOn-screen controls no longer disappear while you are using them. The auto-hide timer treated a press as a moment rather than something you hold, so holding a stick or a button for longer than the timeout counted as sitting idle and the controls faded out under your thumb. It now refuses to count down while you're actively using the touch controls. \r\n\r\nFixed a frame generation bug that was freezing the emulator on Turnip drivers. Generating frames means presenting more of them than the game draws, so a single flip asks the display for two or more images, and Turnip crashes when the second one is handed over the way the first was. Stock Qualcomm drivers accept it, which is why this only hit some people, and why turning frame generation off would fix it. \r\n\r\nControllers that report no motor to the vibration manager get one more chance through the older interface before rumble falls back to the phone. Some DualShock and DualSense modes over Bluetooth are in that category and were being skipped outright.\r\n\r\nThe feedback barrier the renderer issues mid-pass is now spelled correctly for what the render pass declares. Two of the three ways it was wrong could produce undefined behaviour on a strict driver.\r\n\r\nA frame limit chosen in All Core Settings sticks. The frame limiter, which is on by default, was writing \"Auto\" over that setting on every launch, so picking something else there lasted until you closed the app. \r\n\r\nThe pressure modifier goes to 100% instead of stoppin…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "7380bd3c3ef8e16c1e8efc696a79ac72fae1249108cb3972e4ee4ee2c9c4352f",
       "translationPending": false
     },
     {
@@ -3193,31 +3282,6 @@
         "xenia_pc"
       ],
       "contentHash": "d39aeddb662e5f8c2a9a738a235746ad963e52b4d0d85a1aa1f68ea7ddc6024c",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-xenra_og-0-3-6",
-      "title": "【Android更新】Xenra 0.3.6",
-      "originalTitle": "Xenra 0.3.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-24T11:15:16Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/Yebot32/xenra/releases/tag/v0.3.6",
-      "imageUrl": "asset://assets/emulators/xenra.png",
-      "officialUrl": "https://github.com/Yebot32/xenra",
-      "summary": "Xenra 发布 Android 新版本 0.3.6，发布日期为2026年08月24日。点击查看官方版本信息与更新说明。",
-      "content": "Xenra 已发布 Android 最新版本 0.3.6。\n\n发布日期：2026年08月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nXenra 0.3.6 带来了多项兼容性、性能和易用性改进，包括《GTA V》进入游戏、Xbox 初代与 Xbox 360 双平台帧生成、GPU 处理优化、存档导入，以及重要的 Xbox 360 修复。\n\n重要升级提示\n请直接覆盖安装 Xenra 0.3.6，不要卸载旧版，否则配置、用户档案和着色器缓存会被删除。\n\n游戏与性能\n• 《GTA V》：修复 NetDll_select 调度问题导致的黑屏卡死；初步测试已能以约 25 FPS 进入游戏。\n• 帧生成：Xbox 初代和 Xbox 360 均新增 1.25 倍、1.5 倍和 2 倍帧生成模式。\n• 核心性能：优化编译代码的同步，并精简多个高频执行路径。\n\n图形与系统设置\n• GPU 驱动：系统 GPU 驱动选择现在会在应用重启后正确保留。\n• GPU 回读：修正 Adreno 设备默认的 Resolve 回读配置。\n• 单游戏设置：重做设置界面，仅显示已覆盖的选项，并新增可搜索的设置选择器。\n• HUD：修复强制最高 GPU 频率时错误显示“GPU 0%”的问题。\n\n管理与兼容性\n• 存档导入：可导入下载的 Xbox 360 存档包，并自动分配给当前登录的用户档案。\n• Xbox 360 游戏数据：恢复游戏数据的安装和管理功能。\n• 外部启动：修复从外部文件管理器打开 Xbox 360 游戏时未进入正确模拟器路径的问题。\n\n已知问题\n• Xbox Live 功能仍不可用。\n• NetDll_select 修复后，尚未重新测试 System Link 加入功能。\n• 移动设备上的 Xbox 360 温控表现没有变化。\n• 尚未支持多光盘切换。\n\n构建信息\n官方 Green 与 Gold 构建均使用 Xenra 官方发布密钥签名。本应用提供的下载链接指向免费 Green 版本（Ali.Xanite.green，版本代码 30）。",
-      "originalContent": "# Xenra 0.3.6\r\n\r\n[![Gold Version](https://img.shields.io/badge/Patreon-Gold_Version-FF424D?style=for-the-badge&logo=patreon)](https://www.patreon.com/cw/Xanite/membership)\r\n\r\n**Xenra 0.3.6** introduces major compatibility, performance, and usability improvements, including GTA V gameplay, frame generation across both Xbox generations, improved GPU handling, save importing, and crucial Xbox 360 fixes.\r\n\r\n> [!IMPORTANT]\r\n> **Upgrade Notice:** Install Xenra 0.3.6 directly over your existing installation. **Do not uninstall the previous version**, or your configurations, profiles, and shader caches will be deleted.\r\n\r\n---\r\n\r\n## 🌟 Highlights\r\n\r\n### 🎮 Gameplay & Performance\r\n* **GTA V:** Resolved the `NetDll_select` scheduling issue that caused the black-screen hang. GTA V now reaches gameplay at ~25 FPS in initial testing.\r\n* **Frame Generation:** Added frame generation support for both Original Xbox and Xbox 360, featuring **1.25×**, **1.5×**, and **2×** performance modes.\r\n* **Core Performance:** Optimized compiled-code synchronization and streamlined several frequently executed code paths.\r\n\r\n### ⚙️ Graphics & System Settings\r\n* **GPU Driver Persistence:** System GPU driver selection now correctly persists across app launches.\r\n* **GPU Readback:** Corrected the default resolve readback configuration for Adreno devices.\r\n* **Per-Game Settings:** Overhauled settings UI to display only overridden options, complete with a searchable setting picker.\r\n* **HUD Fix:** Resolved incorrect `GPU 0%` usage reporting when maximum GPU clocks are forced.\r\n\r\n### 📁 Management & Compatibility\r\n* **Save Import:** Downloaded Xbox 360 save packages can now be imported and automatically assigned to the active signed-in profile.\r\n* **Xbox 360 Game Data:** Restored game data installation and management features.\r\n* **External Launching:** Fixed an issue where Xbox 360 games opened from external file managers failed to route through the correct emulator path.\r\n\r\n---\r\n\r\n## 🛠️ Known Issues\r\n\r\n- [ ] **Xbox Live:** Features remain unavailable.\r\n- [ ] **System Link:** Joining has not been re-tested following the `NetDll_select` fix.\r\n- [ ] **Thermals:** Xbox 360 thermal behavior remains unchanged on mobile devices.\r\n- [ ] **Multi-Disc:** Title swapping is not yet implemented.\r\n\r\n---\r\n\r\n## 📦 Build Details\r\n\r\nBoth official builds are signed with the official **Xenra release key**.\r\n\r\n| Package Name | Build APK | Version Code |\r\n| :--- | :--- | :---: |\r\n| `Ali.Xanite.green` | `Xenra-0.3.6-green-release.apk` | `30` |\r\n| `Ali.Xanite` | `Xenra-GOLD-0.3.6-release.apk` | `30` |",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "xenra_og",
-        "xenra_360"
-      ],
-      "contentHash": "aec109f51c29c5c4b29570c94afc2f0b2f2815b32ddd7df2dbd40fa0c008d76c",
       "translationPending": false
     },
     {
