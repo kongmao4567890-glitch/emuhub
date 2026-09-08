@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T17:56:33.333262Z",
+  "generatedAt": "2026-09-08T05:16:10.291230Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,123 @@
   },
   "articles": [
     {
-      "id": "android-release-azahar-2126-1-rc4",
-      "title": "【Android更新】Azahar 2126.1-rc4",
-      "originalTitle": "Azahar 2126.1-rc4 Android release",
+      "id": "android-release-nethersx2_lsfg-26500721",
+      "title": "【Android更新】NetherSX2 LSFG (Slushii Turnip Fix) 26500721",
+      "originalTitle": "NetherSX2 LSFG (Slushii Turnip Fix) 26500721 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-07T16:35:44Z",
+      "publishedAt": "2026-09-08T02:47:31Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2126.1-rc4",
+      "sourceUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases/tag/v26500721",
+      "imageUrl": "asset://assets/emulators/nethersx2_lsfg.png",
+      "officialUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
+      "summary": "NetherSX2 LSFG (Slushii Turnip Fix) 发布 Android 新版本 26500721，发布日期为2026年09月08日。点击查看官方版本信息与更新说明。",
+      "content": "NetherSX2 LSFG (Slushii Turnip Fix) 已发布 Android 最新版本 26500721。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nv26500721 —在60和120 FPS时禁用伪影保护\n\nFRAMEGEN版本现在完全禁用了伪影保护。 运动和场景变化不再导致此保护用重复的真实帧替换生成的帧，无论是输出60还是120 FPS。\n\n更改\n•删除伪影检测器、其帧抑制路径及其两对恢复延迟。\n•忽略较早保存的`fg_anti_artifacts=on`设置。 本机兼容性设置程序也无法重新启用保护。\n•将流量比例保持在0.25 ，默认为2 ×倍增器，并支持活动的60 Hz或120 Hz显示模式。\n•包括匹配的FRAMEGEN和NONFRAMEGEN APK。 模拟器核心、驱动程序、补丁和其他设置将被保留。\n\n移除保护后，插值扭曲和场景剪切伪影可能更加明显。 生成仍然取决于正常的运行时要求和GPU可用性。\n\n30 → 60 FPS设置\n关闭60 FPS模式，重新启动游戏，然后保持帧生成开启。 然后，原生30 FPS游戏可以输出约60 FPS ，包括面板设置为60 Hz的情况。 在性能允许的情况下，相同的默认2 ×乘法器支持60 → 120 FPS和120 Hz面板。\n\n安装\n在Pink上安装您选择的APK ，以保留设置、保存状态和存储卡。 两个变体共享相同的包和签名证书，并互相替换。\n\n验证\n•七次共享主机检查和两次非FRAMEGEN检查通过，包括以支持的刷新率加载旧版ON设置和在0.25.保留流程\n•重建本机framegen库并检查其兼容性设置程序无效；删除了工件回退路径。 保留JNI导出和本机依赖项。\n•两个APK都通过了签名、对齐和变体内容检查。 模拟器核心、驱动程序和补丁与v26500720匹配。\n•新的设备上游戏和视觉验证正在等待中。 此版本未执行任何设备安装、设置更改或保存文件操作。",
+      "originalContent": "# v26500721 — Artifact protection disabled at 60 and 120 FPS\n\nThe FRAMEGEN build now has artifact protection completely disabled. Movement and scene changes no longer cause this protection to replace generated frames with repeated real frames, whether outputting 60 or 120 FPS.\n\n## Changes\n\n- Removes the artifact detector, its frame-suppression path and its two-pair recovery delay.\n- Ignores older saved `fg_anti_artifacts=on` settings. The native compatibility setter also cannot re-enable protection.\n- Keeps flow scale at **0.25**, the default **2×** multiplier, and support for active **60 Hz or 120 Hz** display modes.\n- Includes matching **FRAMEGEN** and **NONFRAMEGEN** APKs. The emulator core, drivers, patches and other settings are retained.\n\nInterpolation warping and scene-cut artifacts may be more visible with protection removed. Generation still depends on normal runtime requirements and GPU availability.\n\n## 30 → 60 FPS setup\n\nTurn **60 FPS Mode OFF**, restart the game, and leave **Frame Generation ON**. A native 30 FPS game can then output approximately 60 FPS, including with the panel set to 60 Hz. The same default 2× multiplier supports 60 → 120 FPS with a 120 Hz panel when performance allows.\n\n## Installation\n\nInstall your chosen APK over Pink to retain settings, save states and memory cards. Both variants share the same package and signing certificate and replace one another in place.\n\n## Validation\n\n- Seven shared host checks and two NONFRAMEGEN checks passed, including loading legacy ON settings at both supported refresh rates and preserving flow at 0.25.\n- Rebuilt the native framegen library and checked that its compatibility setter does nothing; the artifact-fallback path is removed. JNI exports and native dependencies are preserved.\n- Both APKs passed signature, alignment and variant-content checks. The emulator core, drivers and patches match v26500720.\n- New on-device gameplay and visual validation is pending. No device installation, setting changes or save-file operations were performed for this release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nethersx2_lsfg"
+      ],
+      "contentHash": "95738125ae639b1423009aeb13f7fee750156632e9ac93f2730345bc10da9de8",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-08T02:39:04Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月08日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 35d1f06 ： Atualização Português do Brasil (# 3793) (Anderson Cardoso) # 3793（https://github.com/stenzek/duckstation/pull/3793）",
+      "originalContent": "## Commits\n- 35d1f06: Atualização Português do Brasil (#3793) (Anderson Cardoso) [#3793](https://github.com/stenzek/duckstation/pull/3793)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "15b78a05023b7f106034ace096e65d0b0d7bd75fd4e94971fa9fc1b7e8b5affa",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-08T02:38:10Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年09月08日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `fc20a79` — `v3.6.1` (`develop`)\n\n提交：`fc20a79`（https://github.com/libretro/virtualjaguar-libretro/commit/fc20a79aada830f83e4b83d8af309411779f611e）\n构建时间：2026-09-08 02:37 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/34178761379）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为 `v3.6.1 fc20a79` 启动时 —— 报告此建构时引用该行。\n\n自上一夜版以来的变更\n\n```\n322f449 更新 Make 文件以包含 cd_wedge_ probe 命令\n00a0bbd 测试(cd): Baldies HLE 切除机必须保持渲染(# 738)\n43d9c0c 固定( cd): HLE 校正扫描在奇异密联的诱饵运行时不得返回\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` ,以获得符号化回溯跟踪。\n\nSHA-256 校验值\n\n校验 `sha256sum --check SHA256SUMS.txt` (林纳)或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a…",
+      "originalContent": "### Nightly `fc20a79` — `v3.6.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`fc20a79`](https://github.com/libretro/virtualjaguar-libretro/commit/fc20a79aada830f83e4b83d8af309411779f611e) |\n| **Built** | 2026-09-08 02:37 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/34178761379) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.6.1 fc20a79` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n322f449 Update Makefile to include cd_wedge_probe command\n00a0bbd test(cd): Baldies HLE cutscene must keep rendering (#738)\n43d9c0c fix(cd): HLE align scan must not return on an odd-misaligned decoy run\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "3393b34ebfebe00d062aea5cb97796277f21ed60d3a34f6f042c81c3f87cef18",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-azahar-2126-1-rc5",
+      "title": "【Android更新】Azahar 2126.1-rc5",
+      "originalTitle": "Azahar 2126.1-rc5 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-07T23:46:48Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2126.1-rc5",
       "imageUrl": "asset://assets/emulators/azahar.png",
       "officialUrl": "https://github.com/azahar-emu/azahar",
-      "summary": "Azahar 发布 Android 新版本 2126.1-rc4，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
-      "content": "Azahar 已发布 Android 最新版本 2126.1-rc4。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nQQ 重要发布候选人信息QQ\n\n\n这是一个释放候选人。 请在安装前, 将下拉扩展为更多关于这意味着什么。\n\n\n作为释放的候选者,这一建筑尚未被视为稳定的释放,而是一种建筑,如果经过充分测试,没有米,就可以晋升为稳定的释放。 ajor问题被发现。 理想的情况是,如果发现重大问题,将延长释放候选人的期限为7天,以便进行额外测试,并更正释放。 约会\n\n尽管它作为发行前的构建,但鼓励用户测试这个版本,帮助我们抓住任何新引入的问题,然后再将构建提升到全面发布。 如果你真的看到这些问题 请在GitHub上向我们报告 这样我们就可以评估它们\n\n如果你不愿意容忍潜在的小问题,你最好等到释放候选人晋升为完全释放。\n\n建议用户支持他们 Azahar 用户数据目录在使用预释构建之前。\n\n\n---\n\n这个释放候选人是对 2126.1-rc3. 它引入了一些最终的调整和修正来为稳定的释放做准备。 我们希望,如果没有发现重大问题,这将是最后的释放候选人。\n\n关于最终版将包含哪些内容的更完整情况,您可以看到第1版候选人的更改日志:\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\n\n---\n\nAzahar 2126.1-rc4 更改日志\n\nAll\n\n• 执行检查,以确保系统不支持的 Vulkan 层不被启用,避免某些设置发生相撞。 @ @ Wunkolo # 2511\n\n桌面\n\n・ 默认错误启用新引入的调试例外处理器的设置 ; 它现在默认被禁用。 @ @ @ @ PabloMK7 # 2505\n· 启用此设置可导致特定目标仿真器的某些游戏模式崩溃。\n\n机器人\n\n• 无效的ROM现在在游戏列表中以\"无效ROM\"卡片显示,而不是空白。 @ @ OpenSauce04 #2509\n• 这些空白卡无意中含有错误字符串 2126.1-rc3 由于疏忽。 由于这一变化的性质,这个问题也得到了确定。",
-      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nThis release candidate is an amendment to 2126.1-rc3. It introduces some final tweaks and fixes in preparation for the stable release. We hope that this will be the final release candidate, assuming no major issues are discovered.\r\n\r\nFor a more complete picture of what will be included in the final release, you can see the changelog for Release Candidate 1 here:\r\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\r\n\r\n---\r\n\r\n# Azahar 2126.1-rc4 Changelog\r\n\r\n# All\r\n\r\n- Implemented checks to ensure that Vulkan layers the system doesn't support are not enabled, avoiding crashes on certain setups. | @Wunkolo #2511\r\n\r\n# Desktop\r\n\r\n- Fixed the setting for the newly introduced debug exception handler being erroneously enabled by default; it is now disabled by default. | @PabloMK7 #2505\r\n  - Having this setting enabled can cause certain game mods which specifically target emulators to crash.\r\n\r\n# Android\r\n\r\n- Invalid ROMs are now displayed with an \"Invalid ROM\" card in the game list instead of being blank. | @OpenSauce04 #2509\r\n  - These blank cards unintentionally contained an error string in 2126.1-rc3 due to an oversight. By the nature of this change, that issue has also been fixed.",
+      "summary": "Azahar 发布 Android 新版本 2126.1-rc5，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
+      "content": "Azahar 已发布 Android 最新版本 2126.1-rc5。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nQQ 重要发布候选人信息QQ\n\n\n这是一个释放候选人。 请在安装前, 将这个下拉扩展到更多内容。\n\n\n作为释放的候选者,这一建筑尚未被视为稳定的释放,而是一种建筑,如果经过充分测试而无 m,则可以晋升为稳定的释放。 ajor问题被发现。 理想的情况是,释放候选人的期限将持续7天,但如果发现重大问题,则将予以延长,以便进行额外测试,并更正释放c 约会\n\n尽管它具有发行前的建设地位,但还是鼓励用户测试这个版本,帮助我们抓住任何新引入的问题,然后才将建设推广到完全发行。 如果你确实注意到这些问题,请在GitHub上向我们报告,以便我们评估这些问题。\n\n如果你不愿容忍潜在的小问题,你最好等到释放候选人晋升为完全释放。\n\n建议用户支持其 Azahar 用户数据目录在使用预释构建之前。\n\n\n---\n\n该释放候选人修正了第一个在《公约》中发现的单一关键回归。 2126.1-rc3 预释。\n它在其他方面与 2126.1-rc4.\n\n若要更完整地了解最终版将包含的内容, 您可以在此看到第1版候选人的更改日志 :\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\n\n---\n\nAzahar 2126.1-rc5 更改日志\n\nAll\n\n• 在使用 OpenGL 渲染器运行应用程序时, 纠正了导致内存持续泄漏的回归。 @ @ Wunkolo # 2517\n• 这一问题影响到支持OpenGL渲染器的所有平台,但Windows的内存泄漏率要高得多。",
+      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nThis release candidate fixes a single critical regression first seen in the 2126.1-rc3 prerelease.\r\nIt is otherwise identical to 2126.1-rc4.\r\n\r\nFor a more complete picture of what will be included in the final release, you can see the changelog for Release Candidate 1 here:\r\nhttps://github.com/azahar-emu/azahar/releases/tag/2126.1-rc1\r\n\r\n---\r\n\r\n# Azahar 2126.1-rc5 Changelog\r\n\r\n# All\r\n\r\n- Fixed a regression which caused consistent memory leakage while running an application with the OpenGL renderer. | @Wunkolo #2517\r\n  - This issue affected all platforms which support the OpenGL renderer, but the rate of memory leakage was much more drastic on Windows.",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "azahar"
       ],
-      "contentHash": "472ed0af3e1b74281446f9555bf081fe536d15d7e08139b3ec73fe2dfee31b00",
+      "contentHash": "7f1d48b0a11e9105568ad37b0ad48085852933fde2b1a49708f2a676615d6abf",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-0-9-7-3",
+      "title": "【Android更新】ARMSX3 0.9.7.3",
+      "originalTitle": "ARMSX3 0.9.7.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-07T19:36:51Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.7.3",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.7.3，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.7.3。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.7.3\n\n用于Ratchet & Clank Future的小型固定发布:8个精英设备上的一个Crack in Time. 在特鲁尼普Gen 8 V35测试过\n\n固定 :\n\nA Crack in Time中的崩溃和GPU错误。 游戏在时间调控部分会冻结/崩溃。 当仿真器从GPU读回纹理时,它可以写过纹理的内存的尽头,覆盖任何坐在它旁边的事物。 如果在时间操控区 时空崩溃或冻死你 请再试一次\n\n在读取GPU的纹理回放时发生崩溃,在与时间相关的路径中,可以不经警告就将应用程序下架。",
+      "originalContent": "ARMSX3 0.9.7.3\r\n\r\nA small fix release for Ratchet & Clank Future: A Crack in Time on 8 elite devices. Tested on Turnip Gen 8 V35\r\n\r\nFixed: \r\n\r\nCrash and GPU errors in A Crack in Time. The game could freeze/crash during the time-manipulation sections. When the emulator read a texture back from the GPU it could write past the end of that texture's memory, overwriting whatever happened to sit next to it. If A Crack in Time was crashing or freezing for you during the time manipulation sections, try it again.\r\n\r\nA crash while reading textures back from the GPU, in a timing-related path that could take the app down without warning.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "690da1ac2797780dd118cae2a7d267dcbce39323c777e398912b25076cd93dad",
       "translationPending": false
     },
     {
@@ -39,14 +135,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-07T15:45:02Z",
+      "publishedAt": "2026-09-07T19:01:47Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_gba.cpp, d_ngp.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp, d_ngp.cpp: various... (fprietog)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_ngp.cpp:更新了对\"Gardenia (HB)\"(fprietog)的支持。",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_ngp.cpp: updated the support to \"Gardenia (HB)\" (fprietog)",
       "platforms": [
         "android"
       ],
@@ -54,7 +150,7 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "d53157dee3587529e97df5d07124b380d04122b28482781652f5d85ac2fed06f",
+      "contentHash": "658f7d1fb0f54847d075290062664ae74e34474773e9fd9724398560ed2000a6",
       "translationPending": false
     },
     {
@@ -262,30 +358,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-07T11:31:22Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 在Windows上修正 libjpeg 负载回归(Stenzek)（https://github.com/stenzek/duckstation/commit/73c226615ed7b636f735c1373727c1e410ebf6a4）)",
-      "originalContent": "## Commits\n- Fix libjpeg load regression on Windows ([Stenzek](https://github.com/stenzek/duckstation/commit/73c226615ed7b636f735c1373727c1e410ebf6a4))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "539063f48e4de78a5233fd2bf281882fce6a27d5387f8ddda5113e5bcae5e856",
-      "translationPending": false
-    },
-    {
       "id": "136695",
       "title": "【家用机】Sharpemu v0.0.3 R3 Patch 1",
       "originalTitle": "[Consoles de salon] Sharpemu v0.0.3 R3 Patch 1",
@@ -464,30 +536,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "eeef10c8250820c22d4d592c871667701c90e8d0428f82fc1af40b51271d28ba",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-0-9-7-2",
-      "title": "【Android更新】ARMSX3 0.9.7.2",
-      "originalTitle": "ARMSX3 0.9.7.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-07T05:39:33Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.7.2",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.7.2，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.7.2。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n修补灵魂卡利布尔5号! 慢慢来",
-      "originalContent": "Fixes Soul Calibur 5! Enjoy",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "d499a1f8c170ba017f78a4c97e4ca797d904870a530d73e9143b36574170b483",
       "translationPending": false
     },
     {
@@ -816,30 +864,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "7531e31373ffd8b019c6a65722c07fbd813061f568d22da21bf5f842b794f907",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-3-6-1",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) 3.6.1",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) 3.6.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T12:38:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/v3.6.1",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 3.6.1，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 3.6.1。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nVirtual Jaguar 自由主义 v3.6.1\n\n有一件事的补丁发布: 启动没有内容的核心, 现在降落你\n在 CD BIOS 中,这是您插入盘片的屏幕。\n\nv3.6.0 运出无内容启动(# 646)和磁盘控制接口(# 651)\n打开圆盘 打开虚拟光\n带音频CD的机器。 这种组合行不通。 这个可以修好\n\n---\n\n修补\n\n无内容启动器解析为空控制台:启动ROM运行于一个\n无墨盒窗口。 对没有CD单位的美洲虎来说是真实的\n它是一个死胡同。 CD BIOS是提供“插入盘片”,\n它被描绘成一个弹匣 `$800000`,所以无法从\n空的slot屏幕可能永远到达它。 标题特性 v3.6.0 当时是\n无法到达的建筑。\n\n从没有内容开始,现在把真正的CD BIOS 放在它上面\n自己的插入磁盘屏幕。 不需要文件: 您的外部 CD BIOS ROM\n如果您有系统目录, 则首选系统目录, 否则会有一个嵌入式图像\n已使用。\n\n同一路径的两个较小的后果,固定在一起:\n\n• 报告带有空托盘的弹匣模式而不是CD模式,\n将选项菜单反向坐在 CD BIOS 中的机器 — CD Boot\n模式和CD BIOS类型被隐藏,并显示弹匣-BIOS选项。\n• 记忆轨迹车插件插入CD单元,是否在场\n盘子是,但直到第一个插入时才出现。\n\n`supports_no_game` 从来没有广告\n\n`dist/info` 还在说 `supports_no_game = \"false\"` 之后\n`RETRO_ENVIRONMENT_SET_SUPPORT_NO_GAME` 运入 v3.6.0. RetroArch 读取\n信息数据库,而不是运行时环境呼叫,以决定是否提供\n无内容的发布——所以前端从未被告知核心支持它。 现在\n`\"true\"`.\n\n如果您的前端不提供“ 启动核心” 没有内容, 其信息文件为\n退出; 从 libretro 信息库更新它。\n\n为什么测试没有抓住这个\n\n两次测试表明,哪个“战略”解决了问题,从未检查过什么。\n机器做了它, 所以一个正确解决的死端 通过干净。 现在两个\n将纠正的行为定点。\n\n其中之一值得人们注意的是, `test_disk_control`\n例1比较了光盘插入的两侧策略名称。 现在没有内容\n决 议 `\"bios\"` - 和一个真正的 BIOS 盘子也解析到 `\"bios\"` 那个...\n比较会空洞无物,一无所获。 现在\n将策略名称与 `isCDGame`,这是实际移动的:\n插入屏幕上的赤裸的 BIOS , 盘子挂载后为真。\n\n---\n\n升级\n\n除了安装核外别无他法 保存状态, 每个标题默认值, 钩\n作弊者, v3.6.0.\n\n如果你报告 v3.6.0 无内容启动为破损, 请检查您的核心\n已经安装。 726号的原始报告是针对 v3.5.1 核心——\n完全早于该特性的版本——值得在\n别的\n\n已知的限制\n\n未更改自 v3.6.0:\n\n• 插入盘片重新启动控制台。 连续互换取决于 CD BIOS\n尚未核实的磁盘存在投票。\n• 增强概况 `internal_resolution` 和 `true_color` 仅此而已。\n• `docs/WHATSNEW` 没有用于 v3.1.0 通过 v3.5.1; 每期释放\n注释 `docs/RELEASE_NOTES_v*.md` 对这些是权威的。\n\n---\n\n此发行中的艺术\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-…",
-      "originalContent": "# Virtual Jaguar libretro v3.6.1\n\n**A patch release for one thing: booting the core with no content now lands you\nin the CD BIOS, which is the screen you insert a disc from.**\n\nv3.6.0 shipped no-content boot (#646) and the disk-control interface (#651) so\nyou could launch the core bare, put in a disc, and reach the Virtual Light\nMachine with an audio CD. That combination did not work. This fixes it.\n\n---\n\n## The fix\n\nNo-content boot resolved to a **bare console**: the boot ROM running against a\nzeroed cartridge window. That is authentic for a Jaguar with no CD unit\nattached — and it is a dead end. The CD BIOS is what offers \"insert a disc\",\nand it is mapped as a cartridge at `$800000`, so nothing reachable from the\nempty-slot screen could ever get to it. The headline feature of v3.6.0 was\nunreachable by construction.\n\nStarting with no content now boots the **real CD BIOS**, which comes up on its\nown insert-disc screen. No files are required: an external CD BIOS ROM in your\nsystem directory is preferred if you have one, and otherwise an embedded image\nis used.\n\nTwo smaller consequences of the same path, fixed alongside:\n\n- It reported cartridge mode rather than **CD mode with an empty tray**, which\n  inverted the options menu against a machine sitting in the CD BIOS — CD Boot\n  Mode and CD BIOS Type were hidden, and the cartridge-BIOS option was shown.\n- The **Memory Track** cart plugs into the CD unit and is present whether or not\n  a disc is, but it stayed absent until the first insert.\n\n## `supports_no_game` was never advertised\n\n`dist/info` still said `supports_no_game = \"false\"` after\n`RETRO_ENVIRONMENT_SET_SUPPORT_NO_GAME` shipped in v3.6.0. RetroArch reads the\n**info database**, not the runtime environment call, to decide whether to offer\na contentless launch — so frontends were never told the core supports it. Now\n`\"true\"`.\n\nIf your frontend does not offer \"Start Core\" without content, its info file is\nout of date; update it from the libretro info repository.\n\n## Why the tests did not catch this\n\nTwo tests asserted which boot *strategy* resolved and never checked what the\nmachine did with it, so a correctly-resolved dead end passed cleanly. Both now\npin the corrected behaviour.\n\nOne of them is worth noting for anyone reading the diff: `test_disk_control`\ncase 1 compared strategy names either side of a disc insert. With no-content now\nresolving to `\"bios\"` — and a real-BIOS disc also resolving to `\"bios\"` — that\ncomparison **would have gone vacuous**, passing while asserting nothing. It now\npairs the strategy name with `isCDGame`, which is what actually moves: false for\nthe bare BIOS on its insert screen, true once a disc is mounted.\n\n---\n\n## Upgrading\n\nNothing to do beyond installing the core. Savestates, per-title defaults, hooks\nand cheats are unchanged from v3.6.0.\n\n**If you reported the v3.6.0 no-content boot as broken, check which core you\nhave installed.** The original report for #726 was made against a v3.5.1 core —\na version that predates the feature entirely — which is worth ruling out before\nanything else.\n\n## Known limitations\n\nUnchanged from v3.6.0:\n\n- Inserting a disc restarts the console. A continuous swap depends on CD BIOS\n  disc-presence polling that has not been verified.\n- The enhancement profile governs `internal_resolution` and `true_color` only.\n- `docs/WHATSNEW` has no sections for v3.1.0 through v3.5.1; the per-release\n  notes in `docs/RELEASE_NOTES_v*.md` are authoritative for those.\n\n---\n\n## Artifacts in this release\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "0e23a26f754b83932f9afa7bc6821de5f8d1fb70b9336bae09b06ef313f737b9",
       "translationPending": false
     },
     {
@@ -3257,30 +3281,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "8b78e809aac14688660d77d9ea4469f0db8bcaf1bf3605389f0093ebfdd1c076",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nethersx2_lsfg-26500717",
-      "title": "【Android更新】NetherSX2 LSFG (Slushii Turnip Fix) 26500717",
-      "originalTitle": "NetherSX2 LSFG (Slushii Turnip Fix) 26500717 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-26T06:48:59Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix/releases/tag/v26500717",
-      "imageUrl": "asset://assets/emulators/nethersx2_lsfg.png",
-      "officialUrl": "https://github.com/slushiimusic/NetherSX2-Slushii-Turnip-Fix",
-      "summary": "NetherSX2 LSFG (Slushii Turnip Fix) 发布 Android 新版本 26500717，发布日期为2026年08月26日。点击查看官方版本信息与更新说明。",
-      "content": "NetherSX2 LSFG (Slushii Turnip Fix) 已发布 Android 最新版本 26500717。\n\n发布日期：2026年08月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n取代了第26500697次 中途调查 上面写的两件事\n无法幸存的夜晚——见以下*更正*.\n\n框架生成现在可以关闭( 并恢复)\n\n`applyLsfgMode(false)` 从没跑过 开关状态在\n`VulkanShim/Lsfg` 优先级, 启动时无条件适用, 且 UI\n无法更改 : `findCheckedInActivity` 返回此模糊的APK, 相同\n限制 `ui60`/`uiFsr` 读作数月无效。 一个偏好卡在\n`true` 因此,超过每个配置编辑和切换,输出面板是\n被周期性勾选重新附着,速度与被移除的速度相同。\n\n`turnip.conf` 现在在两个方向上都具有权威性——用户和用户的层层。\nshim可以写 明确 `lsfg_overlay=on|off` 赢和偏好\n改为匹配。\n\n还固定在进场的路上:面板只在内部脱落 `if (act != null)`, so\n在没有可解析的活动的情况下,将它留在屏幕上,而代码记录为\n不见了。\n\n帧读取遵循 OSD 开关\n\n关闭所有六张股票 OSD 切换 离开绿盒在屏幕上。 门是对的\n一直写着: `anyStatOn=false` - 但下面两个倒下 扔了答案\n离开:一个回到真实的任何时候* 无论是何时* `fg_osd` or `lsfg_overlay` 开始,和\n其他情况是: `return osd != null`,这是自我优惠(一旦显示,它报告说\n它应该被显示,所以它永远不能隐藏。 可见度是现在的六个开关\n`fg_osd=force` 作为调试逃生舱门。\n\n已固定的抓取回归\n\nv26500697运送了能维持捕捉力的耐受度\n摇晃的像素——但下面的锁门仍然要求精确匹配,所以\n每个收到的图像都被拒绝, 锁链被扭曲, 并抓取重读一个框架\n永远`59 captures/s but 0 unique`) (中文(简体) ). 大门现在使用同样的容忍。\n\n游戏中没有 60 FPS 补丁的 Judder\n\n没有 pnach 的游戏继承了强制加载全球游戏(`EnableCheats`, `60FPSMode`,\n`EnableNoInterlacingPatches`)),而代码本身的评论警告了引起judder on.\n本地30个头衔。 策略存在, 但只运行了已存在的每局文件\n已经存在。 没有补丁的可识别游戏现在被固定在这些设置上。\n\n每个游戏配置文件也被写入模拟器忽略的文件名中。 写着\n`_.ini` 当盘片有串;赤色 `.ini` 默不作声\n应用——这也影响了Colossus配置的捆绑阴影。\n\nv26500697的更正\n\n• 其“帧生成工程”索赔是在一个游戏、一个装置和一个设备上测量的\n抓取在同一块建筑中运出的回归(见上文)。 将此释放视为\n首先是帧源既有效又可控制的地方。\n• 框架生成*启用*在该建筑中完全不能由用户控制。\n\n已知问题\n\n· 快速照相机运动的内插文物是技术所固有的。\n高孔边(建筑角,窗口网格)的摇摆是光学流\n猜错了运动界限。 测试了两把杠杆,两把都弄得更糟\na Snapdragon 8 Gen 2 : (英语). `fg_flow_scale=1.0` (重的judder)和不跳脱衣舞\n模式。 PS2 标题插值 30 - > 60, 因此每个生成的框架跨度\n33毫秒的运动——大约是PC帧生成处理的两倍。 框架生成\n套装缓展游戏;它对抗快速自由相机游戏。\n• Adreno 650上的帧生成崩溃(e.g. RP 迷你V2 被关在那里\n自动。 此发行的队列修饰是否也治愈了它未经测试。\n• 设置中的框架生成行仍然无法在这个APK上读取,所以\n`turnip.conf` 这是可靠的控制。",
-      "originalContent": "Supersedes **v26500697**, which shipped mid-investigation. Two things it described did\nnot survive the night — see *Corrections* below.\n\n## Frame generation can now be turned off (and back on)\n\n`applyLsfgMode(false)` had **never once run**. The switch state lived in the\n`VulkanShim/Lsfg` preference, which startup applied unconditionally and which the UI\ncould not change: `findCheckedInActivity` returns null on this obfuscated APK, the same\nlimitation that has had `ui60`/`uiFsr` reading null for months. A preference stuck at\n`true` therefore outlived every conf edit and every toggle, and the output panel was\nre-attached by the periodic tick as fast as it was removed.\n\n`turnip.conf` is now authoritative **in both directions** — the layer both the user and\nthe shim can actually write. An explicit `lsfg_overlay=on|off` wins and the preference\nis corrected to match.\n\nAlso fixed on the way in: the panel was only detached inside `if (act != null)`, so\ntoggling with no resolvable Activity left it on screen while the code recorded it as\ngone.\n\n## The framegen readout follows the OSD switches\n\nTurning all six stock OSD toggles off left the green box on screen. The gate was right\nall along — it read `anyStatOn=false` — but two fallbacks underneath threw that answer\naway: one returned true whenever *either* `fg_osd` or `lsfg_overlay` was on, and the\nother was `return osd != null`, which is self-referential (once shown, it reported that\nit should be shown, so it could never hide). Visibility is now the six switches, with\n`fg_osd=force` as the debugging escape hatch.\n\n## Capture regression fixed\n\nv26500697 shipped an extent-jitter tolerance that held the capture extent through a few\npixels of wobble — but the latch gate below it still demanded an **exact** match, so\nevery incoming image was refused, the latch went stale, and capture re-read one frame\nforever (`59 captures/s but 0 unique`). The gate now uses the same tolerance.\n\n## Judder on games without a 60 FPS patch\n\nGames with no pnach inherited the forced-on globals (`EnableCheats`, `60FPSMode`,\n`EnableNoInterlacingPatches`), which the code's own comment warns causes judder on\nnative-30 titles. The policy existed but only ran over per-game files that already\nexisted. Identifiable games without a patch are now pinned to those settings off.\n\n**Per-game profiles were also written under a filename the emulator ignores.** It reads\n`<SERIAL>_<CRC>.ini` when the disc has a serial; bare `<CRC>.ini` silently never\napplied — which also affected the bundled Shadow of the Colossus profiles.\n\n## Corrections to v26500697\n\n- Its \"frame generation works\" claim was measured on **one game, on one device**, and a\n  capture regression shipped in that same build (fixed above). Treat this release as the\n  first where framegen is both working and controllable.\n- Frame generation being *enabled* was not user-controllable in that build at all.\n\n## Known issues\n\n- **Interpolation artifacts on fast camera motion are inherent to the technique.**\n  Warping on high-contrast edges (building corners, window grids) is optical flow\n  guessing wrong at motion boundaries. Two levers were tested and BOTH made it worse on\n  a Snapdragon 8 Gen 2: `fg_flow_scale=1.0` (heavy judder) and a non-bobbing deinterlace\n  mode (microstutters). PS2 titles interpolate 30 -> 60, so each generated frame spans\n  33 ms of motion — roughly twice what PC frame generation deals with. Frame generation\n  suits slow-panning games; it fights fast free-camera games.\n- **Frame generation crashes on Adreno 650** (e.g. RP Mini V2) and is gated off there\n  automatically. Whether this release's queue fix also cures it is untested.\n- The Frame Generation row in Settings still cannot be read on this APK, so\n  `turnip.conf` is the reliable control.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nethersx2_lsfg"
-      ],
-      "contentHash": "00f1556efc6cb6d7275e96390e18d7b155765db08cecfb6ed867c90c801f5694",
       "translationPending": false
     },
     {
