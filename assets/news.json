@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T16:52:17.652096Z",
+  "generatedAt": "2026-09-09T05:12:15.418484Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,99 @@
   },
   "articles": [
     {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-09T03:59:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月09日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_megadrive.cpp: 各种(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "195be655491cc326e20970c865e70bcb2de2b5d089ab00141d350f951e51ac74",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-2-6-9",
+      "title": "【Android更新】ARMSX2 2.6.9",
+      "originalTitle": "ARMSX2 2.6.9 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-09T03:22:46Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.6.9",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 2.6.9，发布日期为2026年09月09日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 2.6.9。\n\n发布日期：2026年09月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.6.9\n\n有什么新情况:\n\n@bmdhacks 完成的渲染器速度(_R):_\n\n一个月的GS工作针对ARM手持设备: Classic (硬件) 渲染器, 软件渲染器即其精度甲骨文, 以及 per-device Vulkan 政策。 在Snapdragon 865 (Turnip)和Dimensity 8300 / 马里-G615 (ARM r44p1)上被测量,以真锥捕捉为精确参考。\n\n改变了什么:\n\n软件渲染器,控制台精确。 每个目的地的分数,Gouraud和深度插值在硬件的网格和块宽度上,分数对等,每像素MMAG/MMIN,四位三线重量,AA1湾 愤怒,16位Date。 输出在24个炸弹堆的21个 向控制台移动\n\n一般事务核心。 普通打包布局的双通顶点踢内核,控制台缓冲的从局部到局部的移动,三个控制台测量的 CLUT 规则,每个拖网环境更窄的快照。。。。\n\n硬件渲染器。 精确的 FBMSK- alpha 跟踪目标alpha 已知位, 用于无障碍设备上需要目的地的混合体的克隆道 (fixes Black and Brian Lara flip) 卡塔玛里在特尼普上超光速出击 突起波段 NASCAR的2x接合器 八个空白抓取器 尖端突起 在上下级 混合常数。\n\nVulkan设备。 明确外部依赖每个渲染通过,帧描述器-集合链,将流环减半,在UMA部件上进行启动预触,延迟非相干冲出,设备-fau lt 报告, read back transfer-size fix (也叫 DX12), CAS/FSR1/SGSR 的计算范围布局。\n\n上流为道。 十八岁 PCSX2 GS使用出处线选择樱桃(Native Assizing and jiggle survey, 三条纹理-缓存修正,目标更新双线回归,深度转换地层,PrimI) D范围,在RTA缩放下fbmask alpha,用它的GameDB行重写出大-ST顶点,DX11 DS-as-RT状态。 其中一人绊倒了在呼叫站点固定的16位颜色目标上仅用Devel的断言。\n\nRunner. gsrunner 重放-放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放放\n\n行为变化 :\n\nDimensity 8300 /马里-G615:自动取出Vulkan,并开启了平地取取出(免除了r44p1相撞规则和MediaTek拒绝列表). 禁用 Framebuffer Fatch 是返回的路。 其他MediaTek马里部分保留复制路径,\n\n阿德雷诺:天花板杀手被缩小到下面的特尼普 26.2, Adreno 610 得到缓存流环内存, 每个特鲁尼普构建路径 固定的混合因子通过第二个片段输出。\n\nForce MaliFramebuffer Fetch 仅限马里,OverrideTexture Barriers=1在设计上比驱动数据库排名高。\n\n阴影缓存版本108至114. Vulkan溪流环被减半(128个米B减少了SD865上的居民).\n\nGameDB:战争之神 二行推荐高混合和AA1(仅提供建议).\n\n速度基准:\n\n相同的22个回放场景,相同的设备,被固定的时钟,帧限制被关闭,每块3个互放重复,稳态帧时间(不包括阴影-编译回路).\n\nSnapdragon 865 (阿德雷诺650,特鲁尼普)\n\n标题:旧p50ms:新p50ms:更改\nx:39.5：24.4：-38%\n卡塔玛里-b:4.5：3.3：-27%\n特技演员:45.0：38.7：-14%\ngt4：7.2：6.2：-14%\nmgs3 : (韩语)7.9：6.9：-13%\nrcuya 游戏:8.8：7.7：-12%\nrcuya 效应 :12.8：11.4：-11%\n退出运行b :13.0：11.8：-9%\n蜘蛛侠3:18.9：17.7：-6%\n\n其他13个场景以-1%至-9%移动,除了在7ms帧上以+2%的\"Beyond Good & Evil\",在噪声内。 最坏的一例(p95)帧移动方式相同。 其框架预算内的标题:前22名中的19名,后22名中的20名。\n\n地平面8300(马里-G615,ARM r44p1),以Vulkan为原型进行类似比较\n\n标题:旧p50ms:新p50ms:更改\nx:105.3：16.6：-84%\nac3：28.7：9.2：-68%\n特技演员:60.7：21.8：-64%\n{\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}跑过...",
+      "originalContent": "ARMSX2 2.6.9\r\n\r\n**What's new:**\r\n\r\n_Renderer speedups done by @bmdhacks:_\r\n\r\nA month of GS work aimed at ARM handhelds: the Classic (hardware) renderer, the software renderer that is its accuracy oracle, and per-device Vulkan policy. Measured on a Snapdragon 865 (Turnip) and a Dimensity 8300 / Mali-G615 (ARM r44p1), with real-console captures as the accuracy reference. \r\n\r\n**What changed:**\r\n\r\nSoftware renderer, console-exact. Dither on every destination, gouraud and depth interpolation on the hardware's grid and block width, truncated reciprocals, per-pixel MMAG/MMIN, four-bit trilinear weight, AA1 coverage, 16-bit DATE. Output moves on 21 of 24 corpus dumps, toward the console.\r\n\r\nGS core. A two-pass vertex kick kernel for the common packed layouts, the console's buffered local-to-local move, three console-measured CLUT rules, a narrower per-draw environment snapshot.\r\n\r\nHardware renderer. Per-target alpha known-bits tracking with an exact FBMSK-alpha drop, a clone road for blends that need the destination on devices without barriers (fixes Black and Brian Lara flicker, Katamari over-bright on Turnip, Splashdown bands, NASCAR's 2x seam, eight blank captures), sprite-edge snapping at upscale, a fixed-blend-factor reroute for Turnip, which ignores blend constants.\r\n\r\nVulkan device. Explicit external dependency on every render pass, frame descriptor-pool chain, halved stream rings with a startup pre-touch on UMA parts, deferred non-coherent flushes, device-fault reporting, readback transfer-size fix (also DX12), compute-scoped layout for CAS/FSR1/SGSR.\r\n\r\nUpstream. Eighteen PCSX2 GS commits cherry-picked with provenance lines (Native Scaling and jiggle detection, three texture-cache fixes, the target-update bilinear regression, depth conversion floor, PrimID range, fbmask alpha under RTA scaling, large-ST vertex rewrite with its GameDB rows, DX11 DS-as-RT state). One of them tripped a Devel-only assert on 16-bit colour targets, fixed at the call site. \r\n\r\nRunner. gsrunner replay-loop, draw-log, per-frame stats, ladder and console-payload flags, and an NDK build of it for adb-shell runs on Android devices.\r\n\r\n**Behaviour changes:**\r\n\r\nDimensity 8300 / Mali-G615: Auto picks Vulkan, and in-tile framebuffer fetch is on (exempted from the r44p1 crash rule and the MediaTek deny list). DisableFramebufferFetch is the way back. Other MediaTek Mali parts keep the copy path, now on Linux too.\r\n\r\nAdreno: the stencil kill is narrowed to Turnip below 26.2, Adreno 610 gets cached stream-ring memory, every Turnip build routes the fixed blend factor through the second fragment output.\r\n\r\nForceMaliFramebufferFetch is Mali-only, OverrideTextureBarriers=1 outranks the driver database by design.\r\n\r\nShader cache version 108 to 114. Vulkan stream rings halved (128 MiB less resident on SD865).\r\n\r\nGameDB: God of War II rows recommend High blending and AA1 (advice only).\r\n\r\n**Speed benchmarks:** \r\n\r\nSame 22 replay scenes, same device, clocks pinned, frame limiter off, three interleaved repeats per build, steady-state frame times (shader-compile loop excluded). \r\n\r\nSnapdragon 865 (Adreno 650, Turnip)\r\n\r\n| title | old p50 ms | new p50 ms | change |\r\n|---|---:|---:|---:|\r\n| xenosaga | 39.5 | 24.4 | -38% |\r\n| katamari-b | 4.5 | 3.3 | -27% |\r\n| stuntman | 45.0 | 38.7 | -14% |\r\n| gt4 | 7.2 | 6.2 | -14% |\r\n| mgs3 | 7.9 | 6.9 | -13% |\r\n| rcuya-gameplay | 8.8 | 7.7 | -12% |\r\n| rcuya-effects | 12.8 | 11.4 | -11% |\r\n| outrun-b | 13.0 | 11.8 | -9% |\r\n| spiderman3 | 18.9 | 17.7 | -6% |\r\n\r\nThe other 13 scenes move by -1 to -9%, except Beyond Good & Evil at +2% on a 7 ms frame, within noise. Worst-case (p95) frames move the same way. Titles inside their frame budget: 19 of 22 before, 20 of 22 after.\r\n\r\nDimensity 8300 (Mali-G615, ARM r44p1), old build on Vulkan for a like-for-like comparison\r\n\r\n| title | old p50 ms | new p50 ms | change |\r\n|---|---:|---:|---:|\r\n| xenosaga | 105.3 | 16.6 | -84% |\r\n| ac3 | 28.7 | 9.2 | -68% |\r\n| stuntman | 60.7 | 21.8 | -64% |\r\n| outrun…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "04725ca108e47a6ca6f33d845f152769d1463ea773f12e37935172db34642d99",
+      "translationPending": false
+    },
+    {
       "id": "android-release-nesd-nightly",
       "title": "【Android更新】NESd nightly",
       "originalTitle": "NESd nightly Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-08T16:38:16Z",
+      "publishedAt": "2026-09-08T18:34:30Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
       "officialUrl": "https://github.com/jpjonte/NESd",
       "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月08日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 自动保存现在退出游戏、退出时也保存 NESd,或发送到背景\n\n已更改\n• 主菜单现在淡出并显示在平板上一个旋转器,而其ROM装入\n\n固定\n• 电池保存、保存状态和缩略图现在遵循一个更名为ROM的文件\n• 同名文件的两张ROM不再共享其保存和保存状态\n• 骗取和断点现在跟随一个更名的ROM文件\n• 与文件名称相同的两个ROM不再共享其断点\n• 两个同名的ROM现在都留在最近的ROM清单中\n• 放弃 NESd 不再失去 SRAM , 因为它正在写\n• 当一个ROM无法装入时,文件拾取器现在继续打开\n• 网络版现在在普通HTTP上有声音\n• 固定的APU长度计数器停止并重新装入写入时间\n• 固定DMC DMA空闲循环读取\n• 固定图示外挂旗的时间",
-      "originalContent": "### Added\n- Auto save now also saves when quitting a game, quitting NESd, or sending it to the background\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 自动保存现在退出游戏、退出时也保存 NESd,或发送到背景\n• 上一个 Tab 和下个 Tab 动作现在通过最近的 ROM 页面并保存状态网格\n\n已更改\n• 主菜单现在淡出并显示在平板上一个旋转器,而其ROM装入\n• 键盘和游戏板导航现在跳过菜单中的后键\n• 菜单导航现在包围四周\n• 提高MacOS流程的优先次序\n\n固定\n• 电池保存、保存状态和缩略图现在遵循一个更名为ROM的文件\n• 同名文件的两张ROM不再共享其保存和保存状态\n• 骗取和断点现在跟随一个更名的ROM文件\n• 与文件名称相同的两个ROM不再共享其断点\n• 两个同名的ROM现在都留在最近的ROM清单中\n• 放弃 NESd 不再失去 SRAM , 因为它正在写\n• 当一个ROM无法装入时,文件拾取器现在继续打开\n• 网络版现在在普通HTTP上有声音\n• 固定的APU长度计数器停止并重新装入写入时间\n• 固定DMC DMA空闲循环读取\n• 固定图示外挂旗的时间",
+      "originalContent": "### Added\n- Auto save now also saves when quitting a game, quitting NESd, or sending it to the background\n- The Previous Tab and Next Tab actions now page through the recent ROM and save state grids\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n- Keyboard and gamepad navigation now skips the back button in menus\n- Menu navigation now wraps around\n- Increased process priority on macOS\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "nesd"
       ],
-      "contentHash": "cd9d8d62165eebfe5af12e028f0e19fe28dcc791901b16972bc5df27232843fe",
+      "contentHash": "bee3ab86b9656dcbef7a185586b7acce0802c0a862fa93c01b0c11d863f6106c",
+      "translationPending": false
+    },
+    {
+      "id": "136755",
+      "title": "【移动设备】RetroGBm v26.9",
+      "originalTitle": "[Consoles portables] RetroGBm v26.9",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-09-08T18:25:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136755-consoles-portables-retrogbm-v26-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/02/retrogbm.png",
+      "officialUrl": "https://github.com/Callum5042/RetroGBm",
+      "summary": "Gameboy Color 模拟器以 C++ 为 Windows 和 Android 编写。 变动情况如下: · 改进了图形和游戏相容性,包括更好地支持先前的粗略标题。 • 为原版Game Boy游戏添加了可选的Game Boy色彩调色板,带有灰度选项。 • 更新保存状态;旧保存状态不再相容。 • 提高整体模拟准确性并解决各种游戏和展示问题。 • 在Android和Windows之间添加了链接播放,并配有新的连接屏幕。",
+      "content": "Gameboy Color 模拟器以 C++ 为 Windows 和 Android 编写。\n\n变动情况如下:\n\n· 改进了图形和游戏相容性,包括更好地支持先前的粗略标题。\n• 为原版Game Boy游戏添加了可选的Game Boy色彩调色板,带有灰度选项。\n• 更新保存状态;旧保存状态不再相容。\n• 提高整体模拟准确性并解决各种游戏和展示问题。\n• 在Android和Windows之间添加了链接播放,并配有新的连接屏幕。\n· 改进了Android全屏幕显示和固定恢复相关碰撞。",
+      "originalContent": "Émulateur Gameboy Color écrit en C++ pour Windows et Android.\n\nLes changements sont les suivants:\n\n- Improved graphics and game compatibility, including better support for previously glitchy titles.\n- Added optional Game Boy Colour palettes for original Game Boy games, with a greyscale option.\n- Updated save states; older save states are no longer compatible.\n- Improved overall emulation accuracy and fixed various gameplay and display issues.\n- Added link play between Android and Windows, with a new connection screen.\n- Improved Android full screen presentation and fixed restart-related crashes.",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "80297903ed4b2ad340e7da8f023d0dc2499f7fa5614c1ad255b6ffb8747056c5",
       "translationPending": false
     },
     {
@@ -57,31 +129,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-08T14:25:45Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月08日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "0e568d897e23d51a5bd70caf12857e4e453987594928438fc3fabdf18892ab69",
-      "translationPending": false
-    },
-    {
       "id": "136748",
       "title": "【电脑】POM2 v0.9.1",
       "originalTitle": "[Ordi.] POM2 v0.9.1",
@@ -99,30 +146,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "1beab8b2b632575f97a83edff18a6607fda4fe5eb9c08b94d7d5f53f0dba59cf",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260908",
-      "title": "【Android更新】ARMSX2 nightly-20260908",
-      "originalTitle": "ARMSX2 nightly-20260908 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-08T13:22:09Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260908",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260908，发布日期为2026年09月08日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260908。\n\n发布日期：2026年09月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• Android:在通用页面构建中添加 -- -- 应用程序代号通过\n• Android:通过树上zstd解码器安装tar+zstd纹理包\n• GS:空研中心KTX1米链替换纹理\n• GS:让自由地心携带阴道来代替斜道去向\n• 自由:向前端发送模拟器本身的警告和错误\n• GS、GameDB、Patch:在二进制中携带资源,所以磁盘上不需要任何资源\n• Android:使主机站台远离自由式核心\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260907...fd8a8403bcf31175384d716936e34a6c237f2d11",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- Android: add --application-id passthrough to the universal-page build\n- Android: install tar+zstd texture packs through the in-tree zstd decoder\n- GS: KTX1 mip-chain replacement textures for ASTC\n- GS: let the libretro core carry shaderc instead of dlopening one\n- libretro: send the emulator's own warnings and errors to the frontend\n- GS, GameDB, Patch: carry the resources in the binary, so none are needed on disk\n- Android: keep the host stubs out of the libretro core\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260907...fd8a8403bcf31175384d716936e34a6c237f2d11",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "2706702f57ad9b7d700a5bbfed6d55a3e46110a1127cab8047b86b81d6bdaacf",
       "translationPending": false
     },
     {
