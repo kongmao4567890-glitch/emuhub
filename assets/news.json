@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T05:14:31.737291Z",
+  "generatedAt": "2026-09-10T16:41:27.571272Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,223 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T14:32:55Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月10日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• xa cpu, 修补笨虫 (dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• xa cpu, fix silly bug (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "0b07f2b6f672f0acb1189e2857b56affa0c9d226633d7b05c52bc78963339b45",
+      "translationPending": false
+    },
+    {
+      "id": "136819",
+      "title": "【家用机】Suyu v0.0.4 Final Edition",
+      "originalTitle": "[Consoles de salon] Suyu v0.0.4 Final Edition",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-10T13:25:40Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136819-consoles-de-salon-suyu-v0-0-4-final-edition/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/03/suyu.png",
+      "officialUrl": "https://suyu.dev/",
+      "summary": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。 Suyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并 您可以在控制台上完成其余的工作。",
+      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n变更内容：\n\n您好，我像往常一样迟到了一点，但经过大量的工作，终于完成了。\nsuyu上次更新。\n有哪些变化：\n• Eden的大部分仿真增强功能已内置到仿真器中。\n• suyu现在可以运行大多数2026 Switch软件和固件。\n•现在有一个Libretro版本，这意味着suyu可以在RetroArch等程序中使用。\n•用户可以将他们的虚拟游戏卡片库与suyu同步，以加载他们的Switch游戏库（但是，您仍然必须提供ROM ）。\n•用户界面已经完全重新设计，更接近suyu的概念插图。\n•受Miiverse启发的Reddit界面充当社交酒吧。\n•多人游戏功能已恢复。\n• FreeBSD版本。\n• Switch游戏玩家、改装玩家和游戏开发人员的单独界面（某些部分仍部分实现）。\n•最终没有保留的其他功能的存根（包括通过Libretro对其他控制台平台的支持， Libretro现在只为您推出RetroArch ，以及某种形式的Steam集成）。\n\n可能是最令人兴奋的部分：游戏的重新编译。\n用户现在可以将游戏的CPU代码导出为重新编译的C代码，这可用于促进移植或反向工程切换游戏\n.suyu还允许将游戏生成为独立的半原生PC应用程序（我说“半原生” ，因为大部分GPU部分仍然使用suyu的HLE后端）。\n简而言之，据我所知，自从我说它将在7月完成以来，我有点迟到了，但我可以说， suyu （作为一个纯粹的模拟器）当时已经恢复了功能。 不过，我还是想再往前走一点。\n我发现尝试跟随Eden或与之竞争是毫无意义的，特别是如果直接从中导入了这么多改进，如果这次更新将是Suyu的最后一次（至少在我的指导下） ，那就更是如此。 所以我采取了不同的方法，那就是改进其他方面。\nsuyu现在更多地被设计为游戏的启动器和多功能工具，以补充Eden的工作，而不是简单地试图重新皮肤或并行开发与Eden相同的功能。\n（注意：我最初表示，为了避免数字千年版权法案（ DMCA ）提款，我将删除解密逻辑，这意味着suyu应该运行已经解密的自制游戏或游戏\n然而，经过分析，使用suyu解密似乎并不是撤销数字千年版权法案的理由，任天堂显然滥用了数字千年版权法案。出于这个原因， suyu将一如既往地继续破译游戏\n然而，鉴于这个项目的剩余生命周期很短，而且我希望保护我的隐私，我不会反击提款，至少不会反击那些特别复杂的提款。）\n\n那么，现在会发生什么？ （以及一些背景信息）\n\n简而言之，什么都没有。\n这是最新的更新。 接下来，我将存档组织，删除此帐户，然后继续。 我需要休息一下，在可预见的未来，我不想和suyu在一起。\n这个项目是由一个非常雄心勃勃的开发团队天真地发起的，其中一些是未成年人，这引起了Torzu和Sudachi等不同分支之间的戏剧性\n，在Suyu最初的混乱之后，开发团队离开了，只剩下启动项目的人和备用聊天室里的几个粉丝。\n我一直在关注这个项目，并好奇地观察它的发展，以前对模仿任天堂Switch没有真正的兴趣，甚至没有合法的兴趣。\n这个空间的粉丝要求我帮助他们把项目带回来，我答应他们我会的。 过了一会儿，我信守了诺言。\n我最初带来了新的感兴趣的开发人员，但一遍又一遍，仍然参与的历史成员消失了，然后回来了，经常停止沟通\n。许多新开发人员也在做同样的事情，因为如果项目不积极接受他们的帮助，他们就不能真正从事项目工作。\n尽管如此，我仍然继续尝试将它们整合到项目中，组织其结构，确保它们可以直接相互沟通，直到Ryujinx不复存在的那一周。\n那一周，旧的项目领导和原始开发人员（他们大多宣誓关闭Switch模拟，甚至声称Yuzu--如果我没记错的话， Ryujinx也是使用任天堂SDK的代码开发的）都重新开始工作\n交换机仿真上的ler。\n前开发人员正在开发现已停用的Ryujinx分叉（许多现在是Eden贡献者） ，而前管理层计划恢复suyu\n但是，在这样做的过程中，她决定切断与新开发人员的所有沟通，甚至没有将他们整合到项目中，这对我来说尤其不愉快。\n这对我来说并不重要。 我很坚强，在那一点上，我甚至很高兴摆脱了这个项目。 但是我仍然陷入了与suyu相关的业务，最后，当管理层决定该项目不再时尚时，一切都再次落在我身上。\n因此，为了兑现我的承诺，我将项目以“冻结”状态重新放在GitHub上，直到我可以将其传递给具有真正技能和对项目感兴趣的开发人员或团队。\n当我开始准备继续我的生活时，我决定完成这个项目，让它保持适当的状态。\n\n好了，完成了。\n我还想向以前的开发人员或与suyu有关的人员（例如suyu subreddits的前版主、前管理层等）提出请求：请不要打扰我。\n我不想被提及、谈论、骚扰、嘲笑甚至称赞。 我只是想在那之后消失。 如果您有任何人在帖子、页面或其他地方提到我，请将其删除。\n在那之前我从来没有问过你任何事情。 我没有骚扰您，我希望您在阅读此消息后（或如果）也对我进行同样的骚扰。\n\n你不会再收到我的消息了。\n因此，我将向所有开发商提出最终报价，该报价将永久有效：如果您能证明您能够很好地管理项目，那么它就是您的。\n\n组织、押金、私人押金，应有尽有。\n您可以直接联系我的时间有限。 删除此帐户后，您将需要浏览GitHub讨论，但这只能在组织存档前的有限时间内完成。\n但是，代码仍然可以自由分叉，任何恢复suyu的项目都将由我审核。 然后组织将被转移。\n\n简而言之，存款在https://github.com/suyu-emu上公开\n感谢您的耐心等待，希望这对某些人有用或有趣。 我也希望它能高调地结束Suyu的故事。\n\n再见，保重。\n\n开发站点在这里或那里（以前在那里）并在那里构建（以前在那里）。\n存款在这里。镜像模拟器在这里。",
+      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nLes changements:\n\nBonjour, j’ai été un peu en retard comme d’habitude, mais après pas mal de travail, c’est enfin fait.\nsuyu a été mis à jour, pour la dernière fois.\n\nCe qui a changé:\n- La plupart des améliorations d’émulation d’Eden ont été intégrées à l’émulateur.\n- suyu peut désormais faire tourner la plupart des logiciels et firmwares Switch de 2026.\n- Il existe maintenant une version Libretro, ce qui signifie que suyu peut être utilisé à l’intérieur de programmes comme RetroArch.\n- Les utilisateurs peuvent synchroniser leur bibliothèque de cartes de jeu virtuelles avec suyu afin de charger leur bibliothèque de jeux Switch (vous devez cependant toujours fournir les ROMs).\n- L’interface utilisateur a été entièrement repensée pour être plus proche des illustrations conceptuelles de suyu.\n- Une interface Reddit inspirée de Miiverse fait office de barre sociale.\n- Les fonctionnalités multijoueur ont été restaurées.\n- Des versions pour FreeBSD.\n- Des interfaces distinctes pour les joueurs, les moddeurs et les développeurs de jeux Switch (certaines parties étant encore partiellement implémentées).\n- Des stubs pour d’autres fonctionnalités qui n’ont finalement pas été retenues (notamment la prise en charge d’autres plateformes de consoles via Libretro, qui se contente désormais de lancer RetroArch pour vous, ainsi qu’une certaine forme d’intégration Steam).\n\nEt probablement la partie la plus excitante de toutes: la recompilation des jeux.\n\nLes utilisateurs peuvent désormais exporter le code CPU de leurs jeux sous forme de code C recompilé, ce qui pourrait être utilisé pour faciliter le portage ou la rétro-ingénierie des jeux Switch. suyu permet également de générer les jeux sous forme d’applications PC semi-natives autonomes (je dis « semi-natives » car une grande partie de la partie GPU utilise toujours le backend HLE de suyu).\n\nBref, je comprends que je sois un peu en retard puisque j’avais dit que ce serait terminé en juillet, mais je peux dire que suyu (en tant qu’émulateur pur) était redevenu fonctionnel à ce moment-là. Je voulais cependant aller un peu plus loin.\n\nJe trouvais inutile d’essayer de suivre ou de concurrencer Eden, surtout si autant d’améliorations étaient directement importées de celui-ci, et encore plus si cette mise à jour allait être la dernière de suyu (du moins sous ma direction). J’ai donc choisi une approche différente, qui consistait à améliorer tout le reste.\n\nsuyu est désormais davantage conçu comme un launcher de jeux et comme un outil polyvalent venant compléter le travail d’Eden, plutôt que d’essayer simplement de reskinner ou de développer de manière parallèle les mêmes fonctionnalités qu’Eden.\n\n(Note: j’avais initialement indiqué que je supprimerais la logique de déchiffrement afin d’éviter les retraits DMCA, ce qui aurait signifié que suyu aurait dû faire fonctionner des homebrews ou des jeux déjà déchiffrés. Cependant, après analyse, il semble que l’utilisation du déchiffrement par suyu ne constitue pas un motif de retrait DMCA et que Nintendo ait apparemment fait un usage abusif du DMCA. Pour cette raison, suyu continuera à déchiffrer les jeux comme il l’a toujours fait. Toutefois, compte tenu de la courte durée de vie restante de ce projet et de mon souhait de préserver ma vie privée, je ne me battrai pas contre les retraits, du moins pas contre ceux qui seraient particulièrement complexes.)\n\nAlors, que va-t-il se passer maintenant ? (et un peu de contexte)\n\nEn résumé, rien.\n\nIl s’agit de la dernière mise à jour. Ensuite, je vais archiver l’organisation, supprimer ce compte et passer à autre chose. J’ai besoin de faire une pause et je ne veux plus être associé à suyu dans un avenir prévisible.\n\nCe projet avait été lancé de manière assez naïve par une équipe de développeurs très ambitieux, dont certains étaient mineurs, et cela avait provoqué des dramas entre les différentes forks telles que Torzu et Sudachi. Après le chaos initial autour de suyu, l’équipe de développement est partie, et il ne restait plus que le gars qui avait lancé le projet et quelques fans dans un salon de discussion de secours.\n\nJe suivais le projet depuis un moment et observais son développement avec curiosité, sans avoir auparavant de véritable intérêt, ni même d’intérêt légitime, pour l’émulation de la Nintendo Switch.\n\nLes fans présents dans cet espace m’avaient demandé de les aider à faire revenir le projet, et je leur avais promis que je le ferais. Après un certain temps, j’ai tenu cette promesse.\n\nJ’ai initialement fait venir de nouveaux développeurs intéressés, mais encore et encore, les membres historiques qui étaient toujours impliqués disparaissaient puis revenaient, cessant régulièrement de communiquer. Beaucoup des nouveaux développeurs faisaient la même chose, puisqu’ils ne pouvaient pas vraiment travailler sur un projet si celui-ci n’acceptait pas activement leur aide.\n\nJ’ai néanmoins continué à essayer de les intégrer au projet, en organisant sa structure, en veillant à ce qu’ils puissent communiquer directement entre eux, jusqu’à la semaine où Ryujinx a cessé d’exister.\n\nCette semaine-là, l’ancienne direction du projet et les développeurs d’origine (qui avaient pour la plupart juré de ne plus toucher à l’émulation Switch et avaient même affirmé que Yuzu — et, si je me souviens bien, Ryujinx également — avaient été développés en partie à l’aide de code provenant du SDK de Nintendo) ont tous deux recommencé à travailler sur l’émulation Switch.\n\nLes anciens développeurs travaillaient sur un fork aujourd’hui disparu de Ryujinx (beaucoup sont désormais contributeurs d’Eden), tandis que l’ancienne direction prévoyait de faire revivre suyu. Mais ce faisant, elle a décidé de couper toute communication avec les nouveaux développeurs sans même les intégrer au projet, et s’est montrée particulièrement désagréable avec moi.\n\nÇa ne m’importait pas vraiment. J’ai la peau dure et, à ce moment-là, j’étais même plutôt content d’être débarrassé du projet. Mais je restais malgré tout coincé avec les affaires liées à suyu et, finalement, tout m’est retombé dessus une fois de plus, lorsque la direction a décidé que le projet n’était plus à la mode.\n\nAinsi, pour tenir ma promesse, j’ai remis le projet sur GitHub dans un état « gelé », en attendant de pouvoir le transmettre à un développeur ou à une équipe possédant de véritables compétences et un réel intérêt pour le projet.\n\nEt lorsque j’ai commencé à me préparer à passer à autre chose dans ma vie, avec une page blanche, j’ai décidé de terminer le projet et de le laisser dans un état correct.\n\nVoilà, maintenant c’est fait.\n\nJe voudrais également adresser une demande aux anciens développeurs ou aux personnes liées à suyu (par exemple les anciens modérateurs des subreddits de suyu, l’ancienne direction, etc.) : laissez-moi tranquille, s’il vous plaît.\n\nJe ne veux pas être mentionné, dont on parle, harcelé, ridiculisé ou même complimenté. Je veux simplement disparaître après ça. Si certains d’entre vous m’ont mentionné quelque part dans des publications, des pages ou autre, merci de les supprimer.\n\nJe ne vous ai jamais rien demandé avant cela. Je ne vous ai pas harcelés, et je m’attends à ce que vous en fassiez de même avec moi après (ou si) vous lisez ce message.\n\nVous n’entendrez plus parler de moi.\n\nJe vais donc faire une dernière offre, qui restera valable de manière permanente, à tous les développeurs : si vous pouvez prouver que vous êtes capables de bien gérer le projet, il est à vous.\n\nL’organisation, les dépôts, les dépôts privés, tout.\n\nVous disposez d’un temps limité pour me contacter directement. Une fois ce compte supprimé, vous devrez passer par les GitHub Discussions, mais cela ne sera possible que pendant une durée limitée avant que l’organisation soit archivée.\n\nLe code restera cependant librement forkable, et tout projet visant à faire revivre suyu sera examiné par moi. L’organisation sera ensuite transférée.\n\nBref, le dépôt est public sur https://github.com/suyu-emu\n\nMerci pour votre patience, et j’espère que cela pourra être utile ou amusant pour certains. J’espère également que cela permettra de terminer l’histoire de suyu sur une bonne note.\n\nÀ plus les gars, prenez soin de vous.\n\nSite de dev ici ou là (anciennement là) et builds là (anciennement là).\nDépôts ici. Miroir des émulateurs ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "aa517d982c9c1afaefa980da5ad2e49f6e121a82f12369a45cb1363421da77d9",
+      "translationPending": false
+    },
+    {
+      "id": "136817",
+      "title": "【家用机】KytyPS5 r260910",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260910",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T13:12:44Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136817-consoles-de-salon-kytyps5-r260910/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
+      "officialUrl": "https://github.com/Nmzik/KytyPS5",
+      "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n• Json2 ：新的ABI\n•图形：共享顶点格式映射并支持打包浮动颜色\n•着色器：共享直接和条件分支分类\n•着色器：实现RDNA2子矢量循环掩码和分支语义\n•着色器：实现S_WQM_B32\n• Nmzik和brandostrong 3小时前承诺\n•字体：接受支持的OpenType SBB面\n•系统服务：使用PS5参数400的配置语言\n•图形：共享打包的纹理和渲染目标通道布局\n•图形：简化纹理上传和组件映射路径\n•内核：跨搜索和读取共享目录流\n\n（从此分叉编译的临时版本正在等待正式发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- Json2: new ABI\n- graphics: share vertex format mapping and support packed float colors\n- shader: share direct and conditional branch classification\n- shader: implement RDNA2 subvector loop mask and branch semantics\n- shader: implement S_WQM_B32\n- Nmzik and brandostrong committed 3 hours ago\n- font: accept supported OpenType CFF faces\n- systemservice: use configured language for PS5 parameter 400\n- graphics: share packed texture and render-target channel layouts\n- graphics: simplify texture upload and component mapping paths\n- kernel: share directory streams across seeks and reads\n\n(Temporary build compiled from this fork pending official releases.)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "kytyps5_pc"
+      ],
+      "contentHash": "2679af2c665f1dd56bcd18d861bd4a5e9aba5883e0d7b125e7c577b48940705c",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-nightly-20260910-7",
+      "title": "【Android更新】ARMSX1 nightly-20260910.7",
+      "originalTitle": "ARMSX1 nightly-20260910.7 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T12:52:36Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260910.7",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260910.7，发布日期为2026年09月10日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260910.7。\n\n发布日期：2026年09月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n自动夜造自 cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "6213a7f62b992bd251081c8cf4f218cc579145c792b149613b65f444a75438e0",
+      "translationPending": false
+    },
+    {
+      "id": "136813",
+      "title": "【电脑】POM2 v0.9.2",
+      "originalTitle": "[Ordi.] POM2 v0.9.2",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T07:33:58Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136813-ordi-pom2-v0-9-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/pom2-emu.png",
+      "officialUrl": "https://github.com/habib256/pom2/",
+      "summary": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。 它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。",
+      "content": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。\n它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。\n在其特点中， POM2提供复合NTSC渲染、CRT/磷光体效果、体素3D视图、倒带、许多扩展卡的仿真，如Mockingboard、Phasor、Super Serial Card、CFFA 2.0和U Ethernet ，以及对ImageWriter II打印机的支持。\n模拟器支持多种格式的Apple II软盘和媒体（ .dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv ） ，并集成了对磁盘II的忠实模拟。它还通过以太网提供网络支持，甚至可以通过WebAssembly直接在浏览器中运行。",
+      "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "e55ccb1b4816ab9a8191d574323016b72025f683634278dc41e84ccd1ebd26fb",
+      "translationPending": false
+    },
+    {
+      "id": "136811",
+      "title": "【其他】Hades v1.1.1 Build 260910",
+      "originalTitle": "[Consoles portables] Hades v1.1.1 Build 260910",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T07:32:13Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136811-consoles-portables-hades-v1-1-1-build-260910/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/hades-emu.png",
+      "officialUrl": "https://github.com/Arignir/Hades",
+      "summary": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。 目前，哈迪斯具有以下特点： •良好的准确性 •色彩校正 •快速备份（也称为保存状态） •实时时钟支持（ RTC ） •游戏控制器支持 这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。 新增功能： •统一评论： `//`内部函数， `/* */`块样式在全球范围内。",
+      "content": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。\n\n目前，哈迪斯具有以下特点：\n\n•良好的准确性\n•色彩校正\n•快速备份（也称为保存状态）\n•实时时钟支持（ RTC ）\n•游戏控制器支持\n\n这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。\n\n新增功能：\n\n•统一评论： `//`内部函数， `/* */`块样式在全球范围内。\n•删除返回表达式周围的冗余括号。\n•修复了关于可变长度数组的两个警告。\n•将`Idle Loop Elimination`设置移动到`Misc`部分。\n•将更多游戏添加到空闲循环数据库。\n•支持不同的地址，以空闲循环消除翻译成不同语言的游戏。\n•添加空闲循环消除。\n•固定杂项",
+      "originalContent": "Hades est un émulateur de Nintendo GameBoy Advance en cours de développement, il vise à atteindre un équilibre satisfaisant entre convivialité, vitesse et précision.\n\nActuellement, Hades présente les caractéristiques suivantes:\n\n- Une précision décente\n- Correction des couleurs\n- Sauvegarde rapide (également connue sous le nom de Save State)\n- Support de l'horloge en temps réel (RTC)\n- Support des contrôleurs de jeu\n\nC'est le troisième émulateur à passer les benchs de la cartouche AGS Aging Cartridge utilisée pour tester les systèmes Game Boy Advance.\n\nLes nouveautés:\n\n- Uniformize comments: `//` inside functions, `/* */` block style at global scope.\n- Remove redundant parentheses around return expressions.\n- Fix two warnings about variable-length arrays.\n- Move the `Idle Loop Elimination` setting to the `Misc` section.\n- Add more games to the idle loop database.\n- Support different addresses for idle-loop-elimination of games translated in different languages.\n- Add idle loop elimination.\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "b7a3e872c5ab0d13f287a5c5bcc6ef38a1945fcb478328fafcf52f33e5b60ac4",
+      "translationPending": false
+    },
+    {
+      "id": "136809",
+      "title": "【家用机】Pureikyubu v1.7 (2026/09/10)",
+      "originalTitle": "[Consoles de salon] Pureikyubu v1.7 (2026/09/10)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T07:31:23Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136809-consoles-de-salon-pureikyubu-v1-7-2026-09-10/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/08/pureikyubu.png",
+      "officialUrl": "https://github.com/emu-russia/pureikyubu/",
+      "summary": "Pureikyubu是一款基于Dolwin开发的任天堂GameCube模拟器。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。 •来自emu-russia/332-embed-json-inside-the-source-code的合并拉取请求# 335 •将分支“master”合并为332-embed-json-inside-the-source-code •更新dspdec.cpp • u…",
+      "content": "Pureikyubu是一款基于Dolwin开发的任天堂GameCube模拟器。\n\n模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。\n•来自emu-russia/332-embed-json-inside-the-source-code的合并拉取请求# 335\n•将分支“master”合并为332-embed-json-inside-the-source-code\n•更新dspdec.cpp\n• uijdi已移动\n•固定杂项",
+      "originalContent": "Pureikyubu est un émulateur de Nintendo GameCube en cours d'élaboration basé sur Dolwin.\n\nLe but de l'émulateur est de rechercher les caractéristiques matérielles de la GameCube et de faire de la rétro-ingénierie sur les technologies utilisées pour développer des jeux pour cette plateforme.\n\n- Merge pull request #335 from emu-russia/332-embed-json-inside-the-source-code\n- Merge branch 'master' into 332-embed-json-inside-the-source-code\n- Update dspdec.cpp\n- uijdi moved\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "ff1b035b3c8b95e354802e72318dba440c141913a0dcc1ae420c6b09e6c2a96e",
+      "translationPending": false
+    },
+    {
+      "id": "136806",
+      "title": "【家用机】CraziiEmu v0.32 alpha",
+      "originalTitle": "[Consoles de salon] CraziiEmu v0.32 alpha",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T07:27:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136806-consoles-de-salon-craziiemu-v0-32-alpha/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/craziiemu-scaled.png",
+      "officialUrl": "https://github.com/craze1pirate/craziiEmu/",
+      "summary": "CrazyEmu是一个在Windows上运行PlayStation 5软件的实验项目,结合了仿真和相容层。 它由C#与.NET 10所开发,为64位Windows系统所维护。 基于开源项目 SharpEmu,它融合了双模式 CPU 运行引擎(native x86-64 以全速执行或精确解释调试), Vulkan 下的图形渲染, socket 支持控制台的ELF和SELF格式,以及可达64GB的虚拟内存管理。",
+      "content": "CrazyEmu是一个在Windows上运行PlayStation 5软件的实验项目,结合了仿真和相容层。 它由C#与.NET 10所开发,为64位Windows系统所维护。 基于开源项目 SharpEmu,它融合了双模式 CPU 运行引擎(native x86-64 以全速执行或精确解释调试), Vulkan 下的图形渲染, socket 支持控制台的ELF和SELF格式,以及可达64GB的虚拟内存管理。 整体被与Avalonia UI设计的流体控制台风格接口所包裹,该接口提供游戏旋转木马,动态夹克管理并完成映射。 t 控制器和键盘。\n\n这些新颖之处是:\n\n• 弦乐:接合版本 v0.32-alpha 释放\n• 文件:推广 \" 死细胞 \" ,以充分播放和刷新游戏剧本截图\n• 固定(图):通过像素导出丢弃、采样器边框颜色和混合回落固定去除块状黑色剪接\n• 感觉:Float16遮光器模拟执行、直接执行后端、内核相容扩展和显示器稳定性固定\n• 文件:用游戏播放大小写、系统架构和兼容性矩阵更新README\n• 固定( 建设): 安全跟踪斜拉线, 用于在 ReleasePdbsFromPublish 中发布 Dir\n• 固定( 构建): 从当前配置中解决 Aerolib 任务组装路径",
+      "originalContent": "CraziiEmu est un projet expérimental visant à exécuter des logiciels PlayStation 5 sous Windows, en combinant émulation et couche de compatibilité. Il est développé en C# avec .NET 10 et est destiné aux systèmes Windows 64 bits. Basé sur le projet open-source SharpEmu, il intègre un moteur d'exécution CPU à double mode (exécution native x86-64 à pleine vitesse ou interprétation précise pour le débogage), le rendu graphique sous Vulkan, la prise en charge des formats ELF et SELF de la console, ainsi qu'une gestion de la mémoire virtuelle allant jusqu'à 64 Go. Le tout est enveloppé dans une interface fluide au style console conçue avec Avalonia UI, qui propose un carrousel de jeux, une gestion dynamique des jaquettes et un mappage complet des manettes et du clavier.\n\nLes nouveautés sont:\n\n- chore: bump version to v0.32-alpha for release\n- docs: promote Dead Cells to fully playable and refresh gameplay screenshot\n- fix(graphics): eliminate blocky black cutouts via pixel export discard, sampler border color, and blend fallback fixes\n- feat: implement Float16 shader emulation, direct execution backend, kernel compat extensions, and presenter stability fixes\n- docs: update README with gameplay showcase, system architecture, and compatibility matrix\n- fix(build): ensure safe trailing slash for PublishDir in RemovePdbsFromPublish\n- fix(build): resolve Aerolib task assembly path from current Configuration",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "f9e1371946e5ca41e4d4fc97018d8e4d0bd7bd448c07f6667ddb7ee25ba354e0",
+      "translationPending": false
+    },
+    {
+      "id": "136804",
+      "title": "【其他】Coffee GB v2.1.4",
+      "originalTitle": "[Consoles portables] Coffee GB v2.1.4",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T07:24:40Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136804-consoles-portables-coffee-gb-v2-1-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/coffee-gb-1.7.9.png",
+      "officialUrl": "https://github.com/trekawek/coffee-gb",
+      "summary": "Coffee GB 是Game Boy Color模拟器,开发于Java 16(为心脏)和克特林(为图形界面). 设计为个人项目和编程工作,以雄心勃勃的技术方法加以区分: CPU的模拟是周期精确的,每个指令 en t分解为以控制台实际速度完成的微操作。 尽管实验性方面, Coffee GB 提供高相容性,由有名的Blargg和Mooneye GB测试验证,确保了对原控制台的事实行为。",
+      "content": "Coffee GB 是Game Boy Color模拟器,开发于Java 16(为心脏)和克特林(为图形界面). 设计为个人项目和编程工作,以雄心勃勃的技术方法加以区分: CPU的模拟是周期精确的,每个指令 en t分解为以控制台实际速度完成的微操作。\n\n尽管实验性方面, Coffee GB 提供高相容性,由有名的Blargg和Mooneye GB测试验证,确保了对原控制台的事实行为。 它支持带有MBC1到MBC5内存控制器的弹匣以及电池备份,允许将游戏数据保存在真实的G上。 灵魂男孩。\n\n仿真器还读取了压缩ROM(.zip),通过.properties文件提供了密钥配置,并加入了回滚(enc)的网玩特性。 矿石实验)与状态同步在线播放。\n\n对于开发者或好奇的技术,项目包括通过Maven进行自动化测试,源代码在MIT许可下可获取,可自由编辑并可再使用b 那个",
+      "originalContent": "Coffee GB est un émulateur Game Boy Color développé en Java 16 (pour le cœur) et Kotlin (pour l’interface graphique). Conçu comme un projet personnel et un exercice de programmation, il se distingue par une approche technique ambitieuse: l’émulation du CPU est cycle-exacte, chaque instruction étant décomposée en micro-opérations exécutées à la cadence réelle de la console.\n\nMalgré son aspect expérimental, Coffee GB offre une compatibilité élevée, validée par les célèbres tests Blargg et Mooneye GB, garantissant un comportement fidèle à la console d’origine. Il prend en charge les cartouches avec les contrôleurs mémoire MBC1 à MBC5, ainsi que les sauvegardes sur batterie, permettant de conserver les données de jeu comme sur une vraie Game Boy.\n\nL’émulateur lit également les ROMs compressées (.zip), propose une configuration des touches via un fichier .properties, et intègre une fonctionnalité de netplay avec rollback (encore expérimentale) pour jouer en ligne avec synchronisation des états.\n\nPour les développeurs ou curieux techniques, le projet inclut des tests automatisés via Maven, et le code source est disponible sous licence MIT, librement modifiable et réutilisable.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "coffee_gb_pc"
+      ],
+      "contentHash": "667847bc898587e7135e070b6501075591d258f74d4953ff44ea39b5e9d56fcf",
+      "translationPending": false
+    },
+    {
+      "id": "136802",
+      "title": "【家用机】Ryujinx-Nextendo v1.8.3",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.8.3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-10T07:23:03Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136802-consoles-de-salon-ryujinx-nextendo-v1-8-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
+      "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
+      "summary": "龙金克-外接器是一款以龙金克为主的模拟器任天堂Switch,它原地融入了下接器网络(Nextendo Network)的支持,这是一个私人和社区在线服务desti. 生来取而代之的是正式的任天堂服务。 该项目接管了龙津克的仿真核心,主要用于处理器,GPU,音频,控制和文件系统。 Nextendo所做的修改主要涉及网络部分和用户界面。",
+      "content": "龙金克-外接器是一款以龙金克为主的模拟器任天堂Switch,它原地融入了下接器网络(Nextendo Network)的支持,这是一个私人和社区在线服务desti. 生来取而代之的是正式的任天堂服务。\n\n该项目接管了龙津克的仿真核心,主要用于处理器,GPU,音频,控制和文件系统。 Nextendo所做的修改主要涉及网络部分和用户界面。\n\n爱特别让相容的游戏通过下任天堂网络找到在线游戏功能,不需要从游戏中手动设定 用户可以修改主机文件或绕过 SSL。\n\n变动如下:\n\n超级马里奥兄弟。 不可思议\n· Wonder now works on nextendo. - 翻译: 维基百科中的相关条目: 维基语录链接:名人名言 - 文学作品 - 谚语 - 谚语 - 谚语 - 谚语 - 谚语 - 谚语 构建的内建补丁 FF773E90972D544EB79406EAA65396D53C43EFB9 (游戏版本) 1.2.1:被钉-证书绕行和两次同名评论。 另一款游戏更新将无法接收,也无法到达我们的服务器。\n· 内部补丁现在无条件适用。 他们曾经依赖一个为标题而存在的外在的mod——在应用之前我们没有安装了mod,游戏直接到真正的任天堂服务器。\n\n超级马里奥兄弟。 35个星期\n• 所需表格版本 1.1.2,它从未存在。 SMB35最后一次更新是 1.0.2 (2020年11月12日);游戏于2021年3月关闭。 任何更新到 1.8.2 在无法获取的版本上被拒绝发射。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.\n\nLes changements sont:\n\nSuper Mario Bros. Wonder\n- Wonder now works on Nextendo. Built-in patches for build FF773E90972D544EB79406EAA65396D53C43EFB9 (game version 1.2.1): pinned-certificate bypass and two peer-name rejections. Another game update would not receive them and could not reach our servers.\n- Built-in patches are now applied unconditionally. They used to depend on an external mod existing for the title — with no mod installed we returned before applying them, and the game went straight to the real Nintendo servers.\n\nSuper Mario Bros. 35 launches again\n- The version table required 1.1.2, which never existed. The last SMB35 update was 1.0.2 (12 November 2020); the game shut down in March 2021. Anyone who updated to 1.8.2 was refused launch over a version that cannot be obtained.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "1d6b75d5c70d4b7860a8949c7b5220d6fdec86ea493391be5be68f79e63bac65",
+      "translationPending": false
+    },
     {
       "id": "android-release-nesd-nightly",
       "title": "【Android更新】NESd nightly",
@@ -30,31 +247,6 @@
         "nesd"
       ],
       "contentHash": "9e747ba55bad8b190932a8471b937d2fedc108e25306e380c921b98223eab368",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-09T21:49:51Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月09日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_gba.cpp: 在一些游戏中更正的生物(fprietog)\n• d_gba.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp: corrected bios in some games (fprietog)\n• d_gba.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "3c38f807701de4e08c838fbd86ea709929150f06f5a7c66b5ad1e128e0b56aed",
       "translationPending": false
     },
     {
@@ -152,30 +344,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx1-nightly-20260909-6",
-      "title": "【Android更新】ARMSX1 nightly-20260909.6",
-      "originalTitle": "ARMSX1 nightly-20260909.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-09T12:54:09Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260909.6",
-      "imageUrl": "asset://assets/emulators/armsx1.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 nightly-20260909.6，发布日期为2026年09月09日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260909.6。\n\n发布日期：2026年09月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
-      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx1"
-      ],
-      "contentHash": "634eb103cf77ec36083633da7496f68d67148372ee3e0e17618d868eff66dade",
-      "translationPending": false
-    },
-    {
       "id": "android-release-duckstation-preview",
       "title": "【Android更新】DuckStation preview",
       "originalTitle": "DuckStation preview Android release",
@@ -201,24 +369,24 @@
     },
     {
       "id": "136784",
-      "title": "【家用机】Ruzu v0.0.3",
-      "originalTitle": "[Consoles de salon] Ruzu v0.0.3",
+      "title": "【家用机】Ruzu v0.0.4 *maj*",
+      "originalTitle": "[Consoles de salon] Ruzu v0.0.4 *maj*",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-09T11:40:53Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136784-consoles-de-salon-ruzu-v0-0-3/",
+      "sourceUrl": "https://www.emu-france.com/news/136784-consoles-de-salon-ruzu-v0-0-4-maj/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ruzu-scaled.png",
       "officialUrl": "https://github.com/vricosti/ruzu-emu",
-      "summary": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。 该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系 以及C + +和Rust代码的不同部分。",
-      "content": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。\n该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系\n以及C + +和Rust代码的不同部分。\nRuzu包括一个带有调度器、光纤、IPC和服务的HLE内核、一个GPU命令处理器、一个着色器重新编译器和一个JIT。ARM代码的动态重新编译由Dynarmic的Rust端口rdynarmic提供，具有本机x86-64和ARM64后端\n。该项目还包括rxbyak ，这是Xbyak的Rust端口，用于生成x86-64机器码。\n\n模拟器已经能够启动和运行商业游戏，其既定目标是实现原始C + +实现的性能。 然而，该项目仍在开发中。\nRuzu还具有图形前端和命令行前端，可以在Windows、Linux、macOS和多个BSD系统上编译。\n\n这些变化是：\n• macOS快捷方式：使用游戏图标和可选的全屏启动在桌面或用户应用程序文件夹中创建游戏启动器。\n• Linux快捷方式：新创建的桌面启动器现在获得可执行权限。\n• macOS稳定性：在刷新或隐藏游戏库时，添加了防止GTK焦点崩溃的保护措施。\n•运行时间和设置：改进了服务布线、等待取消同步和RTC偏移处理。\n•由于模拟时钟出现严重错误，上一个版本v0.0.1已被删除。 请改用v0.0.2。\n--此版本修复了时钟问题，并解决了保存设置的几个问题。\n--如果您之前运行过v0.0.1 ，请关闭RUZU并从RUZU数据目录中删除以下文件以重置持久时钟状态：\nnand/system/save/8000000000000050/settings.dat\nnand/system/save/8000000000000052/settings.dat\n-- Ruzu将自动重新创建这些文件。这将重置模拟系统设置，包括时钟数据，但不会删除您的游戏保存。如果您使用自定义NAND位置，请在那里查找这些文件。",
-      "originalContent": "Ruzu est un émulateur Nintendo Switch écrit en Rust, développé comme une expérience visant à déterminer si l'IA, via des modèles de langage (LLM), pouvait réaliser le portage complet d'un projet logiciel de très grande taille de C++ vers Rust.\n\nLe projet est basé sur le code de yuzu/Eden et représente environ 500 000 lignes de code portées exclusivement avec l'aide de LLM, sur une période d'environ six mois. L'objectif n'était pas simplement d'obtenir un programme fonctionnel, mais de conserver au maximum la structure du projet original, avec une correspondance entre les fichiers et les différentes parties du code C++ et Rust.\n\nRuzu intègre notamment un kernel HLE avec ordonnanceur, fibres, IPC et services, un processeur de commandes GPU, un recompilateur de shaders et un JIT. La recompilation dynamique du code ARM est assurée par rdynarmic, un portage Rust de Dynarmic, avec des backends natifs x86-64 et ARM64. Le projet comprend également rxbyak, un portage Rust de Xbyak pour la génération de code machine x86-64.\n\nL'émulateur est déjà capable de démarrer et d'exécuter des jeux commerciaux, avec l'objectif affiché d'atteindre les performances de l'implémentation C++ originale. Le projet reste toutefois en développement.\n\nRuzu dispose également d'un frontend graphique ainsi que d'un frontend en ligne de commande, et peut être compilé sous Windows, Linux, macOS et plusieurs systèmes BSD.\n\nLes changements sont:\n- macOS shortcuts: create a game launcher on your Desktop or in your user Applications folder, with the game’s icon and an optional fullscreen launch.\n- Linux shortcuts: newly created desktop launchers now receive executable permissions.\n- macOS stability: added a safeguard against a GTK focus crash when refreshing or hiding the game library.\n- Runtime and settings: improved service wiring, wait cancellation synchronization, and RTC offset handling.\n- The previous release, v0.0.1, has been removed due to a nasty bug in the emulated clock. Please use v0.0.2 instead.\n--This release fixes the clock issue and addresses several problems with saving settings.\n-- If you previously ran v0.0.1, close Ruzu and delete the following files from your Ruzu data directory to reset the persisted clock state:\n____ nand/system/save/8000000000000050/settings.dat\n____ nand/system/save/8000000000000052/settings.dat\n-- Ruzu will recreate these files automatically. This resets emulated system settings, including clock data, but does not delete your game saves. If you use a custom NAND location, look for these files there.",
+      "summary": "Ruzu是一款由Rust所写的任天堂开关仿真器,开发为一种实验,用以确定AI通过语言模型(LLM)在什么地方可以进行完全移植。 以及一个从C++到Rust的非常大的软件项目。 工程以\"于祖\"为主.Eden 在大约6个月的时间里,在LLM的帮助下,大约50万条代码赢得了胜利。 目的不仅仅是获得一个功能程序,而是尽可能地保持原工程的结构,在文件与文件之间保持对应。 c++和rust代码的不同部分。",
+      "content": "Ruzu是一款由Rust所写的任天堂开关仿真器,开发为一种实验,用以确定AI通过语言模型(LLM)在什么地方可以进行完全移植。 以及一个从C++到Rust的非常大的软件项目。\n\n工程以\"于祖\"为主.Eden 在大约6个月的时间里,在LLM的帮助下,大约50万条代码赢得了胜利。 目的不仅仅是获得一个功能程序,而是尽可能地保持原工程的结构,在文件与文件之间保持对应。 c++和rust代码的不同部分。\n\nRuzu包括一个HLE内核,具有前序,纤维,IPC和服务,一个GPU指令处理器,一个阴影再编译器和一个JIT. ARM代码的动态再编译由Rdynarmic,一个动态的Rust端口所保险,其本土后端为x86-64和ARM64. 该项目还包括rxbyak,一个Xbyak Rust端口,用于机器代码生成x86-64.\n\n模拟器可以随时启动并运行商业游戏,所显示的目标是实现原C++执行的性能。 然而,该项目仍在开发中。\n\n鲁祖还拥有图形前端和命令行前端,可以在Windows,Linux,macOS和几个BSD系统下编译。\n\n变动如下:\nv0.0.4\n· 打开菜单时将固定窗口调整大小,同时尽量扩大。\n· 将状态栏固定在最大的窗口中。\n• 改进黑暗主题支助,包括\n• 确定一个可造成崩溃的时间服务登记出口。\n· 许多固定(有线、小程序,......)\n\nv0.0.3\n• macOS 快捷键:在您的桌面或用户应用文件夹中创建游戏发布器,包含游戏\n• Linux快捷键:新创建的桌面发射器现在获得可执行权限。\n• macOS稳定性:在冷却或隐藏游戏库时增加了防止GTK焦点崩溃的保障措施。\n• 运行时间和设置:改进服务线路、等待取消同步和RTC抵消处理。\n· 上一次释放, v0.0.1,由于被模拟的时钟中的一股臭虫被移除了。 请使用 v0.0.2 相反的。\n——此发布固定了时钟问题,并解决了保存设置的几个问题。\n- 如果你以前跑过 v0.0.1,关闭 Ruzu 从您的 Ruzu 数据目录中删除以下文件以重置持续时钟状态 :\nnand/system/save/8000000000000050/settings.dat\nnand/system/save/8000000000000052/settings.dat\n\"鲁祖会自动重现这些文件\". 此重排模拟系统设置, 包括时钟数据, 但不会删除您的游戏保存。 如果您使用自定义的 NAND 位置, 请查看这些文件。",
+      "originalContent": "Ruzu est un émulateur Nintendo Switch écrit en Rust, développé comme une expérience visant à déterminer si l'IA, via des modèles de langage (LLM), pouvait réaliser le portage complet d'un projet logiciel de très grande taille de C++ vers Rust.\n\nLe projet est basé sur le code de yuzu/Eden et représente environ 500 000 lignes de code portées exclusivement avec l'aide de LLM, sur une période d'environ six mois. L'objectif n'était pas simplement d'obtenir un programme fonctionnel, mais de conserver au maximum la structure du projet original, avec une correspondance entre les fichiers et les différentes parties du code C++ et Rust.\n\nRuzu intègre notamment un kernel HLE avec ordonnanceur, fibres, IPC et services, un processeur de commandes GPU, un recompilateur de shaders et un JIT. La recompilation dynamique du code ARM est assurée par rdynarmic, un portage Rust de Dynarmic, avec des backends natifs x86-64 et ARM64. Le projet comprend également rxbyak, un portage Rust de Xbyak pour la génération de code machine x86-64.\n\nL'émulateur est déjà capable de démarrer et d'exécuter des jeux commerciaux, avec l'objectif affiché d'atteindre les performances de l'implémentation C++ originale. Le projet reste toutefois en développement.\n\nRuzu dispose également d'un frontend graphique ainsi que d'un frontend en ligne de commande, et peut être compilé sous Windows, Linux, macOS et plusieurs systèmes BSD.\n\nLes changements sont:\nv0.0.4\n- Fixed window resizing when opening menus while maximized.\n- Fixed the status bar being hidden in maximized windows.\n- Improved dark theme support, including the “Closing software” dialog.\n- Fixed a time-service registration issue that could cause crashes.\n- Many many fixes (rdynarmic, applets,...)\n\nv0.0.3\n- macOS shortcuts: create a game launcher on your Desktop or in your user Applications folder, with the game’s icon and an optional fullscreen launch.\n- Linux shortcuts: newly created desktop launchers now receive executable permissions.\n- macOS stability: added a safeguard against a GTK focus crash when refreshing or hiding the game library.\n- Runtime and settings: improved service wiring, wait cancellation synchronization, and RTC offset handling.\n- The previous release, v0.0.1, has been removed due to a nasty bug in the emulated clock. Please use v0.0.2 instead.\n--This release fixes the clock issue and addresses several problems with saving settings.\n-- If you previously ran v0.0.1, close Ruzu and delete the following files from your Ruzu data directory to reset the persisted clock state:\n____ nand/system/save/8000000000000050/settings.dat\n____ nand/system/save/8000000000000052/settings.dat\n-- Ruzu will recreate these files automatically. This resets emulated system settings, including clock data, but does not delete your game saves. If you use a custom NAND location, look for these files there.",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [],
-      "contentHash": "ab5f0720cf13caf880a5cf1fec6c1aea678c8a2ebbaa739e069ea87163769cde",
+      "contentHash": "023b8aa3538f2a784d1ba8bb68a264b49a57496cda9d98ca75e6e75a86a48ba9",
       "translationPending": false
     },
     {
