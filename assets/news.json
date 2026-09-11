@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T05:11:51.149517Z",
+  "generatedAt": "2026-09-11T16:45:23.879126Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,242 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T15:50:00Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月11日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月11日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• Sunsoft FME-7 （映射器69 ）支持\n•退出游戏、退出NESd或将其发送到后台时，现在自动保存也会保存\n•上一个选项卡和下一个选项卡操作现在通过最近的ROM页面并保存状态网格\n•应用内调色板编辑器，支持实时预览和导出\n\n已更改\n•主菜单现在变暗，并在ROM加载时显示磁贴上的微调器\n•键盘和游戏手柄导航现在可跳过菜单中的后退按钮\n•菜单导航现在环绕\n•提高macOS上的流程优先级\n•隐私政策现在描述了网站的页面浏览计数器\n\n固定\n•电池保存、保存状态和缩略图现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其保存和保存状态\n•秘籍和断点现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其断点\n•两个文件名相同的ROM现在都保留在最近的ROM列表中\n•退出NESd不再丢失正在写入的SRAM\n•当ROM加载失败时，文件选取器将保持打开状态\n• Web版本现在在纯HTTP上有声音\n•固定APU长度计数器停止和重新加载写入定时\n•固定DMC DMA空闲周期读数\n•修复了精灵溢出标志设置定时",
+      "originalContent": "### Added\n- Sunsoft FME-7 (mapper 69) support\n- Auto save now also saves when quitting a game, quitting NESd, or sending it to the background\n- The Previous Tab and Next Tab actions now page through the recent ROM and save state grids\n- In-app palette editor with live preview and export\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n- Keyboard and gamepad navigation now skips the back button in menus\n- Menu navigation now wraps around\n- Increased process priority on macOS\n- The privacy policy now describes the website's page-view counter\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "9e943e9a9e2f9ed4838f6351fac91ad7cb5a1fe0ce7c7c64558ac7866ca5cd47",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T14:04:01Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月11日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月11日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "a1f8d3bac02d3244d5dbc52514d52ef787a9763b5bb3fea80766b52868732118",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260911",
+      "title": "【Android更新】ARMSX2 nightly-20260911",
+      "originalTitle": "ARMSX2 nightly-20260911 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T13:21:17Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260911",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260911，发布日期为2026年09月11日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260911。\n\n发布日期：2026年09月11日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• 自由:使VFS流表完全不受静态破坏影响\n• 自由:保持VFS流登记系统的生命力,直至结束\n• Libretro:通过前端的文件系统打开光碟\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260909...9027cd3acf8bd599534e2467390efc84cc4cd060",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- Libretro: keep the VFS stream table out of static destruction entirely\n- Libretro: keep the VFS stream registry alive to the end\n- Libretro: open the disc through the frontend's file system too\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260909...9027cd3acf8bd599534e2467390efc84cc4cd060",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "33f91af8db5d15f2de4ee4ee946425b83d073e50e2130e08b42d1765c121fe23",
+      "translationPending": false
+    },
+    {
+      "id": "136845",
+      "title": "【家用机】MesenCE v2.2.1 r20260911",
+      "originalTitle": "[Consoles de salon] MesenCE v2.2.1 r20260911",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-11T12:47:21Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136845-consoles-de-salon-mesence-v2-2-1-r20260911/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/mesen-ce.png",
+      "officialUrl": "https://github.com/nesdev-org/MesenCE",
+      "summary": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。 MesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续 。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。",
+      "content": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。\nMesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续\n。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。这种向完全社区管理模式的过渡有助于更快地集成补丁、提高跨平台兼容性并添加新功能\ntES ，同时保持原始项目的卓越精神。\n\n变更内容：\n\nMesen正在成为MesenCE ，这是一个由SOUR和各种社区成员维护的社区版本。 所有开发都将在这个新的分叉中进行，因此只要Sour离开项目，它就可以继续进行。\n•短信：固定扫描线计数器在224/240线模式下在扫描线191上停止（ # 272 ）\n•音频：修复了“快进时降低音量”选项在窗口未聚焦时快进时的行为（ # 271 ）",
+      "originalContent": "Mesen Community Edition est un émulateur multi‑systèmes open‑source pour Windows, Linux et macOS, développé par la communauté à partir du projet Mesen2. Il vise une haute précision, une excellente compatibilité, et propose une interface moderne accompagnée d’outils avancés pour les joueurs comme pour les développeurs.\n\nNé initialement comme un fork pour pallier la mise en pause du développement de Mesen2 par son créateur original (Sour), MesenCE est désormais devenu la continuation officielle et exclusive du projet. Face à la dynamique communautaire, Sour a choisi de rejoindre activement l'équipe de MesenCE afin d'y centraliser tout le développement futur. Cette transition sous un modèle entièrement géré par la communauté permet d'intégrer plus rapidement les correctifs, d'améliorer la compatibilité multiplateforme et d'ajouter de nouvelles fonctionnalités, tout en préservant l’esprit d’excellence du projet d'origine.\n\nLes changements:\n\nMesen is becoming MesenCE, a Community Edition maintained by Sour and various community members. All development will occur in this new fork going forward so it can continue whenever Sour is away from the project.\n\n- SMS: Fixed scanline counter stopping on scanline 191 in 224/240-line modes (#272)\n- Audio: Fixed \"Reduce volume during fast forward\" option behavior when fast forwarding while the window is not focused (#271)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mesence_pc"
+      ],
+      "contentHash": "ecf2f86ee35a0bc20c014a067d57cd6c6e9eafdf5d6ffd99e87a27c984d14eb0",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-nightly-20260911-8",
+      "title": "【Android更新】ARMSX1 nightly-20260911.8",
+      "originalTitle": "ARMSX1 nightly-20260911.8 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T12:46:26Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260911.8",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260911.8，发布日期为2026年09月11日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260911.8。\n\n发布日期：2026年09月11日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
+      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "143c93cd7df898bce4e4b6e79ed0f267c4a97f8a314e924e735888e559ac9d1e",
+      "translationPending": false
+    },
+    {
+      "id": "136841",
+      "title": "【移动设备】EKA2L1 v0.0.9 r260911",
+      "originalTitle": "[PDA et TEL] EKA2L1 v0.0.9 r260911",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T12:43:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136841-pda-et-tel-eka2l1-v0-0-9-r260911/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/05/EKA2L1.jpg",
+      "officialUrl": "https://github.com/EKA2L1/EKA2L1",
+      "summary": "Symbian操作系统的模拟器。（自动生成） 变更内容如下： •来自yeatse/upstream-pr/ios-memory-cards的合并拉取请求# 702 • iOS ：安装存储卡并在房客重新启动时保留它们 •系统：识别包装的存储卡存档 •来自yeatse/upstream-pr/android-restored-app-list的合并拉取请求# 701 • android ：保留恢复的主要活动碎片 •来自yeatse/upst…",
+      "content": "Symbian操作系统的模拟器。（自动生成）\n\n变更内容如下：\n•来自yeatse/upstream-pr/ios-memory-cards的合并拉取请求# 702\n• iOS ：安装存储卡并在房客重新启动时保留它们\n•系统：识别包装的存储卡存档\n•来自yeatse/upstream-pr/android-restored-app-list的合并拉取请求# 701\n• android ：保留恢复的主要活动碎片\n•来自yeatse/upstream-pr/sis-install-target-case的合并拉取请求# 700\n•打包：在写入文件时解析SIS安装目标",
+      "originalContent": "Un émulateur du système Symbian OS. (Builds automatiques)\n\nLes changements sont les suivants:\n- Merge pull request #702 from yeatse/upstream-pr/ios-memory-cards\n- ios: mount memory cards and retain them across guest relaunches\n- system: recognize wrapped memory card archives\n- Merge pull request #701 from yeatse/upstream-pr/android-restored-app-list\n- android: preserve restored main activity fragments\n- Merge pull request #700 from yeatse/upstream-pr/sis-install-target-case\n- package: resolve an SIS install target when the file is written",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "eka2l1"
+      ],
+      "contentHash": "f60e3dd50326d78ec15c3842b2d415d205813848fb81616b3e054649cda6f4db",
+      "translationPending": false
+    },
+    {
+      "id": "136837",
+      "title": "【家用机】Xenia Edge (2026/09/11)",
+      "originalTitle": "[Consoles de salon] Xenia Edge (2026/09/11)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T10:33:40Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136837-consoles-de-salon-xenia-edge-2026-09-11/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/xenia-edge-scaled.png",
+      "officialUrl": "https://github.com/has207/xenia-edge",
+      "summary": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中 。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成 。",
+      "content": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中\n。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成\n。代码主要用C + +编写，在Assembly、Python、Lua、HLSL和C #中有贡献。存储库包含有用的资源，如快速入门指南、常见问题解答和编译说明。",
+      "originalContent": "Le projet GitHub xenia-edge est un fork expérimental de l’émulateur Xbox 360 Xenia, basé sur la branche Canary. Il vise à centraliser les dernières avancées techniques issues de divers forks dans un seul package. Le projet est conçu pour la recherche et l’expérimentation autour de l’émulation Xbox 360, avec une compatibilité Windows et Linux. Il propose un script de build personnalisé (xb) pour simplifier la compilation, une liste de compatibilité des jeux maintenue par la communauté, et une intégration continue via Buildbot. Le code est majoritairement écrit en C++, avec des contributions en Assembly, Python, Lua, HLSL et C#. Le dépôt contient des ressources utiles comme un guide de démarrage rapide, une FAQ et des instructions de compilation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xenia_pc",
+        "xenia_edge_pc"
+      ],
+      "contentHash": "74a1d0b0096cb61d20d1b0546ed273543122874b1d8ceb2ea93b970341d7214f",
+      "translationPending": false
+    },
+    {
+      "id": "136834",
+      "title": "【家用机】Xenia v1.0.2844 (2026/09/11)",
+      "originalTitle": "[Consoles de salon] Xenia v1.0.2844 (2026/09/11)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T10:27:43Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136834-consoles-de-salon-xenia-v1-0-2844-2026-09-11/",
+      "imageUrl": "https://www.youtube.com/embed/r56tCTsijEw",
+      "officialUrl": "https://xenia.jp/",
+      "summary": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master] 。此处提供管理Xenia仿真器的管理器。",
+      "content": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master]\n。此处提供管理Xenia仿真器的管理器。\n\n• [Base/POSIX]修复DOUBLE JOIN、TERMINATE SPIN、AFFINITY、NanoSleep和过时的暂停令牌（ d8348b4 ）\n• [GPU]尊重颜色/深度别名的EDRAM位（ 9da6934 ）\n• [XAM]添加了包裹移除过程中内容数据大小的缺失检查（ 8ae1c14 ）\n• [XAM/INPUT] -添加缺少的X_INPUT_CAPABILITYS_EX结构和其他更改（ 3ba9c86 ）\n•固定杂项",
+      "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [Base/POSIX] Fix double join, terminate spin, affinity, NanoSleep and a stale suspend token (d8348b4)\n- [GPU] EDRAM bits respected for color/depth aliases (9da6934)\n- [XAM] Added missing check for content data size during package removal (8ae1c14)\n- [XAM/INPUT] - Add missing X_INPUT_CAPABILITIES_EX struct and other changes (3ba9c86)\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "xenia_pc"
+      ],
+      "contentHash": "e8bf1adb9e9e35a20f5f9a3625ebb55e997b6ea7fbbf46c4580ee8787e0eb834",
+      "translationPending": false
+    },
+    {
+      "id": "136832",
+      "title": "【工具】Igir v5.5",
+      "originalTitle": "[Utilitaires Multi-systemes] Igir v5.5",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-11T10:26:52Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136832-utilitaires-multi-systemes-igir-v5-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/02/igir.png",
+      "officialUrl": "https://github.com/emmercm/igir",
+      "summary": "Igir是一款ROM集合管理器，允许对任何操作系统下任何大小的集合进行排序、过滤、提取或存档、修补和报告。",
+      "content": "Igir是一款ROM集合管理器，允许对任何操作系统下任何大小的集合进行排序、过滤、提取或存档、修补和报告。",
+      "originalContent": "Igir est un gestionnaire de collections de ROM qui permet de trier, de filtrer, d'extraire ou d'archiver, de patcher et d'établir des rapports sur des collections de toute taille sous n'importe quel système d'exploitation.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "igir"
+      ],
+      "contentHash": "12497d9f30f91cd67aec9882474041e4e94303fbc862e2089c87ebbb0cf2d511",
+      "translationPending": false
+    },
+    {
+      "id": "136830",
+      "title": "【家用机】Ruzu v0.0.5",
+      "originalTitle": "[Consoles de salon] Ruzu v0.0.5",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-11T10:26:00Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/136830-consoles-de-salon-ruzu-v0-0-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ruzu-scaled.png",
+      "officialUrl": "https://github.com/vricosti/ruzu-emu",
+      "summary": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。 该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系 以及C + +和Rust代码的不同部分。",
+      "content": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。\n该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系\n以及C + +和Rust代码的不同部分。\nRuzu包括一个带有调度器、光纤、IPC和服务的HLE内核、一个GPU命令处理器、一个着色器重新编译器和一个JIT。ARM代码的动态重新编译由Dynarmic的Rust端口rdynarmic提供，具有本机x86-64和ARM64后端\n。该项目还包括rxbyak ，这是Xbyak的Rust端口，用于生成x86-64机器码。\n\n模拟器已经能够启动和运行商业游戏，其既定目标是实现原始C + +实现的性能。 然而，该项目仍在开发中。\nRuzu还具有图形前端和命令行前端，可以在Windows、Linux、macOS和多个BSD系统上编译。\n\n这些变化是：\n•自动缩放文本：将界面文本调整为每个窗口的Windows DPI设置。\n•自动/手动模式：使用自动调整大小或选择您喜欢的文本大小。 切换到手动从自动计算的值开始。\n•提高可读性：缩放适用于菜单、对话框、游戏列表和状态栏。\n•保留现有的自定义文本大小设置。混合DPI ，多监视器行为仍然需要更广泛的测试-欢迎反馈！",
+      "originalContent": "Ruzu est un émulateur Nintendo Switch écrit en Rust, développé comme une expérience visant à déterminer si l'IA, via des modèles de langage (LLM), pouvait réaliser le portage complet d'un projet logiciel de très grande taille de C++ vers Rust.\n\nLe projet est basé sur le code de yuzu/Eden et représente environ 500 000 lignes de code portées exclusivement avec l'aide de LLM, sur une période d'environ six mois. L'objectif n'était pas simplement d'obtenir un programme fonctionnel, mais de conserver au maximum la structure du projet original, avec une correspondance entre les fichiers et les différentes parties du code C++ et Rust.\n\nRuzu intègre notamment un kernel HLE avec ordonnanceur, fibres, IPC et services, un processeur de commandes GPU, un recompilateur de shaders et un JIT. La recompilation dynamique du code ARM est assurée par rdynarmic, un portage Rust de Dynarmic, avec des backends natifs x86-64 et ARM64. Le projet comprend également rxbyak, un portage Rust de Xbyak pour la génération de code machine x86-64.\n\nL'émulateur est déjà capable de démarrer et d'exécuter des jeux commerciaux, avec l'objectif affiché d'atteindre les performances de l'implémentation C++ originale. Le projet reste toutefois en développement.\n\nRuzu dispose également d'un frontend graphique ainsi que d'un frontend en ligne de commande, et peut être compilé sous Windows, Linux, macOS et plusieurs systèmes BSD.\n\nLes changements sont:\n- Automatic text scaling: adjusts interface text to the Windows DPI setting for each window.\n- Auto / Manual modes: use automatic sizing or choose your preferred text size. Switching to Manual starts with the value calculated by Auto.\n- Improved readability: scaling applies to menus, dialogs, the game list, and the status bar.\n- Existing custom text-size settings are preserved. Mixed-DPI, multi-monitor behavior still needs broader testing—feedback is welcome!",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "224405449df556928fff660ea8fe58867cd92c28f47f4bec6f53b1662ffb4ed8",
+      "translationPending": false
+    },
     {
       "id": "android-release-winnative-0-6-0-beta",
       "title": "【Android更新】WinNative 0.6.0-beta",
@@ -30,55 +266,6 @@
         "winnative"
       ],
       "contentHash": "ca8db0cee6c388616ad032ae40e1bdc822a592c94fea25d9d4da67f179eafbbe",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-10T20:20:38Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月10日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• Sunsoft FME-7 （映射器69 ）支持\n•退出游戏、退出NESd或将其发送到后台时，现在自动保存也会保存\n•上一个选项卡和下一个选项卡操作现在通过最近的ROM页面并保存状态网格\n\n已更改\n•主菜单现在变暗，并在ROM加载时显示磁贴上的微调器\n•键盘和游戏手柄导航现在可跳过菜单中的后退按钮\n•菜单导航现在环绕\n•提高macOS上的流程优先级\n•隐私政策现在描述了网站的页面浏览计数器\n\n固定\n•电池保存、保存状态和缩略图现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其保存和保存状态\n•秘籍和断点现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其断点\n•两个文件名相同的ROM现在都保留在最近的ROM列表中\n•退出NESd不再丢失正在写入的SRAM\n•当ROM加载失败时，文件选取器将保持打开状态\n• Web版本现在在纯HTTP上有声音\n•固定APU长度计数器停止和重新加载写入定时\n•固定DMC DMA空闲周期读数\n•修复了精灵溢出标志设置定时",
-      "originalContent": "### Added\n- Sunsoft FME-7 (mapper 69) support\n- Auto save now also saves when quitting a game, quitting NESd, or sending it to the background\n- The Previous Tab and Next Tab actions now page through the recent ROM and save state grids\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n- Keyboard and gamepad navigation now skips the back button in menus\n- Menu navigation now wraps around\n- Increased process priority on macOS\n- The privacy policy now describes the website's page-view counter\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "a06727f9664b4f87dea656ccde792ee653a7a3a22fbc689f26862847eb75a4c9",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-10T14:32:55Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月10日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• xa cpu, 修补笨虫 (dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• xa cpu, fix silly bug (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "0b07f2b6f672f0acb1189e2857b56affa0c9d226633d7b05c52bc78963339b45",
       "translationPending": false
     },
     {
@@ -126,30 +313,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx1-nightly-20260910-7",
-      "title": "【Android更新】ARMSX1 nightly-20260910.7",
-      "originalTitle": "ARMSX1 nightly-20260910.7 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-10T12:52:36Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260910.7",
-      "imageUrl": "asset://assets/emulators/armsx1.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 nightly-20260910.7，发布日期为2026年09月10日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260910.7。\n\n发布日期：2026年09月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n自动夜造自 cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx1"
-      ],
-      "contentHash": "6213a7f62b992bd251081c8cf4f218cc579145c792b149613b65f444a75438e0",
-      "translationPending": false
-    },
-    {
       "id": "136813",
       "title": "【电脑】POM2 v0.9.2",
       "originalTitle": "[Ordi.] POM2 v0.9.2",
@@ -171,42 +334,44 @@
     },
     {
       "id": "136811",
-      "title": "【其他】Hades v1.1.1 Build 260910",
-      "originalTitle": "[Consoles portables] Hades v1.1.1 Build 260910",
+      "title": "【其他】Hades v1.1.1 Build 260911",
+      "originalTitle": "[Consoles portables] Hades v1.1.1 Build 260911",
       "category": "other",
       "categoryLabel": "其他",
       "kind": "emulator",
       "publishedAt": "2026-09-10T07:32:13Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136811-consoles-portables-hades-v1-1-1-build-260910/",
+      "sourceUrl": "https://www.emu-france.com/news/136811-consoles-portables-hades-v1-1-1-build-260911/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/hades-emu.png",
       "officialUrl": "https://github.com/Arignir/Hades",
-      "summary": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。 目前，哈迪斯具有以下特点： •良好的准确性 •色彩校正 •快速备份（也称为保存状态） •实时时钟支持（ RTC ） •游戏控制器支持 这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。 新增功能： •统一评论： `//`内部函数， `/* */`块样式在全球范围内。",
-      "content": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。\n\n目前，哈迪斯具有以下特点：\n\n•良好的准确性\n•色彩校正\n•快速备份（也称为保存状态）\n•实时时钟支持（ RTC ）\n•游戏控制器支持\n\n这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。\n\n新增功能：\n\n•统一评论： `//`内部函数， `/* */`块样式在全球范围内。\n•删除返回表达式周围的冗余括号。\n•修复了关于可变长度数组的两个警告。\n•将`Idle Loop Elimination`设置移动到`Misc`部分。\n•将更多游戏添加到空闲循环数据库。\n•支持不同的地址，以空闲循环消除翻译成不同语言的游戏。\n•添加空闲循环消除。\n•固定杂项",
-      "originalContent": "Hades est un émulateur de Nintendo GameBoy Advance en cours de développement, il vise à atteindre un équilibre satisfaisant entre convivialité, vitesse et précision.\n\nActuellement, Hades présente les caractéristiques suivantes:\n\n- Une précision décente\n- Correction des couleurs\n- Sauvegarde rapide (également connue sous le nom de Save State)\n- Support de l'horloge en temps réel (RTC)\n- Support des contrôleurs de jeu\n\nC'est le troisième émulateur à passer les benchs de la cartouche AGS Aging Cartridge utilisée pour tester les systèmes Game Boy Advance.\n\nLes nouveautés:\n\n- Uniformize comments: `//` inside functions, `/* */` block style at global scope.\n- Remove redundant parentheses around return expressions.\n- Fix two warnings about variable-length arrays.\n- Move the `Idle Loop Elimination` setting to the `Misc` section.\n- Add more games to the idle loop database.\n- Support different addresses for idle-loop-elimination of games translated in different languages.\n- Add idle loop elimination.\n- Misc fixes",
+      "summary": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。 目前，哈迪斯具有以下特点： •良好的准确性 •色彩校正 •快速备份（也称为保存状态） •实时时钟支持（ RTC ） •游戏控制器支持 这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。 新增功能： •添加条件（ eq、neq、gt、lt和） Codebreaker说明。",
+      "content": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。\n\n目前，哈迪斯具有以下特点：\n\n•良好的准确性\n•色彩校正\n•快速备份（也称为保存状态）\n•实时时钟支持（ RTC ）\n•游戏控制器支持\n\n这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。\n\n新增功能：\n\n•添加条件（ eq、neq、gt、lt和） Codebreaker说明。\n•添加`memwrite` Codebreaker说明。\n•添加`fill` Codebreaker说明。\n•统一评论： `//`内部函数， `/* */`块样式在全球范围内。\n•删除返回表达式周围的冗余括号。\n•修复了关于可变长度数组的两个警告。\n•将`Idle Loop Elimination`设置移动到`Misc`部分。\n•将更多游戏添加到空闲循环数据库。\n•支持不同的地址，以空闲循环消除翻译成不同语言的游戏。\n•添加空闲循环消除。\n•固定杂项",
+      "originalContent": "Hades est un émulateur de Nintendo GameBoy Advance en cours de développement, il vise à atteindre un équilibre satisfaisant entre convivialité, vitesse et précision.\n\nActuellement, Hades présente les caractéristiques suivantes:\n\n- Une précision décente\n- Correction des couleurs\n- Sauvegarde rapide (également connue sous le nom de Save State)\n- Support de l'horloge en temps réel (RTC)\n- Support des contrôleurs de jeu\n\nC'est le troisième émulateur à passer les benchs de la cartouche AGS Aging Cartridge utilisée pour tester les systèmes Game Boy Advance.\n\nLes nouveautés:\n\n- Add the conditions (eq, neq, gt, lt, and) Codebreaker instructions.\n- Add the `memwrite` Codebreaker instruction.\n- Add the `fill` Codebreaker instruction.\n- Uniformize comments: `//` inside functions, `/* */` block style at global scope.\n- Remove redundant parentheses around return expressions.\n- Fix two warnings about variable-length arrays.\n- Move the `Idle Loop Elimination` setting to the `Misc` section.\n- Add more games to the idle loop database.\n- Support different addresses for idle-loop-elimination of games translated in different languages.\n- Add idle loop elimination.\n- Misc fixes",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "b7a3e872c5ab0d13f287a5c5bcc6ef38a1945fcb478328fafcf52f33e5b60ac4",
+      "contentHash": "4a0359ea7122a86461df3dc4999288b396d45121206b07ccf9c84a603e6bafe9",
       "translationPending": false
     },
     {
       "id": "136809",
-      "title": "【家用机】Pureikyubu v1.7 (2026/09/10)",
-      "originalTitle": "[Consoles de salon] Pureikyubu v1.7 (2026/09/10)",
+      "title": "【家用机】Pureikyubu v1.7 (2026/09/11)",
+      "originalTitle": "[Consoles de salon] Pureikyubu v1.7 (2026/09/11)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-10T07:31:23Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136809-consoles-de-salon-pureikyubu-v1-7-2026-09-10/",
+      "sourceUrl": "https://www.emu-france.com/news/136809-consoles-de-salon-pureikyubu-v1-7-2026-09-11/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/08/pureikyubu.png",
       "officialUrl": "https://github.com/emu-russia/pureikyubu/",
-      "summary": "Pureikyubu是一款基于Dolwin开发的任天堂GameCube模拟器。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。 •来自emu-russia/332-embed-json-inside-the-source-code的合并拉取请求# 335 •将分支“master”合并为332-embed-json-inside-the-source-code •更新dspdec.cpp • u…",
-      "content": "Pureikyubu是一款基于Dolwin开发的任天堂GameCube模拟器。\n\n模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。\n•来自emu-russia/332-embed-json-inside-the-source-code的合并拉取请求# 335\n•将分支“master”合并为332-embed-json-inside-the-source-code\n•更新dspdec.cpp\n• uijdi已移动\n•固定杂项",
-      "originalContent": "Pureikyubu est un émulateur de Nintendo GameCube en cours d'élaboration basé sur Dolwin.\n\nLe but de l'émulateur est de rechercher les caractéristiques matérielles de la GameCube et de faire de la rétro-ingénierie sur les technologies utilisées pour développer des jeux pour cette plateforme.\n\n- Merge pull request #335 from emu-russia/332-embed-json-inside-the-source-code\n- Merge branch 'master' into 332-embed-json-inside-the-source-code\n- Update dspdec.cpp\n- uijdi moved\n- Misc fixes",
-      "platforms": [],
+      "summary": "Pureikyubu是一款基于Dolwin开发的任天堂GameCube模拟器。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。 •来自emu-russia/347-icaruga-garbage-on-title-fmv的合并拉取请求# 348 • Gekko/GFX ：修复THP电影的乱码颜色（问题# 347 ） •来自emu-russia/58-test-gc-linux的合并拉取请求#…",
+      "content": "Pureikyubu是一款基于Dolwin开发的任天堂GameCube模拟器。\n\n模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。\n•来自emu-russia/347-icaruga-garbage-on-title-fmv的合并拉取请求# 348\n• Gekko/GFX ：修复THP电影的乱码颜色（问题# 347 ）\n•来自emu-russia/58-test-gc-linux的合并拉取请求# 346\n• Gekko ：仅在下溢时生成递减器异常（修复Bootrom启动）\n• Gekko/SI ：修复GC-Linux启动拦截器（ mtcrf、MMU散列遍历、递减器、lswi、SI ）\n•来自emu-russia/71-full-jaudio-ucode-support的合并拉取请求# 345\n•将分支“master”合并为71-full-jaudio-ucode-support\n•来自emu-russia/339-gfx-unit-test的合并拉取请求# 344\n• GFX ：对整个管道、缺失的功能和他们发现的错误进行单元测试\n•来自emu-russia的# 343合并拉取请求/338-port-game-selector-ui-to-sdl-build\n• UI ：将游戏选择器移植到SDL构建\n•来自emu-russia/340-cp-gfx-refactoring的合并拉取请求# 342\n• GFX ：通过XF路由CP命令流并添加XF寄存器读回\n•来自emu-russia/92-navigation-in-ui的合并拉取请求# 341\n•用户界面：将选择器光标移动到键入字母的第一场比赛\n• JAudio/DSP/AI ：硬件记录的ARAM和AI行为， GQR/成对单固定， IPL启动选项\n•来自emu-russia/183-dspcore-unittests的合并拉取请求# 337\n• DSP ：针对硬件金色矢量对核心进行单元测试，并修复发现的内容\n• pureikyubu_test\n•来自emu-russia/85-flipper-pixel-shader的合并拉取请求# 336\n• GFX ：用XF/TEV着色器替换固定功能流水线\n•来自emu-russia/332-embed-json-inside-the-source-code的合并拉取请求# 335\n•将分支“master”合并为332-embed-json-inside-the-source-code\n•更新dspdec.cpp\n• uijdi已移动\n•固定杂项",
+      "originalContent": "Pureikyubu est un émulateur de Nintendo GameCube en cours d'élaboration basé sur Dolwin.\n\nLe but de l'émulateur est de rechercher les caractéristiques matérielles de la GameCube et de faire de la rétro-ingénierie sur les technologies utilisées pour développer des jeux pour cette plateforme.\n\n- Merge pull request #348 from emu-russia/347-icaruga-garbage-on-title-fmv\n- Gekko/GFX: fix the garbled colours of the THP movies (issue #347)\n- Merge pull request #346 from emu-russia/58-test-gc-linux\n- Gekko: generate the decrementer exception on underflow only (fix Bootrom boot)\n- Gekko/SI: fix GC-Linux boot blockers (mtcrf, MMU hash walk, decrementer, lswi, SI)\n- Merge pull request #345 from emu-russia/71-full-jaudio-ucode-support\n- Merge branch 'master' into 71-full-jaudio-ucode-support\n- Merge pull request #344 from emu-russia/339-gfx-unit-test\n- GFX: unit tests for the whole pipeline, the missing features and the bugs they found\n- Merge pull request #343 from emu-russia/338-port-game-selector-ui-to-sdl-build\n- UI: port the game selector to the SDL build\n- Merge pull request #342 from emu-russia/340-cp-gfx-refactoring\n- GFX: route the CP command stream through the XF and add XF register read-back\n- Merge pull request #341 from emu-russia/92-navigation-in-ui\n- UI: move the selector cursor to the first game on a typed letter\n- JAudio/DSP/AI: hardware-documented ARAM and AI behaviour, GQR/paired-single fixes, IPL boot options\n- Merge pull request #337 from emu-russia/183-dspcore-unittests\n- DSP: unit-test the core against hardware-golden vectors and fix what it found\n- pureikyubu_test\n- Merge pull request #336 from emu-russia/85-flipper-pixel-shader\n- GFX: replace the fixed-function pipeline with XF/TEV shaders\n- Merge pull request #335 from emu-russia/332-embed-json-inside-the-source-code\n- Merge branch 'master' into 332-embed-json-inside-the-source-code\n- Update dspdec.cpp\n- uijdi moved\n- Misc fixes",
+      "platforms": [
+        "pc"
+      ],
       "relatedEmulatorIds": [],
-      "contentHash": "ff1b035b3c8b95e354802e72318dba440c141913a0dcc1ae420c6b09e6c2a96e",
+      "contentHash": "f4a09d9aba547f7cb0df3bc745a31bbd87c97f16e1de83e8f60c09303e31a545",
       "translationPending": false
     },
     {
@@ -341,30 +506,6 @@
         "azahar"
       ],
       "contentHash": "eaf6b3decace42de9ed59425594e211a37d10ee0c7ee8846b799cdc66027ac99",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260909",
-      "title": "【Android更新】ARMSX2 nightly-20260909",
-      "originalTitle": "ARMSX2 nightly-20260909 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-09T13:26:38Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260909",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260909，发布日期为2026年09月09日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260909。\n\n发布日期：2026年09月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• ImGui:在缺少字体资源时不要中止\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260908...cb6f53582a1319f9754ab2d427794ac62b46cb8c",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- ImGui: don't abort when a font resource is missing\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260908...cb6f53582a1319f9754ab2d427794ac62b46cb8c",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "0163a7ec69e6c85215567760dd1dba488d4aaac9cc423506527f881c2f4f684e",
       "translationPending": false
     },
     {
