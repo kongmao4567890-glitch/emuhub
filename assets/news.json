@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T18:11:58.413453Z",
+  "generatedAt": "2026-09-15T05:18:33.567572Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,177 @@
   },
   "articles": [
     {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T03:03:55Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•添加GetOutstandingTasks ()和ExecuteOneTask () （ Stenzek（https://github.com/stenzek/duckstation/commit/563c355131350b4c8a9439c8803f63b08d5f0c1e） ）\n•添加GetProcessorCount () (Stenzek（https://github.com/stenzek/duckstation/commit/efecb78dbd74a158f45c267f6b640bb5a9022021）)\n•使TaskQueue线程计数动态（ Stenzek（https://github.com/stenzek/duckstation/commit/0d2e66235ccf9e88b937a407108c2070d801264c） ）\n•使用二进制密钥而不是字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/60b06c0e28617ed588e01a9655b05954a8dc4f3c） ）\n•内部同步访问（ Stenzek（https://github.com/stenzek/duckstation/commit/3151c5256bf43b7a6acff339a7b937d6e41199c9） ）\n•使用对象存档同步（ Stenzek（https://github.com/stenzek/duckstation/commit/79371c47a2a7b99c4f2a9b3b65703097eee01d7b） ）\n•使用ObjectArchive进行着色器缓存（ Stenzek（https://github.com/stenzek/duckstation/commit/5420d699e2ef0b72f96ca3647fa8177b84976a27） ）\n•支持查找缓存着色器和不透明键（ Stenzek（https://github.com/stenzek/duckstation/commit/7951eba8a041a662521357ee3577d3df433cd94b） ）\n•为支持的后端添加LoadPipeline () （ Stenzek（https://github.com/stenzek/duckstation/commit/f541abb11e43a1ffcf29eb8266998583e6c3c086） ）\n• 5ebeff9 ： GPU/HW ：使用UID生成着色器（ Stenzek ）\n• 7c23927 ： GPU/HW ：使用UID作为着色器缓存键（ Stenzek ）\n• 94e5f08 ： GPU/HW ：使用多线程着色器编译（ Stenzek ）\n• 74a743a ： GPU/HW ：使用多线程管道编译（ Stenzek ）",
+      "originalContent": "## Commits\n- Add GetOutstandingTasks() and ExecuteOneTask() ([Stenzek](https://github.com/stenzek/duckstation/commit/563c355131350b4c8a9439c8803f63b08d5f0c1e))\n- Add GetProcessorCount() ([Stenzek](https://github.com/stenzek/duckstation/commit/efecb78dbd74a158f45c267f6b640bb5a9022021))\n- Make TaskQueue thread count dynamic ([Stenzek](https://github.com/stenzek/duckstation/commit/0d2e66235ccf9e88b937a407108c2070d801264c))\n- Use binary keys instead of strings ([Stenzek](https://github.com/stenzek/duckstation/commit/60b06c0e28617ed588e01a9655b05954a8dc4f3c))\n- Synchronize access internally ([Stenzek](https://github.com/stenzek/duckstation/commit/3151c5256bf43b7a6acff339a7b937d6e41199c9))\n- Use object archive synchronization ([Stenzek](https://github.com/stenzek/duckstation/commit/79371c47a2a7b99c4f2a9b3b65703097eee01d7b))\n- Use ObjectArchive for shader cache ([Stenzek](https://github.com/stenzek/duckstation/commit/5420d699e2ef0b72f96ca3647fa8177b84976a27))\n- Support looking up cached shaders and opaque keys ([Stenzek](https://github.com/stenzek/duckstation/commit/7951eba8a041a662521357ee3577d3df433cd94b))\n- Add LoadPipeline() for supported backends ([Stenzek](https://github.com/stenzek/duckstation/commit/f541abb11e43a1ffcf29eb8266998583e6c3c086))\n- 5ebeff9: GPU/HW: Use UIDs for shader generation (Stenzek)\n- 7c23927: GPU/HW: Use UIDs as shader cache keys (Stenzek)\n- 94e5f08: GPU/HW: Use multi-threaded shader compilation (Stenzek)\n- 74a743a: GPU/HW: Use multi-threaded pipeline compilation (Stenzek)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "1ddb27da2ec876909af975cd96778493a81940758e339104d1422c8a5a4f33c5",
+      "translationPending": false
+    },
+    {
+      "id": "137016",
+      "title": "【家用机】Ryu (2026/09/11)",
+      "originalTitle": "[Consoles de salon] Ryu (2026/09/11)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-14T20:58:59Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137016-consoles-de-salon-ryu-2026-09-11/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ryu-dlss1.png",
+      "officialUrl": "https://ryu.dotslash.pro/",
+      "summary": "RYU （或Ryubing-Dlss ）是Ryubing的一个分支，它添加了直接集成到模拟器中的DLSS 5图形堆栈。 该项目保留了Ryubing的功能，并特别添加了DLSS超分辨率、DLAA、神经渲染和DLSS-G图像生成。",
+      "content": "RYU （或Ryubing-Dlss ）是Ryubing的一个分支，它添加了直接集成到模拟器中的DLSS 5图形堆栈。 该项目保留了Ryubing的功能，并特别添加了DLSS超分辨率、DLAA、神经渲染和DLSS-G图像生成。\n\n特点：\n•具有自动、DLAA、质量、平衡、性能和超高性能模式的DLSS超高分辨率\n•通过DLSS管道集成DLAA\n•通过RenoDX/ReShade进行DLSS 5神经渲染\n• DLSS帧生成x2/x3/x4\n•平滑运动\n•直接从状态栏激活/停用DLSS、神经渲染和帧生成，无需重新启动\n•在状态栏中显示有效帧速率\n•支持NVIDIA RTX 40和RTX 50 GPU\n•包含DLSS运行时的独立Windows x64内部版本\n•每周一与Ryubing主站自动同步\n•自动更新生成\n•与Ryubing功能的兼容性： CPU、Vulkan/OpenGL GPU、控件、DLC、MODS和缓存着色器\n\n帧生成：\n• DLSS-G允许x2、x3和x4模式\n•帧生成至少需要腾讯通40系列\n• x3/x4模式需要腾讯通50系列\n•在x2模式下，锁定为30fps的第一方游戏可以达到60fps\n•在50系列腾讯通卡上， x4模式可用于超过100 FPS\n•有效帧率显示在状态栏中，例如30 FPS FG x2 → 60 FPS\n•当前的实现仍然使用简化的运动矢量和深度，因为模拟器无法访问游戏引擎的内部运动矢量\n•在某些情况下，这可能会导致翘曲，包括在HUD上和摄像头快速移动期间\n•计划将硬件光流作为改进此限制的下一步骤\n\n神经渲染：\n神经渲染通过RenoDX/ReShade插件集成，可以在游戏中使用F6激活。 其使用需要初始安装Vulkan ReShade层。\n\nDLSS架构：\nnvngx_dlss.dll — DLSS\nnvngx_dlssg.dll —框架生成\nnr-stage.dll — VULKAN ↔ D3D12\nsl.dlss_g.dll/STREAMLINE\nrenodx-dlss5.addon64 —神经渲染\nReShade及其组件\n\n表明的最低系统要求：\n• Windows 10 20H1或更高版本\n• 6个CPU内核\n• 8 GB内存\n• Vulkan 1.4或OpenGL 4.6\n•用于DLSS功能的NVIDIA RTX\n\n请注意：\n分叉存储库是私有的，因为它包含专有的NVIDIA/RenoDX二进制文件。 该项目表明，关于模拟本身的一切仍然是Ryubing的： Ryu本质上是在顶部添加他自己的DLSS堆栈。\nRyubing的分支每周一自动与主站同步，而构建则自行更新以检索最新的演变。",
+      "originalContent": "RYU (ou Ryubing-Dlss) est un fork de Ryubing qui ajoute une pile graphique DLSS 5 directement intégrée à l'émulateur. Le projet conserve les fonctionnalités de Ryubing et ajoute notamment le DLSS Super Resolution, le DLAA, le Neural Rendering et la génération d'images DLSS-G.\n\nFonctionnalités :\n- DLSS Super Resolution avec modes Auto, DLAA, Quality, Balanced, Performance et Ultra Performance\n- DLAA intégré via le pipeline DLSS\n- DLSS 5 Neural Rendering via RenoDX / ReShade\n- DLSS Frame Generation x2 / x3 / x4\n- Smooth Motion\n- Activation/désactivation de DLSS, Neural Rendering et Frame Generation directement depuis la barre d'état, sans redémarrage\n- Affichage du framerate effectif dans la barre d'état\n- Support des GPU NVIDIA RTX 40 et RTX 50\n- Builds Windows x64 autonomes avec les runtimes DLSS inclus\n- Synchronisation automatique avec le master de Ryubing chaque lundi\n- Auto-update du build\n- Compatibilité avec les fonctionnalités de Ryubing: CPU, GPU Vulkan/OpenGL, contrôles, DLC, mods et shader cache\n\nFrame Generation :\n- DLSS-G permet les modes x2, x3 et x4\n- Le Frame Generation nécessite une RTX 40-series minimum\n- Les modes x3/x4 nécessitent une RTX 50-series\n- Les jeux first-party verrouillés à 30 FPS peuvent atteindre 60 FPS avec le mode x2\n- Le mode x4 peut permettre de dépasser 100 FPS sur une carte RTX 50-series\n- Le framerate effectif est affiché dans la barre d'état, par exemple 30 FPS FG x2 → 60 FPS\n- L'implémentation actuelle utilise encore des vecteurs de mouvement et une profondeur simplifiés, car l'émulateur ne peut pas accéder aux motion vectors internes du moteur du jeu\n- Cela peut provoquer du warping dans certaines situations, notamment sur les HUD et lors de mouvements de caméra rapides\n- Le Hardware Optical Flow est prévu comme prochaine étape pour améliorer cette limitation\n\nNeural Rendering :\nLe Neural Rendering est intégré via un addon RenoDX/ReShade et peut être activé dans le jeu avec F6. Son utilisation nécessite une installation initiale de la couche Vulkan ReShade.\n\nArchitecture DLSS :\nnvngx_dlss.dll — DLSS\nnvngx_dlssg.dll — Frame Generation\nnr-stage.dll — pont Vulkan ↔ D3D12\nsl.dlss_g.dll / Streamline\nrenodx-dlss5.addon64 — Neural Rendering\nReShade et ses composants\n\nConfiguration minimale indiquée :\n- Windows 10 20H1 ou supérieur\n- 6 cœurs CPU\n- 8 Go de RAM\n- Vulkan 1.4 ou OpenGL 4.6\n- RTX NVIDIA pour les fonctions DLSS\n\nÀ noter :\nLe dépôt du fork est privé car il contient des binaires propriétaires NVIDIA/RenoDX. Le projet indique que tout ce qui concerne l'émulation elle-même reste celui de Ryubing: RYU ajoute essentiellement sa propre pile DLSS au-dessus.\n\nLe fork de Ryubing est automatiquement synchronisé avec le master chaque lundi, tandis que le build se met lui-même à jour afin de récupérer les dernières évolutions.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "36b329d7e359324e95c826dc94e6885f0d3dd436915852ac02645cf30efc2313",
+      "translationPending": false
+    },
+    {
+      "id": "137014",
+      "title": "【工具】ZeuX v0.1.28",
+      "originalTitle": "[Utilitaires Multi-systemes] ZeuX v0.1.28",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-14T20:56:00Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137014-utilitaires-multi-systemes-zeux-v0-1-28/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/zeux.png",
+      "officialUrl": "https://github.com/DougCristiano/ZeuX",
+      "summary": "ZeuX是一个现代化的轻量级前端，旨在将整个模拟体验集中在单个界面中。它可以对不同控制台的ROM进行分组，并通过可用的主模拟器启动它们，从而避免多个程序、文件夹和配置之间的混乱 ZeuX旨在快速、直观和视觉上整洁，提供一体化的仿真方法，旨在提供简单且立即可用的体验。该项目完全免费，仍处于早期开发阶段。",
+      "content": "ZeuX是一个现代化的轻量级前端，旨在将整个模拟体验集中在单个界面中。它可以对不同控制台的ROM进行分组，并通过可用的主模拟器启动它们，从而避免多个程序、文件夹和配置之间的混乱\nZeuX旨在快速、直观和视觉上整洁，提供一体化的仿真方法，旨在提供简单且立即可用的体验。该项目完全免费，仍处于早期开发阶段。",
+      "originalContent": "ZeuX est un frontend moderne et léger conçu pour centraliser toute l'expérience d'émulation dans une interface unique. Il permet de regrouper les ROMs de différentes consoles et de les lancer à travers les principaux émulateurs disponibles, évitant ainsi de jongler entre plusieurs programmes, dossiers et configurations. Conçu pour être rapide, intuitif et visuellement soigné, ZeuX propose une approche tout-en-un de l'émulation, avec pour objectif de fournir une expérience simple et immédiatement utilisable. Le projet est entièrement gratuit et se trouve encore à un stade précoce de développement.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "39ac6d4048e13e818aa8e0f152e850f994c5d812e9d972a78b3ef42b19935bc2",
+      "translationPending": false
+    },
+    {
+      "id": "137012",
+      "title": "【工具】ROM Properties v2.9",
+      "originalTitle": "[Utilitaires Divers] ROM Properties v2.9",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-14T20:51:59Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137012-utilitaires-divers-rom-properties-v2-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2018/06/romproperties.png",
+      "officialUrl": "https://github.com/GerbilSoft/rom-properties",
+      "summary": "此shell扩展为文件浏览器添加了一些有趣的功能，用于管理视频游戏磁盘和ROM图像。 • Game Maker Studio data.win解析器。（由@ InvoxiPlayGames提供） • PlayStation PARAM.SFO解析器。（由@ InvoxiPlayGames提供） • rpcli现在有一个-P选项来列出在当前系统上检测到的CPU功能。 当前支持x86和ARM。",
+      "content": "此shell扩展为文件浏览器添加了一些有趣的功能，用于管理视频游戏磁盘和ROM图像。\n\n• Game Maker Studio data.win解析器。（由@ InvoxiPlayGames提供）\n• PlayStation PARAM.SFO解析器。（由@ InvoxiPlayGames提供）\n• rpcli现在有一个-P选项来列出在当前系统上检测到的CPU功能。 当前支持x86和ARM。\n•在Windows上，现在可以将ROM属性选项卡上的图标和横幅拖放到文件夹窗口中，将其解压缩为PNG格式。\n•添加了temuri.doghonadze的格鲁吉亚语翻译。\n• EXE ：适用于Windows Live和XNA可执行文件的游戏现在显示了一个Xbox 360风格的XDBF选项卡，用于显示成就。\n• KDE Frameworks 6 ：现在使用系统范围的文件大小单位方言设置，而不是采用IEC风格（ KiB、MiB ）。\n•大量的小错误修复和改进。\n• PlayStation TIM纹理\n• S98音频文件\n•在终端中支持Kitty和Sixel协议，以显示文件图标和横幅。\n•改进了Wii U固件文件、amiibo和Lua字节码。\n• Windows图标处理的众多改进。\n•更多ARM霓虹灯优化。\n•某些类型的文件、e.g. powershell脚本的Windows图标后备修复。\n• GNU gettext现在使用自定义CMake构建作为rom属性的一部分构建。",
+      "originalContent": "Cette extension shell ajoute quelques fonctionnalités intéressantes aux navigateurs de fichiers pour la gestion des images de disques et de ROM de jeux vidéo.\n\n- Game Maker Studio data.win parser. (Contributed by @InvoxiPlayGames)\n- PlayStation PARAM.SFO parser. (Contributed by @InvoxiPlayGames)\n- rpcli now has a -P option to list CPU features detected on the current system. Currently supports x86 and ARM.\n- On Windows, the icon and banner on the ROM Properties tab can now be dragged and dropped into a folder window to extract it in PNG format.\n- Added Georgian translations from temuri.doghonadze .\n- EXE: Games for Windows Live and XNA executables now show an Xbox 360-style XDBF tab for Achievements.\n- KDE Frameworks 6: The system-wide file size unit dialect setting is now used instead of assuming IEC-style (KiB, MiB).\n- Lots and lots of tiny bug fixes and improvements.\n- PlayStation TIM textures\n- S98 audio files\n- Support for Kitty and Sixel protocols in terminals to display file icons and banners.\n- Improvements for Wii U firmware files, amiibo, and Lua bytecode.\n- Numerous improvements for Windows icon handling.\n- More ARM NEON optimizations.\n- Windows icon fallback fix for certain types of files, e.g. Powershell scripts.\n- GNU gettext is now built as part of rom-properties using a custom CMake build.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "730949c7c4e0b444fe51facac0e02a2d3ead2756b0ddbfddb5a999e948876ebd",
+      "translationPending": false
+    },
+    {
+      "id": "137008",
+      "title": "【其他】WideMelon v1.0.2",
+      "originalTitle": "[Consoles portables] WideMelon v1.0.2",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-09-14T20:43:14Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137008-consoles-portables-widemelon-v1-0-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/widemelon-scaled.png",
+      "officialUrl": "https://github.com/pruefsumme/widemelon",
+      "summary": "WideMelon是一款基于melonDS的任天堂DS模拟器，可在真正的全景（从4: 3到32: 9 ）中显示3D游戏，而无需拉伸2D界面、菜单、精灵、视频或触摸屏 . Windows、macOS和Linux上的免费开源（ GPL-3.0 ） ，它管理从1 ×到8 ×的渲染比例（全屏，整数缩放） ，将主屏幕与最近的游戏结合起来，保存状态和拖放，使用单独的melonDS配置运行并保存，并提供偏移底部屏幕和 智能手机上的可定制控件。",
+      "content": "WideMelon是一款基于melonDS的任天堂DS模拟器，可在真正的全景（从4: 3到32: 9 ）中显示3D游戏，而无需拉伸2D界面、菜单、精灵、视频或触摸屏\n. Windows、macOS和Linux上的免费开源（ GPL-3.0 ） ，它管理从1 ×到8 ×的渲染比例（全屏，整数缩放） ，将主屏幕与最近的游戏结合起来，保存状态和拖放，使用单独的melonDS配置运行并保存，并提供偏移底部屏幕和\n智能手机上的可定制控件。",
+      "originalContent": "WideMelon est un émulateur Nintendo DS basé sur melonDS qui affiche les jeux 3D en vrai panoramique (du 4:3 au 32:9) sans jamais étirer les interfaces 2D, les menus, les sprites, les vidéos ni l'écran tactile. Gratuit et open-source (GPL-3.0) sur Windows, macOS et Linux, il gère une échelle de rendu de 1× à 8× (plein écran, integer scaling), intègre un écran d'accueil avec jeux récents, save states et drag & drop, s'exécute avec une configuration et des sauvegardes séparées de melonDS, et offre la possibilité de déporter l'écran inférieur et ses commandes personnalisables sur un smartphone.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "f3c5aadfd6f59f6172478a9569ad1074095569334cad2fef7406b9c131482ba8",
+      "translationPending": false
+    },
+    {
+      "id": "137003",
+      "title": "【家用机】Suyu v0.0.5 (reborn edition)",
+      "originalTitle": "[Consoles de salon] Suyu v0.0.5 (reborn edition)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-14T20:22:51Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137003-consoles-de-salon-suyu-v0-0-5-reborn-edition/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/03/suyu.png",
+      "officialUrl": "https://github.com/dougchansan/suyu-v0.0.4",
+      "summary": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。 Suyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并 您可以在控制台上完成其余的工作。",
+      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n该项目在0.0.4版本之后被放弃，然后由开发人员DougChanSan从同一版本接管。\n\n变更内容：\n•重新编译： void块函数不能返回值\n•前端：显示运行游戏的CPU\n• suyu-cmd: --probe-decode-list ，解码整个库的覆盖范围\n• docs ：静态重新编译，以及没有jit的构建\n• build ： SUYU_NO_JIT ，一个没有动态重新编译器的模拟器\n• recomp ：严格模式，拒绝jit回退\n• ci ：发布从标签中剪下的内容，按照README的说法构建\n• docs ：实际运行的构建指令\n•生成：删除继承的发布工作流程\n•前端：停止强制控制器视图在黑客模式下打开\n•重新编译器：用于ldp、stp和128位访问的对等助手\n•重新编译器：在翻译时解决标志更新\n•重新编译：在翻译时解决分支条件\n•重新编译：解析图像内部的间接分支目标\n• recomp ：每个线程执行的块计数\n• recomp ：运行时可配置链预算\n•重新编译：使生成的优化级别可重写\n•重新编译：索引整数乘法、addlv、nzcv\n•重新编译：关闭剩余的解码间隙；将未覆盖的入口点记录为根\n•重新编译： rev、shifts、饱和add、unsigned compares、addv、frecps、vector faddp\n•重新编译：使用生成的s-box进行aese/aesd\n•重新编译： sha256su0/su1和多寄存器结构加载和存储\n•重新编译： aesmc/aesimc、pmull/pmull2、crc32、标量faddp\n•重新编译： bsl/bit/bif、fabs/fneg、xtn/xtn2、矢量fcvtzs/fcvtzu\n•加载器：当无法读取已安装的更新时，请这么说\n• file_sys ：跳过元时，命名被取代的元及其内容\n•重新编译： tbl/tbx和单元素ld1/st1\n• mcp: list_installed_titles删除了每个已安装的附加组件\n• mcp: list_installed_titles报告了一个从未存在的空目录\n•重新编译： fmov vector immediate、cnt、fcm register forms、sshll/ushll、permutes、ext\n•前端：仍需安装的设置清单\n•导出：使用vswhere而不是硬编码路径查找Visual Studio\n•构建：丢弃没有克隆可以完成的ownfoil子模块\n•前端：直接索引块，而不是跨图像边界调用\n•重新填充：根据覆盖率报告中的模块图解析未覆盖的PC\n•重新编译：仅继续链接到无条件分支\n•重新编译：调用直接分支的目标，而不是返回调度程序\n•前端：紧凑型每线程模块调度\n•重新编译： movi/mvni ； shl已实现但已关闭\n•重新编译：停止转换定点转换\n•重新编译：将定点刻度折叠成文字\n•重新编译：定点转换、ld1r、ushl/sshl ； mcp ：报告vps\n• DOCS ：完成中和注释，并修复两个被通行证损坏的注释\n•重新编译： abs/neg ， fmla/fmls by element ， fccmp\n• mcp ：报告TAS播放进度\n•修剪注释\n•重新编译：处理所有fp到int舍入模式\n•前端：零初始化调试器窗格指针\n•文档： Linux构建和运行；记录Windows不需要的内容\n•构建： include_next提升垫片的颠簸动力学\n•构建：便携式增压/变体垫片的颠簸动力\n•修复：在字符串文字中返回的杂散托架会破坏每个非MSVC构建\n•壮举：通过MCP曝光TAS播放和录制\n• recomp ：直接索引块，而不是二进制搜索它们\n•重新填充：通过页面表解析房客地址\n•专长：通过MCP状态工具报告FPS\n•构建：将动态子模块指向我们的分叉\n• DOCS ： README反映了0.0.5的延续和变化\n•构建： 0.0.4 - > 0.0.5 ，并记录其来源\n•重构： AArch64翻译、主机桥接和执行覆盖\n•专长： suyu-cmd --probe-isa-list报告每个标题的CPU架构\n•诊断：通过内容哈希识别NPDM ，并命名更新的提供商插槽\n•修复：导出ExeFS更新，而不是基本更新\n•修复： NAND中安装的更新和DLC从未被索引\n•修复： RomFS注册已被静默删除\n•修复：服务处理程序注册丢弃了大多数命令\n•修复： AOT映像调度将每台PC解析为错误的模块",
+      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nCe projet a été abandonné après la version 0.0.4, avant d’être repris par le développeur DougChanSan à partir de cette même version.\n\nLes changements:\n\n- recompiler: a void block function cannot return a value\n- frontend: show which cpu is running the game\n- suyu-cmd: --probe-decode-list, decode coverage across a library\n- docs: static recompilation, and the build with no jit in it\n- build: SUYU_NO_JIT, an emulator with no dynamic recompiler in it\n- recomp: strict mode, refusing the jit fallback\n- ci: releases cut from a tag, built the way the README says\n- docs: build instructions that have actually been run\n- build: remove the inherited release workflow\n- frontend: stop forcing the controller view open in Hacker mode\n- recompiler: pair helpers for ldp, stp and 128-bit access\n- recompiler: resolve the flag update at translation time\n- recompiler: resolve the branch condition at translation time\n- recompiler: resolve indirect branch targets inside the image\n- recomp: count executed blocks per thread\n- recomp: runtime-configurable chain budget\n- recompiler: make the generated optimisation level overridable\n- recompiler: indexed integer multiplies, addlv, nzcv\n- recompiler: close the remaining decode gap; record uncovered entry points as roots\n- recompiler: rev, shifts, saturating add, unsigned compares, addv, frecps, vector faddp\n- recompiler: aese/aesd with a generated s-box\n- recompiler: sha256su0/su1 and the multi-register structure loads and stores\n- recompiler: aesmc/aesimc, pmull/pmull2, crc32, scalar faddp\n- recompiler: bsl/bit/bif, fabs/fneg, xtn/xtn2, vector fcvtzs/fcvtzu\n- loader: say so when an installed update cannot be read\n- file_sys: name the superseded meta and its content when one is skipped\n- recompiler: tbl/tbx and single-element ld1/st1\n- mcp: list_installed_titles dropped every installed add-on\n- mcp: list_installed_titles reported an empty directory that never existed\n- recompiler: fmov vector immediate, cnt, fcm register forms, sshll/ushll, permutes, ext\n- frontend: a Setup checklist for what still has to be installed\n- export: find Visual Studio with vswhere instead of a hardcoded path\n- build: drop the ownfoil submodule, which no clone can complete\n- frontend: index blocks directly instead of calling across the image boundary\n- recomp: resolve uncovered PCs against the module map in the coverage report\n- recompiler: keep chaining to unconditional branches only\n- recompiler: call the target of a direct branch instead of returning to the dispatcher\n- frontend: compact, per-thread module dispatch\n- recompiler: movi/mvni; shl implemented but off\n- recompiler: stop translating fixed-point conversions\n- recompiler: fold the fixed-point scale into a literal\n- recompiler: fixed-point conversions, ld1r, ushl/sshl; mcp: report vps\n- docs: finish neutralising the comments, and repair two broken by the pass\n- recompiler: abs/neg, fmla/fmls by element, fccmp\n- mcp: report tas playback progress\n- trim comment\n- recompiler: handle all fp-to-int rounding modes\n- frontend: zero-initialize the debugger pane pointers\n- docs: Linux builds and runs; record what it needs that Windows does not\n- build: bump dynarmic for the include_next boost shim\n- build: bump dynarmic for the portable boost/variant shim\n- fix: stray carriage returns inside string literals break every non-MSVC build\n- feat: expose TAS playback and recording over MCP\n- recomp: index blocks directly instead of binary searching for them\n- recomp: resolve guest addresses through the page table\n- feat: report FPS through the MCP state tool\n- build: point the dynarmic submodule at our fork\n- docs: README reflects the continuation and what changed in 0.0.5\n- build: 0.0.4 -> 0.0.5, and record where this came from\n- recomp: AArch64 translation, host bridge and execution coverage\n- feat: suyu-cmd --probe-isa-list reports each title's CPU architecture\n- diag: identify the NPDM by content hash, and name the update's provider slot\n- fix: export the update ExeFS, not the base\n- fix: installed updates and DLC in NAND were never indexed\n- fix: RomFS registration was silently dropped\n- fix: service handler registration dropped most commands\n- fix: AOT image dispatch resolved every PC to the wrong module",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "be4958a705331f53dec4c297b2f45ca083322957aed7258ffbf1e41aade1b8e6",
+      "translationPending": false
+    },
+    {
       "id": "android-release-nesd-nightly",
       "title": "【Android更新】NESd nightly",
       "originalTitle": "NESd nightly Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-14T17:11:49Z",
+      "publishedAt": "2026-09-14T20:07:20Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
       "officialUrl": "https://github.com/jpjonte/NESd",
       "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月14日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n•支持Konami VRC2和VRC4 （映射器21、22、23、25 ）\n• Sunsoft FME-7 （映射器69 ）支持\n•应用内调色板编辑器，支持实时预览和导出\n•设置中的搜索字段\n•退出游戏或退出NESd时，现在自动保存也会保存\n• “上一个选项卡”和“下一个选项卡”操作现在可以浏览最近的ROM并保存状态\n•现在可以使用键盘或游戏手柄更改所有设置\n\n已更改\n•主菜单现在变暗，并在ROM加载时显示磁贴上的微调器\n•改进了游戏手柄和键盘菜单导航\n•提高macOS上的流程优先级\n•提高了Android上的文件选取器列表速度\n•隐私政策现在描述了网站的页面浏览计数器\n固定\n•电池保存、保存状态和缩略图现在遵循重命名的ROM文件\n•短Zapper触发拉动不再被忽略\n•两个具有相同文件名的ROM不再共享其保存和保存状态\n•秘籍和断点现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其断点\n•两个文件名相同的ROM现在都保留在最近的ROM列表中\n•退出NESd不再丢失正在写入的SRAM\n•当ROM加载失败时，文件选取器将保持打开状态\n•修复了大型目录中Android上的文件选取器冻结问题\n• Web版本现在在纯HTTP上有声音\n•固定APU长度计数器停止和重新加载写入定时\n•固定DMC DMA空闲周期读数\n•修复了精灵溢出标志设置定时",
-      "originalContent": "### Added\n- Konami VRC2 and VRC4 (mappers 21, 22, 23, 25) support\n- Sunsoft FME-7 (mapper 69) support\n- In-app palette editor with live preview and export\n- Search field in Settings\n- Auto save now also saves when quitting a game or quitting NESd\n- The Previous Tab and Next Tab actions now page through the recent ROMs and save states\n- All settings can now be changed with the keyboard or a gamepad\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n- Improved gamepad and keyboard menu navigation\n- Increased process priority on macOS\n- Improved file picker list speed on Android\n- The privacy policy now describes the website's page-view counter\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- Short Zapper trigger pulls are no longer ignored\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- Fixed the file picker freezing on Android in large directories\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n•支持Konami VRC2和VRC4 （映射器21、22、23、25 ）\n• Sunsoft FME-7 （映射器69 ）支持\n•应用内调色板编辑器，支持实时预览和导出\n•设置中的搜索字段\n•退出游戏或退出NESd时，现在自动保存也会保存\n•大多数屏幕现在显示当前输入方法的输入提示\n• “上一个选项卡”和“下一个选项卡”操作现在可以浏览最近的ROM并保存状态\n•现在可以使用键盘或游戏手柄更改所有设置\n\n已更改\n•主菜单现在变暗，并在ROM加载时显示磁贴上的微调器\n•改进了游戏手柄和键盘菜单导航\n•提高macOS上的流程优先级\n•提高了Android上的文件选取器列表速度\n•隐私政策现在描述了网站的页面浏览计数器\n\n固定\n•电池保存、保存状态和缩略图现在遵循重命名的ROM文件\n•大于256 KiB的UNROM （映射器2 ）游戏现在可以到达所有银行\n•短Zapper触发拉动不再被忽略\n•两个具有相同文件名的ROM不再共享其保存和保存状态\n•秘籍和断点现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其断点\n•两个文件名相同的ROM现在都保留在最近的ROM列表中\n•退出NESd不再丢失正在写入的SRAM\n•当ROM加载失败时，文件选取器将保持打开状态\n•修复了大型目录中Android上的文件选取器冻结问题\n• Web版本现在在纯HTTP上有声音\n•固定APU长度计数器停止和重新加载写入定时\n•固定DMC DMA空闲周期读数\n•修复了精灵溢出标志设置定时",
+      "originalContent": "### Added\n- Konami VRC2 and VRC4 (mappers 21, 22, 23, 25) support\n- Sunsoft FME-7 (mapper 69) support\n- In-app palette editor with live preview and export\n- Search field in Settings\n- Auto save now also saves when quitting a game or quitting NESd\n- Most screens now show input hints for the current input method\n- The Previous Tab and Next Tab actions now page through the recent ROMs and save states\n- All settings can now be changed with the keyboard or a gamepad\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n- Improved gamepad and keyboard menu navigation\n- Increased process priority on macOS\n- Improved file picker list speed on Android\n- The privacy policy now describes the website's page-view counter\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- UNROM (mapper 2) games larger than 256 KiB now reach all of their banks\n- Short Zapper trigger pulls are no longer ignored\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- Fixed the file picker freezing on Android in large directories\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "nesd"
       ],
-      "contentHash": "44cc2ce3e10159e56f494a1098f7da914c543de9cd8b5c6cf629870a922af18c",
+      "contentHash": "ca8f2d1faab36554191f84cbb0be469fe53d2b5dd429a65930bbab910d6a5ed7",
+      "translationPending": false
+    },
+    {
+      "id": "137001",
+      "title": "【电脑】ACE-DL (2026/09/14)",
+      "originalTitle": "[Ordi.] ACE-DL (2026/09/14)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-14T20:05:17Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137001-ordi-ace-dl-2026-09-14/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/10/acedl.png",
+      "officialUrl": "https://roudoudou.com/ACE-DL/",
+      "summary": "这是一个跨平台的Amstrad CPC模拟器。 这些变化是： •将SDL更新为3.4.16 （支持更多控制器+固定） •用于远程控制的Web API服务器的第一个版本（受Lone工作的启发，请参阅WEBAPI.html ） •新的命令行选项可启用WEB API并激活无边框模式 •修复快照+ dsk未找到（哎呀）或DSK试用错误的崩溃问题 •修复模块弹出行为（主动关闭） •全速可以从描记线（ HUD ）切换 •图形浏览器实时显示当前字节/…",
+      "content": "这是一个跨平台的Amstrad CPC模拟器。\n\n这些变化是：\n•将SDL更新为3.4.16 （支持更多控制器+固定）\n•用于远程控制的Web API服务器的第一个版本（受Lone工作的启发，请参阅WEBAPI.html ）\n•新的命令行选项可启用WEB API并激活无边框模式\n•修复快照+ dsk未找到（哎呀）或DSK试用错误的崩溃问题\n•修复模块弹出行为（主动关闭）\n•全速可以从描记线（ HUD ）切换\n•图形浏览器实时显示当前字节/地址/crtc\n•显示器+信息合并到单个选择模块菜单中\n•由于系统的换档惯性，不得不减慢剪贴板发送速度\n•请勿尝试刷新最小化的窗口\n•从快照加载至少一个断点时重置现有断点\n•剪贴板发送现在可用于激活模拟器映射\n•剪贴板可以通过SHIFT-INSERT或SHIFT-RETURN发送（适用于PI和Mac ）\n•在跟踪期间，现在可以通过单击底部HUD中的CRTC来更改CRTC",
+      "originalContent": "Il s'agit d'un émulateur d'Amstrad CPC multi plateforme.\n\nLes changements sont:\n- updated SDL to 3.4.16 (more controllers supported + fixes)\n- first version of web API server for remote control (inspired by Lone's work, see WEBAPI.html)\n- new command line options to enable WEB API and activate borderless mode\n- fix crash with snapshot+dsk not found (ooops) or wrong DSK tryout\n- fix modules popup behaviour (intempestive closing)\n- FullSpeed can be toggled from trace (HUD)\n- Graphic explorer displays current byte/addr/crtc realtime\n- Monitor+INFO merged into a single selection module menu\n- had to slow down a little Clipboard send because of SHIFT inertia with the system\n- do not try to refresh a minimized window\n- reset existing breakpoints when loading at least one breakpoint from a snapshot\n- clipboard Send now works with emulator mapping activated\n- clipboard may be send either with SHIFT-INSERT or SHIFT-RETURN (for PI & Mac)\n- during Trace, it's now possible to change CRTC by clicking on CRTC in the bottom HUD",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "3893c94b9f5e9fb2ec422bbbb78c9b368b484b1e5fff9ffcde4216b22da8ad73",
       "translationPending": false
     },
     {
@@ -122,30 +272,6 @@
         "gearcoleco_core"
       ],
       "contentHash": "a223b9baac656b43a73f87d24b45375beece35fdc11e8a364b84edc72bb09c74",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-14T10:33:59Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月14日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•角色本地化名称（ ranchodelaluna（https://github.com/stenzek/duckstation/commit/390c878f78b41a92dac75770123800500db7e3a6） ）\n• e26fa60 ：更新意大利语翻译（ # 3798 ） （ Davide Pesavento ） # 3798（https://github.com/stenzek/duckstation/pull/3798）",
-      "originalContent": "## Commits\n- Persona localizedName ([ranchodelaluna](https://github.com/stenzek/duckstation/commit/390c878f78b41a92dac75770123800500db7e3a6))\n- e26fa60: Update Italian translation (#3798) (Davide Pesavento) [#3798](https://github.com/stenzek/duckstation/pull/3798)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "00ae36c79c3f0ac509ad5f0d08b153c29bf161c3d82f86c67ac752484f76f9c2",
       "translationPending": false
     },
     {
