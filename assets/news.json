@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T05:18:33.567572Z",
+  "generatedAt": "2026-09-15T17:16:10.587386Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,256 @@
   },
   "articles": [
     {
+      "id": "android-release-hatariB_core-1-0",
+      "title": "【Android更新】hatariB (RetroArch 核心) 1.0",
+      "originalTitle": "hatariB (RetroArch 核心) 1.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T15:26:27Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/1.0",
+      "imageUrl": "asset://assets/emulators/hatariB_core.png",
+      "officialUrl": "https://github.com/bbbradsmith/hatariB",
+      "summary": "hatariB (RetroArch 核心) 发布 Android 新版本 1.0，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 1.0。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nThe hatariB 模拟器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n_Android 建筑文物应很快提供。 GitHub 动作有问题（https://github.com/android-actions/setup-android/issues/537） 释放时。 _\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意试试最新的改变\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在此页的顶部,请留言。\n\n变动 v0.5 β :\n• 固定停雪屏幕崩溃(引入) v0.5 删除 SDL2 时。\n• 固定 `setlocale` 在 libretro 上解析阴影的问题。 (83)（https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800）)\n• Libretro CI 构建(Windows,MacOS,Linux,IOS,WebOS,Vita,Switch,Wii,WiiU).",
+      "originalContent": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\n_**Android build artifacts should be available soon. There is an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release.**_\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem breaking shader parsing on libretro builds. ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800))\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "hatariB_core"
+      ],
+      "contentHash": "aecb1bac3de7b4bf2f61de34e6d8c2f6834f4f51521b3d2410968e9cc622384c",
+      "translationPending": false
+    },
+    {
       "id": "android-release-duckstation-preview",
       "title": "【Android更新】DuckStation preview",
       "originalTitle": "DuckStation preview Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-15T03:03:55Z",
+      "publishedAt": "2026-09-15T14:54:58Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
       "imageUrl": "asset://assets/emulators/duckstation.png",
       "officialUrl": "https://github.com/stenzek/duckstation",
       "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•添加GetOutstandingTasks ()和ExecuteOneTask () （ Stenzek（https://github.com/stenzek/duckstation/commit/563c355131350b4c8a9439c8803f63b08d5f0c1e） ）\n•添加GetProcessorCount () (Stenzek（https://github.com/stenzek/duckstation/commit/efecb78dbd74a158f45c267f6b640bb5a9022021）)\n•使TaskQueue线程计数动态（ Stenzek（https://github.com/stenzek/duckstation/commit/0d2e66235ccf9e88b937a407108c2070d801264c） ）\n•使用二进制密钥而不是字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/60b06c0e28617ed588e01a9655b05954a8dc4f3c） ）\n•内部同步访问（ Stenzek（https://github.com/stenzek/duckstation/commit/3151c5256bf43b7a6acff339a7b937d6e41199c9） ）\n•使用对象存档同步（ Stenzek（https://github.com/stenzek/duckstation/commit/79371c47a2a7b99c4f2a9b3b65703097eee01d7b） ）\n•使用ObjectArchive进行着色器缓存（ Stenzek（https://github.com/stenzek/duckstation/commit/5420d699e2ef0b72f96ca3647fa8177b84976a27） ）\n•支持查找缓存着色器和不透明键（ Stenzek（https://github.com/stenzek/duckstation/commit/7951eba8a041a662521357ee3577d3df433cd94b） ）\n•为支持的后端添加LoadPipeline () （ Stenzek（https://github.com/stenzek/duckstation/commit/f541abb11e43a1ffcf29eb8266998583e6c3c086） ）\n• 5ebeff9 ： GPU/HW ：使用UID生成着色器（ Stenzek ）\n• 7c23927 ： GPU/HW ：使用UID作为着色器缓存键（ Stenzek ）\n• 94e5f08 ： GPU/HW ：使用多线程着色器编译（ Stenzek ）\n• 74a743a ： GPU/HW ：使用多线程管道编译（ Stenzek ）",
-      "originalContent": "## Commits\n- Add GetOutstandingTasks() and ExecuteOneTask() ([Stenzek](https://github.com/stenzek/duckstation/commit/563c355131350b4c8a9439c8803f63b08d5f0c1e))\n- Add GetProcessorCount() ([Stenzek](https://github.com/stenzek/duckstation/commit/efecb78dbd74a158f45c267f6b640bb5a9022021))\n- Make TaskQueue thread count dynamic ([Stenzek](https://github.com/stenzek/duckstation/commit/0d2e66235ccf9e88b937a407108c2070d801264c))\n- Use binary keys instead of strings ([Stenzek](https://github.com/stenzek/duckstation/commit/60b06c0e28617ed588e01a9655b05954a8dc4f3c))\n- Synchronize access internally ([Stenzek](https://github.com/stenzek/duckstation/commit/3151c5256bf43b7a6acff339a7b937d6e41199c9))\n- Use object archive synchronization ([Stenzek](https://github.com/stenzek/duckstation/commit/79371c47a2a7b99c4f2a9b3b65703097eee01d7b))\n- Use ObjectArchive for shader cache ([Stenzek](https://github.com/stenzek/duckstation/commit/5420d699e2ef0b72f96ca3647fa8177b84976a27))\n- Support looking up cached shaders and opaque keys ([Stenzek](https://github.com/stenzek/duckstation/commit/7951eba8a041a662521357ee3577d3df433cd94b))\n- Add LoadPipeline() for supported backends ([Stenzek](https://github.com/stenzek/duckstation/commit/f541abb11e43a1ffcf29eb8266998583e6c3c086))\n- 5ebeff9: GPU/HW: Use UIDs for shader generation (Stenzek)\n- 7c23927: GPU/HW: Use UIDs as shader cache keys (Stenzek)\n- 94e5f08: GPU/HW: Use multi-threaded shader compilation (Stenzek)\n- 74a743a: GPU/HW: Use multi-threaded pipeline compilation (Stenzek)",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•保持调试器窗口状态（ Stenzek（https://github.com/stenzek/duckstation/commit/5cc77ac1863533aa56d48bd91022cf23083edff4） ）\n•将图标添加到上下文菜单（ Stenzek（https://github.com/stenzek/duckstation/commit/9c335d9e03fb952890f8a19c9260406974aebe7d） ）\n•修复空调试器工具栏窗口标题（ Stenzek（https://github.com/stenzek/duckstation/commit/0874ed65d23dbae0ac80c03c38d85a746d70288e） ）\n•修复新添加的排除路径上缺少图标的问题（ Stenzek（https://github.com/stenzek/duckstation/commit/5b056fc8df85ca8f9ad0b6eea9a13bbfe073df51） ）\n•将上下文菜单添加到游戏列表排除列表（ Stenzek（https://github.com/stenzek/duckstation/commit/024face27d995228041de447400bd36bc6daf04c） ）\n•添加禁用Upscaled Direct Textures选项（ Stenzek（https://github.com/stenzek/duckstation/commit/28ea031c40c5733abfd8fc385f13caecfb3f5acb） ）\n•针对恐惧效应禁用UpscaledDirectTextures （ Stenzek（https://github.com/stenzek/duckstation/commit/63d72ac15647c854bbcc8bf38a669f574d309148） ）",
+      "originalContent": "## Commits\n- Persist debugger window state ([Stenzek](https://github.com/stenzek/duckstation/commit/5cc77ac1863533aa56d48bd91022cf23083edff4))\n- Add icons to context menu ([Stenzek](https://github.com/stenzek/duckstation/commit/9c335d9e03fb952890f8a19c9260406974aebe7d))\n- Fix empty debugger toolbar window title ([Stenzek](https://github.com/stenzek/duckstation/commit/0874ed65d23dbae0ac80c03c38d85a746d70288e))\n- Fix icon missing on newly-added excluded paths ([Stenzek](https://github.com/stenzek/duckstation/commit/5b056fc8df85ca8f9ad0b6eea9a13bbfe073df51))\n- Add context menu to game list exclusion list ([Stenzek](https://github.com/stenzek/duckstation/commit/024face27d995228041de447400bd36bc6daf04c))\n- Add Disable Upscaled Direct Textures option ([Stenzek](https://github.com/stenzek/duckstation/commit/28ea031c40c5733abfd8fc385f13caecfb3f5acb))\n- DisableUpscaledDirectTextures for Fear Effect ([Stenzek](https://github.com/stenzek/duckstation/commit/63d72ac15647c854bbcc8bf38a669f574d309148))",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "duckstation"
       ],
-      "contentHash": "1ddb27da2ec876909af975cd96778493a81940758e339104d1422c8a5a4f33c5",
+      "contentHash": "8453b7bafa8d32d1c2380da92f7197c1013170038f131270b9394c634daf42ff",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-nightly-20260915-12",
+      "title": "【Android更新】ARMSX1 nightly-20260915.12",
+      "originalTitle": "ARMSX1 nightly-20260915.12 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T13:20:43Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260915.12",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260915.12，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260915.12。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
+      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "e23a5d5ff791980947ce678096a15e200b05291fa61fe3dae9498746ff7e000e",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-psx2_izzy-1-3-0",
+      "title": "【Android更新】PSX2 1.3.0",
+      "originalTitle": "PSX2 1.3.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T13:09:14Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.3.0",
+      "imageUrl": "asset://assets/emulators/psx2_izzy.png",
+      "officialUrl": "https://github.com/izzy2lost/PSX2",
+      "summary": "PSX2 发布 Android 新版本 1.3.0，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "PSX2 已发布 Android 最新版本 1.3.0。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新到最新的PCSX2提交。\n修复了未保存的图形设置。\n添加了快进按钮。",
+      "originalContent": "**Update to latest PCSX2 commit. \r\nFixed graphic settings that were not saving. \r\nAdded fast forward button.**",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "psx2_izzy"
+      ],
+      "contentHash": "e999043819624a706bd28c63bbd5e80c714bc0f4155fd85ff13d620943fd5b73",
+      "translationPending": false
+    },
+    {
+      "id": "137035",
+      "title": "【家用机】Erings v0.4.3",
+      "originalTitle": "[Consoles de salon] Erings v0.4.3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-15T11:33:58Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137035-consoles-de-salon-erings-v0-4-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/erings-v0.3.3.png",
+      "officialUrl": "https://github.com/user-none/erings",
+      "summary": "Erings是一款世嘉Saturn模拟器，主要设计为简单易用的游戏玩家，而不是完美的硬件模拟工具。其主要目的是让您在优良的条件下享受大部分官方目录，而无需担心复杂的技术设置或 不必要的发育障碍。 它通过时尚的eblitui桌面界面进行操作，经过全面优化，可在大屏幕上使用，并为单人玩家提供操纵杆导航。",
+      "content": "Erings是一款世嘉Saturn模拟器，主要设计为简单易用的游戏玩家，而不是完美的硬件模拟工具。其主要目的是让您在优良的条件下享受大部分官方目录，而无需担心复杂的技术设置或\n不必要的发育障碍。\n它通过时尚的eblitui桌面界面进行操作，经过全面优化，可在大屏幕上使用，并为单人玩家提供操纵杆导航。它支持.chd和.cue/.bin格式的磁盘映像，处理NTSC和PAL区域，集成RetroAchievements命中，并自动保持备份集成\n以及从一个会话到另一个会话的保存状态。\n在硬件方面，它包括4 MB RAM扩展盒和MPEG卡。为了简化您的生活，它包括一个HLE BIOS ，避免搜索外部文件，同时管理区域补丁（如果您使用原始BIOS ）\n简而言之，切换到全屏Erings ，舒适地安顿下来，轻松重启您最喜爱的土星游戏。\n\n改进包括：\n\n•次要渲染修复\n• Bump桌面模块版本\n\n[wpfilebase tag = file id = 8365 tpl = simple3/]",
+      "originalContent": "Erings est un émulateur Sega Saturn conçu avant tout comme un lecteur de jeux simple et accessible, plutôt que comme un outil d'émulation matérielle parfaite. Son objectif principal est de vous permettre de profiter de la majorité du catalogue officiel dans d'excellentes conditions, sans vous soucier de réglages techniques complexes ou de fonctionnalités de développement inutiles.\n\nFonctionnant via l'interface bureau épurée eblitui, il est totalement optimisé pour une utilisation sur grand écran avec une navigation à la manette pour un joueur solo. Il prend en charge les images disque au format .chd et .cue/.bin, gère les zones NTSC et PAL, intègre les succès RetroAchievements, et conserve automatiquement vos sauvegardes internes ainsi que vos save states d'une session à l'autre.\n\nCôté matériel, il embarque la cartouche d'extension RAM 4 Mo et la carte MPEG. Pour vous simplifier la vie, il inclut un BIOS HLE évitant la recherche de fichiers externes, tout en gérant le patch de région si vous utilisez des BIOS originaux. En résumé, passez Erings en plein écran, installez-vous confortablement et relancez vos jeux Saturn préférés en toute simplicité.\n\nLes améliorations sont les suivantes:\n\n- Minor rendering fixes\n- Bump desktop module version\n\n[wpfilebase tag=file id=8365 tpl=simple3 /]",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "erings_pc"
+      ],
+      "contentHash": "a784b5a80e15d92f229364b7cf70f65efbc71211572c505419ae2cbd98990236",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorex-0-3-9",
+      "title": "【Android更新】EmuCoreX 0.3.9",
+      "originalTitle": "EmuCoreX 0.3.9 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T11:04:30Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.3.9",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.3.9，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.3.9。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.3.8...v0.3.9\n\n有什么新情况: 0.3.9\n\n• UI 错误修正\n• 修复和优化",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.3.8...v0.3.9\r\n\r\nWhat's new: 0.3.9\r\n\r\n- UI bug fixes\r\n- Fixes and optimizations",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "b85a8db8fd05caa8a296330d453e8bad117c38108040cf0efd14419bcdab741d",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T10:32:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_megadrive.cpp:各种... (Take 2) (fprietog)\n• d_megadrive.cpp: 各种... (fprietog) .",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: various... (Take 2) (fprietog)\n• d_megadrive.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "eae7ba9fd3ec9bb41bea6cfb0348ce2fdf8f2faca5eac399f379d6a5670ed3ca",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260915",
+      "title": "【Android更新】ARMSX2 nightly-20260915",
+      "originalTitle": "ARMSX2 nightly-20260915 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T08:23:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260915",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260915，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260915。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• iOS:安装 Rust iOS 目标,使 CI 建立遮蔽器\n• iOS:翻译新的阴影文字\n• iOS:在游戏期间在 Per-Game 设置中显示 CRC\n• iOS:将 TV/CRT 显示器移至过滤器并重命名缓存按钮\n• iOS:显示可读的滑动器名称和普通阴影器错误\n• iOS:删除下载的荫影包并保存预设\n• iOS:在拾件上关闭预设列表并选择保存的预设\n• iOS:当游戏有自己的遮阳器时,在暂停菜单中说\n• iOS:在应用程序更新后保留已保存的阴影预设\n• iOS:将预设放在Shaders页面上,并使用简单的措辞\n• iOS:从下载列表中直接选择一个下载的阴影\n• iOS:文件启动链接和库导出\n• iOS:翻译复制发射链接\n• iOS:库导出外部文件夹中的列表游戏\n• iOS:再次导入在应用程序中打开的文件\n• iOS:在启动链接取代运行中的游戏之前询问\n• iOS:从长压菜单上复制游戏的发布链接\n• iOS:查看应用程序本身的场景,无论哪一个先出现\n• iOS:停止在每个场景连接上泄露场景配置\n• iOS:从s_gs_keys读取黑客索赔密钥,他们现在居住的地方\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...736f53fa1c3c8e56a90ad53bd61f84260d09e1f0",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: install the Rust iOS target so CI builds keep shaders\n- iOS: translate the new shader wording\n- iOS: show the CRC in Per-Game Settings during a game\n- iOS: move TV/CRT Shader to Filtering and rename the cache button\n- iOS: show readable slider names and plain shader errors\n- iOS: delete downloaded shader packs and saved presets\n- iOS: close the preset list on a pick and select a saved preset\n- iOS: say in the pause menu when a game has its own shader\n- iOS: keep saved shader presets working after an app update\n- iOS: put Preset first on the Shaders page and use plain wording\n- iOS: pick a downloaded shader straight from the download list\n- iOS: document launch links and the library export\n- iOS: translate Copy Launch Link\n- iOS: list games from external folders in the library export\n- iOS: import files opened in the app again\n- iOS: ask before a launch link replaces a running game\n- iOS: copy a game's launch link from its long-press menu\n- iOS: look up the app's own scene, not whichever one comes first\n- iOS: stop leaking a scene configuration on every scene connect\n- iOS: read the hack claim keys from s_gs_keys, where they live now\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...736f53fa1c3c8e56a90ad53bd61f84260d09e1f0",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "3f8dded9995d44fc2320bdc16b9815f39a114aca8410f9532f224ce21ac55d58",
+      "translationPending": false
+    },
+    {
+      "id": "137025",
+      "title": "【电脑】1984 v0.4.20",
+      "originalTitle": "[Ordi.] 1984 v0.4.20",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T05:44:17Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137025-ordi-1984-v0-4-20/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/1984.png",
+      "officialUrl": "https://github.com/salvogendut/1984",
+      "summary": "1984是复古计算机Amstrad CPC 464/6128的仿真器，用C编写并使用SDL3。它的目标是非常便携，相对忠实于原始硬件。",
+      "content": "1984是复古计算机Amstrad CPC 464/6128的仿真器，用C编写并使用SDL3。它的目标是非常便携，相对忠实于原始硬件。",
+      "originalContent": "1984 est un émulateur de l'ordinateur rétro Amstrad CPC 464/6128, écrit en C et utilisant SDL3. Son objectif est d'être très portable et relativement fidèle au matériel d'origine.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "8d607c3961cdf095dfb7dec983cff4cdcf58912a0c9a9e70a084f3795862fa9a",
+      "translationPending": false
+    },
+    {
+      "id": "137022",
+      "title": "【电脑】WinUAE (Public Beta) v6.1.0 Beta 14",
+      "originalTitle": "[Ordi.] WinUAE (Public Beta) v6.1.0 Beta 14",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T05:42:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137022-ordi-winuae-public-beta-v6-1-0-beta-14/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/09/winuae.png",
+      "officialUrl": "http://eab.abime.net",
+      "summary": "优秀的WinUAE的最新公测版本， Commodore Amiga仿真器。 译文由Tradu-France签名。 这里的变化。",
+      "content": "优秀的WinUAE的最新公测版本， Commodore Amiga仿真器。 译文由Tradu-France签名。\n\n这里的变化。",
+      "originalContent": "La dernière version béta publique de l'excellent WinUAE, l'émulateur Commodore Amiga. La traduction est signée Tradu-France.\n\nLes changements ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "winuae_pc"
+      ],
+      "contentHash": "04c30c50a957c1e024afd2902c511e9ddc8cfefb5d7683d2933cbc8aa7ec6aa8",
+      "translationPending": false
+    },
+    {
+      "id": "137020",
+      "title": "【电脑】Altirra (Beta) v4.50 Test 21",
+      "originalTitle": "[Ordi.] Altirra (Beta) v4.50 Test 21",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T05:41:15Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137020-ordi-altirra-beta-v4-50-test-21/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/altirra-testbuild.png",
+      "officialUrl": "http://www.virtualdub.org/altirra.html",
+      "summary": "它是由Avery Lee （ VirtualDub的作者）创建的8位Atari模拟器（ 800/800XL/130XE ） ，提供32位和64位版本。 它有很多选择以及良好的兼容性。 它根据模拟支持受保护的游戏。 这是测试阶段的开发版本。 测试版的主题。",
+      "content": "它是由Avery Lee （ VirtualDub的作者）创建的8位Atari模拟器（ 800/800XL/130XE ） ，提供32位和64位版本。 它有很多选择以及良好的兼容性。 它根据模拟支持受保护的游戏。 这是测试阶段的开发版本。\n测试版的主题。",
+      "originalContent": "Créé par Avery Lee (l'auteur de VirtualDub), il s'agit d'un émulateur d'Atari 8 bits (800/800XL/130XE) disponible en 32 et 64 bits. Il dispose de beaucoup d'options ainsi que d'une bonne compatibilité. Il prend en charge les jeux protégés conformément à l'émulation. Il s'agit d'une version de développement au stade de béta.\n\nTopic des versions Beta.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "0aafdc5fac8b44843b4cbbfae999dba521814602a7fcc7d0652a4f3424674b36",
       "translationPending": false
     },
     {
@@ -120,22 +349,22 @@
     },
     {
       "id": "137003",
-      "title": "【家用机】Suyu v0.0.5 (reborn edition)",
-      "originalTitle": "[Consoles de salon] Suyu v0.0.5 (reborn edition)",
+      "title": "【家用机】Suyu v0.0.8 (reborn edition)",
+      "originalTitle": "[Consoles de salon] Suyu v0.0.8 (reborn edition)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "tool",
       "publishedAt": "2026-09-14T20:22:51Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137003-consoles-de-salon-suyu-v0-0-5-reborn-edition/",
+      "sourceUrl": "https://www.emu-france.com/news/137003-consoles-de-salon-suyu-v0-0-8-reborn-edition/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/03/suyu.png",
       "officialUrl": "https://github.com/dougchansan/suyu-v0.0.4",
       "summary": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。 Suyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并 您可以在控制台上完成其余的工作。",
-      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n该项目在0.0.4版本之后被放弃，然后由开发人员DougChanSan从同一版本接管。\n\n变更内容：\n•重新编译： void块函数不能返回值\n•前端：显示运行游戏的CPU\n• suyu-cmd: --probe-decode-list ，解码整个库的覆盖范围\n• docs ：静态重新编译，以及没有jit的构建\n• build ： SUYU_NO_JIT ，一个没有动态重新编译器的模拟器\n• recomp ：严格模式，拒绝jit回退\n• ci ：发布从标签中剪下的内容，按照README的说法构建\n• docs ：实际运行的构建指令\n•生成：删除继承的发布工作流程\n•前端：停止强制控制器视图在黑客模式下打开\n•重新编译器：用于ldp、stp和128位访问的对等助手\n•重新编译器：在翻译时解决标志更新\n•重新编译：在翻译时解决分支条件\n•重新编译：解析图像内部的间接分支目标\n• recomp ：每个线程执行的块计数\n• recomp ：运行时可配置链预算\n•重新编译：使生成的优化级别可重写\n•重新编译：索引整数乘法、addlv、nzcv\n•重新编译：关闭剩余的解码间隙；将未覆盖的入口点记录为根\n•重新编译： rev、shifts、饱和add、unsigned compares、addv、frecps、vector faddp\n•重新编译：使用生成的s-box进行aese/aesd\n•重新编译： sha256su0/su1和多寄存器结构加载和存储\n•重新编译： aesmc/aesimc、pmull/pmull2、crc32、标量faddp\n•重新编译： bsl/bit/bif、fabs/fneg、xtn/xtn2、矢量fcvtzs/fcvtzu\n•加载器：当无法读取已安装的更新时，请这么说\n• file_sys ：跳过元时，命名被取代的元及其内容\n•重新编译： tbl/tbx和单元素ld1/st1\n• mcp: list_installed_titles删除了每个已安装的附加组件\n• mcp: list_installed_titles报告了一个从未存在的空目录\n•重新编译： fmov vector immediate、cnt、fcm register forms、sshll/ushll、permutes、ext\n•前端：仍需安装的设置清单\n•导出：使用vswhere而不是硬编码路径查找Visual Studio\n•构建：丢弃没有克隆可以完成的ownfoil子模块\n•前端：直接索引块，而不是跨图像边界调用\n•重新填充：根据覆盖率报告中的模块图解析未覆盖的PC\n•重新编译：仅继续链接到无条件分支\n•重新编译：调用直接分支的目标，而不是返回调度程序\n•前端：紧凑型每线程模块调度\n•重新编译： movi/mvni ； shl已实现但已关闭\n•重新编译：停止转换定点转换\n•重新编译：将定点刻度折叠成文字\n•重新编译：定点转换、ld1r、ushl/sshl ； mcp ：报告vps\n• DOCS ：完成中和注释，并修复两个被通行证损坏的注释\n•重新编译： abs/neg ， fmla/fmls by element ， fccmp\n• mcp ：报告TAS播放进度\n•修剪注释\n•重新编译：处理所有fp到int舍入模式\n•前端：零初始化调试器窗格指针\n•文档： Linux构建和运行；记录Windows不需要的内容\n•构建： include_next提升垫片的颠簸动力学\n•构建：便携式增压/变体垫片的颠簸动力\n•修复：在字符串文字中返回的杂散托架会破坏每个非MSVC构建\n•壮举：通过MCP曝光TAS播放和录制\n• recomp ：直接索引块，而不是二进制搜索它们\n•重新填充：通过页面表解析房客地址\n•专长：通过MCP状态工具报告FPS\n•构建：将动态子模块指向我们的分叉\n• DOCS ： README反映了0.0.5的延续和变化\n•构建： 0.0.4 - > 0.0.5 ，并记录其来源\n•重构： AArch64翻译、主机桥接和执行覆盖\n•专长： suyu-cmd --probe-isa-list报告每个标题的CPU架构\n•诊断：通过内容哈希识别NPDM ，并命名更新的提供商插槽\n•修复：导出ExeFS更新，而不是基本更新\n•修复： NAND中安装的更新和DLC从未被索引\n•修复： RomFS注册已被静默删除\n•修复：服务处理程序注册丢弃了大多数命令\n•修复： AOT映像调度将每台PC解析为错误的模块",
-      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nCe projet a été abandonné après la version 0.0.4, avant d’être repris par le développeur DougChanSan à partir de cette même version.\n\nLes changements:\n\n- recompiler: a void block function cannot return a value\n- frontend: show which cpu is running the game\n- suyu-cmd: --probe-decode-list, decode coverage across a library\n- docs: static recompilation, and the build with no jit in it\n- build: SUYU_NO_JIT, an emulator with no dynamic recompiler in it\n- recomp: strict mode, refusing the jit fallback\n- ci: releases cut from a tag, built the way the README says\n- docs: build instructions that have actually been run\n- build: remove the inherited release workflow\n- frontend: stop forcing the controller view open in Hacker mode\n- recompiler: pair helpers for ldp, stp and 128-bit access\n- recompiler: resolve the flag update at translation time\n- recompiler: resolve the branch condition at translation time\n- recompiler: resolve indirect branch targets inside the image\n- recomp: count executed blocks per thread\n- recomp: runtime-configurable chain budget\n- recompiler: make the generated optimisation level overridable\n- recompiler: indexed integer multiplies, addlv, nzcv\n- recompiler: close the remaining decode gap; record uncovered entry points as roots\n- recompiler: rev, shifts, saturating add, unsigned compares, addv, frecps, vector faddp\n- recompiler: aese/aesd with a generated s-box\n- recompiler: sha256su0/su1 and the multi-register structure loads and stores\n- recompiler: aesmc/aesimc, pmull/pmull2, crc32, scalar faddp\n- recompiler: bsl/bit/bif, fabs/fneg, xtn/xtn2, vector fcvtzs/fcvtzu\n- loader: say so when an installed update cannot be read\n- file_sys: name the superseded meta and its content when one is skipped\n- recompiler: tbl/tbx and single-element ld1/st1\n- mcp: list_installed_titles dropped every installed add-on\n- mcp: list_installed_titles reported an empty directory that never existed\n- recompiler: fmov vector immediate, cnt, fcm register forms, sshll/ushll, permutes, ext\n- frontend: a Setup checklist for what still has to be installed\n- export: find Visual Studio with vswhere instead of a hardcoded path\n- build: drop the ownfoil submodule, which no clone can complete\n- frontend: index blocks directly instead of calling across the image boundary\n- recomp: resolve uncovered PCs against the module map in the coverage report\n- recompiler: keep chaining to unconditional branches only\n- recompiler: call the target of a direct branch instead of returning to the dispatcher\n- frontend: compact, per-thread module dispatch\n- recompiler: movi/mvni; shl implemented but off\n- recompiler: stop translating fixed-point conversions\n- recompiler: fold the fixed-point scale into a literal\n- recompiler: fixed-point conversions, ld1r, ushl/sshl; mcp: report vps\n- docs: finish neutralising the comments, and repair two broken by the pass\n- recompiler: abs/neg, fmla/fmls by element, fccmp\n- mcp: report tas playback progress\n- trim comment\n- recompiler: handle all fp-to-int rounding modes\n- frontend: zero-initialize the debugger pane pointers\n- docs: Linux builds and runs; record what it needs that Windows does not\n- build: bump dynarmic for the include_next boost shim\n- build: bump dynarmic for the portable boost/variant shim\n- fix: stray carriage returns inside string literals break every non-MSVC build\n- feat: expose TAS playback and recording over MCP\n- recomp: index blocks directly instead of binary searching for them\n- recomp: resolve guest addresses through the page table\n- feat: report FPS through the MCP state tool\n- build: point the dynarmic submodule at our fork\n- docs: README reflects the continuation and what changed in 0.0.5\n- build: 0.0.4 -> 0.0.5, and record where this came from\n- recomp: AArch64 translation, host bridge and execution coverage\n- feat: suyu-cmd --probe-isa-list reports each title's CPU architecture\n- diag: identify the NPDM by content hash, and name the update's provider slot\n- fix: export the update ExeFS, not the base\n- fix: installed updates and DLC in NAND were never indexed\n- fix: RomFS registration was silently dropped\n- fix: service handler registration dropped most commands\n- fix: AOT image dispatch resolved every PC to the wrong module",
+      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n该项目在0.0.4版本之后被放弃，然后由开发人员DougChanSan从同一版本接管。\n\n变更内容：\n•创建静态构建一流的库条目\n•防止损坏的静态变换\n•重新编译： void块函数不能返回值\n•前端：显示运行游戏的CPU\n• suyu-cmd: --probe-decode-list ，解码整个库的覆盖范围\n• docs ：静态重新编译，以及没有jit的构建\n• build ： SUYU_NO_JIT ，一个没有动态重新编译器的模拟器\n• recomp ：严格模式，拒绝jit回退\n• ci ：发布从标签中剪下的内容，按照README的说法构建\n• docs ：实际运行的构建指令\n•生成：删除继承的发布工作流程\n•前端：停止强制控制器视图在黑客模式下打开\n•重新编译器：用于ldp、stp和128位访问的对等助手\n•重新编译器：在翻译时解决标志更新\n•重新编译：在翻译时解决分支条件\n•重新编译：解析图像内部的间接分支目标\n• recomp ：每个线程执行的块计数\n• recomp ：运行时可配置链预算\n•重新编译：使生成的优化级别可重写\n•重新编译：索引整数乘法、addlv、nzcv\n•重新编译：关闭剩余的解码间隙；将未覆盖的入口点记录为根\n•重新编译： rev、shifts、饱和add、unsigned compares、addv、frecps、vector faddp\n•重新编译：使用生成的s-box进行aese/aesd\n•重新编译： sha256su0/su1和多寄存器结构加载和存储\n•重新编译： aesmc/aesimc、pmull/pmull2、crc32、标量faddp\n•重新编译： bsl/bit/bif、fabs/fneg、xtn/xtn2、矢量fcvtzs/fcvtzu\n•加载器：当无法读取已安装的更新时，请这么说\n• file_sys ：跳过元时，命名被取代的元及其内容\n•重新编译： tbl/tbx和单元素ld1/st1\n• mcp: list_installed_titles删除了每个已安装的附加组件\n• mcp: list_installed_titles报告了一个从未存在的空目录\n•重新编译： fmov vector immediate、cnt、fcm register forms、sshll/ushll、permutes、ext\n•前端：仍需安装的设置清单\n•导出：使用vswhere而不是硬编码路径查找Visual Studio\n•构建：丢弃没有克隆可以完成的ownfoil子模块\n•前端：直接索引块，而不是跨图像边界调用\n•重新填充：根据覆盖率报告中的模块图解析未覆盖的PC\n•重新编译：仅继续链接到无条件分支\n•重新编译：调用直接分支的目标，而不是返回调度程序\n•前端：紧凑型每线程模块调度\n•重新编译： movi/mvni ； shl已实现但已关闭\n•重新编译：停止转换定点转换\n•重新编译：将定点刻度折叠成文字\n•重新编译：定点转换、ld1r、ushl/sshl ； mcp ：报告vps\n• DOCS ：完成中和注释，并修复两个被通行证损坏的注释\n•重新编译： abs/neg ， fmla/fmls by element ， fccmp\n• mcp ：报告TAS播放进度\n•修剪注释\n•重新编译：处理所有fp到int舍入模式\n•前端：零初始化调试器窗格指针\n•文档： Linux构建和运行；记录Windows不需要的内容\n•构建： include_next提升垫片的颠簸动力学\n•构建：便携式增压/变体垫片的颠簸动力\n•修复：在字符串文字中返回的杂散托架会破坏每个非MSVC构建\n•壮举：通过MCP曝光TAS播放和录制\n• recomp ：直接索引块，而不是二进制搜索它们\n•重新填充：通过页面表解析房客地址\n•专长：通过MCP状态工具报告FPS\n•构建：将动态子模块指向我们的分叉\n• DOCS ： README反映了0.0.5的延续和变化\n•构建： 0.0.4 - > 0.0.5 ，并记录其来源\n•重构： AArch64翻译、主机桥接和执行覆盖\n•专长： suyu-cmd --probe-isa-list报告每个标题的CPU架构\n•诊断：通过内容哈希识别NPDM ，并命名更新的提供商插槽\n•修复：导出ExeFS更新，而不是基本更新\n•修复： NAND中安装的更新和DLC从未被索引\n•修复： RomFS注册已被静默删除\n•修复：服务处理程序注册丢弃了大多数命令\n•修复： AOT映像调度将每台PC解析为错误的模块",
+      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nCe projet a été abandonné après la version 0.0.4, avant d’être repris par le développeur DougChanSan à partir de cette même version.\n\nLes changements:\n\n- Make static builds first-class library entries\n- prevent corrupted static transforms\n- recompiler: a void block function cannot return a value\n- frontend: show which cpu is running the game\n- suyu-cmd: --probe-decode-list, decode coverage across a library\n- docs: static recompilation, and the build with no jit in it\n- build: SUYU_NO_JIT, an emulator with no dynamic recompiler in it\n- recomp: strict mode, refusing the jit fallback\n- ci: releases cut from a tag, built the way the README says\n- docs: build instructions that have actually been run\n- build: remove the inherited release workflow\n- frontend: stop forcing the controller view open in Hacker mode\n- recompiler: pair helpers for ldp, stp and 128-bit access\n- recompiler: resolve the flag update at translation time\n- recompiler: resolve the branch condition at translation time\n- recompiler: resolve indirect branch targets inside the image\n- recomp: count executed blocks per thread\n- recomp: runtime-configurable chain budget\n- recompiler: make the generated optimisation level overridable\n- recompiler: indexed integer multiplies, addlv, nzcv\n- recompiler: close the remaining decode gap; record uncovered entry points as roots\n- recompiler: rev, shifts, saturating add, unsigned compares, addv, frecps, vector faddp\n- recompiler: aese/aesd with a generated s-box\n- recompiler: sha256su0/su1 and the multi-register structure loads and stores\n- recompiler: aesmc/aesimc, pmull/pmull2, crc32, scalar faddp\n- recompiler: bsl/bit/bif, fabs/fneg, xtn/xtn2, vector fcvtzs/fcvtzu\n- loader: say so when an installed update cannot be read\n- file_sys: name the superseded meta and its content when one is skipped\n- recompiler: tbl/tbx and single-element ld1/st1\n- mcp: list_installed_titles dropped every installed add-on\n- mcp: list_installed_titles reported an empty directory that never existed\n- recompiler: fmov vector immediate, cnt, fcm register forms, sshll/ushll, permutes, ext\n- frontend: a Setup checklist for what still has to be installed\n- export: find Visual Studio with vswhere instead of a hardcoded path\n- build: drop the ownfoil submodule, which no clone can complete\n- frontend: index blocks directly instead of calling across the image boundary\n- recomp: resolve uncovered PCs against the module map in the coverage report\n- recompiler: keep chaining to unconditional branches only\n- recompiler: call the target of a direct branch instead of returning to the dispatcher\n- frontend: compact, per-thread module dispatch\n- recompiler: movi/mvni; shl implemented but off\n- recompiler: stop translating fixed-point conversions\n- recompiler: fold the fixed-point scale into a literal\n- recompiler: fixed-point conversions, ld1r, ushl/sshl; mcp: report vps\n- docs: finish neutralising the comments, and repair two broken by the pass\n- recompiler: abs/neg, fmla/fmls by element, fccmp\n- mcp: report tas playback progress\n- trim comment\n- recompiler: handle all fp-to-int rounding modes\n- frontend: zero-initialize the debugger pane pointers\n- docs: Linux builds and runs; record what it needs that Windows does not\n- build: bump dynarmic for the include_next boost shim\n- build: bump dynarmic for the portable boost/variant shim\n- fix: stray carriage returns inside string literals break every non-MSVC build\n- feat: expose TAS playback and recording over MCP\n- recomp: index blocks directly instead of binary searching for them\n- recomp: resolve guest addresses through the page table\n- feat: report FPS through the MCP state tool\n- build: point the dynarmic submodule at our fork\n- docs: README reflects the continuation and what changed in 0.0.5\n- build: 0.0.4 -> 0.0.5, and record where this came from\n- recomp: AArch64 translation, host bridge and execution coverage\n- feat: suyu-cmd --probe-isa-list reports each title's CPU architecture\n- diag: identify the NPDM by content hash, and name the update's provider slot\n- fix: export the update ExeFS, not the base\n- fix: installed updates and DLC in NAND were never indexed\n- fix: RomFS registration was silently dropped\n- fix: service handler registration dropped most commands\n- fix: AOT image dispatch resolved every PC to the wrong module",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "be4958a705331f53dec4c297b2f45ca083322957aed7258ffbf1e41aade1b8e6",
+      "contentHash": "9a826f5fe91b9b2884bc6756f580bc88d67096c2c20e820a943f90ef966c2ec3",
       "translationPending": false
     },
     {
@@ -180,54 +409,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "3893c94b9f5e9fb2ec422bbbb78c9b368b484b1e5fff9ffcde4216b22da8ad73",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260914",
-      "title": "【Android更新】ARMSX2 nightly-20260914",
-      "originalTitle": "ARMSX2 nightly-20260914 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-14T17:02:38Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260914",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260914，发布日期为2026年09月14日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260914。\n\n发布日期：2026年09月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• iOS:固定/重新执行的空中播放(# 591)\n• iOS:将最低iOS版本提高到 17.4\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260913...d7e8d01678107f066d6ec988ca178d80089bd9f5",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: fixed/re-implemented Airplay (#591)\n- iOS: raise the minimum iOS version to 17.4\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260913...d7e8d01678107f066d6ec988ca178d80089bd9f5",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "7d75032be3b0ab8c14131039e72239d21a5bcf254a1c24904b8007921e612ecd",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx1-nightly-20260914-11",
-      "title": "【Android更新】ARMSX1 nightly-20260914.11",
-      "originalTitle": "ARMSX1 nightly-20260914.11 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-14T14:54:56Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260914.11",
-      "imageUrl": "asset://assets/emulators/armsx1.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 nightly-20260914.11，发布日期为2026年09月14日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260914.11。\n\n发布日期：2026年09月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
-      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx1"
-      ],
-      "contentHash": "295573c5c42e7cf7a2eededc6e38984a45260899c773d71fdcd871689fd665d7",
       "translationPending": false
     },
     {
@@ -579,31 +760,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-13T20:31:27Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月13日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月13日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• speccy 更新自 gab75(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "827429e6a1834dc32d5c8a5e8b2f0394749e735b6ff42f0733a301d885ebc7ef",
-      "translationPending": false
-    },
-    {
       "id": "136937",
       "title": "【家用机】Bcan v0.08e",
       "originalTitle": "[Consoles de salon] Bcan v0.08e",
@@ -903,15 +1059,15 @@
       "imageUrl": "asset://assets/emulators/swiff.png",
       "officialUrl": "https://github.com/NaviVani-dev/Swiff",
       "summary": "Swiff 发布 Android 新版本 1.4.0，发布日期为2026年09月12日。点击查看官方版本信息与更新说明。",
-      "content": "Swiff 已发布 Android 最新版本 1.4.0。\n\n发布日期：2026年09月12日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n版本1.4.0\n提示： [! WARNING]\n提示：此更新更改了savedata的工作方式，使其更加用户友好，迁移应该是无缝的，但建议您保留保存的备份以避免问题。 如果您的保存因任何原因丢失、损坏或无法加载，请提出问题。\n最后是新的更新，这个新的Swiff版本在很多方面改进了应用程序，我相信大多数人都会玩得很开心。\n\n完成用户界面大修\n应用程序进行了全新设计！ 灵感来自一些现代材质用户界面应用程序，它还使应用程序完全可以通过游戏手柄导航！ 如果您有Android手持设备，则无需再忍受用户界面不再对游戏手柄友好的问题。\n\n震荡波和Unity游戏\nSwiff现在支持Adobe Shockwave游戏和Unity Web Player游戏！ 在应用内更新您的Flashpoint数据库，开始下载您喜爱的游戏。\n\n多控制器支持\n您现在可以将不同的布局分配给单个游戏手柄，允许多人游戏没有任何问题，只需插入控制器，将其映射到新的布局并开始游戏！\n\nDiscord整合功能\n您现在可以将Swiff关联到您的Discord账户，以解锁一些社交功能（完全可选， Swiff不会存储您的任何个人数据，也不会存储这些数据）\n。如果您在安卓设备上安装了Discord应用程序，您现在可以在开始玩游戏时获得Rich Presence ，如果您的朋友启用了Rich Presence ，您还可以在主页菜单上查看他们当前正在播放的内容。\n\n远程播放\n您现在可以创建会话，开始与好友远程玩游戏！ 在“设置”中启用此选项，进入游戏并开始会话，您的好友将能够使用代码或链接进入，如果您已连接Discord ，您甚至可以在应用程序中与您的Discord好友分享。\n\n功能\n•现在可以使用游戏手柄导航整个应用程序\n• Android TV现在支持相同的APK\n•为Wine运行时添加了硬件加速支持\n•添加了更改Wine集成工作方式的选项（ OpenGL、DX Wrapper等）\n•添加了双屏集成\n•现在可以在辅助屏幕上打开快速菜单\n•添加了Ruffle （本机）作为Flash播放器\n•将运行时选项（如Ruffle QUALITY ）移动到运行时设置\n•重新设计了savefiles在大多数运行时的工作方式\n\n修复内容\n• Ruffle现在应该能够显示特殊字符（感谢xade93 ！ ）\n•虚拟键盘现在可以将输入正确发送到每个运行时\n•在新安装上设置游戏目录后，游戏应该会恢复（需要您更新到此版本）\n•重新加工虚拟鼠标，以便立即工作\n\n还有更多！\n我现在不在家，功能和修复列表不完整，但我只是不想让人们等待此更新，稍后会更新此更新日志很抱歉！",
-      "originalContent": "# Version 1.4.0\r\n> [!WARNING]\r\n> This update changes how savedata works to make it more user-friendly, migration should be seamless but it's recommended you keep  a backup of your saves to avoid issues. If by any reason your saves are lost, damaged or just won't load, please open an issue.\r\n\r\nFINALLY A NEW UPDATE, this new Swiff version improves the app in a lot of ways, I'm sure most people will have fun with this one.\r\n\r\n## Complete UI overhaul\r\nThe app had a whole new redesign! Inspired on some modern Material UI apps, it also makes the app fully navigatable with a gamepad! If you have an Android handheld you don't need to suffer with the UI not being gamepad-friendly anymore.\r\n\r\n## Shockwave and Unity games\r\nSwiff now supports Adobe Shockwave games and Unity Web Player games! Update your Flashpoint database inside the app to start downloading your favourite games.\r\n\r\n## Multi-controller support\r\nYou can now asign different layouts to individual gamepads, allowing for multiplayer games without any issues, just plug your controller, map it to a new layout and start playing!\r\n\r\n## Discord integration\r\nYou can now connect Swiff to your Discord account to unlock some social features (Completely optional, Swiff does not store any of your personal data and will never store it). If you have the Discord app installed on your Android device you can now get Rich Presence when you start playing a game, you can also see what your friends are currently playing on the Home menu if they have Rich Presence enabled.\r\n\r\n## Remote Play\r\nYou can now create sessions to start playing remotely with your friends! Enable the option in Settings, enter a game and start a session, your friends will be able to enter with the code or the link, if you have Discord connected you can even share them with your Discord friends inside the app.\r\n\r\n## Features\r\n- The entire app is navigatable with a Gamepad now\r\n- Android TV is now supported with the same APK\r\n- Added hardware acceleration support for Wine runtimes\r\n- Added options to change how the Wine integration works (OpenGL, DX Wrapper, etc)\r\n- Added a dual-screen integration\r\n- The quick menu can now open on a secondary screen\r\n- Added Ruffle (Native) as a Flash player\r\n- Moved the runtime options (Like Ruffle quality) to the Runtime settings\r\n- Reworked how savefiles work for most runtimes\r\n\r\n## Fixes\r\n- Ruffle should be able to show special characters now (Thanks xade93!)\r\n- The virtual keyboard now sends input correctly to every runtime\r\n- Games should restore after you set a Games directory on a new instalation (Requires you to update to this version)\r\n- Reworked the virtual mouse to work apropiately\r\n\r\nAnd many many more!\r\nI'm not on home right now, the list of features and fixes is incomplete but I just don't wanna leave people waiting for this update any longer, will update this changelog later sorry!",
+      "content": "Swiff 已发布 Android 最新版本 1.4.0。\n\n发布日期：2026年09月12日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n版本 1.4.0\n提示：[!WARNING]\n提示:这个更新改变savata如何工作使其更方便用户,迁移应该是无缝的,但建议您保留保存的备份以避免问题。 如果因为任何原因,你的储蓄丢失,损坏或只是不愿加载,请打开一个问题。\n\n最后一个新的更新, 这个新的 Swiff 版本在很多方面改进了应用程序,我相信大多数人会和这个游戏玩得很开心。\n\n完成 UI 检修\n应用程序有全新的重新设计! 受一些现代材料UI应用的启发,它也使该应用完全可以使用游戏板导航! 如果你有Android手持设备 你不需要因为UI不再对游戏机友好而痛苦\n\n冲击波和团结游戏\nSwiff 现在支持 Adobe Shockwave 游戏和 Unity Web Player 游戏 ! 更新应用程序内的 Flashpoint 数据库以开始下载您最喜欢的游戏。\n\n多控制器支持\n您现在可以给单个游戏板指定不同的布局, 允许任意发行多人游戏, 只要插入您的控制器, 将其映射到新的布局并开始游戏 !\n\n解析整合\n您现在可以连接 Swiff 到您的Discord账户解锁一些社交功能( 完成可选性, Swiff 不存储您的任何个人数据,并且永远不会存储。 如果你在Android设备上安装了Discord应用程序,你就可以在开始玩游戏时获得Rich Sentences,你也可以看到你朋友目前玩什么 n 如果允许富人存在,则使用家菜单。\n\n远程播放\n现在可以创建会话开始与朋友远程播放了! 在设置中启用此选项, 输入游戏并启动会话, 您的朋友可以使用代码或链接输入, 如果您已经连接了 Discord, 甚至可以共享它们。 你的Discord朋友在应用程序里。\n\n特征\n• 整个应用程序现在可以使用Gamepad\n• Android TV现在得到同样的APK的支持\n• 为Wine runtimes(Vortek、System和Turnip驱动程序)增加硬件加速支持\n• 增加选项以改变葡萄酒集成工作方式(Graphics驱动程序、OpenGL、DX Wrapper、性能简介)\n• 你可以自己进口 Adrenotools drivers\n• 增加了双屏幕集成(点钟、电池、触摸板和二级屏幕上的键盘)\n• 快速菜单现在可以在二级屏幕上打开\n• 增加 Ruffle 作为闪光播放器( Native)\n• 移动运行时间选项(例如 Ruffle 质量)到运行时设置\n• 运行时间设置现在可以每场游戏更改\n• 重新设计大多数运行时间保存文件的工作方式\n• 在快速菜单内移动大多数快速菜单弹出\n• 游戏板映射器的布局现在显示您的特定游戏板胶片\n• 添加对角输入绘图,用于乐杆和D-Pads\n• 现在可以用软的硬拉来映射游戏板触发器\n• 增加更多游戏中通知(Ex. Gamepad 连接/ 断开连接\n• 屏幕上布局现在可以显示,即使一个游戏板被连接\n• 数据库下载如果尚未完成,可以恢复\n• 为闪点游戏添加数据包管理\n• 添加自定义游戏的代理 URL 选项,以检查其运行地点\n• 增加了使用系统字体的选项\n• 增加了日志级选项\n\n\n修复内容\n• Ruffle 现在应该可以显示特殊的角色(谢谢xade93!).\n• 虚拟键盘现在向每个运行时间正确发送输入\n游戏在新安装上设置 Games 目录后应该恢复( 需要您更新到此版本)\n• 重新设计虚拟鼠标以适当工作\n• 保存数据应适当处理葡萄酒运行时间\n• 改写\"只显示游戏内容\"剧本,与大多数游戏合作\n• 固定葡萄酒运行时间悬挂在没有Adreno GPU的装置上(马里等)\n• 当声音卡在葡萄酒运行时固定游戏冻结\n• 固定全屏问题\n• 固定闪点数据库下载\n• Swiff 现在告诉你当Android Webview坠毁而不是默默失败时\n\n谢谢你用S...",
+      "originalContent": "# Version 1.4.0\r\n> [!WARNING]\r\n> This update changes how savedata works to make it more user-friendly, migration should be seamless but it's recommended you keep  a backup of your saves to avoid issues. If by any reason your saves are lost, damaged or just won't load, please open an issue.\r\n\r\nFINALLY A NEW UPDATE, this new Swiff version improves the app in a lot of ways, I'm sure most people will have fun with this one.\r\n\r\n## Complete UI overhaul\r\nThe app had a whole new redesign! Inspired on some modern Material UI apps, it also makes the app fully navigatable with a gamepad! If you have an Android handheld you don't need to suffer with the UI not being gamepad-friendly anymore.\r\n\r\n## Shockwave and Unity games\r\nSwiff now supports Adobe Shockwave games and Unity Web Player games! Update your Flashpoint database inside the app to start downloading your favourite games.\r\n\r\n## Multi-controller support\r\nYou can now asign different layouts to individual gamepads, allowing for multiplayer games without any issues, just plug your controller, map it to a new layout and start playing!\r\n\r\n## Discord integration\r\nYou can now connect Swiff to your Discord account to unlock some social features (Completely optional, Swiff does not store any of your personal data and will never store it). If you have the Discord app installed on your Android device you can now get Rich Presence when you start playing a game, you can also see what your friends are currently playing on the Home menu if they have Rich Presence enabled.\r\n\r\n## Remote Play\r\nYou can now create sessions to start playing remotely with your friends! Enable the option in Settings, enter a game and start a session, your friends will be able to enter with the code or the link, if you have Discord connected you can even share them with your Discord friends inside the app.\r\n\r\n## Features\r\n- The entire app is navigable with a Gamepad now\r\n- Android TV is now supported with the same APK\r\n- Added hardware acceleration support for Wine runtimes (Vortek, System and Turnip drivers)\r\n- Added options to change how the Wine integration works (Graphics driver, OpenGL, DX Wrapper, Performance profiles)\r\n- You can import your own Adrenotools drivers\r\n- Added a dual-screen integration (clock, battery, touchpad and keyboard on the secondary screen)\r\n- The quick menu can now open on a secondary screen\r\n- Added Ruffle (Native) as a Flash player\r\n- Moved the runtime options (Like Ruffle quality) to the Runtime settings\r\n- Runtime settings can now be changed per game\r\n- Reworked how savefiles work for most runtimes\r\n- Moved most of the quick menu popups inside the Quick menu\r\n- The gamepad mapper layout now displays your specific gamepad glyphs\r\n- Added diagonal input mapping for joysticks and D-Pads\r\n- You can now map the gamepad triggers by soft of hard pull\r\n- Added more in-game notifications (Ex. Gamepad connecting/disconnecting)\r\n- On-screen layout can now be shown even when a gamepad is connected\r\n- Database downloads can be resumed if they didn't finish\r\n- Added Data packs management for Flashpoint games\r\n- Added a Proxy URL option for custom games that check where they are running\r\n- Added an option to use the system font\r\n- Added a log level option\r\n\r\n\r\n## Fixes\r\n- Ruffle should be able to show special characters now (Thanks xade93!)\r\n- The virtual keyboard now sends input correctly to every runtime\r\n- Games should restore after you set a Games directory on a new installation (Requires you to update to this version)\r\n- Reworked the virtual mouse to work appropriately\r\n- Savedata should work properly on Wine runtimes\r\n- Reworked the \"Only show game content\" script to work with most games\r\n- Fixed Wine runtimes hanging on devices without Adreno GPUs (Mali, etc)\r\n- Fixed games freezing when the audio got stuck on Wine runtimes\r\n- Fixed fullscreen issues\r\n- Fixed Flashpoint database downloads\r\n- Swiff now tells you when the Android WebView crashes instead of failing silently\r\n\r\n### Thanks for using S…",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "swiff"
       ],
-      "contentHash": "12a0d0dcbeadb56145cf95f0eaa5966156fd0b0c7e7699dc0e277fb57538ae11",
+      "contentHash": "a7c72b282f5826a09a10da5abff6c31fb13f0cfc38d00aaea4fed9753927df27",
       "translationPending": false
     },
     {
@@ -2956,30 +3112,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-emucorex-0-3-8",
-      "title": "【Android更新】EmuCoreX 0.3.8",
-      "originalTitle": "EmuCoreX 0.3.8 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-03T14:49:51Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.3.8",
-      "imageUrl": "asset://assets/emulators/emucorex.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
-      "summary": "EmuCoreX 发布 Android 新版本 0.3.8，发布日期为2026年09月03日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreX 已发布 Android 最新版本 0.3.8。\n\n发布日期：2026年09月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.3.7...v0.3.8\n\n有什么新情况: 0.3.8\n\n• 更新核心内容 PCSX2 v0.2.8\n• 将数据备份能力添加到自己的Google Drive\n• 添加了新尼永主题\n其他修正和改进",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.3.7...v0.3.8\r\n\r\nWhat's new: 0.3.8\r\n\r\n- Updated the core to PCSX2 v0.2.8\r\n- Added the ability to back up data to your own Google Drive\r\n- Added a new Neon theme\r\nOther fixes and improvements",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorex"
-      ],
-      "contentHash": "fc730bef56e884c3e1beb31702d09cca97cd7836c72fbb257bcc611117486153",
-      "translationPending": false
-    },
-    {
       "id": "136543",
       "title": "【家用机】PCSX Redux (2026/09/04)",
       "originalTitle": "[Consoles de salon] PCSX Redux (2026/09/04)",
@@ -3113,30 +3245,6 @@
         "padforge"
       ],
       "contentHash": "459305b11bac15850897aa38c7083d428675758b1a7ae7196f83594b6ca7bd38",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-hatariB_core-0-5",
-      "title": "【Android更新】hatariB (RetroArch 核心) 0.5",
-      "originalTitle": "hatariB (RetroArch 核心) 0.5 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-02T21:49:05Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/0.5",
-      "imageUrl": "asset://assets/emulators/hatariB_core.png",
-      "officialUrl": "https://github.com/bbbradsmith/hatariB",
-      "summary": "hatariB (RetroArch 核心) 发布 Android 新版本 0.5，发布日期为2026年09月02日。点击查看官方版本信息与更新说明。",
-      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 0.5。\n\n发布日期：2026年09月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n第五次公开发布 hatariB 仿真器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意尝试 最新的改变。\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在本页的顶部,留下你的评论。 记得告诉我您用哪个建筑( 结尾的7个字母/ 数字会识别它)。\n\n变动 v0.4:\n• 隐藏状态栏时固定屏幕上键盘腐败/崩溃。 (74)（https://github.com/bbbradsmith/hatariB/issues/74）)\n· 取消SDL2依赖性,同时自定义重新实施所需的功能。\n• 使用全小写 `hatarib` 图书馆的内部名称。",
-      "originalContent": "The fifth public release of the hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment. Just make sure to tell me which build you used (those 7 letters/numbers on the end will identify it).\r\n\r\nChanges since v0.4:\r\n  * Fixed on-screen keyboard corruption/crash when status bar is hidden. ([74](https://github.com/bbbradsmith/hatariB/issues/74))\r\n  * Remove SDL2 dependency with custom re-implementation of needed functions.\r\n  * Use all-lowercase `hatarib` internal name for library.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "hatariB_core"
-      ],
-      "contentHash": "b1ff0739704728eb3e57436ed7f5e68c34ae54e5918cca98e5a89b57b4da51be",
       "translationPending": false
     },
     {
@@ -5808,30 +5916,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "469877fdc46b8adaa8b96eab6f53c56b7a32b6379751612cf046a16e47db89c0"
-    },
-    {
-      "id": "android-release-psx2_izzy-1-2-9",
-      "title": "【Android更新】PSX2 1.2.9",
-      "originalTitle": "PSX2 1.2.9 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-21T18:15:35Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.2.9",
-      "imageUrl": "asset://assets/emulators/psx2_izzy.png",
-      "officialUrl": "https://github.com/izzy2lost/PSX2",
-      "summary": "PSX2 发布 Android 新版本 1.2.9，发布日期为2026年08月21日。点击查看官方版本信息与更新说明。",
-      "content": "PSX2 已发布 Android 最新版本 1.2.9。\n\n发布日期：2026年08月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n固定的崩溃数量。\n设置中的控制器映射。\n复次阿chi梨修定。\n固定纹理包。\n在边缘修剪作物。",
-      "originalContent": "**Fixed lots of crashes. \r\nController mapping in settings. \r\nRetroAchievements fixed. \r\nFixed texture packs. \r\nFix crop on the edges.**",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "psx2_izzy"
-      ],
-      "contentHash": "9f899115bd3515266d82ba6d958a39bcd81b578a63b000f80c40b3aa0b71bc77",
-      "translationPending": false
     },
     {
       "id": "136136",
