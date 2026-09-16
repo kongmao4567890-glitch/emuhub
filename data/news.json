@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T17:16:10.587386Z",
+  "generatedAt": "2026-09-16T05:12:22.119694Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,55 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T01:14:37Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_sms.cpp: 在\"Oriflame (HB)\"(fprietog)中增加了支持。",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_sms.cpp: added the support to \"Oriflame (HB)\" (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "dbf6199878f1b95ddc081b1fb1e85ac993ac6dd67d71174f3a4fcf6f83733e1f",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-0-9-9r",
+      "title": "【Android更新】ARMSX3 0.9.9r",
+      "originalTitle": "ARMSX3 0.9.9r Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-15T21:32:16Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.9r",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 0.9.9r，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 0.9.9r。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.9\n\n新增功能：\n\nARM64上更快的SPU代码。 重新编译器不断发出的字节交换现在是一个指令而不是两个指令，并且不再在此平台上生成为x86编写的代码。 感谢@ Whatcookie ！\n快捷方式和前端使用正确的设置。从主屏幕快捷方式或外部前端启动，构建了自己的游戏理念并错过了其系列，因此它在第二个配置下运行。它现在解析为库使用的相同条目，这也为其提供了正确的标题和封面\n。获得序列的标题更改了其设置归档的密钥，因此为其设置的所有内容都被抛在后面，而是应用了全局值。 第一次打开游戏时，将提前显示旧设置。\n您尚未安装但放置在ROM文件夹中的.pkg显示在库中，从包装内部携带其真正的标题和封面。 轻触以安装，然后可以选择删除软件包。\n来自上游的音频修复，包括@ digant73对某些输出配置无提示的游戏的修复，以及@ Yahfz对音频系统的共享内存处理。\n首次设置现在提供RPCS3推荐的设置配置数据库。有些游戏在启动之前需要特定的设置，这是它们的列表。您自己的设置总是赢得它，并且可以在应用程序设置下关闭它\n。（现有用户不受影响，尽管我知道你们中的大多数人已经使用了配置数据库）。\n高分辨率显示屏上的多点触控：在高分辨率模式渲染应用程序小于屏幕的设备上，按住屏幕上的一个控件，然后按下另一个控件，将第二次按压放在错误的位置。ARMSX3现在从触摸屏本身获取真正的触摸尺寸。已确认固定在2340 x 1080像素的Samsung S25 Ultra上\n。此修复程序也将面向ARMSX2用户。\n\n此外：文件夹在设置中以可读的方式命名，而不是显示原始存储ID ，安装具有众多顺序链更新的更新现在显示真正的进度，而不是100 ％。\n\n保存状态现在具有创建时的时间戳。\n奖杯声音支持，核心的声音回调是空的，所以奖杯、对话框和屏幕键盘都是静音的。 使用测试按钮和自己的音量滑块，在应用程序设置中选择Trophy声音的文件。 没有捆绑默认值，您必须提供自己的默认值。\n肖像渲染位置工作原理。 它保存了您的选择，然后放弃了它。 它现在也出现在游戏菜单中。 风景版已经不复存在，因为16: 9窗口中的16: 9游戏没有空乐队可以移动。\n显示分辨率（硬件缩放器）保留您的选择。 它以不同的单位读取值，因此每个选择都会返回到屏幕。\n\nOSD Size现在工作正常。 两个控件驱动一个设置，选项卡顶部的一个是死一个。\n其余上游： @ elad335 （保存针对2.00以下SDK版本构建的游戏的状态处理修复、内存分配和加载器修复）、@ Yahfz （音频共享内存、用户内存保留）和@ digant73 （音频输出、UTF-8文件名、文件属性读取）。\n\n_免责声明：_\n保存在此更新将不再加载之前所做的状态。上游保存状态格式已更改，旧格式被拒绝而不是误读。您的游戏、保存和设置没有受到影响，但您所依赖的恢复状态已经消失，提醒您，在这样的情况下，最好不要依赖保存状态，因为这样的时候有些东西会被重新处理\n（ RPCS3仍然是一个Alpha模拟器）。\n\n\n\n\n\n< img width = \"3168\" height = \"1440\" alt = \"屏幕截图_20260911_005718_co…",
+      "originalContent": "ARMSX3 0.9.9\r\n\r\nWhat's new: \r\n\r\nFaster SPU code on ARM64. The byteswap the recompiler emits constantly is one instruction now instead of two, and code written for x86 is no longer generated on this platform. Thanks to @Whatcookie for this!\r\n\r\nShortcuts and frontends use the right settings. Launching from a home screen shortcut or an external frontend built its own idea of the game and missed its serial, so it ran under a second configuration. It now resolves to the same entry the library uses, which also gives it the right title and cover. A title that gained a serial changed the key its settings were filed under, so everything set for it was left behind and the global values applied instead. Old settings are brought forward the first time you open the game.\r\n\r\nA .pkg you have not installed but placed in your ROM folder shows up in the library, carrying its real title and cover art from inside the package. Tap it to install, with the option to delete the package afterwards.\r\n\r\nAudio fixes from upstream, including one for games that came out silent on some output configurations, by @digant73, and shared memory handling for the audio system by @Yahfz.\r\n\r\nFirst time setup now offers RPCS3's recommended settings config database. Some games need a specific setting before they will boot at all, and this is the list of them. Your own settings always win over it, and it can be turned off under App settings. (Existing users are unaffected, although I know a majority of you already use the config database). \r\n\r\nMulti-touch on high resolution displays: On devices whose high resolution mode renders apps smaller than the screen, holding one on-screen control and pressing another put the second press in the wrong place. ARMSX3 now takes the true touch size from the touchscreen itself. Confirmed fixed on a Samsung S25 Ultra at 2340 x 1080 pixels. This fix will also make its way to ARMSX2 users. \r\n\r\nAlso: folders are named readably in settings instead of showing a raw storage id, installing updates that have numerous in order chain updates to go through now show real progress instead of sitting at 100 percent. \r\n\r\nSave states now have a timestamp for when they were created. \r\n\r\nTrophies sound support. The core's sound callback was empty, so trophies, dialogs and the on screen keyboard were all silent. Pick the file for Trophy sounds in App settings, with a test button and its own volume slider. There is no bundled default, you must provide your own. \r\n\r\nPortrait Render Position works. It saved your choice and then dropped it. It is in the in game menu now as well. The landscape version is gone, since a 16:9 game in a 16:9 window has no empty band to move into.\r\n\r\nDisplay Resolution (HW scaler) keeps your choice. It read the value in different units than it wrote, so every pick snapped back to Screen.\r\n\r\nOSD Size works properly now. Two controls drove one setting, and the one at the top of the tab was the dead one.\r\n\r\nRest of Upstream: @elad335 (save state handling fixes, memory allocation, and loader fixes for games built against SDK versions below 2.00), @Yahfz (audio shared memory, user memory reservations) and @digant73 (audio output, UTF-8 filenames, file attribute reads). \r\n\r\n**_DISCLAIMER:_** \r\n\r\nSave states made before this update will no longer load. The save state format changed upstream and old ones are refused rather than misread. Your games, saves and settings are untouched, but a state you were relying on to resume is gone, as a reminder it's always best to NOT rely on save states for times like these where something is reworked upstream. (RPCS3 is still an Alpha emulator).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"ima23232232323323ge\" src=\"https://github.com/user-attachments/assets/48a54e6f-512f-48a3-a014-1f2027c9ef16\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"ima232332ge\" src=\"https://github.com/user-attachments/assets/3e697044-6214-43ea-90b4-3ae2e7e43955\" />\r\n\r\n<img width=\"3168\" height=\"1440\" alt=\"Screenshot_20260911_005718_co…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "587853447b9b93332dbf7e8de05b30b0fec44e8c56d5c4d1243104e9fd3d6307",
+      "translationPending": false
+    },
     {
       "id": "android-release-hatariB_core-1-0",
       "title": "【Android更新】hatariB (RetroArch 核心) 1.0",
@@ -21,15 +70,15 @@
       "imageUrl": "asset://assets/emulators/hatariB_core.png",
       "officialUrl": "https://github.com/bbbradsmith/hatariB",
       "summary": "hatariB (RetroArch 核心) 发布 Android 新版本 1.0，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
-      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 1.0。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nThe hatariB 模拟器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n_Android 建筑文物应很快提供。 GitHub 动作有问题（https://github.com/android-actions/setup-android/issues/537） 释放时。 _\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意试试最新的改变\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在此页的顶部,请留言。\n\n变动 v0.5 β :\n• 固定停雪屏幕崩溃(引入) v0.5 删除 SDL2 时。\n• 固定 `setlocale` 在 libretro 上解析阴影的问题。 (83)（https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800）)\n• Libretro CI 构建(Windows,MacOS,Linux,IOS,WebOS,Vita,Switch,Wii,WiiU).",
-      "originalContent": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\n_**Android build artifacts should be available soon. There is an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release.**_\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem breaking shader parsing on libretro builds. ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800))\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).",
+      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 1.0。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nThe hatariB 仿真器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意尝试 最新的改变。\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在本页的顶部,留下你的评论。\n\n变动 v0.5 贝塔:\n• 固定停雪屏幕崩溃(引入于 v0.5 当去除SDL2时。\n• 固定 `setlocale` 问题(83)（https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800）).\n· Libretro CI所建(Windows,MacOS,Linux,IOS,WebOS,Vita,Switch,Wii,WiiU).\n\n注:机器人建筑是后期犯罪造成的（https://github.com/bbbradsmith/hatariB/commit/e395e3fd98aace93c6c1cf8feea80fc7d73fe07d） 由于 GitHub 动作出现问题（https://github.com/android-actions/setup-android/issues/537） 在释放时。",
+      "originalContent": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800)).\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).\r\n\r\nNote: android builds are from a [later commit](https://github.com/bbbradsmith/hatariB/commit/e395e3fd98aace93c6c1cf8feea80fc7d73fe07d) due to an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release.",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "hatariB_core"
       ],
-      "contentHash": "aecb1bac3de7b4bf2f61de34e6d8c2f6834f4f51521b3d2410968e9cc622384c",
+      "contentHash": "b4c2c4ec83158e97d2d867d695de5efe60cd9197692a3d76e62d468370051499",
       "translationPending": false
     },
     {
@@ -148,31 +197,6 @@
         "emucorex"
       ],
       "contentHash": "b85a8db8fd05caa8a296330d453e8bad117c38108040cf0efd14419bcdab741d",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-15T10:32:50Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_megadrive.cpp:各种... (Take 2) (fprietog)\n• d_megadrive.cpp: 各种... (fprietog) .",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: various... (Take 2) (fprietog)\n• d_megadrive.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "eae7ba9fd3ec9bb41bea6cfb0348ce2fdf8f2faca5eac399f379d6a5670ed3ca",
       "translationPending": false
     },
     {
@@ -349,22 +373,22 @@
     },
     {
       "id": "137003",
-      "title": "【家用机】Suyu v0.0.8 (reborn edition)",
-      "originalTitle": "[Consoles de salon] Suyu v0.0.8 (reborn edition)",
+      "title": "【家用机】Suyu v0.0.10 (reborn edition)",
+      "originalTitle": "[Consoles de salon] Suyu v0.0.10 (reborn edition)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "tool",
       "publishedAt": "2026-09-14T20:22:51Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137003-consoles-de-salon-suyu-v0-0-8-reborn-edition/",
+      "sourceUrl": "https://www.emu-france.com/news/137003-consoles-de-salon-suyu-v0-0-10-reborn-edition/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/03/suyu.png",
       "officialUrl": "https://github.com/dougchansan/suyu-v0.0.4",
       "summary": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。 Suyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并 您可以在控制台上完成其余的工作。",
-      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n该项目在0.0.4版本之后被放弃，然后由开发人员DougChanSan从同一版本接管。\n\n变更内容：\n•创建静态构建一流的库条目\n•防止损坏的静态变换\n•重新编译： void块函数不能返回值\n•前端：显示运行游戏的CPU\n• suyu-cmd: --probe-decode-list ，解码整个库的覆盖范围\n• docs ：静态重新编译，以及没有jit的构建\n• build ： SUYU_NO_JIT ，一个没有动态重新编译器的模拟器\n• recomp ：严格模式，拒绝jit回退\n• ci ：发布从标签中剪下的内容，按照README的说法构建\n• docs ：实际运行的构建指令\n•生成：删除继承的发布工作流程\n•前端：停止强制控制器视图在黑客模式下打开\n•重新编译器：用于ldp、stp和128位访问的对等助手\n•重新编译器：在翻译时解决标志更新\n•重新编译：在翻译时解决分支条件\n•重新编译：解析图像内部的间接分支目标\n• recomp ：每个线程执行的块计数\n• recomp ：运行时可配置链预算\n•重新编译：使生成的优化级别可重写\n•重新编译：索引整数乘法、addlv、nzcv\n•重新编译：关闭剩余的解码间隙；将未覆盖的入口点记录为根\n•重新编译： rev、shifts、饱和add、unsigned compares、addv、frecps、vector faddp\n•重新编译：使用生成的s-box进行aese/aesd\n•重新编译： sha256su0/su1和多寄存器结构加载和存储\n•重新编译： aesmc/aesimc、pmull/pmull2、crc32、标量faddp\n•重新编译： bsl/bit/bif、fabs/fneg、xtn/xtn2、矢量fcvtzs/fcvtzu\n•加载器：当无法读取已安装的更新时，请这么说\n• file_sys ：跳过元时，命名被取代的元及其内容\n•重新编译： tbl/tbx和单元素ld1/st1\n• mcp: list_installed_titles删除了每个已安装的附加组件\n• mcp: list_installed_titles报告了一个从未存在的空目录\n•重新编译： fmov vector immediate、cnt、fcm register forms、sshll/ushll、permutes、ext\n•前端：仍需安装的设置清单\n•导出：使用vswhere而不是硬编码路径查找Visual Studio\n•构建：丢弃没有克隆可以完成的ownfoil子模块\n•前端：直接索引块，而不是跨图像边界调用\n•重新填充：根据覆盖率报告中的模块图解析未覆盖的PC\n•重新编译：仅继续链接到无条件分支\n•重新编译：调用直接分支的目标，而不是返回调度程序\n•前端：紧凑型每线程模块调度\n•重新编译： movi/mvni ； shl已实现但已关闭\n•重新编译：停止转换定点转换\n•重新编译：将定点刻度折叠成文字\n•重新编译：定点转换、ld1r、ushl/sshl ； mcp ：报告vps\n• DOCS ：完成中和注释，并修复两个被通行证损坏的注释\n•重新编译： abs/neg ， fmla/fmls by element ， fccmp\n• mcp ：报告TAS播放进度\n•修剪注释\n•重新编译：处理所有fp到int舍入模式\n•前端：零初始化调试器窗格指针\n•文档： Linux构建和运行；记录Windows不需要的内容\n•构建： include_next提升垫片的颠簸动力学\n•构建：便携式增压/变体垫片的颠簸动力\n•修复：在字符串文字中返回的杂散托架会破坏每个非MSVC构建\n•壮举：通过MCP曝光TAS播放和录制\n• recomp ：直接索引块，而不是二进制搜索它们\n•重新填充：通过页面表解析房客地址\n•专长：通过MCP状态工具报告FPS\n•构建：将动态子模块指向我们的分叉\n• DOCS ： README反映了0.0.5的延续和变化\n•构建： 0.0.4 - > 0.0.5 ，并记录其来源\n•重构： AArch64翻译、主机桥接和执行覆盖\n•专长： suyu-cmd --probe-isa-list报告每个标题的CPU架构\n•诊断：通过内容哈希识别NPDM ，并命名更新的提供商插槽\n•修复：导出ExeFS更新，而不是基本更新\n•修复： NAND中安装的更新和DLC从未被索引\n•修复： RomFS注册已被静默删除\n•修复：服务处理程序注册丢弃了大多数命令\n•修复： AOT映像调度将每台PC解析为错误的模块",
-      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nCe projet a été abandonné après la version 0.0.4, avant d’être repris par le développeur DougChanSan à partir de cette même version.\n\nLes changements:\n\n- Make static builds first-class library entries\n- prevent corrupted static transforms\n- recompiler: a void block function cannot return a value\n- frontend: show which cpu is running the game\n- suyu-cmd: --probe-decode-list, decode coverage across a library\n- docs: static recompilation, and the build with no jit in it\n- build: SUYU_NO_JIT, an emulator with no dynamic recompiler in it\n- recomp: strict mode, refusing the jit fallback\n- ci: releases cut from a tag, built the way the README says\n- docs: build instructions that have actually been run\n- build: remove the inherited release workflow\n- frontend: stop forcing the controller view open in Hacker mode\n- recompiler: pair helpers for ldp, stp and 128-bit access\n- recompiler: resolve the flag update at translation time\n- recompiler: resolve the branch condition at translation time\n- recompiler: resolve indirect branch targets inside the image\n- recomp: count executed blocks per thread\n- recomp: runtime-configurable chain budget\n- recompiler: make the generated optimisation level overridable\n- recompiler: indexed integer multiplies, addlv, nzcv\n- recompiler: close the remaining decode gap; record uncovered entry points as roots\n- recompiler: rev, shifts, saturating add, unsigned compares, addv, frecps, vector faddp\n- recompiler: aese/aesd with a generated s-box\n- recompiler: sha256su0/su1 and the multi-register structure loads and stores\n- recompiler: aesmc/aesimc, pmull/pmull2, crc32, scalar faddp\n- recompiler: bsl/bit/bif, fabs/fneg, xtn/xtn2, vector fcvtzs/fcvtzu\n- loader: say so when an installed update cannot be read\n- file_sys: name the superseded meta and its content when one is skipped\n- recompiler: tbl/tbx and single-element ld1/st1\n- mcp: list_installed_titles dropped every installed add-on\n- mcp: list_installed_titles reported an empty directory that never existed\n- recompiler: fmov vector immediate, cnt, fcm register forms, sshll/ushll, permutes, ext\n- frontend: a Setup checklist for what still has to be installed\n- export: find Visual Studio with vswhere instead of a hardcoded path\n- build: drop the ownfoil submodule, which no clone can complete\n- frontend: index blocks directly instead of calling across the image boundary\n- recomp: resolve uncovered PCs against the module map in the coverage report\n- recompiler: keep chaining to unconditional branches only\n- recompiler: call the target of a direct branch instead of returning to the dispatcher\n- frontend: compact, per-thread module dispatch\n- recompiler: movi/mvni; shl implemented but off\n- recompiler: stop translating fixed-point conversions\n- recompiler: fold the fixed-point scale into a literal\n- recompiler: fixed-point conversions, ld1r, ushl/sshl; mcp: report vps\n- docs: finish neutralising the comments, and repair two broken by the pass\n- recompiler: abs/neg, fmla/fmls by element, fccmp\n- mcp: report tas playback progress\n- trim comment\n- recompiler: handle all fp-to-int rounding modes\n- frontend: zero-initialize the debugger pane pointers\n- docs: Linux builds and runs; record what it needs that Windows does not\n- build: bump dynarmic for the include_next boost shim\n- build: bump dynarmic for the portable boost/variant shim\n- fix: stray carriage returns inside string literals break every non-MSVC build\n- feat: expose TAS playback and recording over MCP\n- recomp: index blocks directly instead of binary searching for them\n- recomp: resolve guest addresses through the page table\n- feat: report FPS through the MCP state tool\n- build: point the dynarmic submodule at our fork\n- docs: README reflects the continuation and what changed in 0.0.5\n- build: 0.0.4 -> 0.0.5, and record where this came from\n- recomp: AArch64 translation, host bridge and execution coverage\n- feat: suyu-cmd --probe-isa-list reports each title's CPU architecture\n- diag: identify the NPDM by content hash, and name the update's provider slot\n- fix: export the update ExeFS, not the base\n- fix: installed updates and DLC in NAND were never indexed\n- fix: RomFS registration was silently dropped\n- fix: service handler registration dropped most commands\n- fix: AOT image dispatch resolved every PC to the wrong module",
+      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n该项目在0.0.4版本之后被放弃，然后由开发人员DougChanSan从同一版本接管。\n\n变更内容：\n•识别静态捆绑包中的本机库名称\n•将静态执行作为明确的实验选项\n•创建静态构建一流的库条目\n•防止损坏的静态变换\n•重新编译： void块函数不能返回值\n•前端：显示运行游戏的CPU\n• suyu-cmd: --probe-decode-list ，解码整个库的覆盖范围\n• docs ：静态重新编译，以及没有jit的构建\n• build ： SUYU_NO_JIT ，一个没有动态重新编译器的模拟器\n• recomp ：严格模式，拒绝jit回退\n• ci ：发布从标签中剪下的内容，按照README的说法构建\n• docs ：实际运行的构建指令\n•生成：删除继承的发布工作流程\n•前端：停止强制控制器视图在黑客模式下打开\n•重新编译器：用于ldp、stp和128位访问的对等助手\n•重新编译器：在翻译时解决标志更新\n•重新编译：在翻译时解决分支条件\n•重新编译：解析图像内部的间接分支目标\n• recomp ：每个线程执行的块计数\n• recomp ：运行时可配置链预算\n•重新编译：使生成的优化级别可重写\n•重新编译：索引整数乘法、addlv、nzcv\n•重新编译：关闭剩余的解码间隙；将未覆盖的入口点记录为根\n•重新编译： rev、shifts、饱和add、unsigned compares、addv、frecps、vector faddp\n•重新编译：使用生成的s-box进行aese/aesd\n•重新编译： sha256su0/su1和多寄存器结构加载和存储\n•重新编译： aesmc/aesimc、pmull/pmull2、crc32、标量faddp\n•重新编译： bsl/bit/bif、fabs/fneg、xtn/xtn2、矢量fcvtzs/fcvtzu\n•加载器：当无法读取已安装的更新时，请这么说\n• file_sys ：跳过元时，命名被取代的元及其内容\n•重新编译： tbl/tbx和单元素ld1/st1\n• mcp: list_installed_titles删除了每个已安装的附加组件\n• mcp: list_installed_titles报告了一个从未存在的空目录\n•重新编译： fmov vector immediate、cnt、fcm register forms、sshll/ushll、permutes、ext\n•前端：仍需安装的设置清单\n•导出：使用vswhere而不是硬编码路径查找Visual Studio\n•构建：丢弃没有克隆可以完成的ownfoil子模块\n•前端：直接索引块，而不是跨图像边界调用\n•重新填充：根据覆盖率报告中的模块图解析未覆盖的PC\n•重新编译：仅继续链接到无条件分支\n•重新编译：调用直接分支的目标，而不是返回调度程序\n•前端：紧凑型每线程模块调度\n•重新编译： movi/mvni ； shl已实现但已关闭\n•重新编译：停止转换定点转换\n•重新编译：将定点刻度折叠成文字\n•重新编译：定点转换、ld1r、ushl/sshl ； mcp ：报告vps\n• DOCS ：完成中和注释，并修复两个被通行证损坏的注释\n•重新编译： abs/neg ， fmla/fmls by element ， fccmp\n• mcp ：报告TAS播放进度\n•修剪注释\n•重新编译：处理所有fp到int舍入模式\n•前端：零初始化调试器窗格指针\n•文档： Linux构建和运行；记录Windows不需要的内容\n•构建： include_next提升垫片的颠簸动力学\n•构建：便携式增压/变体垫片的颠簸动力\n•修复：在字符串文字中返回的杂散托架会破坏每个非MSVC构建\n•壮举：通过MCP曝光TAS播放和录制\n• recomp ：直接索引块，而不是二进制搜索它们\n•重新填充：通过页面表解析房客地址\n•专长：通过MCP状态工具报告FPS\n•构建：将动态子模块指向我们的分叉\n• DOCS ： README反映了0.0.5的延续和变化\n•构建： 0.0.4 - > 0.0.5 ，并记录其来源\n•重构： AArch64翻译、主机桥接和执行覆盖\n•专长： suyu-cmd --probe-isa-list报告每个标题的CPU架构\n•诊断：通过内容哈希识别NPDM ，并命名更新的提供商插槽\n•修复：导出ExeFS更新，而不是基本更新\n•修复： NAND中安装的更新和DLC从未被索引\n•修复： RomFS注册已被静默删除\n•修复：服务处理程序注册丢弃了大多数命令\n•修复： AOT映像调度将每台PC解析为错误的模块",
+      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nCe projet a été abandonné après la version 0.0.4, avant d’être repris par le développeur DougChanSan à partir de cette même version.\n\nLes changements:\n\n- Recognize native library names in static bundles\n- Make static execution an explicit experimental option\n- Make static builds first-class library entries\n- prevent corrupted static transforms\n- recompiler: a void block function cannot return a value\n- frontend: show which cpu is running the game\n- suyu-cmd: --probe-decode-list, decode coverage across a library\n- docs: static recompilation, and the build with no jit in it\n- build: SUYU_NO_JIT, an emulator with no dynamic recompiler in it\n- recomp: strict mode, refusing the jit fallback\n- ci: releases cut from a tag, built the way the README says\n- docs: build instructions that have actually been run\n- build: remove the inherited release workflow\n- frontend: stop forcing the controller view open in Hacker mode\n- recompiler: pair helpers for ldp, stp and 128-bit access\n- recompiler: resolve the flag update at translation time\n- recompiler: resolve the branch condition at translation time\n- recompiler: resolve indirect branch targets inside the image\n- recomp: count executed blocks per thread\n- recomp: runtime-configurable chain budget\n- recompiler: make the generated optimisation level overridable\n- recompiler: indexed integer multiplies, addlv, nzcv\n- recompiler: close the remaining decode gap; record uncovered entry points as roots\n- recompiler: rev, shifts, saturating add, unsigned compares, addv, frecps, vector faddp\n- recompiler: aese/aesd with a generated s-box\n- recompiler: sha256su0/su1 and the multi-register structure loads and stores\n- recompiler: aesmc/aesimc, pmull/pmull2, crc32, scalar faddp\n- recompiler: bsl/bit/bif, fabs/fneg, xtn/xtn2, vector fcvtzs/fcvtzu\n- loader: say so when an installed update cannot be read\n- file_sys: name the superseded meta and its content when one is skipped\n- recompiler: tbl/tbx and single-element ld1/st1\n- mcp: list_installed_titles dropped every installed add-on\n- mcp: list_installed_titles reported an empty directory that never existed\n- recompiler: fmov vector immediate, cnt, fcm register forms, sshll/ushll, permutes, ext\n- frontend: a Setup checklist for what still has to be installed\n- export: find Visual Studio with vswhere instead of a hardcoded path\n- build: drop the ownfoil submodule, which no clone can complete\n- frontend: index blocks directly instead of calling across the image boundary\n- recomp: resolve uncovered PCs against the module map in the coverage report\n- recompiler: keep chaining to unconditional branches only\n- recompiler: call the target of a direct branch instead of returning to the dispatcher\n- frontend: compact, per-thread module dispatch\n- recompiler: movi/mvni; shl implemented but off\n- recompiler: stop translating fixed-point conversions\n- recompiler: fold the fixed-point scale into a literal\n- recompiler: fixed-point conversions, ld1r, ushl/sshl; mcp: report vps\n- docs: finish neutralising the comments, and repair two broken by the pass\n- recompiler: abs/neg, fmla/fmls by element, fccmp\n- mcp: report tas playback progress\n- trim comment\n- recompiler: handle all fp-to-int rounding modes\n- frontend: zero-initialize the debugger pane pointers\n- docs: Linux builds and runs; record what it needs that Windows does not\n- build: bump dynarmic for the include_next boost shim\n- build: bump dynarmic for the portable boost/variant shim\n- fix: stray carriage returns inside string literals break every non-MSVC build\n- feat: expose TAS playback and recording over MCP\n- recomp: index blocks directly instead of binary searching for them\n- recomp: resolve guest addresses through the page table\n- feat: report FPS through the MCP state tool\n- build: point the dynarmic submodule at our fork\n- docs: README reflects the continuation and what changed in 0.0.5\n- build: 0.0.4 -> 0.0.5, and record where this came from\n- recomp: AArch64 translation, host bridge and execution coverage\n- feat: suyu-cmd --probe-isa-list reports each title's CPU architecture\n- diag: identify the NPDM by content hash, and name the update's provider slot\n- fix: export the update ExeFS, not the base\n- fix: installed updates and DLC in NAND were never indexed\n- fix: RomFS registration was silently dropped\n- fix: service handler registration dropped most commands\n- fix: AOT image dispatch resolved every PC to the wrong module",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "9a826f5fe91b9b2884bc6756f580bc88d67096c2c20e820a943f90ef966c2ec3",
+      "contentHash": "2c84cf8d8e99f30d2c1c7fcea4caab379141faa0677afbb176c39e8c17f40939",
       "translationPending": false
     },
     {
@@ -733,30 +757,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "a3089527ac8f6f3ba0c87fb9143253ea333ee78104c830ad1e8fba4dba6fa221",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-0-9-8-2",
-      "title": "【Android更新】ARMSX3 0.9.8.2",
-      "originalTitle": "ARMSX3 0.9.8.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-13T20:34:13Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.8.2",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 0.9.8.2，发布日期为2026年09月13日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 0.9.8.2。\n\n发布日期：2026年09月13日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 0.9.8.2\n\n有什么新情况:\n\n补丁标签现在是补丁和欺骗。\n\n新建: 下载 Artemis 欺骗按钮, 旁边 rpcs3.net 一个 共有171场比赛的1441场出轨,（https://github.com/chidreams/Artemis-Patch-Collection-RPCS3）,它合并而不是替换,所以可以拥有两个数据库。\n\n立即打开补丁 每个切换器都用来重读整个数据库,两次完成。 添加这样大小的收藏,是最终引起人们注意的原因。",
-      "originalContent": "ARMSX3 0.9.8.2\r\n\r\nWhat's new: \r\n\r\nThe Patches tab is now Patches & Cheats. \r\n\r\nNew: a Download Artemis cheats button, beside the rpcs3.net one. That is 1,441 cheats across 171 games, maintained by @chidreams in the [Artemis Patch Collection](https://github.com/chidreams/Artemis-Patch-Collection-RPCS3), It merges rather than replaces, so you can have both databases.\r\n\r\nTurning a patch on is instant now. Every toggle used to re-read the entire database, twice over. Adding a collection this size is what finally made it noticeable.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "e085e8768f8f791e5895a1e257dbaef1cd7b9cda7c6af5de1e6b5dd4a4456f9d",
       "translationPending": false
     },
     {
