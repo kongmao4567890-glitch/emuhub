@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T17:01:44Z",
+  "generatedAt": "2026-09-16T04:52:01Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -50,11 +50,11 @@
       "devReleaseNotes": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: install the Rust iOS target so CI builds keep shaders\n- iOS: translate the new shader wording\n- iOS: show the CRC in Per-Game Settings during a game\n- iOS: move TV/CRT Shader to Filtering and rename the cache button\n- iOS: show readable slider names and plain shader errors\n- iOS: delete downloaded shader packs and saved presets\n- iOS: close the preset list on a pick and select a saved preset\n- iOS: say in the pause menu when a game has its own shader\n- iOS: keep saved shader presets working after an app update\n- iOS: put Preset first on the Shaders page and use plain wording\n- iOS: pick a downloaded shader straight from the download list\n- iOS: document launch links and the library export\n- iOS: translate Copy Launch Link\n- iOS: list games from external folders in the library export\n- iOS: import files opened in the app again\n- iOS: ask before a launch link replaces a running game\n- iOS: copy a game's launch link from its long-press menu\n- iOS: look up the app's own scene, not whichever one comes first\n- iOS: stop leaking a scene configuration on every scene connect\n- iOS: read the hack claim keys from s_gs_keys, where they live now\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...736f53fa1c3c8e56a90ad53bd61f84260d09e1f0"
     },
     "armsx3": {
-      "version": "0.9.8.2",
-      "releaseDate": "2026-09-13T20:34:13Z",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.8.2",
-      "releaseNotes": "ARMSX3 0.9.8.2\r\n\r\nWhat's new: \r\n\r\nThe Patches tab is now Patches & Cheats. \r\n\r\nNew: a Download Artemis cheats button, beside the rpcs3.net one. That is 1,441 cheats across 171 games, maintained by @chidreams in the [Artemis Patch Collection](https://github.com/chidreams/Artemis-Patch-Collection-RPCS3), It merges rather than replaces, so you can have both databases.\r\n\r\nTurning a patch on is instant now. Every toggle used to re-read the entire database, twice over. Adding a collection this size is what finally made it noticeable.",
-      "downloadUrl": "https://github.com/ARMSX2/ARMSX3/releases/download/0.9.8.2/ARMSX3-0.9.8.2-a11-armv8.2-sdk30.apk"
+      "version": "0.9.9r",
+      "releaseDate": "2026-09-15T21:32:16Z",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/0.9.9r",
+      "releaseNotes": "ARMSX3 0.9.9\r\n\r\nWhat's new: \r\n\r\nFaster SPU code on ARM64. The byteswap the recompiler emits constantly is one instruction now instead of two, and code written for x86 is no longer generated on this platform. Thanks to @Whatcookie for this!\r\n\r\nShortcuts and frontends use the right settings. Launching from a home screen shortcut or an external frontend built its own idea of the game and missed its serial, so it ran under a second configuration. It now resolves to the same entry the library uses, which also gives it the right title and cover. A title that gained a serial changed the key its settings were filed under, so everything set for it was left behind and the global values applied instead. Old settings are brought forward the first time you open the game.\r\n\r\nA .pkg you have not installed but placed in your ROM folder shows up in the library, carrying its real title and cover art from inside the package. Tap it to install, with the option to delete the package afterwards.\r\n\r\nAudio fixes from upstream, including one for games that came out silent on some output configurations, by @digant73, and shared memory handling for the audio system by @Yahfz.\r\n\r\nFirst time setup now offers RPCS3's recommended settings config database. Some games need a specific setting before they will boot at all, and this is the list of them. Your own settings always win over it, and it can be turned off under App settings. (Existing users are unaffected, although I know a majority of you already use the config database). \r\n\r\nMulti-touch on high resolution displays: On devices whose high resolution mode renders apps smaller than the screen, holding one on-screen control and pressing another put the second press in the wrong place. ARMSX3 now takes the true touch size from the touchscreen itself. Confirmed fixed on a Samsung S25 Ultra at 2340 x 1080 pixels. This fix will also make its way to ARMSX2 users. \r\n\r\nAlso: folders are named readably in settings instead of showing a raw storage id, installing updates that have numerous in order chain updates to go through now show real progress instead of sitting at 100 percent. \r\n\r\nSave states now have a timestamp for when they were created. \r\n\r\nTrophies sound support. The core's sound callback was empty, so trophies, dialogs and the on screen keyboard were all silent. Pick the file for Trophy sounds in App settings, with a test button and its own volume slider. There is no bundled default, you must provide your own. \r\n\r\nPortrait Render Position works. It saved your choice and then dropped it. It is in the in game menu now as well. The landscape version is gone, since a 16:9 game in a 16:9 window has no empty band to move into.\r\n\r\nDisplay Resolution (HW scaler) keeps your choice. It read the value in different units than it wrote, so every pick snapped back to Screen.\r\n\r\nOSD Size works properly now. Two controls drove one setting, and the one at the top of the tab was the dead one.\r\n\r\nRest of Upstream: @elad335 (save state handling fixes, memory allocation, and loader fixes for games built against SDK versions below 2.00), @Yahfz (audio shared memory, user memory reservations) and @digant73 (audio output, UTF-8 filenames, file attribute reads). \r\n\r\n**_DISCLAIMER:_** \r\n\r\nSave states made before this update will no longer load. The save state format changed upstream and old ones are refused rather than misread. Your games, saves and settings are untouched, but a state you were relying on to resume is gone, as a reminder it's always best to NOT rely on save states for times like these where something is reworked upstream. (RPCS3 is still an Alpha emulator).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"ima23232232323323ge\" src=\"https://github.com/user-attachments/assets/48a54e6f-512f-48a3-a014-1f2027c9ef16\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"ima232332ge\" src=\"https://github.com/user-attachments/assets/3e697044-6214-43ea-90b4-3ae2e7e43955\" />\r\n\r\n<img width=\"3168\" height=\"1440\" alt=\"Screenshot_20260911_005718_co…",
+      "downloadUrl": "https://github.com/ARMSX2/ARMSX3/releases/download/0.9.9r/ARMSX3-0.9.9-a11-armv8.2-sdk30.apk"
     },
     "azahar": {
       "version": "2126.1.1",
@@ -219,15 +219,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-09-15T10:32:50Z",
+      "releaseDate": "2026-09-16T01:14:37Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: various... (Take 2) (fprietog)\n• d_megadrive.cpp: various... (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_sms.cpp: added the support to \"Oriflame (HB)\" (fprietog)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-09-15T10:32:50Z",
+      "releaseDate": "2026-09-16T01:14:37Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: various... (Take 2) (fprietog)\n• d_megadrive.cpp: various... (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_sms.cpp: added the support to \"Oriflame (HB)\" (fprietog)"
     },
     "firebird": {
       "version": "1.6",
@@ -308,7 +308,7 @@
       "version": "1.0",
       "releaseDate": "2026-09-15T15:26:27Z",
       "sourceUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/1.0",
-      "releaseNotes": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\n_**Android build artifacts should be available soon. There is an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release.**_\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem breaking shader parsing on libretro builds. ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800))\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU)."
+      "releaseNotes": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800)).\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).\r\n\r\nNote: android builds are from a [later commit](https://github.com/bbbradsmith/hatariB/commit/e395e3fd98aace93c6c1cf8feea80fc7d73fe07d) due to an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release."
     },
     "igir": {
       "version": "5.5.0",
@@ -332,10 +332,10 @@
       "devReleaseNotes": "- f723a19: LCDUI: refactoring (woesss)\r\n- 75130ae: LCDUI: refactor commands in Alert (woesss)\r\n- d2263e0: LCDUI: fix Display.setCurrent() for Alert (woesss)\r\n- bb0d217: Refactor start MidletThread (woesss)\r\n- 6c3b6f6: Don't send report from modded apk (woesss)\r\n- e41930b: Setting to enable workaround for MIDlets that do not support pause (fix crash after pause) (woesss)\r\n- 6d75447: LCDUI: another fix for List, ChoiceGroup (woesss)\r\n- 97783bc: Fix uri parsing in BT connections (woesss)\r\n- 209d345: Fix call notifyItemStateChanged() for TextField (woesss)\r\n- 49e7fd6: refactor start app (woesss)\r\n- 580ac80: Add more info to AppInstaller error report (woesss)\r\n- 1da39db: Update AGP (woesss)\r\n- cfb9c20: Update proguard rules (woesss)\r\n- ffc6f3c: Update readme (woesss)\r\n- 7a7dbce: MMAPI: add MIDIControl support for MIDI based content (fix nikita36078/J2ME-Loader#1072) (woesss)\r\n- c501ccb: Add com.mot.iden.multimedia package (#111) (woesss)\r\n- 4f5b09b: Share a single back buffer across all Canvas instances (fix #110) (woesss)\r\n- f10c8d9: M3G: execute M3gRunnable in single thread (woesss)\r\n- d826b76: M3G: generate texture mipmap by M3G code, as automatic generation by GL does not work correctly (#108) (woesss)\r\n- a5ec311: Update gradle files (woesss)\r\n- 723f464: PNGUtils: ignore invalid palette indexes, optimize (woesss)\r\n- 21b8805: Filter pointer events (woesss)\r\n- 42f6827: Copy pixels from GL in native (woesss)\r\n- 0f67e90: Touch GL in single thread in com.mexa.opgl.OpglGraphics (woesss)\r\n- 2c7290b: Replace loop detection in immediate mode of EventQueue (woesss)\r\n- 0234d04: fixup! Check descriptor when skip installer dialog (woesss)\r\n- eb2ffc4: Reimplement Nokia M3D on GLES20 (woesss)\r\n- 225c4a2: Fix mutable property of Image (woesss)\r\n- a2eaf4e: Merge pull request #107 from rmn20/dev (woesss)\r\n- 4532838: micro3d: more lenient BMP loading (woesss)\r\n- e42cff5: fix (rmn20)\r\n- a609ebd: micro3d: Fix for bmp files with invalid raster offset (rmn20)\r\n- 724b90a: Refactoring case-insensitive file extension checking (woesss)\r\n- 86d3435: Improve com.siemens.mp.lcdui.Image implementation (woesss)\r\n- 23d4d1e: Fix open FileConnection (woesss)\r\n- 2b3eb27: Use acra-http (woesss)\r\n- 3cc10ae: Improve error reports (woesss)\r\n- a222d4a: Update appcenter cert (Nikita Shakarun)\r\n- 7a6719b: Fix build without secret properties (woesss)\r\n- 190bb47: LCDUI: fix Item.notifyStateChanged() (woesss)\r\n- 5d18a8b: Remove minimum delay for key release (woesss)\r\n- 177c985: Fix ClassCastException in takeScreenshot() (woesss)\r\n- cc87cf5: Fixed saving of resolution presets (woesss)"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-09-15-6a2987a",
-      "releaseDate": "2026-09-15T10:31:15Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-15-6a2987a",
-      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-15-d1372ab...KytyPS5-2026-09-15-6a2987a"
+      "version": "KytyPS5-2026-09-15-e6156be",
+      "releaseDate": "2026-09-15T18:53:47Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-15-e6156be",
+      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-15-6a2987a...KytyPS5-2026-09-15-e6156be"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -898,10 +898,10 @@
     },
     "padforge": {
       "version": "latest-v4-dev",
-      "releaseDate": "2026-09-15T17:01:09Z",
+      "releaseDate": "2026-09-15T22:31:58Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/34997830590",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/34997830590"
+      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35030881331",
+      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35030881331"
     },
     "panda3ds": {
       "version": "0.9",
@@ -928,11 +928,11 @@
       "devReleaseNotes": "Attempted head seek improvements for Zen Nihon Joshi Pro Wres - Queen of Queens."
     },
     "pcsx2_pc": {
-      "version": "2.9.53",
-      "releaseDate": "2026-09-15T05:35:41Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.53",
-      "releaseNotes": "- [GameDB: Various fixes](https://github.com/PCSX2/pcsx2/pull/14958)",
-      "devReleaseNotes": "- [GameDB: Various fixes](https://github.com/PCSX2/pcsx2/pull/14958)"
+      "version": "2.9.54",
+      "releaseDate": "2026-09-16T04:51:21Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.54",
+      "releaseNotes": "- [MSVC: Make baking shader in CPP default off.](https://github.com/PCSX2/pcsx2/pull/14962)",
+      "devReleaseNotes": "- [MSVC: Make baking shader in CPP default off.](https://github.com/PCSX2/pcsx2/pull/14962)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.22",
@@ -1044,11 +1044,11 @@
       "devReleaseNotes": "## What's Changed\n* Bump rust-toolchain from 1.98.0 to 1.98.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/831\n* Bump the rust-minor group across 1 directory with 10 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/835\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/833\n* chore: Bump Rascal to 0.3.6 by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/836\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/837\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260902...0.260907"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-09-15",
-      "releaseDate": "2026-09-15T00:15:06Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-09-15",
-      "releaseNotes": "## What's Changed\n* build: Bump ashpd, rand, getrandom, and quinn-proto by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24686\n* build: Bump rustls by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24688\n* build: Bump jobserver by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24687\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-14...nightly-2026-09-15",
-      "devReleaseNotes": "## What's Changed\n* build: Bump ashpd, rand, getrandom, and quinn-proto by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24686\n* build: Bump rustls by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24688\n* build: Bump jobserver by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24687\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-14...nightly-2026-09-15"
+      "version": "nightly-2026-09-16",
+      "releaseDate": "2026-09-16T00:14:56Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-09-16",
+      "releaseNotes": "## What's Changed\n* build(deps): bump the cargo-minor group with 6 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24694\n* build(deps): bump the winit-wgpu-egui group with 4 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24690\n* build(deps-dev): bump eslint-plugin-jsdoc from 63.3.2 to 64.3.9 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24692\n* build(deps): bump the npm-minor group across 1 directory with 10 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24701\n* avm2: Queue play/stop action alongside the frame for queued gotos by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24684\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-15...nightly-2026-09-16",
+      "devReleaseNotes": "## What's Changed\n* build(deps): bump the cargo-minor group with 6 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24694\n* build(deps): bump the winit-wgpu-egui group with 4 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24690\n* build(deps-dev): bump eslint-plugin-jsdoc from 63.3.2 to 64.3.9 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24692\n* build(deps): bump the npm-minor group across 1 directory with 10 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24701\n* avm2: Queue play/stop action alongside the frame for queued gotos by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24684\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-15...nightly-2026-09-16"
     },
     "sameboy_core": {
       "version": "1.0.3",
