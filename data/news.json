@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T05:12:22.119694Z",
+  "generatedAt": "2026-09-16T17:17:19.958036Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T16:22:42Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
+      "originalContent": "NESd nightly Android release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "1feda846ff0d7860f18673c158d5c212ce317682fc076b05f45d18d76b967054",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-16T01:14:37Z",
+      "publishedAt": "2026-09-16T14:33:00Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_sms.cpp: 在\"Oriflame (HB)\"(fprietog)中增加了支持。",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_sms.cpp: added the support to \"Oriflame (HB)\" (fprietog)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 深层升级,感谢iq_132: (dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• darkseal upgrade, thanks iq_132 :) (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,7 +54,272 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "dbf6199878f1b95ddc081b1fb1e85ac993ac6dd67d71174f3a4fcf6f83733e1f",
+      "contentHash": "7850a8b4807dc3c5e64ce5a340ae3e0c95e24670ebd20b4f3a62faa44bc8c64e",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260916",
+      "title": "【Android更新】ARMSX2 nightly-20260916",
+      "originalTitle": "ARMSX2 nightly-20260916 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T14:00:12Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260916",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260916，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260916。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故使用Qt Appimage在那里)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• 自由:报告没有Vulkan的有效几何\n• 自由:无伏尔坎固定编译\n• 采用前端的任何硬件上下文,而不是一个或一个\n• 要求提供能够运行渲染器的GL上下文\n• 触摸:从数字化器上取出比例尺,在任一轴上取出闸门\n• Pad:默认手持设备的快速倒置\n• GS/HW:将不匹配的8像素洗涤条视为不是洗涤条\n• GS/HW:只豁免一个近边缘为整像素的5模式图案\n• GS/HW:不要推动启动于整个像素模式5的图案\n• GS/HW:在每种HPO模式中给线形矩形半像素抵消\n• GS/HW:在GS灯光的像素上划线\n• GS:不要在硬件渲染器上自动冲压Alpha Stencil计数器\n• GS/HW:用双源混合法绘制α天花板计数器\n• GS/VK:决定每个装置的快速速温阴影路\n• GameDB 覆盖:恢复复读模式覆盖\n• GS:删除Tekken 5 MediaTek 马里半像素的入侵\n• GameDB:带来 GameIndex.yaml 回到上游 PCSX2\n• GameDB 覆盖:只保留在今天的JIT和渲染器上有原因的覆盖\n• iOS:安装 Rust iOS 目标,使 CI 建立遮蔽器\n• GS/SW:每原始一次协调谷物及其下方网格上的梯度\n• GS/SW:坐标的第十六节向零方向划为签号 12.4 字段\n• GS/SW:一个紫外线图案的上升坡道种子,16个Texel低地\n• GS/SW:彩色行走中每像素一层,以及两个写法缺陷\n• GS/SW:控制台的对数是128个输入表,所以读该表\n• GS/SW:外缘纹理坐标走进 12.15 累积器\n• GS/SW:14比特对等,仅在顶点对等处进行分割\n• GS/SW:测量的彩色插座 -- -- 区块网格、锚、行对、雾\n• GS/SW:种子在自己的左边缘,梯度降至10位\n• GS:自动冲洗机的拆分按发动机的级别,而不是按硬件键\n• GS: TEX1.K 已经签了,所以不要再签了\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260915...316e20c2f33794daee8bf272d747cb508983f4e9",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- libretro: report valid geometry without Vulkan\n- libretro: fix compilation without vulkan\n- Take whichever hardware context the frontend has, rather than one or none\n- Ask for a GL context that can run the renderer\n- Touch: take the scale from the digitizer, and gate on either axis\n- Pad: default the device-haptic fallback on for handhelds\n- GS/HW: Treat an unaligned 8 pixel shuffle strip as not a shuffle\n- GS/HW: only exempt a mode 5 sprite whose near edge is on a whole pixel\n- GS/HW: don't push a mode 5 sprite that starts on a whole pixel\n- GS/HW: give line rectangles half a device pixel of offset in every HPO mode\n- GS/HW: draw lines over exactly the pixels the GS lights\n- GS: don't auto-flush the alpha stencil counter on the hardware renderer\n- GS/HW: draw the alpha stencil counter with dual-source blending\n- GS/VK: decide the fast stencil shadow road per device\n- GameDB overlay: restore the readback-mode overrides\n- GS: remove the Tekken 5 MediaTek Mali half-pixel-offset hack\n- GameDB: bring GameIndex.yaml back to upstream PCSX2\n- GameDB overlay: keep only overrides with a reason on today's JIT and renderer\n- iOS: install the Rust iOS target so CI builds keep shaders\n- GS/SW: one coordinate grain per primitive, and the gradient on a grid under it\n- GS/SW: the coordinate's sixteenth truncates toward zero, into a signed 12.4 field\n- GS/SW: a UV-route sprite's ascending ramp seeds a sixteenth of a texel low\n- GS/SW: one floor per pixel in the colour walk, and two write-path defects\n- GS/SW: the console's logarithm is a 128-entry table, so read the table\n- GS/SW: the affine texture coordinate walks in a 12.15 accumulator\n- GS/SW: fourteen bits of reciprocal, and divide at the vertex only where affine\n- GS/SW: the measured colour interpolator -- block grid, anchor, row pairs, fog\n- GS/SW: seed each span at its own left edge, and drop the gradient to ten bits\n- GS: the auto-flush split follows the engine's level, not the hardware key\n- GS: TEX1.K is already signed, so stop sign-extending it a second time\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260915...316e20c2f33794daee8bf272d747cb508983f4e9",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "228cc6472c68ba5c570e0f1ce7b0469f38ec53e8751b7f11f3c64aaaaf6504e6",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-nightly-20260916-13",
+      "title": "【Android更新】ARMSX1 nightly-20260916.13",
+      "originalTitle": "ARMSX1 nightly-20260916.13 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T13:18:41Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260916.13",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260916.13，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260916.13。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n从 cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "7caa3b481121a06716e33560d65f58ffd13cadc950c67b485413bc0f92ff5a85",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-mame4droid-1-41",
+      "title": "【Android更新】MAME4droid 1.41",
+      "originalTitle": "MAME4droid 1.41 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T12:11:36Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.41",
+      "imageUrl": "asset://assets/emulators/mame4droid.png",
+      "officialUrl": "https://github.com/seleuco/MAME4droid-Current",
+      "summary": "MAME4droid 发布 Android 新版本 1.41，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
+      "content": "MAME4droid 已发布 Android 最新版本 1.41。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n回滚 NetPlay:兼容性和稳定性\n\n倒转就是让NetPlay感觉像两个人在一个机器上而不是\n两个人在等对方 这个发行主要是关于游戏\n无法使用它,而且会议半途而废。\n\n街机三号现在在回滚\n\n所有CPS-3都做了: 第三次打击和前两次,乔乔的比扎尔冒险,\n红地球。 直到现在,这些被卡在了洛克斯普特, 这是最糟糕的地方\n一个战斗游戏。\n\n问题在于大小。 要倒带,回滚可以保持数十个镜头\n在记忆中的机器,一个CPS-3快照是巨大的——它携带了整个\n从 CD 装入的游戏, 数十兆字节的代码、 图形和样本\n在你演奏时永远不变。 现在的快照 留下所有的东西 并保持\n只有游戏写给什么。 过去远超过任何理智的极限\n现在适合空闲的空间。\n\n已经适合好处的游戏:小快照意味着内存减少,\n进行每一次更正。\n\n更多游戏在回滚中运行\n\n主机在默认情况下将机器状态交给加盟者,所以游戏中\n用于拒绝回滚, 因为不能信任双方启动\n现在同样符合条件。\n\n过去断开的会话\n\n结合与再同步。 加入或中场重唱有时会\n留一台机器冷冻,或者在黑屏幕上装配,无事可做\n但是断开 镜头被拍到的任何地方\n此时此刻,有时在框架中间,工作仍未完成。\n录像芯片完成后,它现在总是被拍到\n并排出中断的队列。 到达的州是彼此的\n机器实际上可以恢复。\n\n短暂的网络下降。 连续丢失足够多的包 一个框会留下\n一个永远的猜测:游戏一直运行,悄悄错误,双方漂移\n在接下来的几分钟里分开 这个框架现在又向另一个国家提出了要求\n播放器和会话修复本身。 通过切换连接进行测试\n目标,一遍又一遍。\n\n拨号、旋转器和四向棍 现场控制状态的一部分没有\n包含在回滚中, 因此模拟游戏可以跳跃或倒回 Stale\n在更正后读取。 今随州而行。\n\n快速消息\n\n上次发布时说没有聊天,现在还没有 什麽?\n现在有一个简短的固定短语列表——你好,好游戏,等一下,\n插入硬币 按下开始,我得走了。 选择一个发送一个数字,而不是文本,\n而另一个玩家的设备用自己的语言来显示该短语。 没什么\n键入,没有中度,没有存储。 收音机可以关掉\n\n滴入 BIOS 选择\n\n对于有多个BIOS版本的游戏,拾取器开始于任意\n如果你按“退出”而不是选择,它会公布你的房间。\n它现在从游戏默认的BIOS开始,退出取消整件事。\n\n小东西\n\n• 对话框以选中的明智按钮开始, 这样游戏板就可以通过\nNetPlay不接触屏幕。 断线从来不是选中的\n它现在坐在菜单的底部 远离其他的\n· 公共房间董事会在自己的线路上显示最繁忙的国家。\n\n这两个设备必须更新\n\n网络协议已更改。 更新的设备和旧的将拒绝每个设备\n其他在连接时,这是经过深思熟虑的:备选的会话是:\n看上去还不错 慢慢地崩溃了",
+      "originalContent": "#  Rollback NetPlay: compatibility and stability\r\n\r\nRollback is what makes NetPlay feel like two people on one machine instead of\r\ntwo people waiting for each other. This release is mostly about the games that\r\ncould not use it, and the sessions that fell apart halfway through.\r\n\r\n## Street Fighter III now runs in rollback\r\n\r\nAll of CPS-3 does: 3rd Strike and the earlier two, JoJo's Bizarre Adventure,\r\nRed Earth. Until now these were stuck in Lockstep, which is the worst place for\r\na fighting game to be.\r\n\r\nThe problem was size. To rewind, rollback keeps dozens of snapshots of the\r\nmachine in memory, and a CPS-3 snapshot was enormous — it carried the entire\r\ngame loaded from the CD, tens of megabytes of code, graphics and samples that\r\nnever change while you play. Snapshots now leave all of that behind and keep\r\nonly what the game actually writes to. What used to be far past any sane limit\r\nnow fits with room to spare.\r\n\r\nGames that already fit benefit too: smaller snapshots mean less memory and less\r\nwork on every correction.\r\n\r\n## More games run in rollback\r\n\r\nThe host now hands its machine state to the joiner by default, so games that\r\nused to refuse rollback because both sides could not be trusted to boot\r\nidentically now qualify.\r\n\r\n## Sessions that used to break\r\n\r\n**Joining and resyncing.** A drop-in join or a mid-game resync would sometimes\r\nleave one machine frozen, or the joiner on a black screen, with nothing to do\r\nbut disconnect. The snapshot was being taken wherever the emulation happened to\r\nbe at that instant, sometimes in the middle of a frame with work still pending.\r\nIt is now always taken at the end of a frame, once the video chip has finished\r\nand the interrupt queue is drained. The state that arrives is one the other\r\nmachine can actually resume from.\r\n\r\n**Brief network drops.** Lose enough packets in a row and one frame would stay\r\na guess forever: the game kept running, quietly wrong, and the two sides drifted\r\napart over the next minutes. That frame is now re-requested from the other\r\nplayer and the session repairs itself. Tested by cutting the connection on\r\npurpose, over and over.\r\n\r\n**Dials, spinners and 4-way sticks.** Part of the live control state was not\r\nincluded in a rollback, so analog games could jump or fall back to a stale\r\nreading after a correction. It travels with the state now.\r\n\r\n## Quick messages\r\n\r\nThe last release said there would be no chat, and there still isn't one. What\r\nthere is now is a short list of fixed phrases — hello, good game, wait a moment,\r\ninsert coin and press start, I have to go. Picking one sends a number, not text,\r\nand the other player's device shows that phrase in their own language. Nothing\r\ntyped, nothing to moderate, nothing stored. You can mute the ones you receive.\r\n\r\n## Drop-in BIOS selection\r\n\r\nFor games with several BIOS versions, the picker was starting on an arbitrary\r\none and, if you pressed Exit instead of choosing, it published your room anyway.\r\nIt now starts on the game's default BIOS, and Exit cancels the whole thing.\r\n\r\n## Smaller things\r\n\r\n- Dialogs start with a sensible button selected, so a gamepad can go through\r\n  NetPlay without touching the screen. Disconnect is never the one selected,\r\n  and it now sits at the bottom of the menu, away from the rest.\r\n- The public room board shows the busiest countries on a line of its own.\r\n\r\n## Both devices must be updated\r\n\r\nThe network protocol changed. An updated device and an old one will refuse each\r\nother when connecting, which is deliberate: the alternative is a session that\r\nlooks fine and slowly falls apart.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "mame4droid",
+        "mame4droid_neogeo"
+      ],
+      "contentHash": "7344deab8263adf19836264b2ff366a6f1b7857a0706aab13e6a5d4a5edef292",
+      "translationPending": false
+    },
+    {
+      "id": "137069",
+      "title": "【家用机】KytyPS5 r260916",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260916",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T09:32:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137069-consoles-de-salon-kytyps5-r260916/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
+      "officialUrl": "https://github.com/Nmzik/KytyPS5",
+      "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•模拟VRSQRTPS时保护Windows来宾红色区域\n•模拟VRSQRTPS指令\n• PS5几何着色器中的风扇三角形支持\n•修复Json2整数读取\n•将AMD CPU补丁设置为可选\n•简化光纤所有权并保留小型访客堆栈\n\n（从此分叉编译的临时版本正在等待正式发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- Protect Windows guest red zones when emulating VRSQRTPS\n- Emulate VRSQRTPS instruction\n- Support triangle fans in PS5 geometry shaders\n- Fix Json2 integer reads\n- Make AMD CPU patch optional\n- Simplify fiber ownership and preserve small guest stacks\n\n(Temporary build compiled from this fork pending official releases.)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "kytyps5_pc"
+      ],
+      "contentHash": "020a0b21dfb93648861267d018335b52e767d7674ff11ccc9664ed2f061377e1",
+      "translationPending": false
+    },
+    {
+      "id": "137067",
+      "title": "【其他】WideMelon v1.0.3",
+      "originalTitle": "[Consoles portables] WideMelon v1.0.3",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T09:30:10Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137067-consoles-portables-widemelon-v1-0-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/widemelon-scaled.png",
+      "officialUrl": "https://github.com/pruefsumme/widemelon",
+      "summary": "WideMelon是一款基于melonDS的任天堂DS模拟器，可在真正的全景（从4: 3到32: 9 ）中显示3D游戏，而无需拉伸2D界面、菜单、精灵、视频或触摸屏 . Windows、macOS和Linux上的免费开源（ GPL-3.0 ） ，它管理从1 ×到8 ×的渲染比例（全屏，整数缩放） ，将主屏幕与最近的游戏结合起来，保存状态和拖放，使用单独的melonDS配置运行并保存，并提供偏移底部屏幕和 智能手机上的可定制控件。",
+      "content": "WideMelon是一款基于melonDS的任天堂DS模拟器，可在真正的全景（从4: 3到32: 9 ）中显示3D游戏，而无需拉伸2D界面、菜单、精灵、视频或触摸屏\n. Windows、macOS和Linux上的免费开源（ GPL-3.0 ） ，它管理从1 ×到8 ×的渲染比例（全屏，整数缩放） ，将主屏幕与最近的游戏结合起来，保存状态和拖放，使用单独的melonDS配置运行并保存，并提供偏移底部屏幕和\n智能手机上的可定制控件。",
+      "originalContent": "WideMelon est un émulateur Nintendo DS basé sur melonDS qui affiche les jeux 3D en vrai panoramique (du 4:3 au 32:9) sans jamais étirer les interfaces 2D, les menus, les sprites, les vidéos ni l'écran tactile. Gratuit et open-source (GPL-3.0) sur Windows, macOS et Linux, il gère une échelle de rendu de 1× à 8× (plein écran, integer scaling), intègre un écran d'accueil avec jeux récents, save states et drag & drop, s'exécute avec une configuration et des sauvegardes séparées de melonDS, et offre la possibilité de déporter l'écran inférieur et ses commandes personnalisables sur un smartphone.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "ab7e8287c2104c6c18e83b1ae1020f0f79c636bb35ffd56b0eff5ddb45f4b437",
+      "translationPending": false
+    },
+    {
+      "id": "137065",
+      "title": "【家用机】RPCN v1.11",
+      "originalTitle": "[Consoles de salon] RPCN v1.11",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T09:29:22Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137065-consoles-de-salon-rpcn-v1-11/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/09/rpcn.png",
+      "officialUrl": "https://github.com/RipleyTom/rpcn",
+      "summary": "这是一个在线研究和通信网络（ RPCN ） ，即与RPCS3一起使用的配对服务器。 因此， GalCiv推出了RPCS3中的Netplay ，该公司开发了RPCN ，这是一款开源服务器，可模拟在PlayStation 3上完成的P2P匹配。RPCN还可用于与需要专用服务器进行多人功能的游戏的专用服务器进行通信 。在这方面，除非设置了风扇创建的私人服务器，否则需要自定义服务器的游戏将无法工作。 这超出了模拟器的范围，需要由社区开发。",
+      "content": "这是一个在线研究和通信网络（ RPCN ） ，即与RPCS3一起使用的配对服务器。\n因此， GalCiv推出了RPCS3中的Netplay ，该公司开发了RPCN ，这是一款开源服务器，可模拟在PlayStation 3上完成的P2P匹配。RPCN还可用于与需要专用服务器进行多人功能的游戏的专用服务器进行通信\n。在这方面，除非设置了风扇创建的私人服务器，否则需要自定义服务器的游戏将无法工作。 这超出了模拟器的范围，需要由社区开发。\n\n此版本中的更改包括：\n\n已添加\n•添加了GetTss命令\n\n固定\n• FlexBy ： Sonic 4 Ep1 & 2和Sonic CD的固定记分牌排序\n• rjuniorfl-afk ：已修复is_slot_private\n\n其他\n• Clippy清理\n•更新的依赖项\n\n此处为兼容性列表。\n在此了解更多信息。",
+      "originalContent": "Il s'agit d'un réseau de recherche et de communication en ligne (RPCN), c'est à dire un serveur de matchmaking destiné à être utilisé avec RPCS3.\n\nLe Netplay dans RPCS3 est donc introduit par GalCiv, qui a développé RPCN, un serveur open-source qui émule le match-making P2P réalisé sur la PlayStation 3. RPCN peut également être utilisé pour communiquer avec des serveurs privés pour les jeux qui nécessitent un serveur dédié pour les fonctions multijoueurs. À cet égard, les jeux qui nécessitent un serveur personnalisé ne fonctionneront pas, à moins qu'un serveur privé créé par des fans ne soit mis en place. Cela sort du cadre de l'émulateur et devra être développé par la communauté.\n\nLes changements dans cette version sont:\n\nAdded\n- Added GetTss command\n\nFixed\n- FlexBy: Fixed scoreboard ordering for Sonic 4 Ep1&2 and Sonic CD\n- rjuniorfl-afk: Fixed is_slot_private\n\nMisc\n- Clippy cleanup\n- Updated dependencies\n\nListe de compatibilité ici.\nPlus d'infos ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "5c18f2f0f8e76a726a5256126521fbd128fd80a1dbc62fa7c807247c2a2ce174",
+      "translationPending": false
+    },
+    {
+      "id": "137063",
+      "title": "【家用机】PS5PCEM v0.3.1 beta 1",
+      "originalTitle": "[Consoles de salon] PS5PCEM v0.3.1 beta 1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T09:27:30Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137063-consoles-de-salon-ps5pcem-v0-3-1-beta-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ps5p.png",
+      "officialUrl": "https://github.com/iStark/PS5PCEM",
+      "summary": "PS5PCEM是一个实验性的PlayStation 5模拟器和互操作性研究项目，由Zig开发。 这包括x86-64代码的本地执行，加载解密的PS5可执行文件，执行AGC图形命令，将RDNA2着色器转换为SPIR-V ，以及通过Vulkan渲染。 功能 •在Windows上本机执行来宾x86-64代码。 •加载ELF/自执行文件、重新定位、模块链接和TLS管理。 •多个PS5固件功能的HLE。 •执行GPU的AGC命令流程。",
+      "content": "PS5PCEM是一个实验性的PlayStation 5模拟器和互操作性研究项目，由Zig开发。 这包括x86-64代码的本地执行，加载解密的PS5可执行文件，执行AGC图形命令，将RDNA2着色器转换为SPIR-V ，以及通过Vulkan渲染。\n\n功能\n•在Windows上本机执行来宾x86-64代码。\n•加载ELF/自执行文件、重新定位、模块链接和TLS管理。\n•多个PS5固件功能的HLE。\n•执行GPU的AGC命令流程。\n•将RDNA2着色器逐渐转换为SPIR-V。\n•具有渲染目标、深度/模板和MSAA管理的Vulkan渲染。\n•管理GPU内存和纹理，包括detiling。\n• VideoOut Vulkan支持。\n•通过FFmpeg播放音频和H.264/AAC。\n•通过HID支持DualSense和DualShock控制器。\n• XInput支持和键盘。\n•按标题管理备份。\n•具有本地封面、控制器配置文件和直接游戏启动的本机Windows启动器。\n•发射器中最多可以保存八个最近的标题。\n•一些游戏现在可以玩了，有些已经可以玩了，但兼容性、性能、图形、音频和稳定性仍然取决于游戏和硬件。\n\n达到不同操作级别的游戏\n•《终结者2D ：无缘无故》\n• Jets 'n' Guns 2\n• Asterix & Obelix ：全力以赴！\n• The Precinct\n•猫咪任务III\n•侏罗纪公园经典游戏系列\n\n项目提供的渔获量和结果是开发结果，不一定构成一般兼容性的指示。\n\n配置\n• Windows 10 2004或更高版本。\n• x86-64处理器。\n• Vulkan 1.2.兼容GPU\n\n开发\nPS5PCEM以Zig开发，并在GNU GPL v3或更高版本的许可证下分发。\n\n该项目不为控制台提供游戏、PS5固件、密钥或系统库。\n\n项目状态\nPS5PCEM仍在积极开发中。PS5模拟仍然不完整，游戏之间的兼容性差异很大。但是，该项目已经具备了PS5架构的几个重要元素的功能实现，包括x86-64执行、RDNA2/AGC图形系统、着色器转换和\nndu Vulkan.\n\n变更内容：\n\n•通过将内部版本固定到x86-64-v3 ，修复了没有AVX-512的CPU上的启动崩溃\n• Ghost of Yōtei现在在0.6 FPS渲染完整的3D场景和UI\n• Dreaming Sarah现在可以以60 FPS的速度完全播放和完成\n• Launcher现在检查Vulkan支持并提供明确的本地化诊断\n•添加了速度/图形渲染预设和1080p分辨率首选项\n•将每帧的访客批量映射延迟从1000毫秒减少到6-11毫秒\n•应用了超过77个性能和着色器渲染修复，包括MIP金字塔\n•恢复了在猫任务III中导致停滞的内存映射优化",
+      "originalContent": "PS5PCEM est un émulateur PlayStation 5 expérimental et un projet de recherche sur l’interopérabilité, développé en Zig. Il permet notamment l’exécution native de code x86-64, le chargement d’exécutables PS5 déchiffrés, l’exécution de commandes graphiques AGC, la traduction de shaders RDNA2 vers SPIR-V et le rendu via Vulkan.\n\nFonctionnalités\n- Exécution native du code x86-64 invité sous Windows.\n- Chargement des exécutables ELF/SELF, relocation, liaison des modules et gestion du TLS.\n- HLE de plusieurs fonctions du firmware PS5.\n- Exécution des flux de commandes AGC pour le GPU.\n- Traduction progressive des shaders RDNA2 vers SPIR-V.\n- Rendu Vulkan avec gestion des render targets, du depth/stencil et du MSAA.\n- Gestion de la mémoire GPU et des textures avec notamment le detiling.\n- Prise en charge du VideoOut Vulkan.\n- Audio hôte et lecture H.264/AAC via FFmpeg.\n- Support des contrôleurs DualSense et DualShock via HID.\n- Support XInput et clavier.\n- Gestion des sauvegardes par titre.\n- Lanceur Windows natif avec jaquettes locales, profils de contrôleurs et lancement direct des jeux.\n- Jusqu’à huit titres récents peuvent être conservés dans le lanceur.\n- Plusieurs jeux atteignent désormais le gameplay et certains sont déjà jouables, mais la compatibilité, les performances, les graphismes, l’audio et la stabilité restent variables selon les titres et le matériel.\n\nJeux ayant atteint différents niveaux de fonctionnement\n- Terminator 2D: No Fate\n- Jets 'n' Guns 2\n- Asterix & Obelix: Slap Them All!\n- The Precinct\n- Cat Quest III\n- Jurassic Park Classic Games Collection\n\nLes captures et résultats présentés par le projet sont des résultats de développement et ne constituent pas nécessairement des indications de compatibilité générale.\n\nConfiguration\n- Windows 10 version 2004 ou ultérieure.\n- Processeur x86-64.\n- GPU compatible Vulkan 1.2.\n\nDéveloppement\nPS5PCEM est développé en Zig et est distribué sous licence GNU GPL v3 ou ultérieure.\n\nLe projet ne fournit ni jeux, ni firmware PS5, ni clés, ni bibliothèques système de la console.\n\nÉtat du projet\nPS5PCEM est toujours en développement actif. L’émulation PS5 reste incomplète et la compatibilité varie fortement selon les jeux. Le projet dispose néanmoins déjà d’une implémentation fonctionnelle de plusieurs éléments importants de l’architecture PS5, notamment l’exécution x86-64, le système graphique RDNA2/AGC, la traduction des shaders et le rendu Vulkan.\n\nLes changements:\n\n- Fixed launch crash on CPUs without AVX-512 by pinning builds to x86-64-v3\n- Ghost of Yōtei now renders a full 3D scene and UI at 0.6 FPS\n- Dreaming Sarah is now fully playable and completable at 60 FPS\n- Launcher now checks Vulkan support and provides clear localized diagnostics\n- Added Speed/Graphics rendering presets and a 1080p resolution preference\n- Reduced guest batch-mapping delays per frame from 1000 ms down to 6-11 ms\n- Applied over 77 performance and shader rendering fixes, including mip pyramids\n- Reverted a memory mapping optimization that caused stalls in Cat Quest III",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "984f19b9e0ae683b32cdd3e2e07f3db65b1bfdd15943f710adc5ebbf45566bdd",
+      "translationPending": false
+    },
+    {
+      "id": "137061",
+      "title": "【电脑】POM2 v0.9.3",
+      "originalTitle": "[Ordi.] POM2 v0.9.3",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T09:19:58Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137061-ordi-pom2-v0-9-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/pom2-emu.png",
+      "officialUrl": "https://github.com/habib256/pom2/",
+      "summary": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。 它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。",
+      "content": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。\n它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。\n在其特点中， POM2提供复合NTSC渲染、CRT/磷光体效果、体素3D视图、倒带、许多扩展卡的仿真，如Mockingboard、Phasor、Super Serial Card、CFFA 2.0和U Ethernet ，以及对ImageWriter II打印机的支持。\n模拟器支持多种格式的Apple II软盘和媒体（ .dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv ） ，并集成了对磁盘II的忠实模拟。它还通过以太网提供网络支持，甚至可以通过WebAssembly直接在浏览器中运行。",
+      "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "330b8138df020586282140cbf72a32584e8bfb1fcf871a89140390e91dc37238",
+      "translationPending": false
+    },
+    {
+      "id": "137059",
+      "title": "【家用机】PS5rs v0.6.0",
+      "originalTitle": "[Consoles de salon] PS5rs v0.6.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-16T09:18:59Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137059-consoles-de-salon-ps5rs-v0-6-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ps5rs.png",
+      "officialUrl": "https://github.com/claimore22/ps5rs",
+      "summary": "PS5rs是用Rust编写的PlayStation 5二进制分析、虚拟加载和仿真框架。它尤其支持自身、ELF和PRX格式的分析、NID导入的解析以及PS5可执行文件的虚拟加载 。它还包含一个主机端仿真器，能够在PC的x86-64处理器上运行PS5二进制文件，并通过Rust中的HLE模块处理对系统库的调用。该项目还提供不同的分析和报告工具。",
+      "content": "PS5rs是用Rust编写的PlayStation 5二进制分析、虚拟加载和仿真框架。它尤其支持自身、ELF和PRX格式的分析、NID导入的解析以及PS5可执行文件的虚拟加载\n。它还包含一个主机端仿真器，能够在PC的x86-64处理器上运行PS5二进制文件，并通过Rust中的HLE模块处理对系统库的调用。该项目还提供不同的分析和报告工具。",
+      "originalContent": "PS5rs est un framework d’analyse de binaires, de chargement virtuel et d’émulation PlayStation 5 écrit en Rust. Il prend notamment en charge l’analyse des formats SELF, ELF et PRX, la résolution des imports NID et le chargement virtuel des exécutables PS5. Il intègre également un émulateur côté hôte capable d’exécuter les binaires PS5 sur le processeur x86-64 du PC et de gérer les appels aux bibliothèques système via des modules HLE en Rust. Le projet fournit également différents outils d’analyse et de génération de rapports.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "390b0ff84ef74378a4edfc29ccf93c16f4866a5325ffa785a1be96ebb05c31a7",
+      "translationPending": false
+    },
+    {
+      "id": "137057",
+      "title": "【工具】OpenROM v2.7.2",
+      "originalTitle": "[Utilitaires Divers] OpenROM v2.7.2",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-16T09:17:51Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137057-utilitaires-divers-openrom-v2-7-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/OpenROM.png",
+      "officialUrl": "https://github.com/M5Devs/OpenROM/",
+      "summary": "OpenROM是一个通用的,免费的和开放源代码的软件套件,专门用于转录ROM的转换。 它的设计是为了取代专有和零散的工具,完全在当地工作(100%离线),没有任何数据收集。 界面和Ergonomics • 美学游戏:提供在Flutter下开发的现代暗界面,灵感来自PS5和Xbox菜单,其中包含一个仪表板、每张ROM和 平台徽章。",
+      "content": "OpenROM是一个通用的,免费的和开放源代码的软件套件,专门用于转录ROM的转换。 它的设计是为了取代专有和零散的工具,完全在当地工作(100%离线),没有任何数据收集。\n\n界面和Ergonomics\n• 美学游戏:提供在Flutter下开发的现代暗界面,灵感来自PS5和Xbox菜单,其中包含一个仪表板、每张ROM和 平台徽章。\n• 自定义:提议若干综合主题(Cyberpunk、终端、最小值、赌博)以及通过JSON文件创建这些主题的可能性。\n• 流体处理:对拖放文件和文件夹的本地支持被隔离或分组(批处理)。\n\n性能和技术特征\n• 完整转换矩阵:支持主要格式(ISO、BIN、CUE、GDI、IMG、ECM、CHD、CSO、ZSO、XISO、RVZ、WIA、WBFS、G)的20多个转换路线 (中文(简体) ).\n• 智能检测:精确识别带数字签名(魔法字节)的控制台(PS1,PS2,PSP,Xbox,GameCube,Wii,Dreamcast)并分析目标 cHD(v4/v5),用于区分CD和DVD.\n• 生成与验证:自动为BIN文件创建缺失的CUE文件,并检查通过chdman生成的HDC文件的完整性。\n\n高级特性\n• 终端和自动化:在转换过程中实时纳入一个日志,并提供一个完整的自动化命令行工具(开放核心) 和脚本。\n\n这些变化是:\n\n固定 — Linux/macOS 不允许使用( 所有受影响的用户)\n固定——PS2/GameCube/Wii/Xbox CHD上的编码错误(自然压缩)",
+      "originalContent": "OpenROM est une suite logicielle universelle, gratuite et open-source dédiée à la conversion de ROMs rétro. Conçue pour remplacer les outils propriétaires et fragmentés, elle fonctionne entièrement en local (100 % hors ligne) sans aucune collecte de données.\n\nInterface et Ergonomie\n- Esthétique Gaming : Propose une interface sombre moderne développée sous Flutter, inspirée des menus PS5 et Xbox, intégrant un tableau de bord, des cartes pour chaque ROM et des badges de plateforme.\n- Personnalisable : Propose plusieurs thèmes intégrés (Cyberpunk, Terminal, Minimal, Gaming) et la possibilité d'en créer via des fichiers JSON.\n- Prise en main fluide : Prise en charge native du glisser-déposer pour les fichiers et dossiers isolés ou groupés (traitement par lot).\n\nPerformances et Fonctionnalités Techniques\n- Matrice de conversion complète : Prend en charge plus de 20 parcours de conversion parmi les formats majeurs (ISO, BIN, CUE, GDI, IMG, ECM, CHD, CSO, ZSO, XISO, RVZ, WIA, WBFS, GCZ).\n- Détection intelligente : Identifie avec précision les consoles (PS1, PS2, PSP, Xbox, GameCube, Wii, Dreamcast) grâce aux signatures numériques (magic bytes) et analyse les en-têtes CHD (v4/v5) pour différencier CD et DVD.\n- Génération et Vérification : Crée automatiquement les fichiers CUE manquants pour les fichiers BIN et vérifie l'intégrité des fichiers CHD générés via chdman.\n\nFonctionnalités Avancées\n- Terminal et Automatisation : Intègre un journal de bord en temps réel pendant la conversion et propose un outil en ligne de commande complet (openrom-core) pour l'automatisation et les scripts.\n\nLes changements sont:\n\nFixed — Permission denied on Linux/macOS (all users affected)\nFixed — Codec error on PS2/GameCube/Wii/Xbox CHD (Normal compression)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "07ab1a1e7bfc256f3a52b430a7f79daff24596d402b8e667affe2d5164491d74",
+      "translationPending": false
+    },
+    {
+      "id": "137055",
+      "title": "【家用机】Lazuli (2026/09/16)",
+      "originalTitle": "[Consoles de salon] Lazuli (2026/09/16)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T09:15:50Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137055-consoles-de-salon-lazuli-2026-09-16/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/lazuli2.png",
+      "officialUrl": "https://github.com/vxpm/lazuli",
+      "summary": "Lazuli是一个实验性的GameCube仿真器,用Rust写成,配备基于Cranelift,wgpu渲染,DSP LLE,集成的IPL HLE,调试接口的JIT PowerPC 完成,可以推出几款商业游戏,但仍处于初期阶段,需要Rust Lightly和Just来编译。",
+      "content": "Lazuli是一个实验性的GameCube仿真器,用Rust写成,配备基于Cranelift,wgpu渲染,DSP LLE,集成的IPL HLE,调试接口的JIT PowerPC 完成,可以推出几款商业游戏,但仍处于初期阶段,需要Rust Lightly和Just来编译。",
+      "originalContent": "Lazuli est un émulateur GameCube expérimental écrit en Rust, doté d’un JIT PowerPC basé sur Cranelift, d’un rendu wgpu, d’un DSP LLE, d’un IPL HLE intégré, d’une interface de debug complète, capable de lancer plusieurs jeux commerciaux mais encore en phase préliminaire, nécessitant Rust nightly et Just pour la compilation.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d9c6198897e96e3926bd5dd2d7e2146d45dad7786c809c7874d79a53b482cc89",
+      "translationPending": false
+    },
+    {
+      "id": "137051",
+      "title": "【工具】dgVoodoo v2.87.5",
+      "originalTitle": "[Utilitaires Divers] dgVoodoo v2.87.5",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-16T05:44:49Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137051-utilitaires-divers-dgvoodoo-v2-87-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/dgvoodoo-hdpng.png",
+      "officialUrl": "http://dege.fw.hu/",
+      "summary": "dgVoodoo是一个包装机幻灯片,但也是一种DirectDraw/Direct3D包装机(v1至7). 8.1 和9)改为Direct3D11/12. 为了大大简化,它模仿了能够管理Glide属性库的3DFX卡(Glide). 2.11胶片 2.45胶片 3.1 和Napalm),但也有旧的DD/D3D v1-v9兼容图形卡。",
+      "content": "dgVoodoo是一个包装机幻灯片,但也是一种DirectDraw/Direct3D包装机(v1至7). 8.1 和9)改为Direct3D11/12. 为了大大简化,它模仿了能够管理Glide属性库的3DFX卡(Glide). 2.11胶片 2.45胶片 3.1 和Napalm),但也有旧的DD/D3D v1-v9兼容图形卡。 有什么意义? 玩一些在新图形卡上起作用的旧游戏(因为已经为DirectX的Glide或旧版本优化了,而不是为其他人) sPI,如OpenGL或DirectX v11或v12)或者简单地使用同样使用Glide的仿真器。 此版本为Windows Vista/7/8/10/11,安装了DirectX 11(或更高),您必须拥有图形卡(DirectX级别兼容) 10.1)支持Shaders Model v4或v5.\n\n您需要这些库来启用某些图形功能。\n请注意,一些游戏的补丁在此可用。\n\n变化 :\n\n备注:\n我释放这个构件是因为前一个构件被MS Defender检测到,而且他们不会以什么理由去除检测(?).\n· 病毒总数比率目前为1/68,维权者不检测文件(但猜想明天将完全改变,如往常)\n• 为NV GPU至少使用驱动程序版本 616.56 避免32位 D3D12 崩溃( 经我测试, 现在稳定, 没有 GPU 崩溃)\n• 确保\"重力\"32位游戏(迟到的D3D9)的操作被补丁为4GBware:默认的2GB地址空间与现代的GPU驱动程序(甚至dgVo)有很大关系。 如果它老了,游戏就会崩溃\n^ 如果在游戏中遇到渲染错误,请尝试GeForce 9800GT虚拟视频卡(带有VRAM的属性量). 默认的内部一个显示过多的特性和能力(如D32 Z-buffers),并不是所有的游戏都正确处理。\n\n变化 :\n• 修复所有来自Win11 DX12调试层的未验证错误信息\n• 默认启用直接Ext\\D3D12Bounds检查\n• 隐藏选项, DirectExt\\ AlternativeScaling 现已曝光 - 尝试使用强制解析的对齐后处理效果\n• 以强制解析方式在 D3D9 中固定一个视图错误",
+      "originalContent": "dgVoodoo est un glide wrapper mais aussi un wrapper DirectDraw/Direct3D (v1 à 7, 8.1 et 9) vers Direct3D11/12. Pour simplifier grandement, ça émule une carte 3DFX qui va pouvoir gérer la bibliothèque propriétaire Glide (Glide 2.11, Glide 2.45, Glide 3.1 et Napalm) mais également les vieilles cartes graphiques compatibles DD/D3D v1 à v9. Quel est l'intérêt ? Jouer aux anciens jeux qui fonctionnent mal sur les nouvelles cartes graphiques (parce qu'ils ont été optimisés pour le Glide ou de vieilles versions de DirectX et non pour d'autres API telles que OpenGL ou DirectX v11 ou v12) ou tout simplement utiliser un émulateur qui lui aussi utilise le Glide. Cette version est destiné à Windows Vista/7/8/10/11 avec DirectX 11 (ou supérieur) d'installé et vous devez posséder une carte graphique (compatible DirectX Level 10.1) supportant les Shaders Model v4 ou v5.\n\nVous aurez besoin de ces bibliothèques pour activer certaines fonctions graphiques.\nA noter que des patchs pour certains jeux sont disponibles ici.\n\nLes changements:\n\nRemarks:\n- I release this build because the previous one is detected by MS Defender and they don't remove the detection for whatever reason(??)\n- VirusTotal ratio is 1/68 at the moment and Defender does not detect the files (but I guess it will completely change by tomorrow, as usual)\n- For NV GPU's use driver version of at least 616.56 to avoid 32 bit D3D12 crashes (tested by me, it is stable now, no GPU crashes)\n- Make sure that the executable of \"heavy\" 32 bit games (late D3D9) are patched to be 4GB aware: the default 2GB address space is very tight with a modern GPU driver (and even dgVoodoo has an overhead) - if it's eaten up then the game simply crashes.\n- If you experience rendering errors in a game, try the GeForce 9800GT virtual video card (with the proper amount of VRAM). The default internal one exposes too many features and capabilities (like D32 Z-buffers), and not all games handle it properly.\n\nChanges:\n- Fixed all of the undervalidated false error messages coming from the Win11 DX12 debug layer\n- Option DirectExt\\D3D12BoundsChecking is enabled by default\n- A hidden option, DirectExt\\AlternativeScaling is now exposed - try it for misalignmented postprocess effects with forced resolution\n- Fixed a viewport bug in D3D9 with forced resolution",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "082ee9107ae6b973762d03e8afe010313c774b99684c786b7fe0a8a6b7cc037c",
       "translationPending": false
     },
     {
@@ -106,30 +395,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx1-nightly-20260915-12",
-      "title": "【Android更新】ARMSX1 nightly-20260915.12",
-      "originalTitle": "ARMSX1 nightly-20260915.12 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-15T13:20:43Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260915.12",
-      "imageUrl": "asset://assets/emulators/armsx1.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 nightly-20260915.12，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260915.12。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
-      "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx1"
-      ],
-      "contentHash": "e23a5d5ff791980947ce678096a15e200b05291fa61fe3dae9498746ff7e000e",
-      "translationPending": false
-    },
-    {
       "id": "android-release-psx2_izzy-1-3-0",
       "title": "【Android更新】PSX2 1.3.0",
       "originalTitle": "PSX2 1.3.0 Android release",
@@ -197,30 +462,6 @@
         "emucorex"
       ],
       "contentHash": "b85a8db8fd05caa8a296330d453e8bad117c38108040cf0efd14419bcdab741d",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260915",
-      "title": "【Android更新】ARMSX2 nightly-20260915",
-      "originalTitle": "ARMSX2 nightly-20260915 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-15T08:23:11Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260915",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260915，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260915。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• iOS:安装 Rust iOS 目标,使 CI 建立遮蔽器\n• iOS:翻译新的阴影文字\n• iOS:在游戏期间在 Per-Game 设置中显示 CRC\n• iOS:将 TV/CRT 显示器移至过滤器并重命名缓存按钮\n• iOS:显示可读的滑动器名称和普通阴影器错误\n• iOS:删除下载的荫影包并保存预设\n• iOS:在拾件上关闭预设列表并选择保存的预设\n• iOS:当游戏有自己的遮阳器时,在暂停菜单中说\n• iOS:在应用程序更新后保留已保存的阴影预设\n• iOS:将预设放在Shaders页面上,并使用简单的措辞\n• iOS:从下载列表中直接选择一个下载的阴影\n• iOS:文件启动链接和库导出\n• iOS:翻译复制发射链接\n• iOS:库导出外部文件夹中的列表游戏\n• iOS:再次导入在应用程序中打开的文件\n• iOS:在启动链接取代运行中的游戏之前询问\n• iOS:从长压菜单上复制游戏的发布链接\n• iOS:查看应用程序本身的场景,无论哪一个先出现\n• iOS:停止在每个场景连接上泄露场景配置\n• iOS:从s_gs_keys读取黑客索赔密钥,他们现在居住的地方\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...736f53fa1c3c8e56a90ad53bd61f84260d09e1f0",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: install the Rust iOS target so CI builds keep shaders\n- iOS: translate the new shader wording\n- iOS: show the CRC in Per-Game Settings during a game\n- iOS: move TV/CRT Shader to Filtering and rename the cache button\n- iOS: show readable slider names and plain shader errors\n- iOS: delete downloaded shader packs and saved presets\n- iOS: close the preset list on a pick and select a saved preset\n- iOS: say in the pause menu when a game has its own shader\n- iOS: keep saved shader presets working after an app update\n- iOS: put Preset first on the Shaders page and use plain wording\n- iOS: pick a downloaded shader straight from the download list\n- iOS: document launch links and the library export\n- iOS: translate Copy Launch Link\n- iOS: list games from external folders in the library export\n- iOS: import files opened in the app again\n- iOS: ask before a launch link replaces a running game\n- iOS: copy a game's launch link from its long-press menu\n- iOS: look up the app's own scene, not whichever one comes first\n- iOS: stop leaking a scene configuration on every scene connect\n- iOS: read the hack claim keys from s_gs_keys, where they live now\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...736f53fa1c3c8e56a90ad53bd61f84260d09e1f0",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "3f8dded9995d44fc2320bdc16b9815f39a114aca8410f9532f224ce21ac55d58",
       "translationPending": false
     },
     {
@@ -389,30 +630,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "2c84cf8d8e99f30d2c1c7fcea4caab379141faa0677afbb176c39e8c17f40939",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-14T20:07:20Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月14日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n•支持Konami VRC2和VRC4 （映射器21、22、23、25 ）\n• Sunsoft FME-7 （映射器69 ）支持\n•应用内调色板编辑器，支持实时预览和导出\n•设置中的搜索字段\n•退出游戏或退出NESd时，现在自动保存也会保存\n•大多数屏幕现在显示当前输入方法的输入提示\n• “上一个选项卡”和“下一个选项卡”操作现在可以浏览最近的ROM并保存状态\n•现在可以使用键盘或游戏手柄更改所有设置\n\n已更改\n•主菜单现在变暗，并在ROM加载时显示磁贴上的微调器\n•改进了游戏手柄和键盘菜单导航\n•提高macOS上的流程优先级\n•提高了Android上的文件选取器列表速度\n•隐私政策现在描述了网站的页面浏览计数器\n\n固定\n•电池保存、保存状态和缩略图现在遵循重命名的ROM文件\n•大于256 KiB的UNROM （映射器2 ）游戏现在可以到达所有银行\n•短Zapper触发拉动不再被忽略\n•两个具有相同文件名的ROM不再共享其保存和保存状态\n•秘籍和断点现在遵循重命名的ROM文件\n•两个具有相同文件名的ROM不再共享其断点\n•两个文件名相同的ROM现在都保留在最近的ROM列表中\n•退出NESd不再丢失正在写入的SRAM\n•当ROM加载失败时，文件选取器将保持打开状态\n•修复了大型目录中Android上的文件选取器冻结问题\n• Web版本现在在纯HTTP上有声音\n•固定APU长度计数器停止和重新加载写入定时\n•固定DMC DMA空闲周期读数\n•修复了精灵溢出标志设置定时",
-      "originalContent": "### Added\n- Konami VRC2 and VRC4 (mappers 21, 22, 23, 25) support\n- Sunsoft FME-7 (mapper 69) support\n- In-app palette editor with live preview and export\n- Search field in Settings\n- Auto save now also saves when quitting a game or quitting NESd\n- Most screens now show input hints for the current input method\n- The Previous Tab and Next Tab actions now page through the recent ROMs and save states\n- All settings can now be changed with the keyboard or a gamepad\n\n### Changed\n- The main menu now dims and shows a spinner on the tile while its ROM loads\n- Improved gamepad and keyboard menu navigation\n- Increased process priority on macOS\n- Improved file picker list speed on Android\n- The privacy policy now describes the website's page-view counter\n\n### Fixed\n- Battery saves, save states and thumbnails now follow a renamed ROM file\n- UNROM (mapper 2) games larger than 256 KiB now reach all of their banks\n- Short Zapper trigger pulls are no longer ignored\n- Two ROMs with the same file name no longer share their saves and save states\n- Cheats and breakpoints now follow a renamed ROM file\n- Two ROMs with the same file name no longer share their breakpoints\n- Two ROMs with the same file name now both stay in the recent ROM list\n- Quitting NESd no longer loses the SRAM save it was writing\n- The file picker now stays open when a ROM fails to load\n- Fixed the file picker freezing on Android in large directories\n- The web version now has sound on plain HTTP\n- Fixed APU length counter halt and reload write timing\n- Fixed DMC DMA idle cycle reads\n- Fixed the sprite overflow flag set timing",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "ca8f2d1faab36554191f84cbb0be469fe53d2b5dd429a65930bbab910d6a5ed7",
       "translationPending": false
     },
     {
@@ -4744,31 +4961,6 @@
         "snes9x_core"
       ],
       "contentHash": "759d972f6ba2df51deced4fbf13bcfa6e909b6890b57f7a2bae21a00651169be",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-mame4droid-1-40-6",
-      "title": "【Android更新】MAME4droid 1.40.6",
-      "originalTitle": "MAME4droid 1.40.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T23:52:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/seleuco/MAME4droid-Current/releases/tag/v1.40.6",
-      "imageUrl": "asset://assets/emulators/mame4droid.png",
-      "officialUrl": "https://github.com/seleuco/MAME4droid-Current",
-      "summary": "MAME4droid 发布 Android 新版本 1.40.6，发布日期为2026年08月27日。点击查看官方版本信息与更新说明。",
-      "content": "MAME4droid 已发布 Android 最新版本 1.40.6。\n\n发布日期：2026年08月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加NetPlay公共房间\n\n到目前为止， NetPlay在互联网上工作，没有帐户，没有中继，也没有值得信赖的服务。 它不能做的一件事就是找到你的对手：你仍然必须认识某人，并用手与他们交换IP地址。\n公共房间缺了一半。 这是一个可选的面板，体验达人可以在其中宣传他们正在举办的游戏，因此任何拥有相同ROM的人都可以轻触并连接。\n它*不是*是一个继电器。 董事会介绍两名玩家，然后让路--比赛仍然直接在两台设备之间进行，就像以前一样，没有任何关于它的信息通过我的任何服务器。\n\n在白板上\n\n•房间密码。每个房间都有一个短代码，您可以传递给朋友。\n•大头针房间。勾选*需要大头针* ，房间仍然显示，标记为受保护，但只有您告诉的人才能进入。PIN本身永远不会到达服务器—只有它的一个哈希才会到达。\n•颜色编码的连接预测。每个房间的绿色、琥珀色或红色，基于两台路由器的实际STUN测量值，而不是猜测值。两个无法通过的对称NAT显示红色并拒绝加入。\n•同一网络房间被标记，因此同一栋房子里有两台设备拨打局域网端，而不是外出上网。该匹配是在两个咸指纹之间进行的—任何设备的地址都不会透露给任何人。\n•加入前检查ROM。 应用程序会在您的ROM文件夹中查找游戏，并为丢失的文件命名，而不是让您加入并打破房东的房间。\n•无法使用的房间仍在列表中，但显示为灰色，而不是隐藏的。 即使此构建无法承受，知道匹配正在发生也是有价值的。\n\nDrop-in NetPlay\n等待某人出现曾经意味着盯着对话框屏幕。 现在，您可以勾选“立即开始” ，让任何人加入并简单地玩游戏。 当你这样做的时候，你的房间会留在黑板上，当有人声称它时，你的机器的状态就会被移交，你从那一刻起就一起继续下去。\n•当他们离开时，您会继续独自玩游戏，就好像NetPlay从未发生过一样。 再打开它，房间就恢复了。\n•仅回滚会话—使置入成为可能的状态传输在Lockstep中不存在。\n•在游戏中打开它可能会重新启动游戏，并且应用程序会在您提交之前发出警告。NetPlay在游戏启动时固定一组东西（您保存的设置和NVRAM ， Lua插件和作弊，声速， CHD的工作副本） ，其中没有一个可以应用于已运行的游戏\n。忽略它不会大声失败：两台机器只是在接下来的几分钟内漂移开来，没有错误可以指向。\n\n关于您的数据—简短的版本是没有任何\nMAME4droid由一人制作并赠送。 没有广告，没有解锁，没有订阅，也没有服务器预算。 Public Rooms是一个很好的折衷方案，它使找到对手成为可能：它在一个没有数据库的小型免费实例上运行，这对您没有任何影响。\n•选择加入。第一次询问您，如果您拒绝，我们永远不会联系董事会。手动NetPlay保持一如既往的工作状态。\n•您的地址绝不会写入日志。只有当你的房间空着时，它才会留在记忆中，交给加入你的一个玩家，然后与房间一起消失。服务器保留的会话记录根本不包含任何IP地址。\n•板上显示的地址没有人—甚至没有通过“相同的网络”徽章，这是两个盐渍指纹的比较。每次服务器启动时都会生成新鲜的盐，因此昨天的记录无法与今天的记录进行匹配，即使从内部也是如此。\n•无法识别您的设备。 没有帐户，没有登录，没有姓名，没有广告ID ，手机上没有其他会话可以识别的任何内容。 您的两次访问不会相互关联。\n•房间将在大约一米后过期……",
-      "originalContent": "## Added NetPlay Public Rooms\r\n\r\nUntil now, NetPlay worked over the internet with no account, no relay, and no service to trust. The one thing it could not do was find you an opponent: you still had to know someone already, and swap an IP address with them by hand.\r\n\r\n**Public Rooms** is that missing half. It's an optional board where hosts advertise the game they are hosting, so anyone with the same ROM can tap it and connect.\r\n\r\nWhat it is *not* is a relay. The board introduces two players and then steps out of the way — the match still runs directly between the two devices, exactly as it did before, and nothing about it passes through any server of mine. \r\n\r\n### On the board\r\n\r\n* **Room codes.** Every room gets a short code you can pass to a friend. \r\n* **PIN rooms.** Tick *Require PIN* and the room still appears, marked as protected, but only the people you told can get in. The PIN itself never reaches the server — only a hash of it does.\r\n* **A color-coded connection forecast.** Green, amber, or red per room, based on what STUN actually measured about both routers rather than a guess. Two symmetric NATs with no way through show red and refuse the join.\r\n* **Same-network rooms are flagged**, so two devices in one house dial the LAN side instead of going out to the internet and back. That match is made between two salted fingerprints — neither device's address is ever revealed to anyone.\r\n* **A ROM check before you join.** The app looks for the game in your ROMs folder and names the missing file, instead of letting you join and break the host's room.\r\n* Unusable rooms stay listed but greyed out rather than hidden. Knowing a match is happening is worth something even when this build cannot take it.\r\n\r\n### Drop-in NetPlay\r\n\r\nWaiting for someone to turn up used to mean staring at a dialog screen. Now you can tick **Start now, let anyone join** and simply play. Your room stays on the board while you do, and when somebody claims it, your machine's state is handed over and you carry on together from that exact moment.\r\n\r\n* When they leave, you keep playing on your own as if NetPlay had never happened. Open it again and the room goes back up.\r\n* Rollback sessions only — the state transfer that makes drop-in possible does not exist in Lockstep.\r\n* Switching it on mid-game may restart the game, and the app warns you before you commit. NetPlay pins a set of things the instant a game boots (your saved settings and NVRAM, Lua plugins and cheats, the sound rate, the working copy of a CHD) and not one of them can be applied to a game already running. Ignoring that does not fail loudly: the two machines just drift apart over the following minutes with no error to point at.\r\n\r\n### About your data — the short version is that there isn't any\r\n\r\nMAME4droid is made by one person and given away. No ads, nothing to unlock, nothing to subscribe to, and no budget for servers either. Public Rooms is a good compromise, and it is what makes finding an opponent possible at all: it runs on a tiny free instance with no database, which keeps nothing about you.\r\n\r\n* **It is opt-in.** You are asked the first time, and if you decline, the board is never contacted. Manual NetPlay keeps working exactly as it always has.\r\n* **Your address is never written to a log.** It lives in memory only while your room is up, is handed to the one player who joins you, and disappears with the room. The session records the server does keep contain no IP addresses at all.\r\n* **The board shows an address to nobody** — not even through the \"same network\" badge, which is a comparison of two salted fingerprints. The salt is generated fresh every time the server starts, so yesterday's records cannot be matched against today's even from the inside.\r\n* **Nothing identifies your device.** No account, no login, no name, no advertising ID, nothing stored on your phone that another session could recognize. Two visits from you are not linked to each other.\r\n* **Rooms expire in about a m…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "mame4droid",
-        "mame4droid_neogeo"
-      ],
-      "contentHash": "50dd97cbb6be9114b810da4c7d8f94b25a650abf53d37e61eb2727b5ab781810",
       "translationPending": false
     },
     {
