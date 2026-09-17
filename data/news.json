@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T17:17:19.958036Z",
+  "generatedAt": "2026-09-17T05:19:05.812310Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,96 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx2-nightly-20260916",
+      "title": "【Android更新】ARMSX2 nightly-20260916",
+      "originalTitle": "ARMSX2 nightly-20260916 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T20:58:23Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260916",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260916，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260916。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• iOS:翻译 RetroArch Slang 阴影消息\n• iOS:当阴影预设无法编译时说\n• iOS:在快速选中预设时显示右滑块\n• iOS: 重试未加载的阴影预设\n• iOS:说明为什么阴影预设无法装入\n• iOS:下载 RetroArch 安装 Shader 包的朗形阴影\n• iOS:清理阴影码并缩短其评论\n• iOS:通过iOS源测试共享一组帮助者\n• 自由:报告没有Vulkan的有效几何\n• 自由:无伏尔坎固定编译\n• 采用前端的任何硬件上下文,而不是一个或一个\n• 要求提供能够运行渲染器的 GL 上下文\n• 触摸:从数字化器上取出比例尺,在任一轴上取出闸门\n• Pad:默认手持设备的快速倒置\n• GS/HW:将不匹配的8像素洗涤条视为不是洗涤条\n• GS/HW:只豁免一个模式5的图案,其近边缘为整像素\n• GS/HW:不要推动启动于整个像素模式5的图案\n• GS/HW:在每种HPO模式中给线形矩形半像素抵消\n• GS/HW:在GS灯光的像素上划线\n• GS:不要在硬件渲染器上自动冲压Alpha Stencil计数器\n• GS/HW:用双源混合法绘制α天花板计数器\n• GS/VK:确定每个装置的快速速温阴影路\n• GameDB 覆盖:恢复复读模式覆盖\n• GS:删除Tekken 5 MediaTek 马里半像素冲击黑客\n• GameDB:带来 GameIndex.yaml 回到上游 PCSX2\n• GameDB 覆盖:只保留在今天的JIT和渲染器上有原因的覆盖\n• iOS:安装 Rust iOS 目标,使 CI 建立遮蔽器\n• GS/SW:每原始一次协调谷物及其下方网格上的梯度\n• GS/SW:坐标的第16次向0转,改为签字 12.4 字段\n• GS/SW:紫外线图案的上升斜坡种子为16枚Texel低空\n• GS/SW:彩色行走中每像素一层,以及两个写法缺陷\n• GS/SW:控制台的对数是128个输入表,所以读该表\n• GS/SW:外膜纹理坐标走进 12.15 累积器\n• GS/SW:14比特对等,仅在顶点对等处进行分割\n• GS/SW:测量的彩色插座 -- -- 区块网格、锚、行对、雾\n• GS/SW:种子在自己的左边缘,梯度降至10位\n• GS:自动冲洗机的拆分按发动机的级别,而不是按硬件键\n• GS: TEX1.K 已经签了,所以不要再签了\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260915...4cbd36beccd723fbf850569cd321fe827d72bbd2",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: translate the RetroArch Slang Shaders messages\n- iOS: say when a shader preset fails to compile\n- iOS: show the right sliders when presets are picked quickly\n- iOS: retry a shader preset that failed to load\n- iOS: say why a shader preset can't load\n- iOS: download RetroArch Slang Shaders from Install Shader Pack\n- iOS: tidy the shader code and shorten its comments\n- iOS: share one set of helpers across the iOS source tests\n- libretro: report valid geometry without Vulkan\n- libretro: fix compilation without vulkan\n- Take whichever hardware context the frontend has, rather than one or none\n- Ask for a GL context that can run the renderer\n- Touch: take the scale from the digitizer, and gate on either axis\n- Pad: default the device-haptic fallback on for handhelds\n- GS/HW: Treat an unaligned 8 pixel shuffle strip as not a shuffle\n- GS/HW: only exempt a mode 5 sprite whose near edge is on a whole pixel\n- GS/HW: don't push a mode 5 sprite that starts on a whole pixel\n- GS/HW: give line rectangles half a device pixel of offset in every HPO mode\n- GS/HW: draw lines over exactly the pixels the GS lights\n- GS: don't auto-flush the alpha stencil counter on the hardware renderer\n- GS/HW: draw the alpha stencil counter with dual-source blending\n- GS/VK: decide the fast stencil shadow road per device\n- GameDB overlay: restore the readback-mode overrides\n- GS: remove the Tekken 5 MediaTek Mali half-pixel-offset hack\n- GameDB: bring GameIndex.yaml back to upstream PCSX2\n- GameDB overlay: keep only overrides with a reason on today's JIT and renderer\n- iOS: install the Rust iOS target so CI builds keep shaders\n- GS/SW: one coordinate grain per primitive, and the gradient on a grid under it\n- GS/SW: the coordinate's sixteenth truncates toward zero, into a signed 12.4 field\n- GS/SW: a UV-route sprite's ascending ramp seeds a sixteenth of a texel low\n- GS/SW: one floor per pixel in the colour walk, and two write-path defects\n- GS/SW: the console's logarithm is a 128-entry table, so read the table\n- GS/SW: the affine texture coordinate walks in a 12.15 accumulator\n- GS/SW: fourteen bits of reciprocal, and divide at the vertex only where affine\n- GS/SW: the measured colour interpolator -- block grid, anchor, row pairs, fog\n- GS/SW: seed each span at its own left edge, and drop the gradient to ten bits\n- GS: the auto-flush split follows the engine's level, not the hardware key\n- GS: TEX1.K is already signed, so stop sign-extending it a second time\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260915...4cbd36beccd723fbf850569cd321fe827d72bbd2",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "6b76e9d55f1cf2ddcb8d68dff034a3573591a0f8b5f517fe24b21c72663ad89b",
+      "translationPending": false
+    },
+    {
+      "id": "137080",
+      "title": "【工具】DXVK v3.1.1",
+      "originalTitle": "[Utilitaires Divers] DXVK v3.1.1",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-16T20:57:31Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137080-utilitaires-divers-dxvk-v3-1-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2020/01/dxvk.png",
+      "officialUrl": "https://github.com/doitsujin/dxvk/",
+      "summary": "这是基于Vulkan的D3D9/10/11实现，允许您使用Wine在Linux上运行3D应用程序，但它也可以在Windows上运行，但不是专门针对它的，因此错误可能会出现在此系统上（官方不支持）。",
+      "content": "这是基于Vulkan的D3D9/10/11实现，允许您使用Wine在Linux上运行3D应用程序，但它也可以在Windows上运行，但不是专门针对它的，因此错误可能会出现在此系统上（官方不支持）。",
+      "originalContent": "Il s'agit d'une implémentation de D3D9/10/11 basée sur Vulkan qui permet d'exécuter des applications 3D sur Linux en utilisant Wine, toutefois il fonctionne également sous Windows mais ne lui est pas spécifiquement destiné donc des bugs peuvent apparaitre sur ce système (officiellement non pris en charge).",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "cf0cc1c29e2fab3bfbd856e50fff04d6f75ce3636c2b73dbd7a9435a796d9c80",
+      "translationPending": false
+    },
+    {
+      "id": "137078",
+      "title": "【家用机】Ruzu v0.0.9",
+      "originalTitle": "[Consoles de salon] Ruzu v0.0.9",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T20:54:53Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137078-consoles-de-salon-ruzu-v0-0-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ruzu-scaled.png",
+      "officialUrl": "https://github.com/vricosti/ruzu-emu",
+      "summary": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。 该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系 以及C + +和Rust代码的不同部分。",
+      "content": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。\n该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系\n以及C + +和Rust代码的不同部分。\nRuzu包括一个带有调度器、光纤、IPC和服务的HLE内核、一个GPU命令处理器、一个着色器重新编译器和一个JIT。ARM代码的动态重新编译由Dynarmic的Rust端口rdynarmic提供，具有本机x86-64和ARM64后端\n。该项目还包括rxbyak ，这是Xbyak的Rust端口，用于生成x86-64机器码。\n\n模拟器已经能够启动和运行商业游戏，其既定目标是实现原始C + +实现的性能。 然而，该项目仍在开发中。\nRuzu还具有图形前端和命令行前端，可以在Windows、Linux、macOS和多个BSD系统上编译。\n\n这些变化是：\n•控制器导航：使用控制器导航菜单、按钮、游戏库和Ruzu的文件对话框，包括提示启动。\n-系统服务：实现缺失的应用程序管理、文件系统、音频和SSL命令，以提高兼容性。\n-本地无线服务：实施丢失的LDN命令、网络回调和状态更改通知。 修复了扫描锁定，以便发现可以在等待期间接收响应。 真正的多人游戏会话仍然需要验证。\n• Linux AppImage ：添加./build.sh appimage来构建和打包Ruzu。\n• Steam Deck打包：添加了专用的基于Docker的构建，具有Zen 2优化，捆绑的运行时库，以及像Eden的AppImage一样强制的X11/XWayland。桌面和游戏模式的兼容性仍然需要硬件验证。",
+      "originalContent": "Ruzu est un émulateur Nintendo Switch écrit en Rust, développé comme une expérience visant à déterminer si l'IA, via des modèles de langage (LLM), pouvait réaliser le portage complet d'un projet logiciel de très grande taille de C++ vers Rust.\n\nLe projet est basé sur le code de yuzu/Eden et représente environ 500 000 lignes de code portées exclusivement avec l'aide de LLM, sur une période d'environ six mois. L'objectif n'était pas simplement d'obtenir un programme fonctionnel, mais de conserver au maximum la structure du projet original, avec une correspondance entre les fichiers et les différentes parties du code C++ et Rust.\n\nRuzu intègre notamment un kernel HLE avec ordonnanceur, fibres, IPC et services, un processeur de commandes GPU, un recompilateur de shaders et un JIT. La recompilation dynamique du code ARM est assurée par rdynarmic, un portage Rust de Dynarmic, avec des backends natifs x86-64 et ARM64. Le projet comprend également rxbyak, un portage Rust de Xbyak pour la génération de code machine x86-64.\n\nL'émulateur est déjà capable de démarrer et d'exécuter des jeux commerciaux, avec l'objectif affiché d'atteindre les performances de l'implémentation C++ originale. Le projet reste toutefois en développement.\n\nRuzu dispose également d'un frontend graphique ainsi que d'un frontend en ligne de commande, et peut être compilé sous Windows, Linux, macOS et plusieurs systèmes BSD.\n\nLes changements sont:\n- Controller navigation: navigate menus, buttons, the game library, and Ruzu’s file dialogs with a controller, including the startup prompt.\n-System services: implemented missing application-management, filesystem, audio, and SSL commands to improve compatibility.\n-Local wireless services: implemented missing LDN commands, network callbacks, and state change notifications. Fixed scan locking so discovery can receive responses while waiting. Real multiplayer sessions still require validation.\n- Linux AppImage: added ./build.sh appimage to build and package Ruzu.\n- Steam Deck packaging: added a dedicated Docker-based build with Zen 2 optimization, bundled runtime libraries, and X11/XWayland forced like Eden’s AppImage. Desktop and Gaming mode compatibility still requires hardware validation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "4e00b8b1e1c02104053bd7b26c9b4adbd7d6613a7a74ddb7876f9e3918cb95ba",
+      "translationPending": false
+    },
+    {
+      "id": "137076",
+      "title": "【家用机】Nemulator v6.0",
+      "originalTitle": "[Consoles de salon] Nemulator v6.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-16T20:48:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137076-consoles-de-salon-nemulator-v6-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/03/nemulator.jpg",
+      "officialUrl": "http://www.nemulator.com",
+      "summary": "Nemulator是由jslepicka开发的Windows多系统模拟器。 它允许您使用DirectX界面模拟多个复古控制台。 支持的系统： •任天堂NES •世嘉Master System •世嘉游戏装备 • Sega Genesis •任天堂Game Boy/Game Boy Color •吃豆人/吃豆人女士（街机） •太空侵略者（街机）",
+      "content": "Nemulator是由jslepicka开发的Windows多系统模拟器。 它允许您使用DirectX界面模拟多个复古控制台。\n\n支持的系统：\n•任天堂NES\n•世嘉Master System\n•世嘉游戏装备\n• Sega Genesis\n•任天堂Game Boy/Game Boy Color\n•吃豆人/吃豆人女士（街机）\n•太空侵略者（街机）",
+      "originalContent": "Nemulator est un émulateur multi-systèmes pour Windows, développé par jslepicka. Il permet de simuler plusieurs consoles rétro avec une interface DirectX.\n\nSystèmes pris en charge:\n- Nintendo NES\n- Sega Master System\n- Sega Game Gear\n- Sega Genesis\n- Nintendo Game Boy / Game Boy Color\n- Pac-Man / Ms. Pac-Man (Arcade)\n- Space Invaders (Arcade)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "28da731d4fc8ffc3af6e856de7d6714e5111b9efe851312c19e6c757a34055a7",
+      "translationPending": false
+    },
     {
       "id": "android-release-nesd-nightly",
       "title": "【Android更新】NESd nightly",
@@ -55,30 +145,6 @@
         "fbneo_neogeo"
       ],
       "contentHash": "7850a8b4807dc3c5e64ce5a340ae3e0c95e24670ebd20b4f3a62faa44bc8c64e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260916",
-      "title": "【Android更新】ARMSX2 nightly-20260916",
-      "originalTitle": "ARMSX2 nightly-20260916 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-16T14:00:12Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260916",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260916，发布日期为2026年09月16日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260916。\n\n发布日期：2026年09月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故使用Qt Appimage在那里)\n• 机器人: Android-arm64.apk边装\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n或\n• 自由:报告没有Vulkan的有效几何\n• 自由:无伏尔坎固定编译\n• 采用前端的任何硬件上下文,而不是一个或一个\n• 要求提供能够运行渲染器的GL上下文\n• 触摸:从数字化器上取出比例尺,在任一轴上取出闸门\n• Pad:默认手持设备的快速倒置\n• GS/HW:将不匹配的8像素洗涤条视为不是洗涤条\n• GS/HW:只豁免一个近边缘为整像素的5模式图案\n• GS/HW:不要推动启动于整个像素模式5的图案\n• GS/HW:在每种HPO模式中给线形矩形半像素抵消\n• GS/HW:在GS灯光的像素上划线\n• GS:不要在硬件渲染器上自动冲压Alpha Stencil计数器\n• GS/HW:用双源混合法绘制α天花板计数器\n• GS/VK:决定每个装置的快速速温阴影路\n• GameDB 覆盖:恢复复读模式覆盖\n• GS:删除Tekken 5 MediaTek 马里半像素的入侵\n• GameDB:带来 GameIndex.yaml 回到上游 PCSX2\n• GameDB 覆盖:只保留在今天的JIT和渲染器上有原因的覆盖\n• iOS:安装 Rust iOS 目标,使 CI 建立遮蔽器\n• GS/SW:每原始一次协调谷物及其下方网格上的梯度\n• GS/SW:坐标的第十六节向零方向划为签号 12.4 字段\n• GS/SW:一个紫外线图案的上升坡道种子,16个Texel低地\n• GS/SW:彩色行走中每像素一层,以及两个写法缺陷\n• GS/SW:控制台的对数是128个输入表,所以读该表\n• GS/SW:外缘纹理坐标走进 12.15 累积器\n• GS/SW:14比特对等,仅在顶点对等处进行分割\n• GS/SW:测量的彩色插座 -- -- 区块网格、锚、行对、雾\n• GS/SW:种子在自己的左边缘,梯度降至10位\n• GS:自动冲洗机的拆分按发动机的级别,而不是按硬件键\n• GS: TEX1.K 已经签了,所以不要再签了\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260915...316e20c2f33794daee8bf272d747cb508983f4e9",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- libretro: report valid geometry without Vulkan\n- libretro: fix compilation without vulkan\n- Take whichever hardware context the frontend has, rather than one or none\n- Ask for a GL context that can run the renderer\n- Touch: take the scale from the digitizer, and gate on either axis\n- Pad: default the device-haptic fallback on for handhelds\n- GS/HW: Treat an unaligned 8 pixel shuffle strip as not a shuffle\n- GS/HW: only exempt a mode 5 sprite whose near edge is on a whole pixel\n- GS/HW: don't push a mode 5 sprite that starts on a whole pixel\n- GS/HW: give line rectangles half a device pixel of offset in every HPO mode\n- GS/HW: draw lines over exactly the pixels the GS lights\n- GS: don't auto-flush the alpha stencil counter on the hardware renderer\n- GS/HW: draw the alpha stencil counter with dual-source blending\n- GS/VK: decide the fast stencil shadow road per device\n- GameDB overlay: restore the readback-mode overrides\n- GS: remove the Tekken 5 MediaTek Mali half-pixel-offset hack\n- GameDB: bring GameIndex.yaml back to upstream PCSX2\n- GameDB overlay: keep only overrides with a reason on today's JIT and renderer\n- iOS: install the Rust iOS target so CI builds keep shaders\n- GS/SW: one coordinate grain per primitive, and the gradient on a grid under it\n- GS/SW: the coordinate's sixteenth truncates toward zero, into a signed 12.4 field\n- GS/SW: a UV-route sprite's ascending ramp seeds a sixteenth of a texel low\n- GS/SW: one floor per pixel in the colour walk, and two write-path defects\n- GS/SW: the console's logarithm is a 128-entry table, so read the table\n- GS/SW: the affine texture coordinate walks in a 12.15 accumulator\n- GS/SW: fourteen bits of reciprocal, and divide at the vertex only where affine\n- GS/SW: the measured colour interpolator -- block grid, anchor, row pairs, fog\n- GS/SW: seed each span at its own left edge, and drop the gradient to ten bits\n- GS: the auto-flush split follows the engine's level, not the hardware key\n- GS: TEX1.K is already signed, so stop sign-extending it a second time\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260915...316e20c2f33794daee8bf272d747cb508983f4e9",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "228cc6472c68ba5c570e0f1ce7b0469f38ec53e8751b7f11f3c64aaaaf6504e6",
       "translationPending": false
     },
     {
