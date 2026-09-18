@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T17:02:04Z",
+  "generatedAt": "2026-09-18T04:46:44Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -221,15 +221,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-09-17T14:07:34Z",
+      "releaseDate": "2026-09-17T22:25:02Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_nes.cpp: updated the support to \"Pyrga (HB, v1.46)\" (fprietog)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-09-17T14:07:34Z",
+      "releaseDate": "2026-09-17T22:25:02Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_nes.cpp: updated the support to \"Pyrga (HB, v1.46)\" (fprietog)"
     },
     "firebird": {
       "version": "1.6",
@@ -310,7 +310,7 @@
       "version": "1.0",
       "releaseDate": "2026-09-15T15:26:27Z",
       "sourceUrl": "https://github.com/bbbradsmith/hatariB/releases/tag/1.0",
-      "releaseNotes": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800)).\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).\r\n\r\nNote: android builds are from a [later commit](https://github.com/bbbradsmith/hatariB/commit/e395e3fd98aace93c6c1cf8feea80fc7d73fe07d) due to an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release."
+      "releaseNotes": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800)).\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU)."
     },
     "igir": {
       "version": "5.5.0",
@@ -334,10 +334,10 @@
       "devReleaseNotes": "- f723a19: LCDUI: refactoring (woesss)\r\n- 75130ae: LCDUI: refactor commands in Alert (woesss)\r\n- d2263e0: LCDUI: fix Display.setCurrent() for Alert (woesss)\r\n- bb0d217: Refactor start MidletThread (woesss)\r\n- 6c3b6f6: Don't send report from modded apk (woesss)\r\n- e41930b: Setting to enable workaround for MIDlets that do not support pause (fix crash after pause) (woesss)\r\n- 6d75447: LCDUI: another fix for List, ChoiceGroup (woesss)\r\n- 97783bc: Fix uri parsing in BT connections (woesss)\r\n- 209d345: Fix call notifyItemStateChanged() for TextField (woesss)\r\n- 49e7fd6: refactor start app (woesss)\r\n- 580ac80: Add more info to AppInstaller error report (woesss)\r\n- 1da39db: Update AGP (woesss)\r\n- cfb9c20: Update proguard rules (woesss)\r\n- ffc6f3c: Update readme (woesss)\r\n- 7a7dbce: MMAPI: add MIDIControl support for MIDI based content (fix nikita36078/J2ME-Loader#1072) (woesss)\r\n- c501ccb: Add com.mot.iden.multimedia package (#111) (woesss)\r\n- 4f5b09b: Share a single back buffer across all Canvas instances (fix #110) (woesss)\r\n- f10c8d9: M3G: execute M3gRunnable in single thread (woesss)\r\n- d826b76: M3G: generate texture mipmap by M3G code, as automatic generation by GL does not work correctly (#108) (woesss)\r\n- a5ec311: Update gradle files (woesss)\r\n- 723f464: PNGUtils: ignore invalid palette indexes, optimize (woesss)\r\n- 21b8805: Filter pointer events (woesss)\r\n- 42f6827: Copy pixels from GL in native (woesss)\r\n- 0f67e90: Touch GL in single thread in com.mexa.opgl.OpglGraphics (woesss)\r\n- 2c7290b: Replace loop detection in immediate mode of EventQueue (woesss)\r\n- 0234d04: fixup! Check descriptor when skip installer dialog (woesss)\r\n- eb2ffc4: Reimplement Nokia M3D on GLES20 (woesss)\r\n- 225c4a2: Fix mutable property of Image (woesss)\r\n- a2eaf4e: Merge pull request #107 from rmn20/dev (woesss)\r\n- 4532838: micro3d: more lenient BMP loading (woesss)\r\n- e42cff5: fix (rmn20)\r\n- a609ebd: micro3d: Fix for bmp files with invalid raster offset (rmn20)\r\n- 724b90a: Refactoring case-insensitive file extension checking (woesss)\r\n- 86d3435: Improve com.siemens.mp.lcdui.Image implementation (woesss)\r\n- 23d4d1e: Fix open FileConnection (woesss)\r\n- 2b3eb27: Use acra-http (woesss)\r\n- 3cc10ae: Improve error reports (woesss)\r\n- a222d4a: Update appcenter cert (Nikita Shakarun)\r\n- 7a6719b: Fix build without secret properties (woesss)\r\n- 190bb47: LCDUI: fix Item.notifyStateChanged() (woesss)\r\n- 5d18a8b: Remove minimum delay for key release (woesss)\r\n- 177c985: Fix ClassCastException in takeScreenshot() (woesss)\r\n- cc87cf5: Fixed saving of resolution presets (woesss)"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-09-17-c66d977",
-      "releaseDate": "2026-09-17T13:50:45Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-17-c66d977",
-      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-17-4b77686...KytyPS5-2026-09-17-c66d977"
+      "version": "KytyPS5-2026-09-17-104530e",
+      "releaseDate": "2026-09-17T17:43:43Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-17-104530e",
+      "releaseNotes": "## What's Changed\n* fix Windows build by @Nmzik in https://github.com/KytyPS5/KytyPS5/pull/680\n\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-17-6cfde37...KytyPS5-2026-09-17-104530e"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -898,10 +898,10 @@
     },
     "padforge": {
       "version": "latest-v4-dev",
-      "releaseDate": "2026-09-17T12:31:14Z",
+      "releaseDate": "2026-09-17T22:59:39Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35220844451",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35220844451"
+      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35284089057",
+      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35284089057"
     },
     "panda3ds": {
       "version": "0.9",
@@ -1044,11 +1044,11 @@
       "devReleaseNotes": "## What's Changed\n* Bump rust-toolchain from 1.98.0 to 1.98.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/831\n* Bump the rust-minor group across 1 directory with 10 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/835\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/833\n* chore: Bump Rascal to 0.3.6 by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/836\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/837\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260902...0.260907"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-09-17",
-      "releaseDate": "2026-09-17T00:13:50Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-09-17",
-      "releaseNotes": "## What's Changed\n* chore: Bump various indirect Rust crate versions in Cargo.lock by @torokati44 in https://github.com/ruffle-rs/ruffle/pull/24703\n* avm1: Dynamically resolve builtin classes (5/N: `TextFormat`) by @moulins in https://github.com/ruffle-rs/ruffle/pull/24696\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-16...nightly-2026-09-17",
-      "devReleaseNotes": "## What's Changed\n* chore: Bump various indirect Rust crate versions in Cargo.lock by @torokati44 in https://github.com/ruffle-rs/ruffle/pull/24703\n* avm1: Dynamically resolve builtin classes (5/N: `TextFormat`) by @moulins in https://github.com/ruffle-rs/ruffle/pull/24696\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-16...nightly-2026-09-17"
+      "version": "nightly-2026-09-18",
+      "releaseDate": "2026-09-18T00:15:13Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-09-18",
+      "releaseNotes": "## What's Changed\n* core: Refactors related to font scaling by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24707\n* build(deps): bump mocha from 12.0.0 to 12.0.2 in /web by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24711\n* web: Fully specify module imports and exports by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24702\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-17...nightly-2026-09-18",
+      "devReleaseNotes": "## What's Changed\n* core: Refactors related to font scaling by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24707\n* build(deps): bump mocha from 12.0.0 to 12.0.2 in /web by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24711\n* web: Fully specify module imports and exports by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24702\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-17...nightly-2026-09-18"
     },
     "sameboy_core": {
       "version": "1.0.3",
@@ -1257,10 +1257,10 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_edge_pc": {
-      "version": "e987fd7",
-      "releaseDate": "2026-09-17T12:29:26Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/e987fd7",
-      "releaseNotes": "### Changes\n\n- [VFS] Charge a storage seek only when a read does not continue (`e987fd7`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/d059e17...e987fd7"
+      "version": "462a1ac",
+      "releaseDate": "2026-09-18T01:04:08Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/462a1ac",
+      "releaseNotes": "### Changes\n\n- [GPU] Publish a shader translation's validity before is_translated() (`462a1ac`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/e987fd7...462a1ac"
     },
     "xenia_manager": {
       "version": "4.3.2",
