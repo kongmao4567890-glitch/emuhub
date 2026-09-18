@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T17:15:55.310836Z",
+  "generatedAt": "2026-09-18T05:08:51.196003Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -15,14 +15,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-17T14:07:34Z",
+      "publishedAt": "2026-09-17T22:25:02Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月17日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_nes.cpp:更新支持到\"Pyrga(HB, v1.46)\"(fprietog) (英语:",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_nes.cpp: updated the support to \"Pyrga (HB, v1.46)\" (fprietog)",
       "platforms": [
         "android"
       ],
@@ -30,7 +30,7 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "acb9f7b614acd4233357da256a6c233e3f60a44c9e115d530443bd6a891bc823",
+      "contentHash": "d89d0734b2c1899a7729afdf699975ec4a8021c92767ef586824b15584d3643f",
       "translationPending": false
     },
     {
@@ -479,15 +479,15 @@
       "imageUrl": "asset://assets/emulators/hatariB_core.png",
       "officialUrl": "https://github.com/bbbradsmith/hatariB",
       "summary": "hatariB (RetroArch 核心) 发布 Android 新版本 1.0，发布日期为2026年09月15日。点击查看官方版本信息与更新说明。",
-      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 1.0。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nThe hatariB 仿真器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意尝试 最新的改变。\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在本页的顶部,留下你的评论。\n\n变动 v0.5 贝塔:\n• 固定停雪屏幕崩溃(引入于 v0.5 当去除SDL2时。\n• 固定 `setlocale` 问题(83)（https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800）).\n· Libretro CI所建(Windows,MacOS,Linux,IOS,WebOS,Vita,Switch,Wii,WiiU).\n\n注:机器人建筑是后期犯罪造成的（https://github.com/bbbradsmith/hatariB/commit/e395e3fd98aace93c6c1cf8feea80fc7d73fe07d） 由于 GitHub 动作出现问题（https://github.com/android-actions/setup-android/issues/537） 在释放时。",
-      "originalContent": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800)).\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).\r\n\r\nNote: android builds are from a [later commit](https://github.com/bbbradsmith/hatariB/commit/e395e3fd98aace93c6c1cf8feea80fc7d73fe07d) due to an [issue with GitHub Actions](https://github.com/android-actions/setup-android/issues/537) at time of release.",
+      "content": "hatariB (RetroArch 核心) 已发布 Android 最新版本 1.0。\n\n发布日期：2026年09月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nThe hatariB 仿真器核心, 用于RetroArch（https://www.retroarch.com/） 和其他 Libretro 软件（https://www.libretro.com/） 平台。\n\n这是Hatari的改编（https://hatari.tuxfamily.org/） 模拟器,并提供模拟Atari ST计算机家族,包括ST,STE,TT,和Falcon.\n\n请下载下面的 ZIP 包。 见 README.md（https://github.com/bbbradsmith/hatariB#readme） 进一步说明和更多信息。\n\n您也可以使用当前不稳定的构造（https://nightly.link/bbbradsmith/hatariB/workflows/build/main） 如果你愿意尝试 最新的改变。\n\n如果您有反馈, 请找到问题标签（https://github.com/bbbradsmith/hatariB/issues） 在本页的顶部,留下你的评论。\n\n变动 v0.5 贝塔:\n• 固定停雪屏幕崩溃(引入于 v0.5 当去除SDL2时。\n• 固定 `setlocale` 问题(83)（https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800）).\n· Libretro CI所建(Windows,MacOS,Linux,IOS,WebOS,Vita,Switch,Wii,WiiU).",
+      "originalContent": "The hatariB emulator core, for use with [RetroArch](https://www.retroarch.com/) and other [Libretro](https://www.libretro.com/) platforms.\r\n\r\nThis is an adaptation of the [Hatari](https://hatari.tuxfamily.org/) emulator, and provides emulation of the Atari ST computer family, including the ST, STE, TT, and Falcon.\r\n\r\nPlease download one of the ZIP packages below. See [README.md](https://github.com/bbbradsmith/hatariB#readme) for further instructions and more information.\r\n\r\nYou can also use [the current unstable build](https://nightly.link/bbbradsmith/hatariB/workflows/build/main) if you'd like to try the very newest changes.\r\n\r\nIf you have feedback, please find the [issues tab](https://github.com/bbbradsmith/hatariB/issues) at the top of this page, and leave your comment.\r\n\r\nChanges since v0.5 beta:\r\n  * Fixed snow pause screen crash (introduced in v0.5 when removing SDL2).\r\n  * Fixed `setlocale` problem ([83](https://github.com/bbbradsmith/hatariB/issues/83#issuecomment-5574047800)).\r\n  * Libretro CI builds (Windows, MacOS, Linux, IOS, WebOS, Vita, Switch, Wii, WiiU).",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "hatariB_core"
       ],
-      "contentHash": "b4c2c4ec83158e97d2d867d695de5efe60cd9197692a3d76e62d468370051499",
+      "contentHash": "46f05237ebe8cd4fb99b25f5a41cff273e2c2e4998f5a4509f12748b793cc9d8",
       "translationPending": false
     },
     {
