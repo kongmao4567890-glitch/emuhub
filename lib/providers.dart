@@ -14,7 +14,6 @@ import 'data/models/emulators_config.dart';
 import 'data/models/news_article.dart';
 import 'data/repositories/settings_repository.dart';
 import 'services/background_task.dart';
-import 'services/app_update/app_update_service.dart';
 import 'services/notification_service.dart';
 import 'services/news/news_service.dart';
 import 'services/update/update_service.dart';
@@ -61,14 +60,6 @@ final Provider<SettingsRepository> settingsRepositoryProvider =
     Provider<SettingsRepository>((ref) {
   final prefs = ref.watch(sharedPreferencesProvider);
   return SettingsRepository(prefs);
-});
-
-/// EmuHub 自身的 GitHub Release 自动更新服务。
-final Provider<AppUpdateService> appUpdateServiceProvider =
-    Provider<AppUpdateService>((ref) {
-  return AppUpdateService(
-    preferences: ref.watch(sharedPreferencesProvider),
-  );
 });
 
 /// [AppSettings] 的状态管理器。

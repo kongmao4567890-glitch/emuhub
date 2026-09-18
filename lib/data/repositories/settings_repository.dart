@@ -23,7 +23,6 @@ class AppSettings {
   final String quietHoursStart; // 形如 "22:00"
   final String quietHoursEnd; // 形如 "08:00"
   final bool wifiOnly;
-  final bool appAutoUpdateEnabled;
 
   const AppSettings({
     this.checkInterval = CheckInterval.fourHours,
@@ -32,7 +31,6 @@ class AppSettings {
     this.quietHoursStart = '22:00',
     this.quietHoursEnd = '08:00',
     this.wifiOnly = false,
-    this.appAutoUpdateEnabled = true,
   });
 
   /// 复制并覆盖部分字段，未提供的字段保持原值。
@@ -43,7 +41,6 @@ class AppSettings {
     String? quietHoursStart,
     String? quietHoursEnd,
     bool? wifiOnly,
-    bool? appAutoUpdateEnabled,
   }) {
     return AppSettings(
       checkInterval: checkInterval ?? this.checkInterval,
@@ -52,8 +49,6 @@ class AppSettings {
       quietHoursStart: quietHoursStart ?? this.quietHoursStart,
       quietHoursEnd: quietHoursEnd ?? this.quietHoursEnd,
       wifiOnly: wifiOnly ?? this.wifiOnly,
-      appAutoUpdateEnabled:
-          appAutoUpdateEnabled ?? this.appAutoUpdateEnabled,
     );
   }
 
@@ -86,8 +81,6 @@ class _StorageKeys {
   static const String quietHoursStart = 'settings_quiet_hours_start';
   static const String quietHoursEnd = 'settings_quiet_hours_end';
   static const String wifiOnly = 'settings_wifi_only';
-  static const String appAutoUpdateEnabled =
-      'settings_app_auto_update_enabled';
 }
 
 /// 用户设置仓库。
@@ -111,8 +104,6 @@ class SettingsRepository {
           _prefs.getString(_StorageKeys.quietHoursStart) ?? '22:00',
       quietHoursEnd: _prefs.getString(_StorageKeys.quietHoursEnd) ?? '08:00',
       wifiOnly: _prefs.getBool(_StorageKeys.wifiOnly) ?? false,
-      appAutoUpdateEnabled:
-          _prefs.getBool(_StorageKeys.appAutoUpdateEnabled) ?? true,
     );
   }
 
@@ -130,10 +121,6 @@ class SettingsRepository {
       _prefs.setString(_StorageKeys.quietHoursStart, settings.quietHoursStart),
       _prefs.setString(_StorageKeys.quietHoursEnd, settings.quietHoursEnd),
       _prefs.setBool(_StorageKeys.wifiOnly, settings.wifiOnly),
-      _prefs.setBool(
-        _StorageKeys.appAutoUpdateEnabled,
-        settings.appAutoUpdateEnabled,
-      ),
     ]);
   }
 
