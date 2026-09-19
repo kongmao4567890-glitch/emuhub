@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T16:43:33.953579Z",
+  "generatedAt": "2026-09-19T16:03:15.475888Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-armsx2-2-7",
+      "title": "【Android更新】ARMSX2 2.7",
+      "originalTitle": "ARMSX2 2.7 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-19T15:24:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.7",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 2.7，发布日期为2026年09月19日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 2.7。\n\n发布日期：2026年09月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.7\n\n新增功能：\n\n纹理包，由@ bmdhacks重建\n\n在线纹理包目录现在来自ARMSX2自己的存储库，并且包\n更小更快。目录中的所有490个内容包都已转换为ASTC ，\n移动GPU直接读取的纹理格式，包括其mipmap。 《战神2》礼包\n从4.5 GB到538 MB。 ASTC纹理在GPU内存中保持压缩，而不是被解压缩\n包装需要占用一小部分存储空间，使用更少的内存，加载速度更快，运行速度更快\n更好，这在高清包曾经挣扎的手机和手持设备上最为重要。\n纹理包现在也更容易找到。 它们现在位于分辨率设置的正下方，包括渲染器设置和游戏内菜单的图形页面。 目录的提交链接现在可以将内容包作者指向我们的Discord。 Coalesce Render Passes已从游戏菜单中移出到完整设置中。由@ jpolo1224完成\n\n触摸控制：\n屏幕上的控件有一个新的始终选项，永远不会隐藏按钮，用于一起玩控制器和触摸按钮。 新的“触控播放方式”设置将触摸屏置于播放器2上，因此一个人可以使用\n控制器，另一个在屏幕上播放，更改后重启游戏。由@ jpolo1224完成\n多点触控的滑动模式。 选择手指在按钮上滑动的功能：跟随按下它下面的任何按钮，按住第一个按钮，按住所有按钮。由@ jpolo1224完成\n半屏摇杆现在可以通过触摸布局编辑器中的新选项保留屏幕上的左摇杆：左摇杆：半屏/屏幕上，因此只有屏幕的右半部分会变成摇杆。由@ jpolo1224完成\n\n开启半屏棒后，面部、肩部和开始/选择按钮停止响应。仅\nd-pad继续工作。 它们再次发挥作用，一根拇指不再滑过按钮\n按下它。由@ jpolo1224完成。\n\n打开触摸手势会使多点触摸按钮停止响应。 手势现在只作用于\n空屏幕。由@ jpolo1224完成\n定时自动隐藏在您握住D-pad或棍棒和棍棒时隐藏控件\n或D-pad方向可以在控件消失后保持不变，让您的角色行走\n单独使用。现在，每个保留的控件都可以保持控件正常运行。由@ jpolo1224完成\n自动模式隐藏了控制器噪音的触摸控制，免受漂移棒或空闲夹子的影响\n控制器。它现在等待真正的输入。由@ jpolo1224完成\n\n绑定为按钮时，手机的音量键隐藏了触摸控件，已修复。由@ jpolo1224完成\n\n压力控制：\n\n每个模板现在都有自己的压力，因此同一按钮上的两个模板可以\n按两个强度（例如， Metal Gear Solid中的两个地图缩放级别）。 P按钮的\n强度可以在触摸布局编辑器中设置，现在全局压力量与\n其他屏幕上的控件设置。由@ jpolo1224完成\n\n查看游戏数据库对游戏所做的更改，并推翻它：\n游戏内快速菜单中的修复（每场比赛）中的新面板。 列出游戏数据库应用于游戏的每个设置。 您为游戏选择的任何设置现在都会赢得数据库，您可以关闭数据库条目。由@ jpolo1224完成\n\n每场比赛的RetroAchievements设置：\n现在可以从游戏内的RetroAchievements菜单奖杯选项卡中为每场比赛设置每个RetroAchievements选项，包括它是否开启和Hardcore。全局关闭，仅在您想要的游戏中打开。您也可以选择将每场比赛的默认设置恢复为每场比赛的全局设置\n。还有一个新的通知大小选项，从50%到250%。由@ jpolo1224完成。\n\n您自己的靴子介绍。 选择任何视频作为启动简介，并使用预览按钮进行检查。\n由@ jpolo1224完成\n\n游戏内菜单中的GS转储，在FIR上…",
+      "originalContent": "ARMSX2 2.7\r\n\r\nWhat's new: \r\n\r\n**Texture packs, rebuilt by @bmdhacks** \r\n\r\nThe online texture pack catalog now comes from ARMSX2's own repository, and the packs are far\r\nsmaller and faster. All 490 packs in the catalog have been converted to ASTC, the compressed\r\ntexture format that mobile GPUs read directly, with their mipmaps included. The God of War II pack\r\nwent from 4.5 GB to 538 MB. ASTC textures stay compressed in GPU memory instead of being unpacked\r\non the way in, so packs take a fraction of the storage, use far less memory, load faster and run\r\nbetter, which matters most on phones and handhelds where HD packs used to struggle. \r\n\r\nTexture packs are now also easier to find. They now sit right under the resolution setting, both in the renderer settings and on the in-game menu's Graphics page. The catalog's submit link now points pack authors to our Discord. Coalesce Render Passes moved out of the in-game menu into the full settings. done by @jpolo1224 \r\n\r\n**Touch controls:** \r\n\r\nOn-screen controls have a new Always option that never hides the buttons, for playing with a controller and touch buttons together. A new \"Touch controls play as\" setting puts the touch screen on Player 2, so one person can use a\r\ncontroller while another plays on the screen, restart the game after changing it. done by @jpolo1224 \r\n\r\nGlide modes for multi-touch. Choose what a finger sliding across buttons does: Follow presses whatever is under it, Hold first keeps the first button held, and Hold all holds every button it crosses. done by @jpolo1224 \r\n\r\nHalf-Screen Sticks can now keep the on-screen left stick now with a new option in the touch layout editor: Left Stick: Half Screen/Onscreen, so only the right half of the screen becomes a stick. done by @jpolo1224 \r\n\r\n**With Half-Screen Sticks on, the face, shoulder and Start/Select buttons stopped responding.** Only\r\nthe D-pad kept working. They work again, and a stick thumb sliding across a button no longer\r\npresses it. done by @jpolo1224.\r\n\r\n**Turning on touch gestures made the multi-touch buttons stop responding.** Gestures now act only on\r\nempty screen. done by @jpolo1224 \r\n\r\n**Timed auto-hide hid the controls while you were still holding the D-pad or a stick**, and a stick\r\nor D-pad direction could stay held after the controls disappeared, leaving your character walking\r\non its own. Every held control now keeps the controls up and lets go cleanly. done by @jpolo1224 \r\n\r\n**Auto mode hid the touch controls on controller noise**, from a drifting stick or an idle clip-on\r\ncontroller. It now waits for real input. done by @jpolo1224 \r\n\r\n**The phone's volume keys hid the touch controls** when bound as buttons, fixed. done by @jpolo1224 \r\n\r\n**Pressure controls:**\r\n\r\nEach macro now has its own pressure, so two macros on the same button can\r\npress it at two strengths (two map zoom levels in Metal Gear Solid, for example). The P button's\r\nstrength can be set right in the touch layout editor, and the global pressure amount now sits with\r\nthe other on-screen controls settings. done by @jpolo1224 \r\n\r\n**See what the game database changes for a game, and overrule it:**\r\n\r\nA new panel in Fixes (per game) in the in-game quick menu. Lists every setting the game database applies to the game. Any setting you choose for a game now wins over the database, and you can switch a database entry off. done by @jpolo1224 \r\n\r\n**RetroAchievements settings per game:** \r\n\r\nEvery RetroAchievements option, including whether it is on at all and Hardcore, can now be set per game from the in-game RetroAchievements menu trophy tab. Leave it off globally and turn it on only for the games you want. You can choose to default per-game settings back to global settings per-game as well. There is also a new notification size option, from 50% to 250%. done by @jpolo1224.\r\n\r\n**Your own boot intro.** Pick any video as the startup intro, with a Preview button to check it.\r\ndone by @jpolo1224 \r\n\r\n**GS dump from the in-game menu**, on the fir…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "0d4b8e56f4677acf4c34f4db0fc45ced95feaefa114ebc2edb8f4b39a302b711",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-18T13:06:11Z",
+      "publishedAt": "2026-09-19T14:28:15Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月18日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_spectrum.cpp: 为\"Magic 2 - The Technology World\"(fprietog)第二部增加密码",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_spectrum.cpp: added password for 2nd part of \"Magic 2 - The tech World\" (fprietog)",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月19日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,23 +54,23 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "0fbf804f50c0b855f236038732eadcfaa5caa0bc09e900a50f0cf5511fe1018a",
+      "contentHash": "1b17fc55bd22def7d235dd551b76e01b4863fc5ba963350c19d2d979c5c45fef",
       "translationPending": false
     },
     {
-      "id": "android-release-armsx1-nightly-20260918-15",
-      "title": "【Android更新】ARMSX1 nightly-20260918.15",
-      "originalTitle": "ARMSX1 nightly-20260918.15 Android release",
+      "id": "android-release-armsx1-nightly-20260919-17",
+      "title": "【Android更新】ARMSX1 nightly-20260919.17",
+      "originalTitle": "ARMSX1 nightly-20260919.17 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-18T12:51:31Z",
+      "publishedAt": "2026-09-19T12:26:10Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260918.15",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/nightly-20260919.17",
       "imageUrl": "asset://assets/emulators/armsx1.png",
       "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 nightly-20260918.15，发布日期为2026年09月18日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260918.15。\n\n发布日期：2026年09月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
+      "summary": "ARMSX1 发布 Android 新版本 nightly-20260919.17，发布日期为2026年09月19日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 nightly-20260919.17。\n\n发布日期：2026年09月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n来自cb53534d0733462d46c98e61aab134d6e1c4d026的自动夜间构建。",
       "originalContent": "Automated nightly build from cb53534d0733462d46c98e61aab134d6e1c4d026.",
       "platforms": [
         "android"
@@ -54,7 +78,51 @@
       "relatedEmulatorIds": [
         "armsx1"
       ],
-      "contentHash": "54e9cba76dc3d528f128d09fbde1e62ebd8de8da8bccf10821aa2cae482064f6",
+      "contentHash": "073663e284444c0799fa74a9d86d3849193a98b693400ead23f5d5a76b236ef4",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-19T06:38:23Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月19日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 045b83b ： GPU/硬件：添加其他纹理过滤器（ Stenzek ）\n•修复了DisableUpscaledDirectTextures (Stenzek（https://github.com/stenzek/duckstation/commit/a90f008cd971780c0047cd58c29a08dc3db39377）)中的拼写错误\n•为Panekit添加鼠标- Infinitive Crafting玩具盒（ Stenzek（https://github.com/stenzek/duckstation/commit/12a1bf9f012dc24909a1fb1ce82b4772b26f2c4e） ）\n•使用永久线程（ Stenzek（https://github.com/stenzek/duckstation/commit/742d2d11b90d438bfb10607bab01c9ed925e805f） ）\n•修复播放时可能不正确的重启轨道（ Stenzek（https://github.com/stenzek/duckstation/commit/c309ca331ec25bf65ad4ad3fe38109ffa12a0db6） ）",
+      "originalContent": "## Commits\n- 045b83b: GPU/HW: Add additional texture filters (Stenzek)\n- Fix typo in DisableUpscaledDirectTextures ([Stenzek](https://github.com/stenzek/duckstation/commit/a90f008cd971780c0047cd58c29a08dc3db39377))\n- Add mouse for Panekit - Infinitive Crafting Toy Case ([Stenzek](https://github.com/stenzek/duckstation/commit/12a1bf9f012dc24909a1fb1ce82b4772b26f2c4e))\n- Use persistent thread ([Stenzek](https://github.com/stenzek/duckstation/commit/742d2d11b90d438bfb10607bab01c9ed925e805f))\n- Fix possible incorrect restart track when playing ([Stenzek](https://github.com/stenzek/duckstation/commit/c309ca331ec25bf65ad4ad3fe38109ffa12a0db6))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "64e23fc4ef8ee730f6d1dd21b63838b436a24e0b8af7caa8d7dc8a96f5af05bd",
+      "translationPending": false
+    },
+    {
+      "id": "137137",
+      "title": "【工具】VXP v0.2.0",
+      "originalTitle": "[Utilitaires Divers] VXP v0.2.0",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-19T06:13:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137137-utilitaires-divers-vxp-v0-2-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/vxp.png",
+      "officialUrl": "https://github.com/zdiemer/vxp",
+      "summary": "VXP是VideoNow系统的开源模拟器，允许您模拟VideoNow播放器的操作并从磁盘图像播放其视频内容。 该项目支持原始VideoNow、VideoNow Color和VideoNow XP等。 它再现了原始硬件的操作，包括视频和音频数据的解码以及某些光盘上的交互功能。 VideoNow是由孩之宝和Tiger Electronics开发的便携式视频播放器，于2003年发布。",
+      "content": "VXP是VideoNow系统的开源模拟器，允许您模拟VideoNow播放器的操作并从磁盘图像播放其视频内容。\n该项目支持原始VideoNow、VideoNow Color和VideoNow XP等。 它再现了原始硬件的操作，包括视频和音频数据的解码以及某些光盘上的交互功能。\nVideoNow是由孩之宝和Tiger Electronics开发的便携式视频播放器，于2003年发布。 它使用专有的小格式光盘，其中包含专门针对设备定制的视频节目。\n已经发布了几个版本的VideoNow ，包括原始的黑白VideoNow ，然后是VideoNow Color和VideoNow XP。 特别是，该系统承载了电视连续剧、儿童节目和各种互动内容的剧集。\nVideoNow的独特之处在于其高度压缩的视频格式和低分辨率，可适应硬件的有限容量和磁盘的容量降低。\n\n版本：\n• VideoNow ：配备单色显示屏的原始型号。\n• VideoNow Color ：配备彩色屏幕的版本。\n• VideoNow XP ：具有更大屏幕和附加功能的系统演进。\n• VideoNow Jr. ：幼儿版。",
+      "originalContent": "VXP est un émulateur open source du système VideoNow, permettant d'émuler le fonctionnement des lecteurs VideoNow et de lire leurs contenus vidéo à partir d'images disque.\n\nLe projet prend notamment en charge le VideoNow original, le VideoNow Color et le VideoNow XP. Il reproduit le fonctionnement du matériel original, notamment le décodage des données vidéo et audio ainsi que les fonctionnalités interactives présentes sur certains disques.\n\nLe VideoNow est un lecteur vidéo portable développé par Hasbro et Tiger Electronics, commercialisé à partir de 2003. Il utilise des disques optiques propriétaires de petit format contenant des programmes vidéo spécialement adaptés à l'appareil.\n\nPlusieurs versions du VideoNow ont été commercialisées, notamment le VideoNow original en noir et blanc, puis le VideoNow Color et le VideoNow XP. Le système a notamment accueilli des épisodes de séries télévisées, des programmes pour enfants et divers contenus interactifs.\n\nLe VideoNow se distingue par son format vidéo très fortement compressé et sa faible résolution, adaptés aux capacités limitées du matériel et à la capacité réduite de ses disques.\n\nVersions:\n- VideoNow : modèle original avec affichage monochrome.\n- VideoNow Color : version équipée d'un écran couleur.\n- VideoNow XP : évolution du système avec un écran plus grand et des fonctionnalités supplémentaires.\n- VideoNow Jr. : version destinée aux jeunes enfants.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "0bc44493621fded3c5776eadd6f63d81c22ce5dfaadc43dd0146bc6bc924e942",
       "translationPending": false
     },
     {
@@ -106,14 +174,14 @@
     },
     {
       "id": "137121",
-      "title": "【家用机】Pureikyubu v1.9 (2026/09/18)",
-      "originalTitle": "[Consoles de salon] Pureikyubu v1.9 (2026/09/18)",
+      "title": "【家用机】Pureikyubu v1.9 (2026/09/19)",
+      "originalTitle": "[Consoles de salon] Pureikyubu v1.9 (2026/09/19)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-18T11:51:27Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137121-consoles-de-salon-pureikyubu-v1-9-2026-09-18/",
+      "sourceUrl": "https://www.emu-france.com/news/137121-consoles-de-salon-pureikyubu-v1-9-2026-09-19/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Pureikyubu-emu.png",
       "officialUrl": "https://github.com/emu-russia/pureikyubu/",
       "summary": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。 改进包括： 亮点 •添加了集成的Game Boy Advance和Game Boy核心，包括自定义启动ROM、Game Boy兼容性、链路电缆仿真和专用测试工具。",
@@ -121,7 +189,7 @@
       "originalContent": "Pureikyubu est un émulateur open source de Nintendo GameCube, intégrant également l'émulation de la Game Boy et de la Game Boy Advance, actuellement en cours de développement et basé sur Dolwin.\n\nLe but de l'émulateur est de rechercher les caractéristiques matérielles de la GameCube et de faire de la rétro-ingénierie sur les technologies utilisées pour développer des jeux pour cette plateforme.\n\nLes améliorations sont les suivantes:\n\nHighlights\n- Added an integrated Game Boy Advance and Game Boy core, including a custom boot ROM, Game Boy compatibility, link cable emulation and dedicated testing tools.\n- Added a complete software rendering pipeline for the GameCube's Flipper graphics hardware, alongside the existing OpenGL renderer.\n- Added a new debugger (DebugUI2) with dedicated interfaces for GameCube, Game Boy Advance and Game Boy.\n- Added a local MCP server exposing the emulator's debugging interface to LLM agents.\n- Added a hardware-interface profiler covering buses, FIFOs, DMA engines, audio, graphics and video activity.\n- Added a headless build for benchmarks, automated tests and MCP operation.\n- Added a DSP recompiler, reported to be 1.5–1.8x faster than the interpreter.\n- Audited external input handling and fixed around 90 security-related defects.\n- Added full UTF-8 support to the debug interface, console and front ends.\n- Improved GameCube compatibility and performance: Metroid Prime's intro now runs significantly faster and reaches the title screen, while Super Mario Sunshine boots and plays its intro.\n- Improved compatibility with Super Monkey Ball 2, Star Wars Rogue Squadron III, Prince of Persia and other titles.\n- Added extensive testing infrastructure, including a 263-test GBA test suite and an 87-demo DolphinSDK graphics sweep.",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "6a723b3a75f8f476b57951f5ba18ace6f93aa8baf4128f984c613bff54670c12",
+      "contentHash": "14ca3d20cf0a556bc8418d4555cf89349e4f397796aabdb79836450b2b0687d1",
       "translationPending": false
     },
     {
@@ -316,54 +384,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "4f3297639690a909b4c3f9af5072961f4e8bbec58971abaab45efc84778c213e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-18T05:27:58Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月18日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•使用ONCE_FLAG进行库加载（ Stenzek（https://github.com/stenzek/duckstation/commit/2f4724dd1f95ba2eb36626d243f88eefb2a02d45） ）\n•添加轻量互斥/条件可变包装（ Stenzek（https://github.com/stenzek/duckstation/commit/7137ce2be79f68fe9f5599e794f13198d715cebb） ）\n•对设置访问器使用LOCK_GUARD （ Stenzek（https://github.com/stenzek/duckstation/commit/f46b6a834147f66a4ee163191d1387004fb95f0d） ）\n•使用Threading:: Mutex进行设置锁定（ Stenzek（https://github.com/stenzek/duckstation/commit/bbeac9cfe1d2185bcb4eee4d7d064f6b94e080c4） ）\n•使用轻量级线程抽象（ Stenzek（https://github.com/stenzek/duckstation/commit/3bb2b0b1d678098013cbe935d0ab72e004036f38） ）\n•将std:: mutex替换为Threading:: Mutex （ Stenzek（https://github.com/stenzek/duckstation/commit/22072c934fdd98c785134a4985dc68f110c08f54） ）\n•转换为命名空间（ Stenzek（https://github.com/stenzek/duckstation/commit/00d407c35bcbf5e9bb9063ac05b4458fcd0c26c9） ）\n• dbe1444 ： GPU/HW ：修复丢失的掩码或应用于纹理回退（ Stenzek ）\n• ac0e3a5 ： GPU/HW ：添加“过滤帧缓冲上传”高级选项（ Stenzek ）\n•在更多游戏上启用背景纹理过滤（ Stenzek（https://github.com/stenzek/duckstation/commit/aaa8a68df5705fd3a299fbd3e1a9a81f6240f360） ）\n•在游戏属性中显示继承的多采样设置（ # 3800 ） （ Davide Pesavento（https://github.com/stenzek/duckstation/commit/04f821c0443e6ff9bb79908671c5ec162d29acc8） ）",
-      "originalContent": "## Commits\n- Use once_flag for library loading ([Stenzek](https://github.com/stenzek/duckstation/commit/2f4724dd1f95ba2eb36626d243f88eefb2a02d45))\n- Add lightweight Mutex/ConditionVariable wrappers ([Stenzek](https://github.com/stenzek/duckstation/commit/7137ce2be79f68fe9f5599e794f13198d715cebb))\n- Use lock_guard for settings accessors ([Stenzek](https://github.com/stenzek/duckstation/commit/f46b6a834147f66a4ee163191d1387004fb95f0d))\n- Use Threading::Mutex for settings lock ([Stenzek](https://github.com/stenzek/duckstation/commit/bbeac9cfe1d2185bcb4eee4d7d064f6b94e080c4))\n- Use lightweight threading abstractions ([Stenzek](https://github.com/stenzek/duckstation/commit/3bb2b0b1d678098013cbe935d0ab72e004036f38))\n- Replace std::mutex with Threading::Mutex ([Stenzek](https://github.com/stenzek/duckstation/commit/22072c934fdd98c785134a4985dc68f110c08f54))\n- Convert to namespace ([Stenzek](https://github.com/stenzek/duckstation/commit/00d407c35bcbf5e9bb9063ac05b4458fcd0c26c9))\n- dbe1444: GPU/HW: Fix missing mask-or application on texture fallback (Stenzek)\n- ac0e3a5: GPU/HW: Add 'Filter Framebuffer Uploads' advanced option (Stenzek)\n- Enable background texture filtering on more games ([Stenzek](https://github.com/stenzek/duckstation/commit/aaa8a68df5705fd3a299fbd3e1a9a81f6240f360))\n- Show inherited multi-sampling setting in game properties (#3800) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/04f821c0443e6ff9bb79908671c5ec162d29acc8))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "907b351798b98a9c126f85fe6db520a135a39ee54beaeb166a2cf661cc27162e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260917",
-      "title": "【Android更新】ARMSX2 nightly-20260917",
-      "originalTitle": "ARMSX2 nightly-20260917 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-17T13:57:16Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260917",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260917，发布日期为2026年09月17日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260917。\n\n发布日期：2026年09月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk边装入\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n有什么新情况\n• iOS:去掉流浪和机器人图标生成器并忽略日志\n• iOS:添加导入翻译密钥并固定相片浏览器相对日期\n• iOS:将欺骗管理器、皮肤浏览器和无障碍标签本地化\n• iOS:使用完整的格式字符串,而不是粘接的句子\n• iOS:简化滑动器数字解析并修正 Rtl swipe\n• iOS:为本地化增加对等和解析测试\n• iOS:用字符串目录取代内语翻译词典\n• iOS:删除冗余抓取控制器图标\n• iOS:清洗并处理原生建筑残渣\n• iOS:放下未使用的桌面制作模块和死条件\n• iOS:删除已死亡和机器人jni入境点\n• iOS:翻译 RetroArch Slang 阴影消息\n• iOS:当阴影预设无法编译时说\n• iOS:在快速选择预设时显示右滑子\n• iOS:重试未加载的阴影预设\n• iOS:说明为什么阴影预设无法装入\n• iOS:下载 RetroArch 安装 Shader 包的朗形阴影\n• iOS:清理阴影码并缩短其评论\n• iOS:通过iOS源测试共享一组帮助者\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260916...e51a9d92616a8b620609c527060a8c4b024157c7",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: remove stray android icon generator and ignore logs\n- iOS: add Import translation key and fix skin browser relative date\n- iOS: localize cheats manager, skin browser, and accessibility labels\n- iOS: use complete format strings instead of glued sentences\n- iOS: simplify slider number parsing and fix rtl swipe\n- iOS: add parity and parsing tests for localization\n- iOS: replace in-memory translation dictionaries with String Catalog\n- iOS: remove redundant scratch controller icons\n- iOS: purge android and react native build leftovers\n- iOS: drop unused desktop cmake modules and dead conditionals\n- iOS: delete dead android jni entry point\n- iOS: translate the RetroArch Slang Shaders messages\n- iOS: say when a shader preset fails to compile\n- iOS: show the right sliders when presets are picked quickly\n- iOS: retry a shader preset that failed to load\n- iOS: say why a shader preset can't load\n- iOS: download RetroArch Slang Shaders from Install Shader Pack\n- iOS: tidy the shader code and shorten its comments\n- iOS: share one set of helpers across the iOS source tests\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260916...e51a9d92616a8b620609c527060a8c4b024157c7",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "c91238ab754501b1fe19176674a02014c50d558eb237ecbfca3f732c5d1e60b2",
       "translationPending": false
     },
     {
