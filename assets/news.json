@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-19T16:03:15.475888Z",
+  "generatedAt": "2026-09-20T05:22:27.698850Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,97 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-20T00:40:08Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月20日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 保存MSVC libretro 架构中的现有字符串定义(# 2751)(Quan Wei)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Preserve existing strcasecmp definition in MSVC libretro builds (#2751) (Quan Wei)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "e0be55f8efab1bea4221eb677739c943f47af43ef1c9b7f358dd219786c3c311",
+      "translationPending": false
+    },
+    {
+      "id": "137146",
+      "title": "【家用机】Hpsx64 v0500",
+      "originalTitle": "[Consoles de salon] Hpsx64 v0500",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-19T21:32:58Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137146-consoles-de-salon-hpsx64-v0500/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/hpsx.png",
+      "officialUrl": "http://sourceforge.net/projects/hpsx64/",
+      "summary": "Highly-Experimental Playstation Simulator x64是一款正在开发中的PSone和PS2模拟器（处于初级阶段） ，由The Gangster编码，部分元素来自Mame/MESS或PCSX。 •直接声音选项，计算着色器渲染器v3 •固定杂项",
+      "content": "Highly-Experimental Playstation Simulator x64是一款正在开发中的PSone和PS2模拟器（处于初级阶段） ，由The Gangster编码，部分元素来自Mame/MESS或PCSX。\n\n•直接声音选项，计算着色器渲染器v3\n•固定杂项",
+      "originalContent": "Highly-Experimental Playstation Simulator x64 est un émulateur PSone et PS2 en développement (au stade préliminaire), codé par TheGangster dont certains éléments proviennent de Mame/Mess ou PCSX.\n\n- direct sound option, compute shader renderer v3\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d5a87a085503072a5d75556d218c94cecfd52712970c843b2c3dc501c6eeb216",
+      "translationPending": false
+    },
+    {
+      "id": "137144",
+      "title": "【电脑】Copperline v0.21.0",
+      "originalTitle": "[Ordi.] Copperline v0.21.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-19T21:30:55Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137144-ordi-copperline-v0-21-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
+      "officialUrl": "https://copperline.dev/",
+      "summary": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确） 。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "content": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确）\n。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "copperline_pc"
+      ],
+      "contentHash": "373326b0d8085f9b064bcc25607f9b12f7c7cac06419d070dadab93d582d68c1",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-bachata_s4-0-2-2",
+      "title": "【Android更新】Bachata S4 0.2.2",
+      "originalTitle": "Bachata S4 0.2.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-19T20:31:37Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/0.2.2",
+      "imageUrl": "asset://assets/emulators/bachata_s4.png",
+      "officialUrl": "https://github.com/JICA98/Bachata-S4",
+      "summary": "Bachata S4 发布 Android 新版本 0.2.2，发布日期为2026年09月19日。点击查看官方版本信息与更新说明。",
+      "content": "Bachata S4 已发布 Android 最新版本 0.2.2。\n\n发布日期：2026年09月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nBachataS4 0.2.2\n\n本更新日志涵盖了0.2.0通过0.2.2.发布后完成的工作\n\n亮点\n\n•在托管的glibc/FEX运行时旁边添加了本机Android/Bionic运行时，并具有运行时感知的Vulkan驱动程序选择。\n•添加了存储访问框架游戏文件夹、直接文件夹启动、持久文件夹权限和选择性游戏删除/提取流程。\n•添加了多语言UI支持、语言设置、横向控件、触摸配置文件、控制器主题、自定义D-pad几何形状以及大幅改进的触摸布局编辑器。\n•通过渲染器、回读、图像布局、MSAA和视频播放修复，提高了《战神III》、《最后生还者》、《WipEout》和其他游戏的兼容性和性能。\n• F-Droid和Play商店版本现在提供相同的六个离线萝卜包：三个glibc驱动程序和三个Android/Bionic驱动程序。\n\nVulkan驱动程序和运行时\n•添加并限定本机Android/Bionic主机运行时。\n•添加了可选择的glibc和Bionic运行时驱动程序，具有单独的每个运行时配置文件选择。\n•在切换运行时时保留驱动程序选择，并防止不兼容的ABI选择。\n•在每种分销口味中捆绑了三个glibc萝卜包和三个Bionic萝卜包。\n•删除了远程驱动程序目录、驱动程序下载、手动ZIP导入和捆绑驱动程序删除路径。\n•添加了校验和固定包验证和APK门，需要精确批准的六驱动程序库存，同时继续防止萝卜有效载荷泄漏到托管运行时存档中。\n\n图形、性能和兼容性\n\n•更正了《战神III》图像处理，并添加了特定于标题的分辨率和渲染选项。\n•添加了经过验证的战争之神III渲染器覆盖，修复了导致屏幕白化的渲染目标副本正确性，并恢复了读回吞吐量。\n•为The Last of Us添加了精确的读回覆盖，以防止黑色神器腐败。\n•修复了动态MSAA下采样崩溃和WipEout黑屏路径。\n•减少了AVPlayer预加载失速。\n•从较新的上游shadPS4工作中集成了渲染器和着色器正确性改进，包括资源跟踪、纹理处理、显示行为和同步修复。\n•改进了FEX信号堆栈所有权、重试路由、拆卸安全性和跨线程信号可靠性。\n•强化Android运行时设置传输和ARM64集成路径。\n\n接口、输入和设备行为\n\n•添加了多语言用户界面和应用内语言选择器。\n•添加了带有横向选项的方向锁定设置。\n•添加了触摸叠加配置文件和扩展的触摸控件。\n•添加了控制器视觉主题、自定义按钮形状和可配置的D-pad几何形状。\n•重新设计和优化了触摸布局编辑器。\n•改进了Android界面中的驱动程序和运行时控件。\n•修正了显示尺寸更改后的FPS计数器锚定。\n\n游戏、补丁和媒体\n•添加了对多个补丁XML文件的支持，并刷新了捆绑的官方补丁数据。\n•通过集成的上游工作改进了补丁算法、验证、会话处理和重播安全性。\n•通过post-0.2.0上游集成系列改进了视频播放、音频/运行时集成、内存处理、控制器行为、奖杯/NP集成边界和会话日志记录。\n\n释放伪影\n\n•套餐： `com.bachatas4.android`\n•版本名称： `0.2.2`\n•版本代码： `26091819`\n•变体： F-Droid版本\n• SHA-256 ： `35fbcdcd57e7d2637f9c8b1145c4589b1af35e55026cd7cb0dedca4de5d27a5e`\n•包括三个glibc和三个Android/Bionic萝卜驱动程序包。",
+      "originalContent": "# BachataS4 0.2.2\r\n\r\nThis changelog covers the work completed after the 0.2.0 release through 0.2.2.\r\n\r\n## Highlights\r\n\r\n- Added the native Android/Bionic runtime alongside the managed glibc/FEX runtime, with runtime-aware Vulkan driver selection.\r\n- Added Storage Access Framework game folders, direct-folder launching, persisted folder permissions, and selective game removal/extraction flows.\r\n- Added multilingual UI support, language settings, landscape orientation controls, touch profiles, controller themes, custom D-pad geometry, and a substantially improved touch-layout editor.\r\n- Improved compatibility and performance for God of War III, The Last of Us, WipEout, and other titles through renderer, readback, image-layout, MSAA, and video-playback fixes.\r\n- F-Droid and Play Store builds now ship the same six offline Turnip packages: three glibc drivers and three Android/Bionic drivers.\r\n\r\n## Vulkan drivers and runtimes\r\n\r\n- Added and qualified the native Android/Bionic host runtime.\r\n- Added selectable glibc and Bionic runtime drivers with separate per-runtime profile selections.\r\n- Preserved driver choices when switching runtimes and prevented incompatible ABI selections.\r\n- Bundled three glibc Turnip packages and three Bionic Turnip packages in every distribution flavor.\r\n- Removed the remote driver catalog, driver downloading, manual ZIP import, and bundled-driver deletion paths.\r\n- Added checksum-pinned package verification and APK gates that require the exact approved six-driver inventory while continuing to prevent Turnip payloads from leaking into the managed runtime archive.\r\n\r\n## Graphics, performance, and compatibility\r\n\r\n- Corrected God of War III image handling and added title-specific resolution and rendering options.\r\n- Added validated God of War III renderer overrides, fixed render-target copy correctness that caused screen whitening, and restored readback throughput.\r\n- Added a precise-readback override for The Last of Us to prevent black-artifact corruption.\r\n- Fixed dynamic MSAA downsampling crashes and the WipEout black-screen path.\r\n- Reduced AVPlayer preload stalls.\r\n- Integrated renderer and shader correctness improvements from newer upstream shadPS4 work, including resource tracking, texture handling, display behavior, and synchronization fixes.\r\n- Improved FEX signal-stack ownership, retry routing, teardown safety, and cross-thread signal reliability.\r\n- Hardened Android runtime settings transfer and ARM64 integration paths.\r\n\r\n## Interface, input, and device behavior\r\n\r\n- Added multilingual UI and an in-app language selector.\r\n- Added orientation-lock settings with landscape options.\r\n- Added touch overlay profiles and expanded touch controls.\r\n- Added controller visual themes, custom button shapes, and configurable D-pad geometry.\r\n- Reworked and optimized the touch-layout editor.\r\n- Improved driver and runtime controls in the Android interface.\r\n- Fixed FPS-counter anchoring after display-size changes.\r\n\r\n## Games, patches, and media\r\n\r\n- Added support for multiple patch XML files and refreshed the bundled official patch data.\r\n- Improved patch arithmetic, validation, session handling, and replay safety through the integrated upstream work.\r\n- Improved video playback, audio/runtime integration, memory handling, controller behavior, trophy/NP integration boundaries, and session logging through the post-0.2.0 upstream integration series.\r\n\r\n## Release artifact\r\n\r\n- Package: `com.bachatas4.android`\r\n- Version name: `0.2.2`\r\n- Version code: `26091819`\r\n- Variant: F-Droid release\r\n- SHA-256: `35fbcdcd57e7d2637f9c8b1145c4589b1af35e55026cd7cb0dedca4de5d27a5e`\r\n- Includes three glibc and three Android/Bionic Turnip driver packages.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "bachata_s4"
+      ],
+      "contentHash": "1a1a334df305d3e2ed504225bc8b8bbc56525479d944e60adf754d101c70d06b",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx2-2-7",
       "title": "【Android更新】ARMSX2 2.7",
@@ -30,31 +121,6 @@
         "armsx2"
       ],
       "contentHash": "0d4b8e56f4677acf4c34f4db0fc45ced95feaefa114ebc2edb8f4b39a302b711",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-19T14:28:15Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月19日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "1b17fc55bd22def7d235dd551b76e01b4863fc5ba963350c19d2d979c5c45fef",
       "translationPending": false
     },
     {
@@ -2782,30 +2848,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "9376432f355ca5e6956f00ed0367872005704c06ee39c6fffa50cae83b04c0db",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-bachata_s4-0-2-0",
-      "title": "【Android更新】Bachata S4 0.2.0",
-      "originalTitle": "Bachata S4 0.2.0 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-07T13:23:34Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.2.0",
-      "imageUrl": "asset://assets/emulators/bachata_s4.png",
-      "officialUrl": "https://github.com/JICA98/Bachata-S4",
-      "summary": "Bachata S4 发布 Android 新版本 0.2.0，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
-      "content": "Bachata S4 已发布 Android 最新版本 0.2.0。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n要点\n\n· 通过持续的遮荫器存储、缓冲缓冲、改进的视频回放和睡眠时间安排,加快启动速度并更平滑地游戏播放。\n• 更可靠的ARM64运行时间,包括硬化虚拟内存、GPU命令处理、FEX传输路径和NGS2音频处理。\n• F-Droid Vulkan司机选择,特鲁尼普司机自定义进口;司机仍在APK之外。\n• 清洁控制器第一导航,配备以会议菜单为中心,每个游戏设置更安全,并简化入职/家庭控制。",
-      "originalContent": "## Highlights\n\n- Faster startup and smoother gameplay through persistent shader storage, buffer caching, improved video playback, and sleep scheduling.\n- More reliable ARM64 runtime with hardened virtual memory, GPU command handling, FEX transfer paths, and NGS2 audio processing.\n- F-Droid Vulkan driver selection with custom Turnip driver imports; drivers remain external to the APK.\n- Cleaner controller-first navigation with centered session menus, safer per-game settings, and streamlined onboarding/Home controls.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "bachata_s4"
-      ],
-      "contentHash": "7635d340a19cede1fa948ab6d9a595c767950ddb86c0e3af21b70d1de67b382a",
       "translationPending": false
     },
     {
