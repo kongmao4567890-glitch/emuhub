@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-19T15:54:55Z",
+  "generatedAt": "2026-09-20T04:56:14Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -71,11 +71,11 @@
       "downloadUrl": "https://github.com/AzaharPlus/AzaharPlus/releases/download/AZAHAR_PLUS_2126_1_B/azaharplus-2126.1-B-android_coexists_with_azahar.apk"
     },
     "bachata_s4": {
-      "version": "0.2.0",
-      "releaseDate": "2026-09-07T13:23:34Z",
-      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.2.0",
-      "releaseNotes": "## Highlights\n\n- Faster startup and smoother gameplay through persistent shader storage, buffer caching, improved video playback, and sleep scheduling.\n- More reliable ARM64 runtime with hardened virtual memory, GPU command handling, FEX transfer paths, and NGS2 audio processing.\n- F-Droid Vulkan driver selection with custom Turnip driver imports; drivers remain external to the APK.\n- Cleaner controller-first navigation with centered session menus, safer per-game settings, and streamlined onboarding/Home controls.",
-      "downloadUrl": "https://github.com/JICA98/Bachata-S4/releases/download/v0.2.0/bachatas4-0.2.0-release.apk"
+      "version": "0.2.2",
+      "releaseDate": "2026-09-19T20:31:37Z",
+      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/0.2.2",
+      "releaseNotes": "# BachataS4 0.2.2\r\n\r\nThis changelog covers the work completed after the 0.2.0 release through 0.2.2.\r\n\r\n## Highlights\r\n\r\n- Added the native Android/Bionic runtime alongside the managed glibc/FEX runtime, with runtime-aware Vulkan driver selection.\r\n- Added Storage Access Framework game folders, direct-folder launching, persisted folder permissions, and selective game removal/extraction flows.\r\n- Added multilingual UI support, language settings, landscape orientation controls, touch profiles, controller themes, custom D-pad geometry, and a substantially improved touch-layout editor.\r\n- Improved compatibility and performance for God of War III, The Last of Us, WipEout, and other titles through renderer, readback, image-layout, MSAA, and video-playback fixes.\r\n- F-Droid and Play Store builds now ship the same six offline Turnip packages: three glibc drivers and three Android/Bionic drivers.\r\n\r\n## Vulkan drivers and runtimes\r\n\r\n- Added and qualified the native Android/Bionic host runtime.\r\n- Added selectable glibc and Bionic runtime drivers with separate per-runtime profile selections.\r\n- Preserved driver choices when switching runtimes and prevented incompatible ABI selections.\r\n- Bundled three glibc Turnip packages and three Bionic Turnip packages in every distribution flavor.\r\n- Removed the remote driver catalog, driver downloading, manual ZIP import, and bundled-driver deletion paths.\r\n- Added checksum-pinned package verification and APK gates that require the exact approved six-driver inventory while continuing to prevent Turnip payloads from leaking into the managed runtime archive.\r\n\r\n## Graphics, performance, and compatibility\r\n\r\n- Corrected God of War III image handling and added title-specific resolution and rendering options.\r\n- Added validated God of War III renderer overrides, fixed render-target copy correctness that caused screen whitening, and restored readback throughput.\r\n- Added a precise-readback override for The Last of Us to prevent black-artifact corruption.\r\n- Fixed dynamic MSAA downsampling crashes and the WipEout black-screen path.\r\n- Reduced AVPlayer preload stalls.\r\n- Integrated renderer and shader correctness improvements from newer upstream shadPS4 work, including resource tracking, texture handling, display behavior, and synchronization fixes.\r\n- Improved FEX signal-stack ownership, retry routing, teardown safety, and cross-thread signal reliability.\r\n- Hardened Android runtime settings transfer and ARM64 integration paths.\r\n\r\n## Interface, input, and device behavior\r\n\r\n- Added multilingual UI and an in-app language selector.\r\n- Added orientation-lock settings with landscape options.\r\n- Added touch overlay profiles and expanded touch controls.\r\n- Added controller visual themes, custom button shapes, and configurable D-pad geometry.\r\n- Reworked and optimized the touch-layout editor.\r\n- Improved driver and runtime controls in the Android interface.\r\n- Fixed FPS-counter anchoring after display-size changes.\r\n\r\n## Games, patches, and media\r\n\r\n- Added support for multiple patch XML files and refreshed the bundled official patch data.\r\n- Improved patch arithmetic, validation, session handling, and replay safety through the integrated upstream work.\r\n- Improved video playback, audio/runtime integration, memory handling, controller behavior, trophy/NP integration boundaries, and session logging through the post-0.2.0 upstream integration series.\r\n\r\n## Release artifact\r\n\r\n- Package: `com.bachatas4.android`\r\n- Version name: `0.2.2`\r\n- Version code: `26091819`\r\n- Variant: F-Droid release\r\n- SHA-256: `35fbcdcd57e7d2637f9c8b1145c4589b1af35e55026cd7cb0dedca4de5d27a5e`\r\n- Includes three glibc and three Android/Bionic Turnip driver packages.",
+      "downloadUrl": "https://github.com/JICA98/Bachata-S4/releases/download/0.2.2/bachatas4-0.2.2-release.apk"
     },
     "bkemu": {
       "version": "bkemu-1.2.2",
@@ -219,15 +219,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-09-19T14:28:15Z",
+      "releaseDate": "2026-09-20T00:40:08Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Preserve existing strcasecmp definition in MSVC libretro builds (#2751) (Quan Wei)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-09-19T14:28:15Z",
+      "releaseDate": "2026-09-20T00:40:08Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Preserve existing strcasecmp definition in MSVC libretro builds (#2751) (Quan Wei)"
     },
     "firebird": {
       "version": "1.6",
@@ -332,10 +332,10 @@
       "devReleaseNotes": "- f723a19: LCDUI: refactoring (woesss)\r\n- 75130ae: LCDUI: refactor commands in Alert (woesss)\r\n- d2263e0: LCDUI: fix Display.setCurrent() for Alert (woesss)\r\n- bb0d217: Refactor start MidletThread (woesss)\r\n- 6c3b6f6: Don't send report from modded apk (woesss)\r\n- e41930b: Setting to enable workaround for MIDlets that do not support pause (fix crash after pause) (woesss)\r\n- 6d75447: LCDUI: another fix for List, ChoiceGroup (woesss)\r\n- 97783bc: Fix uri parsing in BT connections (woesss)\r\n- 209d345: Fix call notifyItemStateChanged() for TextField (woesss)\r\n- 49e7fd6: refactor start app (woesss)\r\n- 580ac80: Add more info to AppInstaller error report (woesss)\r\n- 1da39db: Update AGP (woesss)\r\n- cfb9c20: Update proguard rules (woesss)\r\n- ffc6f3c: Update readme (woesss)\r\n- 7a7dbce: MMAPI: add MIDIControl support for MIDI based content (fix nikita36078/J2ME-Loader#1072) (woesss)\r\n- c501ccb: Add com.mot.iden.multimedia package (#111) (woesss)\r\n- 4f5b09b: Share a single back buffer across all Canvas instances (fix #110) (woesss)\r\n- f10c8d9: M3G: execute M3gRunnable in single thread (woesss)\r\n- d826b76: M3G: generate texture mipmap by M3G code, as automatic generation by GL does not work correctly (#108) (woesss)\r\n- a5ec311: Update gradle files (woesss)\r\n- 723f464: PNGUtils: ignore invalid palette indexes, optimize (woesss)\r\n- 21b8805: Filter pointer events (woesss)\r\n- 42f6827: Copy pixels from GL in native (woesss)\r\n- 0f67e90: Touch GL in single thread in com.mexa.opgl.OpglGraphics (woesss)\r\n- 2c7290b: Replace loop detection in immediate mode of EventQueue (woesss)\r\n- 0234d04: fixup! Check descriptor when skip installer dialog (woesss)\r\n- eb2ffc4: Reimplement Nokia M3D on GLES20 (woesss)\r\n- 225c4a2: Fix mutable property of Image (woesss)\r\n- a2eaf4e: Merge pull request #107 from rmn20/dev (woesss)\r\n- 4532838: micro3d: more lenient BMP loading (woesss)\r\n- e42cff5: fix (rmn20)\r\n- a609ebd: micro3d: Fix for bmp files with invalid raster offset (rmn20)\r\n- 724b90a: Refactoring case-insensitive file extension checking (woesss)\r\n- 86d3435: Improve com.siemens.mp.lcdui.Image implementation (woesss)\r\n- 23d4d1e: Fix open FileConnection (woesss)\r\n- 2b3eb27: Use acra-http (woesss)\r\n- 3cc10ae: Improve error reports (woesss)\r\n- a222d4a: Update appcenter cert (Nikita Shakarun)\r\n- 7a6719b: Fix build without secret properties (woesss)\r\n- 190bb47: LCDUI: fix Item.notifyStateChanged() (woesss)\r\n- 5d18a8b: Remove minimum delay for key release (woesss)\r\n- 177c985: Fix ClassCastException in takeScreenshot() (woesss)\r\n- cc87cf5: Fixed saving of resolution presets (woesss)"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-09-19-f100f78",
-      "releaseDate": "2026-09-19T01:29:32Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-19-f100f78",
-      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-18-5b7d334...KytyPS5-2026-09-19-f100f78"
+      "version": "KytyPS5-2026-09-19-8cecaf4",
+      "releaseDate": "2026-09-19T22:27:48Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-19-8cecaf4",
+      "releaseNotes": "## What's Changed\n* Fix Unicode paths on Windows by @AghastyGD in https://github.com/KytyPS5/KytyPS5/pull/716\n\n## New Contributors\n* @AghastyGD made their first contribution in https://github.com/KytyPS5/KytyPS5/pull/716\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-19-82b2711...KytyPS5-2026-09-19-8cecaf4"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -898,10 +898,10 @@
     },
     "padforge": {
       "version": "latest-v4-dev",
-      "releaseDate": "2026-09-19T15:17:54Z",
+      "releaseDate": "2026-09-20T04:21:59Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35448768877",
-      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35448768877"
+      "releaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35487788663",
+      "devReleaseNotes": "Build archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/35487788663"
     },
     "panda3ds": {
       "version": "0.9",
@@ -928,11 +928,11 @@
       "devReleaseNotes": "Attempted head seek improvements for Zen Nihon Joshi Pro Wres - Queen of Queens."
     },
     "pcsx2_pc": {
-      "version": "2.9.66",
-      "releaseDate": "2026-09-19T06:46:36Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.66",
-      "releaseNotes": "- [GS/GL: Add GLAD_GL_EXT_direct_state_access fallback.](https://github.com/PCSX2/pcsx2/pull/14965)",
-      "devReleaseNotes": "- [GS/GL: Add GLAD_GL_EXT_direct_state_access fallback.](https://github.com/PCSX2/pcsx2/pull/14965)"
+      "version": "2.9.72",
+      "releaseDate": "2026-09-19T19:09:47Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.72",
+      "releaseNotes": "- [CMake: Fix WoA check for building renderers](https://github.com/PCSX2/pcsx2/pull/14977)",
+      "devReleaseNotes": "- [CMake: Fix WoA check for building renderers](https://github.com/PCSX2/pcsx2/pull/14977)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.22",
@@ -1044,11 +1044,11 @@
       "devReleaseNotes": "## What's Changed\n* Bump rust-toolchain from 1.98.0 to 1.98.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/831\n* Bump the rust-minor group across 1 directory with 10 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/835\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/833\n* chore: Bump Rascal to 0.3.6 by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/836\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/837\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260902...0.260907"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-09-19",
-      "releaseDate": "2026-09-19T00:13:38Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-09-19",
-      "releaseNotes": "## What's Changed\n* core: Rewrite fpdownload URLs to https by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24718\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-18...nightly-2026-09-19",
-      "devReleaseNotes": "## What's Changed\n* core: Rewrite fpdownload URLs to https by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24718\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-18...nightly-2026-09-19"
+      "version": "nightly-2026-09-20",
+      "releaseDate": "2026-09-20T00:14:59Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-09-20",
+      "releaseNotes": "## What's Changed\n* tests: Add regression test for AVM1 rewind MovieClip replace by @AllinolCP in https://github.com/ruffle-rs/ruffle/pull/24699\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-19...nightly-2026-09-20",
+      "devReleaseNotes": "## What's Changed\n* tests: Add regression test for AVM1 rewind MovieClip replace by @AllinolCP in https://github.com/ruffle-rs/ruffle/pull/24699\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-09-19...nightly-2026-09-20"
     },
     "sameboy_core": {
       "version": "1.0.3",
@@ -1257,10 +1257,10 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_edge_pc": {
-      "version": "1af8dc6",
-      "releaseDate": "2026-09-18T18:21:40Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/1af8dc6",
-      "releaseNotes": "### Changes\n\n- [XAM] Pick an indie game when the XNA launcher starts without one (`1af8dc6`)\n- [Kernel] Implement Ke*UserMode (`1158355`)\n- [Kernel] Report XEX section protection from KeGetImagePageTableEntry (`efabe1d`)\n- [CPU] Fix XEX patches that move the image base (`2fe7b7d`)\n- [Base/Threading] Let a created fiber restart from its entry (`1e02ea7`)\n- [x64] Return exactly into live frames of dynamic code (`cfbff8f`)\n- [CPU/x64] Keep separate stackpoint records per host stack (`69821e7`)\n- [CPU/x64] Run guest code that no module claims (`b539853`)\n- [CPU] Let the kernel handle guest system calls (`63c95ec`)\n- [Memory] Map a user mode address space on demand (`32a95ff`)\n- [x64] Compare guest stack pointers unsigned in the stack sync helper (`5374267`)\n- [x64] Refactor longjmp resolution out of ResolveFunction (`efdfa15`)\n- [CPU/PPC] Read guest instructions through the owning module (`52188fa`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/1689b26...1af8dc6"
+      "version": "887beea",
+      "releaseDate": "2026-09-19T15:55:53Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/887beea",
+      "releaseNotes": "### Changes\n\n- [Kernel] Read NtOpenFile's OpenOptions from the sixth argument (`887beea`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/1af8dc6...887beea"
     },
     "xenia_manager": {
       "version": "4.3.2",
