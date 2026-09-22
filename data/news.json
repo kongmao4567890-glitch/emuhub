@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T05:20:58.990100Z",
+  "generatedAt": "2026-09-22T17:16:22.059366Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -15,14 +15,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-22T04:11:14Z",
+      "publishedAt": "2026-09-22T14:11:37Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月22日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_snes.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_snes.cpp: various... (fprietog)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,7 +30,55 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "eb075d0dfec19cb13e3cb05b535fe7afbd51835a990d6561109049bd1cb1ec41",
+      "contentHash": "ece24172cf3d05ea5aea6bebd24924725087b2557493be8714be615e275ab31b",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260922",
+      "title": "【Android更新】ARMSX2 nightly-20260922",
+      "originalTitle": "ARMSX2 nightly-20260922 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-22T13:55:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260922",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260922，发布日期为2026年09月22日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260922。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故使用Qt Appimage在那里)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n从旧夜里来的? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了马厩的应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本的降级, 因此要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n或\n• EE FPU:将 arm64 将重现从信头中分割为源文件\n• EE FPU:在默认运行中启用详尽的分隔扫描\n• VIF测试:一行一对的针头\n• VIF:一个未装模作样的V4-32手提箱,每双四字\n• IOP建议:倒计时设定自己的旗帜\n• EE建议:在偏移字段本身宽度内设置呼叫后环包\n• EE测试:发报员的标语\n• EE建议:调度员通过车身到达出口\n• mVU:不进入再编译器而进行VU0旋转反弹\n• mVU:周期预算间断是一个共享的支点\n• VU测试:把周期预算中断记回\n• mVU:累积的ACC叠叠也\n• mVU:每个被夹住的操作器都将拷贝叠在它的前面\n• mVU:标志夹住其行的两边合装\n• 紫外线试验:双侧单轨夹\n• mVU:单车道夹曾写过一条车道\n• VU测试:标定旗帜队列重排发射顺序\n• mVU:旗下队列重排以适合的洗牌打开\n• VU测试:记录三条线书写值的标针\n• mVU:三行写法保存自己的登记册\n• VU测试:预装配对的每半个插座\n• mVU:阻断启动 VF 预装负载成对\n• COP2:VCLIP将其比较与一个UZP1折叠\n• EE测试:扫描COP2宏 VCLIP位布局和异常规则\n• VU拉带:说明在国旗登记册上植种的实际作用\n• mVU:CLIP将其六个比较道与一个UZP1和一个ADDV折叠\n• VU测试:Pin CLIP的6个结果位及其24位历史\n• EE建议:在兄弟会地点将基数折叠成抵消加法\n• EE测试:向模糊器提供程序书写的负载/存储基础\n• mVU:发送器的选项记录每个发送器的设置\n• mVU:在出口路径前提高E位中断\n• VU测试:在VU1程序端点上标注E位中断提升\n• VU:ILW通过双位码的脱落场名1道\n• VU:LQD和SQD也将地址从vi00基数上移开\n• VU测试:VU0在VU1登记册上的窗口处于测试状态\n• VU1:从绑定状态指针到达数据内存\n• mVU:地址宽度处增加了ILW的车道偏移\n• VU:将载荷/存储地址路径对准口译\n• mVU:在夹缝接合物清单中命名模型根\n• EE FPU:用一个比较arm64来选择除号单位的位数\n• 以登记册文件自己的格式访问FPU模型\n• 向iFPUd群岛宣传它们根据《公约》所呼吁的公约\n• 缩小每个目标模型的矢量的一半\n• EE FPU模式:将召集会议带至叶子上\n• 将型号呼叫器倒入电源\n• 微型VU:分享各站点之间的模拟呼叫接合\n• 第二届缔约方会议:分享四个地点之间的模式呼叫接合\n• mVU:在登记册中保持夹带\n• mVU:将单行道夹在单行道上\n-…",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- EE FPU: move the arm64 divide recurrence out of a header into a source file\n- EE FPU: enable the exhaustive divide sweep in the default run\n- VIF tests: pin which rows of a copy pair up\n- VIF: an unmasked V4-32 unpack copies a quadword pair at a time\n- IOP rec: the timeslice countdown sets its own flags\n- EE rec: the call-ret ring wraps in the offset field's own width\n- EE tests: pin which dispatcher a veneer hop arrives at\n- EE rec: dispatcher exits reach through a veneer\n- mVU: a held VU0 spin bounces without entering the recompiler\n- mVU: the cycle-budget break is one shared stub\n- VU tests: pin what a cycle-budget break writes back\n- mVU: the accumulate's copy of ACC folds too\n- mVU: every clamped operand folds the copy in front of it\n- mVU: the sign clamp loads its row's two bounds together\n- VU tests: pin both bounds of the single-lane clamp\n- mVU: the single-lane clamp writes its lane once\n- VU tests: pin what the flag queue reorder emits\n- mVU: the flag queue reorder opens with the shuffle that fits\n- VU tests: pin which register a three-lane write leaves the value in\n- mVU: a three-lane write keeps its own register\n- VU tests: pin which slot each half of a preload pair lands in\n- mVU: block-start VF preloads load in pairs\n- COP2: VCLIP folds its comparisons with one UZP1\n- EE tests: sweep the COP2 macro VCLIP bit layout and denormal rule\n- VU harness: say what seeding a flag register actually does\n- mVU: CLIP folds its six comparison lanes with one UZP1 and an ADDV\n- VU tests: pin CLIP's six result bits and its 24-bit history\n- EE rec: fold the base into the offset add at the sibling sites\n- EE tests: give the fuzzer a load/store base the program writes\n- mVU: the options sentinel records every setting the emitters read\n- mVU: raise the E-bit interrupt in front of the exit path\n- VU tests: pin the E-bit interrupt raise on a VU1 program end\n- VU: ILW's dest field names one lane through a two-bit code\n- VU: LQD and SQD step the address off a vi00 base too\n- VU tests: VU0's window onto VU1's registers is state under test\n- VU1: reach data memory from the pinned state pointer\n- mVU: ILW's lane offset is added at the address's own width\n- VU: sweep the load/store address path against the interpreter\n- mVU: name the model stub in the clamp-bound seam list\n- EE FPU: select the divide unit's digit with one compare on arm64\n- Reach the FPU models in the register file's own format\n- Spill the iFPUd islands for the convention they call under\n- Narrow the model stub's vector half per target\n- EE FPU model: carry the call convention down to the leaves\n- Fold the model-call spill into the stub generator\n- microVU: share the model-call seam between the sites\n- COP2: share the model-call seam between the four sites\n- mVU: hold the clamp bounds in registers\n- mVU: pin the lanes the single-lane clamp leaves alone\n-…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "ad169142cd3ba3e0e55e98cc4cb08d98ee94b26cc2819c8cba5751b1f2f7e547",
+      "translationPending": false
+    },
+    {
+      "id": "137225",
+      "title": "【家用机】Sharpemu v0.0.4",
+      "originalTitle": "[Consoles de salon] Sharpemu v0.0.4",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-22T09:51:34Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137225-consoles-de-salon-sharpemu-v0-0-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/sharpemu-logo.png",
+      "officialUrl": "https://github.com/par274/sharpemu",
+      "summary": "SharpEmu是由par274开发的实验性PlayStation 5模拟器，完全用C #编写，旨在在Windows、Linux和macOS上运行，尽管开发主要集中在Windows上 。该项目从头开始编码，不接管其他仿真器，充当仿真器以及研究PS5架构的平台。 模拟器还很年轻：没有可玩的商业游戏，但它已经可以加载eboot.bin ，执行CPU指令，读取游戏元数据，加载系统模块并启动图形流水线的某些步骤 。",
+      "content": "SharpEmu是由par274开发的实验性PlayStation 5模拟器，完全用C #编写，旨在在Windows、Linux和macOS上运行，尽管开发主要集中在Windows上\n。该项目从头开始编码，不接管其他仿真器，充当仿真器以及研究PS5架构的平台。\n模拟器还很年轻：没有可玩的商业游戏，但它已经可以加载eboot.bin ，执行CPU指令，读取游戏元数据，加载系统模块并启动图形流水线的某些步骤\n。几个经过测试的游戏达到了sceVideoOut或AGC等高级阶段，这表明渲染开始工作，即使仍然有限。\n开发处于活跃状态， Windows构建可用且进度稳定。 SharpEmu专注于在瞄准高级兼容性或游戏玩法之前建立强大的技术基础。\n总而言之， SharpEmu是一个雄心勃勃的PS5项目，有条不紊，正在建设中，为未来全面模拟控制台奠定了基础。\n\n更改内容如下：\n• [aerolib-catalog]添加对多个Aerolib目录的支持(# 867) (ca90d17)\n•修复：改善直接执行来宾运行时和AGC兼容性(# 880) (0a461f8)\n•修复/AGC渲染和模块加载（ # 881 ） （ f84246c ）\n•添加了官方Discord服务器自述文件和GUI。（ 3c91c76 ）\n• [appcontent]将TEMP保存到用户目录而不是appdata (# 885) (b6f71b3)\n• [内核]将printf %S修复为% ls ，包括宽输出系列(# 889) (179fcbb)\n• GUI改进第3部分（ # 891 ） （ c69e88e ）\n• [GUI]阿塞拜疆语(# 890) (9d99fef)\n• [languages]墨西哥的固定语言密钥和正确的密钥顺序（ ca64b4a ）\n• [CI]修复工作流程和脚本中的警告(# 892) (5c0adf8)\n• Alpha重建进度（ # 887 ） （ 37694df ）\n• [自述文件]新截图（ 9db40fc ）\n• Alpha重建第2部分（ # 893 ） （ cff4a16 ）\n• FIX （进口防护） ：识别轮询进度边界（ # 895 ） （ ea943c1 ）\n• [内核]为cpp异常信息添加了sceKernelDebugWriteCppExceptionInfo实现(f4e6c73)\n• [usbd]实现sceUsbdHandleEventsTimeout ，仅返回信号未连接和超时（ acb0d4a ）\n• [内核]为调度程序实现sceKernelAddHRTimerEvent和sceKernelDeleteHRTimerEvent （ 3e76003 ）\n• [Usbd]更多存根（ 0409f3a ）\n• [share]增加了更多份额实施（ acbf28c ）\n• [Pthread]实现scePthreadCondSignalto （ 2a27cfe ）\n• [字体] sceFontRebindRenderer ， sceFontGetCharGlyphMetrics ， sceFontGetKerning （ b4584f8 ）\n• [AGC] sceAgcAcbRewind ， sceAgcRewindPatchSetRewindState实现（ 082b5fa ）\n• [GPU]增加了对VK （ a86f673 ）的多边形渲染支持\n• [Share]添加了sceShareGetRunningStatus （ 7d299c6 ）\n• [GameService]更多游戏服务的服务存根（ f1be35a ）\n• [Ampr]将APR房客文件ID与本地句柄分开（ 5c347d2 ）\n• [SpirvTranslator]修复SPIR-V视口/图层功能处理（ 54ab51e ）\n• [自述文件]更新（ 0b2ee44 ）\n•家务：颠簸版至0.0.4 （ # 896 ） （ db382cf ）",
+      "originalContent": "SharpEmu est un émulateur PlayStation 5 expérimental développé par par274, entièrement écrit en C# et conçu pour fonctionner sur Windows, Linux et macOS, même si le développement se concentre surtout sur Windows. Le projet est codé from scratch, sans reprendre d’autres émulateurs, et sert autant d’émulateur que de plateforme d’étude de l’architecture PS5.\n\nL’émulateur est encore très jeune: aucun jeu commercial n’est jouable, mais il peut déjà charger des eboot.bin, exécuter des instructions CPU, lire les métadonnées des jeux, charger des modules système et initier certaines étapes du pipeline graphique. Plusieurs jeux testés atteignent des stades avancés comme sceVideoOut ou AGC, ce qui montre que le rendu commence à fonctionner, même si encore limité.\n\nLe développement est actif, avec des builds Windows disponibles et des progrès réguliers. SharpEmu se concentre sur la mise en place d’une base technique solide avant de viser la compatibilité avancée ou la jouabilité.\n\nEn résumé, SharpEmu est un projet PS5 ambitieux, méthodique et en pleine construction, qui pose les fondations nécessaires pour une future émulation complète de la console.\n\nVoici les changements:\n- [aerolib-catalog] Add support for multiple Aerolib catalogs (#867) (ca90d17)\n- fix: improve Direct Execution guest runtime and AGC compatibility (#880) (0a461f8)\n- Fix/agc rendering and module loading (#881) (f84246c)\n- Added official Discord server readme and GUI. (3c91c76)\n- [appcontent] Saving temp to user directory instead of appdata (#885) (b6f71b3)\n- [Kernel] Fix printf %S to be treated as %ls, including for the wide-output family (#889) (179fcbb)\n- Gui improvements part3 (#891) (c69e88e)\n- [GUI] Azerbaijani language (#890) (9d99fef)\n- [languages] fixed language keys for Azerbaycanca and correct order for keys (ca64b4a)\n- [CI] Fixes to warnings in workflows and scripts (#892) (5c0adf8)\n- Alpha Rebuild Progress (#887) (37694df)\n- [readme] new screenshots (9db40fc)\n- Alpha rebuild part2 (#893) (cff4a16)\n- fix(import-guard): recognize polling progress boundaries (#895) (ea943c1)\n- [Kernel] added sceKernelDebugWriteCppExceptionInfo implements for cpp exception info (f4e6c73)\n- [usbd] implement sceUsbdHandleEventsTimeout, just return signal not connect and timeout (acb0d4a)\n- [Kernel] implement sceKernelAddHRTimerEvent & sceKernelDeleteHRTimerEvent for scheduler (3e76003)\n- [Usbd] more stubs (0409f3a)\n- [Share] added more share implementation (acbf28c)\n- [Pthread] implement scePthreadCondSignalto (2a27cfe)\n- [Font] sceFontRebindRenderer, sceFontGetCharGlyphMetrics, sceFontGetKerning (b4584f8)\n- [AGC] sceAgcAcbRewind, sceAgcRewindPatchSetRewindState implements (082b5fa)\n- [GPU] added polygon rendering support for VK (a86f673)\n- [Share] Added sceShareGetRunningStatus (7d299c6)\n- [GameService] more service stubs for the game service (f1be35a)\n- [Ampr] Separate APR guest file IDs from local handles (5c347d2)\n- [SpirvTranslator] Fix SPIR-V viewport/layer capability handling (54ab51e)\n- [readme] update (0b2ee44)\n- chore: bump version to 0.0.4 (#896) (db382cf)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "sharpemu_pc"
+      ],
+      "contentHash": "67ca0fb7e64f3cb14e4d8694789447424892d855be2b3efecccae063eb1ab524",
       "translationPending": false
     },
     {
@@ -40,57 +88,33 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-22T03:43:39Z",
+      "publishedAt": "2026-09-22T06:36:14Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
       "imageUrl": "asset://assets/emulators/duckstation.png",
       "officialUrl": "https://github.com/stenzek/duckstation",
       "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月22日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 检测调试版本中的递归锁 (Stenzek（https://github.com/stenzek/duckstation/commit/831305b5dfa48b3a6f49af19e280f2e687866f25）)\n • 添加用于翻译不带对象消息的包装器（Stenzek（https://github.com/stenzek/duckstation/commit/46532474a213a53c354f6f10e587fb71a1a077dc））\n • 使用字符串视图和移动语义处理回调错误（Stenzek（https://github.com/stenzek/duckstation/commit/1067ebe9e6a6fc72052bb64561ab9106d7065b7a））\n • 确保所有回调函数都通过 PollEvents() 调用（Stenzek（https://github.com/stenzek/duckstation/commit/46fca8f0da304c792bdea2a2162ef71cf96c0108））\n•将调试窗口可见性转换为位掩码（ Stenzek（https://github.com/stenzek/duckstation/commit/31a610358f47f5c3c981a5c4f953e141e4b08c86） ）\n•将递归互斥替换为轻量级互斥（ Stenzek（https://github.com/stenzek/duckstation/commit/5684d1b005057cf038c777274ea4030bc30b7c07） ）\n•为savetitle/localizedtitle添加缺少的帮助文本（ Stenzek（https://github.com/stenzek/duckstation/commit/8f99b60ef2ee5920618cbdd0a7ae7f909b49c715） ）\n•将recursive_mutex替换为轻量级mutex （ Stenzek（https://github.com/stenzek/duckstation/commit/4cd6e30ded5edeb7e57eb4dacd8e26fd4d87740a） ）\n•允许验证运行时填充的映像（ Stenzek（https://github.com/stenzek/duckstation/commit/108e721f5027a82528e5385be32751b3bdbcc137） ）",
-      "originalContent": "## Commits\n- Detect recursive locks in debug builds ([Stenzek](https://github.com/stenzek/duckstation/commit/831305b5dfa48b3a6f49af19e280f2e687866f25))\n- Add wrappers for translating messages without object ([Stenzek](https://github.com/stenzek/duckstation/commit/46532474a213a53c354f6f10e587fb71a1a077dc))\n- Use string view and move semantics for callback error ([Stenzek](https://github.com/stenzek/duckstation/commit/1067ebe9e6a6fc72052bb64561ab9106d7065b7a))\n- Ensure all callbacks invoke through PollEvents() ([Stenzek](https://github.com/stenzek/duckstation/commit/46fca8f0da304c792bdea2a2162ef71cf96c0108))\n- Turn debug window visiblity into a bitmask ([Stenzek](https://github.com/stenzek/duckstation/commit/31a610358f47f5c3c981a5c4f953e141e4b08c86))\n- Replace recursive mutex with lightweight mutex ([Stenzek](https://github.com/stenzek/duckstation/commit/5684d1b005057cf038c777274ea4030bc30b7c07))\n- Add missing help text for savetitle/localizedtitle ([Stenzek](https://github.com/stenzek/duckstation/commit/8f99b60ef2ee5920618cbdd0a7ae7f909b49c715))\n- Replace recursive_mutex with lightweight mutex ([Stenzek](https://github.com/stenzek/duckstation/commit/4cd6e30ded5edeb7e57eb4dacd8e26fd4d87740a))\n- Allow verification of runtime-populated images ([Stenzek](https://github.com/stenzek/duckstation/commit/108e721f5027a82528e5385be32751b3bdbcc137))",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•根据主题动态调整日志窗口颜色（ Stenzek（https://github.com/stenzek/duckstation/commit/2c9866ef9e6a3bd1803f0cd5dffd294c047d74b9） ）",
+      "originalContent": "## Commits\n- Dynamically adjust log window colours to theme ([Stenzek](https://github.com/stenzek/duckstation/commit/2c9866ef9e6a3bd1803f0cd5dffd294c047d74b9))",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "duckstation"
       ],
-      "contentHash": "9c51a77cddbee66139469ab60dadc856f87a77a8e399a3e818433fcb8706a64b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260921",
-      "title": "【Android更新】ARMSX2 nightly-20260921",
-      "originalTitle": "ARMSX2 nightly-20260921 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-21T15:23:52Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260921",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260921，发布日期为2026年09月21日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260921。\n\n发布日期：2026年09月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n从旧夜里来的? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了马厩的应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本的降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n或\n• Android:恢复已经假定的CMake pin CI(3.22.1 -> 3.31.6)\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260920...e46fd5a8935ab3c1d5dcf49bef858218994d6c48",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- Android: restore the CMake pin CI already assumes (3.22.1 -> 3.31.6)\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260920...e46fd5a8935ab3c1d5dcf49bef858218994d6c48",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "413add3306fa2e35181c3b984bb8e30fca478770ab046d5d68da814e460d76b3",
+      "contentHash": "d77b701124675dbf92fb3464ce44e0d6ae953b3825b65371ce5dd36f355f3b43",
       "translationPending": false
     },
     {
       "id": "137183",
-      "title": "【家用机】Pureikyubu v1.9.1 (2026/09/21)",
-      "originalTitle": "[Consoles de salon] Pureikyubu v1.9.1 (2026/09/21)",
+      "title": "【家用机】Pureikyubu v1.9.1 (2026/09/22)",
+      "originalTitle": "[Consoles de salon] Pureikyubu v1.9.1 (2026/09/22)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-21T14:13:54Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137183-consoles-de-salon-pureikyubu-v1-9-1-2026-09-21/",
+      "sourceUrl": "https://www.emu-france.com/news/137183-consoles-de-salon-pureikyubu-v1-9-1-2026-09-22/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Pureikyubu-emu.png",
       "officialUrl": "https://github.com/emu-russia/pureikyubu/",
       "summary": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。",
@@ -100,7 +124,7 @@
         "pc"
       ],
       "relatedEmulatorIds": [],
-      "contentHash": "e28b101b636a122c080651fbf4351138c905c853c9960bc91f2c08edbb843db2",
+      "contentHash": "6038f52f106f89bbf551f4dc013712f348613521f604a34fd5b7eee8cb565103",
       "translationPending": false
     },
     {
@@ -223,22 +247,22 @@
     },
     {
       "id": "137196",
-      "title": "【家用机】Ryujinx-Nextendo v1.8.5",
-      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.8.5",
+      "title": "【家用机】Ryujinx-Nextendo v1.8.6",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.8.6",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-21T10:09:45Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137196-consoles-de-salon-ryujinx-nextendo-v1-8-5/",
+      "sourceUrl": "https://www.emu-france.com/news/137196-consoles-de-salon-ryujinx-nextendo-v1-8-6/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
       "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
       "summary": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。 该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。",
-      "content": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。\n该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。\n其目的特别是允许兼容游戏通过Nextendo网络查找在线游戏功能，而无需用户进行特殊手动配置、修改HOSTS文件或绕过SSL。\n\n这些变化是：\n\n超级马里奥兄弟奇迹\n• Wonder现在适用于Nextendo。构建FF773E90972D544EB79406EAA65396D53C43EFB9 （游戏版本1.2.1 ）的内置补丁：固定证书绕过和两个对等名称拒绝。另一个游戏更新不会收到它们，也无法访问我们的服务器。\n•内置补丁现在可无条件应用。 他们曾经依赖于游戏现有的外部模块—在没有安装模块的情况下，我们在应用它们之前返回了，游戏直接进入了真正的任天堂服务器。\n\n《超级马里奥兄弟35》再次登场\n•版本表需要1.1.2 ，而1.1.2从未存在过。上一次SMB35更新是1.0.2 （ 2020年11月12日） ；该游戏于2021年3月关闭。更新到1.8.2的任何人都被拒绝推出无法获得的版本。",
-      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.\n\nLes changements sont:\n\nSuper Mario Bros. Wonder\n- Wonder now works on Nextendo. Built-in patches for build FF773E90972D544EB79406EAA65396D53C43EFB9 (game version 1.2.1): pinned-certificate bypass and two peer-name rejections. Another game update would not receive them and could not reach our servers.\n- Built-in patches are now applied unconditionally. They used to depend on an external mod existing for the title — with no mod installed we returned before applying them, and the game went straight to the real Nintendo servers.\n\nSuper Mario Bros. 35 launches again\n- The version table required 1.1.2, which never existed. The last SMB35 update was 1.0.2 (12 November 2020); the game shut down in March 2021. Anyone who updated to 1.8.2 was refused launch over a version that cannot be obtained.",
+      "content": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。\n该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。\n其目的特别是允许兼容游戏通过Nextendo网络查找在线游戏功能，而无需用户进行特殊手动配置、修改HOSTS文件或绕过SSL。\n\n这些变化是：\n•注册应用程序标识： Ryujinx现在使用其注册的官方Nextendo客户端应用程序标识对所有帐户和网络端点进行身份验证。\n•封闭式API实施：集成更新后的Nextendo网络网关所需的应用程序标头。\n•安全和防泄漏强化：擦除构建管道和隔离的客户端身份凭证。\n\n超级马里奥兄弟奇迹\n• Wonder现在适用于Nextendo。构建FF773E90972D544EB79406EAA65396D53C43EFB9 （游戏版本1.2.1 ）的内置补丁：固定证书绕过和两个对等名称拒绝。另一个游戏更新不会收到它们，也无法访问我们的服务器。\n•内置补丁现在可无条件应用。 他们曾经依赖于游戏现有的外部模块—在没有安装模块的情况下，我们在应用它们之前返回了，游戏直接进入了真正的任天堂服务器。\n\n《超级马里奥兄弟35》再次登场\n•版本表需要1.1.2 ，而1.1.2从未存在过。上一次SMB35更新是1.0.2 （ 2020年11月12日） ；该游戏于2021年3月关闭。更新到1.8.2的任何人都被拒绝推出无法获得的版本。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.\n\nLes changements sont:\n\n- Registered Application Identity: Ryujinx now authenticates all account and network endpoints using its registered official Nextendo client application identity.\n- Closed API Enforcement: Integrates the required application headers for the updated Nextendo Network gateway.\n- Security & Anti-Leak Hardening: Scrubbed build pipeline and isolated client identity credentials.\n\nSuper Mario Bros. Wonder\n- Wonder now works on Nextendo. Built-in patches for build FF773E90972D544EB79406EAA65396D53C43EFB9 (game version 1.2.1): pinned-certificate bypass and two peer-name rejections. Another game update would not receive them and could not reach our servers.\n- Built-in patches are now applied unconditionally. They used to depend on an external mod existing for the title — with no mod installed we returned before applying them, and the game went straight to the real Nintendo servers.\n\nSuper Mario Bros. 35 launches again\n- The version table required 1.1.2, which never existed. The last SMB35 update was 1.0.2 (12 November 2020); the game shut down in March 2021. Anyone who updated to 1.8.2 was refused launch over a version that cannot be obtained.",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "1ad13f9e6f4096f3bcf702c95b1de29f4ea9fa5d5949ea233cddf6137d593f27",
+      "contentHash": "6eb3a24bb86d0bdc37fd488ae000c7f3a64ae0d3caa638b04c97189980ec55cd",
       "translationPending": false
     },
     {
@@ -356,24 +380,24 @@
     },
     {
       "id": "137179",
-      "title": "【家用机】Snes9x TestBuild v1.63 R1646",
-      "originalTitle": "[Consoles de salon] Snes9x TestBuild v1.63 R1646",
+      "title": "【家用机】Snes9x TestBuild v1.63 R1649",
+      "originalTitle": "[Consoles de salon] Snes9x TestBuild v1.63 R1649",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-21T05:35:32Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137179-consoles-de-salon-snes9x-testbuild-v1-63-r1646/",
+      "sourceUrl": "https://www.emu-france.com/news/137179-consoles-de-salon-snes9x-testbuild-v1-63-r1649/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/snes9x.png",
       "officialUrl": "http://www.s9x-w32.de/dl/testbuilds/",
-      "summary": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。 Starfox 2 （ SNES迷你版）的一小部分？ ...ou也许是法力法语iOS版的秘密？ 算了，我改做《时空之轮》的非正式续集: p 自上次生成以来的更改： • PPU ：锁存模式7提前寄存器。 •固定杂项",
-      "content": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。\n\nStarfox 2 （ SNES迷你版）的一小部分？\n\n...ou也许是法力法语iOS版的秘密？\n算了，我改做《时空之轮》的非正式续集: p\n\n自上次生成以来的更改：\n\n• PPU ：锁存模式7提前寄存器。\n•固定杂项",
-      "originalContent": "Il s'agit de la dernière version officielle dite \"instable\" de Snes9x ajoutant les dernières nouveautés, améliorations et/ou corrections en provenance des sources GIT. Versions 32 et 64 bits dans l'archive.\n\nUne petite partie de Starfox 2 (SNES Mini Edition) ?\n\n...ou peut-être un Secret of Mana Français iOS Edition ?\n\nLaissez tomber, je vais me faire la suite non officielle de Chrono Trigger plutôt :p\n\nLes changements depuis le dernier build:\n\n- ppu: Latch Mode 7 registers early.\n- Misc fixes",
+      "summary": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。 Starfox 2 （ SNES迷你版）的一小部分？ ...ou也许是法力法语iOS版的秘密？ 算了，我改做《时空之轮》的非正式续集: p 自上次生成以来的更改： •恢复“PPU ：渲染A.S.P.空袭巡逻队的束流中扫描线效果(# 1079)” •锁定模式7参数时，以周期为单位比较位置，而不是点。",
+      "content": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。\n\nStarfox 2 （ SNES迷你版）的一小部分？\n\n...ou也许是法力法语iOS版的秘密？\n算了，我改做《时空之轮》的非正式续集: p\n\n自上次生成以来的更改：\n\n•恢复“PPU ：渲染A.S.P.空袭巡逻队的束流中扫描线效果(# 1079)”\n•锁定模式7参数时，以周期为单位比较位置，而不是点。\n• cpuexec ：修复无免疫IRQ或NMI时的WAI指令。\n• PPU ：锁存模式7提前寄存器。\n•固定杂项",
+      "originalContent": "Il s'agit de la dernière version officielle dite \"instable\" de Snes9x ajoutant les dernières nouveautés, améliorations et/ou corrections en provenance des sources GIT. Versions 32 et 64 bits dans l'archive.\n\nUne petite partie de Starfox 2 (SNES Mini Edition) ?\n\n...ou peut-être un Secret of Mana Français iOS Edition ?\n\nLaissez tomber, je vais me faire la suite non officielle de Chrono Trigger plutôt :p\n\nLes changements depuis le dernier build:\n\n- Revert \"PPU: render A.S.P. Air Strike Patrol's beam-raced mid-scanline effects (#1079)\"\n- When latching Mode 7 parameters, compare position in cycles, not dots.\n- cpuexec: Fix WAI instruction when no immiment IRQ or NMI.\n- ppu: Latch Mode 7 registers early.\n- Misc fixes",
       "platforms": [],
       "relatedEmulatorIds": [
         "snes9x_core"
       ],
-      "contentHash": "4c12fc0ebaedbae74c466a71fed5bd8ce8793128700c1603614b7d769432e4d4",
+      "contentHash": "1c911d01e4b7e853b8a96870abcfdd85795d8542e8789d0bc5dbcb8e10ef3c8c",
       "translationPending": false
     },
     {
