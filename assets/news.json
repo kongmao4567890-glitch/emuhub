@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T05:08:05.762709Z",
+  "generatedAt": "2026-09-23T17:27:48.207758Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,161 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx2-nightly-20260923",
+      "title": "【Android更新】ARMSX2 nightly-20260923",
+      "originalTitle": "ARMSX2 nightly-20260923 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-23T14:08:28Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260923",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260923，发布日期为2026年09月23日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260923。\n\n发布日期：2026年09月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n从旧夜里来的? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了马厩的应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本的降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n或\n• DEV9, SW:包括 TargetConditionals.h 因此 TARGET_OS_Iphone 被定义\n• GS:在司机订购的有一道屏障的公路上自读服务\n• GS/TC:移动的目标大小由目的地y调整,而不是X\n• 一般事务人员:将两个评论意见减少到他们所确定的程度\n• GS/Vulkan:仅在设定计量覆盖线时才打印\n• GS:仍然认为已宣布的道路无法通行的评论\n• GS:名单 GSCopyRoadBlendingPolicy.h 在CMake和MSVC项目中\n• GS:申报的Loop实验武器是Gsrunner旗,而不是INI键\n• GS:Turnip a7xx宣布开放的规则只涵盖Adreno 730和上\n• GS:一个明确的OverrideTexture Barriers=1再次到达砖块读数\n• GS/Vulkan:仅在Turnip和Honerykrisp上申报每张图的反馈循环\n• GS:屏障路的混合盖只在测量时适用\n• GS:Alpha Stencil计数器只走M2上的路障\n• GS/Vulkan:在M2上保留有屏障的回馈记录\n• GameDB: 计划接受字段Shift\n• GS:名单 GSNativeTexelGridPolicy.h 在CMake 来源中\n• GS/HW:5模式的纹理由它从未运行的纹理-洗发臂抵消\n• GS/HW:升级的图案更正使一个频道洗牌机独自重建四重奏\n• GS:外地临时探测器重新审查其决定\n• GS/HW:禁用安全特性使升标点校正与线一样\n• GS:在显示矩形开始的地方开始安装脱膜垫\n• GS:在最高波段开始的地方,由外地转移的合并的主要抽图停止\n• GS:土生土长网保持土生目标样本点\n• GS:每个设置都改变每个剖析器上的库尔网格\n• GS:缩放二进制和扫描面罩除以渲染目标的规模\n• GS/TC:移动的矩形装置范围是其原生矩形拥有的。\n• GS:从Splashdown混合判断中放弃一个错误的日期\n• 一般事务:评论说明理由,而不是援引内部实验\n• 测试:在公共分叉的README上标注驾驶台会议\n• GS:相信特鲁尼普在Adreno 650上方的内传阅读订单\n• Android:将设置分为每节一个嵌入的数据类\n• 在删除道具前不要询问30次\n• Android:提供 ARMSX2 驾驶员名单中的Twnipp包\n• GS:我们测量申报的道路的拼写是它所乘坐的道路\n• GS:混合上限与目的地的阅读成本,而不是屏障位\n• GS:后端公布的位点可以命名它走过的路\n• GS:a7xx公路的费用,取自E19的表格而不是标题\n• GS:Vulkan后端也询问a7xx公路的数据库\n• GS:自读道路有第三个入口,并设有障碍\n• GS:司机数据库显示Adreno哪些部件属于申报的环路\n• GS:两条评论仍然描述了宣布的r.",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- DEV9, SW: include TargetConditionals.h so TARGET_OS_IPHONE is defined\n- GS: serve offset self-reads on the driver-ordered declared road with one barrier\n- GS/TC: size a move's target resize by the destination's y, not its x\n- GS: cut two comments down to what they establish\n- GS/Vulkan: print the measurement-overrides line only when one is set\n- GS: comments that still described the declared road as unreachable\n- GS: list GSCopyRoadBlendingPolicy.h in the CMake and MSVC projects\n- GS: the declared-loop experiment arms are gsrunner flags, not INI keys\n- GS: the Turnip a7xx declared-loop rule covers the Adreno 730 and up only\n- GS: an explicit OverrideTextureBarriers=1 reaches the in-tile read again\n- GS/Vulkan: declare the feedback loop per draw only on Turnip and Honeykrisp\n- GS: the barrier road's blending cap applies only where it was measured\n- GS: the alpha stencil counter takes the barrier road on the M2 only\n- GS/Vulkan: the barrier-ordered feedback-loop carry stays on the M2\n- GameDB: the schema accepts fieldShift\n- GS: list GSNativeTexelGridPolicy.h in the CMake sources\n- GS/HW: drop mode 5's texture offset from the texture-shuffle arm, where it never ran\n- GS/HW: the upscaled sprite correction leaves a channel shuffle's rebuilt quad alone\n- GS: the field-shift detector re-examines its decision\n- GS/HW: Disable Safe Features turns the upscaled point correction off, as it does for lines\n- GS: the deinterlace pad fill starts where the display rect starts\n- GS: the field-shifted merge's main draw stops where its top band starts\n- GS: the Native cull grid keeps the native targets' sample points\n- GS: every settings change re-derives the cull grid, on every parser\n- GS: scaled dither and the scan mask divide by the render target's scale\n- GS/TC: a moved rect's device extent is what its native rect owns\n- GS: drop a mistyped date from the Splashdown blending judgement\n- GS: comments state their reasons instead of citing internal experiments\n- tests: point the driver-tag convention at the public fork's README\n- GS: trust our Turnip's in-pass read ordering on Adreno 650 and up only\n- Android: split Settings into one nested data class per section\n- Do not ask thirty times before deleting deps-build\n- Android: offer the ARMSX2 Turnip packs in the driver list\n- GS: the spelling we measured the declared road with is the one it ships with\n- GS: the blending cap follows what a destination read costs, not the barrier bit\n- GS: a backend's published bits can name the road it took\n- GS: the a7xx road's cost, taken from E19's table instead of its headline\n- GS: the Vulkan backend asks the database for the a7xx road too\n- GS: the self-read road has a third entrance, and it keeps the barriers\n- GS: the driver database says which Adreno parts belong on the declared loop\n- GS: two comments still described the declared r…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "2fa5ce28df539042afe8cef2d33bac2713fa98ae07e24c85a339529d4c210341",
+      "translationPending": false
+    },
+    {
+      "id": "137250",
+      "title": "【工具】Goliath v0.30.12 preview",
+      "originalTitle": "[Utilitaires Multi-systemes] Goliath v0.30.12 preview",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-23T12:23:53Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137250-utilitaires-multi-systemes-goliath-v0-30-12-preview/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Goliath.png",
+      "officialUrl": "https://github.com/epsx/Goliath",
+      "summary": "它是NEO GEO专用的前端，围绕单个系统根据专门的RetroArch原则运行。 Goliath管理游戏库、设置、备份和游戏启动，而模拟由Geolith核心通过JGRF/JG提供。 它支持NEO GEO MVS/AES游戏以及NEO GEO CD ，包括变体管理、游戏搜索和排序、会话历史记录、屏幕截图、游戏时间跟踪和各种诊断工具。 Goliath还允许您自定义模拟设置和控制、管理备份、检查BIOS和游戏文件，以及执行音频基准测试和导出。",
+      "content": "它是NEO GEO专用的前端，围绕单个系统根据专门的RetroArch原则运行。 Goliath管理游戏库、设置、备份和游戏启动，而模拟由Geolith核心通过JGRF/JG提供。\n它支持NEO GEO MVS/AES游戏以及NEO GEO CD ，包括变体管理、游戏搜索和排序、会话历史记录、屏幕截图、游戏时间跟踪和各种诊断工具。\nGoliath还允许您自定义模拟设置和控制、管理备份、检查BIOS和游戏文件，以及执行音频基准测试和导出。该界面基于Qt 6 ，提供多种浅色和深色主题。",
+      "originalContent": "Il s'agit d'un frontend dédié à la Neo Geo, fonctionnant sur le principe d'un RetroArch spécialisé autour d'un seul système. Goliath assure la gestion de la ludothèque, des réglages, des sauvegardes et du lancement des jeux, tandis que l'émulation est assurée par le core Geolith via JGRF/JG.\n\nIl prend en charge les jeux Neo Geo MVS/AES ainsi que la Neo Geo CD, avec notamment la gestion des variantes, la recherche et le tri des jeux, l'historique des sessions, les captures d'écran, le suivi du temps de jeu et différents outils de diagnostic.\n\nGoliath permet également de personnaliser les paramètres d'émulation et les contrôles, de gérer les sauvegardes, de vérifier les BIOS et les fichiers de jeux, ainsi que d'effectuer des benchmarks et des exports audio. L'interface est basée sur Qt 6 et propose plusieurs thèmes clairs et sombres.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "1652e96c40b4d1511f2d8ad766d0a59ec47874ee2b3a57608d2e2d0b0c466235",
+      "translationPending": false
+    },
+    {
+      "id": "137248",
+      "title": "【家用机】Sandopolis v0.1.0 alpha 9",
+      "originalTitle": "[Consoles de salon] Sandopolis v0.1.0 alpha 9",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-23T12:18:56Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137248-consoles-de-salon-sandopolis-v0-1-0-alpha-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/sandopolis.jpg",
+      "officialUrl": "https://github.com/pixel-clover/sandopolis",
+      "summary": "Sandopolis是一款正在开发的世嘉跨平台模拟器，能够模拟Mega Drive/Genesis和Mega-CD、Master System、Game Gear和SG-1000。它是在Zig开发的，特别便携，可以在Zig兼容的平台上编译 。它还提供可配置的GUI ，包括控件、快捷方式和渲染的不同设置。Sandopolis有桌面版，但也可以直接在网络浏览器中工作 ，项目仍处于早期阶段，兼容性尚不完善，可能发生变化。",
+      "content": "Sandopolis是一款正在开发的世嘉跨平台模拟器，能够模拟Mega Drive/Genesis和Mega-CD、Master System、Game Gear和SG-1000。它是在Zig开发的，特别便携，可以在Zig兼容的平台上编译\n。它还提供可配置的GUI ，包括控件、快捷方式和渲染的不同设置。Sandopolis有桌面版，但也可以直接在网络浏览器中工作\n，项目仍处于早期阶段，兼容性尚不完善，可能发生变化。 它是根据麻省理工学院的许可证分发的。\n\n此处为在线版本。",
+      "originalContent": "Sandopolis est un émulateur Sega multiplateforme en développement, capable d’émuler la Mega Drive/Genesis et Mega-CD, la Master System, la Game Gear et la SG-1000. Développé en Zig, il se veut particulièrement portable et peut être compilé sur les plateformes compatibles avec Zig. Il propose également une interface graphique configurable, avec notamment différents réglages pour les contrôles, les raccourcis et le rendu. Sandopolis existe en version desktop, mais peut également fonctionner directement dans un navigateur web. Le projet est encore à un stade précoce, avec une compatibilité qui n’est donc pas encore parfaite et des changements susceptibles d’intervenir. Il est distribué sous licence MIT.\n\nVersion online ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "be356e21ce01129a2ec03ec7968a3af402fef61db1b3965562ab0d520c0f013b",
+      "translationPending": false
+    },
+    {
+      "id": "137241",
+      "title": "【家用机】KytyPlus v3.6",
+      "originalTitle": "[Consoles de salon] KytyPlus v3.6",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-23T11:28:40Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137241-consoles-de-salon-kytyplus-v3-6/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/kytyplus-scaled.png",
+      "officialUrl": "https://github.com/Coder787-source/KytyPlus",
+      "summary": "KytyPlus是一个叉子 KytyPS5,本身来源于最初的Kyty项目。 它强调其模拟PlayStation 5,同时增加了几个改进,包括通过PS4游戏的实验支持。 shadPS4, le FSR 1.0,一个 Vulkan 缓存,允许保存编译的管道和集成GPU(iGPU)的各种优化。 它还允许从其界面安装PKG文件,并提供PS4和PS5游戏的统一管理。 该项目仍在开发中,许多游戏可能会遇到碰撞,黑幕或图形问题。",
+      "content": "KytyPlus是一个叉子 KytyPS5,本身来源于最初的Kyty项目。 它强调其模拟PlayStation 5,同时增加了几个改进,包括通过PS4游戏的实验支持。 shadPS4, le FSR 1.0,一个 Vulkan 缓存,允许保存编译的管道和集成GPU(iGPU)的各种优化。 它还允许从其界面安装PKG文件,并提供PS4和PS5游戏的统一管理。 该项目仍在开发中,许多游戏可能会遇到碰撞,黑幕或图形问题。\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68\n\n变化 :\n\n超巨星测试者 请测试\n来宾记忆从8GB提升到~12.5 GB (PS5 类似), 被主机的RAM 夹住( 叶~3.5 GB为主机;内存很少的主机自动保持旧的极限。\n为什么这应该修正 # 12 : 报告的模式 - stutters, 然后在关卡加载时出现写到null的游戏代码崩溃 - 匹配失败的流线允许。 8 GB时,在UE4的流压下,直接纪念津贴失败;引擎宣传无效,标题后来在自己的代码中崩溃。 时~~12.5 GB 这些拨款。\n请求 : 从此发布运行一个构建, 重放几个关卡过渡, 并更新 # 12 并获得结果 - 任一结果都值, 并通过 share Log 进行日志帮助。 还在崩溃\n\n兼容性表\nSonic Superstars (PPSA06888) 在外部提交的首份游戏播放-dept报告(#12)中作为Ingame(可玩-ish)添加。\nSilent Hill 2 重制行现在引用上游基线(在靴子/溅射时发生碰撞-) KytyPS5 #210,#77,并注意到经过核实的步骤可以更进一步,未经测试。\n\n第一个真游戏运行在 iGPU\nSilent Hill 2 Remake(PPSA08709,UE5,PS5-native)在AMD Radeon 840M(512 MB,共享内存)上使其交互内容预警屏幕——无漏UI,工作FSR 1.0 演示本地3840x2160缓冲器, ~4分钟的会话, 零 GPU 悬挂和干净的退出, at~3.9 FPS (英语). 会议是人工结束的,因此标题可以进一步启动——未经测试。\n上游的SH2记录的天花板是7900级离散GPU上的启动/冲锋崩溃(KytyPS5 #210,#77;链接比较参见兼容表。\n\n修复崩溃\nFSR 现线竞赛(SH2):当前线程可以在其准备状态检查和FSR调度之间进行竞速设备撕裂 ;然后驱动程序在第一个当前中无效引用,通过例外处理器杀死模拟器。 现在的发送在录制任何内容之前会验证一个mutex下的每一个手柄,当FSR不可用时,互换链会回到平板的blit路径。 在CB4上验证: ~96 s 在60 fps时的礼物,0在前一个脂肪窗口后下降。\nUnicode 安装路径: 游戏文件夹路径中一个非 ASCII 字符 ()e.g. 在\"大约是时间\"中) 窗口-虹载荷上坠落的靴子。 丢失的图标不再致命。\n主机例外寄存器堆放的双错( 刚刚降落) v3.4: 倾销客人注册时的过错不再有级联。\n\n用于UE5容量的GPU悬挂容器\n一个UE5卷曲(fog)计算在SH2的第一个真帧上通过了AMD APU的宽度。 目前它被跳过(在通过正确执行之前,volutiontrics/fog会看错),一个守护者对照主机格式支持来验证存储图像在动画上。 两者都是仿真器侧面;没有游戏文件被触摸。 每个运行生成~220 MB 的日志仪表现在在调试堆放设置后管理。\n\n\nmacOS & Linux 建筑固定:非Windows OpenSSL 电线将一个只使用 arm64 的 Homebrew 库连接到 x86_64 macOS 工作,一个缺失的包括打破 Linux 的 clang 建筑。 TLS只保留Windows(WinHTTP),直到CI-viable OpenSSL存在; https://在其他平台上报告一个不支持而非失败的方案。",
+      "originalContent": "KytyPlus est un fork de KytyPS5, lui-même dérivé du projet original Kyty. Il reprend son émulation de la PlayStation 5 tout en ajoutant plusieurs améliorations, notamment le support expérimental des jeux PS4 via shadPS4, le FSR 1.0, un cache Vulkan permettant de conserver les pipelines compilés et différentes optimisations destinées aux GPU intégrés (iGPU). Il permet également l’installation des fichiers PKG depuis son interface et propose une gestion unifiée des jeux PS4 et PS5. Le projet est encore en développement et de nombreux jeux peuvent rencontrer des plantages, des écrans noirs ou des problèmes graphiques.\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68\n\nLes changements:\n\nFor Sonic Superstars testers - please retest\nGuest memory raised from 8 GB to ~12.5 GB (PS5-like), clamped by your host's RAM (leaves ~3.5 GB for the host; hosts with little memory keep the old limit automatically).\nWhy this should fix #12: the reported pattern - stutters, then a write-to-null crash in game code during level load - matches a failed streaming allocation. At 8 GB, direct-memory allocations fail under UE4's streaming pressure; the engine propagates the null and the title later crashes in its own code. At ~12.5 GB those allocations fit.\nThe ask: run a build from this release, replay a couple of level transitions, and update #12 with the result - either outcome is valuable, and a log via Share Log helps if anything still crashes.\n\nCompatibility table\nSonic Superstars (PPSA06888) added as Ingame (playable-ish) per the first externally submitted gameplay-depth report (#12).\nSilent Hill 2 Remake row now cites the upstream baseline (crash at boot/splash - KytyPS5 #210, #77) and notes the verified depth could go further, untested.\n\n🏔️ First real-game runs on an iGPU\nSilent Hill 2 Remake (PPSA08709, UE5, PS5-native) renders its interactive content-warning screen on an AMD Radeon 840M (512 MB, shared memory) — glitch-free UI, working FSR 1.0 presentation of native 3840×2160 buffers, ~4-minute session with zero GPU hangs and a clean exit, at ~3.9 FPS. The session was ended manually, so the title could boot further — untested.\nUpstream's documented ceiling for SH2 is a crash at boot/splash on 7900-class discrete GPUs (KytyPS5 #210, #77); see the compatibility table for the linked comparison.\n\n🐛 Crash fixes\nFSR present-thread race (SH2): the present thread could race device teardown between its readiness check and the FSR dispatch; the driver then dereferenced null inside the first present, killing the emulator via the exception handler. The dispatch now validates every handle under a mutex before recording anything, and the swapchain falls back to the plain blit path when FSR is unavailable. Verified on CB4: ~96 s of presents at 60 fps, zero faults after the previously-fatal window.\nUnicode install paths: a non-ASCII character in the game folder path (e.g. the ’ in \"It's About Time\") crashed boot on the window-icon load. Missing icons are no longer fatal.\nDouble-fault in host exception register dump (landed just after v3.4): a fault while dumping guest registers no longer cascades.\n\n🎛️ GPU-hang containment for UE5 volumetrics\nOne UE5 volumetric (fog) compute pass wedged the AMD APU on SH2's first real frame. It is currently skipped (volumetrics/fog will look wrong until the pass is implemented properly), and a guard validates storage-image atomics against host format support. Both are emulator-side; no game files are touched. Logging instrumentation that produced ~220 MB per run is now gated behind the debug dump setting.\n\n🛠️ CI / platform\nmacOS & Linux builds fixed: the non-Windows OpenSSL wiring linked an arm64-only Homebrew library into the x86_64 macOS job, and a missing include broke the Linux clang build. TLS stays Windows-only (WinHTTP) until a CI-viable OpenSSL exists; https:// on other platforms reports an unsupported scheme instead of failing.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d03e3267c51a253e388699a87ab723088590f56e1fa63e1e1414167f2aa4413c",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorev-0-2-2",
+      "title": "【Android更新】EmuCoreV 0.2.2",
+      "originalTitle": "EmuCoreV 0.2.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-23T07:53:04Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreV/releases/tag/v0.2.2",
+      "imageUrl": "asset://assets/emulators/emucorev.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreV",
+      "summary": "EmuCoreV 发布 Android 新版本 0.2.2，发布日期为2026年09月23日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreV 已发布 Android 最新版本 0.2.2。\n\n发布日期：2026年09月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreV/compare/v0.2.1...v0.2.2\n\n有什么新情况: 0.2.2\n\n• 解决转移保存文件的问题\n• 其他修正和优化",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/compare/v0.2.1...v0.2.2\r\n\r\nWhat's new: 0.2.2\r\n\r\n- fixed an issue with transferring save files\r\n- other fixes and optimizations",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorev"
+      ],
+      "contentHash": "380e54d782bc9ded1c9aaedef99d10de4d865c0e47fa843f4930ebd5f0520cc4",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-23T07:33:36Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月23日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 3cb7b06 ：禁用Trap Gunner中的自动模拟；为Spyro x Sparx (# 3801) (bl @ ck_m @ ge) # 3801（https://github.com/stenzek/duckstation/pull/3801）添加缺失的特征",
+      "originalContent": "## Commits\n- 3cb7b06: Disable auto analog in Trap Gunner; add missing traits for Spyro x Sparx (#3801) (bl@ck_m@ge) [#3801](https://github.com/stenzek/duckstation/pull/3801)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "f00e748b9f64f4995f4e1764e969599c4e840daa2153d0778c2b639f1568445d",
+      "translationPending": false
+    },
+    {
+      "id": "137235",
+      "title": "【工具】Xenia Manager v5.0",
+      "originalTitle": "[Utilitaires Multi-systemes] Xenia Manager v5.0",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-23T05:46:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137235-utilitaires-multi-systemes-xenia-manager-v5-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/11/xenia-manager2.png",
+      "officialUrl": "https://github.com/xenia-manager/xenia-manager/",
+      "summary": "Xenia Manager是一款旨在简化Xenia仿真器使用的工具。它旨在使游戏和安装特定补丁更简单，更方便用户，同时提供易于使用的界面来调整Xenia设置 。本项目绝不隶属于Xenia团队。 主要特点： •一键安装Xenia ，自动创建配置文件 • Xenia自动更新（可配置） •轻松安装和管理内容：无需启动Xenia即可获得DLC/TU • Canary和Netplay补丁支持，具有高级管理（添加、编辑、删除、复制） •按游戏设置配…",
+      "content": "Xenia Manager是一款旨在简化Xenia仿真器使用的工具。它旨在使游戏和安装特定补丁更简单，更方便用户，同时提供易于使用的界面来调整Xenia设置\n。本项目绝不隶属于Xenia团队。\n\n主要特点：\n•一键安装Xenia ，自动创建配置文件\n• Xenia自动更新（可配置）\n•轻松安装和管理内容：无需启动Xenia即可获得DLC/TU\n• Canary和Netplay补丁支持，具有高级管理（添加、编辑、删除、复制）\n•按游戏设置配置文件，包括社区优化设置\n•全面管理Xenia配置文件：导入、导出、编辑、自动备份\n•动态参数界面，适应配置文件结构\n•使用艺术品支持创建Steam快捷方式\n•通过跨平台输入监听器进行可靠的键盘/鼠标检测\n•使用基于XUID的备份系统导入和导出游戏保存\n•按需加载导致资源利用率低\n•此处提供优化的游戏设置",
+      "originalContent": "Xenia Manager est un outil conçu pour simplifier l'utilisation de l'émulateur Xenia. Il vise à rendre les jeux et l'installation de correctifs spécifiques plus simples et plus conviviaux, tout en fournissant une interface facile à utiliser pour ajuster les paramètres de Xenia. Ce projet n'est en aucun cas affilié à l'équipe Xenia.\n\nCaractéristiques principales:\n- Installation de Xenia en 1 clic avec création automatique de profil\n- Mise à jour automatique de Xenia (paramétrable)\n- Installation et gestion faciles du contenu : DLC/TUs sans lancer Xenia\n- Prise en charge des patches Canary & Netplay, avec gestion avancée (ajout, édition, suppression, doublons)\n- Profils de configuration par jeu, incluant des réglages optimisés par la communauté\n- Gestion complète des profils Xenia : import, export, édition, sauvegardes automatiques\n- Interface dynamique des paramètres, s’adaptant à la structure du fichier de config\n- Création de raccourcis Steam avec prise en charge des artworks\n- Détection fiable clavier/souris via un Input Listener multiplateforme\n- Importation et exportation des sauvegardes de jeu avec système de backup basé sur le XUID\n- Faible utilisation des ressources grâce au chargement à la demande\n- Paramètres de jeux optimisés disponibles ici",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "xenia_pc",
+        "xenia_manager"
+      ],
+      "contentHash": "583bce7ed424c826d27857c34bd9aae28c6b234d54f9d9a254f802eb69e76e36",
+      "translationPending": false
+    },
     {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
@@ -54,30 +209,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx2-nightly-20260922",
-      "title": "【Android更新】ARMSX2 nightly-20260922",
-      "originalTitle": "ARMSX2 nightly-20260922 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-22T13:55:11Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260922",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260922，发布日期为2026年09月22日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260922。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故使用Qt Appimage在那里)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载\n\n从旧夜里来的? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了马厩的应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本的降级, 因此要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n或\n• EE FPU:将 arm64 将重现从信头中分割为源文件\n• EE FPU:在默认运行中启用详尽的分隔扫描\n• VIF测试:一行一对的针头\n• VIF:一个未装模作样的V4-32手提箱,每双四字\n• IOP建议:倒计时设定自己的旗帜\n• EE建议:在偏移字段本身宽度内设置呼叫后环包\n• EE测试:发报员的标语\n• EE建议:调度员通过车身到达出口\n• mVU:不进入再编译器而进行VU0旋转反弹\n• mVU:周期预算间断是一个共享的支点\n• VU测试:把周期预算中断记回\n• mVU:累积的ACC叠叠也\n• mVU:每个被夹住的操作器都将拷贝叠在它的前面\n• mVU:标志夹住其行的两边合装\n• 紫外线试验:双侧单轨夹\n• mVU:单车道夹曾写过一条车道\n• VU测试:标定旗帜队列重排发射顺序\n• mVU:旗下队列重排以适合的洗牌打开\n• VU测试:记录三条线书写值的标针\n• mVU:三行写法保存自己的登记册\n• VU测试:预装配对的每半个插座\n• mVU:阻断启动 VF 预装负载成对\n• COP2:VCLIP将其比较与一个UZP1折叠\n• EE测试:扫描COP2宏 VCLIP位布局和异常规则\n• VU拉带:说明在国旗登记册上植种的实际作用\n• mVU:CLIP将其六个比较道与一个UZP1和一个ADDV折叠\n• VU测试:Pin CLIP的6个结果位及其24位历史\n• EE建议:在兄弟会地点将基数折叠成抵消加法\n• EE测试:向模糊器提供程序书写的负载/存储基础\n• mVU:发送器的选项记录每个发送器的设置\n• mVU:在出口路径前提高E位中断\n• VU测试:在VU1程序端点上标注E位中断提升\n• VU:ILW通过双位码的脱落场名1道\n• VU:LQD和SQD也将地址从vi00基数上移开\n• VU测试:VU0在VU1登记册上的窗口处于测试状态\n• VU1:从绑定状态指针到达数据内存\n• mVU:地址宽度处增加了ILW的车道偏移\n• VU:将载荷/存储地址路径对准口译\n• mVU:在夹缝接合物清单中命名模型根\n• EE FPU:用一个比较arm64来选择除号单位的位数\n• 以登记册文件自己的格式访问FPU模型\n• 向iFPUd群岛宣传它们根据《公约》所呼吁的公约\n• 缩小每个目标模型的矢量的一半\n• EE FPU模式:将召集会议带至叶子上\n• 将型号呼叫器倒入电源\n• 微型VU:分享各站点之间的模拟呼叫接合\n• 第二届缔约方会议:分享四个地点之间的模式呼叫接合\n• mVU:在登记册中保持夹带\n• mVU:将单行道夹在单行道上\n-…",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- EE FPU: move the arm64 divide recurrence out of a header into a source file\n- EE FPU: enable the exhaustive divide sweep in the default run\n- VIF tests: pin which rows of a copy pair up\n- VIF: an unmasked V4-32 unpack copies a quadword pair at a time\n- IOP rec: the timeslice countdown sets its own flags\n- EE rec: the call-ret ring wraps in the offset field's own width\n- EE tests: pin which dispatcher a veneer hop arrives at\n- EE rec: dispatcher exits reach through a veneer\n- mVU: a held VU0 spin bounces without entering the recompiler\n- mVU: the cycle-budget break is one shared stub\n- VU tests: pin what a cycle-budget break writes back\n- mVU: the accumulate's copy of ACC folds too\n- mVU: every clamped operand folds the copy in front of it\n- mVU: the sign clamp loads its row's two bounds together\n- VU tests: pin both bounds of the single-lane clamp\n- mVU: the single-lane clamp writes its lane once\n- VU tests: pin what the flag queue reorder emits\n- mVU: the flag queue reorder opens with the shuffle that fits\n- VU tests: pin which register a three-lane write leaves the value in\n- mVU: a three-lane write keeps its own register\n- VU tests: pin which slot each half of a preload pair lands in\n- mVU: block-start VF preloads load in pairs\n- COP2: VCLIP folds its comparisons with one UZP1\n- EE tests: sweep the COP2 macro VCLIP bit layout and denormal rule\n- VU harness: say what seeding a flag register actually does\n- mVU: CLIP folds its six comparison lanes with one UZP1 and an ADDV\n- VU tests: pin CLIP's six result bits and its 24-bit history\n- EE rec: fold the base into the offset add at the sibling sites\n- EE tests: give the fuzzer a load/store base the program writes\n- mVU: the options sentinel records every setting the emitters read\n- mVU: raise the E-bit interrupt in front of the exit path\n- VU tests: pin the E-bit interrupt raise on a VU1 program end\n- VU: ILW's dest field names one lane through a two-bit code\n- VU: LQD and SQD step the address off a vi00 base too\n- VU tests: VU0's window onto VU1's registers is state under test\n- VU1: reach data memory from the pinned state pointer\n- mVU: ILW's lane offset is added at the address's own width\n- VU: sweep the load/store address path against the interpreter\n- mVU: name the model stub in the clamp-bound seam list\n- EE FPU: select the divide unit's digit with one compare on arm64\n- Reach the FPU models in the register file's own format\n- Spill the iFPUd islands for the convention they call under\n- Narrow the model stub's vector half per target\n- EE FPU model: carry the call convention down to the leaves\n- Fold the model-call spill into the stub generator\n- microVU: share the model-call seam between the sites\n- COP2: share the model-call seam between the four sites\n- mVU: hold the clamp bounds in registers\n- mVU: pin the lanes the single-lane clamp leaves alone\n-…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "ad169142cd3ba3e0e55e98cc4cb08d98ee94b26cc2819c8cba5751b1f2f7e547",
-      "translationPending": false
-    },
-    {
       "id": "137225",
       "title": "【家用机】Sharpemu v0.0.4",
       "originalTitle": "[Consoles de salon] Sharpemu v0.0.4",
@@ -102,39 +233,15 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-22T06:36:14Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月22日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•根据主题动态调整日志窗口颜色（ Stenzek（https://github.com/stenzek/duckstation/commit/2c9866ef9e6a3bd1803f0cd5dffd294c047d74b9） ）",
-      "originalContent": "## Commits\n- Dynamically adjust log window colours to theme ([Stenzek](https://github.com/stenzek/duckstation/commit/2c9866ef9e6a3bd1803f0cd5dffd294c047d74b9))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "d77b701124675dbf92fb3464ce44e0d6ae953b3825b65371ce5dd36f355f3b43",
-      "translationPending": false
-    },
-    {
       "id": "137183",
-      "title": "【家用机】Pureikyubu v1.9.1 (2026/09/22)",
-      "originalTitle": "[Consoles de salon] Pureikyubu v1.9.1 (2026/09/22)",
+      "title": "【家用机】Pureikyubu v1.9.1 (2026/09/23)",
+      "originalTitle": "[Consoles de salon] Pureikyubu v1.9.1 (2026/09/23)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-09-21T14:13:54Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137183-consoles-de-salon-pureikyubu-v1-9-1-2026-09-22/",
+      "sourceUrl": "https://www.emu-france.com/news/137183-consoles-de-salon-pureikyubu-v1-9-1-2026-09-23/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Pureikyubu-emu.png",
       "officialUrl": "https://github.com/emu-russia/pureikyubu/",
       "summary": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。",
@@ -144,7 +251,7 @@
         "pc"
       ],
       "relatedEmulatorIds": [],
-      "contentHash": "6038f52f106f89bbf551f4dc013712f348613521f604a34fd5b7eee8cb565103",
+      "contentHash": "e66f969377ccbdc78708473114ccff1f86ce4cf8053a8e644d1c480dc6f67c2f",
       "translationPending": false
     },
     {
@@ -173,26 +280,26 @@
     },
     {
       "id": "137203",
-      "title": "【家用机】MesenCE v2.2.1 r20260921",
-      "originalTitle": "[Consoles de salon] MesenCE v2.2.1 r20260921",
+      "title": "【家用机】MesenCE v2.2.1 r20260923",
+      "originalTitle": "[Consoles de salon] MesenCE v2.2.1 r20260923",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "tool",
       "publishedAt": "2026-09-21T11:17:07Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137203-consoles-de-salon-mesence-v2-2-1-r20260921/",
+      "sourceUrl": "https://www.emu-france.com/news/137203-consoles-de-salon-mesence-v2-2-1-r20260923/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/mesen-ce.png",
       "officialUrl": "https://github.com/nesdev-org/MesenCE",
       "summary": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。 MesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续 。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。",
-      "content": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。\nMesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续\n。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。这种向完全社区管理模式的过渡有助于更快地集成补丁、提高跨平台兼容性并添加新功能\ntES ，同时保持原始项目的卓越精神。\n\n变更内容：\n\nMesen正在成为MesenCE ，这是一个由SOUR和各种社区成员维护的社区版本。 所有开发都将在这个新的分叉中进行，因此只要Sour离开项目，它就可以继续进行。\n• PCE ： CD-ROM -读取“0”扇区应为256个扇区（ # 279 ）\n• GG ：移除PAL区域选项(# 278)\n• PCE ：添加了配置ADPCM播放速度的选项(# 276)",
-      "originalContent": "Mesen Community Edition est un émulateur multi‑systèmes open‑source pour Windows, Linux et macOS, développé par la communauté à partir du projet Mesen2. Il vise une haute précision, une excellente compatibilité, et propose une interface moderne accompagnée d’outils avancés pour les joueurs comme pour les développeurs.\n\nNé initialement comme un fork pour pallier la mise en pause du développement de Mesen2 par son créateur original (Sour), MesenCE est désormais devenu la continuation officielle et exclusive du projet. Face à la dynamique communautaire, Sour a choisi de rejoindre activement l'équipe de MesenCE afin d'y centraliser tout le développement futur. Cette transition sous un modèle entièrement géré par la communauté permet d'intégrer plus rapidement les correctifs, d'améliorer la compatibilité multiplateforme et d'ajouter de nouvelles fonctionnalités, tout en préservant l’esprit d’excellence du projet d'origine.\n\nLes changements:\n\nMesen is becoming MesenCE, a Community Edition maintained by Sour and various community members. All development will occur in this new fork going forward so it can continue whenever Sour is away from the project.\n\n- PCE: CD-ROM - Reading \"0\" sectors should read 256 sectors (#279)\n- GG: Remove PAL region option (#278)\n- PCE: Added option to configure the ADPCM's playback speed (#276)",
+      "content": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。\nMesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续\n。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。这种向完全社区管理模式的过渡有助于更快地集成补丁、提高跨平台兼容性并添加新功能\ntES ，同时保持原始项目的卓越精神。\n\n变更内容：\n\nMesen正在成为MesenCE ，这是一个由SOUR和各种社区成员维护的社区版本。 所有开发都将在这个新的分叉中进行，因此只要Sour离开项目，它就可以继续进行。\n•调试器：修复了加载ELF文件时崩溃的问题\n• UI ：防止保存文件对话框两次添加扩展名\n• PCE ： CD-ROM -读取“0”扇区应为256个扇区（ # 279 ）\n• GG ：移除PAL区域选项(# 278)\n• PCE ：添加了配置ADPCM播放速度的选项(# 276)",
+      "originalContent": "Mesen Community Edition est un émulateur multi‑systèmes open‑source pour Windows, Linux et macOS, développé par la communauté à partir du projet Mesen2. Il vise une haute précision, une excellente compatibilité, et propose une interface moderne accompagnée d’outils avancés pour les joueurs comme pour les développeurs.\n\nNé initialement comme un fork pour pallier la mise en pause du développement de Mesen2 par son créateur original (Sour), MesenCE est désormais devenu la continuation officielle et exclusive du projet. Face à la dynamique communautaire, Sour a choisi de rejoindre activement l'équipe de MesenCE afin d'y centraliser tout le développement futur. Cette transition sous un modèle entièrement géré par la communauté permet d'intégrer plus rapidement les correctifs, d'améliorer la compatibilité multiplateforme et d'ajouter de nouvelles fonctionnalités, tout en préservant l’esprit d’excellence du projet d'origine.\n\nLes changements:\n\nMesen is becoming MesenCE, a Community Edition maintained by Sour and various community members. All development will occur in this new fork going forward so it can continue whenever Sour is away from the project.\n\n- Debugger: Fixed crash when loading ELF files\n- UI: Prevent save file dialog from adding the extension twice\n- PCE: CD-ROM - Reading \"0\" sectors should read 256 sectors (#279)\n- GG: Remove PAL region option (#278)\n- PCE: Added option to configure the ADPCM's playback speed (#276)",
       "platforms": [
         "pc"
       ],
       "relatedEmulatorIds": [
         "mesence_pc"
       ],
-      "contentHash": "4b0560eea7eeb9091219ff4294970d9369833755a1f61d3ee8a0f6e4468d8f98",
+      "contentHash": "fc4c2bb3ef55bab48e5b7c57aa5ba70d6cd95079d680c5c510c79d97993de77e",
       "translationPending": false
     },
     {
@@ -3934,30 +4041,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "7531e31373ffd8b019c6a65722c07fbd813061f568d22da21bf5f842b794f907",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-emucorev-0-2-1",
-      "title": "【Android更新】EmuCoreV 0.2.1",
-      "originalTitle": "EmuCoreV 0.2.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-05T11:52:19Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreV/releases/tag/v0.2.1",
-      "imageUrl": "asset://assets/emulators/emucorev.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreV",
-      "summary": "EmuCoreV 发布 Android 新版本 0.2.1，发布日期为2026年09月05日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreV 已发布 Android 最新版本 0.2.1。\n\n发布日期：2026年09月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreV/commits/v0.2.1\n\n什么是新来: 0.2.1\n• 增加了一个新的“尼翁”主题。\n• 修复各种错误。\n• 提高业绩和优化。\n• 提高稳定性和总体应用性能。",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/commits/v0.2.1\r\n\r\nWhat's New: 0.2.1\r\n- Added a new \"Neon\" theme.\r\n- Fixed various bugs.\r\n- Improved performance and optimization.\r\n- Improved stability and overall application performance.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorev"
-      ],
-      "contentHash": "8b34701f51e77d10ef27fd7c3b741c4727d50c1253bbbe4eec29eae74b297b45",
       "translationPending": false
     },
     {
