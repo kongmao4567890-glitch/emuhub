@@ -8,12 +8,15 @@ val releaseKeystorePath = System.getenv("ANDROID_KEYSTORE_PATH")
 val releaseKeystorePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
 val releaseKeyAlias = System.getenv("ANDROID_KEY_ALIAS")
 val releaseKeyPassword = System.getenv("ANDROID_KEY_PASSWORD")
-val hasReleaseSigning = listOf(
-    releaseKeystorePath,
-    releaseKeystorePassword,
-    releaseKeyAlias,
-    releaseKeyPassword,
-).all { !it.isNullOrBlank() }
+// 密钥文件由 CI 仅在 main/master 分支准备；PR 或本地构建时文件不存在，
+// 需回退 debug 签名，否则 validateSigningRelease 会因找不到文件而失败。
+val hasReleaseSigning = !releaseKeystorePath.isNullOrBlank() &&
+    file(releaseKeystorePath).exists() &&
+    listOf(
+        releaseKeystorePassword,
+        releaseKeyAlias,
+        releaseKeyPassword,
+    ).all { !it.isNullOrBlank() }
 
 android {
     namespace = "com.emuhub.app"

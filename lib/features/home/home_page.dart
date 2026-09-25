@@ -7,10 +7,8 @@ import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/database/database.dart';
 import '../../data/models/console.dart';
-import '../../data/repositories/settings_repository.dart';
 import '../../providers.dart';
 import '../../widgets/version_badge.dart';
-import '../app_update/app_update_prompt.dart';
 import '../emulator/emulator_detail_page.dart' show findEmulator;
 import '../news/news_widgets.dart';
 
@@ -24,7 +22,8 @@ final _cachedVersionsStreamProvider =
 /// 首页。
 ///
 /// 展示欢迎卡片、"最近更新" 横向卡片、"推荐机种" 卡片以及快捷入口按钮。
-/// 首次打开应用时自动触发一次更新检查。
+/// 不再在启动时自动检查更新，更新检查改为完全手动——用户需进入模拟器
+/// 详情页后点击刷新按钮逐个检查。
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
@@ -46,38 +45,11 @@ class _HomePageState extends ConsumerState<HomePage> {
     'multi_system',
   ];
 
-  /// 是否已完成首次更新检查（防止重复触发）。
-  bool _firstLaunchCheckDone = false;
-  bool _appUpdateCheckStarted = false;
-
   @override
   Widget build(BuildContext context) {
     final configAsync = ref.watch(emulatorsConfigProvider);
     final cachedVersionsAsync =
         ref.watch(_cachedVersionsStreamProvider);
-
-    if (!_appUpdateCheckStarted) {
-      _appUpdateCheckStarted = true;
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (mounted) checkAndShowAppUpdate(context, ref);
-      });
-    }
-
-    // 配置加载完成后，触发首次更新检查。
-    // 必须在帧结束后触发：_checkUpdatesOnFirstLaunch 会同步调用
-    // ScaffoldMessenger.showSnackBar，在 build 阶段直接调用会触发
-    // "setState() called during build" 错误。
-    if (!_firstLaunchCheckDone) {
-      final config = configAsync.valueOrNull;
-      if (config != null) {
-        _firstLaunchCheckDone = true;
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (mounted) {
-            _checkUpdatesOnFirstLaunch(config.consoles);
-          }
-        });
-      }
-    }
 
     return Scaffold(
       body: SafeArea(
@@ -112,100 +84,6 @@ class _HomePageState extends ConsumerState<HomePage> {
         ),
       ),
     );
-  }
-
-  /// 首次启动时自动检查更新，并通过 SnackBar 提示结果。
-  Future<void> _checkUpdatesOnFirstLaunch(List<Console> consoles) async {
-    if (!mounted) return;
-
-    final settings = ref.read(appSettingsProvider);
-    final db = ref.read(appDatabaseProvider);
-    final cached = await db.cachedVersionsDao.getAllCachedVersions();
-    final freshnessCutoff = DateTime.now()
-        .subtract(settings.checkIntervalDuration)
-        .millisecondsSinceEpoch;
-
-    // 后台任务或近期的前台检查已经完成时，不要在每次回到首页后再次
-    // 请求上百个数据源。手动检查仍可在“更新中心”随时强制执行。
-    if (cached.any((entry) => entry.lastCheckedAt >= freshnessCutoff)) {
-      return;
-    }
-
-    var targets = consoles.expand((c) => c.emulators).toList();
-    if (settings.checkScope == CheckScope.favoritesOnly) {
-      final favorites = await db.favoritesDao.getAllFavorites();
-      final favoriteIds = favorites.map((f) => f.emulatorId).toSet();
-      targets = targets.where((e) => favoriteIds.contains(e.id)).toList();
-    }
-
-    if (targets.isEmpty || !mounted) return;
-
-    // 显示检查中的 SnackBar
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Row(
-          children: [
-            SizedBox(
-              width: 16,
-              height: 16,
-              child: CircularProgressIndicator(strokeWidth: 2),
-            ),
-            SizedBox(width: 12),
-            Text('正在检查模拟器更新…'),
-          ],
-        ),
-        duration: Duration(seconds: 10),
-      ),
-    );
-
-    try {
-      final updateService = ref.read(updateServiceProvider);
-      final result = await updateService.checkAll(targets);
-
-      if (!mounted) return;
-
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-
-      final message = result.hasUpdates
-          ? '发现 ${result.updated.length} 个新版本！共检查 ${result.checked} 个模拟器'
-              '${result.failed.isNotEmpty ? '，${result.failed.length} 个检查失败' : ''}'
-          : '所有 ${result.checked} 个模拟器均为最新版本'
-              '${result.failed.isNotEmpty ? '，${result.failed.length} 个检查失败' : ''}';
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Row(
-            children: [
-              Icon(
-                result.hasUpdates ? Icons.new_releases : Icons.check_circle,
-                size: 18,
-                color: result.hasUpdates
-                    ? AppTheme.success
-                    : Theme.of(context).colorScheme.primary,
-              ),
-              const SizedBox(width: 8),
-              Expanded(child: Text(message)),
-            ],
-          ),
-          duration: const Duration(seconds: 4),
-          action: result.hasUpdates
-              ? SnackBarAction(
-                  label: '查看',
-                  onPressed: () => context.push('/updates'),
-                )
-              : null,
-        ),
-      );
-    } catch (_) {
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('更新检查失败，请稍后重试'),
-          duration: Duration(seconds: 3),
-        ),
-      );
-    }
   }
 
   Widget _buildError(BuildContext context, Object error) {

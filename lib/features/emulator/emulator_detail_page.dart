@@ -51,7 +51,7 @@ final _isFavoriteProvider =
 ///
 /// 接收 [emulatorId]，展示模拟器信息、版本、下载源与收藏操作。
 /// 页面只展示检查更新时写入的缓存，不会因进入页面而发起网络请求；
-/// 用户仍可通过刷新按钮单独重新检查当前模拟器。
+/// 用户需手动点击右上角刷新按钮逐个检查模拟器版本。
 class EmulatorDetailPage extends ConsumerStatefulWidget {
   const EmulatorDetailPage({super.key, required this.emulatorId});
 
