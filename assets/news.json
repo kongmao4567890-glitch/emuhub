@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-26T05:25:08.750910Z",
+  "generatedAt": "2026-09-26T16:46:21.384185Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,100 +9,49 @@
   },
   "articles": [
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
+      "id": "android-release-armsx3-1-0-4",
+      "title": "【Android更新】ARMSX3 1.0.4",
+      "originalTitle": "ARMSX3 1.0.4 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-26T02:43:07Z",
+      "publishedAt": "2026-09-26T15:34:12Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•为Lightgun控制器创建基类（ Stenzek（https://github.com/stenzek/duckstation/commit/62299a5092f93a92169dc57d11e60a0367b0577a） ）\n•为NeGcon控制器创建通用基类（ Stenzek（https://github.com/stenzek/duckstation/commit/e68536dcd71b8cd46f44cff52ebb53d971dca047） ）\n•统一一些翻译字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/d9cb895ddb520da8b5a2daaf76dcc52f20dd03fd） ）\n•添加SharedLockGuard帮助程序（ Stenzek（https://github.com/stenzek/duckstation/commit/73b5a241657170d2df1c1308aaf6de933b4039da） ）\n•内部化私有函数（ Stenzek（https://github.com/stenzek/duckstation/commit/687178a00ff78a07eac34ea44194d7750b8d9c95） ）\n•使用atomics进行原始输入/指针计数（ Stenzek（https://github.com/stenzek/duckstation/commit/ee8b45a83d8591a4927247badf3527a19cf80dd5） ）\n•将原子学用于主机指针位置（ Stenzek（https://github.com/stenzek/duckstation/commit/58efbb8c819d55165ff64282e2be537d26de8992） ）\n•直接从InputManager读取指针状态（ Stenzek（https://github.com/stenzek/duckstation/commit/0ae22c1a95b2f39fe5b9882afc0232efd07248f2） ）\n•在源热插拔后重新加载输入绑定（ Stenzek（https://github.com/stenzek/duckstation/commit/501d3a989ca5b35bed06ae527f7bb346d0ab472b） ）\n•将内部状态提取到私有标头（ Stenzek（https://github.com/stenzek/duckstation/commit/d76435ca76dd823d806975213d8e8c77e01a3841） ）\n•使用共享互斥同步（ Stenzek（https://github.com/stenzek/duckstation/commit/eed22aa286f525ef1154e8d628ec800f5a1be522） ）\n•使用SmallString进行绑定转换（ Stenzek（https://github.com/stenzek/duckstation/commit/7a8e8a0777a611dac8c1678064e70931cb6fbd4c） ）\n•将DS5播放器LED设置移至LED对话框（ Stenzek（https://github.com/stenzek/duckstation/commit/aa77ed54daa5f0778adae7ec2fcb3c75f08bce72） ）\n•简化轮询（ Stenzek（https://github.com/stenzek/duckstation/commit/64b1e2b46c3099bc0d6989506e57344b53fcc2da） ）\n•初始化后立即轮询（ Stenzek（https://github.com/stenzek/duckstation/commit/59e2f1da2a53c939ae0c42dc30ceb78dd68d9260） ）\n•依靠重新加载启用加速度计（ Stenzek（https://github.com/stenzek/duckstation/commit/7495b762457ff60a11715107bc11c5a9e54d0f40） ）\n•映射时使用永久标识符（ Stenzek（https://github.com/stenzek/duckstation/commit/edd41dff15125f3f736b52073a55d2f39d5f412e） ）\n•修复可能的空字符串视图构造（ Stenzek（https://github.com/stenzek/duckstation/commit/d04078319a94ca18bd71cb5c3ff5c081e476b5ff） ）\n•使用第二个线程进行断言对话（ Stenzek（https://github.com/stenzek/duckstation/commit/bbebc317a7e1da6d5e8ae2959a93a0d466c8f34e） ）",
-      "originalContent": "## Commits\n- Create base class for lightgun controllers ([Stenzek](https://github.com/stenzek/duckstation/commit/62299a5092f93a92169dc57d11e60a0367b0577a))\n- Create common base class for NeGcon controllers ([Stenzek](https://github.com/stenzek/duckstation/commit/e68536dcd71b8cd46f44cff52ebb53d971dca047))\n- Unify some of the translation strings ([Stenzek](https://github.com/stenzek/duckstation/commit/d9cb895ddb520da8b5a2daaf76dcc52f20dd03fd))\n- Add SharedLockGuard helper ([Stenzek](https://github.com/stenzek/duckstation/commit/73b5a241657170d2df1c1308aaf6de933b4039da))\n- Internalise private functions ([Stenzek](https://github.com/stenzek/duckstation/commit/687178a00ff78a07eac34ea44194d7750b8d9c95))\n- Use atomics for rawinput/pointer count ([Stenzek](https://github.com/stenzek/duckstation/commit/ee8b45a83d8591a4927247badf3527a19cf80dd5))\n- Use atomics for host pointer position ([Stenzek](https://github.com/stenzek/duckstation/commit/58efbb8c819d55165ff64282e2be537d26de8992))\n- Read pointer state directly from InputManager ([Stenzek](https://github.com/stenzek/duckstation/commit/0ae22c1a95b2f39fe5b9882afc0232efd07248f2))\n- Reload input bindings after source hotplug ([Stenzek](https://github.com/stenzek/duckstation/commit/501d3a989ca5b35bed06ae527f7bb346d0ab472b))\n- Extract internal state to private header ([Stenzek](https://github.com/stenzek/duckstation/commit/d76435ca76dd823d806975213d8e8c77e01a3841))\n- Use a shared mutex for synchronization ([Stenzek](https://github.com/stenzek/duckstation/commit/eed22aa286f525ef1154e8d628ec800f5a1be522))\n- Use SmallString for binding conversions ([Stenzek](https://github.com/stenzek/duckstation/commit/7a8e8a0777a611dac8c1678064e70931cb6fbd4c))\n- Move DS5 player LED setting into LED dialog ([Stenzek](https://github.com/stenzek/duckstation/commit/aa77ed54daa5f0778adae7ec2fcb3c75f08bce72))\n- Simplify polling ([Stenzek](https://github.com/stenzek/duckstation/commit/64b1e2b46c3099bc0d6989506e57344b53fcc2da))\n- Poll immediately after initializing ([Stenzek](https://github.com/stenzek/duckstation/commit/59e2f1da2a53c939ae0c42dc30ceb78dd68d9260))\n- Rely on reload to enable accelerometer ([Stenzek](https://github.com/stenzek/duckstation/commit/7495b762457ff60a11715107bc11c5a9e54d0f40))\n- Use persistent identifiers when mapping ([Stenzek](https://github.com/stenzek/duckstation/commit/edd41dff15125f3f736b52073a55d2f39d5f412e))\n- Fix possible null string-view construction ([Stenzek](https://github.com/stenzek/duckstation/commit/d04078319a94ca18bd71cb5c3ff5c081e476b5ff))\n- Use second thread for assertion dialogs ([Stenzek](https://github.com/stenzek/duckstation/commit/bbebc317a7e1da6d5e8ae2959a93a0d466c8f34e))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "c4b26e3d1d3b22b7abddb559e07609f852776e39bd040463ab2277d15e4262ac",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-26T01:05:11Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n· 有耳光的、默认的可变物品(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• slapstic, default variable stuff (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "4c0c333075289608ad642b5f9726d26177b89d63ae5e086c689d45c962cdad16",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-2-7-1",
-      "title": "【Android更新】ARMSX2 2.7.1",
-      "originalTitle": "ARMSX2 2.7.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-25T18:39:10Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.7.1",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 2.7.1，发布日期为2026年09月25日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 2.7.1。\n\n发布日期：2026年09月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.7.1\n\n新增功能：\n\nARMSX2 TURNIP ：我们自己的GPU驱动程序\n\n我们现在构建自己的Adreno驱动程序。 ARMSX2萝卜是我们开发的萝卜，开源Vulkan\nadreno GPU的驱动程序，我们自己为PS2仿真所做的更改。 向司机领取\n列表：建议在Adreno 650至699 （ Snapdragon 865、870和888 ）上使用。 来源公开于\ngithub.com/bmdhacks/armsx2-turnip。由@ bmdhacks完成\n\n阅读他们正在绘制的帧的游戏在Adreno上运行得更快。 PS2游戏可以做到这一点\n不断地，在Adreno上，这意味着在每次这样的抽签之前复制框架。 渲染器现在询问\n驱动程序数据库每个GPU和驱动程序如何处理它。 在Adreno 650上搭建ARMSX2自己的萝卜\n到699 ，司机命令这些读数本身：在它们是什么框架的地方，速度快2到3倍\n成本，如Snapdragon 865原生分辨率的Splashdown ，从54.7 ms到22.4 ms\n一个框架。在Adreno 730及更高版本上，任何萝卜、特技演员和WRC 3的运行速度都提高了17%至21% ，\n其他GPU和驱动程序保留了它所拥有的。由@ bmdhacks完成\nARMSX2的萝卜司机在司机名单上，推荐Adreno 650至699。是Mesa\n26.1.2加上这些GPU的一个萝卜变化。由@ bmdhacks完成\n\n仿真\n更快的重编译器。通过实现@ pstef构想的大量优化概念， EE、VU和IOP重编译器以及VIF解包现在可以生成更紧密的ARM64代码，运行速度提高约10 ％ ，每次更改都通过新的指令级测试进行检查\n。在低端设备上，大多数游戏都受到GS的限制，因此预计这主要是为了节省真正的电池和热量。 来自vi00的VU LQD和SQD寻址以及ILW的车道选择现在也与控制台匹配。\n\nL2和R2的模拟触发压力。 在带有模拟触发的电极片和手持设备上，电极片- >按钮\n映射现在在L2和R2上提供模拟压力，因此游戏可以获得触发器被拉动的距离\n而不是打开或关闭，具有短手持触发器的响应曲线和实时读数。游戏\n读取触发压力，例如Gran Turismo 4的油门和制动器，现在可以获得部分压力。\n焊盘必须处于模拟模式，当模拟按钮未绑定时，该选项会发出警告。使用它\n开启后，像Odin 2 Portal这样的焊盘，每次触发两次，不再将半拉到满\n按。默认情况下关闭。由@ gdelazzer (# 731)完成。*\n\nGunCon 2的按钮现在是触摸布局的一部分。 A、B、C、开始、选择和校准可以\n像任何其他控件一样在触摸布局编辑器中移动、调整大小和隐藏，而不是坐在\ndualShock 2按钮的顶部，并瞄准触摸屏，离开脸部和肩部按钮\n工作。由@ jpolo1224完成\n\n触摸屏上的校准镜头。 有些游戏（时间危机）无法通过枪支设置\n屏幕正常拍摄。 点击Cal ，然后射击目标，校准镜头落在您\ntouch. done by @ jpolo1224\n\n固定\n内存卡位置修复每次屏幕要求时，应用程序都会重新检查数据文件夹（ SD卡或自定义） ，并且一次失败的检查（可能发生在文件夹完全可用的情况下）将其发送到内部存储以进行剩余的运行，其中模拟器未找到内存卡并制作了新内存卡\n。文件夹现在决定一次，应用程序永远不会下降\n静默地返回内部存储。由@ bmdhacks完成\n\n无法选择USB设备（ # 752 ）。 在游戏开始之前，设备列表为空，\n并在第一场比赛后再次清空。 现在，它可以随时列出每台设备，\n每个端口。由@ jpolo1224完成\n端口1上的USB设备从未到达游戏。 USB键盘开关显示未连接\n每次发射和每次设置更改时端口1 ，拔下GunCon 2、Buzz蜂鸣器或任何其他\n设备集。交换机现在只在开启时使用端口1。 游戏运行时拾取的设备\n也立即插入，尽管许多游戏只在启动时寻找一个，所以重新……",
-      "originalContent": "# ARMSX2 2.7.1\r\n\r\nWhat's new: \r\n\r\n## ARMSX2 Turnip: our own GPU driver\r\n\r\n**We now build our own Adreno driver.** ARMSX2 Turnip is our build of Turnip, the open-source Vulkan\r\ndriver for Adreno GPUs, with a change of our own made for PS2 emulation. Pick it from the driver\r\nlist: it is recommended on Adreno 650 to 699 (Snapdragon 865, 870 and 888). The source is public at\r\ngithub.com/bmdhacks/armsx2-turnip. done by @bmdhacks \r\n\r\n**Games that read back the frame they are drawing run much faster on Adreno.** PS2 games do this\r\nconstantly, and on Adreno it meant copying the frame before each such draw. The renderer now asks\r\nthe driver database how each GPU and driver handle it. With ARMSX2's own Turnip build on Adreno 650\r\nto 699, the driver orders those reads itself: 2 to 3 times faster where they are what the frame\r\ncosts, as in Splashdown at native resolution on a Snapdragon 865, which went from 54.7 ms to 22.4 ms\r\na frame. On Adreno 730 and up with any Turnip, Stuntman and WRC 3 run 17 to 21% faster, Every\r\nother GPU and driver keeps what it had. done by @bmdhacks \r\n\r\n**ARMSX2's Turnip driver is in the driver list**, and recommended on Adreno 650 to 699. It is Mesa\r\n26.1.2 plus one Turnip change for those GPUs. done by @bmdhacks \r\n\r\n## Emulation\r\n\r\n**Faster recompilers.** By implementing a host of optimization concepts dreamed up by @pstef, the EE, VU and IOP recompilers and VIF unpacks now generate tighter ARM64 code and run about 10% faster, with every change checked by new instruction-level tests. On lower-end devices most games are held back by GS, so expect this mostly as real battery and heat savings. VU LQD and SQD addressing from vi00 and ILW's lane selection also match the console now. \r\n\r\n**Analog trigger pressure for L2 and R2.** On pads and handhelds with analog triggers, Pad -> Button\r\nmapping now offers Analog pressure on L2 and R2, so the game gets how far the trigger is pulled\r\ninstead of on or off, with a response curve for short handheld triggers and a live readout. Games\r\nthat read trigger pressure, such as Gran Turismo 4's throttle and brake, now get partial presses.\r\nThe pad has to be in analog mode, and the option warns when the Analog button is not bound. With it\r\non, pads like the Odin 2 Portal that report each trigger twice no longer snap a half pull to a full\r\npress. Off by default. done by @gdelazzer (#731).*\r\n\r\n**The GunCon 2's buttons are now part of the touch layout.** A, B, C, Start, Select and Cal can be\r\nmoved, resized and hidden in the touch layout editor like any other control, instead of sitting on\r\ntop of the DualShock 2 buttons, and aiming on the touchscreen leaves the face and shoulder buttons\r\nworking. done by @jpolo1224 \r\n\r\n**A calibration shot on the touchscreen.** Some games (Time Crisis) will not pass their gun setup\r\nscreen on a normal shot. Tap Cal, then shoot the target, and the calibration shot lands where you\r\ntouch. done by @jpolo1224 \r\n\r\n## Fixed\r\n\r\n**Memory Card location fixes** The app re-checked the data folder (SD card or custom) every time a screen asked for it, and one failed check, which could happen with the folder perfectly usable, sent it to internal storage for the rest of the run, where the emulator found no memory cards and made new ones. The folder is now decided once, and the app never falls\r\nback to internal storage silently. done by @bmdhacks \r\n\r\n**USB devices could not be chosen (#752).** The device list was empty until a game had been started,\r\nand emptied again after the first game. It now lists every device at any time, with a dropdown for\r\neach port. done by @jpolo1224 \r\n\r\n**A USB device on Port 1 never reached the game.** The USB keyboard switch wrote Not Connected over\r\nPort 1 at every launch and every settings change, unplugging a GunCon 2, Buzz buzzers or any other\r\ndevice set there. The switch now takes Port 1 only while it is on. A device picked while a game runs\r\nis also plugged in straight away, though many games only look for one at boot, so re…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "ea61a45eeb16b30dc32eeed7eccf04e2b07d9c5278b844d0c72442d48789af5f",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-1-0-2",
-      "title": "【Android更新】ARMSX3 1.0.2",
-      "originalTitle": "ARMSX3 1.0.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-25T15:46:36Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.0.2",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.0.4",
       "imageUrl": "asset://assets/emulators/armsx3.png",
       "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.0.2，发布日期为2026年09月25日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.0.2。\n\n发布日期：2026年09月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n前端快捷方式(.ps3)现在可以从移交文件本身的前端开始安装PKG游戏，例如iiSU ！",
-      "originalContent": "Frontend shortcuts (.ps3) now start installed PKG games from frontends that hand over the file itself, such as iiSU!",
+      "summary": "ARMSX3 发布 Android 新版本 1.0.4，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.0.4。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.0.4\n\n马里GPUFSR的固定装置。\n\n• FSR升级目前在马里GPU工作。 它显示一个黑幕之前在那里。 SGSR也有同样的问题,得到了同样的修复。 多亏了瘦子的测试!",
+      "originalContent": "# ARMSX3 1.0.4\r\n\r\nA fix for FSR on Mali GPUs.\r\n\r\n- **FSR upscaling now works on Mali GPUs.** It showed a black screen there before. SGSR had the same problem and got the same fix. Tested on an Dimensity 8500 Ultra, Arm Mali-G720 MC8, thanks to slimpuggamer for testing! \r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9e3feb1a-6589-41e7-b64d-358d26487448\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9bddf155-ce1e-480c-a295-aa8e5f10a0fc\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f8be882a-6c18-419b-ba37-631756e123c1\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/43524639-15ce-460d-81f2-06cc7b3a3b36\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/13cb3002-136c-4167-9240-f939ab208c93\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/efb786fc-c146-4196-a9f8-569bceb08e67\" />",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "armsx3"
       ],
-      "contentHash": "5e11406757fe1e05bbe89b979b0233bd104ede7177548063680b1e8569d28125",
+      "contentHash": "4f0bb0afd2845277b2e5118d87193c2bff188ee4b6eae0ebca5d804f25da3821",
+      "translationPending": false
+    },
+    {
+      "id": "137322",
+      "title": "【电脑】Copperline v1.0 RC1",
+      "originalTitle": "[Ordi.] Copperline v1.0 RC1",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T15:27:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137322-ordi-copperline-v1-0-rc1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
+      "officialUrl": "https://copperline.dev/",
+      "summary": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确） 。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "content": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确）\n。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "copperline_pc"
+      ],
+      "contentHash": "3d8bc28090738fe0c07c00e5f13fc0a429f4440eb29cd8cb977d3501397405ca",
       "translationPending": false
     },
     {
@@ -112,21 +61,227 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-25T13:58:58Z",
+      "publishedAt": "2026-09-26T14:15:00Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
       "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月25日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• Color Dreams （映射器11 ）支持\n• AVE NINA-03/NINA-06 （映射器79 ）和Sachen 3015 （映射器146 ）支持\n•可在离线支持的情况下将网页版本安装到主屏幕\n•保存当前帧的屏幕截图操作（默认为F12 ）\n•撤消加载状态\n• OAM损坏：像真正的硬件一样精灵故障\n•网络版本可以从链接启动ROM\n\n已更改\n•改进的仿真性能\n\n固定\n•修复了多个CPU指令中的小错误\n•修复了开放式总线实现的问题\n•更准确的APU帧中断标志\n•修复了控制器输入实现中的不准确性\n•更准确的PPU实施\n•更准确的精灵评估",
-      "originalContent": "### Added\n- Color Dreams (mapper 11) support\n- AVE NINA-03/NINA-06 (mapper 79) and Sachen 3015 (mapper 146) support\n- The web version can be installed to the home screen with offline support\n- Screenshot action (F12 by default) that saves the current frame \n- Undo Load State\n- OAM corruption: sprites glitch like on real hardware\n- The web version can start a ROM from a link\n\n### Changed\n- Improved emulation performance\n\n### Fixed\n- Fixed minor bugs in multiple CPU instructions\n- Fixed an issue with the open bus implementation\n- More accurate APU frame interrupt flag\n- Fixed an inaccuracy in the controller input implementation\n- More accurate PPU implementation\n- More accurate sprite evaluation",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
+      "originalContent": "NESd nightly Android release.",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "nesd"
       ],
-      "contentHash": "ceb2c73a8786c696705d91c065dae5e2f9df56f8021aa2c989e2025de6aa4b04",
+      "contentHash": "d2091253df8626ecee72f9c5ffe50f5ccfde8183d09b7c4c14f278bf2e0f4464",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T14:00:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_coleco.cpp, d_megadrive.cpp, d_msx.cpp, d_spectrum.cpp: 各种(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_coleco.cpp, d_megadrive.cpp, d_msx.cpp, d_spectrum.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "215d7aa9e46e56e24e1677b0d8d50b88b4382456880d1e8351b80b9e8106ce19",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260926",
+      "title": "【Android更新】ARMSX2 nightly-20260926",
+      "originalTitle": "ARMSX2 nightly-20260926 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T13:22:36Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260926",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260926，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260926。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• GunCon 2:取出可触摸的校准镜头,并瞄准地表像素\n• USB设备:停止键盘开关脱插口1\n• USB设备:在Android游戏之间保留设备列表\n• GunCon 2:它的按钮加入触摸布局,瞄准将脸部按钮单独放出\n• USB 设备: 端口行表示未连接, 如下面的列表\n• USB 设备: 在没有游戏运行的情况下列出它们, 从下拉端口中选择一个\n• 网络:将一个 DNS 地址切换到手动\n• 纹理包:使删除包可靠\n• 纹理包:在玩家自己的系列下安装多区域包\n• 图书馆音乐:服从媒体的回放,而不是另一个应用程序的游戏音频\n• DEV9:带回Android HDD图像处理\n• 键盘:类型地址和路径\n· GameDB 面板: 命名复制- 路混合盖和外移\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260925...247fa6f09499f69192c52c0542305ed16119518b",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- GunCon 2: a calibration shot for touch, and aim in surface pixels\n- USB devices: stop the keyboard switch unplugging Port 1\n- USB devices: keep the device list between games on Android\n- GunCon 2: its buttons join the touch layout, and aiming leaves the face buttons alone\n- USB devices: the port row says Not Connected, like the list below it\n- USB devices: list them with no game running, and pick one per port from a dropdown\n- Network: typing a DNS address switches that slot to Manual\n- Texture packs: make deleting a pack reliable\n- Texture packs: install a multi-region pack under the player's own serial\n- Library music: defer to media playback, not to another app's game audio\n- DEV9: bring back the Android HDD image handling\n- Keyboard: type addresses and paths\n- GameDB panel: name the copy-road blending cap and the field shift\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260925...247fa6f09499f69192c52c0542305ed16119518b",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "1819ac82ac7f7d51b50e03e2706c7645d1f4372a47af81c5f86937c0bf5094a7",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-winnative-0-7-0-beta",
+      "title": "【Android更新】WinNative 0.7.0-beta",
+      "originalTitle": "WinNative 0.7.0-beta Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T11:54:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/WinNative-Emu/WinNative/releases/tag/v0.7.0-beta",
+      "imageUrl": "asset://assets/emulators/winnative.png",
+      "officialUrl": "https://github.com/WinNative-Emu/WinNative",
+      "summary": "WinNative 发布 Android 新版本 0.7.0-beta，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "WinNative 已发布 Android 最新版本 0.7.0-beta。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 由@maxjivi05修复控制\n• Add Itch.io 由 @ Juan- Antonio- Doe 播放备份\n• 特性/外部存储由@maxjivi05\n• 由@maxjivi05修复未启动的直接Audio发射\n• 由@qwertypower更新综合安全分遣队\n• 将 ANR 固定的卫士从 XServerDisplay Activity 移动到 TouchpadView 和输入控制视频 由 @ Juan-Antonio- Doe 编写\n• 由@maxjivi05提供蒸汽控制器支持、控制器测试和视觉粘接器\n• 修复Steam Controller USB访问和Android库导航,由@maxjivi05操作\n• 由@ajay9634更新Ajay Prefix Pro下载器至v3\n• 修复:在保存时,由@Juan-Antonio-Doe进行32位核心亲和\n• 由@qwertypower更新综合安全分遣队\n由@maxjivi05和@The412Banner制作\n• 综合安全分遣队:提高光滑度,消除大相径庭的NaN。\n• 站台:由@maxjivi05增强\n\n\n完整更改日志 : https://github.com/WinNative-Emu/WinNative/compare/v0.6.2-beta...v0.7.0-beta",
+      "originalContent": "## What's Changed\r\n* Fix controls by @maxjivi05 \r\n* Add Itch.io to google play backup by @Juan-Antonio-Doe\r\n* Feature/external storage by @maxjivi05 \r\n* Fix DirectAudio launches failing to boot by @maxjivi05 \r\n* Update DIS by @qwertypower \r\n* Move ANR fix guards from XServerDisplayActivity to TouchpadView and InputControlsView by @Juan-Antonio-Doe \r\n* Steam Controller support, controller test and visual binder by @maxjivi05 \r\n* Fix Steam Controller USB access and Android library navigation by @maxjivi05 \r\n* Updated Ajay Prefix Pro Downloader to v3 by @ajay9634 \r\n* Fix: 32-bit core affinity resets when saving by @Juan-Antonio-Doe \r\n* Update DIS by @qwertypower \r\n* Feature Wayland, GameScope, Steam by @maxjivi05 and @The412Banner \r\n* DIS: improve smoothness, eliminate NaN on huge frames difference. by @qwertypower \r\n* proot: enhancements by @maxjivi05 \r\n\r\n\r\n**Full Changelog**: https://github.com/WinNative-Emu/WinNative/compare/v0.6.2-beta...v0.7.0-beta",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "winnative"
+      ],
+      "contentHash": "536cf91b92d59cb8376d87ab83707f2d2cfe278afb507e119fcb4f4ae8934471",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T11:33:10Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 修复错误的 OnputDeviceConnectd () 呼叫( Stenzek)（https://github.com/stenzek/duckstation/commit/62e48451aa72a4acf3dd215f7842acabe64c3554）)\n• 使用正确的字符串_视图构建器(Stenzek)（https://github.com/stenzek/duckstation/commit/a2aa7295e312cdb2301c82696d3315c7a1b8f906）)\n• 删除不必要的包括(Stenzek)（https://github.com/stenzek/duckstation/commit/79fc5454d11a62c8854d590727d9b025408f2973）)\n• 简化变种人设定回调(Stenzek)（https://github.com/stenzek/duckstation/commit/f9e12bb1e3ac0e536bc9e917ccfc43280a36e1cf）)",
+      "originalContent": "## Commits\n- Fix wrong OnInputDeviceConnected() call ([Stenzek](https://github.com/stenzek/duckstation/commit/62e48451aa72a4acf3dd215f7842acabe64c3554))\n- Use correct string_view constructor ([Stenzek](https://github.com/stenzek/duckstation/commit/a2aa7295e312cdb2301c82696d3315c7a1b8f906))\n- Remove unnecessary include ([Stenzek](https://github.com/stenzek/duckstation/commit/79fc5454d11a62c8854d590727d9b025408f2973))\n- Simplify mute setting callback ([Stenzek](https://github.com/stenzek/duckstation/commit/f9e12bb1e3ac0e536bc9e917ccfc43280a36e1cf))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "216f40cc4dce0ab018dd5117938c5b586d589a30b29792c043d3eab853dce8b6",
+      "translationPending": false
+    },
+    {
+      "id": "137316",
+      "title": "【家用机】bsnes Netplay v2 HF2 Build 20260811",
+      "originalTitle": "[Consoles de salon] bsnes Netplay v2 HF2 Build 20260811",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T10:18:46Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137316-consoles-de-salon-bsnes-netplay-v2-hf2-build-20260811/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/bsnes-netplay.png",
+      "officialUrl": "https://github.com/HeatXD/bsnes-netplay",
+      "summary": "这是与GekkoNet集成的bsnes仿真器的定制版本，可提供强大、低延迟的网络功能。 目前，它最多支持5名玩家的会话。 端口转发（或其他解决方案，例如模拟本地网络的VPN ）可能是必要的。 还支持观众模式，也可通过直接连接。其他连接方法正在开发中。",
+      "content": "这是与GekkoNet集成的bsnes仿真器的定制版本，可提供强大、低延迟的网络功能。\n\n目前，它最多支持5名玩家的会话。 端口转发（或其他解决方案，例如模拟本地网络的VPN ）可能是必要的。\n还支持观众模式，也可通过直接连接。其他连接方法正在开发中。",
+      "originalContent": "Il s'agit d'une version personnalisée de l'émulateur bsnes, intégrée à GekkoNet, pour offrir des fonctionnalités de netplay robustes et à faible latence.\n\nActuellement, il prend en charge des sessions allant jusqu'à 5 joueurs. La redirection de ports (ou une autre solution, comme un VPN simulant un réseau local) peut être nécessaire.\n\nLe mode spectateur est également pris en charge, lui aussi via connexion directe. D'autres méthodes de connexion sont en cours de développement.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "bsnes_pc"
+      ],
+      "contentHash": "1596e148f18aa4c9a5a6441b607188a139b39fc33a011045a2822d7c7312d65b",
+      "translationPending": false
+    },
+    {
+      "id": "137312",
+      "title": "【家用机】Sharpemu v0.0.4 R2",
+      "originalTitle": "[Consoles de salon] Sharpemu v0.0.4 R2",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T10:02:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137312-consoles-de-salon-sharpemu-v0-0-4-r2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/sharpemu-logo.png",
+      "officialUrl": "https://github.com/par274/sharpemu",
+      "summary": "SharpEmu是由par274开发的实验性PlayStation 5模拟器，完全用C #编写，旨在在Windows、Linux和macOS上运行，尽管开发主要集中在Windows上 。该项目从头开始编码，不接管其他仿真器，充当仿真器以及研究PS5架构的平台。 模拟器还很年轻：没有可玩的商业游戏，但它已经可以加载eboot.bin ，执行CPU指令，读取游戏元数据，加载系统模块并启动图形流水线的某些步骤 。",
+      "content": "SharpEmu是由par274开发的实验性PlayStation 5模拟器，完全用C #编写，旨在在Windows、Linux和macOS上运行，尽管开发主要集中在Windows上\n。该项目从头开始编码，不接管其他仿真器，充当仿真器以及研究PS5架构的平台。\n模拟器还很年轻：没有可玩的商业游戏，但它已经可以加载eboot.bin ，执行CPU指令，读取游戏元数据，加载系统模块并启动图形流水线的某些步骤\n。几个经过测试的游戏达到了sceVideoOut或AGC等高级阶段，这表明渲染开始工作，即使仍然有限。\n开发处于活跃状态， Windows构建可用且进度稳定。 SharpEmu专注于在瞄准高级兼容性或游戏玩法之前建立强大的技术基础。\n总而言之， SharpEmu是一个雄心勃勃的PS5项目，有条不紊，正在建设中，为未来全面模拟控制台奠定了基础。\n\n更改内容如下：\n• Vk版本更新(# 897) (6fe8555)\n• [Spirvtranslator]为SPIR-V转换器（ # 894 ） （ 6d6a5a1 ）添加了许多指令集\n• [CPU]主机RBX从下面保存的主机帧恢复（ a036bc1 ）\n• [Vk]实现VK_EXT_SHADER_VIEWPORT_INDEX_LAYER扩展支持（ d9433ff ）\n• [GUI/CLI]添加选项以禁用Vulkan隐式层(# 900) (f70e333)\n• [SpirvTranslator]仅在着色器使用时声明vgprPackedHalf (# 901) (22e73fb)\n• AMD FIX操作码NID文件缓存wave32 (# 903) (d4ff32a)\n• [GUI/CLI]添加对控制台设置和语言选择的支持(# 907) (7dbdd8b)\n• FIX (gen5) ：处理运行时和着色器缓冲区路径(# 904) (8feea60)\n•家务： BUMP版本到0.0.4-release.2 （ ＃ 908 ） （ f98ff99 ）",
+      "originalContent": "SharpEmu est un émulateur PlayStation 5 expérimental développé par par274, entièrement écrit en C# et conçu pour fonctionner sur Windows, Linux et macOS, même si le développement se concentre surtout sur Windows. Le projet est codé from scratch, sans reprendre d’autres émulateurs, et sert autant d’émulateur que de plateforme d’étude de l’architecture PS5.\n\nL’émulateur est encore très jeune: aucun jeu commercial n’est jouable, mais il peut déjà charger des eboot.bin, exécuter des instructions CPU, lire les métadonnées des jeux, charger des modules système et initier certaines étapes du pipeline graphique. Plusieurs jeux testés atteignent des stades avancés comme sceVideoOut ou AGC, ce qui montre que le rendu commence à fonctionner, même si encore limité.\n\nLe développement est actif, avec des builds Windows disponibles et des progrès réguliers. SharpEmu se concentre sur la mise en place d’une base technique solide avant de viser la compatibilité avancée ou la jouabilité.\n\nEn résumé, SharpEmu est un projet PS5 ambitieux, méthodique et en pleine construction, qui pose les fondations nécessaires pour une future émulation complète de la console.\n\nVoici les changements:\n- Vk version update (#897) (6fe8555)\n- [Spirvtranslator] Added many instruction set for SPIR-V translator (#894) (6d6a5a1)\n- [CPU] Host RBX is restored from the saved host frame below (a036bc1)\n- [Vk] Implement VK_EXT_shader_viewport_index_layer extension support (d9433ff)\n- [GUI/CLI] Add option to disable Vulkan implicit layers (#900) (f70e333)\n- [SpirvTranslator] Declare vgprPackedHalf only when a shader uses it (#901) (22e73fb)\n- Amd fix opcode nid filecache wave32 (#903) (d4ff32a)\n- [GUI/CLI] Add support for console settings and language selection (#907) (7dbdd8b)\n- fix(gen5): handle runtime and shader buffer paths (#904) (8feea60)\n- chore: bump version to 0.0.4-release.2 (#908) (f98ff99)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "sharpemu_pc"
+      ],
+      "contentHash": "ab427e1d44fd309df985cee860447ae9bf1e454951a619d9d406da3c5be6002d",
+      "translationPending": false
+    },
+    {
+      "id": "137310",
+      "title": "【家用机】PS5rs v0.6.5",
+      "originalTitle": "[Consoles de salon] PS5rs v0.6.5",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-26T10:00:30Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137310-consoles-de-salon-ps5rs-v0-6-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ps5rs.png",
+      "officialUrl": "https://github.com/claimore22/ps5rs",
+      "summary": "PS5rs是用Rust编写的PlayStation 5二进制分析、虚拟加载和仿真框架。它尤其支持自身、ELF和PRX格式的分析、NID导入的解析以及PS5可执行文件的虚拟加载 。它还包含一个主机端仿真器，能够在PC的x86-64处理器上运行PS5二进制文件，并通过Rust中的HLE模块处理对系统库的调用。该项目还提供不同的分析和报告工具。",
+      "content": "PS5rs是用Rust编写的PlayStation 5二进制分析、虚拟加载和仿真框架。它尤其支持自身、ELF和PRX格式的分析、NID导入的解析以及PS5可执行文件的虚拟加载\n。它还包含一个主机端仿真器，能够在PC的x86-64处理器上运行PS5二进制文件，并通过Rust中的HLE模块处理对系统库的调用。该项目还提供不同的分析和报告工具。",
+      "originalContent": "PS5rs est un framework d’analyse de binaires, de chargement virtuel et d’émulation PlayStation 5 écrit en Rust. Il prend notamment en charge l’analyse des formats SELF, ELF et PRX, la résolution des imports NID et le chargement virtuel des exécutables PS5. Il intègre également un émulateur côté hôte capable d’exécuter les binaires PS5 sur le processeur x86-64 du PC et de gérer les appels aux bibliothèques système via des modules HLE en Rust. Le projet fournit également différents outils d’analyse et de génération de rapports.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "963e43785c8d0f6f69cb169d3b222b10989445e897623de7451ee591a9cc9d68",
+      "translationPending": false
+    },
+    {
+      "id": "137308",
+      "title": "【家用机】SuperSnes9x v1.63.31",
+      "originalTitle": "[Consoles de salon] SuperSnes9x v1.63.31",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T09:56:23Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137308-consoles-de-salon-supersnes9x-v1-63-31/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/supersnes9x.png",
+      "officialUrl": "https://github.com/shanytc/snes9x",
+      "summary": "SuperSNES9X是由shanytc开发的SNES9X的先进分叉，它在保持原始SNES9X的速度和简单性的同时，增加了许多现代化的改进。 它针对玩家（追溯成就、在线）和创作者（精灵翻录、黑客攻击、调试）。 主要改进： –多系统支持： Super NES、GameBoy、GameBoy Color、Super GameBoy （ 1和2 ）和Super GameBoy Color （实验） – Super FX 3 （ FX3 ）支持…",
+      "content": "SuperSNES9X是由shanytc开发的SNES9X的先进分叉，它在保持原始SNES9X的速度和简单性的同时，增加了许多现代化的改进。 它针对玩家（追溯成就、在线）和创作者（精灵翻录、黑客攻击、调试）。\n\n主要改进：\n–多系统支持： Super NES、GameBoy、GameBoy Color、Super GameBoy （ 1和2 ）和Super GameBoy Color （实验）\n– Super FX 3 （ FX3 ）支持新的LRG 2026输出，具有循环GSU同步\n– SNES LRG振动加密狗支持（ Ultimate Doom FX3、RT.SFC ）\n–适用于SNES/SGB/GB/GBC的Libretro内核\n–模拟Voicer-kun设备并从CUE/BIN图像播放其音频CD\n–模拟Super Famicom Box （ HOTEL SNES ） ，提供实时英语OSD翻译\n–任天堂SuperDisc支持\n–任天堂超级系统支持\n–活动墨盒支持： PowerFest ’94和Nintendo Campus Challenge’ 92\n– Voicer-kun仿真：连接到第二个控制器端口的红外发射器/接收器\n–集成RetroAchievements ，不支持硬核模式\n–对Vitor Vilela的《超级马里奥世界》宽屏ROM破解的Wide-SNES支持\n–适用于在线游戏的Kaillera （客户端/服务器）\n–提前运行以减少输入延迟\n–颜色校正和原生CRT颜色\n–适用于SNES、GB、GBC和SGB的高级PPU查看器（精灵/瓷砖） ，尤其适用于撕裂者和地图制作者\n–音频波形查看器，具有每通道音轨、独奏/静音功能和仪表\n–改进的作弊搜索和编辑器： SNES和GB支持，包括SGB BIOS模式下的GB代码\n–多绑定控制器分配\n–支持SDL （ Simple DirectMedia Layer ）\n–多语言套餐\n– 100%支持GB、GBC和SGB的酸性测试\n• SNES9X Mesen备用转换器，可在此处获得。\n请注意，配置文件和备份在SNES9X和SuperSNES9X之间100%兼容。\n\n这些变化是：\n\n任天堂超级系统\n•增加了任天堂超级系统街机支持： Z80主管、钥匙芯片、屏幕显示器、三个墨盒插座和前面板。\n•十三个倾倒墨盒中有十二个运行，包括HiROM和DSP-1板。\n•为ActRaiser、The Addams Family、Lethal Weapon和Robocop 3命名了墨盒DIP开关。\n•主管的重置也会使APU静音，重启必须保持在机柜上，并且nocash的测试程序被接受为BIOS。\n•游戏手柄看门狗默认关闭。 修复将致命武器从机器上扔下的问题。\n•添加了热键选项卡\n•加载预览现在显示预览\n\n任天堂超级光盘\n•在BIOS管理器中添加了对BIOS的支持。\n•添加了对光盘插入和弹出的支持（弹出重置到主屏幕） ，以及窗口标题中的光盘名称。\n•工作头衔： Super Boss Gaiden ，测试CD ， sdtest.zip\n•添加了热键选项卡\n•加载预览现在显示预览\n\n超级任天堂礼盒\n•键盘开关位置被记住，窗口标题命名正在运行的游戏。\n•添加了一个超级任天堂盒菜单（硬币、钥匙开关、OSD语言和背景） ，从黑客对话框中移出。\n•加载预览现在显示预览\n\nSNES\n•修复A.S.P.报告屏幕输出。\n•重新应用A.S.P.的中间扫描线效果，现在在每行的HBlank重新渲染，避免了最终幻想VI的伤害数字故障。\n\nXeno Crisis\n•添加了RP2040墨盒仿真支持。\n•固件在ROM旁边或ZIP内从_rp2040.bin读取，游戏的闪存保存在.srm中。\n\nWide-SNES\n•宽屏超级马里奥世界游戏使用Vitor Vilela （已批准）的四种宽度修补内存：普通、额外、超级（实验）、超级（实验）\n\nTekken2/SF EX安全芯片仿真\n•模拟未经许可的铁拳2号推车上的安全芯片。\n•街头霸王EX现在使用相同的芯片而不是ROM补丁。\n\n米奇魔法演示\n•增加了对Mickey Magic演示的支持： H/V IRQ在稍后进行一次投票， WAI更快地唤醒一个周期，并且窗口每行只能启动和停止一次。\n•固定隔行模式0-4获取每个字段的单独背景行。\n\n超级Game Boy\n• ICD2数据包解码器遵循硬件规则。 修复了Bonk's Revenge/B.C. KID 2引导到空白边框和Castlevania Legends中的KCE徽标。\n• Super Game Boy Color仅适用于SGB增强型购物车，缺少BIOS的Super Game Boy选择退回到Automatic。\n\nGame Boy\n•引导ROM切换现在与硬件周期相匹配。\n•默认情况下， NRx2故障删除处于关闭状态。\n•添加了Game Boy Color LCD颜色校正、Game Boy输出的图片调整和自定义Game Boy (DMG)调色板。\n•加载预览显示SFC-Box、NSS、Super Disc和Xeno Crisis的预览。\n•修复了计算16MB ROM校验和的挂起。\n\n其他\n•锁存模式7提前寄存器（上游）。\n•当没有IRQ或NMI迫在眉睫时，固定WAI。（上游）\n•修复了SuperFX 8位绘图透明度和RPIX过早清除DREG的问题。（上游）\n•加载无效快照不再挂起。（上游）\n•一个按钮或轴现在可以绑定到多个操作。（上游）\n\nWin32 GUI\n•在另一个游戏运行时加载游戏现在是即时的（保存最新的游戏会导致速度变慢）。\n•在“视频”菜单中添加了“始终位于顶部”和“锁定屏幕调整大小”。\n•每个控制台保持自己的窗口大小，窗口大小以加载内容自己的分辨率为步长。\n•修复了虚拟菜单栏边距在某些窗口尺寸下留下黑色栏的问题。\n•在S-PPU菜单中添加了图层切换。\n• “色彩校正”对话框是无模型的，可实时应用更改，并保留单独的SNES和GBC设置。\n•为瓦片地图和Game Boy精灵查看器添加了背景颜色选择。\n•硬件菜单（任天堂Super System、Super Disc、S-PPU、GB-PPU ）仅在硬件加载时显示。\n• ACID测试通过BIOS管理器的启动ROM和SGB BIOS启动，并在后台运行无模型。\n\nBIOS管理器\n• BIOS文件仅来自BIOS管理器；加载器不再按名称搜索文件夹。\n•当X加宽窗口时， BIOS管理器状态注释不再涂抹\n\nQt/GTK (Linux)\n•添加了S-PPU图块、瓦片地图和精灵查看器，以及带有Game Boy查看器和图层切换的GB-PPU菜单。\n•为NSS和SFC-Box以及PowerFest '94/Campus Challenge' 92会话计时器添加了前面板、热键和设置。\n•添加了超级光盘菜单和热键。\n•添加了“始终位于顶部”、“锁定屏幕调整大小”、“S-PPU图层”菜单和“宽屏”选项。\n• Game Boy内容保持自己的形状，新配置默认为方形像素。\n•图层热键1/2/5在Game Boy会话中切换Game Boy图层。\n•显示缺少BIOS通知而不是ROM信息。\n\nGTK\n•修复了SIGTERM和Ctrl-C上的崩溃问题。\n•修复了超出范围的声音驱动程序设置，没有声音。\n•更新了日语翻译。（ Nekokabu ）\n\nQt\n•修复了启动过程中忽略退出信号的问题。\n•修复了配置为零的PulseAudio中止。\n•现在，绑定到多个热键的密钥会触发所有热键。\n•添加了--dark命令行选项。（ BearOso ）\n•调整大小时重新绘制OpenGL。（ BearOso ）\n\nLibretro\n•添加了Game Boy Model核心选项，因此任何购物车都可以在Super Game Boy上运行。\n•为《超级马里奥世界》添加了宽屏核心选项。\n•超级光盘支持RetroArch的光盘控制。\n• Xeno Crisis从ZIP运行，其保存保存在SAVE_RAM中，可与其他端口的.srm互换。\n•缺少BIOS通知显示在前端的OSD上。",
+      "originalContent": "SuperSNES9X est un fork avancé de SNES9X, développé par shanytc, qui ajoute de nombreuses améliorations modernes tout en conservant la rapidité et la simplicité du SNES9X original. Il vise autant les joueurs (retroachievements, online) que les créateurs (sprite ripping, hacking, debugging).\n\nPrincipales améliorations:\n– Support multi-système: Super NES, GameBoy, GameBoy Color, Super GameBoy (1 et 2) et Super GameBoy Color (expérimental)\n– Support Super FX 3 (FX3) pour les nouvelles sorties LRG 2026, avec synchronisation GSU cycle par cycle\n– Support du dongle de vibration LRG SNES (Ultimate Doom FX3, RT.SFC)\n– Core libretro pour SNES / SGB / GB / GBC\n– Émulation du périphérique Voicer-kun et lecture de ses CD audio depuis des images CUE/BIN\n– Émulation du Super Famicom Box (SNES d’hôtel), avec traduction OSD anglaise en temps réel\n– Support du Nintendo SuperDisc\n– Support du Nintendo Super System\n– Support des cartouches événementielles: PowerFest ’94 et Nintendo Campus Challenge ’92\n– Émulation du Voicer-kun: transmetteur/récepteur infrarouge connecté au deuxième port manette\n– RetroAchievements intégrés, sans support du mode Hardcore\n– Support de Wide-SNES, pour le hack ROM widescreen de Super Mario World par Vitor Vilela\n– Kaillera (Client/Serveur) pour le jeu en ligne\n– Run-Ahead pour réduire la latence d’entrée\n– Correction colorimétrique et couleurs CRT natives\n– Viewers PPU avancés (Sprites/Tiles) pour SNES, GB, GBC et SGB, destinés notamment aux rippers et map-makers\n– Visualiseur de forme d’onde audio avec pistes par canal, fonctions solo/muet et vumètres\n– Cheat Search & Editor améliorés: support SNES et GB, avec notamment les codes GB en mode BIOS SGB\n– Assignation Multi-Bind-Controller\n– Support SDL (Simple DirectMedia Layer)\n– Pack multilingue\n– Prise en charge à 100 % des tests Acid pour GB, GBC et SGB\n- Convertisseur de sauvegarde SNES9X MESEN, disponible ici.\n\nA noter que les fichiers de configuration et sauvegardes sont 100% compatibles entre SNES9X et SuperSNES9X.\n\nLes changements sont:\n\nNintendo Super System\n- Added Nintendo Super System arcade support: Z80 supervisor, key chip, on-screen display, three cartridge sockets and the front panel.\n- Twelve of the thirteen dumped cartridges run, including HiROM and DSP-1 boards.\n- Named the cartridge DIP switches for ActRaiser, The Addams Family, Lethal Weapon and Robocop 3.\n- The supervisor's reset silences the APU too, Restart has to be held as on the cabinet, and nocash's test program is accepted as a BIOS.\n- The joypad watchdog is off by default. Fixes Lethal Weapon being thrown off the machine.\n- Added hotkey tabs\n- Load with Preview now shows previews\n\nNintendo Super Disc\n- Added support for the BIOS in the BIOS Manager.\n- Added support for disc insert and eject (eject resets to the home screen), and the disc's name in the window title.\n- Working Titles: Super Boss Gaiden, Test CD, sdtest.zip\n- Added hotkey tabs\n- Load with Preview now shows previews\n\nSuper Famicom Box\n- The keyswitch position is remembered, and the window title names the running game.\n- Added a Super Famicom Box menu (coin, keyswitch, OSD language and backdrop), moved from the Hacks dialog.\n- Load with Preview now shows previews\n\nSNES\n- Fixes the A.S.P. sortie report screen.\n- Re-applied A.S.P.'s mid-scanline effects, now re-rendered at each line's HBlank, which avoids the Final Fantasy VI damage-number glitches.\n\nXeno Crisis\n- Added RP2040 cartridge emulation support.\n- The firmware is read from _rp2040.bin beside the ROM or inside its zip, and the game's flash saves are kept in the .srm.\n\nWide-SNES\n- The widescreen Super Mario World game is patched in memory using Vitor Vilela's (approved) hack at four widths: Normal, Extra, Ultra (Experimental), Hyper (Experimental)\n\nTekken2/SF EX Security Chip Emulation\n- Emulated the security chip on the unlicensed Tekken 2 cart.\n- Street Fighter EX now uses the same chip instead of a ROM patch.\n\nMickey Magic demo\n- Added support for Mickey Magic demo: H/V IRQs are taken one poll later, WAI wakes a cycle sooner, and a window can start and stop only once per line.\n- Fixed interlaced modes 0-4 fetching separate BG rows per field.\n\nSuper Game Boy\n- The ICD2 packet decoder follows the hardware's rules. Fixes Bonk's Revenge / B.C. Kid 2 booting to a blank border and the KCE logo in Castlevania Legends.\n- Super Game Boy Color is only offered for SGB-enhanced carts, and a Super Game Boy pick whose BIOS is missing falls back to Automatic.\n\nGame Boy\n- The boot-ROM handoff now matches hardware cycle for cycle.\n- NRx2 glitch suppression is off by default.\n- Added Game Boy Color LCD color correction, picture adjustments for Game Boy output and a custom Game Boy (DMG) palette.\n- Load with Preview shows previews for SFC-Box, NSS, Super Disc and Xeno Crisis savestates.\n- Fixed a hang computing the checksum of an exactly 16MB ROM.\n\nOther\n- Latch Mode 7 registers early (upstream).\n- Fixed WAI when no IRQ or NMI is imminent. (upstream)\n- Fixed SuperFX 8-bit plotting transparency and RPIX clearing DREG too early. (upstream)\n- Loading an invalid snapshot no longer hangs. (upstream)\n- One button or axis can now be bound to multiple actions. (upstream)\n\nWin32 GUI\n- Loading a game while another is running is now instant (saving the latest games caused slowdowns).\n- Added Always on Top and Lock Screen Resize to the Video menu.\n- Each console keeps its own window size, and Window Size steps in the loaded content's own resolution.\n- Fixed a phantom menu-bar margin leaving a black bar at some window sizes.\n- Added layer toggles to the S-PPU menu.\n- The Color Correction dialog is modeless, applies changes live, and keeps separate SNES and GBC settings.\n- Added a background color choice to the tilemap and Game Boy sprite viewers.\n- Hardware menus (Nintendo Super System, Super Disc, S-PPU, GB-PPU) only appear while their hardware is loaded.\n- Acid Tests boot through the BIOS Manager's boot ROMs and SGB BIOS, and run modeless in the background.\n\nBios Manager\n- BIOS files come only from the BIOS Manager; the loaders no longer search folders for them by name.\n- BIOS Manager status notes no longer smear when X widens the window\n\nQt/GTK (Linux)\n- Added the S-PPU Tile, Tilemap and Sprite Viewers, and a GB-PPU menu with the Game Boy viewers and layer toggles.\n- Added front panels, hotkeys and settings for the NSS and SFC-Box, and the PowerFest '94 / Campus Challenge '92 session timer.\n- Added the Super Disc menu and hotkeys.\n- Added Always on Top, Lock Screen Resize, the S-PPU layer menu and a Widescreen option.\n- Game Boy content keeps its own shape, and new configs default to square pixels.\n- Layer hotkeys 1/2/5 switch the Game Boy layers in a Game Boy session.\n- Missing-BIOS notices are shown instead of the ROM info.\n\nGTK\n- Fixed a crash on SIGTERM and Ctrl-C.\n- Fixed an out-of-range sound driver setting leaving no sound.\n- Updated Japanese translation. (Nekokabu)\n\nQt\n- Fixed quit signals being ignored during startup.\n- Fixed a PulseAudio abort with a zeroed config.\n- A key bound to several hotkeys now fires all of them.\n- Added a --dark command line option. (BearOso)\n- OpenGL repaints on resize. (BearOso)\n\nLibretro\n- Added a Game Boy Model core option, so any cart can run on the Super Game Boy.\n- Added a Widescreen core option for Super Mario World.\n- Super Disc supports RetroArch's Disc Control.\n- Xeno Crisis runs from a zip, and its saves are kept in SAVE_RAM, interchangeable with the other ports' .srm.\n- Missing-BIOS notices are shown on the frontend's OSD.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "snes9x_core",
+        "supersnes9x_pc"
+      ],
+      "contentHash": "e845bd8a02b39d4cb2b8aa98d96ae445a03f7ab8c383a0e91ecf0281bfee9e99",
+      "translationPending": false
+    },
+    {
+      "id": "137306",
+      "title": "【工具】Oxyromon v0.24",
+      "originalTitle": "[Utilitaires Multi-systemes] Oxyromon v0.24",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-26T09:50:10Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137306-utilitaires-multi-systemes-oxyromon-v0-24/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/03/oxyroms.png",
+      "officialUrl": "https://github.com/alucryd/oxyromon/",
+      "summary": "OxyROMon是一个多平台的ROM管理器,用Rust来书写(因此它更容易被安装在服务器上,但也可以被使用在PC上). 和大多数ROM管理器一样,它对照已知的数据库检查ROM文件。 它的设计主要是为了存档目的。 变动情况如下: 特征 • 添加到网络用户界面的ROM,用于单一系统或所有系统。",
+      "content": "OxyROMon是一个多平台的ROM管理器,用Rust来书写(因此它更容易被安装在服务器上,但也可以被使用在PC上). 和大多数ROM管理器一样,它对照已知的数据库检查ROM文件。 它的设计主要是为了存档目的。\n\n变动情况如下:\n\n特征\n• 添加到网络用户界面的ROM,用于单一系统或所有系统。\n• 在网络用户界面中添加一个完整性检查,用于单一系统或所有系统启动时\n• 在网络用户界面中添加一个清洗对话框,用于丢失、孤儿、被废弃和外国ROM文件\n• 为单一系统将ROM格式转换成网络用户界面\n• 在网络用户界面的导入对话框中添加了多个匹配选项(第一次匹配或跳过)\n• 添加补丁文件导入到网络用户界面中,用于单个ROM\n• 添加 PlayStation 3 IRD 导入并清理到网络 UI\n• 将 M3U 播放列表生成添加到网络用户界面,用于每个系统一次\n• 添加了 PREFER_FORMAT 每个系统设置:输入到系统的ROM自动转换到其首选格式,导入-ROMs -- -- 是跳过转换\n· 现已接受的转换转盘 -- -- 以维持处理过的系统PREFER_FORMAT的目的地格式\n• 在网络用户界面每个系统的设置对话框中添加首选格式\n\n变动\n• DK/NSZ支持现在来自nsz-rs 箱子,而不是外部nsz工具,在(去)压缩期间有一个进度栏\n• prod.keys 现在只需要压缩包含 NCAA 的 NSP, 信息显示它缺失时\n• 将nsz-rs和xso-rs的箱子移入箱/箱下休息;放行档案中的CLIS(nszrs,xsors)船\n• GDI转换现在来自一个新的gdi-rs crae,一个gdidrop的港口,有一个进步栏;其CLI(gdirs)船也在释放档案中\n• 民间社会组织/ZSO的支持现在来自xso-rs蛋糕,而不是外部的maxcso工具,有一个进步栏\n• CUE/BIN转换为ISO, 玉米从bchunk, 不再需要; 对于轨道来说, 其CUE描述太短的BIN是一个错误, 而不是一个短的ISO\n• 每个音轨有一个本位的游戏现在导出到ISO,保留第一个音轨\n• CSO转换目前使用8个KiB区块,16个KiB后2个GiB,文件较小度约为4%\n• ZSO的转换停留在2个KiB块上,唯一大小的 Open PS2 加载器读取\n• 排序程序现在接受 -- -- 系统在没有交互提示的情况下排序命名的系统\n• 现在接受检查程序 -- -- 检查命名系统的系统没有交互提示\n• 现已接受的导入-rom 以 id 方式选择目标 ROM, 跳过提示\n• 导入引擎和清洗引擎现在接受 -- system以出乎意料的方式运行;导入引擎然后将每个IRD匹配到同名游戏中,并在没有游戏或断开时拒绝 ưμ㼯A\n\n改进\n• 仅在网络UI的PlayStation 3系统的系统菜单中显示IRD导入和清洗动作\n• 在网络用户界面的系统、游戏和ROM行中添加了主格莱弗,因此完成状态可以不带颜色识别\n• 按风险对清洗对话框的选择进行分组,在删除文件时采用警告样式\n• 将橙色品牌颜色应用于网络用户界面,并将页面标题设定为oxyromon\n• 改进网页用户界面副本和可访问性:贴有标签的游戏过滤器、更清晰的导入和设置措辞以及页面描述\n• 缩小网络用户界面默认的窗格分拆,使游戏清单有更多的空间\n• 将网络用户界面的动作按它们的行为分类:在导航栏中上传(ROM、DAT)和下载(DAT)菜单,即系统面板头中每个系统运行的菜单 (检查、 排序、 播放列表、 清洗) , 并且每个系统像以前一样使用自己的菜单; 菜单让位给自旋器, 直到其动作在服务器上完成, 所以动作不能堆叠。\n• 添加了标识的光模变体,因此在白色导航栏和About对话框上仍可辨认\n• 在网络用户界面系统列表中增加了每个系统的压缩计数(e.g. \"482/500\")\n• 让网络用户界面中的每个文件拾取者都取一个已丢弃的文件,包括IRD和补丁对话框\n• 使网页 UI 的游戏列表为 WAI- ARIA 列表框,可使用箭头、家、端、入和空间键导航\n\n修复内容\n• 在每次引用CLI时,固定的进口标记都惊慌失措,补丁文件列表是从一个未申报的参数名读取的\n• 固定xdelta3 补丁交换输出和补丁参数,覆盖补丁而不是生成补丁的ROM\n• 修复网络用户界面的排序、检查、转换和清洗系统行动,在未知系统上惊慌失措_id\n• 一旦从网络内部的倒下取出一个值,即可修复网络用户界面的对话框\n• 修正网页UI, 不显示导入的变化: ROM 和 DAT 的导入, 现在刷新了所选系统的游戏和ROM 以及系统列表, 更改的数据是 重新绘制, 排序等动作在刷新时不再丢失选中的游戏\n• 当无法获取数据库连接时, 固定的网络 UI 背景动作将永远挂起; 它们现在释放出 SSE 错误\n• 在无法获取数据库连接时,固定网络用户界面的设置和行动突变恐慌\n• 固定重叠的系统名称模式(e.g. PlayStation and PlayStation 3)导致同一系统被外包,检查或两次转换\n• 将网页UI的统计卡固定在窗宽的右边缘\n• 固定的GDI出口到CUE/BIN自己的目录,以覆盖其数据轨迹\n• 固定的GDI转换一个CUE,其中多个音轨在一个音箱中,它为每个音轨写出整个音箱\n• 固定的GDI转换,在通常含有HH-DNSITY AREA的评论中放入45 000个区段的音轨",
+      "originalContent": "OxyROMon est un gestionnaire de ROM multi-plateforme écrit en Rust (il est donc plutôt voué à être installé sur un serveur, mais peut aussi très bien s'utiliser sur un PC). Comme la plupart des gestionnaires de ROM, il vérifie les fichiers ROM par rapport aux bases de données connues. Il est conçu principalement dans un objectif d'archivage.\n\nLes changements sont les suivants:\n\nFeatures\n- Added ROM sorting to the web UI, for a single system or all of them at once\n- Added an integrity check to the web UI, for a single system or all of them at once\n- Added a purge dialog to the web UI, for missing, orphan, trashed, and foreign ROM files\n- Added ROM format conversion to the web UI, for a single system\n- Added a multiple-matches option (first match or skip) to the web UI's import dialog\n- Added patch file import to the web UI, for a single ROM\n- Added PlayStation 3 IRD import and purge to the web UI\n- Added M3U playlist generation to the web UI, for every system at once\n- Added the PREFER_FORMAT per-system setting: ROMs imported into a system are automatically converted to its preferred format, import-roms --as-is skips the conversion\n- convert-roms now accepts --save to persist the destination format as the processed systems' PREFER_FORMAT\n- Added a Prefer Format dropdown to the web UI's per-system settings dialog\n\nChanges\n- NSP/NSZ support now comes from the nsz-rs crate instead of the external nsz tool, with a progress bar during (de)compression\n- prod.keys is now only needed to compress NSPs containing NCAs, and info says when it is missing\n- Moved the nsz-rs and xso-rs crates into this repository under crates/; their CLIs (nszrs, xsors) ship in the release archives\n- GDI conversion now comes from the new gdi-rs crate, a port of gdidrop, with a progress bar; its CLI (gdirs) ships in the release archives too\n- CSO/ZSO support now comes from the xso-rs crate instead of the external maxcso tool, with a progress bar\n- CUE/BIN to ISO conversion is now built in, ported from bchunk, which is no longer needed; a BIN too short for the track its CUE describes is an error rather than a short ISO\n- Games with one bin per track now export to ISO, keeping the first track\n- CSO conversions now use 8 KiB blocks, 16 KiB past 2 GiB, for files around 4% smaller\n- ZSO conversions stay at 2 KiB blocks, the only size Open PS2 Loader reads\n- sort-roms now accepts --system to sort named systems without an interactive prompt\n- check-roms now accepts --system to check named systems without an interactive prompt\n- import-patches now accepts --rom to select the target ROM by id, skipping the prompts\n- import-irds and purge-irds now accept --system to run unattended; import-irds then matches each IRD to the one game of the same title, and refuses it when there is none or several\n\nImprovements\n- Only show the IRD import and purge actions in the web UI's system menu for PlayStation 3 systems\n- Added a leading glyph to the web UI's system, game, and ROM rows, so the completion state is legible without colour\n- Grouped the purge dialog's options by risk, with a warning style on the file-deleting ones\n- Applied the orange brand colour to the web UI and set the page title to oxyROMon\n- Refined web UI copy and accessibility: a labelled games filter, clearer import and settings wording, and a page description\n- Narrowed the web UI's default pane split, giving the games list more room\n- Grouped the web UI's actions by what they act on: Upload (ROMs, DATs) and Download (DATs) menus in the navbar, a menu in the Systems panel's header for what runs on every system (check, sort, playlists, purge), and each system's own menu as before; a menu gives way to a spinner until its action has finished on the server, so actions cannot be stacked\n- Added a light-mode variant of the logo, so it stays legible on the white navbar and About dialog\n- Added a per-system completion count to the web UI's system list (e.g. \"482/500\")\n- Let every file picker in the web UI take a dropped file, the IRD and patch dialogs' included\n- Made the web UI's games list a WAI-ARIA listbox, navigable with the arrow, Home, End, Enter, and Space keys\n\nFixes\n- Fixed import-patches panicking on every CLI invocation, the patch file list was read from an undeclared argument name\n- Fixed xdelta3 patching swapping the output and patch arguments, overwriting the patch instead of producing the patched ROM\n- Fixed the web UI's sort, check, convert, and purge-system actions panicking on an unknown system_id\n- Fixed the web UI's dialogs closing as soon as a value was picked from a dropdown inside them\n- Fixed the web UI not showing what an import changed: ROM and DAT imports now refresh the selected system's games and ROMs as well as the systems list, rows whose data changed are redrawn, and actions such as sort no longer lose the selected game when they refresh\n- Fixed web UI background actions hanging forever when a database connection could not be acquired; they now emit an SSE error\n- Fixed the web UI's settings and action mutations panicking when a database connection could not be acquired\n- Fixed overlapping system name patterns (e.g. PlayStation and PlayStation 3) causing the same system to be sorted, checked, or converted twice\n- Fixed the web UI's statistics cards being cut off at the right edge at some window widths\n- Fixed GDI exports into the CUE/BIN's own directory overwriting its data tracks\n- Fixed GDI conversion of a CUE with several tracks in one bin, which wrote the whole bin for every track\n- Fixed GDI conversion placing a track at sector 45000 on comments that merely contain HIGH-DENSITY AREA",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "bcd6cb0ae3044281fded08a43bcb49a12d1aa1317fd59d364a8c9aa7895a0a6b",
       "translationPending": false
     },
     {
@@ -203,22 +358,22 @@
     },
     {
       "id": "137296",
-      "title": "【工具】OpenROM v3.6.0",
-      "originalTitle": "[Utilitaires Divers] OpenROM v3.6.0",
+      "title": "【工具】OpenROM v3.6.x",
+      "originalTitle": "[Utilitaires Divers] OpenROM v3.6.x",
       "category": "tools",
       "categoryLabel": "工具",
       "kind": "tool",
       "publishedAt": "2026-09-25T06:09:05Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137296-utilitaires-divers-openrom-v3-6-0/",
+      "sourceUrl": "https://www.emu-france.com/news/137296-utilitaires-divers-openrom-v3-6-x/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/OpenROM.png",
       "officialUrl": "https://github.com/M5Devs/OpenROM/",
-      "summary": "OpenROM是一个通用的、免费的、开源的软件套件，专门用于复古ROM转换。 它旨在取代专有和分散的工具，完全在本地运行（ 100 ％离线） ，无需任何数据收集。 界面和人体工程学 •游戏美学：提供在Flutter下开发的现代黑暗界面，灵感来自PS5和Xbox菜单，集成了仪表板、每个ROM的卡片和平台徽章。 •可定制：提供多种内置主题（赛博朋克、终端、迷你、游戏） ，并能够通过JSON文件创建它们。",
-      "content": "OpenROM是一个通用的、免费的、开源的软件套件，专门用于复古ROM转换。 它旨在取代专有和分散的工具，完全在本地运行（ 100 ％离线） ，无需任何数据收集。\n\n界面和人体工程学\n•游戏美学：提供在Flutter下开发的现代黑暗界面，灵感来自PS5和Xbox菜单，集成了仪表板、每个ROM的卡片和平台徽章。\n•可定制：提供多种内置主题（赛博朋克、终端、迷你、游戏） ，并能够通过JSON文件创建它们。\n•平滑处理：本机拖放支持单个或分组的文件和文件夹（批量处理）。\n\n性能和技术特点\n•完整转换矩阵：支持跨主要格式（ ISO、BIN、CUE、GDI、IMG、ECM、CHD、CSO、ZSO、XISO、RVZ、WIA、WBFS、GCZ ）的20多次转换旅程。\n•智能检测：通过数字签名（魔术字节）准确识别游戏机（ PS1、PS2、PSP、Xbox、GameCube、Wii、Dreamcast ） ，并分析CHD标头（ v4/v5 ）以区分CD和DVD。\n•生成和验证：自动为BIN文件创建缺失的cue文件，并验证通过chdman生成的CHD文件的完整性。\n\n高级功能\n•终端和自动化：在转换过程中集成实时日志，并为自动化和脚本编写提供完整的命令行工具（ openrom-core ）。",
+      "summary": "OpenROM是一款通用的,免费的和开源的软件套件,专门用于再现ROM的转换。 它的设计是为了取代专有和零散的工具,完全在本地工作(100%离线),没有任何数据收集。 接口和 Ergonomics • 美学游戏:提议在Fluter下开发的由PS5和Xbox菜单所启发的现代黑暗界面,其中包含一个仪表板、每张ROM和 平台徽章。 • 自定义:提供几个综合主题(Cyberpunk、终端、迷你游戏、游戏)并通过JSON文件创建这些主题的可能性。",
+      "content": "OpenROM是一款通用的,免费的和开源的软件套件,专门用于再现ROM的转换。 它的设计是为了取代专有和零散的工具,完全在本地工作(100%离线),没有任何数据收集。\n\n接口和 Ergonomics\n• 美学游戏:提议在Fluter下开发的由PS5和Xbox菜单所启发的现代黑暗界面,其中包含一个仪表板、每张ROM和 平台徽章。\n• 自定义:提供几个综合主题(Cyberpunk、终端、迷你游戏、游戏)并通过JSON文件创建这些主题的可能性。\n• 流体处理:本地支持拖放文件和文件夹被隔离或分组(批处理)。\n\n性能和技术特点\n• 完整的转换矩阵:支持20多条主要格式(ISO、BIN、CUE、GDI、IMG、ECM、CHD、CSO、ZSO、XISO、RVZ、WIA、WBFS、G)的转换路径 (中文(简体) ).\n• 智能检测:精确识别带数字签名(魔法字节)的控制台(PS1,PS2,PSP,Xbox,GameCube,Wii,Dreamcast)并分析目标 cHD (v4/v5)来区分CD和DVD.\n• 生成和验证:自动为BIN文件创建缺失的CUE文件,并检查通过chdman生成的HDC文件的完整性。\n\n高级特性\n• 终端和自动化:在转换期间实时整合一个日志,并提供一个完整的自动化命令行工具(开放核心) 和脚本。",
       "originalContent": "OpenROM est une suite logicielle universelle, gratuite et open-source dédiée à la conversion de ROMs rétro. Conçue pour remplacer les outils propriétaires et fragmentés, elle fonctionne entièrement en local (100 % hors ligne) sans aucune collecte de données.\n\nInterface et Ergonomie\n- Esthétique Gaming : Propose une interface sombre moderne développée sous Flutter, inspirée des menus PS5 et Xbox, intégrant un tableau de bord, des cartes pour chaque ROM et des badges de plateforme.\n- Personnalisable : Propose plusieurs thèmes intégrés (Cyberpunk, Terminal, Minimal, Gaming) et la possibilité d'en créer via des fichiers JSON.\n- Prise en main fluide : Prise en charge native du glisser-déposer pour les fichiers et dossiers isolés ou groupés (traitement par lot).\n\nPerformances et Fonctionnalités Techniques\n- Matrice de conversion complète : Prend en charge plus de 20 parcours de conversion parmi les formats majeurs (ISO, BIN, CUE, GDI, IMG, ECM, CHD, CSO, ZSO, XISO, RVZ, WIA, WBFS, GCZ).\n- Détection intelligente : Identifie avec précision les consoles (PS1, PS2, PSP, Xbox, GameCube, Wii, Dreamcast) grâce aux signatures numériques (magic bytes) et analyse les en-têtes CHD (v4/v5) pour différencier CD et DVD.\n- Génération et Vérification : Crée automatiquement les fichiers CUE manquants pour les fichiers BIN et vérifie l'intégrité des fichiers CHD générés via chdman.\n\nFonctionnalités Avancées\n- Terminal et Automatisation : Intègre un journal de bord en temps réel pendant la conversion et propose un outil en ligne de commande complet (openrom-core) pour l'automatisation et les scripts.",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "a84f9d1c25aa06032708ac40b44b2a30af48024a14cd4ba7030d452514ea1794",
+      "contentHash": "c731c116c62f8b93265d56ccc29dba02e9caf3299e9ef746ab7ee9c8d89d0eb0",
       "translationPending": false
     },
     {
@@ -2814,30 +2969,6 @@
         "swiff"
       ],
       "contentHash": "a7c72b282f5826a09a10da5abff6c31fb13f0cfc38d00aaea4fed9753927df27",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-winnative-0-6-2-beta",
-      "title": "【Android更新】WinNative 0.6.2-beta",
-      "originalTitle": "WinNative 0.6.2-beta Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-12T23:33:06Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/WinNative-Emu/WinNative/releases/tag/v0.6.2-beta",
-      "imageUrl": "asset://assets/emulators/winnative.png",
-      "officialUrl": "https://github.com/WinNative-Emu/WinNative",
-      "summary": "WinNative 发布 Android 新版本 0.6.2-beta，发布日期为2026年09月12日。点击查看官方版本信息与更新说明。",
-      "content": "WinNative 已发布 Android 最新版本 0.6.2-beta。\n\n发布日期：2026年09月12日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 解决多重崩溃和冻结问题\n• 综合安全分遣队:用@qwertypower在 https://github.com/WinNative-Emu/WinNative/pull/748\n• 由@maxjivi05提供的特性/装置简介 https://github.com/WinNative-Emu/WinNative/pull/751\n\n\n更改日志 : https://github.com/WinNative-Emu/WinNative/compare/v0.6.1-beta...v0.6.2-beta",
-      "originalContent": "## What's Changed\r\n* Fix Multiple Crashes & Freezing Issues\r\n* DIS: run the variational refinement on the whole pyramid by @qwertypower in https://github.com/WinNative-Emu/WinNative/pull/748\r\n* Feature/device profiles by @maxjivi05 in https://github.com/WinNative-Emu/WinNative/pull/751\r\n\r\n\r\n**Changelog**: https://github.com/WinNative-Emu/WinNative/compare/v0.6.1-beta...v0.6.2-beta",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "winnative"
-      ],
-      "contentHash": "1b21bcfd959a89d9ec06daf9dea3dcd08d03b8b9df7e1fd28f741689e9542779",
       "translationPending": false
     },
     {
