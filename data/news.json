@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T17:32:40.806448Z",
+  "generatedAt": "2026-09-26T05:25:08.750910Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,79 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T02:43:07Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•为Lightgun控制器创建基类（ Stenzek（https://github.com/stenzek/duckstation/commit/62299a5092f93a92169dc57d11e60a0367b0577a） ）\n•为NeGcon控制器创建通用基类（ Stenzek（https://github.com/stenzek/duckstation/commit/e68536dcd71b8cd46f44cff52ebb53d971dca047） ）\n•统一一些翻译字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/d9cb895ddb520da8b5a2daaf76dcc52f20dd03fd） ）\n•添加SharedLockGuard帮助程序（ Stenzek（https://github.com/stenzek/duckstation/commit/73b5a241657170d2df1c1308aaf6de933b4039da） ）\n•内部化私有函数（ Stenzek（https://github.com/stenzek/duckstation/commit/687178a00ff78a07eac34ea44194d7750b8d9c95） ）\n•使用atomics进行原始输入/指针计数（ Stenzek（https://github.com/stenzek/duckstation/commit/ee8b45a83d8591a4927247badf3527a19cf80dd5） ）\n•将原子学用于主机指针位置（ Stenzek（https://github.com/stenzek/duckstation/commit/58efbb8c819d55165ff64282e2be537d26de8992） ）\n•直接从InputManager读取指针状态（ Stenzek（https://github.com/stenzek/duckstation/commit/0ae22c1a95b2f39fe5b9882afc0232efd07248f2） ）\n•在源热插拔后重新加载输入绑定（ Stenzek（https://github.com/stenzek/duckstation/commit/501d3a989ca5b35bed06ae527f7bb346d0ab472b） ）\n•将内部状态提取到私有标头（ Stenzek（https://github.com/stenzek/duckstation/commit/d76435ca76dd823d806975213d8e8c77e01a3841） ）\n•使用共享互斥同步（ Stenzek（https://github.com/stenzek/duckstation/commit/eed22aa286f525ef1154e8d628ec800f5a1be522） ）\n•使用SmallString进行绑定转换（ Stenzek（https://github.com/stenzek/duckstation/commit/7a8e8a0777a611dac8c1678064e70931cb6fbd4c） ）\n•将DS5播放器LED设置移至LED对话框（ Stenzek（https://github.com/stenzek/duckstation/commit/aa77ed54daa5f0778adae7ec2fcb3c75f08bce72） ）\n•简化轮询（ Stenzek（https://github.com/stenzek/duckstation/commit/64b1e2b46c3099bc0d6989506e57344b53fcc2da） ）\n•初始化后立即轮询（ Stenzek（https://github.com/stenzek/duckstation/commit/59e2f1da2a53c939ae0c42dc30ceb78dd68d9260） ）\n•依靠重新加载启用加速度计（ Stenzek（https://github.com/stenzek/duckstation/commit/7495b762457ff60a11715107bc11c5a9e54d0f40） ）\n•映射时使用永久标识符（ Stenzek（https://github.com/stenzek/duckstation/commit/edd41dff15125f3f736b52073a55d2f39d5f412e） ）\n•修复可能的空字符串视图构造（ Stenzek（https://github.com/stenzek/duckstation/commit/d04078319a94ca18bd71cb5c3ff5c081e476b5ff） ）\n•使用第二个线程进行断言对话（ Stenzek（https://github.com/stenzek/duckstation/commit/bbebc317a7e1da6d5e8ae2959a93a0d466c8f34e） ）",
+      "originalContent": "## Commits\n- Create base class for lightgun controllers ([Stenzek](https://github.com/stenzek/duckstation/commit/62299a5092f93a92169dc57d11e60a0367b0577a))\n- Create common base class for NeGcon controllers ([Stenzek](https://github.com/stenzek/duckstation/commit/e68536dcd71b8cd46f44cff52ebb53d971dca047))\n- Unify some of the translation strings ([Stenzek](https://github.com/stenzek/duckstation/commit/d9cb895ddb520da8b5a2daaf76dcc52f20dd03fd))\n- Add SharedLockGuard helper ([Stenzek](https://github.com/stenzek/duckstation/commit/73b5a241657170d2df1c1308aaf6de933b4039da))\n- Internalise private functions ([Stenzek](https://github.com/stenzek/duckstation/commit/687178a00ff78a07eac34ea44194d7750b8d9c95))\n- Use atomics for rawinput/pointer count ([Stenzek](https://github.com/stenzek/duckstation/commit/ee8b45a83d8591a4927247badf3527a19cf80dd5))\n- Use atomics for host pointer position ([Stenzek](https://github.com/stenzek/duckstation/commit/58efbb8c819d55165ff64282e2be537d26de8992))\n- Read pointer state directly from InputManager ([Stenzek](https://github.com/stenzek/duckstation/commit/0ae22c1a95b2f39fe5b9882afc0232efd07248f2))\n- Reload input bindings after source hotplug ([Stenzek](https://github.com/stenzek/duckstation/commit/501d3a989ca5b35bed06ae527f7bb346d0ab472b))\n- Extract internal state to private header ([Stenzek](https://github.com/stenzek/duckstation/commit/d76435ca76dd823d806975213d8e8c77e01a3841))\n- Use a shared mutex for synchronization ([Stenzek](https://github.com/stenzek/duckstation/commit/eed22aa286f525ef1154e8d628ec800f5a1be522))\n- Use SmallString for binding conversions ([Stenzek](https://github.com/stenzek/duckstation/commit/7a8e8a0777a611dac8c1678064e70931cb6fbd4c))\n- Move DS5 player LED setting into LED dialog ([Stenzek](https://github.com/stenzek/duckstation/commit/aa77ed54daa5f0778adae7ec2fcb3c75f08bce72))\n- Simplify polling ([Stenzek](https://github.com/stenzek/duckstation/commit/64b1e2b46c3099bc0d6989506e57344b53fcc2da))\n- Poll immediately after initializing ([Stenzek](https://github.com/stenzek/duckstation/commit/59e2f1da2a53c939ae0c42dc30ceb78dd68d9260))\n- Rely on reload to enable accelerometer ([Stenzek](https://github.com/stenzek/duckstation/commit/7495b762457ff60a11715107bc11c5a9e54d0f40))\n- Use persistent identifiers when mapping ([Stenzek](https://github.com/stenzek/duckstation/commit/edd41dff15125f3f736b52073a55d2f39d5f412e))\n- Fix possible null string-view construction ([Stenzek](https://github.com/stenzek/duckstation/commit/d04078319a94ca18bd71cb5c3ff5c081e476b5ff))\n- Use second thread for assertion dialogs ([Stenzek](https://github.com/stenzek/duckstation/commit/bbebc317a7e1da6d5e8ae2959a93a0d466c8f34e))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "c4b26e3d1d3b22b7abddb559e07609f852776e39bd040463ab2277d15e4262ac",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-26T01:05:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n· 有耳光的、默认的可变物品(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• slapstic, default variable stuff (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "4c0c333075289608ad642b5f9726d26177b89d63ae5e086c689d45c962cdad16",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-2-7-1",
+      "title": "【Android更新】ARMSX2 2.7.1",
+      "originalTitle": "ARMSX2 2.7.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-25T18:39:10Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.7.1",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 2.7.1，发布日期为2026年09月25日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 2.7.1。\n\n发布日期：2026年09月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.7.1\n\n新增功能：\n\nARMSX2 TURNIP ：我们自己的GPU驱动程序\n\n我们现在构建自己的Adreno驱动程序。 ARMSX2萝卜是我们开发的萝卜，开源Vulkan\nadreno GPU的驱动程序，我们自己为PS2仿真所做的更改。 向司机领取\n列表：建议在Adreno 650至699 （ Snapdragon 865、870和888 ）上使用。 来源公开于\ngithub.com/bmdhacks/armsx2-turnip。由@ bmdhacks完成\n\n阅读他们正在绘制的帧的游戏在Adreno上运行得更快。 PS2游戏可以做到这一点\n不断地，在Adreno上，这意味着在每次这样的抽签之前复制框架。 渲染器现在询问\n驱动程序数据库每个GPU和驱动程序如何处理它。 在Adreno 650上搭建ARMSX2自己的萝卜\n到699 ，司机命令这些读数本身：在它们是什么框架的地方，速度快2到3倍\n成本，如Snapdragon 865原生分辨率的Splashdown ，从54.7 ms到22.4 ms\n一个框架。在Adreno 730及更高版本上，任何萝卜、特技演员和WRC 3的运行速度都提高了17%至21% ，\n其他GPU和驱动程序保留了它所拥有的。由@ bmdhacks完成\nARMSX2的萝卜司机在司机名单上，推荐Adreno 650至699。是Mesa\n26.1.2加上这些GPU的一个萝卜变化。由@ bmdhacks完成\n\n仿真\n更快的重编译器。通过实现@ pstef构想的大量优化概念， EE、VU和IOP重编译器以及VIF解包现在可以生成更紧密的ARM64代码，运行速度提高约10 ％ ，每次更改都通过新的指令级测试进行检查\n。在低端设备上，大多数游戏都受到GS的限制，因此预计这主要是为了节省真正的电池和热量。 来自vi00的VU LQD和SQD寻址以及ILW的车道选择现在也与控制台匹配。\n\nL2和R2的模拟触发压力。 在带有模拟触发的电极片和手持设备上，电极片- >按钮\n映射现在在L2和R2上提供模拟压力，因此游戏可以获得触发器被拉动的距离\n而不是打开或关闭，具有短手持触发器的响应曲线和实时读数。游戏\n读取触发压力，例如Gran Turismo 4的油门和制动器，现在可以获得部分压力。\n焊盘必须处于模拟模式，当模拟按钮未绑定时，该选项会发出警告。使用它\n开启后，像Odin 2 Portal这样的焊盘，每次触发两次，不再将半拉到满\n按。默认情况下关闭。由@ gdelazzer (# 731)完成。*\n\nGunCon 2的按钮现在是触摸布局的一部分。 A、B、C、开始、选择和校准可以\n像任何其他控件一样在触摸布局编辑器中移动、调整大小和隐藏，而不是坐在\ndualShock 2按钮的顶部，并瞄准触摸屏，离开脸部和肩部按钮\n工作。由@ jpolo1224完成\n\n触摸屏上的校准镜头。 有些游戏（时间危机）无法通过枪支设置\n屏幕正常拍摄。 点击Cal ，然后射击目标，校准镜头落在您\ntouch. done by @ jpolo1224\n\n固定\n内存卡位置修复每次屏幕要求时，应用程序都会重新检查数据文件夹（ SD卡或自定义） ，并且一次失败的检查（可能发生在文件夹完全可用的情况下）将其发送到内部存储以进行剩余的运行，其中模拟器未找到内存卡并制作了新内存卡\n。文件夹现在决定一次，应用程序永远不会下降\n静默地返回内部存储。由@ bmdhacks完成\n\n无法选择USB设备（ # 752 ）。 在游戏开始之前，设备列表为空，\n并在第一场比赛后再次清空。 现在，它可以随时列出每台设备，\n每个端口。由@ jpolo1224完成\n端口1上的USB设备从未到达游戏。 USB键盘开关显示未连接\n每次发射和每次设置更改时端口1 ，拔下GunCon 2、Buzz蜂鸣器或任何其他\n设备集。交换机现在只在开启时使用端口1。 游戏运行时拾取的设备\n也立即插入，尽管许多游戏只在启动时寻找一个，所以重新……",
+      "originalContent": "# ARMSX2 2.7.1\r\n\r\nWhat's new: \r\n\r\n## ARMSX2 Turnip: our own GPU driver\r\n\r\n**We now build our own Adreno driver.** ARMSX2 Turnip is our build of Turnip, the open-source Vulkan\r\ndriver for Adreno GPUs, with a change of our own made for PS2 emulation. Pick it from the driver\r\nlist: it is recommended on Adreno 650 to 699 (Snapdragon 865, 870 and 888). The source is public at\r\ngithub.com/bmdhacks/armsx2-turnip. done by @bmdhacks \r\n\r\n**Games that read back the frame they are drawing run much faster on Adreno.** PS2 games do this\r\nconstantly, and on Adreno it meant copying the frame before each such draw. The renderer now asks\r\nthe driver database how each GPU and driver handle it. With ARMSX2's own Turnip build on Adreno 650\r\nto 699, the driver orders those reads itself: 2 to 3 times faster where they are what the frame\r\ncosts, as in Splashdown at native resolution on a Snapdragon 865, which went from 54.7 ms to 22.4 ms\r\na frame. On Adreno 730 and up with any Turnip, Stuntman and WRC 3 run 17 to 21% faster, Every\r\nother GPU and driver keeps what it had. done by @bmdhacks \r\n\r\n**ARMSX2's Turnip driver is in the driver list**, and recommended on Adreno 650 to 699. It is Mesa\r\n26.1.2 plus one Turnip change for those GPUs. done by @bmdhacks \r\n\r\n## Emulation\r\n\r\n**Faster recompilers.** By implementing a host of optimization concepts dreamed up by @pstef, the EE, VU and IOP recompilers and VIF unpacks now generate tighter ARM64 code and run about 10% faster, with every change checked by new instruction-level tests. On lower-end devices most games are held back by GS, so expect this mostly as real battery and heat savings. VU LQD and SQD addressing from vi00 and ILW's lane selection also match the console now. \r\n\r\n**Analog trigger pressure for L2 and R2.** On pads and handhelds with analog triggers, Pad -> Button\r\nmapping now offers Analog pressure on L2 and R2, so the game gets how far the trigger is pulled\r\ninstead of on or off, with a response curve for short handheld triggers and a live readout. Games\r\nthat read trigger pressure, such as Gran Turismo 4's throttle and brake, now get partial presses.\r\nThe pad has to be in analog mode, and the option warns when the Analog button is not bound. With it\r\non, pads like the Odin 2 Portal that report each trigger twice no longer snap a half pull to a full\r\npress. Off by default. done by @gdelazzer (#731).*\r\n\r\n**The GunCon 2's buttons are now part of the touch layout.** A, B, C, Start, Select and Cal can be\r\nmoved, resized and hidden in the touch layout editor like any other control, instead of sitting on\r\ntop of the DualShock 2 buttons, and aiming on the touchscreen leaves the face and shoulder buttons\r\nworking. done by @jpolo1224 \r\n\r\n**A calibration shot on the touchscreen.** Some games (Time Crisis) will not pass their gun setup\r\nscreen on a normal shot. Tap Cal, then shoot the target, and the calibration shot lands where you\r\ntouch. done by @jpolo1224 \r\n\r\n## Fixed\r\n\r\n**Memory Card location fixes** The app re-checked the data folder (SD card or custom) every time a screen asked for it, and one failed check, which could happen with the folder perfectly usable, sent it to internal storage for the rest of the run, where the emulator found no memory cards and made new ones. The folder is now decided once, and the app never falls\r\nback to internal storage silently. done by @bmdhacks \r\n\r\n**USB devices could not be chosen (#752).** The device list was empty until a game had been started,\r\nand emptied again after the first game. It now lists every device at any time, with a dropdown for\r\neach port. done by @jpolo1224 \r\n\r\n**A USB device on Port 1 never reached the game.** The USB keyboard switch wrote Not Connected over\r\nPort 1 at every launch and every settings change, unplugging a GunCon 2, Buzz buzzers or any other\r\ndevice set there. The switch now takes Port 1 only while it is on. A device picked while a game runs\r\nis also plugged in straight away, though many games only look for one at boot, so re…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "ea61a45eeb16b30dc32eeed7eccf04e2b07d9c5278b844d0c72442d48789af5f",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx3-1-0-2",
       "title": "【Android更新】ARMSX3 1.0.2",
@@ -33,31 +106,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-25T15:02:30Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月25日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 根据gab75(dinkc64)更新msx",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• msx update from gab75 (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "6e21332318653de062af729ad8e6ec89ec7ec26a3bb09bb817f9290927179662",
-      "translationPending": false
-    },
-    {
       "id": "android-release-nesd-nightly",
       "title": "【Android更新】NESd nightly",
       "originalTitle": "NESd nightly Android release",
@@ -79,30 +127,6 @@
         "nesd"
       ],
       "contentHash": "ceb2c73a8786c696705d91c065dae5e2f9df56f8021aa2c989e2025de6aa4b04",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260925",
-      "title": "【Android更新】ARMSX2 nightly-20260925",
-      "originalTitle": "ARMSX2 nightly-20260925 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-25T13:56:06Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260925",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260925，发布日期为2026年09月25日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260925。\n\n发布日期：2026年09月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• GS/Vulkan:复制重叠的抽取和采样区域一次进入克隆\n• GS/Vulkan:在第一次抽签之前,命令扩展索引缓冲器上传\n• GS:将目标复制成平面读取,其过滤器达到自己的写法\n• Android:名称记忆卡备份.zip而不是.mcbak\n• Android:一次决定数据文件夹,永远不要悄悄地回到内部存储中\n• GS/OpenGL:仅用于建造GLContextEGL的无头EGL背景\n• GS/HW:用顶点-阴影扩展法将AA1线划上原生线\n• GS/OpenGL:让倾卸跑车打开没有窗口的GL上下文\n• GS/Vulkan:解决其最后投入的反馈问题\n• GS/Vulkan:特征探测评论说明是什么,而不是如何找到的\n• GS:对Adreno和马里GPU简介的测试\n• GS/OpenGL:一个阿德雷诺深度后馈区,而不是两个\n• GS:为马里一个家庭提供r44p1工作机会\n• GS/Vulkan:GPU简介中载有供应商和设备名称规则\n• GS/Vulkan:将核查结果分为其作出的决定\n• GS:由制作人决定每张图的反馈-启动状态; Vulkan 应用它\n• GS:每个自读规则一个标题\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260924...59e2b17ed0aa2b44ec0aaa2b48037437b1f12d62",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- GS/Vulkan: copy overlapping draw and sample areas into the clone once\n- GS/Vulkan: order the expansion index buffer's upload before its first draw\n- GS: clone the target for an offset read whose filter reaches its own writes\n- Android: name memory card backups .zip instead of .mcbak\n- Android: decide the data folder once, and never fall back to internal storage silently\n- GS/OpenGL: only reach for the headless EGL context where GLContextEGL is built\n- GS/HW: draw AA1 lines above native with the vertex-shader expansion\n- GS/OpenGL: let the dump runner open a GL context with no window\n- GS/Vulkan: resolve the feedback carry where its inputs are final\n- GS/Vulkan: feature-detection comments state what holds, not how it was found\n- GS: tests for the Adreno and Mali GPU profiles\n- GS/OpenGL: one Adreno depth-feedback block, not two\n- GS: give the Mali r44p1 workaround one home\n- GS/Vulkan: vendor and device-name rules live in the GPU profile\n- GS/Vulkan: split CheckFeatures into the decisions it makes\n- GS: the renderer decides each draw's feedback-loop state; Vulkan applies it\n- GS: one header for the per-draw self-read rules\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260924...59e2b17ed0aa2b44ec0aaa2b48037437b1f12d62",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "c5489abc66711d550dbbc7db3dbd9f9aa99fe335c1d837b0d72330f8e62b4098",
       "translationPending": false
     },
     {
@@ -433,30 +457,6 @@
         "shadps4_android"
       ],
       "contentHash": "408ea4131ec2ab54ac1c6595e72a959018954d644724e73c00c77221d6c3075b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-24T10:17:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月24日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 0d8dda3 ：西班牙语（西班牙）翻译更新2026/09/24 (# 3803) (Víctor \"IlDucci) # 3803（https://github.com/stenzek/duckstation/pull/3803）",
-      "originalContent": "## Commits\n- 0d8dda3: Spanish (Spain) translation update 2026/09/24 (#3803) (Víctor \"IlDucci) [#3803](https://github.com/stenzek/duckstation/pull/3803)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "fe2691c5c352ceb49cf49f4a80edc8767a714fb4810292221815d2d5a3b98740",
       "translationPending": false
     },
     {
