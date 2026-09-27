@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T05:41:45.221899Z",
+  "generatedAt": "2026-09-27T17:17:22.533838Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,319 @@
   },
   "articles": [
     {
+      "id": "android-release-armsx2-nightly-20260927",
+      "title": "【Android更新】ARMSX2 nightly-20260927",
+      "originalTitle": "ARMSX2 nightly-20260927 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T14:23:43Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260927",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260927，发布日期为2026年09月27日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260927。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• Android:将搜索部分置于括号内\n• 测试:设定全磁盘文件尺寸限制在进程之中,而不是在叉子上\n• GS:在缓存文件存储中包括:back_插入器\n• GS:清除GS线上的阴影缓存\n• GS:以身份命名的缓存文件,因此两栋楼各保留一栋\n• GS:在添加和删除后,只从源文件建立身份\n• GS:缓存库审查修正:锁、失效附件、就地清除\n• GS/Vulkan:记录字节的管道键字节\n• GS:将缓存身份的输入从平地流出\n• Android:在每个新安装上擦去GS缓存并清除所有装置\n• Qt,全屏UI:清除缓存\n• GS:直接3D和帧生成缓存跟踪构建身份\n• GS/OpenGL:已检查商店的程序二进制\n• GS/Vulkan:在大楼上盖有管道钥匙清单,按记录核对\n• GS/Vulkan:印出和核对SPIR-V和管道缓存\n• GS:用于遮蔽器和管道缓存的一盘盘式检查\n• GS/Vulkan:在Linux的15个字符内列出预编工名\n• GS/Vulkan:计算预编等待和记录每个工人的工作\n• GS/Vulkan:每个配置按会话列出的关键清单,内存有限制\n• gsrunner:在命令行前,而不是在命令行后,将预编译出\n• GS/Vulkan:编译前审查修正:工作失败、缓存污垢、指标\n• GS:仅由硬件渲染器进行管道预编译\n• gsrunner:管道预编译,除非要求\n• GS/Vulkan:启动时在工人线上建造每个游戏记录的管道\n• GS/Vulkan:保持SPIR-V缓存的驱动程序变化\n• GS:每个阶段、每个框架的倒影和管道汇编\n• 测试:将DATE模式贴在驱动程序命令的已宣布反馈回路上\n• GS:在发文时为DATE提供按驱动程序订购的申报反馈循环服务\n• Gsrunner: - 不,stencil-buffer,以放置 pre-26.2 一个二进制的 Turnip Date 选择\n• Android:在崩溃测试运行前结束搜索跳出\n• Android:设置搜索按名称打开目标区域\n• Android:当组合调制器被放出时,结束快速前起站\n• Android:发现崩溃的设置搜索目标\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260926...e2f7d015cb2e8f21dabf11f57c26c8f19b3ab51d",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- Android: parenthesise the search-sections fallback\n- tests: set the full-disk file size limit in process, not in a forked child\n- GS: include <iterator> for std::back_inserter in the cache file store\n- GS: clear the shader cache on the GS thread\n- GS: cache files named by identity, so two builds keep one each\n- GS: build identity from source files only, following adds and removes\n- GS: cache store review fixes: locks, failed appends, in-place clears\n- GS/Vulkan: record pipeline keys byte for byte\n- GS: hash the cache identity's inputs from a plain glob\n- Android: wipe the GS caches on every new install, and clear all of them\n- Qt, FullscreenUI: Clear Shader Cache\n- GS: Direct3D and frame-generation caches follow the build identity\n- GS/OpenGL: program binaries on the checked store\n- GS/Vulkan: pipeline key lists stamped with the build, checked per record\n- GS/Vulkan: stamp and checksum the SPIR-V and pipeline caches\n- GS: one checked on-disk format for the shader and pipeline caches\n- GS/Vulkan: name the precompile workers within Linux's 15 characters\n- GS/Vulkan: count precompile waits and log each worker's work\n- GS/Vulkan: key lists per configuration, by session, with bounded memory\n- gsrunner: pin precompile off before the command line, not after\n- GS/Vulkan: precompile review fixes: failed jobs, cache dirtiness, indicator\n- GS: pipeline precompile only under the hardware renderer\n- gsrunner: pipeline precompile off unless asked for\n- GS/Vulkan: build each game's recorded pipelines on worker threads at start\n- GS/Vulkan: keep the SPIR-V cache across a driver change\n- GS: count shader and pipeline compilation per stage, per frame\n- tests: pin the DATE mode on a driver-ordered declared feedback loop\n- GS: serve DATE in the pass on a driver-ordered declared feedback loop\n- gsrunner: -no-stencil-buffer, to put the pre-26.2 Turnip DATE choices on one binary\n- Android: end the search jump before the collapse test runs\n- Android: settings search opens the target's section by name\n- Android: end fast-forward hold when combo modifier is released\n- Android: reveal collapsed settings search targets\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260926...e2f7d015cb2e8f21dabf11f57c26c8f19b3ab51d",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "1cb10673531d7b1043d74d7ad4c115c3dc08824be754e67ee19da186a0c6720b",
+      "translationPending": false
+    },
+    {
+      "id": "137349",
+      "title": "【移动设备】GearLynx v1.2.32",
+      "originalTitle": "[Consoles portables] GearLynx v1.2.32",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:43:14Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137349-consoles-portables-gearlynx-v1-2-32/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/Gearlynx-0.0.4.png",
+      "officialUrl": "https://github.com/drhelius/Gearlynx",
+      "summary": "GearLynx是适用于Windows的Atari Lynx模拟器。 这些变化是： 🎯 提高Suzy精度 🔊 修复了垂直同步音频不足 🎮 更新了游戏控制器数据库 🐛 许多错误修复和改进",
+      "content": "GearLynx是适用于Windows的Atari Lynx模拟器。\n\n这些变化是：\n🎯 提高Suzy精度\n🔊 修复了垂直同步音频不足\n🎮 更新了游戏控制器数据库\n🐛 许多错误修复和改进",
+      "originalContent": "GearLynx est un émulateur d'Atari Lynx pour Windows.\n\nLes changements sont:\n🎯 Improved Suzy accuracy\n🔊 Fixed VSync audio underruns\n🎮 Updated Game Controller DB\n🐛 Many bug fixes and improvements",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "729c9f801cd0a11661a376fb9a5e717f1cb7d3535328eca657a86f7eefdb5d1c",
+      "translationPending": false
+    },
+    {
+      "id": "137347",
+      "title": "【家用机】GearGRAFX v1.8.0",
+      "originalTitle": "[Consoles de salon] GearGRAFX v1.8.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:42:06Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137347-consoles-de-salon-geargrafx-v1-8-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/07/Geargrafx-1.6.0.png",
+      "officialUrl": "https://github.com/drhelius/Geargrafx",
+      "summary": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。 💿 NEC LaserActive LD-ROM ² (MMI)支持多侧介质 🔊 提高ADPCM时钟速度精度（可配置） 🧠 改进的LaserActive/MMI介质MCP服务器工具 🎮 更新了游戏控制器数据库 🐛 许多错误修复和改进",
+      "content": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。\n\n💿 NEC LaserActive LD-ROM ² (MMI)支持多侧介质\n🔊 提高ADPCM时钟速度精度（可配置）\n🧠 改进的LaserActive/MMI介质MCP服务器工具\n🎮 更新了游戏控制器数据库\n🐛 许多错误修复和改进",
+      "originalContent": "Il s'agit d'un émulateur de PC Engine / TurboGrafx-16 / CD-ROM² / Super CD-ROM² et Arcade CD-ROM² / SuperGrafx multi plateformes.\n\n💿 NEC LaserActive LD-ROM² (MMI) support with multi-side media\n🔊 Improved ADPCM clock speed accuracy (configurable)\n🧠 Improved MCP server tools for LaserActive/MMI media\n🎮 Updated Game Controller DB\n🐛 Many bug fixes and improvements",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "a1af193a1452669c48bfb8db93c2a18ac51ca9e0e0a13ad3c1767abc5b59be80",
+      "translationPending": false
+    },
+    {
+      "id": "137345",
+      "title": "【家用机】GearColeco v1.7.1",
+      "originalTitle": "[Consoles de salon] GearColeco v1.7.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:40:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137345-consoles-de-salon-gearcoleco-v1-7-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/02/gearcoleco-qbert.png",
+      "officialUrl": "https://github.com/drhelius/Gearcoleco",
+      "summary": "Gearcoleco是一款用C + +编写的高精度跨平台ColecoVision仿真器，可在Windows、macOS、Linux、BSD、Raspberry Pi和RetroArch上运行。 变更内容： 🎮 更新了游戏控制器数据库 🐛 许多错误修复和改进",
+      "content": "Gearcoleco是一款用C + +编写的高精度跨平台ColecoVision仿真器，可在Windows、macOS、Linux、BSD、Raspberry Pi和RetroArch上运行。\n\n变更内容：\n🎮 更新了游戏控制器数据库\n🐛 许多错误修复和改进",
+      "originalContent": "Gearcoleco est un émulateur ColecoVision multiplateforme très précis écrit en C++ qui fonctionne sous Windows, macOS, Linux, BSD, Raspberry Pi et RetroArch.\n\nLes changements:\n🎮 Updated Game Controller DB\n🐛 Many bug fixes and improvements",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "gearcoleco_core"
+      ],
+      "contentHash": "2c1050c7e71d4f454fdb6ad6af0fc5a360e69cc15ccba157e80346e8d71ba2d5",
+      "translationPending": false
+    },
+    {
+      "id": "137343",
+      "title": "【工具】x360ce v4.23",
+      "originalTitle": "[Utilitaires Divers] x360ce v4.23",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-27T10:37:51Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137343-utilitaires-divers-x360ce-v4-23/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/x360ce_General-300x253.png",
+      "officialUrl": "https://github.com/x360ce/x360ce",
+      "summary": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。 换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！ 请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。 更多信息请访问官方网站。",
+      "content": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。\n\n换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！\n请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。\n\n更多信息请访问官方网站。",
+      "originalContent": "'Xbox 360 Controller Emulator' est une bibliothèque de wrappers qui traduit les appels XInput en appels DirectInput, et permet le support des pads non-compatibles XInput dans les applications (surtout des jeux).\n\nEn d'autres termes: x360ce vous permet d'utiliser n'importe quel pad dans les jeux qui supportent à la base uniquement le pad XBOX360 !\n\nNotez que la version AnyCPU s'exécute nativement en 32 ou 64 bits selon le système. Elle est donc la seule version à jour à privilégier.\n\nPlus d'infos sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "2d78a0b9ccf422039d71ddae4f41623c8b26f7723581dc7896c06434aafc961b",
+      "translationPending": false
+    },
+    {
+      "id": "137341",
+      "title": "【家用机】NESd v0.21",
+      "originalTitle": "[Consoles de salon] NESd v0.21",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:36:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137341-consoles-de-salon-nesd-v0-21/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/03/nesd.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "用Dart和Flutter编写的NES模拟器。支持macOS、Windows、Android和Linux （已在Steam平台上测试）。",
+      "content": "用Dart和Flutter编写的NES模拟器。支持macOS、Windows、Android和Linux （已在Steam平台上测试）。",
+      "originalContent": "Un émulateur NES écrit en Dart et Flutter. Supporte macOS, Windows, Android et Linux (testé sur Steam Deck).",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "7d99e440240c9e15a3f285c11bad59adecac222a975e2cdf79af3dd96d648ea3",
+      "translationPending": false
+    },
+    {
+      "id": "137338",
+      "title": "【家用机】Xenia Edge (2026/09/27)",
+      "originalTitle": "[Consoles de salon] Xenia Edge (2026/09/27)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:34:59Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137338-consoles-de-salon-xenia-edge-2026-09-27/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/xenia-edge-scaled.png",
+      "officialUrl": "https://github.com/has207/xenia-edge",
+      "summary": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中 。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成 。",
+      "content": "GitHub xenia-edge项目是基于Canary分支的Xbox 360仿真器Xenia的实验分支。它旨在将来自各个分支的最新技术进步集中在一个包中\n。该项目旨在围绕Xbox 360仿真进行研究和实验，具有Windows和Linux兼容性。它提供了一个自定义构建脚本(xb)来简化编译、社区维护的游戏兼容性列表以及通过Buildbot的持续集成\n。代码主要用C + +编写，在Assembly、Python、Lua、HLSL和C #中有贡献。存储库包含有用的资源，如快速入门指南、常见问题解答和编译说明。",
+      "originalContent": "Le projet GitHub xenia-edge est un fork expérimental de l’émulateur Xbox 360 Xenia, basé sur la branche Canary. Il vise à centraliser les dernières avancées techniques issues de divers forks dans un seul package. Le projet est conçu pour la recherche et l’expérimentation autour de l’émulation Xbox 360, avec une compatibilité Windows et Linux. Il propose un script de build personnalisé (xb) pour simplifier la compilation, une liste de compatibilité des jeux maintenue par la communauté, et une intégration continue via Buildbot. Le code est majoritairement écrit en C++, avec des contributions en Assembly, Python, Lua, HLSL et C#. Le dépôt contient des ressources utiles comme un guide de démarrage rapide, une FAQ et des instructions de compilation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xenia_pc",
+        "xenia_edge_pc"
+      ],
+      "contentHash": "34f09c64dc87a8de424f836c2744645be5fc8481feeec3c5271398cb8c96c0b3",
+      "translationPending": false
+    },
+    {
+      "id": "137336",
+      "title": "【家用机】Xenia v1.0.2844 (2026/09/27)",
+      "originalTitle": "[Consoles de salon] Xenia v1.0.2844 (2026/09/27)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:34:24Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137336-consoles-de-salon-xenia-v1-0-2844-2026-09-27/",
+      "imageUrl": "https://www.youtube.com/embed/r56tCTsijEw",
+      "officialUrl": "https://xenia.jp/",
+      "summary": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master] 。此处提供管理Xenia仿真器的管理器。",
+      "content": "由Ben Vanik aka Noxa （ PSP播放器）创建，这是一个开发Xbox 360模拟器的研究项目。请注意，您需要一台高性能机器才能顺利启动商业游戏。在此处了解更多信息，同时不会忘记那里的开发站点[master]\n。此处提供管理Xenia仿真器的管理器。\n\n• [XAM] -添加缺少的X_MARKETPLACE_ENTRYPOINT、X_MODULE_FLAGS等CreateThreadFlags\n• [GPU] RB_COPY_SURFACE_SLICE用于体积分辨切片间距\n•固定杂项",
+      "originalContent": "Créé par Ben Vanik alias Noxa (PSP Player), il s'agit d'un projet de recherche pour développer un émulateur Xbox 360. Notez qu'il vous faudra une machine très performante pour lancer des jeux commerciaux de façon fluide. Plus d'informations ici sans oublier le site de développement là [master]. Un manager permettant de gérer l'émulateur Xenia est disponible ici.\n\n- [XAM] - Add missing X_MARKETPLACE_ENTRYPOINT, X_MODULE_FLAGS, and more CreateThreadFlags\n- [GPU] RB_COPY_SURFACE_SLICE for volume resolve slice spacing\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "xenia_pc"
+      ],
+      "contentHash": "205d3e06ae6e80bce329a95339270dd77b42e8fb8ca720315b67be9fd713abc4",
+      "translationPending": false
+    },
+    {
+      "id": "137334",
+      "title": "【电脑】Fuse v1.10.0",
+      "originalTitle": "[Ordi.] Fuse v1.10.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:31:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137334-ordi-fuse-v1-10-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/fuse.png",
+      "officialUrl": "http://fuse-emulator.sourceforge.net/",
+      "summary": "Fuse (Free Unix Spectrum impulator)是一个仿真器,最初在Unix下旋转。 已经制作了几个端口,其中包括一个用于Windows的端口。 16K,48K,128K,+2,+2A,+3,+3e,SE,TC2048,TC2068,TS2068,TTX2000S,五角大楼128和天蝎座ZS 256被效仿。",
+      "content": "Fuse (Free Unix Spectrum impulator)是一个仿真器,最初在Unix下旋转。 已经制作了几个端口,其中包括一个用于Windows的端口。 16K,48K,128K,+2,+2A,+3,+3e,SE,TC2048,TC2068,TS2068,TTX2000S,五角大楼128和天蝎座ZS 256被效仿。\n\n核心模拟即兴:\n• 扩大自动装有磁带的探测和加速\n微发、软件项目、Gremlin 2 和电影装入失败者\n(fixes bugs #396, #429 and #430)(谢谢,菲利普·肯德尔)\n(弗雷德里克·慕尼尔).\n• 改进客户装载机自动回放磁带,轴线为巴西尔\n大老鼠侦探Viz:电脑游戏,月光侠和\nTrzy Wymiary 无需手动磁带控制即可装入( 修正错误 # 433)\n和部分bug #218 (弗雷德里克·默尼尔).\n• 从ROM切换时保留完整的磁带信号状态\n用于自定义装填器、摇摆炸弹杰克和类似装填器的陷阱\n继续正确( 修正错误 # 333并部分错误 # 310)\n(弗雷德里克·慕尼尔).\n• 避免加速技术员Ted装载器(修复错误#55)\n(弗雷德里克·慕尼尔).\n• 不自动恢复磁带末端的复发磁带,制作\nEchelon 等多面游戏中容易改变侧面\n(bug #218的一部分) (弗雷德里克·默尼尔).\n• 明确处理光带旗块,提高相容性\n有不寻常的磁带图像(Fredrick Meunier).\n• 通过传呼机正确输入声音,所以装入音频\n不断复制(谢谢Kuba Adamowicz)(弗雷德里克)\n(原始内容存档于2018-10-21). Meunier.\n\n机器专用改进:\n• 支持8K和16K界面1 ROM图像并保存其\n速记大小( 修正错误 # 152) (谢谢 Andy Potter) (弗雷德里克)\n(原始内容存档于2018-10-21). Meunier.\n• 在128K机上启用DISCiPLE,添加抑制行为并曝光\n它在部件 UIs (fixes bugs #271 and #273) 中的神奇按钮(谢谢,\n斯图尔特·布雷迪、艾伦·皮尔逊和格吉利·萨斯(Sergio Baldoví和\n(原始内容存档于2017-10-21). Fredrick Meunier.\n• 更正+D地址编码,用于更准确的周边行为\n和软件兼容性(Fredrick Meunier)。\n\nIU 改进:\n• GTK3:在切换全屏模式时恢复自旋超时\n因此菜单和状态栏立即出现或消失\n(阿尔贝托·加西亚)。\n• GTK3和SDL2: 设置正确的应用身份, 这样 Linux\n桌面环境显示自己的Fuse图标(Alberto Garcia).\n• 在多个主机光标密钥是时纠正 CAPS SHIFT 处理\nholded(fixes bug #470,补丁 #448)(thanks, lvd)(弗雷德里克·默尼尔).\n• 在录制电影时自动添加 FMF 扩展(修正)\nbug #469 (Gergely Szasz和弗雷德里克·默尼尔).\n\n缩放即兴:\n• 将复合缩放器的颜色正确扩大到屏幕边缘,\n谢谢,塞尔吉奥·巴尔多维(英语:Sergio Baldoví (Fredrick Meunier)).\n\nRZX 即兴演奏 :\n• 在回放期间纠正EI延迟中断处理,允许\n受影响的记录不同步重放( 修正错误)\n508,#67和部分bug #336(感谢Alexey Kuznetsov和AJ)\nB) (弗雷德里克·默尼尔。\n• 复制遗留的相机 CPU 和 +D 快照\n拨号, 允许更多 Spectaculator 记录正确播放\n(bug #336的一部分) (弗雷德里克·默尼尔).\n• SPIN手柄 0.5 框边框和磁带保存输入突起,允许\n受影响的记录在不出现输入计数错误的情况下继续\n(弗雷德里克·慕尼尔).\n• 在Fuse的记录中正确恢复登记册\n版本之前 0.7,改进旧唱片的回放\n(弗雷德里克·慕尼尔).\n• 在中断如此未完成的处理后,放置自动保存快照\n记录可以在其他 RZX 播放器中正确恢复(fixes bug)\n304) (谢谢塞尔吉奥·巴尔多维 (弗雷德里克·默尼尔).\n• 更明确地报告缺失的快照和相容性警告,\n使回放失败易于诊断(Fredrick Meunier).\n• 修正 -- playback 命令行选项,以便 RZX 重新播放\n从命令行(Fredrick Meunier)开始。\n\n杂项改进:\n• 在识别文件类型时避免读取整个HDF图像(部分)\n(fredrick Meunier) (德语).\n• 所需的C11编译支持(弗雷德里克·穆尼尔)。\n\n测试改进:\n• 改进发展回归测试手段(Fredrick Meunier)。\n• 扩大装入式、自带式和ROM式装入回归覆盖范围\n降低相容性错误的风险(弗雷德里克)\n(原始内容存档于2018-10-21). Meunier.\n\n• 其他各种小错误。",
+      "originalContent": "Fuse (Free Unix Spectrum Emulator) est un émulateur tournant à l'origine sous Unix. Plusieurs portages ont été fait dont celui pour Windows. Les systèmes 16K, 48K, 128K, +2, +2A, +3, +3e, SE, TC2048, TC2068, TS2068, TTX2000S, Pentagon 128 et Scorpion ZS 256 sont émulés.\n\nEmulation core improvements:\n- Expand automatic tape-loader detection and acceleration for\nMicroprose, Software Projects, Gremlin 2 and Movieload loaders\n(fixes bugs #396, #429 and #430) (thanks, Philip Kendall)\n(Fredrick Meunier).\n- Improve automatic tape playback for custom loaders, allowing Basil\nthe Great Mouse Detective, Viz: The Computer Game, Moonlighter and\nTrzy Wymiary to load without manual tape control (fixes bug #433\nand part of bug #218) (Fredrick Meunier).\n- Preserve the complete tape signal state when switching from ROM\ntraps to custom loaders, allowing Bomb Jack and similar loaders to\ncontinue correctly (fixes bug #333 and part of bug #310)\n(Fredrick Meunier).\n- Avoid accelerating the Technician Ted loader (fixes bug #55)\n(Fredrick Meunier).\n- Do not automatically restart rewound tapes at end of tape, making\nit easier to change sides in multi-side games such as Echelon\n(part of bug #218) (Fredrick Meunier).\n- Handle bare tape flag blocks explicitly, improving compatibility\nwith unusual tape images (Fredrick Meunier).\n- Correct tape-loading sound through the beeper so loading audio is\nreproduced accurately (thanks, Kuba Adamowicz) (Fredrick\nMeunier).\n\nMachine specific improvements:\n- Support both 8K and 16K Interface 1 ROM images and preserve their\nsize in snapshots (fixes bug #152) (thanks, Andy Potter) (Fredrick\nMeunier).\n- Enable DISCiPLE on 128K machines, add inhibit behaviour and expose\nits magic button in widget UIs (fixes bugs #271 and #273) (thanks,\nStuart Brady, Alan Pearson and Gergely Szasz) (Sergio Baldoví and\nFredrick Meunier).\n- Correct +D address decoding for more accurate peripheral behaviour\nand software compatibility (Fredrick Meunier).\n\nUI improvements:\n- GTK3: restart the autohide timeout when switching fullscreen mode\nso the menu and status bars appear or disappear immediately\n(Alberto Garcia).\n- GTK3 and SDL2: set the correct application identity so Linux\ndesktop environments display the proper Fuse icon (Alberto Garcia).\n- Correct CAPS SHIFT handling when multiple host cursor keys are\nheld (fixes bug #470, patch #448) (thanks, lvd) (Fredrick Meunier).\n- Add the FMF extension automatically when recording movies (fixes\nbug #469) (Gergely Szasz and Fredrick Meunier).\n\nScaler improvements:\n- Extend composite scaler colours correctly to the screen edges,\n(thanks, Sergio Baldoví) (Fredrick Meunier).\n\nRZX improvements:\n- Correct EI-delayed interrupt handling during playback, allowing\naffected recordings to replay without desynchronising (fixes bugs\n#508, #67 and part of bug #336) (thanks, Alexey Kuznetsov and AJ\nB) (Fredrick Meunier).\n- Reproduce legacy Spectaculator CPU behaviour and +D snapshot\npaging, allowing more Spectaculator recordings to play correctly\n(part of bug #336) (Fredrick Meunier).\n- Handle SPIN 0.5 frame-boundary and tape-save input quirks, allowing\naffected recordings to continue without input-count errors\n(Fredrick Meunier).\n- Restore the R register correctly in recordings made by Fuse\nversions before 0.7, improving playback of old recordings\n(Fredrick Meunier).\n- Place autosave snapshots after interrupt processing so unfinalised\nrecordings can restart correctly in other RZX players (fixes bug\n#304) (thanks, Sergio Baldoví) (Fredrick Meunier).\n- Report missing snapshots and compatibility warnings more clearly,\nmaking playback failures easier to diagnose (Fredrick Meunier).\n- Fix the --playback command-line option so RZX playback can again\nbe started from the command line (Fredrick Meunier).\n\nMiscellaneous improvements:\n- Avoid reading entire HDF images while identifying file types (part\nof bug #168) (thanks, Gergely Szasz) (Fredrick Meunier).\n- Require C11 compiler support (Fredrick Meunier).\n\nTesting improvements:\n- Improve development regression test harness (Fredrick Meunier).\n- Expand tape-loader, tape-trap and ROM-loading regression coverage\nto reduce the risk of compatibility bugs (Fredrick\nMeunier).\n\n- Various other minor bugfixes.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "2892ed227d7a397141790263b23bef6956267c7889550637949dcd01ba5f39ef",
+      "translationPending": false
+    },
+    {
+      "id": "137332",
+      "title": "【工具】Igir v5.5.1",
+      "originalTitle": "[Utilitaires Multi-systemes] Igir v5.5.1",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-27T10:26:43Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137332-utilitaires-multi-systemes-igir-v5-5-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/02/igir.png",
+      "officialUrl": "https://github.com/emmercm/igir",
+      "summary": "Igir是一款ROM集合管理器，允许对任何操作系统下任何大小的集合进行排序、过滤、提取或存档、修补和报告。",
+      "content": "Igir是一款ROM集合管理器，允许对任何操作系统下任何大小的集合进行排序、过滤、提取或存档、修补和报告。",
+      "originalContent": "Igir est un gestionnaire de collections de ROM qui permet de trier, de filtrer, d'extraire ou d'archiver, de patcher et d'établir des rapports sur des collections de toute taille sous n'importe quel système d'exploitation.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "igir"
+      ],
+      "contentHash": "f6706936b56db9ba441eb53a216a3190618c95e5bfd99c0a7809152495975973",
+      "translationPending": false
+    },
+    {
+      "id": "137329",
+      "title": "【家用机】SuperZSNES v0.310",
+      "originalTitle": "[Consoles de salon] SuperZSNES v0.310",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:23:43Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137329-consoles-de-salon-superzsnes-v0-310/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/04/SuperZsnes-Logo.png",
+      "officialUrl": "https://www.zsnes.com/",
+      "summary": "SUPER ZSNES是对标志性ZSNES模拟器的完整和现代重写。 两位原创者再次共同开发了一款现代化的GPU加速SNES模拟器，该模拟器更准确、更快，并具有特定于游戏的增强系统。 主要特点： •比旧的ZSNES更精确的CPU和音频内核。",
+      "content": "SUPER ZSNES是对标志性ZSNES模拟器的完整和现代重写。\n两位原创者再次共同开发了一款现代化的GPU加速SNES模拟器，该模拟器更准确、更快，并具有特定于游戏的增强系统。\n\n主要特点：\n•比旧的ZSNES更精确的CPU和音频内核。\n\nGPU加速PPU ：\n•高分辨率模式7\n•增强特效\n•更清洁、更稳定\n\n现代化的ZSNES经典界面：\n•防雪效果\n•高清晰度\n•增强的用户体验\n\n高级功能：\n•快进\n•倒带\n•保存状态\n•自动保存历史记录\n•书签\n•作弊码\n•快速加载\n\n•没有现代框架的开发（经典风格）。\n\n超级增强引擎：\n•游戏增强系统，已在9款热门游戏上激活。\n•支持.zsmod格式的自定义增强文件。\n\n改进类型：\n\n高分辨率：\n•手动重新设计的内部渲染\n•干净清爽的高分辨率细节\n\n纹理/法线贴图：\n•添加了其他详细信息\n•更丰富、更深层次的外观\n\n超频：\n•减速拆卸\n•增加流动性\n\n宽屏（如果是内部支持） ：\n•当游戏具有部分或完整的内部代码时，激活宽屏\n•当特定游戏的宽屏处于活动状态时，内部宽屏将被禁用\n\n未压缩音频替换：\n•用未压缩版本替换压缩样品\n\n3D （透视模式7 ） ：\n•用3D高度映射数据替换瓷砖\n•使用透视模式7在游戏中实现真实3D效果\n所有增强功能都可以单独打开或关闭。\n改进文件不包括任何ROM摘录：它们只包含额外的数据，从不包含游戏本身的内容。\n\n设备支持：\n• Apple TV支持\n• Android TV支持\n•移动设备上的纵向模式\n• Android启动器\n•通过本地Web服务器传输文件\n•右侧模拟摇杆支架，用于控制模式7 3D图层\n•单击左侧模拟摇杆以控制缩放\n•改进了旋钮和操纵杆方向交叉的检测\n•初始支持.zlua格式的自定义脚本\n•第一版Star Fox增强功能，通过GPU加速在真实3D模型中重新创建3D模型和精灵，支持宽屏、高分辨率和插值。\n\n即将推出：\n•错误修复\n•支持特殊芯片（ DSP1、SuperFX等）\n•追溯成就\n•自定义补丁宽屏\n•其他优化\n•新型增强功能\n• Netplay\n•其他\n\nhttps://www.youtube.com/watch?v=ARHSvJ87z9A\nhttps://www.youtube.com/watch?v=r5twUkvYFpA\n\n变更内容：\n\n•为移动设备添加了纵向模式\n•修复了各种控制器按钮/平板检测问题\n•支持Apple TV和Android TV。 它当前使用本地Web服务器来传输文件。\n• Starfox增强功能首次通过。 非常感谢Kandowontu、Sunlit、Alexander和Starfox -EX团队的帮助！ 将3D模型和精灵重新创建为GPU上实例化的实际3D模型。 宽屏、高分辨率和插值附加组件。 目前仅适用于原始ROM。\n•初始自定义.zlua脚本支持\n•每场比赛宽屏打开时，内部宽屏现在关闭。 超级Metroid宽屏贴片装置\n•右侧模拟摇杆现在控制3D图层模式。 单击并按住左侧模拟摇杆以激活缩放模式。\n• Android前端启动器支持（感谢Snu的测试工作！ ）\n•现在可以加载自定义.zsmod （增强）文件。 将其与ROM放在一起，并重命名.zsmod文件以匹配ROM文件名。\n•更多优化",
+      "originalContent": "SUPER ZSNES est une réécriture complète et moderne de l’emblématique émulateur ZSNES.\nRéunis à nouveau, les deux créateurs originaux développent un émulateur SNES moderne, accéléré par GPU, plus précis, plus rapide et doté d’un système d’améliorations spécifiques à chaque jeu.\n\nCaractéristiques principales:\n\n- Cœurs CPU et audio plus précis que l’ancien ZSNES.\n\nPPU accéléré par GPU:\n- Mode 7 haute résolution\n- Effets spéciaux améliorés\n- Rendu plus propre et plus stable\n\nInterface classique ZSNES modernisée:\n- Effet de neige conservé\n- Haute définition\n- UX améliorée\n\nFonctions avancées:\n- Fast forward\n- Rewind\n- Save states\n- Auto-save history\n- Bookmarks\n- Cheat codes\n- Quick load\n\n- Développement sans frameworks modernes (style classique).\n\nSuper Enhancement Engine:\n- Système d’améliorations par jeu, déjà actif sur 9 jeux populaires.\n- Support des fichiers d’amélioration personnalisés au format .zsmod.\n\nTypes d’améliorations:\n\nHigh Resolution:\n- Rendu interne redessiné manuellement\n- Détails haute résolution propres et nets\n\nTexture / Normal Map:\n- Ajout de détails supplémentaires\n- Aspect plus riche et plus profond\n\nOverclock:\n- Suppression du slowdown\n- Fluidité accrue\n\nWidescreen (si support interne):\n- Activation du widescreen lorsque le jeu possède un code interne partiel ou complet\n- Le widescreen interne est désactivé lorsqu’un widescreen spécifique au jeu est actif\n\nUncompressed Audio Replacement:\n- Remplacement des samples compressés par des versions non compressées\n\n3D (Mode 7 perspective):\n- Remplacement des tiles par des données 3D height-mapped\n- Effet 3D réel sur les jeux utilisant le Mode 7 en perspective\n\nToutes les améliorations peuvent être activées ou désactivées individuellement.\nLes fichiers d’amélioration n’incluent aucun extrait de ROM: ils ne contiennent que des données additionnelles, jamais de contenu provenant du jeu lui‑même.\n\nSupport des appareils:\n- Support d’Apple TV\n- Support d’Android TV\n- Mode portrait sur appareils mobiles\n- Launcher Android\n- Transfert de fichiers via serveur Web local\n- Support du stick analogique droit pour contrôler les couches 3D du Mode 7\n- Clic sur le stick analogique gauche pour contrôler le zoom\n- Amélioration de la détection des boutons et de la croix directionnelle des manettes\n- Support initial des scripts personnalisés au format .zlua\n- Première version de l’amélioration de Star Fox avec modèles 3D et sprites recréés en véritables modèles 3D accélérés par GPU, avec support du widescreen, de la haute résolution et de l’interpolation.\n\nÀ venir:\n- Corrections de bugs\n- Support des special chips (DSP1, SuperFX, etc.)\n- Retroachievements\n- Widescreen personnalisé pour les patches\n- Optimisations supplémentaires\n- Nouveaux types d’améliorations\n- Netplay\n- Autres\n\nhttps://www.youtube.com/watch?v=ARHSvJ87z9A\nhttps://www.youtube.com/watch?v=r5twUkvYFpA\n\nLes changements:\n\n- Added portrait mode for mobile\n- Fixed various controller button/dpad detection issues\n- Apple TV and Android TV support. It currently uses a local web server to transfer files over.\n- First pass Starfox Enhancement. Big thanks to Kandowontu, Sunlit, Alexander, and the Starfox -EX team for making this possible! Re-creates 3D models and sprites as actual 3D models instanced on the GPU. Adds wide-screen, hi-res, and interpolation. Currently works only on the original rom.\n- Initial custom .zlua script support\n- Internal widescreen is now off when per game widescreen is on. Fixes Super Metroid widescreen patch\n- Right analog stick now controls 3D layers mode. Click and hold the left analog stick to activate zoom mode.\n- Android frontend launcher support (thanks to Snu for the testing work!)\n- Custom .zsmod (enhancement) files can now be loaded. Put it with the rom and rename the .zsmod file to match the rom filename.\n- Lots more optimizations",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "32730a7fc2f95ff175371fc0f80ca24e622c4e565b9b8c063acbc395447a2d82",
+      "translationPending": false
+    },
+    {
+      "id": "137327",
+      "title": "【家用机】KytyPlus v3.8",
+      "originalTitle": "[Consoles de salon] KytyPlus v3.8",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T10:06:42Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137327-consoles-de-salon-kytyplus-v3-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/kytyplus-scaled.png",
+      "officialUrl": "https://github.com/Coder787-source/KytyPlus",
+      "summary": "KytyPlus是KytyPS5的一个分支，它本身源自最初的Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了几项改进，包括通过shadPS4对PS4游戏的实验性支持， FSR 1.0 ， Vulkan缓存以保留已编译的流水线和各种DESTI优化 诞生于集成GPU （ iGPU ）。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。",
+      "content": "KytyPlus是KytyPS5的一个分支，它本身源自最初的Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了几项改进，包括通过shadPS4对PS4游戏的实验性支持， FSR 1.0 ， Vulkan缓存以保留已编译的流水线和各种DESTI优化\n诞生于集成GPU （ iGPU ）。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68\n\n变更内容：\n• Crash Bandicoot 4 ： It's About Time ：修复了视频播放问题，现在完整的介绍过场动画链可以正常播放\n•修复了第四个保险杠视频无法完成的死锁\n•修复了未重新评估的围栏等待导致的黑色屏幕\n•添加了一个停滞等待监视器，以防止GPU队列挂起\n•修复了`write32`/`write64`和`CpOpReleaseMem`中的空目标处理\n•修复了AMD集成GPU上的FSR崩溃； iGPU上不再默认启用FSR\n•通过实施FIFO演示模式，修复了集成显卡上的演示问题\n•固定零大小交换链处理\n•修复了通过`cmd /K`生成模拟器的发射器\n•固定几何阶段绘图被错误跳过\n• `AtomicXorU32`、`AtomicFMinF32`和`AtomicFMaxF32`的固定处理\n•固定深度/模板图像纵横比转换\n•修复了用于电影播放的`file://` URI处理和改进的相关错误日志记录\n•增加了无限内核事件/信号量等待的诊断\n•为`PthreadCondWait`呼叫添加了超过10秒的诊断\n•更新了Crash Bandicoot 4: It's About Time的兼容性信息",
+      "originalContent": "KytyPlus est un fork de KytyPS5, lui-même dérivé du projet original Kyty. Il reprend son émulation de la PlayStation 5 tout en ajoutant plusieurs améliorations, notamment le support expérimental des jeux PS4 via shadPS4, le FSR 1.0, un cache Vulkan permettant de conserver les pipelines compilés et différentes optimisations destinées aux GPU intégrés (iGPU). Il permet également l’installation des fichiers PKG depuis son interface et propose une gestion unifiée des jeux PS4 et PS5. Le projet est encore en développement et de nombreux jeux peuvent rencontrer des plantages, des écrans noirs ou des problèmes graphiques.\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68\n\nLes changements:\n\n- Crash Bandicoot 4: It's About Time: Fixed video playback so the complete intro cutscene chain now plays correctly\n- Fixed a deadlock preventing the fourth bumper video from completing\n- Fixed black screens caused by fence waits that were not being re-evaluated\n- Added a stalled-wait watchdog to prevent GPU queue hangs\n- Fixed null destination handling in `write32`/`write64` and `CpOpReleaseMem`\n- Fixed FSR crashes on AMD integrated GPUs; FSR is no longer enabled by default on iGPUs\n- Fixed presentation issues on integrated GPUs by enforcing FIFO present mode\n- Fixed zero-size swapchain handling\n- Fixed the launcher spawning the emulator through `cmd /K`\n- Fixed geometry-stage draws being incorrectly skipped\n- Fixed handling of `AtomicXorU32`, `AtomicFMinF32` and `AtomicFMaxF32`\n- Fixed depth/stencil image aspect transitions\n- Fixed `file://` URI handling for movie playback and improved related error logging\n- Added diagnostics for infinite kernel event/semaphore waits\n- Added diagnostics for `PthreadCondWait` calls stuck for more than 10 seconds\n- Updated compatibility information for Crash Bandicoot 4: It's About Time",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "21f43b0a69e1da58742da67e801aa9152f900b8588697ff44497e4a6f2fd5288",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-0-5",
+      "title": "【Android更新】ARMSX3 1.0.5",
+      "originalTitle": "ARMSX3 1.0.5 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T09:40:28Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.0.5",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.0.5，发布日期为2026年09月27日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.0.5。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.0.5\n\n有什么新情况:\n\n游戏\n\n——\"恶魔灵魂\"在线作品出道。 它连接到\"Archstones\"社区服务器而不设置任何方向。\n\n\n\n\n\n\n\n• Stuntman:点火工程。 它需要的音效改变又回来了\n\n\n\n· Mortal Kombat Komplete版仍然通过WB的标志,现在有了Stuntman: Ignition需要重新加入的音频更改。\n\n\n\n\n\n保存状态\n\n• 修复一个罕见的保存状态错误。 保存状态从中重新装入游戏, 关闭重新装入的游戏几乎无法使用 ARMSX3 在测试Bomperman Ultra时碰到了这个虫子\n\n\n\n\n\n失败的保存状态不再让游戏被卡住。 如果保存失败, 就像你关闭菜单一样, 游戏可以保持暂停和看起来冷冻。 它现在继续。\n\n• 清除状态错误。 当保存状态失败时,信息现在会说明原因和做什么,而不是让你切换到ASMJIT,而ARM设备不能使用。 一些游戏,如\"吉他英雄\"世界巡回赛,完全无法以这种方式被保存下来,现在的信息是这样说的并指向了游戏自己的保存。\n\n\n\n\n\n图书馆和许可证\n\n• 可以看到哪些游戏是试验,它们解锁。 TRIAL标记标记了图书馆的每一个审判,直到解锁,包括不把他们的演示保存在单独的文件夹中的试验。 从游戏的锁扣上安装一个审判的解锁密钥被拒绝,在审判上安装的全游戏许可证被以审判的名义提交,因此审判中止了审判。 两样都行 从锁按钮中取出的错误密钥也不再删除游戏已经拥有的密钥。\n\n\n\n• 安装后由图书馆自己更新。 安装一个游戏,一个键或一个全游戏解锁,用于离开显示旧状态的库,直到您手动刷新。\n\n\n\n• 恢复备份会把数据带回应用程序寻找的地方。 恢复可以将您的保存放入一个数据文件夹, 而应用程序继续使用另一个数据文件夹, 所以它们看起来丢失了。\n\n设置\n\n• 公司软件库现已进入所有核心设置。 切换LLE和HLE之间的任何固件库,用于一局或全部游戏。 一个被强迫玩一款游戏的图书馆 不再继续进入下一个游戏\n\n\n\n<img 宽度=\"1920\"...",
+      "originalContent": "# ARMSX3 1.0.5\r\n\r\nWhat's new: \r\n\r\n## Games\r\n\r\n- **Demon's Souls online works out of the box.** It connects to The Archstones community server without setting up any redirects.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7890ccf7-8a54-443c-9b3f-70db93465ee7\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c708c5a6-715c-4bb8-9101-13701d002c50\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/52b199c0-f688-44e1-a493-c01986e2047b\" />\r\n\r\n- **Stuntman: Ignition works.** The audio change it needs is back in.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f9e547e9-44f5-4079-bf7b-d9e90b98abfc\" />\r\n\r\n- **Mortal Kombat Komplete Edition** still gets past the WB logo, now with the audio change that Stuntman: Ignition needs back in.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c1ae78a4-525f-4daf-ac8c-4758ee03f498\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/488e6b0e-8941-47f0-baaf-724fa16cb60c\" />\r\n\r\n## Save states\r\n\r\n- **Fixed a rare save state bug.** Saving a state reloads the game from it, and closing that reloaded game could rarely take ARMSX3 down, ran into this bug while testing out Bomberman Ultra.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/522b129e-ca61-4c6f-8313-7afec00fce27\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/88f0c6bd-7fd5-47c2-ac66-623a9ca5be36\" />\r\n\r\n- **A failed save state no longer leaves the game stuck paused.** If the save failed just as you closed the menu, the game could stay paused and looked frozen. It now carries on.\r\n\r\n- **Clearer save state errors.** When a save state fails, the message now says why and what to do, instead of telling you to switch to ASMJIT, which ARM devices can't use. Some games, like Guitar Hero World Tour, can't be saved this way at all, and the message now says so and points you to the game's own save instead.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7a228164-69bf-4d4f-b8e3-ab78bf01098a\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f8be8a28-4e63-45fd-8f75-416cf0bbc812\" />\r\n\r\n## Library and licences\r\n\r\n- **You can see which games are trials, and they unlock.** A TRIAL tag marks every trial in the library until it's unlocked, including trials that don't keep their demo in a separate folder. Installing a trial's unlock key from the game's lock button was refused, and a full-game licence installed on a trial was filed under the trial's name, so trials stayed trials. Both work now. A wrong key picked from the lock button also no longer deletes the key the game already had.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c04b9bfa-fecf-4e1f-9774-09cec0dc7edc\" />\r\n\r\n- **The library updates by itself after an install.** Installing a game, a key or a full-game unlock used to leave the library showing the old state until you refreshed it by hand.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2b572f86-f3d9-446b-b174-70e9f3ec67e3\" />\r\n\r\n- **Restoring a backup brings your data back where the app looks for it.** A restore could put your saves in one data folder while the app kept using another, so they looked lost.\r\n\r\n## Settings\r\n\r\n- **Firmware libraries are now in All Core Settings.** Switch any firmware library between LLE and HLE, for one game or for all of them. A library forced for one game no longer carries over into the next game you boot.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1835f81e-964f-463e-8d85-88a7b1b9951c\" />\r\n\r\n<img width=\"1920\"…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "9520092e08e3ffabfb1f20a7b51d512dc7cf0917c423cdd14d90601b971ac121",
+      "translationPending": false
+    },
+    {
       "id": "android-release-duckstation-preview",
       "title": "【Android更新】DuckStation preview",
       "originalTitle": "DuckStation preview Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-27T02:44:20Z",
+      "publishedAt": "2026-09-27T07:52:09Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
       "imageUrl": "asset://assets/emulators/duckstation.png",
       "officialUrl": "https://github.com/stenzek/duckstation",
       "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月27日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 改进加倍帮助说明(Stenzek)（https://github.com/stenzek/duckstation/commit/56dbfea7fdb2721c090ec1c5eb2c546602e66e5a）)\n• f1359f0翻译: duckstation-qt_es.ts (#3805) (彼得·德尔塔)#3805（https://github.com/stenzek/duckstation/pull/3805）\n• f9ba754: Atualização Português do Brasil (#3806) (安德森·卡多佐) #3806（https://github.com/stenzek/duckstation/pull/3806）",
-      "originalContent": "## Commits\n- Fix doubled-up help description ([Stenzek](https://github.com/stenzek/duckstation/commit/56dbfea7fdb2721c090ec1c5eb2c546602e66e5a))\n- f1359f0: Update duckstation-qt_es.ts (#3805) (PeterDelta) [#3805](https://github.com/stenzek/duckstation/pull/3805)\n- f9ba754: Atualização Português do Brasil (#3806) (Anderson Cardoso) [#3806](https://github.com/stenzek/duckstation/pull/3806)",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• a2edf2d: 更新意大利语翻译 (#3807) (Davide Pesavento) #3807（https://github.com/stenzek/duckstation/pull/3807）",
+      "originalContent": "## Commits\n- a2edf2d: Update Italian translation (#3807) (Davide Pesavento) [#3807](https://github.com/stenzek/duckstation/pull/3807)",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "duckstation"
       ],
-      "contentHash": "8a8c00dc75822e32b1396bb89dab8750b1670db936568ca4c672300e52e2a861",
+      "contentHash": "2ba372979ae353cf3c2183f9cd07d515e2ec99d8606e3edb1f76d085a59abc5d",
       "translationPending": false
     },
     {
@@ -82,30 +374,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx3-1-0-4",
-      "title": "【Android更新】ARMSX3 1.0.4",
-      "originalTitle": "ARMSX3 1.0.4 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-26T15:34:12Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.0.4",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.0.4，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.0.4。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.0.4\n\n马里GPUFSR的固定装置。\n\n• FSR升级目前在马里GPU工作。 它显示一个黑幕之前在那里。 SGSR也有同样的问题,得到了同样的修复。 多亏了瘦子的测试!",
-      "originalContent": "# ARMSX3 1.0.4\r\n\r\nA fix for FSR on Mali GPUs.\r\n\r\n- **FSR upscaling now works on Mali GPUs.** It showed a black screen there before. SGSR had the same problem and got the same fix. Tested on an Dimensity 8500 Ultra, Arm Mali-G720 MC8, thanks to slimpuggamer for testing! \r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9e3feb1a-6589-41e7-b64d-358d26487448\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9bddf155-ce1e-480c-a295-aa8e5f10a0fc\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f8be882a-6c18-419b-ba37-631756e123c1\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/43524639-15ce-460d-81f2-06cc7b3a3b36\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/13cb3002-136c-4167-9240-f939ab208c93\" />\r\n\r\n<img width=\"2756\" height=\"1268\" alt=\"image\" src=\"https://github.com/user-attachments/assets/efb786fc-c146-4196-a9f8-569bceb08e67\" />",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "4f0bb0afd2845277b2e5118d87193c2bff188ee4b6eae0ebca5d804f25da3821",
-      "translationPending": false
-    },
-    {
       "id": "137322",
       "title": "【电脑】Copperline v1.0 RC1",
       "originalTitle": "[Ordi.] Copperline v1.0 RC1",
@@ -125,54 +393,6 @@
         "copperline_pc"
       ],
       "contentHash": "3d8bc28090738fe0c07c00e5f13fc0a429f4440eb29cd8cb977d3501397405ca",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-26T14:15:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "NESd nightly Android release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "d2091253df8626ecee72f9c5ffe50f5ccfde8183d09b7c4c14f278bf2e0f4464",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260926",
-      "title": "【Android更新】ARMSX2 nightly-20260926",
-      "originalTitle": "ARMSX2 nightly-20260926 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-26T13:22:36Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260926",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260926，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260926。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• GunCon 2:取出可触摸的校准镜头,并瞄准地表像素\n• USB设备:停止键盘开关脱插口1\n• USB设备:在Android游戏之间保留设备列表\n• GunCon 2:它的按钮加入触摸布局,瞄准将脸部按钮单独放出\n• USB 设备: 端口行表示未连接, 如下面的列表\n• USB 设备: 在没有游戏运行的情况下列出它们, 从下拉端口中选择一个\n• 网络:将一个 DNS 地址切换到手动\n• 纹理包:使删除包可靠\n• 纹理包:在玩家自己的系列下安装多区域包\n• 图书馆音乐:服从媒体的回放,而不是另一个应用程序的游戏音频\n• DEV9:带回Android HDD图像处理\n• 键盘:类型地址和路径\n· GameDB 面板: 命名复制- 路混合盖和外移\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260925...247fa6f09499f69192c52c0542305ed16119518b",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- GunCon 2: a calibration shot for touch, and aim in surface pixels\n- USB devices: stop the keyboard switch unplugging Port 1\n- USB devices: keep the device list between games on Android\n- GunCon 2: its buttons join the touch layout, and aiming leaves the face buttons alone\n- USB devices: the port row says Not Connected, like the list below it\n- USB devices: list them with no game running, and pick one per port from a dropdown\n- Network: typing a DNS address switches that slot to Manual\n- Texture packs: make deleting a pack reliable\n- Texture packs: install a multi-region pack under the player's own serial\n- Library music: defer to media playback, not to another app's game audio\n- DEV9: bring back the Android HDD image handling\n- Keyboard: type addresses and paths\n- GameDB panel: name the copy-road blending cap and the field shift\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260925...247fa6f09499f69192c52c0542305ed16119518b",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "1819ac82ac7f7d51b50e03e2706c7645d1f4372a47af81c5f86937c0bf5094a7",
       "translationPending": false
     },
     {
@@ -8655,6 +8875,30 @@
         "noods"
       ],
       "contentHash": "e84cb9d1861eab95ac6f8b07dcb9eeadf0ddaee11bac6eae85ca417e2400cd42",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-xm8-2-0-0",
+      "title": "【Android更新】XM8M 2.0.0",
+      "originalTitle": "XM8M 2.0.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-03T01:50:03Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/bubio/xm8m/releases/tag/2.0.0",
+      "imageUrl": "asset://assets/emulators/xm8.png",
+      "officialUrl": "https://github.com/bubio/xm8m",
+      "summary": "XM8M 发布 Android 新版本 2.0.0，发布日期为2026年08月03日。点击查看官方版本信息与更新说明。",
+      "content": "XM8M 已发布 Android 最新版本 2.0.0。\n\n发布日期：2026年08月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n動作環境\n平台:CPU: 最小OSバージョン\n麦克:x86_64:macOS 10.13 高铁\nMac:苹果硅:macOS 11 Big Sur\n视窗:x86_64:视窗 10\nWindows:x86_32: Windows 10 (英语).\nLinux: x86_64: 乌邦图 22.04以降(.deb)/费多拉·36以降 (.\nRaspberry Pi OS:armhf: Booktrom以降(英语:Booktrom以降 (film)).\nAndroid:Arm:Android (英语: 4.4\n\n\n\n変更点\n• QQ(Mac的XM8) - > XM8M)。\n• アプリアイコンを変更しました。\n• Android **\n• Android **\n• m3u/m3u8ファイルの対応を拡充し、メニューなどからも開けるようにしました。\n· Linux(平板电脑)\n• 改革（https://retroachievements.org）　に対応しました。*\n\n\n\n既知の問題\n• 特にありません。",
+      "originalContent": "## 動作環境\r\n| Platform | CPU | 最小OSバージョン |\r\n| ------------- | ------------------- | ------------- |\r\n| Mac | x86_64 | macOS 10.13 High Sierra |\r\n| Mac | Apple Silicon | macOS 11 Big Sur |\r\n| Windows | x86_64 | Windows 10 |\r\n| Windows | x86_32 | Windows 10 |\r\n| Linux | x86_64 | Ubuntu 22.04以降（.deb） / Fedora 36以降（.rpm） |\r\n| Raspberry Pi OS | armhf | Bookworm以降 |\r\n| Android | Arm | Android 4.4 |\r\n\r\n<br />　\r\n\r\n## 変更点\r\n- アプリ名称変更(XM8 for Mac -> XM8M)。\r\n- アプリアイコンを変更しました。\r\n- Androidのビルド環境を更新しました。\r\n- Androidの縦画面に対応しました。\r\n- m3u/m3u8ファイルの対応を拡充し、メニューなどからも開けるようにしました。\r\n- Linuxはflatpakでの配布を追加しました。\r\n- *🎖️[RetroAchievements](https://retroachievements.org)　に対応しました。*\r\n\r\n<br />　\r\n\r\n## 既知の問題\r\n- 特にありません。",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "xm8"
+      ],
+      "contentHash": "4e4120177a6ef21111f0de04c6b7579f44f65db70b5ae9f2300c3b94faab1916",
       "translationPending": false
     }
   ]
