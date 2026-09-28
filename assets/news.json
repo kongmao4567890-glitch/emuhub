@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T05:48:49.464616Z",
+  "generatedAt": "2026-09-28T19:51:04.067907Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,329 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-armsx2-nightly-20260928",
+      "title": "【Android更新】ARMSX2 nightly-20260928",
+      "originalTitle": "ARMSX2 nightly-20260928 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T15:00:01Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260928",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260928，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260928。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• 包括我们的代码名称\n• GS:将装有紫外线的三联装车装入三角地带\n• GS:装有UV地址的三联车名称\n• 测试:将一个较宽的GS->GS移动到一个小目标上停留在GPU上\n• GS/TC:让一个移动扩大其目的地目标的宽度,而不仅仅是其高度\n• GS:不要将硬件GS->GS移动记录在转移列表中\n• 柜台/自动取款机:跨分帧限制器报告每个帧一个工作期间\n• microVU/arm64:忽略旗下MAC旗下实例,而不是状态一\n• GS/Vulkan:使每个通行证的第一个阅读器改变可循环值\n• gsrunner: - read back-kick-passes,可读框提交A/B的间隔\n• GS: 放弃回放源代码提示 Vulkan脚踢不再读取\n• GS/Vulkan:在抽取目标时,让后机架起火\n• Android:请人工智能特工将反退货通知留在原地\n• 音频/Oboe:在设备起爆时而不是2048帧读取\n• GS/Vulkan:获取收益时显示图像\n• 音频/Oboe:用扩展模式的频道计数打开溪流\n• 调试器:修复未保存的调试器断点,从设置中装入时不会被去除。\n• GS/HW:将行线转换为像素运行于一行,不按像素划分\n• GS:让行走者在编译时修补主轴\n• 测试:Pin GSLineRuns:对正字节转换字节\n• GS/HW:将行象素运行转换成GSLineRuns\n• gsrunner:用于A/B的Vulkan顶点环的开关大小\n• GS/Vulkan:种植顶点环,而不是排出GPU\n• GS:决定整条溪流环的生长程度,而不是等待\n• Qt:更新基地翻译。\n• GS:HW:搅拌时将RT颜色非正常化。\n• GH 动作: 调试时禁用 LTO 构建\n• GHActions:在发行中生成调试缓存\n• GH 动作:从释放缓存中分离调试\n• GHActions:清理出夹子的旧东西\n• GS/Shaders:解决类型不匹配问题。\n• GS/GL:GL_ARB_gpu_shader5的起降要求。\n• GS:Vk:在禁用ffatch时使用反馈回路布局\n• GS/DX11:当设备创建失败时,解决与纹理有关的无效碰撞。\n• GS:将CAS从计算阴影器类型切换为像素阴影器类型。\n• Qt:更新基地翻译。\n• GS:HW:删除GSVector4:cxpr()的整数位点版本。\n• Qt: 添加控制器测试器按钮\n• Qt:对游戏列表标题列使用QheaderView:Stretch\n• GS:MTL:在无金属设备错误中提及OCLP\n• GS:MTL:没有金属装置就不要坠毁\n• GS:MTL:Bitcast浮出金特后再铸入uchar4.\n• Qt:更新基地翻译。\n• Qt/VMManager: 添加 - gamecfg 命令行参数\n• Qt:更新基地翻译。\n• Deps/gha:在Ci-deps组装起火药/起火药\n• GS:倒荫缓存版本。\n• GS:增加缺失的配置要素和格式化修正。\n· EE Rec:取出获得...",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- Include <cstring> where our code calls it\n- GS: fuse the UV-addressed packed triple for triangle strips\n- GS: SetTag names the UV-addressed packed triple\n- tests: pin that a wider GS->GS move into a small target stays on the GPU\n- GS/TC: let a move grow its destination target's width, not only its height\n- GS: don't log hardware GS->GS moves in the transfer list\n- Counters/ADPF: report one work period per frame across the split frame limiter\n- microVU/arm64: ignore the MAC flag instance under the flag hack, not the status one\n- GS/Vulkan: make the first reader of each pass change the loop-enable value\n- gsrunner: -readback-kick-passes, the readback-frame submit spacing for an A/B\n- GS: drop the readback-source hint the Vulkan kick no longer reads\n- GS/Vulkan: let the readback-frame kick fire where a draw switches target\n- Android: ask AI agents to leave the anti-resale notice in place\n- Audio/Oboe: read at the device's burst size instead of 2048 frames\n- GS/Vulkan: present the image when acquire returns SUBOPTIMAL\n- Audio/Oboe: open the stream with the expansion mode's channel count\n- Debugger: Fix unsaved debugger breakpoints not being removed when loaded from settings.\n- GS/HW: convert lines to pixel runs in one walk, without per-pixel divides\n- GS: let a line walk's caller fix the major axis at compile time\n- tests: pin GSLineRuns::Convert byte for byte against the original\n- GS/HW: move the line pixel-run conversion into GSLineRuns\n- gsrunner: switches to size the Vulkan vertex ring for an A/B\n- GS/Vulkan: grow the vertex ring instead of draining the GPU\n- GS: decide how far a full stream ring grows instead of waiting\n- Qt: Update Base Translation.\n- GS:HW: Denormalize RT color when shuffling while blending.\n- GHActions: Disable LTO on debug builds\n- GHActions: Generate debug caches in release builds\n- GHActions: Separate debug from release caches\n- GHActions: Clean old stuff out of ccache\n- GS/Shaders: Fix up types mismatch.\n- GS/GL: Drop requirement for GL_ARB_gpu_shader5.\n- GS:Vk: Use feedback loop layout when fbfetch is disabled\n- GS/DX11: Fix null texture related crashes when device creation fails.\n- GS: Switch CAS from compute shader type to pixel shader type.\n- Qt: Update Base Translation.\n- GS:HW: Remove integer bitcast version of GSVector4::cxpr().\n- Qt: Add Controller Tester button\n- Qt: Use QHeaderView::Stretch for the game list title columns\n- GS:MTL: Mention OCLP in the no-metal-devices error\n- GS:MTL: Don't crash if no Metal device\n- GS:MTL: Bitcast float to uint before casting to uchar4.\n- Qt: Update Base Translation.\n- Qt/VMManager: Add -gamecfg command-line arg\n- Qt: Update Base Translation.\n- Deps/gha: Bump baptiste0928/cargo-install in the ci-deps group\n- GS: Bump shader cache version.\n- GS: Add missing config elements and formatting fixes.\n- EE Rec: Remove memcheck code that got the…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "98821f72685470e33c6d3db230d2380824b17c9577a2d94923944634f99400a4",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T14:37:02Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• nightly-release.yml: 将 perl 安装到“ 安装依赖性” 区域( fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• nightly-release.yml: moved perl install to the \"Install dependecies\" section (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "b2a7ad1c2fcb8f335524cfc6161adc9f66b53369c7bfcaa4f5cb252bb2e26270",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-winnative-0-7-1-beta",
+      "title": "【Android更新】WinNative 0.7.1-beta",
+      "originalTitle": "WinNative 0.7.1-beta Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T14:06:01Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/WinNative-Emu/WinNative/releases/tag/v0.7.1-beta",
+      "imageUrl": "asset://assets/emulators/winnative.png",
+      "officialUrl": "https://github.com/WinNative-Emu/WinNative",
+      "summary": "WinNative 发布 Android 新版本 0.7.1-beta，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "WinNative 已发布 Android 最新版本 0.7.1-beta。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 综合安全分遣队:由@qwertypower in https://github.com/WinNative-Emu/WinNative/pull/775\n• Linux Steam 客户端:下载到所选文件夹,然后由 @maxjivi05在 https://github.com/WinNative-Emu/WinNative/pull/777\n• 综合安全分遣队:由@qwertypower in https://github.com/WinNative-Emu/WinNative/pull/776\n• 由@maxjivi05修复/履行和退出 https://github.com/WinNative-Emu/WinNative/pull/779\n校对:Soup https://github.com/WinNative-Emu/WinNative/pull/778\n\n新贡献者\n• 克洛德米罗夫斯基首次发言 https://github.com/WinNative-Emu/WinNative/pull/778\n\n完整更改日志 : https://github.com/WinNative-Emu/WinNative/compare/v0.7.0-beta...v0.7.1-beta",
+      "originalContent": "## What's Changed\r\n* DIS: warp-based interpolation with source-point flow lookup by @qwertypower in https://github.com/WinNative-Emu/WinNative/pull/775\r\n* Linux Steam client: download to the chosen folder and follow moved games by @maxjivi05 in https://github.com/WinNative-Emu/WinNative/pull/777\r\n* DIS: optimize OF, interpolation calculations  by @qwertypower in https://github.com/WinNative-Emu/WinNative/pull/776\r\n* Fix/performance and vac by @maxjivi05 in https://github.com/WinNative-Emu/WinNative/pull/779\r\n* fix(SessionKeepAliveService): Prevent crashes due to races by @Claudemirovsky in https://github.com/WinNative-Emu/WinNative/pull/778\r\n\r\n## New Contributors\r\n* @Claudemirovsky made their first contribution in https://github.com/WinNative-Emu/WinNative/pull/778\r\n\r\n**Full Changelog**: https://github.com/WinNative-Emu/WinNative/compare/v0.7.0-beta...v0.7.1-beta",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "winnative"
+      ],
+      "contentHash": "55c831aa980275e5ecf085532c08ffe4ee0fc4f6daa9f0bbd3b13d3fd84ffe75",
+      "translationPending": false
+    },
+    {
+      "id": "137379",
+      "title": "【家用机】Pureikyubu v1.9.1 (2026/09/28)",
+      "originalTitle": "[Consoles de salon] Pureikyubu v1.9.1 (2026/09/28)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T13:17:53Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137379-consoles-de-salon-pureikyubu-v1-9-1-2026-09-28/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Pureikyubu-emu.png",
+      "officialUrl": "https://github.com/emu-russia/pureikyubu/",
+      "summary": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。",
+      "content": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。\n模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。\n\n改进包括：\n\n•来自ogamespec/ui-theme-support的合并拉取请求# 456\n•界面：从网站调色板中抽取八个主题，以及选择器的日语标题\n•来自ogamespec/master的合并拉取请求# 455\n• GBA设置：将BIOS行的按钮分配给他们的房间，并让文件成为用户文件\n• GBA ：独立机器的设置有自己的窗口\n•设置：设备的页面来自其型号，而不是来自其挂起的总线\n•外设：设备池、网络适配器、Game Boy Player和链路电缆",
+      "originalContent": "Pureikyubu est un émulateur open source de Nintendo GameCube, intégrant également l'émulation de la Game Boy et de la Game Boy Advance, actuellement en cours de développement et basé sur Dolwin.\n\nLe but de l'émulateur est de rechercher les caractéristiques matérielles de la GameCube et de faire de la rétro-ingénierie sur les technologies utilisées pour développer des jeux pour cette plateforme.\n\nLes améliorations sont les suivantes:\n\n- Merge pull request #456 from ogamespec/ui-theme-support\n- Interface: eight themes drawn from the site's palette, and the Japanese titles of the selector\n- Merge pull request #455 from ogamespec/master\n- GBA settings: give the BIOS row's buttons their room, and let the file be a user file\n- GBA: the stand-alone machine's settings get a window of their own\n- Settings: a device's page comes from its model, not from the bus it hangs from\n- Peripherals: the device pool, the network adapters, the Game Boy Player and the link cable",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "50ac65333097f4c7b25c20427a40456ba08c13b9698a3dc18e7cc0b542d43ec5",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-ruffle_android-0-260928",
+      "title": "【Android更新】Ruffle (Android) 0.260928",
+      "originalTitle": "Ruffle (Android) 0.260928 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T11:33:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.260928",
+      "imageUrl": "asset://assets/emulators/ruffle_android.png",
+      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
+      "summary": "Ruffle (Android) 发布 Android 新版本 0.260928，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "Ruffle (Android) 已发布 Android 最新版本 0.260928。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 由@dependabot[bot]提供13个更新, https://github.com/ruffle-rs/ruffle-android/pull/838\n• 弹出 ruffle 组合到一个目录, 由 @ dedependabot [bot] 更新 9个 https://github.com/ruffle-rs/ruffle-android/pull/839\n• 冲出小块块块 1.16.0 to 1.16.1 @dependabot[bot] 在生锈的稀释组中,@ dependabot[bot] in 互联网档案馆的存檔,存档日期2011-12-02. https://github.com/ruffle-rs/ruffle-android/pull/840\n• 弹出 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/841\n• 弹出 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/842\n校对:Soup https://github.com/ruffle-rs/ruffle-android/pull/847\n• 弹出 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/848\n• 由@dependabot[bot]从21起至25起跳出dawidd6/Action-download-artifact https://github.com/ruffle-rs/ruffle-android/pull/850\n由@dependabot[bot]在1个目录上跳出生锈微小组,并进行25个更新 https://github.com/ruffle-rs/ruffle-android/pull/851\n• 由 @ RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/852\n\n\n完整更改日志 : https://github.com/ruffle-rs/ruffle-android/compare/0.260907...0.260928",
+      "originalContent": "## What's Changed\n* Bump the rust-minor group with 13 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/838\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/839\n* Bump smallvec from 1.16.0 to 1.16.1 in the rust-minor group by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/840\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/841\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/842\n* ci: Use SwANGLE GPU emulation for testing by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/847\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/848\n* Bump dawidd6/action-download-artifact from 21 to 25 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/850\n* Bump the rust-minor group across 1 directory with 25 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/851\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/852\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260907...0.260928",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "ruffle_android"
+      ],
+      "contentHash": "b7166d7c027323b7ed469b8e03befa19c0713fc1798608a35482de22024c39f8",
+      "translationPending": false
+    },
+    {
+      "id": "137377",
+      "title": "【家用机】Citron Neo (2026/09/28)",
+      "originalTitle": "[Consoles de salon] Citron Neo (2026/09/28)",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T11:12:07Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137377-consoles-de-salon-citron-neo-2026-09-28/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/04/citron-neo-scaled.jpg",
+      "officialUrl": "https://github.com/citron-neo/CI",
+      "summary": "这是Lemon Switch仿真器的一个分叉，准确地从其开发停止的地方拾取。 变更内容： •来自HopeSuffers/fix/dont-enable-fastmem-when-no-arena的合并拉取请求# 350 • FIX （动态） ：没有竞技场时不要启用fastmem •来自unuruu5760/fix/windows-non-ascii-paths的合并拉取请求# 338 •在固件ZIP提取中拒绝路径遍历。",
+      "content": "这是Lemon Switch仿真器的一个分叉，准确地从其开发停止的地方拾取。\n\n变更内容：\n•来自HopeSuffers/fix/dont-enable-fastmem-when-no-arena的合并拉取请求# 350\n• FIX （动态） ：没有竞技场时不要启用fastmem\n•来自unuruu5760/fix/windows-non-ascii-paths的合并拉取请求# 338\n•在固件ZIP提取中拒绝路径遍历。\n• ﻿在clang-cl上链接静态libarchive而不使用dllimport。\n•将非ASCII Windows路径视为ASCII路径。\n•来自cheezwiz7899/clangcl-fix的合并拉取请求# 347\n• `cmake: include configure script and pkg-config hashes in FFmpeg rebuild sentinel`\n•来自cheezwiz7899/clangcl-fix的合并拉取请求# 346\n•构建：修复完整LTO构建上的clang-cl relwithdebinfo挂起。 同时防止mingw标头通过ffmpeg构建缓存泄漏\n•来自Splaser/codex/upstream-pso-cache的合并拉取请求# 331\n• vulkan ：保持正常的围栏定时和关闭时的排水汇编\n•固定杂项",
+      "originalContent": "Il s'agit d'un fork de l’émulateur Switch Citron, repris exactement à l’endroit où son développement s’était arrêté.\n\nLes changements:\n- Merge pull request #350 from HopeSuffers/fix/dont-enable-fastmem-when-no-arena\n- fix(dynarmic): dont enable fastmem when there is no arena\n- Merge pull request #338 from unuruu5760/fix/windows-non-ascii-paths\n- Reject path traversal in firmware ZIP extraction.\n- ﻿Link static libarchive without dllimport on clang-cl.\n- Treat non-ASCII Windows paths the same as ASCII paths.\n- Merge pull request #347 from cheezwiz7899/clangcl-fix\n- `cmake: include configure script and pkg-config hashes in FFmpeg rebuild sentinel`\n- Merge pull request #346 from cheezwiz7899/clangcl-fix\n- build: fix clang-cl relwithdebinfo hangs on full LTO builds. Also prevent mingw headers from leaking in through the ffmpeg build cache\n- Merge pull request #331 from Splaser/codex/upstream-pso-cache\n- vulkan: preserve normal fence timing and drain compilation on shutdown\n- Misc fixes",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "citron_neo"
+      ],
+      "contentHash": "f69f0a4414ec3bd5c8b75b357ab8d6afb364979b5ecfe2bc94150196b77569ad",
+      "translationPending": false
+    },
+    {
+      "id": "137375",
+      "title": "【家用机】Snes9x TestBuild v1.63 R1657",
+      "originalTitle": "[Consoles de salon] Snes9x TestBuild v1.63 R1657",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T09:44:32Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137375-consoles-de-salon-snes9x-testbuild-v1-63-r1657/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/snes9x.png",
+      "officialUrl": "http://www.s9x-w32.de/dl/testbuilds/",
+      "summary": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。 Starfox 2 （ SNES迷你版）的一小部分？ ...ou也许是法力法语iOS版的秘密？ 算了，我改做《时空之轮》的非正式续集: p 自上次生成以来的更改： • memmap ：绑定多车ROM副本 •快照：恢复后重建SuperFX指针 • libretro ：在BS-X探测之前验证ROM大小 •添加了相位和适当的伽…",
+      "content": "这是Snes9x的最新官方“不稳定”版本，添加了GIT来源的最新消息、改进和/或更正。 存档中的32位和64位版本。\n\nStarfox 2 （ SNES迷你版）的一小部分？\n\n...ou也许是法力法语iOS版的秘密？\n算了，我改做《时空之轮》的非正式续集: p\n\n自上次生成以来的更改：\n\n• memmap ：绑定多车ROM副本\n•快照：恢复后重建SuperFX指针\n• libretro ：在BS-X探测之前验证ROM大小\n•添加了相位和适当的伽马校正\n•固定杂项",
+      "originalContent": "Il s'agit de la dernière version officielle dite \"instable\" de Snes9x ajoutant les dernières nouveautés, améliorations et/ou corrections en provenance des sources GIT. Versions 32 et 64 bits dans l'archive.\n\nUne petite partie de Starfox 2 (SNES Mini Edition) ?\n\n...ou peut-être un Secret of Mana Français iOS Edition ?\n\nLaissez tomber, je vais me faire la suite non officielle de Chrono Trigger plutôt :p\n\nLes changements depuis le dernier build:\n\n- memmap: bound multi-cart ROM copies\n- snapshot: rebuild SuperFX pointers after restore\n- libretro: validate ROM size before BS-X probing\n- Added phases and proper gamma correction\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "snes9x_core"
+      ],
+      "contentHash": "d7fd91fb23ac0625d77993e1671ebc34a3cee0b312cc0e72be0ad82d66c530d0",
+      "translationPending": false
+    },
+    {
+      "id": "137373",
+      "title": "【多系统】SidPlayWX v0.20.0",
+      "originalTitle": "[Musiques et sons] SidPlayWX v0.20.0",
+      "category": "multi_system",
+      "categoryLabel": "多系统",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T09:41:12Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137373-musiques-et-sons-sidplaywx-v0-20-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/11/sidplaywx-player.png",
+      "officialUrl": "https://github.com/bytespiller/sidplaywx/",
+      "summary": "Sidplaywx是一款PC图形播放器，专为播放Commodore 64的SID音乐而设计，具有现代化和直观的界面。 它依靠libsidplayfp进行高质量的声音模拟，依靠wxWidgets进行原生跨平台界面，而音频输出由PortAudio管理，以确保广泛的兼容性。 该项目完全可用，具有拖放、搜索、Unicode兼容性和高分辨率屏幕管理等便利功能。它可以在Windows和Linux上运行，并提供预编译的二进制文件。",
+      "content": "Sidplaywx是一款PC图形播放器，专为播放Commodore 64的SID音乐而设计，具有现代化和直观的界面。\n它依靠libsidplayfp进行高质量的声音模拟，依靠wxWidgets进行原生跨平台界面，而音频输出由PortAudio管理，以确保广泛的兼容性。\n该项目完全可用，具有拖放、搜索、Unicode兼容性和高分辨率屏幕管理等便利功能。它可以在Windows和Linux上运行，并提供预编译的二进制文件。",
+      "originalContent": "Sidplaywx est un lecteur graphique pour PC conçu pour lire les musiques SID du Commodore 64, avec une interface moderne et intuitive.\n\nIl repose sur libsidplayfp pour une émulation sonore de haute qualité et sur wxWidgets pour une interface native multi‑plateforme, tandis que la sortie audio est gérée par PortAudio afin d’assurer une compatibilité étendue.\n\nLe projet est pleinement utilisable, avec des fonctions pratiques comme le glisser‑déposer, la recherche, la compatibilité Unicode et la gestion des écrans haute résolution. Il fonctionne sur Windows et Linux avec des binaires pré‑compilés disponibles.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "sidplaywx"
+      ],
+      "contentHash": "272d05a64bfaa4e3790458557e48a63268935188de1abef05f4f17df9d527b9d",
+      "translationPending": false
+    },
+    {
+      "id": "137371",
+      "title": "【家用机】Ruzu v0.1.1 RC2",
+      "originalTitle": "[Consoles de salon] Ruzu v0.1.1 RC2",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T09:39:30Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137371-consoles-de-salon-ruzu-v0-1-1-rc2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/ruzu-scaled.png",
+      "officialUrl": "https://github.com/vricosti/ruzu-emu",
+      "summary": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。 该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系 以及C + +和Rust代码的不同部分。",
+      "content": "Ruzu是用Rust编写的任天堂Switch仿真器，旨在通过语言模型（ LLM ）确定AI是否可以实现从C + +到Rust的非常大型软件项目的完整端口。\n该项目基于YUZU/Eden代码，代表了大约500,000行代码，这些代码仅在LLM的帮助下在大约六个月的时间内进行。目的不仅仅是获得一个功能程序，而是尽可能地维护原始项目的结构，并在文件之间建立对应关系\n以及C + +和Rust代码的不同部分。\nRuzu包括一个带有调度器、光纤、IPC和服务的HLE内核、一个GPU命令处理器、一个着色器重新编译器和一个JIT。ARM代码的动态重新编译由Dynarmic的Rust端口rdynarmic提供，具有本机x86-64和ARM64后端\n。该项目还包括rxbyak ，这是Xbyak的Rust端口，用于生成x86-64机器码。\n\n模拟器已经能够启动和运行商业游戏，其既定目标是实现原始C + +实现的性能。 然而，该项目仍在开发中。\nRuzu还具有图形前端和命令行前端，可以在Windows、Linux、macOS和多个BSD系统上编译。\n\n这些变化是：\n• Windows性能：优化内存保护更新，仅搜索受影响的内存映射，而不是从映射表的开头进行扫描。在本地最终幻想共振演示电影测试中，平均性能从大约16.5提高到29.9 FPS\n。这些不是帧相同的基准窗口；结果取决于游戏和硬件，偶尔会保留长帧。\n•图形兼容性：固定的内联索引绘制，解决某些游戏中缺少的文本。保留深度写入着色器中的插值算法，以解决最终幻想共振中观察到的条纹或缺失像素。\n• Vulkan稳定性：更正了查询报告清理，以防止过时的报告写入重复使用的访客内存。修复了可能导致死锁的资源破坏排序和设置锁定交互。\n• GPU命令处理：改进了空缓冲区绑定和恒定缓冲区写入的处理，避免了几次GPU线程崩溃。添加了跨提交拆分的命令参数的回归覆盖率。\n•来自Eden的更新：在应用程序和小程序管理、内容处理、网络和SSL、控制器处理和图形缓冲区管理方面纳入了进一步的修复。\n•窗口处理：修复了恢复最大化窗口后的大小调整，而无需先前的重新最大化/恢复解决方法。\n•界面：软件键盘现在遵循深色主题。停止和退出确认初始焦点取消以减少未保存进度的意外丢失。\n•测试和打包：扩展输入录制和重放到Windows ，包括清洁的自动录制完成。通用Linux AppImages现在具有与Steam Deck包不同的名称。",
+      "originalContent": "Ruzu est un émulateur Nintendo Switch écrit en Rust, développé comme une expérience visant à déterminer si l'IA, via des modèles de langage (LLM), pouvait réaliser le portage complet d'un projet logiciel de très grande taille de C++ vers Rust.\n\nLe projet est basé sur le code de yuzu/Eden et représente environ 500 000 lignes de code portées exclusivement avec l'aide de LLM, sur une période d'environ six mois. L'objectif n'était pas simplement d'obtenir un programme fonctionnel, mais de conserver au maximum la structure du projet original, avec une correspondance entre les fichiers et les différentes parties du code C++ et Rust.\n\nRuzu intègre notamment un kernel HLE avec ordonnanceur, fibres, IPC et services, un processeur de commandes GPU, un recompilateur de shaders et un JIT. La recompilation dynamique du code ARM est assurée par rdynarmic, un portage Rust de Dynarmic, avec des backends natifs x86-64 et ARM64. Le projet comprend également rxbyak, un portage Rust de Xbyak pour la génération de code machine x86-64.\n\nL'émulateur est déjà capable de démarrer et d'exécuter des jeux commerciaux, avec l'objectif affiché d'atteindre les performances de l'implémentation C++ originale. Le projet reste toutefois en développement.\n\nRuzu dispose également d'un frontend graphique ainsi que d'un frontend en ligne de commande, et peut être compilé sous Windows, Linux, macOS et plusieurs systèmes BSD.\n\nLes changements sont:\n- Windows performance: optimized memory-protection updates to search only the affected memory mappings instead of scanning from the beginning of the mapping table. In local Final Fantasy Resonance demo cinematic tests, average performance improved from approximately 16.5 to 29.9 FPS. These were not frame-identical benchmark windows; results depend on the game and hardware, and occasional long frames remain.\n- Graphics compatibility: fixed inline indexed draws, addressing missing text in some game. Preserved interpolation arithmetic in depth-writing shaders to address striped or missing pixels observed in Final Fantasy Resonance.\n- Vulkan stability: corrected query-report cleanup to prevent stale reports from writing into reused guest memory. Fixed resource-destruction ordering and a settings-lock interaction that could cause a deadlock.\n- GPU command handling: improved handling of null buffer bindings and constant-buffer writes, avoiding several GPU-thread panics. Added regression coverage for command arguments split across submissions.\n- Updates from Eden: incorporated further fixes across application and applet management, content handling, networking and SSL, controller handling, and graphics-buffer management.\n- Windows window handling: fixed resizing after restoring a maximized window, without the earlier re-maximize/restore workaround.\n- Interface: the software keyboard now follows the dark theme. Stop and exit confirmations initially focus Cancel to reduce accidental loss of unsaved progress.\n- Testing and packaging: extended input recording and replay to Windows, including clean automated recording completion. Generic Linux AppImages now have a distinct name from Steam Deck packages.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "f778c23e205c21306542c3ffafa82d232c3b2af602f7e6bbf94637a3b5c72d93",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorex-0-4-2",
+      "title": "【Android更新】EmuCoreX 0.4.2",
+      "originalTitle": "EmuCoreX 0.4.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T09:36:37Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.2",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.4.2，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.4.2。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.4.1...v0.4.2\n\n有什么新情况: 0.4.2\n\n• 更新控制编辑器\n• 其他修正和改进\n• 如果更新后遇到任何问题,请提供备份并进行清洁安装",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.1...v0.4.2\r\n\r\nWhat's new: 0.4.2\r\n\r\n- Updated the controls editor\r\n- Other fixes and improvements\r\n- If you encounter any issues after the update, make a backup and perform a clean installation",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "28b978e8f4b0846e777b0814000589749cf91a35d2d9e799d4d22952f9e49172",
+      "translationPending": false
+    },
+    {
+      "id": "137367",
+      "title": "【家用机】Suyu v0.0.12",
+      "originalTitle": "[Consoles de salon] Suyu v0.0.12",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-09-28T09:36:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137367-consoles-de-salon-suyu-v0-0-12/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/03/suyu.png",
+      "officialUrl": "https://github.com/dougchansan/suyu-v0.0.4",
+      "summary": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。 Suyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并 您可以在控制台上完成其余的工作。",
+      "content": "Suyu是任天堂Switch的开源模拟器。 它几乎完全覆盖了这款游戏机的游戏库。 Suyu是Yuzu的直接续集，后者最终停止，但它不是由同一作者开发的。\nSuyu仿真器的开发人员开始提供重要的演变，从实施Nintendo Switch主菜单开始。这个着名的主菜单Qlauncher是Yuzu团队留下但从未实现的代码，因此您现在可以运行游戏，关闭它们或访问设置并\n您可以在控制台上完成其余的工作。 当然，要运行套装，您必须使用任天堂的17.0.0 （或更高版本）固件。\n\n该项目在0.0.4版本之后被放弃，然后由开发人员DougChanSan从同一版本接管。\n\n变更内容：\n混合导出现在可以完成最终的Windows链接，并在生成的代码更改时安全返回JIT。 Windows下载包括匹配的构建套件，独立游戏包括其匹配的控件元数据。\n\n可移植导出配置其主机版本以发布和规范化Windows\n路径。Windows发行版版本使用VS 2022工具集基线。工具包记录\n其生产者编译器版本，并通过升级拒绝较旧的工具链\n编译前的消息。",
+      "originalContent": "Suyu est un émulateur open source de Nintendo Switch. Il offre une couverture presque complète de la bibliothèque de jeux de cette console. Suyu est la suite directe de Yuzu, suite à l’arrêt définitif de ce dernier, mais il n’est pas développé par les mêmes auteurs.\n\nLes développeurs de l'émulateur Suyu commence à proposer des évolutions importantes, à commencer par implémenter le menu d'accueil de la Nintendo Switch. Ce célèbre menu d'accueil, Qlauncher, est le code que la team Yuzu a laissé mais n'avait jamais implémenté, vous pouvez donc désormais exécuter des jeux, les fermer ou accéder aux paramètres et tout le reste comme vous pouvez le faire sur la console. Bien entendu pour faire tourner l'ensemble il faut utiliser le firmware 17.0.0 (ou supérieur) de Nintendo.\n\nCe projet a été abandonné après la version 0.0.4, avant d’être repris par le développeur DougChanSan à partir de cette même version.\n\nLes changements:\n\nHybrid exports can now complete the final Windows link and return safely to JIT when generated code changes. The Windows download includes a matched build kit, and standalone games include their matching Control metadata.\n\nPortable exports configure their host build for Release and normalize Windows\npaths. Windows release builds use the VS 2022 toolset baseline. The kit records\nits producer compiler version and rejects an older toolchain with an upgrade\nmessage before compilation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "ac8925470538c1ade654120cc0ef95ba04c78ccae33477f9c66658f60c38a06d",
+      "translationPending": false
+    },
+    {
+      "id": "137365",
+      "title": "【家用机】CraziiEmu v0.34 alpha",
+      "originalTitle": "[Consoles de salon] CraziiEmu v0.34 alpha",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T09:34:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137365-consoles-de-salon-craziiemu-v0-34-alpha/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/craziiemu-scaled.png",
+      "officialUrl": "https://github.com/craze1pirate/craziiEmu/",
+      "summary": "CraziiEmu是一个在Windows上运行PlayStation 5软件的实验项目，结合了仿真和兼容层。它是用.NET 10的C #开发的，适用于64位Windows系统 。基于开源SharpEmu项目，它集成了双模CPU执行引擎（全速原生x86-64执行或精确解析调试） ， Vulkan图形渲染，支持控制台的ELF和自格式，以及高达64GB的虚拟内存管理 。",
+      "content": "CraziiEmu是一个在Windows上运行PlayStation 5软件的实验项目，结合了仿真和兼容层。它是用.NET 10的C #开发的，适用于64位Windows系统\n。基于开源SharpEmu项目，它集成了双模CPU执行引擎（全速原生x86-64执行或精确解析调试） ， Vulkan图形渲染，支持控制台的ELF和自格式，以及高达64GB的虚拟内存管理\n。一切都包裹在流畅的控制台风格界面中，该界面采用Avalonia UI设计，具有游戏旋转木马、动态夹克管理以及完整的控制器和键盘映射。\n\n新功能包括：\n•集成了上游SharpEmu v0.0.4的基础更新和核心架构，包括现代化的Vulkan演示文稿原语、更新的ELF加载器结构和低级子系统接口。\n•设计了一个专用的高精度显示时钟，在HLE FLIP调用和内部GPU命令流FLIP中执行稳定的60 FPS目标节奏。\n•标准化的默认Vulkan演示文稿与邮箱回退的FIFO VSync同步，以消除屏幕撕裂并将帧速率锁定到主机显示刷新。\n•跨独立的专用子系统模块化了Vulkan图形引擎，用于命令流、描述符池、管道、交换链管理和访客抽签调用。\n•引入了专用的异步GPU工作线程，以消除每次绘图堆分配和演示文稿停滞。\n•实现了跨进程配置同步（ CRAZIIEMU_CONFIG ） ，确保设置更改（音量、音频切换、热键、输入地图）在250毫秒内实时应用，而无需重新启动模拟器。\n•通过实施翻转完成信号量和120Hz显示刷新报告，解决了Unity引擎渲染在商业标题（在我们中间）中的冻结问题。\n•将sceVideoOut事件队列ID与KytyPS5规范（ 0x00000000000001 ）和增强的sceKernelWaitEventQueue门唤醒对齐，以防止翻转死锁。\n•使用高级资源物化引擎、SSA标量值图和自动Vulkan绑定布局规划升级了Gen5着色器编译器。\n•为复杂的计算和像素着色器实现了结构化控制流程图分析和数据共享交换转换。\n•在着色器翻译器中扩展了标量均匀操作，并使严格的着色器中止选择加入，以实现更广泛的商业游戏着色器兼容性。\n•将自动化测试套件扩展到19个通过的测试套件，涵盖GPU时间线、内存视图、管道、信号量、着色器、音频增益和输入映射。\n•更新了经过验证的商业游戏兼容性文档，并展示了涵盖Sonic Superstars、Dead Cells、Among Us和Stray的媒体。",
+      "originalContent": "CraziiEmu est un projet expérimental visant à exécuter des logiciels PlayStation 5 sous Windows, en combinant émulation et couche de compatibilité. Il est développé en C# avec .NET 10 et est destiné aux systèmes Windows 64 bits. Basé sur le projet open-source SharpEmu, il intègre un moteur d'exécution CPU à double mode (exécution native x86-64 à pleine vitesse ou interprétation précise pour le débogage), le rendu graphique sous Vulkan, la prise en charge des formats ELF et SELF de la console, ainsi qu'une gestion de la mémoire virtuelle allant jusqu'à 64 Go. Le tout est enveloppé dans une interface fluide au style console conçue avec Avalonia UI, qui propose un carrousel de jeux, une gestion dynamique des jaquettes et un mappage complet des manettes et du clavier.\n\nLes nouveautés sont:\n\n- Integrated foundational updates and core architecture from upstream SharpEmu v0.0.4, including modernized Vulkan presentation primitives, updated ELF loader structures, and low-level subsystem interfaces.\n- Engineered a dedicated high-precision display clock enforcing a stable 60 FPS target cadence across both HLE flip calls and internal GPU command stream flips.\n- Standardized default Vulkan presentation to FIFO VSync synchronization with Mailbox fallback to eliminate screen tearing and lock framerate to the host display refresh.\n- Modularized the Vulkan graphics engine across independent, specialized subsystems for command streams, descriptor pools, pipelines, swapchain management, and guest draw calls.\n- Introduced a dedicated asynchronous GPU worker pipeline to eliminate per-draw heap allocations and presentation stalls.\n- Implemented cross-process configuration synchronization (CRAZIIEMU_CONFIG) ensuring settings changes (volume, audio toggle, hotkeys, input maps) apply live within 250ms without restarting the emulator.\n- Resolved Unity engine rendering freezes in commercial titles (Among Us) by implementing flip completion semaphore signaling and 120Hz display refresh reporting.\n- Aligned sceVideoOut event queue IDs with KytyPS5 specifications (0x0000000000000001) and enhanced sceKernelWaitEventQueue gate waking to prevent flip deadlocks.\n- Upgraded the Gen5 shader compiler with an advanced resource materialization engine, SSA scalar value graphs, and automatic Vulkan binding layout planning.\n- Implemented structured control flow graph analysis and data share swizzle translation for complex compute and pixel shaders.\n- Expanded scalar uniform operations in the shader translator and made strict shader aborts opt-in for broader commercial game shader compatibility.\n- Expanded the automated test suite to 19 passing test suites covering GPU timelines, memory views, pipelines, semaphores, shaders, audio gain, and input mappings.\n- Updated verified commercial game compatibility documentation and showcase media covering Sonic Superstars, Dead Cells, Among Us, and Stray.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "05aa3bb1c018cb94bc80a358567ab9cf8616852326c1b96e57ddbdeaa5ee67b1",
+      "translationPending": false
+    },
+    {
+      "id": "137362",
+      "title": "【家用机】GearSystem v3.9.19",
+      "originalTitle": "[Consoles de salon] GearSystem v3.9.19",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T07:08:57Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137362-consoles-de-salon-gearsystem-v3-9-19/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/07/Gearsystem.png",
+      "officialUrl": "https://github.com/drhelius/Gearsystem",
+      "summary": "这是一个由Ignacio Sanchez用C + +编写的8位SEGA模拟器。 它模拟以下机器： •世嘉Mark III •世嘉Master System •世嘉游戏装备 •世嘉Game 1000 （ SG-1000 ） • Othello Multivision 因此，以下是变化： 🔊 修复了垂直同步音频不足 🎮 更新了游戏控制器数据库 🐛 许多错误修复和改进 32位二进制文件由Lo v2编译。",
+      "content": "这是一个由Ignacio Sanchez用C + +编写的8位SEGA模拟器。\n\n它模拟以下机器：\n•世嘉Mark III\n•世嘉Master System\n•世嘉游戏装备\n•世嘉Game 1000 （ SG-1000 ）\n• Othello Multivision\n\n因此，以下是变化：\n\n🔊 修复了垂直同步音频不足\n🎮 更新了游戏控制器数据库\n🐛 许多错误修复和改进\n32位二进制文件由Lo v2编译。",
+      "originalContent": "Il s'agit d'un émulateur de Sega 8 bits écrit en C++ par Ignacio Sanchez.\n\nIl émule les machines suivantes:\n- Sega Mark III\n- Sega Master System\n- Sega Game Gear\n- Sega Game 1000 (SG-1000)\n- Othello Multivision\n\nVoici donc les changements:\n\n🔊 Fixed VSync audio underruns\n🎮 Updated Game Controller DB\n🐛 Many bug fixes and improvements\n\nLe binaire 32 bits est compilé par Lo v2.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "gearsystem"
+      ],
+      "contentHash": "e9160cc5caf43f76df397e32db9dc3864641f172c558c39184d6a04359a83754",
+      "translationPending": false
+    },
+    {
+      "id": "137360",
+      "title": "【家用机】XaviXEmu v0.4.1",
+      "originalTitle": "[Consoles de salon] XaviXEmu v0.4.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T07:06:50Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137360-consoles-de-salon-xavixemu-v0-4-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/xavix.jpg",
+      "officialUrl": "https://github.com/BillyJr0127/XaviXEmu",
+      "summary": "XaviXEmu是一款用于Windows的实验性和开源模拟器，专门用于一些XaviX、XaviX 2000和XaviX 2电视游戏。该项目侧重于记录硬件行为，模拟运动输入，可重复测试，并保存对包括原始光学配件在内的系统的研究 很难与现代显示器配合使用。 变更内容： •超级短跑球、高尔夫和Hamtaro ：固定超级短跑球的摇杆方向，添加高尔夫可配置的挥杆/空间动作，改进的Hamtaro控制，校正的TV-PC鼠标坐标和更新的可玩性评级。",
+      "content": "XaviXEmu是一款用于Windows的实验性和开源模拟器，专门用于一些XaviX、XaviX 2000和XaviX 2电视游戏。该项目侧重于记录硬件行为，模拟运动输入，可重复测试，并保存对包括原始光学配件在内的系统的研究\n很难与现代显示器配合使用。\n\n变更内容：\n\n•超级短跑球、高尔夫和Hamtaro ：固定超级短跑球的摇杆方向，添加高尔夫可配置的挥杆/空间动作，改进的Hamtaro控制，校正的TV-PC鼠标坐标和更新的可玩性评级。\n•发行和分发：增加了繁体中文设置、控件、40个ZIP映射和0.4.1发行说明，同时分发二进制文件，无需发布源代码。\n•显示和启动选项：在菜单包装期间保留游戏视口大小，使用直接ROM路径添加-f、-w1--w4和-s 4: 3启动选项，并防止临时显示覆盖。\n• UI和版本控制：简化“关于”部分以列出XaviX/2000/2的XaviXEmu ，将应用版本更新为0.4.1 ，并在README中记录了所有40个ZIP标题和状态。\n•画布和缩放：在稳定的320x240画布上固定XaviX2窗口缩放，并在640x480启动屏幕期间将Take-copter的4x窗口锁定为1280x960。\n•可玩性：将Choro-Q Byun Byun Racer、Disney Princess、Doraemon Taikan Take-copter、Ham-chans和IDATEN JUMP标记为完全可玩。\n• Dragon Ball Z2持久性：将Dragon Ball Z2的1024字节EEPROM与快照分开，以便在重启和F7加载期间保持故事保存。\n•渲染和性能：修复了Dragon Ball Z2中的下面板颜色闪烁，并将空多边形列表优化为单调色板框架保护。\n• XaviX 2深度和排序：对龙珠中的剔除多边形和广告牌锚点进行固定深度排序，消除以前的排序变通方法。\n•诊断：在不修改运行时状态布局的情况下，将可选的提交/活动线诊断和定期帧缓冲区捕获添加到启动探针。\n•窗口缩放：修复了库启动缩放，因此选定的1x–4x窗口缩放在重新启动游戏后保持不变。\n•半透明和着色器：实现了交错的RGB444 + Nalpha调色板解码，修复了Take-copter的云/雾渲染，并清理了混合的3D/2D精灵边缘。\n• Alpha Composition & IRQ ：校正预乘Alpha混合数学和将Take-copter的F7序列同步到稳定的60 Hz帧速率。\n•滤镜和效果：实现了RPU四点双线性滤镜，用于平滑精灵缩放，并为天空渐变添加了$ e620 2x2 Gouraud抖动图案。\n• GPU提交：合并了Take-copter的双GPU提交，以修复字符和云层上的全屏幕颜色淡入淡出。\n•拍摄控制：添加了一个完整的4x4头部倾斜输入驱动程序，用于拍摄支持鼠标、键盘、游戏手柄和Wii指针的自定义手势操作。\n• UI暂停菜单：添加了Escape确认菜单，以安全地暂停、保存EEPROM、返回库或恢复模拟。\n•游戏库：添加了可搜索、可排序的游戏库，包括驱动器扫描、缩略图支持、详细的标题元数据和自定义的每场比赛控件。\n• ROM识别和配置文件：为七个新的ROM （ rad_mtrk、rad_snow等）、干净的输入配置文件和单独的状态标识添加了精确检测。\n•车辆控制：增加了鼠标、键盘和游戏手柄模拟控制，具有细粒度倾斜和占空比转向功能，适用于早期赛车系统。",
+      "originalContent": "XaviXEmu est un émulateur expérimental et open source pour Windows, dédié à certains jeux télévisés XaviX, XaviX 2000 et XaviX 2. Le projet se concentre sur la documentation du comportement matériel, l’émulation des entrées de mouvement, les tests reproductibles et la préservation des recherches sur des systèmes dont les accessoires optiques d’origine sont difficiles à utiliser avec les écrans modernes.\n\nLes changements:\n\n- Super Dash Ball, Golf & Hamtaro: Fixed stick directions for Super Dash Ball, added Golf's configurable swing/space action, improved Hamtaro controls, corrected TV-PC mouse coordinates, and updated playability ratings.\n- Release & Distribution: Added Traditional Chinese setup, controls, 40 ZIP mappings, and 0.4.1 release notes while distributing binaries without publishing source code.\n- Display & Launch Options: Preserved game viewport size during menu wrapping, added -f, -w1–-w4, and -s 4:3 launch options with direct ROM paths, and prevented saving temporary display overrides.\n- UI & Versioning: Simplified About section to list XaviXEmu for XaviX/2000/2, updated app version to 0.4.1, and documented all 40 ZIP titles and statuses in the README.\n- Canvas & Zoom: Fixed XaviX2 window zoom on a stable 320x240 canvas and locked Take-copter's 4x window to 1280x960 during its 640x480 startup screen.\n- Playability: Marked Choro-Q Byun Byun Racer, Disney Princess, Doraemon Taikan Take-copter, Ham-chans, and IDATEN Jump as fully playable.\n- Dragon Ball Z2 Persistence: Separated Dragon Ball Z2's 1024-byte EEPROM from snapshots to keep story saves persistent across restarts and F7 loads.\n- Rendering & Performance: Fixed lower-panel color flashes in Dragon Ball Z2 and optimized empty polygon lists to single-palette frame protection.\n- XaviX 2 Depth & Ordering: Fixed depth sorting for culled polygons and billboard anchors in Dragon Ball, removing previous ordering workarounds.\n- Diagnostics: Added optional submission/active-line diagnostics and periodic framebuffer captures to the boot probe without modifying runtime state layout.\n- Window Scaling: Fixed library launch scaling so selected 1x–4x window scales persist after restarting a game.\n- Translucency & Shaders: Implemented interleaved RGB444+Nalpha palette decoding, fixed Take-copter's cloud/haze rendering, and cleaned up blended 3D/2D sprite edges.\n- Alpha Composition & IRQ: Corrected premultiplied alpha blending math and synced Take-copter's F7 sequence to a stable 60 Hz frame rate.\n- Filters & Effects: Implemented the RPU four-tap bilinear filter for smooth sprite scaling and added a $e620 2x2 Gouraud dither pattern for sky gradients.\n- GPU Submissions: Merged Take-copter's dual GPU submissions to fix full-screen color fade layering over characters and clouds.\n- Take-copter Controls: Added a full 4x4 head-tilt input driver for Take-copter supporting mouse, keyboard, gamepad, and Wii pointers with custom gestural actions.\n- UI Pause Menu: Added an Escape confirmation menu to safely pause, save EEPROM, return to the library, or resume emulation.\n- Game Library: Added a searchable, sortable game library with drive scanning, thumbnail support, detailed title metadata, and custom per-game controls.\n- ROM Recognition & Profiles: Added exact detection for seven new ROMs (rad_mtrk, rad_snow, etc.), clean input profiles, and separate state identities.\n- Vehicle Controls: Added mouse, keyboard, and gamepad analogue controls with fine-grained tilt and duty-cycle steering for early racing systems.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xemu"
+      ],
+      "contentHash": "5933ec19d8b3be12d4c7e13b4fdefc2c358139f59468e973a4afb78c9f31109c",
+      "translationPending": false
+    },
     {
       "id": "android-release-duckstation-preview",
       "title": "【Android更新】DuckStation preview",
@@ -30,31 +353,6 @@
         "duckstation"
       ],
       "contentHash": "3082a2221a837fc5b1a9fd0d2e2eb1314b72db387e2f3698de288a63864f33ff",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-28T00:30:43Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_megadrive.cpp, d_nes.cpp, d_ngp.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_nes.cpp, d_ngp.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "29f9671626a35221138c06479173012203cb5d7b050375b6b7951396e10423f1",
       "translationPending": false
     },
     {
@@ -101,30 +399,6 @@
         "winuae_pc"
       ],
       "contentHash": "43865e21fae51afe51a076a9185952e75a53764c7dfca5403c048461e761cd3b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260927",
-      "title": "【Android更新】ARMSX2 nightly-20260927",
-      "originalTitle": "ARMSX2 nightly-20260927 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-27T14:23:43Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260927",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260927，发布日期为2026年09月27日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260927。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• Android:将搜索部分置于括号内\n• 测试:设定全磁盘文件尺寸限制在进程之中,而不是在叉子上\n• GS:在缓存文件存储中包括:back_插入器\n• GS:清除GS线上的阴影缓存\n• GS:以身份命名的缓存文件,因此两栋楼各保留一栋\n• GS:在添加和删除后,只从源文件建立身份\n• GS:缓存库审查修正:锁、失效附件、就地清除\n• GS/Vulkan:记录字节的管道键字节\n• GS:将缓存身份的输入从平地流出\n• Android:在每个新安装上擦去GS缓存并清除所有装置\n• Qt,全屏UI:清除缓存\n• GS:直接3D和帧生成缓存跟踪构建身份\n• GS/OpenGL:已检查商店的程序二进制\n• GS/Vulkan:在大楼上盖有管道钥匙清单,按记录核对\n• GS/Vulkan:印出和核对SPIR-V和管道缓存\n• GS:用于遮蔽器和管道缓存的一盘盘式检查\n• GS/Vulkan:在Linux的15个字符内列出预编工名\n• GS/Vulkan:计算预编等待和记录每个工人的工作\n• GS/Vulkan:每个配置按会话列出的关键清单,内存有限制\n• gsrunner:在命令行前,而不是在命令行后,将预编译出\n• GS/Vulkan:编译前审查修正:工作失败、缓存污垢、指标\n• GS:仅由硬件渲染器进行管道预编译\n• gsrunner:管道预编译,除非要求\n• GS/Vulkan:启动时在工人线上建造每个游戏记录的管道\n• GS/Vulkan:保持SPIR-V缓存的驱动程序变化\n• GS:每个阶段、每个框架的倒影和管道汇编\n• 测试:将DATE模式贴在驱动程序命令的已宣布反馈回路上\n• GS:在发文时为DATE提供按驱动程序订购的申报反馈循环服务\n• Gsrunner: - 不,stencil-buffer,以放置 pre-26.2 一个二进制的 Turnip Date 选择\n• Android:在崩溃测试运行前结束搜索跳出\n• Android:设置搜索按名称打开目标区域\n• Android:当组合调制器被放出时,结束快速前起站\n• Android:发现崩溃的设置搜索目标\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260926...e2f7d015cb2e8f21dabf11f57c26c8f19b3ab51d",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- Android: parenthesise the search-sections fallback\n- tests: set the full-disk file size limit in process, not in a forked child\n- GS: include <iterator> for std::back_inserter in the cache file store\n- GS: clear the shader cache on the GS thread\n- GS: cache files named by identity, so two builds keep one each\n- GS: build identity from source files only, following adds and removes\n- GS: cache store review fixes: locks, failed appends, in-place clears\n- GS/Vulkan: record pipeline keys byte for byte\n- GS: hash the cache identity's inputs from a plain glob\n- Android: wipe the GS caches on every new install, and clear all of them\n- Qt, FullscreenUI: Clear Shader Cache\n- GS: Direct3D and frame-generation caches follow the build identity\n- GS/OpenGL: program binaries on the checked store\n- GS/Vulkan: pipeline key lists stamped with the build, checked per record\n- GS/Vulkan: stamp and checksum the SPIR-V and pipeline caches\n- GS: one checked on-disk format for the shader and pipeline caches\n- GS/Vulkan: name the precompile workers within Linux's 15 characters\n- GS/Vulkan: count precompile waits and log each worker's work\n- GS/Vulkan: key lists per configuration, by session, with bounded memory\n- gsrunner: pin precompile off before the command line, not after\n- GS/Vulkan: precompile review fixes: failed jobs, cache dirtiness, indicator\n- GS: pipeline precompile only under the hardware renderer\n- gsrunner: pipeline precompile off unless asked for\n- GS/Vulkan: build each game's recorded pipelines on worker threads at start\n- GS/Vulkan: keep the SPIR-V cache across a driver change\n- GS: count shader and pipeline compilation per stage, per frame\n- tests: pin the DATE mode on a driver-ordered declared feedback loop\n- GS: serve DATE in the pass on a driver-ordered declared feedback loop\n- gsrunner: -no-stencil-buffer, to put the pre-26.2 Turnip DATE choices on one binary\n- Android: end the search jump before the collapse test runs\n- Android: settings search opens the target's section by name\n- Android: end fast-forward hold when combo modifier is released\n- Android: reveal collapsed settings search targets\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260926...e2f7d015cb2e8f21dabf11f57c26c8f19b3ab51d",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "1cb10673531d7b1043d74d7ad4c115c3dc08824be754e67ee19da186a0c6720b",
       "translationPending": false
     },
     {
@@ -439,30 +713,6 @@
         "copperline_pc"
       ],
       "contentHash": "3d8bc28090738fe0c07c00e5f13fc0a429f4440eb29cd8cb977d3501397405ca",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-winnative-0-7-0-beta",
-      "title": "【Android更新】WinNative 0.7.0-beta",
-      "originalTitle": "WinNative 0.7.0-beta Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-26T11:54:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/WinNative-Emu/WinNative/releases/tag/v0.7.0-beta",
-      "imageUrl": "asset://assets/emulators/winnative.png",
-      "officialUrl": "https://github.com/WinNative-Emu/WinNative",
-      "summary": "WinNative 发布 Android 新版本 0.7.0-beta，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "WinNative 已发布 Android 最新版本 0.7.0-beta。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 由@maxjivi05修复控制\n• Add Itch.io 由 @ Juan- Antonio- Doe 播放备份\n• 特性/外部存储由@maxjivi05\n• 由@maxjivi05修复未启动的直接Audio发射\n• 由@qwertypower更新综合安全分遣队\n• 将 ANR 固定的卫士从 XServerDisplay Activity 移动到 TouchpadView 和输入控制视频 由 @ Juan-Antonio- Doe 编写\n• 由@maxjivi05提供蒸汽控制器支持、控制器测试和视觉粘接器\n• 修复Steam Controller USB访问和Android库导航,由@maxjivi05操作\n• 由@ajay9634更新Ajay Prefix Pro下载器至v3\n• 修复:在保存时,由@Juan-Antonio-Doe进行32位核心亲和\n• 由@qwertypower更新综合安全分遣队\n由@maxjivi05和@The412Banner制作\n• 综合安全分遣队:提高光滑度,消除大相径庭的NaN。\n• 站台:由@maxjivi05增强\n\n\n完整更改日志 : https://github.com/WinNative-Emu/WinNative/compare/v0.6.2-beta...v0.7.0-beta",
-      "originalContent": "## What's Changed\r\n* Fix controls by @maxjivi05 \r\n* Add Itch.io to google play backup by @Juan-Antonio-Doe\r\n* Feature/external storage by @maxjivi05 \r\n* Fix DirectAudio launches failing to boot by @maxjivi05 \r\n* Update DIS by @qwertypower \r\n* Move ANR fix guards from XServerDisplayActivity to TouchpadView and InputControlsView by @Juan-Antonio-Doe \r\n* Steam Controller support, controller test and visual binder by @maxjivi05 \r\n* Fix Steam Controller USB access and Android library navigation by @maxjivi05 \r\n* Updated Ajay Prefix Pro Downloader to v3 by @ajay9634 \r\n* Fix: 32-bit core affinity resets when saving by @Juan-Antonio-Doe \r\n* Update DIS by @qwertypower \r\n* Feature Wayland, GameScope, Steam by @maxjivi05 and @The412Banner \r\n* DIS: improve smoothness, eliminate NaN on huge frames difference. by @qwertypower \r\n* proot: enhancements by @maxjivi05 \r\n\r\n\r\n**Full Changelog**: https://github.com/WinNative-Emu/WinNative/compare/v0.6.2-beta...v0.7.0-beta",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "winnative"
-      ],
-      "contentHash": "536cf91b92d59cb8376d87ab83707f2d2cfe278afb507e119fcb4f4ae8934471",
       "translationPending": false
     },
     {
@@ -814,30 +1064,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "f072330b96291bf8d84db391d3bd0d837f3df7bc0d56be4bec825b84dc76e792",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-emucorex-0-4-1",
-      "title": "【Android更新】EmuCoreX 0.4.1",
-      "originalTitle": "EmuCoreX 0.4.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-24T18:21:55Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.1",
-      "imageUrl": "asset://assets/emulators/emucorex.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
-      "summary": "EmuCoreX 发布 Android 新版本 0.4.1，发布日期为2026年09月24日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreX 已发布 Android 最新版本 0.4.1。\n\n发布日期：2026年09月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n最新消息： 0.4.1\n\n• Mali\\ PowerVR的初始Vulkan修复\n•将Mali\\ PowerVR的默认渲染器更改为Vulkan\n•其他修复和优化\n• Google批准后，更新将在Play商店中提供\n建议进行全新安装，因为已经进行了许多修复和优化",
-      "originalContent": "What's New: 0.4.1\r\n\r\n- Initial Vulkan fixes for Mali\\PowerVR\r\n- Changed the default renderer for Mali\\PowerVR to Vulkan\r\n- Other fixes and optimizations\r\n- The update will be available on the Play Store after Google's approval\r\nA clean installation is recommended, as many fixes and optimizations have been made",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorex"
-      ],
-      "contentHash": "bf0e936e20167e3f5dba36ffbd9581d8646e5fa5ee8c598cc610eb55db2341db",
       "translationPending": false
     },
     {
@@ -4307,30 +4533,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "9376432f355ca5e6956f00ed0367872005704c06ee39c6fffa50cae83b04c0db",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-ruffle_android-0-260907",
-      "title": "【Android更新】Ruffle (Android) 0.260907",
-      "originalTitle": "Ruffle (Android) 0.260907 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-07T11:50:42Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.260907",
-      "imageUrl": "asset://assets/emulators/ruffle_android.png",
-      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
-      "summary": "Ruffle (Android) 发布 Android 新版本 0.260907，发布日期为2026年09月07日。点击查看官方版本信息与更新说明。",
-      "content": "Ruffle (Android) 已发布 Android 最新版本 0.260907。\n\n发布日期：2026年09月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 生锈工具链 1.98.0 to 1.98.1 由 @dependabot [bot] 输入 https://github.com/ruffle-rs/ruffle-android/pull/831\n由@dependabot[bot]在1个目录中跳出生锈-小块,并进行10个更新 https://github.com/ruffle-rs/ruffle-android/pull/835\n• 弹出 ruffle 组合到一个目录, 由 @ dedependabot [bot] 更新 9个 https://github.com/ruffle-rs/ruffle-android/pull/833\n• 弦乐:吹起狂风来 0.3.6 由 @torokati44 编辑。 https://github.com/ruffle-rs/ruffle-android/pull/836\n• 由 @ RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/837\n\n\n完整更改日志 : https://github.com/ruffle-rs/ruffle-android/compare/0.260902...0.260907",
-      "originalContent": "## What's Changed\n* Bump rust-toolchain from 1.98.0 to 1.98.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/831\n* Bump the rust-minor group across 1 directory with 10 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/835\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/833\n* chore: Bump Rascal to 0.3.6 by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/836\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/837\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260902...0.260907",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "ruffle_android"
-      ],
-      "contentHash": "4b85deefc863021e4ef72e90205f9257d5ea502208d09dacb4a7b868c3b1bdde",
       "translationPending": false
     },
     {
