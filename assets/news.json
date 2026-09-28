@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T17:17:22.533838Z",
+  "generatedAt": "2026-09-28T05:48:49.464616Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,101 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T02:23:42Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•丢弃反馈循环路径（ Stenzek（https://github.com/stenzek/duckstation/commit/0619481dcbecdb95f626754c4dcfc6322070a44a） ）\n•修复流缓冲区中不正确的危险跟踪（ Stenzek（https://github.com/stenzek/duckstation/commit/dc4e7729809838a77b7a8c392c691de5b7fee3c1） ）\n• 5e54cad ： GPU/HW ：修复TC切换关闭后背景替换消失的问题（ Stenzek ）\n• 10632b9 ： GPU/HW ：简化管道布局（ Stenzek ）\n•将模糊常量移动到主UBO （ Stenzek（https://github.com/stenzek/duckstation/commit/2ab88c6d9b747252dfaec87585f9af4dd34274b2） ）\n•删除MultiTextureAndUBO管道布局（ Stenzek（https://github.com/stenzek/duckstation/commit/28591625519a71bcad8a459c54d3071e5ff14bf7） ）\n•将UNIFORM_PUSH_CONSTANTS_SIZE移动到基类（ Stenzek（https://github.com/stenzek/duckstation/commit/de1fd8c667f5269276758ec19874108813511a85） ）\n•删除MAX_UNIFIRM_BUFFER_SIZE （ Stenzek（https://github.com/stenzek/duckstation/commit/9fcff157a27530975d91e1aab84d3c822b06b1b9） ）\n•确保在LookupSingle () (Stenzek（https://github.com/stenzek/duckstation/commit/d901b25907f1c24ca7a9e1a3f71d67af12cb225d）)中初始化所有采样器\n•为标题添加背景图像模糊（ Stenzek（https://github.com/stenzek/duckstation/commit/f3d28435414c34eeace948e5e7765e9693694f0b） ）\n•在子集视图中将子集图标显示为游戏图标（ Stenzek（https://github.com/stenzek/duckstation/commit/c4b4496e9b3c7d64f0a9ec6e63b01b998f22b825） ）\n•过渡激活时，将叠加层存放在单独的绘制列表中（ Stenzek（https://github.com/stenzek/duckstation/commit/616c41d4927b00b17a4ecd7c4b43a8319551e5f7） ）\n•避免核心线程上不安全的上下文指针读取（ Stenzek（https://github.com/stenzek/duckstation/commit/d78fd23db934cabc38d66e9a3dd8106f27a00772） ）",
+      "originalContent": "## Commits\n- Drop feedback loop path ([Stenzek](https://github.com/stenzek/duckstation/commit/0619481dcbecdb95f626754c4dcfc6322070a44a))\n- Fix incorrect hazard tracking in stream buffer ([Stenzek](https://github.com/stenzek/duckstation/commit/dc4e7729809838a77b7a8c392c691de5b7fee3c1))\n- 5e54cad: GPU/HW: Fix background replacements disappearing after TC toggled off (Stenzek)\n- 10632b9: GPU/HW: Simplify pipeline layouts (Stenzek)\n- Move blur constants into main UBO ([Stenzek](https://github.com/stenzek/duckstation/commit/2ab88c6d9b747252dfaec87585f9af4dd34274b2))\n- Remove MultiTextureAndUBO pipeline layout ([Stenzek](https://github.com/stenzek/duckstation/commit/28591625519a71bcad8a459c54d3071e5ff14bf7))\n- Move UNIFORM_PUSH_CONSTANTS_SIZE into base class ([Stenzek](https://github.com/stenzek/duckstation/commit/de1fd8c667f5269276758ec19874108813511a85))\n- Remove MAX_UNIFORM_BUFFER_SIZE ([Stenzek](https://github.com/stenzek/duckstation/commit/9fcff157a27530975d91e1aab84d3c822b06b1b9))\n- Ensure all samplers are initialized in LookupSingle() ([Stenzek](https://github.com/stenzek/duckstation/commit/d901b25907f1c24ca7a9e1a3f71d67af12cb225d))\n- Add background image blurring for headers ([Stenzek](https://github.com/stenzek/duckstation/commit/f3d28435414c34eeace948e5e7765e9693694f0b))\n- Display subset icon as game icon in subset view ([Stenzek](https://github.com/stenzek/duckstation/commit/c4b4496e9b3c7d64f0a9ec6e63b01b998f22b825))\n- Stash overlays in separate draw list when transition active ([Stenzek](https://github.com/stenzek/duckstation/commit/616c41d4927b00b17a4ecd7c4b43a8319551e5f7))\n- Avoid unsafe read of context pointer on core thread ([Stenzek](https://github.com/stenzek/duckstation/commit/d78fd23db934cabc38d66e9a3dd8106f27a00772))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "3082a2221a837fc5b1a9fd0d2e2eb1314b72db387e2f3698de288a63864f33ff",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T00:30:43Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_megadrive.cpp, d_nes.cpp, d_ngp.cpp: 各种(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_nes.cpp, d_ngp.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "29f9671626a35221138c06479173012203cb5d7b050375b6b7951396e10423f1",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-gearsystem-3-9-19",
+      "title": "【Android更新】Gearsystem 3.9.19",
+      "originalTitle": "Gearsystem 3.9.19 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T21:36:41Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/drhelius/Gearsystem/releases/tag/3.9.19",
+      "imageUrl": "asset://assets/emulators/gearsystem.png",
+      "officialUrl": "https://github.com/drhelius/Gearsystem",
+      "summary": "Gearsystem 发布 Android 新版本 3.9.19，发布日期为2026年09月27日。点击查看官方版本信息与更新说明。",
+      "content": "Gearsystem 已发布 Android 最新版本 3.9.19。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n• 固定V同步音频运行不足\n• QQ 更新游戏控制器 DB\n• 有许多错误修正和改进\n\n完整更改日志 : https://github.com/drhelius/Gearsystem/compare/3.9.18...3.9.19",
+      "originalContent": "- 🔊 Fixed VSync audio underruns\r\n- 🎮 Updated Game Controller DB\r\n- 🐛 Many bug fixes and improvements\r\n\r\n**Full Changelog**: https://github.com/drhelius/Gearsystem/compare/3.9.18...3.9.19",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gearsystem"
+      ],
+      "contentHash": "e967e694a58c42cdf4e62065a0bcaf8ef78446f05ddd41788840ac3b37e70b86",
+      "translationPending": false
+    },
+    {
+      "id": "137355",
+      "title": "【电脑】WinUAE (Public Beta) v6.1.0 Beta 16",
+      "originalTitle": "[Ordi.] WinUAE (Public Beta) v6.1.0 Beta 16",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-27T20:13:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137355-ordi-winuae-public-beta-v6-1-0-beta-16/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/09/winuae.png",
+      "officialUrl": "http://eab.abime.net",
+      "summary": "优秀的WinUAE的最新公测版本， Commodore Amiga仿真器。 译文由Tradu-France签名。 这里的变化。",
+      "content": "优秀的WinUAE的最新公测版本， Commodore Amiga仿真器。 译文由Tradu-France签名。\n\n这里的变化。",
+      "originalContent": "La dernière version béta publique de l'excellent WinUAE, l'émulateur Commodore Amiga. La traduction est signée Tradu-France.\n\nLes changements ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "winuae_pc"
+      ],
+      "contentHash": "43865e21fae51afe51a076a9185952e75a53764c7dfca5403c048461e761cd3b",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx2-nightly-20260927",
       "title": "【Android更新】ARMSX2 nightly-20260927",
@@ -301,30 +396,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-27T07:52:09Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月27日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• a2edf2d: 更新意大利语翻译 (#3807) (Davide Pesavento) #3807（https://github.com/stenzek/duckstation/pull/3807）",
-      "originalContent": "## Commits\n- a2edf2d: Update Italian translation (#3807) (Davide Pesavento) [#3807](https://github.com/stenzek/duckstation/pull/3807)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "2ba372979ae353cf3c2183f9cd07d515e2ec99d8606e3edb1f76d085a59abc5d",
-      "translationPending": false
-    },
-    {
       "id": "android-release-gearcoleco_core-1-7-1",
       "title": "【Android更新】Gearcoleco (RetroArch 核心) 1.7.1",
       "originalTitle": "Gearcoleco (RetroArch 核心) 1.7.1 Android release",
@@ -346,31 +417,6 @@
         "gearcoleco_core"
       ],
       "contentHash": "a8652fc8cd0157852c4885e9e56ff6f821099fed8942a8a4b8fbb8c4a81faa99",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-26T19:49:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月26日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_gba.cpp, d_sms.cpp, d_snes.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_gba.cpp, d_sms.cpp, d_snes.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "21e0d20f23c5a1e7b1290bd3b1965cb33ea0d5e098f446d6cb9a415e2ccb8ee5",
       "translationPending": false
     },
     {
@@ -5616,30 +5662,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "29bb84beb595088d84c92a2ae7385a1fb2af546dff95eb29a1badc46aba232a3",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-gearsystem-3-9-18",
-      "title": "【Android更新】Gearsystem 3.9.18",
-      "originalTitle": "Gearsystem 3.9.18 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-01T23:23:19Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/drhelius/Gearsystem/releases/tag/3.9.18",
-      "imageUrl": "asset://assets/emulators/gearsystem.png",
-      "officialUrl": "https://github.com/drhelius/Gearsystem",
-      "summary": "Gearsystem 发布 Android 新版本 3.9.18，发布日期为2026年09月01日。点击查看官方版本信息与更新说明。",
-      "content": "Gearsystem 已发布 Android 最新版本 3.9.18。\n\n发布日期：2026年09月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n• 新的iOS App(正在开发中)\n• 提高游戏Gear短消息模式的准确性\n• 以不同的刷新率进行更好的VSync\n• 最小化输入滞后120、144和240赫兹屏幕\n• QQ 更新游戏控制器 DB\n• 改进调试器工具\n• 有许多错误修正和改进\n\n完整更改日志 : https://github.com/drhelius/Gearsystem/compare/3.9.17...3.9.18",
-      "originalContent": "- 📱 New iOS App (in development)\r\n- 🎯 Improved accuracy in Game Gear SMS mode\r\n- 🖥️ Better VSync at different refresh rates\r\n- 🚀 Minimized input lag with 120, 144 and 240 Hz screens\r\n- 🎮 Updated Game Controller DB\r\n- ⚙️ Improved debugger tools\r\n- 🐛 Many bug fixes and improvements\r\n\r\n**Full Changelog**: https://github.com/drhelius/Gearsystem/compare/3.9.17...3.9.18",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "gearsystem"
-      ],
-      "contentHash": "05299c199de3efd23d80057f80f9dd6647c82df82f969deebee797b5ac07037d",
       "translationPending": false
     },
     {
