@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T19:51:04.067907Z",
+  "generatedAt": "2026-09-29T06:09:26.156053Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,52 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T01:57:29Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月29日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月29日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•将std:: shared_mutex替换为Threading:: SharedMutex （ Stenzek（https://github.com/stenzek/duckstation/commit/8a46ed8b7dc2d6a6dfc5bbfcb588fbbdc8f09515） ）\n•在VERTICAL_DISPLAY_START （ Stenzek（https://github.com/stenzek/duckstation/commit/60f7ffa2d01852458adf97944cf2030f61597214） ）之前修复扫描线同步\n•提高CRTC功能的可读性（ Stenzek（https://github.com/stenzek/duckstation/commit/bfb23fb8c94706e7a11d614157b6b47c938f9c59） ）",
+      "originalContent": "## Commits\n- Replace std::shared_mutex with Threading::SharedMutex ([Stenzek](https://github.com/stenzek/duckstation/commit/8a46ed8b7dc2d6a6dfc5bbfcb588fbbdc8f09515))\n- Fix scanline sync before vertical_display_start ([Stenzek](https://github.com/stenzek/duckstation/commit/60f7ffa2d01852458adf97944cf2030f61597214))\n- Improve CRTC function readability ([Stenzek](https://github.com/stenzek/duckstation/commit/bfb23fb8c94706e7a11d614157b6b47c938f9c59))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "a98c791c8d4e1a3f657083b392f27deca4f198836f5e61504ff50b74b9174163",
+      "translationPending": false
+    },
+    {
+      "id": "137388",
+      "title": "【其他】PokketStation v1.14",
+      "originalTitle": "[Consoles portables] PokketStation v1.14",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-09-28T21:22:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137388-consoles-portables-pokketstation-v1-14/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/PokketStation-1.png",
+      "officialUrl": "https://github.com/mentalfoundry/pokketstation",
+      "summary": "它是Sony PocketStation的开源模拟器，用便携式C编写，旨在用作Windows、Linux和macOS上的libretro核心、独立应用程序，以及通过PlayStation Vita的自制端口 。该项目旨在尽可能接近原始硬件，并支持LCD显示屏、按钮、闪存、声音和红外通信。",
+      "content": "它是Sony PocketStation的开源模拟器，用便携式C编写，旨在用作Windows、Linux和macOS上的libretro核心、独立应用程序，以及通过PlayStation Vita的自制端口\n。该项目旨在尽可能接近原始硬件，并支持LCD显示屏、按钮、闪存、声音和红外通信。",
+      "originalContent": "Il s'agit d'un émulateur open source de la Sony PocketStation, écrit en C portable et conçu pour être utilisé sous forme de core libretro, d'application autonome sous Windows, Linux et macOS, ainsi que via un portage homebrew pour PlayStation Vita. Le projet vise une émulation aussi fidèle que possible au matériel original et prend notamment en charge l'affichage LCD, les boutons, la mémoire Flash, le son et les communications infrarouges.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "5adb14309b8454e7611828f13cbc17731edb90ca25a7a1d985576216da79331a",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx2-nightly-20260928",
       "title": "【Android更新】ARMSX2 nightly-20260928",
@@ -329,30 +375,6 @@
         "xemu"
       ],
       "contentHash": "5933ec19d8b3be12d4c7e13b4fdefc2c358139f59468e973a4afb78c9f31109c",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-28T02:23:42Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•丢弃反馈循环路径（ Stenzek（https://github.com/stenzek/duckstation/commit/0619481dcbecdb95f626754c4dcfc6322070a44a） ）\n•修复流缓冲区中不正确的危险跟踪（ Stenzek（https://github.com/stenzek/duckstation/commit/dc4e7729809838a77b7a8c392c691de5b7fee3c1） ）\n• 5e54cad ： GPU/HW ：修复TC切换关闭后背景替换消失的问题（ Stenzek ）\n• 10632b9 ： GPU/HW ：简化管道布局（ Stenzek ）\n•将模糊常量移动到主UBO （ Stenzek（https://github.com/stenzek/duckstation/commit/2ab88c6d9b747252dfaec87585f9af4dd34274b2） ）\n•删除MultiTextureAndUBO管道布局（ Stenzek（https://github.com/stenzek/duckstation/commit/28591625519a71bcad8a459c54d3071e5ff14bf7） ）\n•将UNIFORM_PUSH_CONSTANTS_SIZE移动到基类（ Stenzek（https://github.com/stenzek/duckstation/commit/de1fd8c667f5269276758ec19874108813511a85） ）\n•删除MAX_UNIFIRM_BUFFER_SIZE （ Stenzek（https://github.com/stenzek/duckstation/commit/9fcff157a27530975d91e1aab84d3c822b06b1b9） ）\n•确保在LookupSingle () (Stenzek（https://github.com/stenzek/duckstation/commit/d901b25907f1c24ca7a9e1a3f71d67af12cb225d）)中初始化所有采样器\n•为标题添加背景图像模糊（ Stenzek（https://github.com/stenzek/duckstation/commit/f3d28435414c34eeace948e5e7765e9693694f0b） ）\n•在子集视图中将子集图标显示为游戏图标（ Stenzek（https://github.com/stenzek/duckstation/commit/c4b4496e9b3c7d64f0a9ec6e63b01b998f22b825） ）\n•过渡激活时，将叠加层存放在单独的绘制列表中（ Stenzek（https://github.com/stenzek/duckstation/commit/616c41d4927b00b17a4ecd7c4b43a8319551e5f7） ）\n•避免核心线程上不安全的上下文指针读取（ Stenzek（https://github.com/stenzek/duckstation/commit/d78fd23db934cabc38d66e9a3dd8106f27a00772） ）",
-      "originalContent": "## Commits\n- Drop feedback loop path ([Stenzek](https://github.com/stenzek/duckstation/commit/0619481dcbecdb95f626754c4dcfc6322070a44a))\n- Fix incorrect hazard tracking in stream buffer ([Stenzek](https://github.com/stenzek/duckstation/commit/dc4e7729809838a77b7a8c392c691de5b7fee3c1))\n- 5e54cad: GPU/HW: Fix background replacements disappearing after TC toggled off (Stenzek)\n- 10632b9: GPU/HW: Simplify pipeline layouts (Stenzek)\n- Move blur constants into main UBO ([Stenzek](https://github.com/stenzek/duckstation/commit/2ab88c6d9b747252dfaec87585f9af4dd34274b2))\n- Remove MultiTextureAndUBO pipeline layout ([Stenzek](https://github.com/stenzek/duckstation/commit/28591625519a71bcad8a459c54d3071e5ff14bf7))\n- Move UNIFORM_PUSH_CONSTANTS_SIZE into base class ([Stenzek](https://github.com/stenzek/duckstation/commit/de1fd8c667f5269276758ec19874108813511a85))\n- Remove MAX_UNIFORM_BUFFER_SIZE ([Stenzek](https://github.com/stenzek/duckstation/commit/9fcff157a27530975d91e1aab84d3c822b06b1b9))\n- Ensure all samplers are initialized in LookupSingle() ([Stenzek](https://github.com/stenzek/duckstation/commit/d901b25907f1c24ca7a9e1a3f71d67af12cb225d))\n- Add background image blurring for headers ([Stenzek](https://github.com/stenzek/duckstation/commit/f3d28435414c34eeace948e5e7765e9693694f0b))\n- Display subset icon as game icon in subset view ([Stenzek](https://github.com/stenzek/duckstation/commit/c4b4496e9b3c7d64f0a9ec6e63b01b998f22b825))\n- Stash overlays in separate draw list when transition active ([Stenzek](https://github.com/stenzek/duckstation/commit/616c41d4927b00b17a4ecd7c4b43a8319551e5f7))\n- Avoid unsafe read of context pointer on core thread ([Stenzek](https://github.com/stenzek/duckstation/commit/d78fd23db934cabc38d66e9a3dd8106f27a00772))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "3082a2221a837fc5b1a9fd0d2e2eb1314b72db387e2f3698de288a63864f33ff",
       "translationPending": false
     },
     {
