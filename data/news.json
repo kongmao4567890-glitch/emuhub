@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T06:09:26.156053Z",
+  "generatedAt": "2026-09-29T18:16:56.003120Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,302 @@
   },
   "articles": [
     {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T15:49:33Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月29日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月29日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_galaga.cpp, d_megadrive.cpp, d_sms.cpp, d_snes.cpp: 各种(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_galaga.cpp, d_megadrive.cpp, d_sms.cpp, d_snes.cpp: various... (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "1a290138b6591ad2999b6a0219e10854435cb4d4022430a02d06f05e582d1e80",
+      "translationPending": false
+    },
+    {
+      "id": "137423",
+      "title": "【工具】ShadPS4 (GUI) v364",
+      "originalTitle": "[Utilitaires Multi-systemes] ShadPS4 (GUI) v364",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-29T15:25:48Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137423-utilitaires-multi-systemes-shadps4-gui-v364/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/shadps4-gui1.png",
+      "officialUrl": "https://shadps4.net/",
+      "summary": "shadPS4是一款开源PlayStation 4模拟器。 自0.12.1版本以来，它放弃了集成的图形界面，只能在命令行上工作。 为便于使用，提供了一个外部接口。 它允许您通过简单直观的视觉界面启动游戏、配置选项和跟踪性能。 此界面单独开发，与shadPS4的未来版本保持兼容。",
+      "content": "shadPS4是一款开源PlayStation 4模拟器。 自0.12.1版本以来，它放弃了集成的图形界面，只能在命令行上工作。\n为便于使用，提供了一个外部接口。 它允许您通过简单直观的视觉界面启动游戏、配置选项和跟踪性能。\n\n此界面单独开发，与shadPS4的未来版本保持兼容。\n\n变更内容：\n• CHECK_UPDATE ： macOS修复(# 449)\n• main_window ：修复应用补丁的游戏信息路径(# 448)\n•有条件地禁用启动器端补丁加载(# 447)\n•新的Crowdin更新\n•固定杂项",
+      "originalContent": "shadPS4 est un émulateur PlayStation 4 open-source. Depuis la version 0.12.1, il abandonne son interface graphique intégrée pour fonctionner uniquement en ligne de commande.\n\nPour faciliter son usage, une interface externe est disponible. Elle permet de lancer des jeux, configurer les options, et suivre les performances via une interface visuelle simple et intuitive.\n\nCette interface est développée séparément et reste compatible avec les futures versions de shadPS4.\n\nLes changements:\n- check_update: Fixes for macOS (#449)\n- main_window: Fix game info path for applying patches (#448)\n- Conditionally disable launcher-side patch loading (#447)\n- New Crowdin updates\n- Misc fixes",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "shadps4_android"
+      ],
+      "contentHash": "9e05d0e5834e830b22a586262420831d121a122857274c4c4e300e1e84988a81",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20260929",
+      "title": "【Android更新】ARMSX2 nightly-20260929",
+      "originalTitle": "ARMSX2 nightly-20260929 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T15:22:26Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260929",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20260929，发布日期为2026年09月29日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260929。\n\n发布日期：2026年09月29日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧nightly? 夜行现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:在旧夜里无法稳定地安装。 备份您的保存和内存卡, 解开旧的夜晚, 然后安装稳定的APK.\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n有什么新情况\n• GS/HW:调色板块复制件每颗图案一次就能确定每个列的地址\n• 测试:带有顶点α、调制和ST图案的调色板块复制件\n• GS/HW:调色板块副本取顶点α和网格相通ST\n• GS/HW:在原生线上方,只取深线取顶点-阴影线扩展\n• iOS:单独安装夜线 ARMSX2 夜间应用\n• GameDB:燃烧系列:本地半像素平分\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20260928...6d8ab02a1ed348a44939fca1a898586528eac4d1",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- GS/HW: the palette block copy works out each column's address once per sprite\n- tests: the palette block copy with vertex alpha, modulate and ST sprites\n- GS/HW: the palette block copy takes vertex alpha and grid-aligned ST\n- GS/HW: above native, a depth-only line takes the vertex-shader line expansion\n- iOS: install nightlies as a separate ARMSX2 Nightly app\n- GameDB: Burnout series: native half-pixel offset\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260928...6d8ab02a1ed348a44939fca1a898586528eac4d1",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "e994959780e347065ed3fa52abb23d036518f87150b45527b0f1be41a13853d5",
+      "translationPending": false
+    },
+    {
       "id": "android-release-duckstation-preview",
       "title": "【Android更新】DuckStation preview",
       "originalTitle": "DuckStation preview Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-09-29T01:57:29Z",
+      "publishedAt": "2026-09-29T14:44:47Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
       "imageUrl": "asset://assets/emulators/duckstation.png",
       "officialUrl": "https://github.com/stenzek/duckstation",
       "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年09月29日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月29日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•将std:: shared_mutex替换为Threading:: SharedMutex （ Stenzek（https://github.com/stenzek/duckstation/commit/8a46ed8b7dc2d6a6dfc5bbfcb588fbbdc8f09515） ）\n•在VERTICAL_DISPLAY_START （ Stenzek（https://github.com/stenzek/duckstation/commit/60f7ffa2d01852458adf97944cf2030f61597214） ）之前修复扫描线同步\n•提高CRTC功能的可读性（ Stenzek（https://github.com/stenzek/duckstation/commit/bfb23fb8c94706e7a11d614157b6b47c938f9c59） ）",
-      "originalContent": "## Commits\n- Replace std::shared_mutex with Threading::SharedMutex ([Stenzek](https://github.com/stenzek/duckstation/commit/8a46ed8b7dc2d6a6dfc5bbfcb588fbbdc8f09515))\n- Fix scanline sync before vertical_display_start ([Stenzek](https://github.com/stenzek/duckstation/commit/60f7ffa2d01852458adf97944cf2030f61597214))\n- Improve CRTC function readability ([Stenzek](https://github.com/stenzek/duckstation/commit/bfb23fb8c94706e7a11d614157b6b47c938f9c59))",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年09月29日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•分别调整加载屏幕文本和进度（ Stenzek（https://github.com/stenzek/duckstation/commit/2c1fba1cd53721719fedba9615e072ba06d259ae） ）\n•显示按需游戏列表加载的进度（ Stenzek（https://github.com/stenzek/duckstation/commit/b3b2bbc751b6860776da5c84d95208a0b7abb491） ）",
+      "originalContent": "## Commits\n- Size loading screen text and progress separately ([Stenzek](https://github.com/stenzek/duckstation/commit/2c1fba1cd53721719fedba9615e072ba06d259ae))\n- Display progress for on-demand game list load ([Stenzek](https://github.com/stenzek/duckstation/commit/b3b2bbc751b6860776da5c84d95208a0b7abb491))",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "duckstation"
       ],
-      "contentHash": "a98c791c8d4e1a3f657083b392f27deca4f198836f5e61504ff50b74b9174163",
+      "contentHash": "1e3da3711ff5a78e590b530b69fd475c59808b2055eb1c2d548494d6fbad1d37",
+      "translationPending": false
+    },
+    {
+      "id": "137421",
+      "title": "【电脑】MSDos Player for Win32-x64 (2026/09/29)",
+      "originalTitle": "[Ordi.] MSDos Player for Win32-x64 (2026/09/29)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T11:38:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137421-ordi-msdos-player-for-win32-x64-2026-09-29/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/02/msdos-player.png",
+      "officialUrl": "http://takeda-toshiya.my.coocan.jp/",
+      "summary": "这是适用于Windows x86-64 （但也适用于32位版本）的命令行MS-DOS模拟器。专用于模拟i286/i386/i486处理器的版本。",
+      "content": "这是适用于Windows x86-64 （但也适用于32位版本）的命令行MS-DOS模拟器。专用于模拟i286/i386/i486处理器的版本。",
+      "originalContent": "Il s'agit d'un émulateur de MS-DOS en ligne de commande destiné à Windows x86-64 (mais également aux versions 32 bits). Version dédiée à l'émulation des processeurs i286/i386/i486.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "38e248f54f258b1e32cb5630dc518cb161dd531f78c997d4455b7e5f5556fff3",
+      "translationPending": false
+    },
+    {
+      "id": "137419",
+      "title": "【移动设备】WinArcadia v36.7",
+      "originalTitle": "[Console] WinArcadia v36.7",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T11:34:47Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137419-console-winarcadia-v36-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/03/warcadia.png",
+      "officialUrl": "http://amigan.1emu.net/releases/",
+      "summary": "AmiArcadia是Tunix2001的增强型港口，前身为Amiga的“Win Arcadia 2001” （由Gavin Turner设计）。 由James Jacobs和Gavin Turner撰写，此版本实际上是Amiga端口的Windows端口（后端口） ！",
+      "content": "AmiArcadia是Tunix2001的增强型港口，前身为Amiga的“Win Arcadia 2001” （由Gavin Turner设计）。 由James Jacobs和Gavin Turner撰写，此版本实际上是Amiga端口的Windows端口（后端口） ！\n\n仿真系统：\n\n控制台：\n• Emerson Arcadia Family 2001 ： Bandai、Emerson、Grandstand、Hanimex、Intervision、Leisure-Vision、Leonardo、MPT-03、Ormatu、Palladium、Poppy、Robdajet、Rowtron、Tele-Fever、Tempest、Tryom、Tunix等。\n• Interton VC 4000及兼容产品： Acetronic、Cabel、Fountain、Hanimex、Interton、Prinztronic、Radofin、Rowtron、Voltmace、Waddingtons...\n• Elektor电视游戏电脑（ 1979年）\n\nPIPBUG/BINBUG机器：\n• Electronics Australia 77up2/78up5 ， Signetics Adaptable主板计算机， Eurocard 2650...\n• Signetics Instructor 50 （ 1978年）\n• Signetics TWIN （ 1976年）\n•中央数据2650 （ 1977 ）\n• PHUNSY微型计算机（ c.1980 ）\n• Ravensburger Selbstbaucomputer/2650最小计算机（ 1984年）\n• Hofacker MIKIT 2650 （ 1978年）\n\n街机：\n• Zaccaria Coin-Ops ： Astro Wars、Galaxia、Laser Battle、Lazarian\n• Coin-ops Kitronix ： Malzak 1和2\n\n电子游戏：\n• PONG控制台AY-3-8500/8550/8600 ：\n• Coleco Telstar Galaxy、Sheen TVG-201和其他AY-3-85xx系统\n\n电子教学机：\n• VTech Type-Right （ 1985 ）\n它需要Windows 9x/ME/NT/2000/XP ，也可以在Vista/8/10/11上运行。",
+      "originalContent": "AmiArcadia est le port amélioré de Tunix2001 ex 'Win Arcadia 2001' (par Gavin Turner) pour Amiga. Ecrit par James Jacobs et Gavin Turner, cette version est en fait le port Windows du port Amiga (un backport) !\n\nSystèmes émulés:\n\nConsoles:\n- Famille Emerson Arcadia 2001 : Bandai, Emerson, Grandstand, Hanimex, Intervision, Leisure-Vision, Leonardo, MPT-03, Ormatu, Palladium, Poppy, Robdajet, Rowtron, Tele-Fever, Tempest, Tryom, Tunix, etc.\n- Interton VC 4000 et compatibles : Acetronic, Cabel, Fountain, Hanimex, Interton, Prinztronic, Radofin, Rowtron, Voltmace, Waddingtons…\n- Elektor TV Games Computer (1979)\n\nMachines PIPBUG/BINBUG:\n- Electronics Australia 77up2/78up5, Signetics Adaptable Board Computer, Eurocard 2650…\n- Signetics Instructor 50 (1978)\n- Signetics TWIN (1976)\n- Central Data 2650 (1977)\n- PHUNSY microcomputer (c.1980)\n- Ravensburger Selbstbaucomputer / 2650 Minimal Computer (1984)\n- Hofacker MIKIT 2650 (1978)\n\nMachines d'arcade:\n- Coin-ops Zaccaria : Astro Wars, Galaxia, Laser Battle, Lazarian\n- Coin-ops Kitronix : Malzak 1 & 2\n\nJeux électroniques:\n- Consoles Pong AY-3-8500/8550/8600:\n- Coleco Telstar Galaxy, Sheen TVG-201, et autres systèmes AY‑3‑85xx\n\nMachine éducative électronique:\n- VTech Type-Right (1985)\n\nIl nécessite Windows 9x/ME/NT/2000/XP et fonctionne également sous Vista/8/10/11.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "winarcadia_pc"
+      ],
+      "contentHash": "7ecc2e0372547867dcebf7fd8732203ae939b068dcf3e82f1264df7957b0d8ce",
+      "translationPending": false
+    },
+    {
+      "id": "137417",
+      "title": "【家用机】KytyPS5 r260929",
+      "originalTitle": "[Consoles de salon] KytyPS5 r260929",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T11:31:19Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137417-consoles-de-salon-kytyps5-r260929/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
+      "officialUrl": "https://github.com/Nmzik/KytyPS5",
+      "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n•图形：批量发布标签，无冗余提交\n•图形：存储没有重复数组的顶点属性绑定\n•图形：流式传输干净的访客缓冲区，无需后台存储查找\n•图形：构建合适的颜色目标描述符\n•图形：紧凑的着色器键和哈希打包的流水线状态\n•图形：通过其渲染器所有者序列化管道缓存\n•图形：直接从着色器元数据使用顶点语义\n•性能分析器：使用本机Tracy作用域并删除未使用的手动寿命……\n•将自述文件截图更新为UFC 5\n•内存：从普通访客映射中分离扩展分配\n• gpu ：寻址扩展的访客内存，而不会扩大密集缓存表\n•音频：在环路边界处倒带压缩采样器块\n•内存：通过物理所有权回收自动背衬\n•着色器：每个计划派生一次不可变资源策略\n\n（从此分叉编译的临时版本正在等待正式发布。）",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- graphics: batch release labels without redundant submissions\n- graphics: store vertex attribute bindings without duplicated arrays\n- graphics: stream clean guest buffers without backing-store lookups\n- graphics: build color target descriptors in place\n- graphics: compact shader keys and hash packed pipeline state\n- graphics: serialize pipeline cache through its renderer owner\n- graphics: consume vertex semantics directly from shader metadata\n- profiler: use native Tracy scopes and remove unused manual lifetime t…\n- Update README screenshot to UFC 5\n- memory: separate extended allocations from ordinary guest mappings\n- gpu: address extended guest memory without widening dense cache tables\n- audio: rewind compressed sampler blocks at loop boundaries\n- memory: recycle automatic backing through physical ownership\n- shader: derive immutable resource policy once per plan\n\n(Temporary build compiled from this fork pending official releases.)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "kytyps5_pc"
+      ],
+      "contentHash": "3caf91454458328926f22036cb9aeb4c233ceda24085f4ae9b17c9e42df55aca",
+      "translationPending": false
+    },
+    {
+      "id": "137415",
+      "title": "【电脑】AMSpiriT (Lite) v1.16",
+      "originalTitle": "[Ordi.] AMSpiriT (Lite) v1.16",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T11:10:35Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137415-ordi-amspirit-lite-v1-16/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/amspiritlite-scaled.png",
+      "officialUrl": "https://www.amspirit.fr/",
+      "summary": "AMSpiriT Lite是SIKO用C + +编码的Amstrad CPC跨平台仿真器，基于与AMSpiriT相同的仿真核心。 它适用于Windows、Linux和macOS ，有多个接口，包括SDL2和Qt。 AMSpiriT Lite旨在尽可能地再现真实CPC的硬件行为，同时提供便携且更具实验性的仿真器版本 它还集成了用于开发和测试的高级功能，例如Lua/CSL脚本、调试REST API和基本程序注入。",
+      "content": "AMSpiriT Lite是SIKO用C + +编码的Amstrad CPC跨平台仿真器，基于与AMSpiriT相同的仿真核心。 它适用于Windows、Linux和macOS ，有多个接口，包括SDL2和Qt。\nAMSpiriT Lite旨在尽可能地再现真实CPC的硬件行为，同时提供便携且更具实验性的仿真器版本\n它还集成了用于开发和测试的高级功能，例如Lua/CSL脚本、调试REST API和基本程序注入。",
+      "originalContent": "AMSpiriT Lite est un émulateur Amstrad CPC multiplateforme codé en C++ par Siko, basé sur le même cœur d'émulation qu'AMSpiriT. Il est disponible pour Windows, Linux et macOS, avec plusieurs interfaces, dont SDL2 et Qt.\n\nAMSpiriT Lite a pour finalité de reproduire le plus fidèlement possible le comportement hardware d'un vrai CPC, tout en proposant une version portable et plus expérimentale de l'émulateur. Il intègre également des fonctions avancées destinées notamment au développement et aux tests, comme le scripting Lua/CSL, une API REST de débogage et l'injection de programmes BASIC.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "574206ec500541300ab67c30fe346248ffb4c95019cc4fed9be13162b2a884e9",
+      "translationPending": false
+    },
+    {
+      "id": "137412",
+      "title": "【街机】SuperModel WIP (x86/x64) v0.3a Build 260928",
+      "originalTitle": "[Arcade] SuperModel WIP (x86/x64) v0.3a Build 260928",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T10:58:53Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137412-arcade-supermodel-wip-x86-x64-v0-3a-build-260928/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/08/Supermodel.png",
+      "officialUrl": "http://www.supermodel3.com/",
+      "summary": "由Bart Trzynadlowski、Ville Linde和Stefano Teso在其开发版本中创建的第一个世嘉Model 3模拟器（请参阅此处或那里） [来源]。 在此处准备的配置文件。 变更内容： 更新系统从SVN更改为GIT ，因此版本名称更改，为简单起见，我将使用比GIT默认值更易于理解的发布日期系统。",
+      "content": "由Bart Trzynadlowski、Ville Linde和Stefano Teso在其开发版本中创建的第一个世嘉Model 3模拟器（请参阅此处或那里） [来源]。\n在此处准备的配置文件。\n\n变更内容：\n更新系统从SVN更改为GIT ，因此版本名称更改，为简单起见，我将使用比GIT默认值更易于理解的发布日期系统。\n\n•来自trzy/bart/preserve-game-config的合并拉取请求# 336\n• GUI保留每场比赛的配置设置\n• DefaultConfigFile.h - > ConfigFile.h\n•在标题注释中包括时间戳和哪个组件写入配置。\n• GUI现在加载完整的文件配置并仅覆盖全局设置\n（根据我们的INI文件约定显示为叶节点） ，保留可能存在的特定于游戏的设置。\n•修复初始值设定项顺序(# 325)\n•从macOS中删除旧版渲染器，并对-print-gl-info使用渲染器设置(# 324)\n•使用print-gl-info参数支持引擎选择\n•修复了拼写错误（ Results:: OKAY - > Result:: OKAY ）并添加了评论\n•从macOS中删除旧版渲染引擎，并在使用-c生成deps时修复clang警告\n•更新版权标头\n•版权标头\n•固定杂项\n\n请注意，此处提供了为Sinden添加支持的新分叉。\n\n已添加：\n• SEGA拉力赛2音乐校正（混音）\n•音乐校正vf3中的第1级2人（红色地窖） （不确定是否要修改，因此可能会导致其他游戏出现其他声音问题）。（正式包括）\n\n要生成数据，您可以使用此工具。",
+      "originalContent": "Le premier émulateur de Sega Model 3 créé par Bart Trzynadlowski, Ville Linde et Stefano Teso dans sa version de développement (voir ici ou là) [source].\nFichiers de configurations préparés ici.\n\nLes changements:\n\nLe système de mise à jour passe de SVN à GIT, du coup le nom des versions changent, par simplicité j'utiliserai un système par date de release plus compréhensible que le par défaut de GIT.\n\n- Merge pull request #336 from trzy/bart/preserve-game-config\n- GUI preserves per-game config settings\n- DefaultConfigFile.h -> ConfigFile.h\n- Include timestamp and which component wrote config in header comment.\n- GUI now loads the full file config and overwrites only the Global settings\n(which appear as leaf nodes by our INI file convention), preserving game-specific settings that may exist.\n- Fix initializer order (#325)\n- Remove legacy renderer from macOS and use renderer setting for -print-gl-info (#324)\n- support engine selection with print-gl-info argument\n- Fixed typo (Results::OKAY -> Result::OKAY) and added a comment\n- Remove legacy rendering engine from macOS and fix clang warning when using -c for generating deps\n- Update copyright headers\n- Copyright headers\n- Misc fixes\n\nA noter qu'un nouveau fork ajoutant le support du Sinden est dispo ici.\n\nAjout:\n- correction des musiques dans sega rally 2 (mix)\n- correction musique 1er niveau 2joueurs (la cave rouge) dans vf3 (pas sûr de la modif, et donc cela peut éventuellement entrainer d'autre problèmes sonore sur d'autre jeux).(inclut officiellement)\n\nPour générer un dat vous pouvez utiliser cet outil.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8c9e01cd25b5813d234bb227976a95b45e5a0165c6efeef2163fd57bc9f215c6",
+      "translationPending": false
+    },
+    {
+      "id": "137410",
+      "title": "【掌机】Gearboy v3.8.16",
+      "originalTitle": "[Console portable] Gearboy v3.8.16",
+      "category": "handheld",
+      "categoryLabel": "掌机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T10:49:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137410-console-portable-gearboy-v3-8-16/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2020/04/gearboy2.jpg",
+      "officialUrl": "https://github.com/drhelius/Gearboy",
+      "summary": "Gearboy是一款用C + +编写的任天堂GameBoy/Super GameBoy/Gameboy Color模拟器，可在iOS、Raspberry Pi、Mac、Windows和Linux上运行。 重点放在源代码的可读性和高度的兼容性上。",
+      "content": "Gearboy是一款用C + +编写的任天堂GameBoy/Super GameBoy/Gameboy Color模拟器，可在iOS、Raspberry Pi、Mac、Windows和Linux上运行。\n\n重点放在源代码的可读性和高度的兼容性上。\n\n🔢 添加了Barcode Boy支持\n🎯 8个新的墨盒映射器（ BHGOS ， Rocket Games ， Li Cheng ， NT Old + NT New ， GGB81 ， Hitek ， VF001 ， Sintax ）\n在🔌 RetroArch中添加了具有双屏幕的链路电缆支持\n📦 添加了Ubuntu 26.04版本\n🐛 许多错误修复和改进\n\n32位版本由Lo v2编译。",
+      "originalContent": "Gearboy est un émulateur de Nintendo GameBoy / Super GameBoy / Gameboy Color écrit en C++ qui fonctionne sur iOS, Raspberry Pi, Mac, Windows & Linux.\n\nL'accent a été mis sur la lisibilité du code source avec un haut degré de compatibilité.\n\n🔢 Added Barcode Boy support\n🎯 8 new cartridge mappers (BHGOS, Rocket Games, Li Cheng, NT Old + NT New, GGB81, Hitek, VF001, Sintax)\n🔌 Added Link Cable support with dual screens in RetroArch\n📦 Added Ubuntu 26.04 builds\n🐛 Many bug fixes and improvements\n\nLe builds 32 bits est compilé par Lo v2.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "gearboy_pc"
+      ],
+      "contentHash": "0dd807c8cdf566679f071e2aee16cc75fc27b80ab62f27f40c45153218fa52ee",
+      "translationPending": false
+    },
+    {
+      "id": "137404",
+      "title": "【工具】Goliath v0.32.25 preview",
+      "originalTitle": "[Utilitaires Multi-systemes] Goliath v0.32.25 preview",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-09-29T10:44:15Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137404-utilitaires-multi-systemes-goliath-v0-32-25-preview/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Goliath.png",
+      "officialUrl": "https://github.com/epsx/Goliath",
+      "summary": "它是NEO GEO专用的前端，围绕单个系统根据专门的RetroArch原则运行。 Goliath管理游戏库、设置、备份和游戏启动，而模拟由Geolith核心通过JGRF/JG提供。 它支持NEO GEO MVS/AES游戏以及NEO GEO CD ，包括变体管理、游戏搜索和排序、会话历史记录、屏幕截图、游戏时间跟踪和各种诊断工具。 Goliath还允许您自定义模拟设置和控制、管理备份、检查BIOS和游戏文件，以及执行音频基准测试和导出。",
+      "content": "它是NEO GEO专用的前端，围绕单个系统根据专门的RetroArch原则运行。 Goliath管理游戏库、设置、备份和游戏启动，而模拟由Geolith核心通过JGRF/JG提供。\n它支持NEO GEO MVS/AES游戏以及NEO GEO CD ，包括变体管理、游戏搜索和排序、会话历史记录、屏幕截图、游戏时间跟踪和各种诊断工具。\nGoliath还允许您自定义模拟设置和控制、管理备份、检查BIOS和游戏文件，以及执行音频基准测试和导出。该界面基于Qt 6 ，提供多种浅色和深色主题。",
+      "originalContent": "Il s'agit d'un frontend dédié à la Neo Geo, fonctionnant sur le principe d'un RetroArch spécialisé autour d'un seul système. Goliath assure la gestion de la ludothèque, des réglages, des sauvegardes et du lancement des jeux, tandis que l'émulation est assurée par le core Geolith via JGRF/JG.\n\nIl prend en charge les jeux Neo Geo MVS/AES ainsi que la Neo Geo CD, avec notamment la gestion des variantes, la recherche et le tri des jeux, l'historique des sessions, les captures d'écran, le suivi du temps de jeu et différents outils de diagnostic.\n\nGoliath permet également de personnaliser les paramètres d'émulation et les contrôles, de gérer les sauvegardes, de vérifier les BIOS et les fichiers de jeux, ainsi que d'effectuer des benchmarks et des exports audio. L'interface est basée sur Qt 6 et propose plusieurs thèmes clairs et sombres.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "81116ff09259330ee47cd7c580d1e833221ede800dff6aa7a828fbfaf7ec61a7",
+      "translationPending": false
+    },
+    {
+      "id": "137400",
+      "title": "【家用机】Ryujinx-Nextendo v1.8.10",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.8.10",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T10:37:42Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137400-consoles-de-salon-ryujinx-nextendo-v1-8-10/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
+      "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
+      "summary": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。 该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。",
+      "content": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。\n该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。\n其目的特别是允许兼容游戏通过Nextendo网络查找在线游戏功能，而无需用户进行特殊手动配置、修改HOSTS文件或绕过SSL。\n\n这些变化是：\n•游戏邀请（邀请好友） ：当游戏打开好友邀请屏幕时，您现在将获得一个包含搜索和在线/离线部分的好友选择器，邀请将通过您的Nextendo帐户发送\n。好友收到带有“接受”和“拒绝”的游戏邀请通知，待处理的邀请会一直列在“好友”窗口中，直到过期（ @ CollectingW ）。\n•首次运行向导： KEYS步骤现在在安装文件之前检查文件是否真的是prod.keys （错误地选择title.keys不再破坏每场比赛） ，并在其旁边复制title.keys （ @ z1pp090 ， # 32 ）。\n•更新程序：修复了Windows更新后重新启动的问题，更新失败的原因是“Windows找不到文件\\” (@ z1pp090, # 29)。\n•西班牙语：填写Nextendo对话框中缺少的西班牙语文本（ @ z1pp090 ， # 30 ）。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.\n\nLes changements sont:\n\n- Game invitations (Invite Friends): when a game opens the friend invitation screen, you now get a friend picker with search and online/offline sections, and the invite is sent through your Nextendo account. The friend receives a Game Invite notification with Accept and - Decline, and pending invites stay listed in the Friends window until they expire (@CollectingW).\n- First-run wizard: the keys step now checks that the file really is a prod.keys before installing it (picking title.keys by mistake no longer breaks every game), and copies title.keys along when it sits next to it (@z1pp090, #32).\n- Updater: fixed the relaunch after an update on Windows, which failed with \"Windows cannot find the file \\\" (@z1pp090, #29).\n- Spanish: filled in the missing Spanish texts of the Nextendo dialogs (@z1pp090, #30).",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "1ee2306a3a7bd6a05fec201c131f6259389b960bd43b431242ed07e07f2c8998",
+      "translationPending": false
+    },
+    {
+      "id": "137398",
+      "title": "【电脑】Kozynax v0.96",
+      "originalTitle": "[Ordi.] Kozynax v0.96",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-09-29T10:35:14Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137398-ordi-kozynax-v0-96/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/kozynax.png",
+      "officialUrl": "https://github.com/kozynax/kozynax/",
+      "summary": "Kozynax是在.NET中为Windows、Linux和macOS开发的跨平台ZX Spectrum模拟器。基于ZXMAK2仿真引擎，这个由Speccy社区工作产生的实验项目结合了像素精度显示和出色的便携性 。它可以在现代系统上运行机器的原始软件和游戏，同时作为仿真架构开发的测试平台。",
+      "content": "Kozynax是在.NET中为Windows、Linux和macOS开发的跨平台ZX Spectrum模拟器。基于ZXMAK2仿真引擎，这个由Speccy社区工作产生的实验项目结合了像素精度显示和出色的便携性\n。它可以在现代系统上运行机器的原始软件和游戏，同时作为仿真架构开发的测试平台。",
+      "originalContent": "Kozynax est un émulateur ZX Spectrum multiplateforme développé en .NET pour Windows, Linux et macOS. Basé sur le moteur d'émulation de ZXMAK2, ce projet expérimental issu des travaux de la communauté Speccy combine une précision d'affichage au pixel près avec une excellente portabilité. Il permet de faire tourner les logiciels et jeux originaux de la machine sur les systèmes modernes tout en servant de banc d'essai pour le développement d'architectures d'émulation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "340a5aa9b5503114f994c67cca766f75216cba68ab52dab761ed15c932ff81b1",
       "translationPending": false
     },
     {
@@ -52,55 +327,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "5adb14309b8454e7611828f13cbc17731edb90ca25a7a1d985576216da79331a",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20260928",
-      "title": "【Android更新】ARMSX2 nightly-20260928",
-      "originalTitle": "ARMSX2 nightly-20260928 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-28T15:00:01Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260928",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20260928，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20260928。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa未签名的,侧载\n\n从旧nightly? 它现在是一个单独的应用程序(ARMSX2 夜间),即安装\n除了稳定应用。 旧的夜里不能自己安装一个马厩 因为\nAndroid 拒绝该版本降级, 所以要回到稳定: 备份您的节省\n然后安装一个稳定的APK。\n\n有什么新情况\n• 包括我们的代码名称\n• GS:将装有紫外线的三联装车装入三角地带\n• GS:装有UV地址的三联车名称\n• 测试:将一个较宽的GS->GS移动到一个小目标上停留在GPU上\n• GS/TC:让一个移动扩大其目的地目标的宽度,而不仅仅是其高度\n• GS:不要将硬件GS->GS移动记录在转移列表中\n• 柜台/自动取款机:跨分帧限制器报告每个帧一个工作期间\n• microVU/arm64:忽略旗下MAC旗下实例,而不是状态一\n• GS/Vulkan:使每个通行证的第一个阅读器改变可循环值\n• gsrunner: - read back-kick-passes,可读框提交A/B的间隔\n• GS: 放弃回放源代码提示 Vulkan脚踢不再读取\n• GS/Vulkan:在抽取目标时,让后机架起火\n• Android:请人工智能特工将反退货通知留在原地\n• 音频/Oboe:在设备起爆时而不是2048帧读取\n• GS/Vulkan:获取收益时显示图像\n• 音频/Oboe:用扩展模式的频道计数打开溪流\n• 调试器:修复未保存的调试器断点,从设置中装入时不会被去除。\n• GS/HW:将行线转换为像素运行于一行,不按像素划分\n• GS:让行走者在编译时修补主轴\n• 测试:Pin GSLineRuns:对正字节转换字节\n• GS/HW:将行象素运行转换成GSLineRuns\n• gsrunner:用于A/B的Vulkan顶点环的开关大小\n• GS/Vulkan:种植顶点环,而不是排出GPU\n• GS:决定整条溪流环的生长程度,而不是等待\n• Qt:更新基地翻译。\n• GS:HW:搅拌时将RT颜色非正常化。\n• GH 动作: 调试时禁用 LTO 构建\n• GHActions:在发行中生成调试缓存\n• GH 动作:从释放缓存中分离调试\n• GHActions:清理出夹子的旧东西\n• GS/Shaders:解决类型不匹配问题。\n• GS/GL:GL_ARB_gpu_shader5的起降要求。\n• GS:Vk:在禁用ffatch时使用反馈回路布局\n• GS/DX11:当设备创建失败时,解决与纹理有关的无效碰撞。\n• GS:将CAS从计算阴影器类型切换为像素阴影器类型。\n• Qt:更新基地翻译。\n• GS:HW:删除GSVector4:cxpr()的整数位点版本。\n• Qt: 添加控制器测试器按钮\n• Qt:对游戏列表标题列使用QheaderView:Stretch\n• GS:MTL:在无金属设备错误中提及OCLP\n• GS:MTL:没有金属装置就不要坠毁\n• GS:MTL:Bitcast浮出金特后再铸入uchar4.\n• Qt:更新基地翻译。\n• Qt/VMManager: 添加 - gamecfg 命令行参数\n• Qt:更新基地翻译。\n• Deps/gha:在Ci-deps组装起火药/起火药\n• GS:倒荫缓存版本。\n• GS:增加缺失的配置要素和格式化修正。\n· EE Rec:取出获得...",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- Include <cstring> where our code calls it\n- GS: fuse the UV-addressed packed triple for triangle strips\n- GS: SetTag names the UV-addressed packed triple\n- tests: pin that a wider GS->GS move into a small target stays on the GPU\n- GS/TC: let a move grow its destination target's width, not only its height\n- GS: don't log hardware GS->GS moves in the transfer list\n- Counters/ADPF: report one work period per frame across the split frame limiter\n- microVU/arm64: ignore the MAC flag instance under the flag hack, not the status one\n- GS/Vulkan: make the first reader of each pass change the loop-enable value\n- gsrunner: -readback-kick-passes, the readback-frame submit spacing for an A/B\n- GS: drop the readback-source hint the Vulkan kick no longer reads\n- GS/Vulkan: let the readback-frame kick fire where a draw switches target\n- Android: ask AI agents to leave the anti-resale notice in place\n- Audio/Oboe: read at the device's burst size instead of 2048 frames\n- GS/Vulkan: present the image when acquire returns SUBOPTIMAL\n- Audio/Oboe: open the stream with the expansion mode's channel count\n- Debugger: Fix unsaved debugger breakpoints not being removed when loaded from settings.\n- GS/HW: convert lines to pixel runs in one walk, without per-pixel divides\n- GS: let a line walk's caller fix the major axis at compile time\n- tests: pin GSLineRuns::Convert byte for byte against the original\n- GS/HW: move the line pixel-run conversion into GSLineRuns\n- gsrunner: switches to size the Vulkan vertex ring for an A/B\n- GS/Vulkan: grow the vertex ring instead of draining the GPU\n- GS: decide how far a full stream ring grows instead of waiting\n- Qt: Update Base Translation.\n- GS:HW: Denormalize RT color when shuffling while blending.\n- GHActions: Disable LTO on debug builds\n- GHActions: Generate debug caches in release builds\n- GHActions: Separate debug from release caches\n- GHActions: Clean old stuff out of ccache\n- GS/Shaders: Fix up types mismatch.\n- GS/GL: Drop requirement for GL_ARB_gpu_shader5.\n- GS:Vk: Use feedback loop layout when fbfetch is disabled\n- GS/DX11: Fix null texture related crashes when device creation fails.\n- GS: Switch CAS from compute shader type to pixel shader type.\n- Qt: Update Base Translation.\n- GS:HW: Remove integer bitcast version of GSVector4::cxpr().\n- Qt: Add Controller Tester button\n- Qt: Use QHeaderView::Stretch for the game list title columns\n- GS:MTL: Mention OCLP in the no-metal-devices error\n- GS:MTL: Don't crash if no Metal device\n- GS:MTL: Bitcast float to uint before casting to uchar4.\n- Qt: Update Base Translation.\n- Qt/VMManager: Add -gamecfg command-line arg\n- Qt: Update Base Translation.\n- Deps/gha: Bump baptiste0928/cargo-install in the ci-deps group\n- GS: Bump shader cache version.\n- GS: Add missing config elements and formatting fixes.\n- EE Rec: Remove memcheck code that got the…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "98821f72685470e33c6d3db230d2380824b17c9577a2d94923944634f99400a4",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-28T14:37:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• nightly-release.yml: 将 perl 安装到“ 安装依赖性” 区域( fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• nightly-release.yml: moved perl install to the \"Install dependecies\" section (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "b2a7ad1c2fcb8f335524cfc6161adc9f66b53369c7bfcaa4f5cb252bb2e26270",
       "translationPending": false
     },
     {
