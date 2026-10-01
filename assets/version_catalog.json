@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T05:58:46Z",
+  "generatedAt": "2026-10-01T18:26:33Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "adamp_pc": {
@@ -130,10 +130,10 @@
       "downloadUrl": "https://github.com/citron-neo/CI/releases/download/nightly-android/app-mainline-release.apk"
     },
     "coffee_gb_pc": {
-      "version": "coffee-gb-2.1.6",
-      "releaseDate": "2026-09-20T13:21:44Z",
-      "sourceUrl": "https://github.com/trekawek/coffee-gb/releases/tag/coffee-gb-2.1.6",
-      "releaseNotes": "Coffee GB 2.1.6 adds BESS save-state interchange, expands Game Boy peripheral support, and brings connection choices and device controls together in the desktop menu.\n\n## Changes\n\n- Load and save BESS-compatible states from the File menu, with validated ROM matching and interchange for supported DMG, CGB, and SGB configurations.\n- Use HuC-1/HuC-3 cartridge infrared and send or receive GBKiss GBF files.\n- Scan EAN-13 barcodes with the separate Barcode Taisen Bardigun reader.\n- Run Pocket Sonar with MBC1S sensor emulation and simulated sonar input. Scene changes now end active input recording, and the mapper is included in state coverage checks.\n- Use Turbo File GB internal memory and removable cards, including import/export, persistence, and write protection. The GBA-only Advance choice is no longer exposed in the menu; legacy state and storage support is retained.\n- Emulate Singer and Jaguar sewing machines, including the JN-2000 embroidery arm, live stitch preview, and PNG export.\n- Organize Peripherals into Link port, Cartridge, and Infrared. Device submenus combine Connect with their controls; Mobile Adapter configuration moves from Preferences into its device submenu.\n- Fix Android CI setup by replacing the retired SDK tools package request with platform-tools.\n\n## Merged pull requests\n\n- [#679](https://github.com/trekawek/coffee-gb/pull/679) — Add HuC cartridge IR and GBKiss Link file transfers — @trekawek\n- [#680](https://github.com/trekawek/coffee-gb/pull/680) — Fix Android CI SDK package setup — @trekawek\n- [#681](https://github.com/trekawek/coffee-gb/pull/681) — Add the Bardigun optical barcode reader — @trekawek\n- [#682](https://github.com/trekawek/coffee-gb/pull/682) — Add Pocket Sonar MBC1S sensor emulation — @trekawek\n- [#683](https://github.com/trekawek/coffee-gb/pull/683) — Add Turbo File GB and Turbo File Advance support — @trekawek\n- [#684](https://github.com/trekawek/coffee-gb/pull/684) — Add Singer and Jaguar sewing machine emulation — @trekawek\n- [#686](https://github.com/trekawek/coffee-gb/pull/686) — Add BESS state loading and saving — @trekawek\n- [#687](https://github.com/trekawek/coffee-gb/pull/687) — Group peripheral connections and controls by device — @trekawek\n\n## Fixed issues\n\n- [#672](https://github.com/trekawek/coffee-gb/issues/672) — GBKiss emulation.\n- [#674](https://github.com/trekawek/coffee-gb/issues/674) — Barcode Taisen Bardigun emulation.\n- [#675](https://github.com/trekawek/coffee-gb/issues/675) — Pocket Sonar emulation.\n- [#676](https://github.com/trekawek/coffee-gb/issues/676) — Turbo File peripheral support; Advance remains an internal compatibility model.\n- [#677](https://github.com/trekawek/coffee-gb/issues/677) — Game Boy sewing machine emulation.\n- [#685](https://github.com/trekawek/coffee-gb/issues/685) — BESS-compatible save states.\n\n![Sewing machine controls and a simulated zigzag stitch pattern](https://github.com/trekawek/gitshot-images/releases/download/_gitshot/sewing-preview-7a638647.png)\n\nSewing machine controls displaying an original synthetic pattern ([#677](https://github.com/trekawek/coffee-gb/issues/677)).\n\n## Known platform limitations\n\nOn macOS, game controllers require a compatible system SDL2 installation; keyboard input and emulation remain usable without it.\n\n**Full changelog:** [2.1.5…2.1.6](https://github.com/trekawek/coffee-gb/compare/coffee-gb-2.1.5...coffee-gb-2.1.6)"
+      "version": "coffee-gb-2.1.7",
+      "releaseDate": "2026-10-01T10:31:12Z",
+      "sourceUrl": "https://github.com/trekawek/coffee-gb/releases/tag/coffee-gb-2.1.7",
+      "releaseNotes": "Coffee GB 2.1.7 adds link-cable startup support for Renju Club, improves netplay handoff and recovery, restores a Java ROM-loading constructor overload, and adds pressed-state feedback to Android touch controls. Compatibility documentation and acknowledgments were also updated.\n\n## Merged pull requests\n\n- [#690 Switch SGB sessions to DMG for netplay](https://github.com/trekawek/coffee-gb/pull/690) — preserve the session-only DMG fallback through controller handoff, forward local client output, retain diagnostic state paths, ignore stale save sidecars for batteryless games, and restore the Java ROM-image constructor overload. [@trekawek](https://github.com/trekawek)\n- [#691 Add Android pressed control artwork and touch feedback](https://github.com/trekawek/coffee-gb/pull/691) — show held buttons and directions in the Android touch controls. [@trekawek](https://github.com/trekawek)\n- [#693 Fix Renju Club link startup](https://github.com/trekawek/coffee-gb/pull/693) — start two-player sessions with both cable endpoints attached so the game can negotiate its link. [@trekawek](https://github.com/trekawek)\n\n## Fixed issues\n\nNone.\n\n## Known platform limitations\n\nOn macOS, game controllers require a compatible system SDL2 installation; keyboard input and emulation remain usable without it."
     },
     "copperline_pc": {
       "version": "1.0.0-rc.1",
@@ -174,10 +174,10 @@
     },
     "duckstation": {
       "version": "preview",
-      "releaseDate": "2026-10-01T05:44:49Z",
+      "releaseDate": "2026-10-01T11:53:43Z",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "releaseNotes": "## Commits\n- Fix focus reset on escape in game list search ([Stenzek](https://github.com/stenzek/duckstation/commit/8fa9ef5394a9d8b4a429b8dece78fe06b5946b55))",
-      "devReleaseNotes": "## Commits\n- Fix focus reset on escape in game list search ([Stenzek](https://github.com/stenzek/duckstation/commit/8fa9ef5394a9d8b4a429b8dece78fe06b5946b55))"
+      "releaseNotes": "## Commits\n- Use AppRoot for translations ([Stenzek](https://github.com/stenzek/duckstation/commit/14c22676288c72da10f3925d56bbf81f70df3d66))",
+      "devReleaseNotes": "## Commits\n- Use AppRoot for translations ([Stenzek](https://github.com/stenzek/duckstation/commit/14c22676288c72da10f3925d56bbf81f70df3d66))"
     },
     "duckstation_gpl": {
       "version": "preview",
@@ -206,11 +206,11 @@
       "downloadUrl": "https://github.com/sashkinbro/EmuCoreV/releases/download/v0.2.3/EmuCoreV-0.2.3-parallel-v023.apk"
     },
     "emucorex": {
-      "version": "0.4.3",
-      "releaseDate": "2026-09-30T10:07:34Z",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.3",
-      "releaseNotes": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.2...v0.4.3\r\n\r\nWhat's new: 0.4.3\r\n\r\n- UI fixes\r\n- Other fixes and optimizations\r\nIf you encounter bugs, a clean installation is recommended, as core fixes have been implemented",
-      "downloadUrl": "https://github.com/sashkinbro/EmuCoreX/releases/download/v0.4.3/EmuCoreX-0.4.3-parallel-v043.apk"
+      "version": "0.4.4",
+      "releaseDate": "2026-10-01T07:02:32Z",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.4",
+      "releaseNotes": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.3...v0.4.4\r\n\r\nWhat’s new: 0.4.4\r\n\r\n- Fixed an issue with covers from the previous version\r\n- Added an automatic post-update fixes mechanism\r\n- Added the ability to use a separate memory card for a specific game",
+      "downloadUrl": "https://github.com/sashkinbro/EmuCoreX/releases/download/v0.4.4/EmuCoreX-0.4.4-parallel-v044.apk"
     },
     "erings_pc": {
       "version": "0.4.3",
@@ -220,15 +220,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-10-01T01:58:39Z",
+      "releaseDate": "2026-10-01T16:42:59Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• cpu/tms32010: big-endian fix (#2767) (BeWorld)\n• fix big-ednian on cave engine (#2764) (BeWorld)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_ngp.cpp, d_spectrum.cpp: updates... (fprietog)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-10-01T01:58:39Z",
+      "releaseDate": "2026-10-01T16:42:59Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• cpu/tms32010: big-endian fix (#2767) (BeWorld)\n• fix big-ednian on cave engine (#2764) (BeWorld)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_ngp.cpp, d_spectrum.cpp: updates... (fprietog)"
     },
     "firebird": {
       "version": "1.6",
@@ -333,10 +333,10 @@
       "devReleaseNotes": "- f723a19: LCDUI: refactoring (woesss)\r\n- 75130ae: LCDUI: refactor commands in Alert (woesss)\r\n- d2263e0: LCDUI: fix Display.setCurrent() for Alert (woesss)\r\n- bb0d217: Refactor start MidletThread (woesss)\r\n- 6c3b6f6: Don't send report from modded apk (woesss)\r\n- e41930b: Setting to enable workaround for MIDlets that do not support pause (fix crash after pause) (woesss)\r\n- 6d75447: LCDUI: another fix for List, ChoiceGroup (woesss)\r\n- 97783bc: Fix uri parsing in BT connections (woesss)\r\n- 209d345: Fix call notifyItemStateChanged() for TextField (woesss)\r\n- 49e7fd6: refactor start app (woesss)\r\n- 580ac80: Add more info to AppInstaller error report (woesss)\r\n- 1da39db: Update AGP (woesss)\r\n- cfb9c20: Update proguard rules (woesss)\r\n- ffc6f3c: Update readme (woesss)\r\n- 7a7dbce: MMAPI: add MIDIControl support for MIDI based content (fix nikita36078/J2ME-Loader#1072) (woesss)\r\n- c501ccb: Add com.mot.iden.multimedia package (#111) (woesss)\r\n- 4f5b09b: Share a single back buffer across all Canvas instances (fix #110) (woesss)\r\n- f10c8d9: M3G: execute M3gRunnable in single thread (woesss)\r\n- d826b76: M3G: generate texture mipmap by M3G code, as automatic generation by GL does not work correctly (#108) (woesss)\r\n- a5ec311: Update gradle files (woesss)\r\n- 723f464: PNGUtils: ignore invalid palette indexes, optimize (woesss)\r\n- 21b8805: Filter pointer events (woesss)\r\n- 42f6827: Copy pixels from GL in native (woesss)\r\n- 0f67e90: Touch GL in single thread in com.mexa.opgl.OpglGraphics (woesss)\r\n- 2c7290b: Replace loop detection in immediate mode of EventQueue (woesss)\r\n- 0234d04: fixup! Check descriptor when skip installer dialog (woesss)\r\n- eb2ffc4: Reimplement Nokia M3D on GLES20 (woesss)\r\n- 225c4a2: Fix mutable property of Image (woesss)\r\n- a2eaf4e: Merge pull request #107 from rmn20/dev (woesss)\r\n- 4532838: micro3d: more lenient BMP loading (woesss)\r\n- e42cff5: fix (rmn20)\r\n- a609ebd: micro3d: Fix for bmp files with invalid raster offset (rmn20)\r\n- 724b90a: Refactoring case-insensitive file extension checking (woesss)\r\n- 86d3435: Improve com.siemens.mp.lcdui.Image implementation (woesss)\r\n- 23d4d1e: Fix open FileConnection (woesss)\r\n- 2b3eb27: Use acra-http (woesss)\r\n- 3cc10ae: Improve error reports (woesss)\r\n- a222d4a: Update appcenter cert (Nikita Shakarun)\r\n- 7a6719b: Fix build without secret properties (woesss)\r\n- 190bb47: LCDUI: fix Item.notifyStateChanged() (woesss)\r\n- 5d18a8b: Remove minimum delay for key release (woesss)\r\n- 177c985: Fix ClassCastException in takeScreenshot() (woesss)\r\n- cc87cf5: Fixed saving of resolution presets (woesss)"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-09-30-b7a1fac",
-      "releaseDate": "2026-09-30T18:52:11Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-09-30-b7a1fac",
-      "releaseNotes": "## What's Changed\n* input: correct gyro orientation drift with the accelerometer by @ew-sudo in https://github.com/KytyPS5/KytyPS5/pull/899\n\n## New Contributors\n* @ew-sudo made their first contribution in https://github.com/KytyPS5/KytyPS5/pull/899\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-30-bc193f5...KytyPS5-2026-09-30-b7a1fac"
+      "version": "KytyPS5-2026-10-01-4479808",
+      "releaseDate": "2026-10-01T14:03:44Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-01-4479808",
+      "releaseNotes": "## What's Changed\n* network: handle SO_NBIO on non-Windows hosts by @Aryansh1520 in https://github.com/KytyPS5/KytyPS5/pull/954\n\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-09-30-b7a1fac...KytyPS5-2026-10-01-4479808"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -806,11 +806,13 @@
       "sourceUrl": "https://github.com/Rakashazi/emu-ex-plus-alpha/releases/tag/Pre-release"
     },
     "nesd": {
-      "version": "0.21.2",
-      "releaseDate": "2026-09-29T14:15:04Z",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/0.21.2",
-      "releaseNotes": "### Added\n- AppImages now contain update information\n\n### Fixed\n- On Linux, the window no longer opens larger than the screen",
-      "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/0.21.2/nesd.0.21.2.android.apk"
+      "version": "nightly",
+      "releaseDate": "2026-10-01T17:13:35Z",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "releaseNotes": "### Added\n- Android: Touch controls vibrate on press, enabled by default",
+      "downloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
+      "devDownloadUrl": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd-dev.nightly.android.apk",
+      "devReleaseNotes": "### Added\n- Android: Touch controls vibrate on press, enabled by default"
     },
     "nesoid": {
       "version": "2.5-4",
@@ -898,10 +900,10 @@
     },
     "padforge": {
       "version": "latest-v4-dev",
-      "releaseDate": "2026-10-01T02:37:26Z",
+      "releaseDate": "2026-10-01T18:14:36Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v4-dev",
-      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/36805186197",
-      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/36805186197"
+      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/36902652402",
+      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v4-dev-2\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/36902652402"
     },
     "panda3ds": {
       "version": "0.9",
@@ -928,11 +930,11 @@
       "devReleaseNotes": "Attempted head seek improvements for Zen Nihon Joshi Pro Wres - Queen of Queens."
     },
     "pcsx2_pc": {
-      "version": "2.9.93",
-      "releaseDate": "2026-09-29T13:47:36Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.93",
-      "releaseNotes": "- [GS:MTL: Flush clears in DoMerge](https://github.com/PCSX2/pcsx2/pull/15026)",
-      "devReleaseNotes": "- [GS:MTL: Flush clears in DoMerge](https://github.com/PCSX2/pcsx2/pull/15026)"
+      "version": "2.9.94",
+      "releaseDate": "2026-10-01T16:23:32Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.94",
+      "releaseNotes": "- [GS:VK: Remove unused line_width pipeline selector.](https://github.com/PCSX2/pcsx2/pull/15029)",
+      "devReleaseNotes": "- [GS:VK: Remove unused line_width pipeline selector.](https://github.com/PCSX2/pcsx2/pull/15029)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.22",
@@ -1064,11 +1066,11 @@
       "releaseNotes": "ScummVM 2026.3.0 \"Carousels & Killer Whales\" comes to fruition. So far, we are able to keep the release cadence. This quarter, the team is bringing you a set of new and old, all exciting features!\r\n\r\n## Newly Supported Games:\r\n* _Nancy Drew: The Haunted Carousel_\r\n* _Nancy Drew: Danger on Deception Island_\r\n* _Noctropolis_\r\n* _Cartoon Carnival_\r\n* _Alfred Pelrock: En Busca de un Sueño_\r\n* _Pilot Brothers: On the Track of Striped Elephant_\r\n* _Pilot Brothers: The Case of Serial Maniac_ and 5 more games on the same engine\r\n\r\nBut wait, that's not everything!\r\n\r\n# Changelog\r\n## New games:\r\n   - Added support for Nancy Drew: The Haunted Carousel.\r\n   - Added support for Nancy Drew: Danger on Deception Island.\r\n   - Added support for Noctropolis.\r\n   - Added support for Cartoon Carnival.\r\n   - Added support for Alfred Pelrock: En Busca de un Sueño.\r\n   - Added support for Pilot Brothers: On the Track of Striped Elephant,\r\n     Pilot Brothers: The Case of Serial Maniac, and five minor\r\n     games built on the Gamos engine.\r\n\r\n## General:\r\n   - Highlight clickable links in the GUI with a cursor change.\r\n   - Fixed window size when switching out of fullscreen mode on 3D engines.\r\n   - Implemented NULL OPL driver for lower-base systems.\r\n   - Implemented kinetic scolling in GUI lists.\r\n\r\n## ACCESS:\r\n   - Fixed various script issues in Martian Memorandum.\r\n\r\n## AGOS:\r\n   - Added support for language files used by Amiga and Macintosh\r\n     versions of Simon2.\r\n\r\n## GLK:\r\n   - Exposed text and engine settings in the GUI.\r\n\r\n## LastExpress:\r\n   - The game has been supported for a while now (2026.1.0), we just\r\n     forgot to add a news entry here. Whoops!\r\n   - Several inaccuracies from the character logic have been fixed,\r\n     which means that some rare issues concerning characters behavior\r\n     should now be gone.\r\n\r\n## MADS:\r\n   - In Rex Nebular fix game being semi-stuck while using binoculars.\r\n\r\n## MM:\r\n   - Reworked keymapper for MM1.\r\n   - Fixed MM1 Enhanced allowing trading more than the character owned.\r\n   - Fixed MM1 Enhanced allowing free temple healing where it shouldn't.\r\n   - MM1 Enhanced most recently played music was restarting after opening and closing the GMM.\r\n\r\n## MYST3:\r\n   - Fixed a regression for the animation of the control wheel at J'nanin's shore.\r\n   - Camera movement is now free after placing a symbol on the pedestal at the watch tower in J'nanin.\r\n\r\n## NANCY:\r\n   - Fixed a regression in ripped letter types of puzzles, affecting all the Nancy games that feature such puzzles.\r\n   - Fixed potential crashes in ripped letter types of puzzles, after loading a saved game.\r\n   - Show the correct mouse cursor in rotating lock types of puzzles.\r\n   - Enter the game scene directly when loading a saved game from the launcher or the GMM, instead of starting in the main game menu.\r\n   - Properly handle the \"Continue Game\" button after clicking on the \"More Nancy\" button.\r\n   - Fixed an edge case in piano types of puzzles, where clicking on a key while another was still down produced a graphical glitch.\r\n   - Fixed some sounds stopping prematurely in Nancy Drew: Secret of the Scarlet Hand and newer games.\r\n   - Fixed animation speed and timing in turning types of puzzles.\r\n\r\n## SLUDGE:\r\n   - Added two more games to detection, \"Sam and Max Flintlocked\" and\r\n     \"Full Moon\".\r\n\r\n## TwinE:\r\n   - Fixed soft lock collision bug with bulldozer.\r\n   - Fixed wrong scaling for plasma menu effect.\r\n   - Fixed holomap model rendering.\r\n   - Disable autosaves while driving a vehicle.\r\n\r\n## Atari port:\r\n   - Added native CDDA support.\r\n   - Added plugin support (now ScummVM can run with as little as a few megs of RAM).\r\n   - Added native YM2149 support (currently usable for Elvira 1 and 2).\r\n   - Reworked audio mixer (this fixes the barking poodles in SOMI).\r\n   - Autosave is disabled by default as it leads to audible artefacts during gameplay.\r\n\r\n## PS3 port:\r\n   - Added support for running ScummVM engines as separate modules/executabl…"
     },
     "shadps4_android": {
-      "version": "Pre-release-shadPS4-2026-10-01-d9cf41ba0ae2ebac746fdb843af1716002ab86a0",
-      "releaseDate": "2026-10-01T02:30:11Z",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-01-d9cf41ba0ae2ebac746fdb843af1716002ab86a0",
-      "releaseNotes": "Full Changelog: [v.0.18.0...d9cf41b](https://github.com/shadps4-emu/shadPS4/compare/v.0.18.0...d9cf41ba0ae2ebac746fdb843af1716002ab86a0)",
-      "devReleaseNotes": "Full Changelog: [v.0.18.0...d9cf41b](https://github.com/shadps4-emu/shadPS4/compare/v.0.18.0...d9cf41ba0ae2ebac746fdb843af1716002ab86a0)"
+      "version": "Pre-release-shadPS4-2026-10-01-fecfbed092fc782c37d3a54684ebe63674575fba",
+      "releaseDate": "2026-10-01T14:28:20Z",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-01-fecfbed092fc782c37d3a54684ebe63674575fba",
+      "releaseNotes": "Full Changelog: [v.0.18.0...fecfbed](https://github.com/shadps4-emu/shadPS4/compare/v.0.18.0...fecfbed092fc782c37d3a54684ebe63674575fba)",
+      "devReleaseNotes": "Full Changelog: [v.0.18.0...fecfbed](https://github.com/shadps4-emu/shadPS4/compare/v.0.18.0...fecfbed092fc782c37d3a54684ebe63674575fba)"
     },
     "sharpemu_pc": {
       "version": "0.0.4-release.2",
@@ -1118,11 +1120,11 @@
       "releaseNotes": "Merge 24d2ffcfc7f14229337f05f4920fe26b56633d9d"
     },
     "supersnes9x_pc": {
-      "version": "nightly-2026-09-30",
-      "releaseDate": "2026-09-30T09:54:10Z",
+      "version": "nightly-2026-10-01",
+      "releaseDate": "2026-10-01T10:18:56Z",
       "sourceUrl": "https://github.com/shanytc/snes9x/releases/tag/nightly",
-      "releaseNotes": "Automated build of `master` at 3fdfa1e826dcf94718983ffe597eb9c834ed863a.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary.",
-      "devReleaseNotes": "Automated build of `master` at 3fdfa1e826dcf94718983ffe597eb9c834ed863a.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary."
+      "releaseNotes": "Automated build of `master` at 5dca0f6a7ac4af0af1bd8269b7cc63c5774e47d4.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary.",
+      "devReleaseNotes": "Automated build of `master` at 5dca0f6a7ac4af0af1bd8269b7cc63c5774e47d4.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary."
     },
     "swiff": {
       "version": "1.4.0",
@@ -1179,9 +1181,9 @@
     },
     "vita3k_pc": {
       "version": "continuous",
-      "releaseDate": "2026-09-30T15:21:23Z",
+      "releaseDate": "2026-10-01T10:50:25Z",
       "sourceUrl": "https://github.com/Vita3K/Vita3K/releases/tag/continuous",
-      "releaseNotes": "Corresponding commit: e6ac4272e3e7e35e2ffd307adfacffa9e3392686\nVita3K Build: 4103",
+      "releaseNotes": "Corresponding commit: d7edcbe979b792d86de100107ad9813878ca3ea9\nVita3K Build: 4106",
       "downloadUrl": "https://github.com/Vita3K/Vita3K/releases/download/continuous/android-latest.apk"
     },
     "vita3k_plus": {
@@ -1258,10 +1260,10 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_edge_pc": {
-      "version": "f6f9a03",
-      "releaseDate": "2026-10-01T05:20:59Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/f6f9a03",
-      "releaseNotes": "### Changes\n\n- [CPU] Treat guest calls as reading all of CR (`f6f9a03`)\n- [CPU] Take the FPR denormal proof's edges from the branches themselves (`39aa0bf`)\n- [A64] Return in the Fpu mode the FPCR tracker assumes (`8f21542`)\n- [A64] Leave scalar moves, tests and exact conversions in the VMX mode (`e0e1e58`)\n- [A64] Assume the Fpu mode where the tracker loses it in scalar-only code (`df7d6d9`)\n- [A64] Keep the physical remap bound across tail stubs and blocks (`1bb7afe`)\n- [A64] Branch in one instruction when the whole function is in reach (`0ffb0c2`)\n- [A64] Branch on a compare's flags instead of its boolean (`aba5703`)\n- [A64] Store a call's return address from the register holding it (`6bc0aa5`)\n- [A64] Fold a vector access's alignment mask into its address (`7a5d971`)\n- [A64] Load the fixed helper addresses from the backend context (`6fc16d1`)\n- [A64] Cheaper call sequences and extern calls (`b416d19`)\n- [A64] Track the FPCR mode across blocks and host transitions (`fc0ed6e`)\n- [CPU] Eliminate dead condition-register stores with a liveness pass (`689590b`)\n- [CPU] Prove guest FPRs non-denormal across blocks (`92bf749`)\n- [CPU] Keep the lfs/stfs signaling-NaN fixups off the fast path (`c496db0`)\n- [CPU] Fold the single-precision denormal quirk test into one opcode (`078a07b`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/089473c...f6f9a03"
+      "version": "b5cc59e",
+      "releaseDate": "2026-10-01T12:00:44Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/b5cc59e",
+      "releaseNotes": "### Changes\n\n- [Memory] Translate user mode addresses through the guest page table (`b5cc59e`)\n- [CPU] Invalidate compiled code when a guest sweeps the instruction cache (`cebb1d1`)\n- [CPU] Implement XER[OV] and XER[SO] for the PPC OE forms (`10da45e`)\n- [Emulator] Drop two stale device registration order notes (`0525b97`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/95b14f5...b5cc59e"
     },
     "xenia_manager": {
       "version": "5.0.0",
