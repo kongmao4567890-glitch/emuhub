@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T06:30:14.736688Z",
+  "generatedAt": "2026-10-01T18:36:17.599765Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,47 @@
   },
   "articles": [
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
+      "id": "137467",
+      "title": "【其他】touchHLE v0.3.0",
+      "originalTitle": "[www] touchHLE v0.3.0",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T18:05:09Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137467-www-touchhle-v0-3-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/03/touchhle1.png",
+      "officialUrl": "https://touchhle.org/",
+      "summary": "touchHLE是适用于iPhone OS应用程序的高级模拟器(HLE)。 它运行在现代桌面操作系统上，用Rust编写。 使用HLE方法， touchHLE与QEMU等低级仿真器（ LLE ）截然不同。模拟处理器执行的唯一代码是应用程序二进制文件和少数库 . touchHLE取代了iPhone OS ，并提供了自己的系统框架实现（ Foundation、UIKit、OpenGL ES、OpenAL等）。",
+      "content": "touchHLE是适用于iPhone OS应用程序的高级模拟器(HLE)。 它运行在现代桌面操作系统上，用Rust编写。\n使用HLE方法， touchHLE与QEMU等低级仿真器（ LLE ）截然不同。模拟处理器执行的唯一代码是应用程序二进制文件和少数库\n. touchHLE取代了iPhone OS ，并提供了自己的系统框架实现（ Foundation、UIKit、OpenGL ES、OpenAL等）。\n这个项目的目标是运行iOS早期的游戏。到目前为止，仅测试了适用于iPhone OS 2.x的iPhone/iPod touch应用程序\n。对现代/64位iOS应用程序的支持显然是非客观的，并且由于其复杂性，对非游戏应用程序的支持不太可能成为优先事项\n另一方面，我们将来可能会尝试支持一些较新的32位版本（特别是3.x和4.x ）和iPad的应用程序。也可以尝试支持iPhone OS 1.x\n。目前仅支持三个应用程序。 随着时间的推移，名单肯定会越来越长:)\n\n源站点。",
+      "originalContent": "touchHLE est un émulateur de haut niveau (HLE) pour les applications iPhone OS. Il fonctionne sur les systèmes d'exploitation de bureau modernes et est écrit en Rust.\n\nUtilisant la méthode par HLE, touchHLE est radicalement différent d'un émulateur de bas niveau (LLE) comme QEMU. Le seul code exécuté par le processeur émulé est le binaire de l'application et une poignée de bibliothèques. touchHLE prend la place de l'iPhone OS et fournit ses propres implémentations des frameworks du système (Foundation, UIKit, OpenGL ES, OpenAL, etc).\n\nL'objectif de ce projet est de faire tourner les jeux des premiers jours d'iOS. Seules les applications iPhone/iPod touch pour iPhone OS 2.x ont été testées jusqu'à présent. La prise en charge des applications iOS modernes/64 bits est explicitement un non-objectif, et la prise en charge des applications qui ne sont pas des jeux n'est pas susceptible d'être prioritaire en raison de leur complexité. D'un autre côté, il est probable que nous essayions de prendre en charge des applications pour certaines versions 32 bits plus récentes (en particulier 3.x et 4.x) et pour l'iPad à l'avenir. La prise en charge de l'iPhone OS 1.x pourrait également être tentée. Actuellement, seules trois applications sont prises en charge. La liste va sûrement s'allonger avec le temps :)\n\nSite source.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "a8170e57b5eb83c0c317ebae341a4d158de0df6063bc4b08b903554ea59b7062",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-01T05:44:49Z",
+      "publishedAt": "2026-10-01T17:13:35Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月01日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•修复了游戏列表搜索（ Stenzek（https://github.com/stenzek/duckstation/commit/8fa9ef5394a9d8b4a429b8dece78fe06b5946b55） ）中逃脱时的焦点重置",
-      "originalContent": "## Commits\n- Fix focus reset on escape in game list search ([Stenzek](https://github.com/stenzek/duckstation/commit/8fa9ef5394a9d8b4a429b8dece78fe06b5946b55))",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年10月01日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• Android:触控会震动按压,默认启用",
+      "originalContent": "### Added\n- Android: Touch controls vibrate on press, enabled by default",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
-        "duckstation"
+        "nesd"
       ],
-      "contentHash": "bd270dfaae298eb8fc31869c594d1e829e9947109dcb36e3ac3889bd9383b859",
+      "contentHash": "439454128c5d771854bf50a72f17d68b662b241a31806aac757abb7bfaac8f6d",
       "translationPending": false
     },
     {
@@ -39,14 +59,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-01T01:58:39Z",
+      "publishedAt": "2026-10-01T16:42:59Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月01日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• cpu/tms32010:大后期固定(#2767)(BeWorld)\n• 将大编辑器固定在洞穴引擎上(#2764)(BeWorld)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• cpu/tms32010: big-endian fix (#2767) (BeWorld)\n• fix big-ednian on cave engine (#2764) (BeWorld)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_megadrive.cpp, d_ngp.cpp, d_spectrum.cpp: 更新... (fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_ngp.cpp, d_spectrum.cpp: updates... (fprietog)",
       "platforms": [
         "android"
       ],
@@ -54,7 +74,211 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "0f2e60c91d02029f00297e4f8a72fcce3b6ae214b05f7cda0d3cb5d698f5e015",
+      "contentHash": "7c11c13a8b5074ee7738501d2f5bd96efec7ba093a5f255216a3cff106f9341f",
+      "translationPending": false
+    },
+    {
+      "id": "137465",
+      "title": "【工具】Foobar2000 v2.26",
+      "originalTitle": "[Utilitaires Divers] Foobar2000 v2.26",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-01T12:32:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137465-utilitaires-divers-foobar2000-v2-26/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/foobar-300x166.png",
+      "officialUrl": "http://www.foobar2000.org/",
+      "summary": "乍一看， Foobar2000是一款极简阅读器。其界面非常清醒，仅呈现播放列表，而进度条和控制按钮只能是文本字符 。它通过添加插件支持许多声音格式（包括来自旧机器的音频格式）。 这种轻巧当然使Foobar2000在内存/处理器资源方面成为最轻的MP3播放器之一，但不应认为这会将其限制在最低限度。 该播放器的插件操作使其具有令人难以置信的模块化，并集成了令人印象深刻的功能。 完全支持许多与仿真相关的音频格式。 您可以在此处查看变化。",
+      "content": "乍一看， Foobar2000是一款极简阅读器。其界面非常清醒，仅呈现播放列表，而进度条和控制按钮只能是文本字符\n。它通过添加插件支持许多声音格式（包括来自旧机器的音频格式）。\n这种轻巧当然使Foobar2000在内存/处理器资源方面成为最轻的MP3播放器之一，但不应认为这会将其限制在最低限度。 该播放器的插件操作使其具有令人难以置信的模块化，并集成了令人印象深刻的功能。\n完全支持许多与仿真相关的音频格式。\n\n您可以在此处查看变化。",
+      "originalContent": "Foobar2000 est un lecteur de prime abord minimaliste. Son interface est des plus sobre avec la seule présentation d'une liste de lecture alors que la barre de progression et les boutons de contrôle peuvent n'être que des caractères textuels. Il supporte de nombreux formats sonores (notamment les formats audio d'anciennes machines) grâce à l'ajout de plugins.\n\nCette légèreté permet bien sûr à Foobar2000 d'être l'un des lecteurs MP3 les plus léger en termes de ressources mémoire / processeur, mais il ne faudrait pas croire que cela le contraint au minimum syndical. Le fonctionnement par plugins de ce lecteur lui permet d'être incroyablement modulaire et d'intégrer un nombre impressionnant de fonctions.\n\nDe nombreux formats audio en rapport avec l'émulation sont parfaitement supportés.\n\nLes changements sont visibles ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "6dd2ccb8b790a77e949d4a2a1ac33d47b8cd60f5b89a5d99939078cc12dade63",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T11:53:43Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月01日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 使用AppRoot进行翻译(Stenzek)（https://github.com/stenzek/duckstation/commit/14c22676288c72da10f3925d56bbf81f70df3d66）)",
+      "originalContent": "## Commits\n- Use AppRoot for translations ([Stenzek](https://github.com/stenzek/duckstation/commit/14c22676288c72da10f3925d56bbf81f70df3d66))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "922f9cd1aedc915221292d9f1b9852cb1d480801dcca6af64196062cbb494813",
+      "translationPending": false
+    },
+    {
+      "id": "137463",
+      "title": "【家用机】GearGRAFX v1.8.1",
+      "originalTitle": "[Consoles de salon] GearGRAFX v1.8.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T10:57:00Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137463-consoles-de-salon-geargrafx-v1-8-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/07/Geargrafx-1.6.0.png",
+      "officialUrl": "https://github.com/drhelius/Geargrafx",
+      "summary": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。 🎯 提高PSG准确性 📦 Ubuntu 26.04版本 💿 改进的libretro LaserActive实现 🎮 更新了游戏控制器数据库 🐛 错误修复和改进",
+      "content": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。\n\n🎯 提高PSG准确性\n📦 Ubuntu 26.04版本\n💿 改进的libretro LaserActive实现\n🎮 更新了游戏控制器数据库\n🐛 错误修复和改进",
+      "originalContent": "Il s'agit d'un émulateur de PC Engine / TurboGrafx-16 / CD-ROM² / Super CD-ROM² et Arcade CD-ROM² / SuperGrafx multi plateformes.\n\n🎯 Improved PSG accuracy\n📦 Ubuntu 26.04 builds\n💿 Improved libretro LaserActive implementation\n🎮 Updated Game Controller DB\n🐛 Bug fixes and improvements",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "f54f0f708b991ea9decc38fc4ab67830a3bff005f4e95f20083ccbac837ce6d9",
+      "translationPending": false
+    },
+    {
+      "id": "137461",
+      "title": "【移动设备】GearLynx v1.2.33",
+      "originalTitle": "[Consoles portables] GearLynx v1.2.33",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T10:55:39Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137461-consoles-portables-gearlynx-v1-2-33/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/Gearlynx-0.0.4.png",
+      "officialUrl": "https://github.com/drhelius/Gearlynx",
+      "summary": "GearLynx是适用于Windows的Atari Lynx模拟器。 这些变化是： 在🔌 libretro中最多支持4个屏幕的ComLynx电缆 📦 Ubuntu 26.04版本 🎮 更新了游戏控制器数据库 🐛 错误修复和改进",
+      "content": "GearLynx是适用于Windows的Atari Lynx模拟器。\n\n这些变化是：\n在🔌 libretro中最多支持4个屏幕的ComLynx电缆\n📦 Ubuntu 26.04版本\n🎮 更新了游戏控制器数据库\n🐛 错误修复和改进",
+      "originalContent": "GearLynx est un émulateur d'Atari Lynx pour Windows.\n\nLes changements sont:\n🔌 ComLynx cable support with up to 4 screens in libretro\n📦 Ubuntu 26.04 builds\n🎮 Updated Game Controller DB\n🐛 Bug fixes and improvements",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "cee559f5dd42cf168358326d0655ed73bb3ae03a0a29e1cbb052ddd668535b41",
+      "translationPending": false
+    },
+    {
+      "id": "137459",
+      "title": "【家用机】GearColeco v1.7.2",
+      "originalTitle": "[Consoles de salon] GearColeco v1.7.2",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T10:53:43Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137459-consoles-de-salon-gearcoleco-v1-7-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/02/gearcoleco-qbert.png",
+      "officialUrl": "https://github.com/drhelius/Gearcoleco",
+      "summary": "Gearcoleco是一款用C + +编写的高精度跨平台ColecoVision仿真器，可在Windows、macOS、Linux、BSD、Raspberry Pi和RetroArch上运行。 变更内容： 📦 添加了Ubuntu 26.04版本 🎮 更新了游戏控制器数据库 🐛 错误修复和改进",
+      "content": "Gearcoleco是一款用C + +编写的高精度跨平台ColecoVision仿真器，可在Windows、macOS、Linux、BSD、Raspberry Pi和RetroArch上运行。\n\n变更内容：\n📦 添加了Ubuntu 26.04版本\n🎮 更新了游戏控制器数据库\n🐛 错误修复和改进",
+      "originalContent": "Gearcoleco est un émulateur ColecoVision multiplateforme très précis écrit en C++ qui fonctionne sous Windows, macOS, Linux, BSD, Raspberry Pi et RetroArch.\n\nLes changements:\n📦 Added Ubuntu 26.04 builds\n🎮 Updated Game Controller DB\n🐛 Bug fixes and improvements",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "gearcoleco_core"
+      ],
+      "contentHash": "d00d02321370583af0dcc7a2e39dc8e735a41652087d5115f6b68d2da7821942",
+      "translationPending": false
+    },
+    {
+      "id": "137457",
+      "title": "【家用机】GearSystem v3.9.20",
+      "originalTitle": "[Consoles de salon] GearSystem v3.9.20",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T10:51:53Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137457-consoles-de-salon-gearsystem-v3-9-20/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/07/Gearsystem.png",
+      "officialUrl": "https://github.com/drhelius/Gearsystem",
+      "summary": "这是一个由Ignacio Sanchez用C + +编写的8位SEGA模拟器。 它模拟以下机器： •世嘉Mark III •世嘉Master System •世嘉游戏装备 •世嘉Game 1000 （ SG-1000 ） • Othello Multivision 因此，以下是变化： 齿🔌 轮到齿轮电缆支持，带有libretro双屏幕 ⚡ Mark III Joy-Joy电缆支持两个本地桌面流程 📦 Ubuntu 26.04版本 🎮 更…",
+      "content": "这是一个由Ignacio Sanchez用C + +编写的8位SEGA模拟器。\n\n它模拟以下机器：\n•世嘉Mark III\n•世嘉Master System\n•世嘉游戏装备\n•世嘉Game 1000 （ SG-1000 ）\n• Othello Multivision\n\n因此，以下是变化：\n\n齿🔌 轮到齿轮电缆支持，带有libretro双屏幕\n⚡ Mark III Joy-Joy电缆支持两个本地桌面流程\n📦 Ubuntu 26.04版本\n🎮 更新了游戏控制器数据库\n🐛 错误修复和改进\n\n32位二进制文件由Lo v2编译。",
+      "originalContent": "Il s'agit d'un émulateur de Sega 8 bits écrit en C++ par Ignacio Sanchez.\n\nIl émule les machines suivantes:\n- Sega Mark III\n- Sega Master System\n- Sega Game Gear\n- Sega Game 1000 (SG-1000)\n- Othello Multivision\n\nVoici donc les changements:\n\n🔌 Gear-to-Gear cable support with dual screens in libretro\n⚡ Mark III Joy-Joy cable support for two local desktop processes\n📦 Ubuntu 26.04 builds\n🎮 Updated Game Controller DB\n🐛 Bug fixes and improvements\n\nLe binaire 32 bits est compilé par Lo v2.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "gearsystem"
+      ],
+      "contentHash": "55d3a96c9c5eeb20cee9869051cdce5a78d96760c9ee24c027cd5b5b89645ddb",
+      "translationPending": false
+    },
+    {
+      "id": "137454",
+      "title": "【电脑】ADAMP v2.0.09.26",
+      "originalTitle": "[Multi] ADAMP v2.0.09.26",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "tool",
+      "publishedAt": "2026-10-01T10:33:48Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137454-multi-adamp-v2-0-09-26/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/11/ADAMP.png",
+      "officialUrl": "https://github.com/dvdh1961/ADAMP",
+      "summary": "ADAM+是一款现代仿真器，旨在复制ColecoVision控制台和Coleco ADAM计算机。 它是使用Qt6库为Windows开发的，它提供了一个稳定而强大的图形界面。 该项目受到EmulTwo的启发，但已完全重写，以提供更好的鲁棒性和更高的可扩展性。 它不仅限于仿真：它还集成了调试和开发工具，允许复古游戏爱好者和开发人员在忠实于原始机器的环境中测试、分析和创建程序 。",
+      "content": "ADAM+是一款现代仿真器，旨在复制ColecoVision控制台和Coleco ADAM计算机。\n它是使用Qt6库为Windows开发的，它提供了一个稳定而强大的图形界面。 该项目受到EmulTwo的启发，但已完全重写，以提供更好的鲁棒性和更高的可扩展性。\n它不仅限于仿真：它还集成了调试和开发工具，允许复古游戏爱好者和开发人员在忠实于原始机器的环境中测试、分析和创建程序\n。因此， ADAM+是一个完整的续集，既可以重现80年代的经典，也可以探索ColecoVision和ADAM的技术历史。",
+      "originalContent": "ADAM+ est un émulateur moderne conçu pour reproduire la console ColecoVision et l’ordinateur Coleco ADAM.\n\nIl a été développé pour Windows avec la bibliothèque Qt6, ce qui lui donne une interface graphique stable et performante. Le projet est inspiré d’EmulTwo mais a été entièrement réécrit afin d’offrir une meilleure robustesse et une extensibilité accrue.\n\nIl ne se limite pas à l’émulation: il intègre aussi des outils de débogage et de développement, permettant aux passionnés de rétro‑gaming et aux développeurs de tester, analyser et créer des programmes dans un environnement fidèle aux machines originales. ADAM+ se présente donc comme une suite complète, à la fois pour rejouer aux classiques des années 80 et pour explorer l’histoire technique de la ColecoVision et de l’ADAM.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "adamp_pc"
+      ],
+      "contentHash": "a319ddf96962ae097032db301ec4beaec1797242d9ac4598b18ab77011781aac",
+      "translationPending": false
+    },
+    {
+      "id": "137451",
+      "title": "【家用机】RPCS3 v0.0.43 Alpha",
+      "originalTitle": "[Consoles de salon] RPCS3 v0.0.43 Alpha",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T10:04:46Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137451-consoles-de-salon-rpcs3-v0-0-43-alpha/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/03/rpcs3.jpg",
+      "officialUrl": "http://rpcs3.net/",
+      "summary": "由 DH & Hykem 创建(并加入一组开发者), RPCS3 是一个多平台的 Playstation 3 模拟器,看起来会尽可能地完整。 它最初是一个简单的拆卸,但从那时起它被移到运出PS3的整个商业目录的地步,它即将成为第一种模拟器。 控制台的功能平滑。 然而,这种性能需要一台特别强大的机器。",
+      "content": "由 DH & Hykem 创建(并加入一组开发者), RPCS3 是一个多平台的 Playstation 3 模拟器,看起来会尽可能地完整。 它最初是一个简单的拆卸,但从那时起它被移到运出PS3的整个商业目录的地步,它即将成为第一种模拟器。 控制台的功能平滑。 然而,这种性能需要一台特别强大的机器。\n\n您需要的不小于 CPU 类型 Intel Camet Lake( 第10次) 或 AMD Zen 3 (5000) 或更多, 最近的图形卡类型 nVidia GTX, 高性能内存 此类型 DDR4/DDR5( min 8 go / 建议 16 go) 或最近一个操作系统可以跳来以相对流畅的方式启动游戏( 但是要小心它取决于 许多建筑和游戏).\n\n几种渲染可供您使用: None, OpenGL, DirectX12 (仅Windows 10)和 Vulkan (whoch 打算在未来通过更高效的利用来取代 OpenGL 及其衍生产品) 现代计算机架构。\n\n关于模拟器名称,这是个人计算机(PC)和PlayStation 3(PS3)的缩写和组合。 PC + PS3 = PCS3 (英语).\nR是什麽意思? DH和BlackDemon记得,他和2011年一样代表了Real,只有Ps3. 在那里,DH(来自乌克兰)一度开始表示R代表俄语。 此外,2013年底加入球队并迅速成为该模拟器最快开发者之一的内克特基纳来自俄罗斯。 这么说 RPCS3 指现在俄罗斯个人计算机站3站。\n\n这个版本(不会被看做是稳定的)将被称为\"标记点\"(Landmarks),意思是它在官方网站上正式发布(它). nge正则架构称为\"WIP\"或\"GIT\",仅供64位处理器使用。 不幸的是,没有更改日志。\n\n版本的改变作为地标,绝不是稳定的建筑物\n此更改日志列出自 0.0.X\n\n自兹 v0.0.42 标记 :\n• 新承诺\n• x 源代码文件已编辑\n• 增加了x行代码并删除了4 024条代码\n• x 贡献码\n• x个发展日\n\n更改日志 :\n\n• 由@digant73在#19122中修复崩溃的游戏窗口关闭上的模拟器崩溃\n• rsx/copypasta:在#19123的@digant73为FS实习修复倒置的双面照明输入登记册\n• 更新FAudio 26.08 由@Megamouse 于#19125\n• qt:在设置中减少代码行_dialog,由@Megamouse在#19130\n校正 vm:writer_lock 引出 PPU 上的僵局使用由 @elad335 在#19132\n• 在19136年的@Megamouse用倒回编码器修复录音\n• CMake:用zlib路径和wolfSSL修复Windows/MSVC构建问题 TLS1.3 @Alasonga in #19137 页面存档备份,存于互联网档案馆\n• 在19141年由@elad335修复的古仿真错误\n校对:Soup\n• msvc:由@Megamouse在 #19147中修复 libprotobuf-lite 调试依赖性\n• msvc:修复由@Megamouse在#19148所建的开口调试器\n校对:Soup\n• 在19101年由@digant73修复α测试\n• rsx:在调试建筑中固定例外数据_heap by @Megamouse in #19150\n• .\n将 SDL 更新到 3.4.14 依据创用CC授权使用\nưμ㼯A\n• 请记住上次从文件夹或ISO 添加游戏时使用过的路径, 由@lalitshankarch 在 # 19164\n• 根据优先级(Discrete, Integral, Software等)排序列出的GPU, 由@lalitshankarch 在 #19166\n• CPU翻译器:由 @WalterKruger在#19171中为 X86 内在内容添加常数叠加\n校对:Soup\n• 精灵:在大小检查的两边去掉不必要的-1,以防止由@Megamouse在#19175中的下流\n• 修复蒸汽捷径,\n校对:Soup\n• 检查最终安装路径目前是否在目标目录内, 然后再由@ Megamouse 在 # 19176中安装\n• ISO:由@Megamouse在#19184中修复一些OOB\n校对:Soup\n• sys_net: 由@RipleyTom在 #170中固定和改进\nQt: 运行主事件循环的初始对话框 , 由 @ Megamouse 在 # 19189\n• @Megamouse于19192年在文件取出时,\n校对:Soup\n• rsx:修复 nv0039 图像 (de) 由 @kallsyms 于 #190\n• rsx:nv0039 在19199年由@kd-11清理\n• 由@lalitshankarch在#19167中执行gv_rol32的AVX2路径\n• [SPU LLVM] 减少 SHUFB 恒定生成目标要求由 @WalterKruger 在#19205\n• vk:执行驱动程序管理操作,例如GC在单独的工人线上运行,由@kd-11在 #19208\n校对:Soup\n• Qt: 自动_ scroll_ 标签执行并用于由@Megamouse在 #19162中的设置描述\n• Qt: 由@Megamouse在 #19209中固定设置_对话框标签索引\n• Qt: 由 @ Megamouse 在 #19212 中将 Open Custom Gamepad 配置文件夹动作添加到游戏列表上下文菜单\n• 还原\"[SPU LLVM] 减少 SHUFB的恒定生成目标要求由 @ AniLeo 在 #19217\n• Qt: 取消设置中的滚动区域布局边距_dialog 由 @ Megamouse 在 #19211\n• Qt:在#19213中添加非官方建筑警告,\n• rsx/fp:由@kd-11在19220中修复LOOP和REP指令的编码\n• 由#19227中的@digant73将崩溃事件定作例外\n• 将公关号码与公关文本换为更新管理器, 由@ digant73 in #19228\n• Enrich游戏列表标题由@Digant73 在#19229\n• [Qt] 默认情况下用 @schm1dtmac 在 #19238 隐藏标题栏\n• 用更新的SDL来更新嵌入器 3.4.14 依据创用CC授权使用\n• rx:由 @kd-11在19235中重构动态纹理操作\n• [SPU LLVM] 避免GFNI在 SHUFB 中组合错误,由 @WalterKruger 在 #19221\n• rsx:由@kd-11在#19226中重新执行大量纹理重建(3D和Cubemap)\n• 在#19246的@hcorion翻译下载中增加60个第二个目录\n• gui:正确禁用由 @ AniLeo 在 #19248 中的视图文件夹按钮\n• 使用最大( ) 环绕负浮至 0.0 @NeilMonday in #19255\n• rsx_debugger:由@Megamouse在 #19257中修复 g8b8 转换\n校对:Soup\n• [SPU LLVM]在SELB避免冗余的XFloat正常化,由@Yahfz于19245\n• RCN:同步奖杯由@FlexBy420收录于#18760\n校对:Soup\n• rsx:优化图像传输操作(和一些bugfixs),由@kd-11于#19261\n• Hotfix:用由@FlexBy420在#19264中启用的 rpcn 修正游戏崩溃\n• 窗户:修复clang x64/arm64建筑,\n• 在文件上制作可选的 VSH\n• rsx:由@kd-11在19268中执行异域格式的色去除\n• gl:在格式不匹配时由#19275中的@kd-11修复复制_image_static行为\n• 修复pkg安装,由@Megamouse于19278\n• 在19266年由@digant73修复重复路径添加\n• [SPU LLVM]优化AVX-512 XFloat转换由@Yahfz 在#19244\n校对:Soup\n• VFS:由@Megamouse在#19284中删除路径上的双斜线\n• 过滤解锁Trophy的回复,\n• rx:执行平面阴影语义,由@Tagflag2d 在#19251\n校对:Soup\n• RSX:通过#19293中的@Yahfz提高DP3碎片精度\n• rx:用 #19296 中的 @kd-11 修复平板区域比对\n• Gui:通过拖放安装固件由@AniLeo在#19299\n• 更新打开的cv 4.14.0 依据创用CC BY-SA 2.\n• 更新Qt至 6.11.2 由@Megamouse在19301中翻译。\n• rsx:放松对NV4097_SET_SHADE_MODE输入的检查,以与#19304中的@kd-11的hw相匹配\n• 在19281年由@digant73修复ISO时间戳\n• 改进 Ps 移动跟踪器对话框, 由 @ Megamouse 在 # 19310\n• 1922年由 @digant73 添加游戏收藏支持\n• [Mac OS X]在#19312中由 @schm1dtmac 修复 PPU LLVM 编译回归/sporadic 失败(# 19103)\n• CellVdecegetPic项目:在没有AVFrame后,\n使用 RSX 覆盖 UI 添加 Big Picture 模式 由 @ BeezBumba 在 # 19165\n• [Mac OS X][RSX] 由@schm1dtmac在#19311中支持的针对苹果GPU的特性和格式的已禁用苹果专用黑客\n• [SPU LLVM] 由@WalterKruger 在#19319中添加SHUFB,\n• 补丁管理器由@Megamouse在19323中固定\n• PPU 调试器:由@elad335在#19331中支持Calltack的尾声调用\n• rsx:由@kd-11在#19013中重修 blit 引擎纹理缓存操作\n• Gui:按#19342中的@mariobob随机修改未翻译游戏列表类别\n• [Mac OS X] Fix get_accesst_buf () 由 @schm1dtmac 在19345年与ISO相撞\n• 以游戏标题解决字体问题,\n• 改进游戏收藏,\n• 覆盖 : 使用 Game_ content_ path in BPM 由 @ Megamouse 于 # 19350\n• 为 BPM 添加音频支持 ICON1.PAM 依据创用CC BY-SA 2.\n由@elad335在19356中修复 sys_overlay 储蓄\n• 修复由@Megamouse在19360年进行的同位素路径检查\n• rx:19353年由@kd-11进行小同步改进\n• rsx/qt:在 #19343中由 @kd-11 移动 blit 引擎升级来调试设置\n@Megamouse在19362中写道:\n• 在19366年,\n• RSX:修复SAT和ABS订单,由@Yahfz于19326\n• 由@digant73在 #19233中为Linux、macOS和FreeBSD添加 BD D Drive 支持\n• 加载器:仅在从光学驱动器安装包时使用单线由@19237\n• Qt:如果大小由 @ Megamouse 在19373 中启用, 请不要设置游戏窗口可见度\n• RCN:在#19306中由@FlexBy420从rpcn按钮中添加删除奖杯\n• Qt: 由@Megamouse在#19374中将横向滚动条添加到更改日志中\n• 重叠:将遮荫器编译对话框本地化,由@Megamouse 于 #19375\n• 在大图片模式下使用自己的游戏计数, 由@ Megamouse 于 # 19358\n• 更新子模块,由@Megamouse在19368\n• [Mac OS X] 修复 sys_s_random_number_generator 由 @schm1dtmac 在 #19382中清除一些已死代码\n^ Big Picture 模式:由 @Megamouse 在 #19380中固定的用户界面\n• 由#19387中的@acts-1631对 Cg 二进制字节进行交换\n由@Megamouse在19389上映。\n• 拒绝在19386年由@acts-1631所收集的溢出潜水状态数据\n• 拒绝在19393年由@acts-1631溢出ELF区域范围\n• 通过#19394中的@acts-1631验证SCE元数据头大小\n校对:Soup\n• 拯救国:拒绝不切实际的内存津贴,\n• 固定:检查票由@RipleyTom在#19402中正确编码\n• 由#19399中的@acts-1631编码的Clans成员属性编码\n• 更新卷轴至 8.22.0 由@Megamouse在19397中创建\n校对:Soup\n校对:Soup\n• rsx:在#19419中由@kd-11将 rsx_utils 头重构为小部分\n• rx:同步改进由#19383中的@kd-11\n• rsx/vk:由@kd-11在#19410中重写混合如何工作\n• GDB:由@kdridi在 #19445中设置的 PPU 单步状态\n• rsx:在使用本地浮标16类型时由@kd-11在#19438中修复α测试编译\n• [SPU LLVM] 8位添加/子浏览+比较快路源由@WalterKruger 在#19449\n• 加载器:处理缺失的ISO成员,无效读取优雅,由@seanbrar 在#19432\n• Gui:由@MananSharma12在#19424中为大小滑翔机设置垂直对齐\n• rsx: rsx时额外的内存安全:由#19451中的@kd-11所触发的:\n• 调试器:放松线程更新, syscall stub 579, 在#19452中由 @elad335添加更多的 CellError 格式化处理器\n• 修复PKG路径交叉和过大大小的条目分配,由#19385中的@acts-1631\n• SPU LLVM:使用调试选项时总是写缓存由@elad335在 #17792\n校对:Soup\n• 缓冲器:优化上传_未触地_skip_启动 AVX-512 路径由 @ Whatcookie in #16932\n• 根据旧蒸汽外观增加新主题,\n• 在19378年,\n校对:Soup\n• P2P:允许@Cri4Key在19462中播放插座\n• 将3+-ch端口游戏上的静音修正为2-ch音频输出配置由@digant73在#19180\n• sysutil/adio:由@Yahfz在19467中执行共享内存处理\n• 更新7zip 26.03 由@Megamouse 于 #19476\n校对:Soup\n• SPU LLVM:如果将一些代码设定为x86,则仅由@Whatcookie在#19486中使用\n• 支持在早期SDK上由@elad335 在#19489中编译的游戏的VM配置\n• 19493年,\n• 修复系统属性上的读取文件, 由 @ digant73 in #19494\n• VS:使用忍者来建立克洛斯朗语,\n• SPU LLVM:在#19498的@Whatcookie中,\n• 修复 UTF-8 文件名, 由 @ digant73 in #19497\n• 在19379年,\n• ps 移动跟踪器:只有 @Megamouse 在 #19377中根据请求创建线程\n• Qt:由@FlexBy420在#19428中执行\n• BUILDING.md: 更新 vulkan 在 linux 上安装, 由 @ Megamouse 在 # 19066\n• LogitechG27:仅在绘制的指向设备由@mixo03在#19273中连接时,才附加模拟设备\n• 将 emu callback 移动到自己的文件, 由 @ Megamouse 在 #19479\n• 臭名昭著的2 Trophy 重叠修复,\n• [Mac OS X] 切换所有Mac OS X CI,以使用由 Brew 产生的 MacPorts 7.0 @schm1dtmac 在19495年的更改\n• CellMic:在#19481中由@Megamouse添加EyeToy和PsEye类型\n• SPU LLVM:Omit test_state和spu-null,如果无法通过@Whatcookie在#19503中访问的话\n• RSX:在19500年,\n校对:Soup\n校对:Soup\n• 添加 -- -- 大图片 CLI 旗以迫使 Big Pictures Mode 由@edvardsanta 在 #19509上发布\n• [SPU LLVM]避免了SHUFB GFNI路径,因为它防止了由@WalterKruger在#19519中的OR组合。\n• 将MSVC cache 增加至 7GB, 由 @ Megamouse 于 # 19506\n• rsx:在使用表面缓存进行blit引擎标记时, 由 #19524 中的@ kd- 11 修正冲出预测器行为\n校对:Soup\n• 增加由@WalterKruger于19521年通过的InstCombine\n^ 重置\"[SPU LLVM]\" 添加InstCombine pass\"由@WalterKruger于#19535\n• rsx:由#19538的@kd-11编译\n• rsx/vk:由@kd-11在19546中修复的小错误\n^ sys_fs:由@elad335在#19556中修复 CELL_APP_HOME 光盘游戏的可读性控制\n• 由@digant73在19528中修复unpkg bugs\n校对:Soup\n• vk:由@valpackett于19561年在Adreno和其他油上安装严格的强制查询显微镜\n校对:Soup\n• LV2:等待由@elad335在#19562中从新线程中看到PPU时间表的变化\n• 单元格Gem:允许自定义相机_帧缓冲器由@Megamouse在#19563中使用\n• 补丁_引擎:修复 save_patches 销毁它审查的文件 由 @ digant73 in #19569\n• SPU:由@Yahfz在#19568中以精确的SPU预留时间缩短PUTLLC\n• Windows:#19571年由@Megamouse所著;\n• Gui:在Savestate和Trophy管理器中显示损坏物品的警告,\n• qt:不要将空保存的文件夹作为错误, 由 @ Megamouse 在 #19572\n• 固定:用LLVM固定建造 23.1 @RipleyTom in #19575 (英语).\n• gdb:由@ShadelessFox在#19574中读取的内存常规中固定地址检查\n• CI:尝试由@Megamouse在19526中拆分 msvc 构建和单元测试构建\n• vk:在启动时使用所有可用的线程来进行遮荫器编译, 由@ kd- 11 在 # 19578\n• [TESTERS需要]通过#19550中的@digant73修复慢音\n• 在Linux上为不同于OS的线程调度器修补线程亲和度由#19581中的@digant73\n• 修复 PPU 启动延迟积累, 由 @elad335 在 #19580\n• rsx/vm:不要暂停由@elad335在19584中的非RSX分配\n• VM/sys_mmapper:在#19585中由@elad335检查 Fix sys_mmapper错误\n• CellVdec:由@Digant73在19583中销毁\n^ LV2:等待新的PPU线程以 sys_ppu_thread_start由#19567中的@digant73启动\n• 修复BD驱动器的读取速度由@digant73在 #19551\n• 单元格Vdec:将图片输出出来,\n• 由@digant73在19530中修正ISO设备路径\n• rsx/qt:将 #19595中由@kd-11移动到高级标签上的“可损坏的 blit 引擎提升”选项\n• CPUThread:在CPU线程由#19599中的@digant73异常地结束时打破僵局\n• 此处:跳出自由BSD 14.5 by @AniLeo in #19570\n• 更新狼群 5.9.4 @Megamouse in #19598\n• RSX:通过#19608的@Yahfz为zpass查询保留右缓冲器\n• 单元格Vdec:报告每个图片的用户数据由@digant73在#19618中解码\n• 由@kd-11在#19619中翻回“RSX:为zpass查询保留深度缓冲器”\n• 由 @ digant73 在19471 中显示 ISO 密钥不匹配\n• Qt: 当游戏窗口再次被 @ digant73 在 #19541 显示时保持全屏\n• 将“libpng”更新至 1.6.59 由@Megamouse在 #19629\n校对:Soup\n• [Mac OS X] 强制在苹果 AArch64 上启用 LSE2 ,作为缺少宏的周围工作。 by@schm1dtmac in #19620\n由@FlexBy420在19560中固定为旧蒸汽主题\n• 在 #19593中,添加模拟 PS3 HDD 读取速度的选项。\n• 更新Vulkan记忆扫描仪 3.4.0 by @AniLeo in #19605\n• 重叠: 由@Megamouse 在 # 18414 中使用本地 ii 字体配置\n• 固定: 由 @RipleyTom在 #19635中制作 p2ps msgs multimap 并设定 mint_time 到 1ms\n• GUI:由@Megamouse在 #19644中刷新游戏列表后修复所主张的路径\n@Megamouse在19641中写道:\n• Perf_meter:由@Megamouse在#19642中固定 fucket记录\n校对:Soup\n校对:Soup\n校对:Soup\n• [TESTERS CLAUDIO]:所有知识暂停,\n校对:Soup\n• 修复由@digant73在#19173中启用的FMV音频开关\n• RSX由@Megamouse在19643中固定\n校对:Soup\n• 由 #19468 中的@ digant73 在某些面板上重命名接近取消按钮\n• RSX:由@Megamouse在#19648中避免了一些主机副本\n• 利用窗户,\n• 修补:不要将0个大小的数据包放入收到的_数据由@RipleyTom在 #19636\n校对:Soup\n• 仍由@Megamouse在19645中固定\n• RSX:用#19653的@Yahfz修复缓存纹理视图\n^ [TESTERS需要] LV2:让呼叫者离开 sys_ppu_thread_从低优先级开始... 由 @ digant73 in #1965\n• rpcs3_版本:跳至 0.0.43 by @AniLeo in #19656\n\nhttps://youtu.be/KvQuJDVgOQU\n\n请注意,兼容性清单继续不断取得进展(见这里)。\n\n让我们指出,现在100%的游戏是可以执行的,即使它们仍然有错误或一些崩溃,都可以启动,这是一个美丽的壮举,必须强调 糑\n\n编译出处和版本官方网站 (Buildings).\n\n[wpfilebase tag=file id=8290 tpl=simple3/] (中文(简体) ).",
+      "originalContent": "Créé par DH & Hykem (et rejoint par un ensemble de développeurs), RPCS3 est un émulateur de Playstation 3 multi-plateformes qui a pour objectif de devenir le plus complet possible. Il s’agissait à l’origine d’un simple désassembleur, mais il a depuis évolué au point d’exécuter l’ensemble du catalogue commercial de la PS3, devenant ainsi le premier émulateur pleinement fonctionnel de la console. Cette performance exige toutefois une machine particulièrement puissante.\n\nEn effet il vous faudra rien de moins qu'un CPU type Intel Comet Lake (10th) ou AMD Zen 3 (5000) ou plus, une carte graphique récente type nVidia GTX, de la mémoire haute performance type DDR4/DDR5 (min 8 go / recommandé 16 go) ou encore un système d'exploitation récent pour espérer lancer des jeux dans un mode relativement fluide (mais attention cela dépend énormément des builds et des jeux).\n\nPlusieurs rendus s'offre à vous: Aucun, OpenGL, DirectX12 (Windows 10 uniquement) et Vulkan (qui a pour but de remplacer à terme OpenGL et ses dérivés en exploitant plus efficacement les architectures informatiques modernes).\n\nAu sujet du nom de l'émulateur, il s'agit d'une abréviation et d'une combinaison de Personal Computer (PC) et PlayStation 3 (PS3). PC + PS3 = PCS3.\nQue signifie le R? DH et BlackDemon se souviennent qu'il représentait Real car en 2011, il n'y avait que de faux émulateurs de Ps3. Puis, à un moment donné, DH (originaire d'Ukraine) a commencé à dire que le R représentait le mot Russe. De plus, Nekotekina, qui a rejoint l'équipe fin 2013 et qui est rapidement devenu l'un des plus grands développeurs de cet émulateur, est originaire de Russie. Du coup RPCS3 signifie à présent Russian Personal Computer Station 3.\n\nCette version (qui n'est pas à considérer comme stable) qu'on nommera \"point de repère\" (landmarks) dans le sens ou elle est officiellement publiée sur le site officiel (ce qui change des builds régulier dit \"WIP\" ou \"GIT\"), n'est disponible que pour les processeurs 64 bits. Pas de changelog malheureusement.\n\nVersion changes serve as landmarks and are by no means stable builds\nThis changelog lists the main (but not all) changes made since 0.0.X\n\nSince v0.0.42 was tagged:\n- x new commits\n- x source code files have been edited\n- x lines of code were added and 4 024 deleted\n- x code contributors\n- x days of development\n\nChangelog:\n\n- fix emulator crash on crashed game window closure by @digant73 in #19122\n- rsx/copypasta: Fix reversed 2-sided lighting input registers for FS stage by @digant73 in #19123\n- Update FAudio to 26.08 by @Megamouse in #19125\n- qt: reduce lines of code in settings_dialog by @Megamouse in #19130\n- Fix vm::writer_lock deadlock-inducing usage on PPU by @elad335 in #19132\n- Fix recording with fallback encoders by @Megamouse in #19136\n- cmake: fix Windows/MSVC build issues with zlib path and wolfSSL TLS1.3 by @Alasonga in #19137\n- Ancient emulation bug fixes by @elad335 in #19141\n- VSH fixup by @elad335 in #19146\n- msvc: fix libprotobuf-lite debug dependency by @Megamouse in #19147\n- msvc: fix openal debug build by @Megamouse in #19148\n- Fix infinite ensure recursion in debug builds by @Megamouse in #19149\n- fix alpha test by @digant73 in #19101\n- rsx: fix exception data_heap in debug builds by @Megamouse in #19150\n- .github: Improve regression issue template by @AniLeo in #19145\n- Update SDL to 3.4.14 by @sanjay900 in #19154\n- spu: Clear the MFC_LSA_offs bits higher than the limit by @AniLeo in #19153\n- Remember last used path when adding games from folder or ISO by @lalitshankarch in #19164\n- Sort enumerated GPUs according to priority (Discrete, Integrated, Software, etc) by @lalitshankarch in #19166\n- CPUTranslator: Additional constant folding for X86 intrinsics by @WalterKruger in #19171\n- Fix OOB buffer read in TRPLoader::LoadHeader by @Megamouse in #19174\n- elf: remove unnecessary -1 on both sides of a size check to prevent underflow by @Megamouse in #19175\n- Fix steam shortcut creation by @Megamouse in #19183\n- unedat: Fix some OOB by @Megamouse in #19178\n- Check if final install paths are actually inside the target directory before installation by @Megamouse in #19176\n- ISO: fix some OOB by @Megamouse in #19184\n- unself: Fix some OOB by @Megamouse in #19177\n- sys_net: fixes and improvements by @RipleyTom in #19170\n- Qt: run initial dialogs on the main event loop by @Megamouse in #19189\n- Fix IsPathInsideDir arguments order during file extraction by @Megamouse in #19192\n- Update discord-rpc by @Megamouse in #19195\n- rsx: Fix nv0039 image (de)interleaving functionality by @kallsyms in #19190\n- rsx: nv0039 cleanup by @kd-11 in #19199\n- Implement AVX2 path for gv_rol32 by @lalitshankarch in #19167\n- [SPU LLVM] Decrease SHUFB's constant generation target requirements by @WalterKruger in #19205\n- vk: Execute driver management operations such as GC on a separate worker thread by @kd-11 in #19208\n- Update discord-rpc by @Megamouse in #19203\n- Qt: implement auto_scroll_label and use it for the settings descriptions by @Megamouse in #19162\n- Qt: fix settings_dialog tab index by @Megamouse in #19209\n- Qt: add Open Custom Gamepad Config Folder action to game list context menu by @Megamouse in #19212\n- Revert \"[SPU LLVM] Decrease SHUFB's constant generation target requirements by @AniLeo in #19217\n- Qt: Remove scroll area layout margins in settings_dialog by @Megamouse in #19211\n- Qt: Add unofficial build warning by @Megamouse in #19213\n- rsx/fp: Fix decoding of LOOP and REP instructions by @kd-11 in #19220\n- fix crash with vfs exception by @digant73 in #19227\n- Swap PR number with PR text in update manager by @digant73 in #19228\n- Enrich game list title by @digant73 in #19229\n- [Qt] Hide titlebars by default by @schm1dtmac in #19238\n- Update docker with updated SDL 3.4.14 by @hcorion in #19239\n- rsx: Refactor dynamic texture operations (deferred_subresource usage) by @kd-11 in #19235\n- [SPU LLVM] Avoid GFNI combine bug in SHUFB by @WalterKruger in #19221\n- rsx: Reimplement large portions of texture reconstruction (3D and Cubemap) by @kd-11 in #19226\n- Add 60 second retry to translation downloads by @hcorion in #19246\n- gui: Correctly disable the View Folder button by @AniLeo in #19248\n- Use max() to bring negative floats up to 0.0 before uint conversion. by @NeilMonday in #19255\n- rsx_debugger: fix g8b8 conversion by @Megamouse in #19257\n- PPU: Stop inverting float-to-int saturation on ARM64 by @Whatcookie in #19259\n- [SPU LLVM] Avoid redundant XFloat normalization in SELB by @Yahfz in #19245\n- RPCN: Sync trophies by @FlexBy420 in #18760\n- unpkg: Fix some OOB by @Megamouse in #19169\n- rsx: Optimize image transfer operations (and some bugfixes) by @kd-11 in #19261\n- Hotfix: fix game crash with rpcn enabled by @FlexBy420 in #19264\n- windows: Fix clang x64/arm64 builds by @AniLeo in #19267\n- Make optional VSH on File ➔ All Titles ➔ Create LLVM Caches dialog by @digant73 in #19270\n- rsx: Implement color output remapping for exotic formats by @kd-11 in #19268\n- gl: Fix copy_image_static behavior when formats are mismatched by @kd-11 in #19275\n- Fix pkg installation by @Megamouse in #19278\n- Fix duplicate path addition by @digant73 in #19266\n- [SPU LLVM] Optimize AVX-512 XFloat conversion by @Yahfz in #19244\n- Fix some warnings by @Megamouse in #19280\n- VFS: remove double slash from paths by @Megamouse in #19284\n- Filter UnlockTrophy reply by @RipleyTom in #19286\n- rsx: Implement flat shading semantics by @Tagflag2d in #19251\n- Various emulation bugfixes by @RipleyTom in #19282\n- RSX: Improve fragment DP3 precision by @Yahfz in #19293\n- rsx: Fix tiled region matching by @kd-11 in #19296\n- gui: Fix firmware install through drag-and-drop by @AniLeo in #19299\n- Update opencv to 4.14.0 by @Megamouse in #19298\n- Update Qt to 6.11.2 by @Megamouse in #19301\n- rsx: Relax checking of NV4097_SET_SHADE_MODE inputs to match hw by @kd-11 in #19304\n- Fix ISO timestamps by @digant73 in #19281\n- Improve Ps Move tracker dialog by @Megamouse in #19310\n- Add Game Collections support by @digant73 in #19292\n- [Mac OS X] Fix PPU LLVM compilation regression/sporadic failures (#19103) by @schm1dtmac in #19312\n- cellVdecGetPicItem: Fix potential use after free of AVFrame by @Megamouse in #19315\n- Add Big Picture Mode using RSX overlay UI by @BeezBumba in #19165\n- [Mac OS X] [RSX] Disable Apple-specific hacks for features & formats supported on Apple GPUs by @schm1dtmac in #19311\n- [SPU LLVM] Add SHUFB known never particular special constant fast paths by @WalterKruger in #19319\n- Patch manager fixes by @Megamouse in #19323\n- PPU Debugger: Support tail calls in callstack by @elad335 in #19331\n- rsx: Rework blit engine texture cache operations by @kd-11 in #19013\n- gui: Fix randomly untranslated game list categories by @mariobob in #19342\n- [Mac OS X] Fix get_aligned_buf() crashes with ISOs by @schm1dtmac in #19345\n- Fix font issues with game titles by @BeezBumba in #19341\n- Improve Game Collections by @digant73 in #19349\n- overlays: use get_game_content_path in BPM by @Megamouse in #19350\n- Add Audio support for BPM ICON1.PAM by @BeezBumba in #19336\n- Fix sys_overlay saving by @elad335 in #19356\n- Fix iso path checks by @Megamouse in #19360\n- rsx: Minor sync improvements by @kd-11 in #19353\n- rsx/qt: Move blit engine upscaling option to debug settings by @kd-11 in #19343\n- Big Picture Mode: navigate down even if there is no tile directly below by @Megamouse in #19362\n- Fall back to lexical normalization on canonicalization failure by @Masamune3210 in #19366\n- RSX: Fix SAT and ABS order by @Yahfz in #19326\n- Add BD Drive support for Linux, macOS and FreeBSD by @digant73 in #19233\n- Loader: Only use a single thread when installing packages from an optical drive by @Megamouse in #19237\n- Qt: Don't set game window visibility on boot if resize is enabled by @Megamouse in #19373\n- RPCN: Add delete trophies from rpcn button by @FlexBy420 in #19306\n- Qt: add horizontal scrollbar to changelog by @Megamouse in #19374\n- overlays: localize shader compilation dialogs by @Megamouse in #19375\n- Use proper games enumeration in Big picture mode by @Megamouse in #19358\n- Update submodules by @Megamouse in #19368\n- [Mac OS X] Fix sys_ss_random_number_generator & cleanup some dead code by @schm1dtmac in #19382\n- Big Picture Mode: user interface fixes by @Megamouse in #19380\n- Bounds-check Cg binary byte swapping by @acts-1631 in #19387\n- Big picture: fix crashes and unwanted exit by @Megamouse in #19389\n- Reject overflowing savestate collection counts by @acts-1631 in #19386\n- Reject overflowing ELF section ranges by @acts-1631 in #19393\n- Validate SCE metadata header sizes by @acts-1631 in #19394\n- Update SDL by @Megamouse in #19396\n- SaveStates: Reject unrealistic memory allocations by @elad335 in #19395\n- fix: check ticket encoded correctly by @RipleyTom in #19402\n- Bound Clans member attribute encoding by @acts-1631 in #19399\n- Update curl to 8.22.0 and build with cmake by @Megamouse in #19397\n- CI: Use ccache in VS cmake submodules by @Megamouse in #19408\n- fix button labels in BPM by @BeezBumba in #19401\n- rsx: Refactor rsx_utils header into smaller pieces by @kd-11 in #19419\n- rsx: Synchronization improvements by @kd-11 in #19383\n- rsx/vk: Rewrite how blending works by @kd-11 in #19410\n- GDB: Fix PPU single-step state setup by @kdridi in #19445\n- rsx: Fix alpha test compilation when using native float16 types by @kd-11 in #19438\n- [SPU LLVM] 8-bit addition/subtraction renarrowing + compare source fast paths by @WalterKruger in #19449\n- Loader: handle missing ISO members and invalid reads gracefully by @seanbrar in #19432\n- gui: set vertical alignment for sizeSlider by @MananSharma12 in #19424\n- rsx: Extra memory safety when rsx::thread crashes by @kd-11 in #19451\n- Debugger: Relax thread updates, stub syscall 579, add more CellError formatting handlers by @elad335 in #19452\n- Fix PKG path traversal and oversized entry allocation by @acts-1631 in #19385\n- SPU LLVM: Always write cache when using debug option by @elad335 in #17792\n- Fix slow startup with BPM by @BeezBumba in #19388\n- BufferUtils: Optimize upload_untouched_skip_restart with AVX-512 paths by @Whatcookie in #16932\n- Add new theme based on old steam look by @FlexBy420 in #19446\n- Fix some VFS issues by @digant73 in #19378\n- gui: Fix ComboBox dropdown contrast in Kuroi (Dark) theme by @MananSharma12 in #19460\n- P2P: Allow broadcast socket by @Cri4Key in #19462\n- Fix silence on 3+-ch port games to 2-ch audio output configuration by @digant73 in #19180\n- sysutil/audio: Implement shared memory handling by @Yahfz in #19467\n- Update 7zip to 26.03 by @Megamouse in #19476\n- fix user mem allocation by @Yahfz in #19482\n- SPU LLVM: Ifdef some code to be x86 only by @Whatcookie in #19486\n- Support VM configuartion for games compiled on early SDK by @elad335 in #19489\n- Fix savestates by @elad335 in #19493\n- Fix read file on system attribute by @digant73 in #19494\n- VS: Use Ninja to build glslang and add ccache by @Megamouse in #19496\n- SPU LLVM: work around funny codegen for arm byteswaps by @Whatcookie in #19498\n- Fix UTF-8 filename by @digant73 in #19497\n- fix cctype usage by @Megamouse in #19379\n- ps move tracker: only create threads on demand by @Megamouse in #19377\n- Qt: Overhaul trophy manager by @FlexBy420 in #19428\n- BUILDING.md: update vulkan install on linux by @Megamouse in #19066\n- LogitechG27: attach the emulated device only while the mapped steering device is connected by @mixo03 in #19273\n- Move emu callbacks to own file by @Megamouse in #19479\n- Infamous 2 Trophy Overlay Fix by @EBgames7 in #19473\n- [Mac OS X] Switch all Mac OS X CI to use MacPorts due to Brew 7.0 changes by @schm1dtmac in #19495\n- cellMic: add EyeToy and PsEye types by @Megamouse in #19481\n- SPU LLVM: Omit test_state and spu-null if they are unreachable by @Whatcookie in #19503\n- RSX: Reuse discarded render targets during surface splitting by @Yahfz in #19500\n- Mute wrong log on edat by @digant73 in #19502\n- SPU LLVM: Stop inverting float-to-int saturation on ARM64 by @Whatcookie in #19504\n- Add --big-picture CLI flag to force Big Picture Mode on launch by @edvardsanta in #19509\n- [SPU LLVM] Avoid the SHUFB GFNI path when it prevents a OR combine by @WalterKruger in #19519\n- Increase MSVC ccache to 7GB by @Megamouse in #19506\n- rsx: Fix flush predictor behavior when using surface cache for blit engine targets by @kd-11 in #19524\n- Fix sysFsReaddir by @digant73 in #19512\n- [TESTERS NEEDED][SPU LLVM] Add the InstCombine pass by @WalterKruger in #19521\n- Revert \"[SPU LLVM] Add the InstCombine pass\" by @WalterKruger in #19535\n- rsx: Shader compiler tweaks by @kd-11 in #19538\n- rsx/vk: Minor bug fixes by @kd-11 in #19546\n- sys_fs: Fix CELL_APP_HOME readability control for disc games by @elad335 in #19556\n- Fix unpkg bugs by @digant73 in #19528\n- Fix crash on DLC unlocked by @digant73 in #19515\n- vk: force strict query scopes on Adreno and other tilers by @valpackett in #19561\n- rsx: Fix USER_COMMAND behavior by @kd-11 in #19549\n- LV2: Wait for an observable PPU schedular change from new threads by @elad335 in #19562\n- cellGem: Allow custom camera_frame buffers by @Megamouse in #19563\n- patch_engine: fix save_patches destroying the file it rewrites by @digant73 in #19569\n- SPU: Faster PUTLLC with Accurate SPU Reservations off by @Yahfz in #19568\n- Windows: silence curl warnings by @Megamouse in #19571\n- gui: Display warning for corrupted items in Savestate and Trophy managers by @MananSharma12 in #19513\n- qt: don't treat empty savestates folder as error by @Megamouse in #19572\n- fix: fix build with LLVM 23.1 by @RipleyTom in #19575\n- gdb: fix address check in the memory read routine by @ShadelessFox in #19574\n- CI: try to split msvc build and unit test build by @Megamouse in #19526\n- vk: Use all available threads for shader compilation during bootup by @kd-11 in #19578\n- [TESTERS NEEDED] Fix slow audio by @digant73 in #19550\n- Fix thread affinity on Linux for thread scheduler different than OS by @digant73 in #19581\n- Fix PPU start delay accumulation by @elad335 in #19580\n- rsx/vm: Do not pause RSX on non-RSX allocations by @elad335 in #19584\n- VM/sys_mmapper: Fix sys_mmapper error checking by @elad335 in #19585\n- cellVdec: Postpone Context Destruction by @digant73 in #19583\n- LV2: Wait for new PPU threads to start in sys_ppu_thread_start by @digant73 in #19567\n- Fix BD Drive read speed by @digant73 in #19551\n- cellVdec: Output the pictures still held by the decoder on EndSeq by @digant73 in #19587\n- Fix ISO device paths by @digant73 in #19530\n- rsx/qt: Move the \"disable blit engine upscaling\" option to the advanced tab by @kd-11 in #19595\n- CPUThread: Fix deadlock when a CPU thread terminates abnormally by @digant73 in #19599\n- ci: Bump FreeBSD to 14.5 by @AniLeo in #19570\n- Update wolfssl to 5.9.4 by @Megamouse in #19598\n- RSX: keep depth buffers for zpass queries by @Yahfz in #19608\n- cellVdec: Report the userdata of the AU each picture was decoded from by @digant73 in #19618\n- Revert \"RSX: keep depth buffers for zpass queries\" by @kd-11 in #19619\n- Display ISO key mismatch by @digant73 in #19471\n- Qt: Keep the game window fullscreen when it is shown again by @digant73 in #19541\n- Update libpng to 1.6.59 by @Megamouse in #19629\n- gui: General UX pass on the Settings Dialog by @AniLeo in #19604\n- [Mac OS X] Force enable LSE2 on Apple AArch64 as a workaround for missing macros. by @schm1dtmac in #19620\n- Minor fixes to old steam theme by @FlexBy420 in #19560\n- Add option to emulate PS3 HDD read speed by @Yahfz in #19593\n- Update VulkanMemoryAllocator to 3.4.0 by @AniLeo in #19605\n- overlays: use config setting for native ui font by @Megamouse in #18414\n- fix: make p2ps msgs multimap & set min rtt_time to 1ms by @RipleyTom in #19635\n- GUI: Fix claimed_paths push after game list refresh by @Megamouse in #19644\n- Savestates: fix deserialize_vle by @Megamouse in #19641\n- perf_meter: fix bucket logging by @Megamouse in #19642\n- Fix some Loop OOB issues by @Megamouse in #19637\n- CLI: fix emu_argv propagation by @Megamouse in #19639\n- Fix some HLE Loop issues by @Megamouse in #19638\n- [TESTERS NEEDED] cellAudio: Acknowledge suspend_all while waiting for the audio mutex by @digant73 in #19607\n- aarch64 LSE2 runtime detection by @Whatcookie in #19646\n- Fix FMV audio crackling with Audio Buffering enabled by @digant73 in #19173\n- RSX fixes by @Megamouse in #19643\n- Fix some elf issues by @Megamouse in #19640\n- Rename Close to Cancel button on some panels by @digant73 in #19468\n- RSX: avoid some host copies by @Megamouse in #19648\n- Building on windows made easier by @DevX-Cipher in #19507\n- fix: don't put 0 sized data packets in received_data by @RipleyTom in #19636\n- VK: Fix MSAA unresolve ordering by @Yahfz in #19652\n- Remaining fixes by @Megamouse in #19645\n- RSX: Fix cached texture view remaps by @Yahfz in #19653\n- [TESTERS NEEDED] LV2: Let the caller leave sys_ppu_thread_start before a lower-priorit… by @digant73 in #19655\n- rpcs3_version: Bump to 0.0.43 by @AniLeo in #19656\n\nhttps://youtu.be/KvQuJDVgOQU\n\nA noter que la liste de compatibilité continue de progresser (voir ici) en permanence.\n\nPrécisons que 100% des jeux sont exécutables à présent, même s'ils ont encore des bugs ou que certains crash, tous peuvent être lancé, c'est une belle prouesse qu'il faut souligner !\n\nSite officiel des sources et versions compilées (builds).\n\n[wpfilebase tag=file id=8290 tpl=simple3 /]",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "rpcs3_pc"
+      ],
+      "contentHash": "dbb6af05825affb0ede65ded09fa51733787875ca603cbd8dee58e20210946a6",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorex-0-4-4",
+      "title": "【Android更新】EmuCoreX 0.4.4",
+      "originalTitle": "EmuCoreX 0.4.4 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-01T07:02:32Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.4",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.4.4，发布日期为2026年10月01日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.4.4。\n\n发布日期：2026年10月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.4.3...v0.4.4\n\n有什么新情况: 0.4.4\n\n• 用上一个版本的封面解决了问题\n• 增加了自动更新后修正机制\n• 增加了对特定游戏使用单独记忆卡的能力",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.3...v0.4.4\r\n\r\nWhat’s new: 0.4.4\r\n\r\n- Fixed an issue with covers from the previous version\r\n- Added an automatic post-update fixes mechanism\r\n- Added the ability to use a separate memory card for a specific game",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "dbab9e7021d92ef6ed692e80e4b66d3edffa9af18e4979e40637996b44b7d36a",
       "translationPending": false
     },
     {
@@ -245,30 +469,6 @@
         "vita3k_plus"
       ],
       "contentHash": "c3e53d54b6fde13eb3dceb55eedbd60f0f2043c4db88ddba07de6bfdc5ead739",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-emucorex-0-4-3",
-      "title": "【Android更新】EmuCoreX 0.4.3",
-      "originalTitle": "EmuCoreX 0.4.3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-30T10:07:34Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.3",
-      "imageUrl": "asset://assets/emulators/emucorex.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
-      "summary": "EmuCoreX 发布 Android 新版本 0.4.3，发布日期为2026年09月30日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreX 已发布 Android 最新版本 0.4.3。\n\n发布日期：2026年09月30日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.4.2...v0.4.3\n\n有什么新情况: 0.4.3\n\n• UI 修正\n• 其他修正和优化\n如果遇到错误,则建议安装干净,因为核心修正已经执行",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.2...v0.4.3\r\n\r\nWhat's new: 0.4.3\r\n\r\n- UI fixes\r\n- Other fixes and optimizations\r\nIf you encounter bugs, a clean installation is recommended, as core fixes have been implemented",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorex"
-      ],
-      "contentHash": "bb7dad8bf7a1e569ba903aab5b8337b43541023d00b302b70c01630f41965922",
       "translationPending": false
     },
     {
@@ -9495,30 +9695,6 @@
         "xendroid"
       ],
       "contentHash": "3c03061fe6e82b627507e228d371471be79fefcbebfdff072b34289bb757f6e7",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-noods-release",
-      "title": "【Android更新】NooDS release",
-      "originalTitle": "NooDS release Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-09T19:30:22Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/Hydr8gon/NooDS/releases/tag/release",
-      "imageUrl": "asset://assets/emulators/noods.png",
-      "officialUrl": "https://github.com/Hydr8gon/NooDS",
-      "summary": "NooDS 发布 Android 新版本 release，发布日期为2026年08月09日。点击查看官方版本信息与更新说明。",
-      "content": "NooDS 已发布 Android 最新版本 release。\n\n发布日期：2026年08月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n这些自动更新了最新承诺。",
-      "originalContent": "These are automatically updated builds of the latest commit.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "noods"
-      ],
-      "contentHash": "e84cb9d1861eab95ac6f8b07dcb9eeadf0ddaee11bac6eae85ca417e2400cd42",
       "translationPending": false
     }
   ]
