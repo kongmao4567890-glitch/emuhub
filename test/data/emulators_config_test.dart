@@ -236,7 +236,7 @@ void main() {
     }
 
     expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 321);
+    expect(emulatorIds.length, 352);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -522,6 +522,71 @@ void main() {
         'xenra_og',
         'xenra_360',
         'erings_pc',
+        'shadlix_pc',
+        'shadps4_qtlauncher',
+        'fpps4_pc',
+        'kyty_pc',
+        'kytyplus_pc',
+        'kyty_ps5_pc',
+        'anyps5_pc',
+        'xenia_canary_pc',
+        'citra_mmj',
+        'gopher64',
+        'fceux_pc',
+        'nestopia_ue_pc',
+        'punes_pc',
+        'skyemu',
+        'nanoboyadvance_pc',
+        'desmume_pc',
+        'clownmdemu_pc',
+        'bizhawk_pc',
+        'openemu_mac',
+        'supermodel_pc',
+        'teknoparrot_pc',
+        'stella_pc',
+        'applewin_pc',
+        'snow_pc',
+        '86box_pc',
+        'winlator_cmod',
+        'emudeck',
+        'retrodeck',
+        'pegasus_frontend',
+        'daijishou',
+        'obtainium',
+      }),
+    );
+
+    // PS4 / PS5 是次世代模拟的重点机种，保证每个机种至少收录多个
+    // 独立来源的项目，避免目录整理时只剩单一模拟器。
+    final ps4Ids = config.consoles
+        .singleWhere((console) => console.id == 'ps4')
+        .emulators
+        .map((emulator) => emulator.id)
+        .toSet();
+    expect(
+      ps4Ids,
+      containsAll({
+        'bachata_s4',
+        'shadps4_android',
+        'shadlix_pc',
+        'shadps4_qtlauncher',
+        'fpps4_pc',
+        'kyty_pc',
+      }),
+    );
+    final ps5Ids = config.consoles
+        .singleWhere((console) => console.id == 'ps5')
+        .emulators
+        .map((emulator) => emulator.id)
+        .toSet();
+    expect(
+      ps5Ids,
+      containsAll({
+        'sharpemu_pc',
+        'kytyps5_pc',
+        'kytyplus_pc',
+        'kyty_ps5_pc',
+        'anyps5_pc',
       }),
     );
 
