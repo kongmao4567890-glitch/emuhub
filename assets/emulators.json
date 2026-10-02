@@ -1,6 +1,6 @@
 {
-  "version": "3.8.9",
-  "lastUpdated": "2026-08-26",
+  "version": "3.9.0",
+  "lastUpdated": "2026-10-02",
   "consoles": [
     {
       "id": "multi_system",
@@ -203,6 +203,49 @@
             "macos"
           ],
           "desktopRequirements": "Windows x86/x64/ARM64、Linux x64/ARM/ARM64 或 macOS Universal"
+        },
+        {
+          "id": "bizhawk_pc",
+          "name": "BizHawk",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/TASEmulators/BizHawk",
+          "playStoreId": "",
+          "website": "https://tasvideos.org/BizHawk",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "TASVideos 社区维护的多系统模拟器，集成 NES、SNES、N64、GB/GBA、NDS、PS1、Saturn、PSP 等数十个高精度核心，提供 Lua 脚本、RAM 搜索、TAStudio 等工具辅助录像。",
+          "downloadUrl": "https://github.com/TASEmulators/BizHawk/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/bizhawk_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows 8.1+（需 .NET 4.8）或 Linux（需 Mono）"
+        },
+        {
+          "id": "openemu_mac",
+          "name": "OpenEmu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/OpenEmu/OpenEmu",
+          "playStoreId": "",
+          "website": "https://openemu.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "macOS 平台的一体化多系统模拟器前端，以类似 iTunes 的游戏库界面整合 30 余种机种核心，自动识别 ROM、获取封面，并统一管理手柄与存档。",
+          "downloadUrl": "https://github.com/OpenEmu/OpenEmu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/openemu_mac.png",
+          "platforms": [
+            "macos"
+          ],
+          "desktopRequirements": "macOS 10.14 或更高版本（Intel / Apple Silicon）"
         }
       ]
     },
@@ -254,6 +297,29 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "stella_pc",
+          "name": "Stella",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/stella-emu/stella",
+          "playStoreId": "",
+          "website": "https://stella-emu.github.io/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "Atari 2600 官方 Stella 模拟器桌面版，几乎完美模拟整个 2600 游戏库，内置强大调试器、TV 效果和时间回溯。",
+          "downloadUrl": "https://github.com/stella-emu/stella/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/stella_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows / Linux / macOS"
         }
       ]
     },
@@ -473,6 +539,74 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "fceux_pc",
+          "name": "FCEUX",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/TASEmulators/fceux",
+          "playStoreId": "",
+          "website": "https://fceux.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "历史悠久的 NES/FC 模拟器，集成强大的调试器、PPU/内存查看器、Lua 脚本和 TAS 录制编辑工具，是 FC 汉化、ROM Hack 与速通社区的常用工具。",
+          "downloadUrl": "https://github.com/TASEmulators/fceux/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/fceux_pc.png",
+          "platforms": [
+            "windows",
+            "macos",
+            "linux"
+          ],
+          "desktopRequirements": "Windows 7+（32/64 位）、macOS；Linux 需通过发行版软件源或源码构建"
+        },
+        {
+          "id": "nestopia_ue_pc",
+          "name": "Nestopia UE",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/0ldsk00l/nestopia",
+          "playStoreId": "",
+          "website": "http://0ldsk00l.ca/nestopia/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "Nestopia Undead Edition，经典高精度 NES/FC 模拟器的持续维护版本，2.0 起改用全新跨平台界面，支持 FDS 磁碟机、大量卡带映射器、NTSC 滤镜与金手指。",
+          "downloadUrl": "https://github.com/0ldsk00l/nestopia/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/nestopia_ue_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows、Linux（.deb/Flatpak）或 macOS（Apple Silicon）"
+        },
+        {
+          "id": "punes_pc",
+          "name": "puNES",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/punesemu/puNES",
+          "playStoreId": "",
+          "website": "https://github.com/punesemu/puNES",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "注重精度的 NES/FC 模拟器，支持大量映射器、NSF/NSFe 播放、着色器与回放，提供 Direct3D 9 与 OpenGL 两种 Windows 构建以及 Linux AppImage。",
+          "downloadUrl": "https://github.com/punesemu/puNES/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/punes_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "Windows 7+（32/64 位）或 64 位 Linux"
         }
       ]
     },
@@ -661,6 +795,28 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "clownmdemu_pc",
+          "name": "ClownMDEmu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Clownacy/clownmdemu-frontend",
+          "playStoreId": "",
+          "website": "https://github.com/Clownacy/clownmdemu-frontend",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "注重精度的 Mega Drive / Genesis / Mega CD 模拟器，带有完善调试器、宽屏与低延迟设置，官方发布 Windows 可执行文件和 Linux AppImage（含 ARM64）。",
+          "downloadUrl": "https://github.com/Clownacy/clownmdemu-frontend/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/clownmdemu_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "Windows 7+ 或 Linux（x86_64 / aarch64 AppImage）"
         }
       ]
     },
@@ -1255,6 +1411,53 @@
           "platforms": [
             "android"
           ]
+        },
+        {
+          "id": "skyemu",
+          "name": "SkyEmu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/skylersaleh/SkyEmu",
+          "playStoreId": "",
+          "website": "https://skyemu.app/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "7.0",
+          "description": "高精度 GB/GBC/GBA/NDS 多机种模拟器，其中 GBA 核心精度位居前列；支持 RetroAchievements、云存档、金手指、着色器与触控优化界面，官方同时发布 Android、Windows、Linux、macOS 与网页版。",
+          "downloadUrl": "https://github.com/skylersaleh/SkyEmu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/skyemu.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "nanoboyadvance_pc",
+          "name": "NanoBoyAdvance",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/nba-emu/NanoBoyAdvance",
+          "playStoreId": "",
+          "website": "https://github.com/nba-emu/NanoBoyAdvance",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "以周期级精度为目标的 GBA 模拟器，通过 AGS 官方测试套件的比例极高，能正确运行大量依赖精确时序的游戏与演示程序。",
+          "downloadUrl": "https://github.com/nba-emu/NanoBoyAdvance/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/nanoboyadvance_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS（Apple Silicon）"
         }
       ]
     },
@@ -1386,6 +1589,30 @@
             "windows"
           ],
           "desktopRequirements": "64 位 Windows"
+        },
+        {
+          "id": "gopher64",
+          "name": "Gopher64",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/gopher64/gopher64",
+          "playStoreId": "",
+          "website": "https://gopher64.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "13.0",
+          "description": "simple64 作者使用 Rust 打造的新一代 N64 模拟器（simple64 已归档并转向此项目），内置 ParaLLEl-RDP 级精度渲染、放大、CRT 着色器、联机、RetroAchievements、金手指与即时存档，同时提供 Android、Windows、Linux 与 macOS 版本。",
+          "downloadUrl": "https://github.com/gopher64/gopher64/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/gopher64.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS（Apple Silicon），支持 Vulkan 的显卡"
         }
       ]
     },
@@ -1520,6 +1747,29 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "desmume_pc",
+          "name": "DeSmuME",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/TASEmulators/desmume",
+          "playStoreId": "",
+          "website": "https://desmume.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "老牌开源 NDS 模拟器，提供 Wi-Fi 模拟、调试工具、TAS 录制、高分辨率 3D 渲染和 OpenEmu 插件，是 NDS 汉化与研究常用工具。",
+          "downloadUrl": "https://github.com/TASEmulators/desmume/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/desmume_pc.png",
+          "platforms": [
+            "windows",
+            "macos",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows 或 macOS；Linux 可使用源码包或发行版软件源"
         }
       ]
     },
@@ -1603,6 +1853,26 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS；支持 OpenGL 4.3 或 Vulkan 的显卡"
+        },
+        {
+          "id": "citra_mmj",
+          "name": "Citra MMJ",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/weihuoya/citra",
+          "playStoreId": "",
+          "website": "https://github.com/weihuoya/citra",
+          "core": "Citra",
+          "compatibility": "high",
+          "minAndroid": "7.0",
+          "description": "weihuoya 长期维护的 Citra Android 分支，以中低端设备上的性能优化和大量游戏专用修正著称，提供普通版与“存储访问框架”版 APK，在部分机型上帧率高于官方系分支。",
+          "downloadUrl": "https://github.com/weihuoya/citra/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/citra_mmj.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -2657,6 +2927,50 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows 10+、Linux 或 Apple Silicon macOS"
+        },
+        {
+          "id": "supermodel_pc",
+          "name": "Supermodel",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/trzy/Supermodel",
+          "playStoreId": "",
+          "website": "https://www.supermodel3.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Sega Model 3 街机官方模拟器，可流畅运行《VR 战士 3》《Daytona USA 2》《Scud Race》等，支持联网对战、力回馈和宽屏；Supermodel PonMi 即为其分支。",
+          "downloadUrl": "https://github.com/trzy/Supermodel/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/supermodel_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS，支持 OpenGL 的独立或核芯显卡"
+        },
+        {
+          "id": "teknoparrot_pc",
+          "name": "TeknoParrot",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/teknogods/TeknoParrotUI",
+          "playStoreId": "",
+          "website": "https://teknoparrot.com/",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "面向 PC 架构街机（Taito Type X、Sega Lindbergh / RingEdge / Nu、Namco System ES 等）的兼容层与启动器，可运行大量 2000 年后的现代街机游戏，并提供 JVS 与光枪映射。",
+          "downloadUrl": "https://github.com/teknogods/TeknoParrotUI/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/teknoparrot_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11，需安装 .NET 与 Visual C++ 运行库"
         }
       ]
     },
@@ -3468,6 +3782,49 @@
             "linux"
           ],
           "desktopRequirements": "Windows 7+ 或现代 Linux；推荐 64 位多核处理器和 4 GB 以上内存"
+        },
+        {
+          "id": "86box_pc",
+          "name": "86Box",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/86Box/86Box",
+          "playStoreId": "",
+          "website": "https://86box.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "面向 IBM PC 兼容机的硬件级模拟器，覆盖从 8088 到 Pentium II 时代的大量主板、显卡、声卡与网卡，适合运行 DOS 与早期 Windows 游戏；配套 86Box Manager 管理虚拟机。",
+          "downloadUrl": "https://github.com/86Box/86Box/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/86box_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS；需另行下载 ROM 包，高主频 CPU 体验更佳"
+        },
+        {
+          "id": "winlator_cmod",
+          "name": "Winlator Cmod",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/coffincolors/winlator",
+          "playStoreId": "",
+          "website": "https://github.com/coffincolors/winlator",
+          "core": "Wine / Box64",
+          "compatibility": "medium",
+          "minAndroid": "8.0",
+          "description": "Winlator 的热门社区分支，加入原生 SDL2 手柄支持（最多 4 人）、振动与陀螺仪、ALSA-Reflector 音频、VkBasalt 锐化等功能，用于在 Android 上运行 Windows 游戏。",
+          "downloadUrl": "https://github.com/coffincolors/winlator/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/winlator_cmod.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -3878,6 +4235,94 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "shadlix_pc",
+          "name": "Shadlix (shadPS4 分支)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/diegolix29/shadPS4",
+          "playStoreId": "",
+          "website": "https://github.com/diegolix29/shadPS4",
+          "core": "shadPS4",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "由 diegolix29 维护的 shadPS4 增强分支（原 BBFork），在官方核心基础上加入高分辨率修正、PM4 Type 0 兼容修正、FSR 锐化调节、PS4 Pro（Neo 模式）与 DevKit 实验选项，以及适合魂系游戏的键鼠映射；以每日构建形式发布 Windows、Linux 与 macOS 版本。",
+          "downloadUrl": "https://github.com/diegolix29/shadPS4/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/shadlix_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS（macOS 15.4+），支持 Vulkan 1.3 的独立显卡；高分辨率选项对中低端配置负担较大"
+        },
+        {
+          "id": "shadps4_qtlauncher",
+          "name": "shadPS4 QtLauncher",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/shadps4-emu/shadps4-qtlauncher",
+          "playStoreId": "",
+          "website": "https://github.com/shadps4-emu/shadps4-qtlauncher",
+          "core": "shadPS4",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "shadPS4 官方图形启动器，已从主仓库拆分为独立项目，负责游戏库扫描、按游戏设置、手柄/键鼠映射和模拟器版本管理；需要配合 shadPS4 核心使用，提供 Windows、Linux 与 macOS 构建。",
+          "downloadUrl": "https://github.com/shadps4-emu/shadps4-qtlauncher/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/shadps4_qtlauncher.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS，需另行安装 shadPS4 核心"
+        },
+        {
+          "id": "fpps4_pc",
+          "name": "fpPS4",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/red-prig/fpPS4",
+          "playStoreId": "",
+          "website": "https://github.com/red-prig/fpPS4",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "使用 Free Pascal 编写的 PlayStation 4 模拟器，采用 HLE 方式直接加载 PS4 可执行文件，是较早能运行少量商业游戏的 PS4 项目之一；正式 Release 更新较少，开发构建主要通过 CI 提供，目前兼容游戏数量有限。",
+          "downloadUrl": "https://github.com/red-prig/fpPS4/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/fpps4_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11，支持 Vulkan 的显卡"
+        },
+        {
+          "id": "kyty_pc",
+          "name": "Kyty",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/InoriRus/Kyty",
+          "playStoreId": "",
+          "website": "https://github.com/InoriRus/Kyty",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "早期 PS4 / PS5 双平台研究型模拟器，KytyPS5 与 KytyPlus 均由其发展而来。可运行部分简单 PS4 游戏与 PS5 自制软件，音频、网络和多用户等功能尚未实现，适合作为技术参考。",
+          "downloadUrl": "https://github.com/InoriRus/Kyty/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/kytyps5_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11，支持 Vulkan 的显卡"
         }
       ]
     },
@@ -4031,6 +4476,28 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS；支持 Vulkan、Direct3D 12 或 Metal"
+        },
+        {
+          "id": "xenia_canary_pc",
+          "name": "Xenia Canary",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/xenia-canary/xenia-canary",
+          "playStoreId": "",
+          "website": "https://xenia.jp/",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "",
+          "description": "Xenia 的官方实验分支，几乎每次提交都会发布新构建，率先合入图形、CPU 与兼容性修复，是目前兼容性最好的 Xbox 360 模拟器版本。",
+          "downloadUrl": "https://github.com/xenia-canary/xenia-canary/releases",
+          "devUrl": "https://github.com/xenia-canary/xenia-canary/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/xenia_canary_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11（Linux 版为实验性），支持 AVX 的 CPU，支持 D3D12 或 Vulkan 的显卡"
         }
       ]
     },
@@ -5172,6 +5639,27 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "applewin_pc",
+          "name": "AppleWin",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/AppleWin/AppleWin",
+          "playStoreId": "",
+          "website": "https://github.com/AppleWin/AppleWin",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "Windows 上最完善的 Apple II / IIe 模拟器，支持 Mockingboard、Phasor、Uthernet 网卡、CP/M 卡与 80 列显示，内置调试器。",
+          "downloadUrl": "https://github.com/AppleWin/AppleWin/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/applewin_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows 7 或更高版本"
         }
       ]
     },
@@ -6505,6 +6993,29 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "snow_pc",
+          "name": "Snow",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/twvd/snow",
+          "playStoreId": "",
+          "website": "https://github.com/twvd/snow",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "以 Rust 编写的经典 Macintosh（68000/68020/68030）硬件级模拟器，涵盖 Mac 128K/512K/Plus/SE/II 等机型，可直接使用原始磁盘映像并附带调试工具。",
+          "downloadUrl": "https://github.com/twvd/snow/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/snow_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS（x86_64 与 ARM64 均有构建）"
         }
       ]
     },
@@ -7649,6 +8160,72 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows 10/11、现代 Linux 或 macOS；需要 Vulkan 1.3，macOS 通过 MoltenVK"
+        },
+        {
+          "id": "kytyplus_pc",
+          "name": "KytyPlus",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Coder787-source/KytyPlus",
+          "playStoreId": "",
+          "website": "https://github.com/Coder787-source/KytyPlus",
+          "core": "KytyPS5",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "基于 KytyPS5 的 PlayStation 5 实验性分支，侧重核显优化、构建稳定性和 PS4/PS5 统一调度，加入着色器管线磁盘缓存、FSR 1.0 放大与 PKG 解析等功能；发布频繁，但仍仅能启动少量商业游戏，不代表可正常游玩。",
+          "downloadUrl": "https://github.com/Coder787-source/KytyPlus/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/kytyplus_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows 10+ / Linux / macOS 12+（x86_64），Vulkan 1.3 显卡，16GB 内存（推荐 32GB）"
+        },
+        {
+          "id": "kyty_ps5_pc",
+          "name": "Kyty (PS5)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/InoriRus/Kyty",
+          "playStoreId": "",
+          "website": "https://github.com/InoriRus/Kyty",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "Kyty 的 PS5 模式：最早公开的开源 PS5 模拟器之一，可运行部分 PS5 自制软件，是 KytyPS5、KytyPlus 等后续项目的技术源头；目前仅提供 Windows 构建，开发已基本停滞。",
+          "downloadUrl": "https://github.com/InoriRus/Kyty/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/kytyps5_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "64 位 Windows 10/11，支持 Vulkan 的显卡"
+        },
+        {
+          "id": "anyps5_pc",
+          "name": "AnyPS5",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/boykopovar/AnyPS5",
+          "playStoreId": "",
+          "website": "https://github.com/boykopovar/AnyPS5",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "不走传统模拟路线的 PS5 兼容层：利用 PS5 与 PC 同为 x86-64 架构，通过重链接器把 PS5 可执行文件转换为 Windows/Linux 原生程序，并以自研系统 PRX 库和 Vulkan 翻译图形调用，思路类似 Proton/Wine。仍处于早期阶段，多数游戏会在可玩前崩溃。",
+          "downloadUrl": "https://github.com/boykopovar/AnyPS5/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/anyps5_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows 或 Linux，AMD Zen 架构 CPU 最佳（Intel 需启用指令降级），支持 Vulkan 的显卡"
         }
       ]
     },
@@ -7993,6 +8570,113 @@
             "windows"
           ],
           "desktopRequirements": "32/64 位 Windows；所需模拟器由用户按平台配置"
+        },
+        {
+          "id": "emudeck",
+          "name": "EmuDeck",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/dragoonDorise/EmuDeck",
+          "playStoreId": "",
+          "website": "https://www.emudeck.com/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "一键安装和配置主流模拟器的自动化工具，最初面向 Steam Deck，现支持 SteamOS/Linux 与 Windows；自动设置 BIOS 目录、热键、着色器、Steam ROM Manager 与云存档。",
+          "downloadUrl": "https://github.com/dragoonDorise/EmuDeck/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/emudeck.png",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "desktopRequirements": "SteamOS / 现代 Linux 发行版或 64 位 Windows 10/11"
+        },
+        {
+          "id": "retrodeck",
+          "name": "RetroDECK",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/RetroDECK/RetroDECK",
+          "playStoreId": "",
+          "website": "https://retrodeck.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "以单一 Flatpak 打包的全能模拟平台，整合 ES-DE 与数十个模拟器，配置与存档集中在一个文件夹，面向 Steam Deck 和 Linux 桌面。",
+          "downloadUrl": "https://github.com/RetroDECK/RetroDECK/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/retrodeck.png",
+          "platforms": [
+            "linux"
+          ],
+          "desktopRequirements": "SteamOS 或支持 Flatpak 的 64 位 Linux 发行版"
+        },
+        {
+          "id": "pegasus_frontend",
+          "name": "Pegasus Frontend",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mmatyas/pegasus-frontend",
+          "playStoreId": "",
+          "website": "https://pegasus-frontend.org/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "跨平台、可高度自定义主题的游戏启动前端，支持 Android、Windows、Linux 与 macOS，可从 Steam、GOG、ES 配置等来源导入游戏库。",
+          "downloadUrl": "https://github.com/mmatyas/pegasus-frontend/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/pegasus_frontend.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows / Linux / macOS，OpenGL 2.1"
+        },
+        {
+          "id": "daijishou",
+          "name": "Daijishō",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.magneticchen.daijishou",
+          "website": "https://github.com/TapiocaFox/Daijishou",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "Android 上流行的复古游戏启动器，可统一管理各模拟器的游戏库，支持平台壁纸、RetroAchievements 显示与同步，并通过社区维护的平台配置一键关联模拟器。",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.magneticchen.daijishou",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/daijishou.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "obtainium",
+          "name": "Obtainium",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ImranR98/Obtainium",
+          "playStoreId": "",
+          "website": "https://obtainium.imranr.dev/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "直接从 GitHub、GitLab、Forgejo、F-Droid 等发布源安装和更新 Android 应用的工具，可用于跟踪大多数未上架应用商店的模拟器 APK。",
+          "downloadUrl": "https://github.com/ImranR98/Obtainium/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/obtainium.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     }
