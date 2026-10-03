@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T18:02:27.316017Z",
+  "generatedAt": "2026-10-03T05:42:25.672894Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,55 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-duckstation-latest",
+      "title": "【Android更新】DuckStation latest",
+      "originalTitle": "DuckStation latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-03T03:10:31Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 latest，发布日期为2026年10月03日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 2781502e0 SPU ：简化每语音标记处理\n• 690ead7ee SPU ：矢量化高斯插值\n• 5a7a301a7 SPU ：合并捕获缓冲区写入\n• a24350c47 SPU ：成对解码ADPCM半字节\n• a4904189c VulkanDevice ：可用时使用时间轴信号量\n• ed6720bbf测试：修复在Windows上构建的核心测试\n• 025ea24fc GPU/HW ：修复CompilePipelines ()中的拼写错误\n• 88ccab2a2成就：修复了一些可能无法实时更新的选项\n• 16452a048成就：检查LoadStateFromBuffer ()中的登录请求\n• 3c141418a FullscreenUI ：修复成就通知中额外的不均匀高度\n• 0910d4edc FullscreenUI ：缩小小模式类别徽章的文本大小\n• 96268ab66 Qt ：删除空小部件文本\n• 390c878f7 GameDB ：角色本地化名称\n• e26fa6091更新意大利语翻译(# 3798)\n• 563c35513 TaskQueue ：添加GetOutstandingTasks ()和ExecuteOneTask ()\n• efecb78db线程：添加GetProcessorCount ()\n• 0d2e66235核心：使TaskQueue线程计数动态\n• 60b06c0e2 ObjectArchive ：使用二进制键而不是字符串\n• 3151c5256 ObjectArchive ：内部同步访问\n• 79371c47a HTTPCache ：使用对象存档同步\n• 5420d699e GPUDevice ：使用ObjectArchive进行着色器缓存\n• 7951eba8a GPU设备：支持查找缓存着色器和不透明键\n• f541abb11 GPUDevice ：为支持的后端添加LoadPipeline ()\n• 5ebeff9c2 GPU/HW ：使用UID生成着色器\n• 7c239271f GPU/HW ：使用UID作为着色器缓存键\n• 94e5f08f1 GPU/HW ：使用多线程着色器编译\n• 74a743a5e GPU/HW ：使用多线程管道编译\n• 6fe06b99e VideoThread ：保留命令队列空插槽\n• 7c173d914 VideoThread ：强制执行命令生产者所有权\n• 67d594312 VideoThread ：保持成功的软件回退\n• e0519a899 VideoThread ：使用视频拥有的全屏设置\n• 7131d9144 VideoThread ：销毁内联重新配置命令\n• c54f16ae5 VideoThread ：用于调整大小的快照全屏状态\n• 0cad5f505 VideoThread ：安全地调度线程切换失败\n• 8c6ff3bfc VideoThread ：传播线程启动失败\n• b5f0fb9c3 FullscreenUI ：调整分隔符样式\n• c81a747ff Qt ：向调试器添加多指令选择\n• 5cc77ac18 Qt ：保持调试器窗口状态\n• 9c335d9e0 Qt ：将图标添加到上下文菜单\n• 0874ed65d Qt ：修复空调试器工具栏窗口标题\n• 5b056fc8d Qt ：修复新添加的排除路径上缺少图标的问题\n• 024face27 Qt ：将上下文菜单添加到游戏列表排除列表\n• 28ea031c4 GPU ：添加禁用升级直接纹理选项\n• 63d72ac15 GameDB ：禁用UpscaledDirectTextures以获得恐惧效果\n• d7036f347 Qt ：在封面下载器中保留use-serial-file-names\n• 6ef27141f MSBuild ：强制SHA256源文件哈希\n• ef86bf11c InputManager ：为可激活的UI添加热键标志\n• 396dae923 InputManager ：释放取消的保留绑定\n• 3d1646517 InputManager ：输入丢失时清除绑定\n• 0ccc553df InputManager ：修复效果同步设备匹配\n• 3af2d36d6 ImGuiManager ：单独跟踪文本输入\n• 500599143 InputManager ：键入按钮转换\n• e0e692023 FullscreenUI ：添加“切换暂停菜单”热键\n• 142bdc8c8 FullscreenUI ：使作弊/成就/引导板热键切换\n• b54fc14bc FullscreenUI ：同步暂停菜单切换\n• 8051b4f0c性能计数器：忽略重置边界示例\n• b7e20507b Qt ：删除不必要的QOverload用法(# 3799)\n• 2f4724dd1 D3DCommon ：使用ONCE_FLAG进行库加载\n• 7137ce2be螺纹：添加轻量互斥/条件可变包装\n• f46b6a834核心：对设置访问器使用LOCK_GUARD\n• bbeac9cfe核心：使用Threading:: Mutex锁定设置\n• 3bb2b0b1d CDROMAsyncReader ：使用轻量级线程抽象\n• 22072c934杂项：将std:: mutex替换为Threading:: Mutex\n• 00d407c35 CDROMAsyncReader ：转换为命名空间\n• dbe144407 GPU/HW ：修复缺少掩码或应用于纹理回退的问题\n• ac0e3a5c8 GPU/HW ：添加“过滤帧缓冲上传”高级选项\n• aaa8a68df GameDB ：启用backg…",
+      "originalContent": "## Commits\r\n- 2781502e0 SPU: Streamline per-voice flag processing\r\n- 690ead7ee SPU: Vectorize Gaussian interpolation\r\n- 5a7a301a7 SPU: Consolidate capture buffer writes\r\n- a24350c47 SPU: Decode ADPCM nibbles in pairs\r\n- a4904189c VulkanDevice: Use timeline semaphores when available\r\n- ed6720bbf Tests: Fix core-tests building on Windows\r\n- 025ea24fc GPU/HW: Fix typo in CompilePipelines()\r\n- 88ccab2a2 Achievements: Fix some options potentially not live-updating\r\n- 16452a048 Achievements: Check for login request in LoadStateFromBuffer()\r\n- 3c141418a FullscreenUI: Fix extra uneven height in achievement notifications\r\n- 0910d4edc FullscreenUI: Reduce text size of small-mode category badges\r\n- 96268ab66 Qt: Remove empty widget text\r\n- 390c878f7 GameDB: Persona localizedName\r\n- e26fa6091 Update Italian translation (#3798)\r\n- 563c35513 TaskQueue: Add GetOutstandingTasks() and ExecuteOneTask()\r\n- efecb78db Threading: Add GetProcessorCount()\r\n- 0d2e66235 Core: Make TaskQueue thread count dynamic\r\n- 60b06c0e2 ObjectArchive: Use binary keys instead of strings\r\n- 3151c5256 ObjectArchive: Synchronize access internally\r\n- 79371c47a HTTPCache: Use object archive synchronization\r\n- 5420d699e GPUDevice: Use ObjectArchive for shader cache\r\n- 7951eba8a GPUDevice: Support looking up cached shaders and opaque keys\r\n- f541abb11 GPUDevice: Add LoadPipeline() for supported backends\r\n- 5ebeff9c2 GPU/HW: Use UIDs for shader generation\r\n- 7c239271f GPU/HW: Use UIDs as shader cache keys\r\n- 94e5f08f1 GPU/HW: Use multi-threaded shader compilation\r\n- 74a743a5e GPU/HW: Use multi-threaded pipeline compilation\r\n- 6fe06b99e VideoThread: Preserve command queue empty slot\r\n- 7c173d914 VideoThread: Enforce command producer ownership\r\n- 67d594312 VideoThread: Keep successful software fallback\r\n- e0519a899 VideoThread: Use video-owned fullscreen settings\r\n- 7131d9144 VideoThread: Destroy inline reconfigure commands\r\n- c54f16ae5 VideoThread: Snapshot fullscreen state for resize\r\n- 0cad5f505 VideoThread: Dispatch thread toggle failures safely\r\n- 8c6ff3bfc VideoThread: Propagate thread startup failure\r\n- b5f0fb9c3 FullscreenUI: Tweak separator style\r\n- c81a747ff Qt: Add multi-instruction selection to debugger\r\n- 5cc77ac18 Qt: Persist debugger window state\r\n- 9c335d9e0 Qt: Add icons to context menu\r\n- 0874ed65d Qt: Fix empty debugger toolbar window title\r\n- 5b056fc8d Qt: Fix icon missing on newly-added excluded paths\r\n- 024face27 Qt: Add context menu to game list exclusion list\r\n- 28ea031c4 GPU: Add Disable Upscaled Direct Textures option\r\n- 63d72ac15 GameDB: DisableUpscaledDirectTextures for Fear Effect\r\n- d7036f347 Qt: Persist use-serial-file-names in cover downloader\r\n- 6ef27141f MSBuild: Force SHA256 source file hashes\r\n- ef86bf11c InputManager: Add hotkey flag for UI-activatable\r\n- 396dae923 InputManager: Release cancelled hold bindings\r\n- 3d1646517 InputManager: Clear bindings when input is lost\r\n- 0ccc553df InputManager: Fix effect sync device matching\r\n- 3af2d36d6 ImGuiManager: Track text input separately\r\n- 500599143 InputManager: Type button transitions\r\n- e0e692023 FullscreenUI: Add 'Toggle Pause Menu' hotkey\r\n- 142bdc8c8 FullscreenUI: Make cheats/achievements/leadboards hotkeys toggles\r\n- b54fc14bc FullscreenUI: Synchronize pause menu toggle\r\n- 8051b4f0c PerformanceCounters: Ignore reset boundary sample\r\n- b7e20507b Qt: Remove unnecessary usage of QOverload (#3799)\r\n- 2f4724dd1 D3DCommon: Use once_flag for library loading\r\n- 7137ce2be Threading: Add lightweight Mutex/ConditionVariable wrappers\r\n- f46b6a834 Core: Use lock_guard for settings accessors\r\n- bbeac9cfe Core: Use Threading::Mutex for settings lock\r\n- 3bb2b0b1d CDROMAsyncReader: Use lightweight threading abstractions\r\n- 22072c934 Misc: Replace std::mutex with Threading::Mutex\r\n- 00d407c35 CDROMAsyncReader: Convert to namespace\r\n- dbe144407 GPU/HW: Fix missing mask-or application on texture fallback\r\n- ac0e3a5c8 GPU/HW: Add 'Filter Framebuffer Uploads' advanced option\r\n- aaa8a68df GameDB: Enable backg…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "ad66796dba95385be68fae6cecc7ad5b1ace00bf0027e77abc6731e8446083fd",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-03T00:42:58Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月03日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• snes: sa1 -- -- 为bushram银行作说明的固定(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• snes: sa1 - fix stating for bwram banks (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "7f15eb678f8605f14906a04c3bf7687e4217b09ac37923b7cb6ec3e4ac1962bd",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx2-iOSv2-6-0",
       "title": "【Android更新】ARMSX2 iOSv2.6.0",
@@ -54,55 +103,6 @@
         "virtual_jaguar_core"
       ],
       "contentHash": "0f38d4838ca6f9c463cfb514f497689fdeb04fc1b26270305360a9515f4bd11d",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-02T14:15:41Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月02日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• speccy 更新自 gab75(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "6ec1d6e650052b7795b8b5032635513628dd685f8d431da23a6d5e0298781c24",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-02T10:46:06Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月02日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•修复ROV CLEAR （ Stenzek（https://github.com/stenzek/duckstation/commit/fd88101c80eed66b58ea0669f04e8406a3a68154） ）中的规格违规\n• 9d00d6b ： GPU/HW ：使用正确的ROV缓冲区格式（ Stenzek ）\n• ClearSection ()不应创建空节（ Stenzek（https://github.com/stenzek/duckstation/commit/4122fed9ad3e6e5c2ecf1516cd51675a5931623e） ）",
-      "originalContent": "## Commits\n- Fix spec violation in ROV clear ([Stenzek](https://github.com/stenzek/duckstation/commit/fd88101c80eed66b58ea0669f04e8406a3a68154))\n- 9d00d6b: GPU/HW: Use correct format for ROV buffers (Stenzek)\n- ClearSection() should not create an empty section ([Stenzek](https://github.com/stenzek/duckstation/commit/4122fed9ad3e6e5c2ecf1516cd51675a5931623e))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "019a4b9c556113b0acfd4931a7d2562f3994f74df380524b9881ede4de60932d",
       "translationPending": false
     },
     {
@@ -576,30 +576,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "6e85a93224f72ba046c4909a1b83f63d7ce2e6f2852247937ab3ff77b9626e92",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-citron_neo-nightly-android",
-      "title": "【Android更新】Citron Neo nightly-android",
-      "originalTitle": "Citron Neo nightly-android Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-30T18:21:15Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-android",
-      "imageUrl": "asset://assets/emulators/citron_neo.png",
-      "officialUrl": "https://github.com/citron-neo/emulator",
-      "summary": "Citron Neo 发布 Android 新版本 nightly-android，发布日期为2026年09月30日。点击查看官方版本信息与更新说明。",
-      "content": "Citron Neo 已发布 Android 最新版本 nightly-android。\n\n发布日期：2026年09月30日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nCitron上游提交： `40212aa`（https://github.com/citron-neo/emulator/commit/40212aa3ecbda5588e456b57f875311baf9213d8）\n\n此构建基于主分支的最新Citron仿真器源代码。\n\n构建详细信息：\n•平台： Android （ arm64-v8a ）\n•构建类型：每晚启用LTO\n•日期： 2026-09-30\n•分支机构：主要\n•包括：标准版本+带有高通补丁的Snapdragon 8 Elite版本",
-      "originalContent": "**Citron Upstream Commit:** [`40212aa`](https://github.com/citron-neo/emulator/commit/40212aa3ecbda5588e456b57f875311baf9213d8)\n\nThis build is based on the latest Citron emulator source code from the **main** branch.\n\n**Build Details:**\n- Platform: Android (arm64-v8a)\n- Build Type: Nightly with LTO enabled\n- Date: 2026-09-30\n- Branch: main\n- Includes: Standard build + Snapdragon 8 Elite build with Qualcomm patches",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "citron_neo"
-      ],
-      "contentHash": "5553d8a06d638f02cc8075d4990fefab7e369553565d19f811fe63e049ed1f8c",
       "translationPending": false
     },
     {
@@ -9850,6 +9826,30 @@
         "xendroid"
       ],
       "contentHash": "3c03061fe6e82b627507e228d371471be79fefcbebfdff072b34289bb757f6e7",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-noods-release",
+      "title": "【Android更新】NooDS release",
+      "originalTitle": "NooDS release Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-09T19:30:22Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Hydr8gon/NooDS/releases/tag/release",
+      "imageUrl": "asset://assets/emulators/noods.png",
+      "officialUrl": "https://github.com/Hydr8gon/NooDS",
+      "summary": "NooDS 发布 Android 新版本 release，发布日期为2026年08月09日。点击查看官方版本信息与更新说明。",
+      "content": "NooDS 已发布 Android 最新版本 release。\n\n发布日期：2026年08月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n这些是最新提交的自动更新的版本。",
+      "originalContent": "These are automatically updated builds of the latest commit.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "noods"
+      ],
+      "contentHash": "e84cb9d1861eab95ac6f8b07dcb9eeadf0ddaee11bac6eae85ca417e2400cd42",
       "translationPending": false
     }
   ]
