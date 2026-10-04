@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T16:43:24.955785Z",
+  "generatedAt": "2026-10-04T06:17:57.603260Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,103 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-04T05:03:42Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月04日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_msx.cpp, d_spectrum.cpp: eSpecial FX软件(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_msx.cpp, d_spectrum.cpp: especial FX Software (fprietog)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "b16adc17001b3b6719d57c1370127f1ae0b637011b9e77526c74f8baca5b03d6",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-04T03:47:15Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月04日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `ebd2669` — `v3.6.1` (`develop`)\n\n提交：`ebd2669`（https://github.com/libretro/virtualjaguar-libretro/commit/ebd2669d2831fdf1ac40982bea00fd2074c97308）\n构建时间：2026-10-04 03:47 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/37174621076）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为 `v3.6.1 ebd2669` 启动时 —— 报告此建构时引用该行。\n\n自上一夜版以来的变更\n\n```\n7225e1b 固定( cd): 序列化并重置 dsaLast 多字词 (savestate v15)\nd1e5b88 fix(cd):在DSA转折后发送 $03nn/$14nn TOC 单词,不写\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` ,以获得符号化回溯跟踪。\n\nSHA-256 校验值\n\n校验 `sha256sum --check SHA256SUMS.txt` (林纳)或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\ne9651df6769bdc3668…",
+      "originalContent": "### Nightly `ebd2669` — `v3.6.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`ebd2669`](https://github.com/libretro/virtualjaguar-libretro/commit/ebd2669d2831fdf1ac40982bea00fd2074c97308) |\n| **Built** | 2026-10-04 03:47 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/37174621076) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.6.1 ebd2669` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n7225e1b fix(cd): serialize and reset dsaLastMultiWord (savestate v15)\nd1e5b88 fix(cd): deliver $03nn/$14nn TOC words after the DSA turnaround, not on write\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\ne9651df6769bdc3668…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "e0814800984c53bc3aa256ae5fae245e21a390b58d38ecf8fbf7e2b8efa746b2",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-2-8",
+      "title": "【Android更新】ARMSX2 2.8",
+      "originalTitle": "ARMSX2 2.8 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-03T23:34:39Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.8",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 2.8，发布日期为2026年10月03日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 2.8。\n\n发布日期：2026年10月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.8\n\n新增功能：\n\nNAMCO系统246/256\n\nNamco在ARMSX2的街机板支持。 电路板是整个模拟的：驱动器（ CD、DVD和硬盘）\n驱动器图像，包括CHD ） ，设置内存，按钮，硬币，轮子，鼓，双胞胎的I/O板\n杠杆、光枪和触摸屏、安全加密狗以及更快的系统时钟256\n棋盘。55个街机游戏在游戏数据库中， PCSX2x6对其进行了修复。 * @ israpps、@ Tovarichtch和@ DiscoStarslayer从PCSX2x6进行主板仿真。由@ jpolo1224移植。*\nNAMCO屏幕。在游戏库的左侧菜单中，在纹理包下。 它会按顺序引导您完成：\n•在系统选取器中选取或制作的街机游戏文件夹，并添加到您的库文件夹中。\n•引导文件，下载一次（约1 MB ）。\n•街机BIOS ，带有BIOS位置的快捷方式。 2 MB系统246/256转储工作正常。\n•导入游戏：其光盘或硬盘映像及其加密狗，每个都有自己的按钮和任何\n订单。再加上Soul Calibur II的征服卡。 Gzip压缩的转储在复制时被解压缩，这是一个文件\n低于8 MB的被拒绝作为加密狗，并且取消停止导入。\n•从同一屏幕卸载导入的街机游戏。\n\n\n\n\n\n\n\n\n\n\n\n由@ jpolo1224完成\n\n玩游戏。街机游戏在图书馆展出，带有街机徽章和它们自己的真实封面\n两种封面风格的PS2风格保护壳上的传单和标题艺术品。 每个电极片压榨机也会起到机柜的作用，\n按照PCSX2x6的方式按游戏排列： Select是一枚硬币，赛车游戏在左侧操纵，\n扳机踏板，鼓、双杠杆和光枪有自己的布局。 光枪和触摸\n面板游戏采用触摸屏。 游戏内菜单为玩家提供插入硬币，服务和测试，\n并节省各州的工作。 在图书馆的溢出菜单中，仅有街机游戏开关显示它们。 封面包由@ jpolo1224从头开始采购和完成。\n\n\n\n\n\nBIOS。街机BIOS在BIOS位置中显示为街机，仅适用于街机游戏。导入\n不会替换您的控制台BIOS ，仅适用于街机游戏。由@ jpolo1224完成。*\n\n纹理包\n\n重新设计的纹理包菜单。\n\n页面包装。浏览纹理包打开每个在线包装，您可以翻转一页游戏封面\n通过，每个包的名称，其创建者和他们的图片，以及它是否已安装。\n•按游戏、卡包、序列或创作者搜索。\n•按游戏、序列或创作者排序。 创作者列出了制作套餐的所有人，以及他们的图片；选择\n一个查看他们的卡包，然后返回到您所在的页面。\n•过滤至“今日热门”、“所有”、“我的游戏”或“已安装”。\n•当您关闭浏览器时，下载会继续进行，纹理屏幕会显示下载。\n< img width = \"1920\" height = \"1080\" alt = \"image\" src = \"https://github.com/user-attachments/assets/01b570bd-09…",
+      "originalContent": "# ARMSX2 2.8\r\n\r\nWhat's new: \r\n\r\n## Namco System 246/256\r\n\r\n**Namco's arcade board support in ARMSX2.** The boards are emulated whole: the drive (CD, DVD and hard\r\ndrive images, CHD included), the settings memory, the I/O boards for buttons, coins, wheels, drums, twin\r\nlevers, light guns and the touch panel, the security dongle, and the faster clocks of the System 256\r\nboards. 55 arcade games are in the game database, with PCSX2x6's fixes for them. *Board emulation from PCSX2x6 by @israpps, @Tovarichtch and @DiscoStarslayer. ported by @jpolo1224.*\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0fb03cf6-4df3-4d56-9229-5008cbaac070\" />\r\n\r\n**The NAMCO screen.** In the left side menu in the game library, right under Texture Packs. It takes you through it in order:\r\n- **An arcade games folder**, picked or made in the system picker and added to your library folders.\r\n- **The boot files**, downloaded once (about 1 MB).\r\n- **The arcade BIOS**, with a shortcut to BIOS Location. A 2 MB System 246/256 dump works.\r\n- **Import a game:** its disc or hard drive image and its dongle, each with its own button and in any\r\n  order. plus Soul Calibur II's Conquest card. Gzipped dumps are unpacked as they are copied, a file\r\n  under 8 MB is refused as a dongle, and Cancel stops an import.\r\n- **Uninstall** an imported arcade game from the same screen.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c4170730-9fc0-4e75-9c66-bb605397a6b2\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e557de2f-73f3-46a1-a2ab-7b6cdfdf649f\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1463da4b-6679-44dd-80f6-474017497523\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2a07f462-9f4a-4239-a51a-9bdaa74f9ec5\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8d71272c-c585-4dfe-a46a-d0abf214df5e\" />\r\n\r\ndone by @jpolo1224 \r\n\r\n**Playing them.** Arcade games show in the library with an ARCADE badge and covers of their own, real\r\nflyer and title art on a PS2-style case, in both cover styles. Every pad press also works the cabinet,\r\nlaid out per game the way PCSX2x6 lays it out: Select is a coin, racing games steer on the left stick and\r\npedal on the triggers, and drums, twin levers and light guns have their own layouts. Light gun and touch\r\npanel games take the touchscreen. The in-game menu has Insert coin for both players, Service and Test,\r\nand save states work. An **Arcade games only** switch in the library's overflow menu (⋮) shows just them. Cover pack sourced and done by @jpolo1224 from scratch. \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c60d55b0-69c8-49f0-96f0-966d06f6215c\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9f254650-15cc-44bb-85f5-cbb8ef7cdf32\" />\r\n\r\n**BIOS.** An arcade BIOS shows as Arcade in BIOS Location and is offered for arcade games only. Importing\r\ndoes not replace your console BIOS, and only works for arcade games. done by @jpolo1224.*\r\n\r\n## Texture packs\r\n\r\nRedesigned Texture Pack menu.\r\n\r\n**Pages of packs.** Browse texture packs opens every online pack as a page of game covers you can flip\r\nthrough, each with its pack's name, its creator and their picture, and whether it is installed.\r\n- **Search** by game, pack, serial or creator.\r\n- **Sort** by game, serial or creator. Creator lists everyone who made a pack, with their picture; pick\r\n  one to see their packs, and Back returns to the page you were on.\r\n- **Filter** to Popular Today, All, My games or Installed.\r\n- **A download keeps going** when you close the browser, and the texture screen shows it.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/01b570bd-09…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "38ebbf364c5e15074339ffc4500fdc1805f345f4ca5a1e4051c10e926bab4148",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-gopher64-1-1-38",
+      "title": "【Android更新】Gopher64 1.1.38",
+      "originalTitle": "Gopher64 1.1.38 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-03T19:49:14Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/gopher64/gopher64/releases/tag/v1.1.38",
+      "imageUrl": "asset://assets/emulators/gopher64.png",
+      "officialUrl": "https://github.com/gopher64/gopher64",
+      "summary": "Gopher64 发布 Android 新版本 1.1.38，发布日期为2026年10月03日。点击查看官方版本信息与更新说明。",
+      "content": "Gopher64 已发布 Android 最新版本 1.1.38。\n\n发布日期：2026年10月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n请求帮助\n在Google Play Store发布之前,我想改进Android上的设备兼容性。 如果你是Android开发商 或者认识Android开发商 请联系Discord\n\n---\n\n\n\n视窗 :\n• 独立可执行文件: gopher64-windows-x86_64.exe（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-windows-x86_64.exe）\n\nMacOS:\n• 应用程序包: gopher64-macos-aarch64.zip（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-macos-aarch64.zip）\n• 本地工人: `brew install --cask gopher64`\n\n林纳:\n• 独立可执行文件: gopher64-linux -x86_64 (英语).（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-linux-x86_64）\n• 平板电脑: `flatpak install flathub io.github.gopher64.gopher64`\n\n机器人:\n• APK: gopher64-android.apk（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-android.apk）\n\n更新内容\n• Android触摸屏控制器\n• 更新Vulkan后端(Granite)\n• 调整区域发展方案的时间安排\n• 修复一些 VRU 错误\n• 更新RetroAchievements图书馆\n• 更新Rust/SDL\n\n完整更改日志 : https://github.com/gopher64/gopher64/compare/v1.1.36...v1.1.38",
+      "originalContent": "##  Request for help\r\nI would like to improve device compatibility on Android before releasing it on the Google Play Store. If you are an Android developer, or know an Android developer, please reach out to me on Discord.\r\n\r\n---\r\n\r\n<a href=\"https://loganmc10.itch.io/gopher64\"><img src=\"https://static.itch.io/images/badge.svg\" width=\"200\" ></a>\r\n\r\nWindows:\r\n* Standalone executable: [gopher64-windows-x86_64.exe](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-windows-x86_64.exe)\r\n\r\nMacOS:\r\n* App Bundle: [gopher64-macos-aarch64.zip](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-macos-aarch64.zip)\r\n* Homebrew: `brew install --cask gopher64`\r\n\r\nLinux:\r\n* Standalone executable: [gopher64-linux-x86_64](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-linux-x86_64)\r\n* Flatpak: `flatpak install flathub io.github.gopher64.gopher64`\r\n\r\nAndroid:\r\n* APK: [gopher64-android.apk](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-android.apk)\r\n\r\n## What's Changed\r\n* Touch screen controller for Android\r\n* Update Vulkan backend (Granite)\r\n* Adjust RDP timing\r\n* Fix some VRU bugs\r\n* Update RetroAchievements library\r\n* Update Rust/SDL\r\n\r\n**Full Changelog**: https://github.com/gopher64/gopher64/compare/v1.1.36...v1.1.38",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gopher64"
+      ],
+      "contentHash": "b1ccf5173a7f37bad16122217fcbc43d7113cc99f8fa11fda07118045ff414bd",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx1-0-1-5",
       "title": "【Android更新】ARMSX1 0.1.5",
@@ -30,55 +127,6 @@
         "armsx1"
       ],
       "contentHash": "0c18515f9a8d446cfbac8dd4b0322a80e7378238fa3e6e8c6d3a757041faa4b1",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20261003",
-      "title": "【Android更新】ARMSX2 nightly-20261003",
-      "originalTitle": "ARMSX2 nightly-20261003 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-03T13:56:46Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261003",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20261003，发布日期为2026年10月03日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261003。\n\n发布日期：2026年10月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧nightly? 夜行现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:在旧夜里无法稳定地安装。 备份您的保存和内存卡, 解开旧的夜晚, 然后安装稳定的APK.\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n有什么新情况\n• iOS: 停止设置页面跳下返回到风景电话\n• iOS:写下为什么自动保存没有发生 emulog.txt\n• iOS:回到菜单后自动保存游戏\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261002...9d989ca933a85bb2f1d111fd3b9e5742ac7d2fbe",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- iOS: stop Settings pages jumping down after Back on a landscape phone\n- iOS: write why an auto-save didn't happen to emulog.txt\n- iOS: auto-save when Back to Menu leaves a game\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261002...9d989ca933a85bb2f1d111fd3b9e5742ac7d2fbe",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "1a7684759ddcc2703de7b4a73fa78ed02bbc070b8b0aef58db3763a54fe0ac8c",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-03T09:26:13Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月03日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月03日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_msx.cpp, d_nes.cpp, d_pacman.cpp, d_sms.cpp: 各种(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_msx.cpp, d_nes.cpp, d_pacman.cpp, d_sms.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "6a7591dbf59ecec8cbd78656d82bc0c58f0281dd2924b79770e442876275542b",
       "translationPending": false
     },
     {
@@ -324,30 +372,6 @@
         "duckstation"
       ],
       "contentHash": "ad66796dba95385be68fae6cecc7ad5b1ace00bf0027e77abc6731e8446083fd",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-02T15:20:27Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月02日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `2f913d8` — `v3.6.1` (`develop`)\n\n提交：`2f913d8`（https://github.com/libretro/virtualjaguar-libretro/commit/2f913d8b88f8b2554b4182d9aaad5de0aeaa15be）\n构建时间：2026-10-02 15:20 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/37023786514）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为 `v3.6.1 2f913d8` 启动时 —— 报告此建构时引用该行。\n\n自上一夜版以来的变更\n\n```\n46234a5 fix( tests): 重置每个核心负载的选项密钥注册; 关闭两个静态滴\n6ea1b43 固定( tests ) : 吊带拒绝 -- option 键, 核心从未注册\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` ,以获得符号化回溯跟踪。\n\nSHA-256 校验值\n\n校验 `sha256sum --check SHA256SUMS.txt` (林纳)或 `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n38c…",
-      "originalContent": "### Nightly `2f913d8` — `v3.6.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`2f913d8`](https://github.com/libretro/virtualjaguar-libretro/commit/2f913d8b88f8b2554b4182d9aaad5de0aeaa15be) |\n| **Built** | 2026-10-02 15:20 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/37023786514) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.6.1 2f913d8` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n46234a5 fix(tests): reset the option-key registry per core load; close two more silent drops\n6ea1b43 fix(tests): harness refuses an --option key the core never registered\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64\nc19f65c1be0eab40e58f0a4d619704dcfc4632858d00eef78a737d0f26e7a134  cue2cdi-macos-universal\n38c…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "0f38d4838ca6f9c463cfb514f497689fdeb04fc1b26270305360a9515f4bd11d",
       "translationPending": false
     },
     {
@@ -9211,30 +9235,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "3e8e2e05366ee8f75bb3908355c39c90ba9ad7f6bf1c3ba9e320defa2723d76e"
-    },
-    {
-      "id": "android-release-gopher64-1-1-36",
-      "title": "【Android更新】Gopher64 1.1.36",
-      "originalTitle": "Gopher64 1.1.36 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-08-21T11:32:55Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/gopher64/gopher64/releases/tag/v1.1.36",
-      "imageUrl": "asset://assets/emulators/gopher64.png",
-      "officialUrl": "https://github.com/gopher64/gopher64",
-      "summary": "Gopher64 发布 Android 新版本 1.1.36，发布日期为2026年08月21日。点击查看官方版本信息与更新说明。",
-      "content": "Gopher64 已发布 Android 最新版本 1.1.36。\n\n发布日期：2026年08月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n视窗 :\n• 独立可执行文件: gopher64-windows-x86_64.exe（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-windows-x86_64.exe）\n\nMacOS:\n• 应用程序包: gopher64-macos-aarch64.zip（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-macos-aarch64.zip）\n• 本地工人: `brew install --cask gopher64`\n\n林纳:\n• 独立可执行文件: gopher64-linux -x86_64 (英语).（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-linux-x86_64）\n• 平板电脑: `flatpak install flathub io.github.gopher64.gopher64`\n\n机器人:\n• APK: gopher64-android.apk（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-android.apk）\n\n更新内容\n• 在Windows上添加 GPU 提示以帮助选择专用的 GPU\n• 更新Rust/SDL\n• 更新网络播放认证码\n• 更新RetroAchievments图书馆\n• 解决一些控制器的故障\n• 修复 VRU 错误\n• 修复一些Libdragon ROM的崩溃\n\n完整更改日志 : https://github.com/gopher64/gopher64/compare/v1.1.34...v1.1.36",
-      "originalContent": "<a href=\"https://loganmc10.itch.io/gopher64\"><img src=\"https://static.itch.io/images/badge.svg\" width=\"200\" ></a>\r\n\r\nWindows:\r\n* Standalone executable: [gopher64-windows-x86_64.exe](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-windows-x86_64.exe)\r\n\r\nMacOS:\r\n* App Bundle: [gopher64-macos-aarch64.zip](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-macos-aarch64.zip)\r\n* Homebrew: `brew install --cask gopher64`\r\n\r\nLinux:\r\n* Standalone executable: [gopher64-linux-x86_64](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-linux-x86_64)\r\n* Flatpak: `flatpak install flathub io.github.gopher64.gopher64`\r\n\r\nAndroid:\r\n* APK: [gopher64-android.apk](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-android.apk)\r\n\r\n## What's Changed\r\n* Add GPU hints on Windows to help select dedicated GPU\r\n* Update Rust/SDL\r\n* Update netplay auth code\r\n* Update RetroAchievments library\r\n* Fix rumble on some controllers\r\n* Fix VRU bug\r\n* Fix crash in some libdragon ROMs\r\n\r\n**Full Changelog**: https://github.com/gopher64/gopher64/compare/v1.1.34...v1.1.36",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "gopher64"
-      ],
-      "contentHash": "0f4edd9187a9f3696a6368f20d87e07ab4785066d8bac0e8a9d9087f3cc5edbf",
-      "translationPending": false
     },
     {
       "id": "136121",
