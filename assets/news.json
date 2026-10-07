@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T06:26:04.001157Z",
+  "generatedAt": "2026-10-07T19:06:05.835211Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,298 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "137698",
+      "title": "【家用机】Pureikyubu v2.0",
+      "originalTitle": "[Consoles de salon] Pureikyubu v2.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T17:53:14Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137698-consoles-de-salon-pureikyubu-v2-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Pureikyubu-emu.png",
+      "officialUrl": "https://github.com/emu-russia/pureikyubu/",
+      "summary": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。 模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。",
+      "content": "Pureikyubu是任天堂GameCube的开源模拟器，也包含对Game Boy和Game Boy Advance的模拟，该模拟器目前正在开发中，基于Dolwin。\n模拟器的目的是研究GameCube的硬件功能，并对用于为此平台开发游戏的技术进行反向工程。\n\n改进包括：\n•完全重新设计了外围系统，控制器、存储卡、Game Boy Player、Game Boy Advance链路电缆、宽带适配器和调制解调器适配器现在作为具有自己设置的独立设备处理。\n•添加了宽带适配器(DOL-015)仿真，包括在仿真器实例之间通过UDP进行以太网帧传输。\n•添加了调制解调器适配器（ DOL-012 ）仿真，包括其寄存器、标识、命令处理和AT接口。\n•增加了GameCube存储卡支持，包括正确的EXI通信、地址环绕、流读取、擦除命令和卡解锁挑战。 支持从4到128 Mbit的所有六个存储卡容量。\n•通过GameCube的ARAM扩展界面添加了Game Boy Player仿真，包括其命令通道、握手和中断处理。\n•添加了使用DOL-011 JOY协议的Game Boy Advance链路电缆仿真。\n•增加了GameCube保存状态，包括10个插槽、键盘快捷键、菜单命令和调试界面支持。\n•添加了带有新设置窗口的统一设备配置系统，涵盖常规设置、GameCube硬件、控制器、存储卡、网络、高速设备和接口选项。\n•添加了专用的独立GBA设置窗口。\n•添加了8个界面主题： Flipper、Nebula、Emerald、Crimson、Amber、Graphite、Sakura和Daylight。\n•在游戏选择器中添加了日语角色支持。\n•改进了不同显示比例下的字体渲染，以获得更清晰的文本。\n•添加了可调整大小和最大化的视频输出窗口，自动保持纵横比。\n•向视频输出窗口标题添加了后端和FPS信息。\n•向状态栏添加了仿真和主机时钟信息。\n•添加了GFX转储调试器，允许捕获和检查图形命令流、原始数据和纹理/TLUT数据。\n•软件图形管线不再被认为是实验性的，现在可以渲染启动ROM启动屏幕和电影播放器输出。\n•修复了GX BP写入蒙版，纠正了“塞尔达传说：风之唤醒者”标题屏幕中的黑色天空等渲染问题。\n•修复了DSI/ISI页面故障后陈旧的TLB转换，并更正了PTE Changed-bit处理，允许启动Need for Speed: Carbon。\n•改进的确定性指令步进和几个PowerPC/Gekko、命令处理器和串行接口行为。\n•改进的GBA仿真，包括DMA重复行为和DISPSTAT写入。\n•增加了通过外围系统配置GBA BIOS和Game Pak的支持。\n•修复了几个Game Boy Player问题，包括状态处理和过多的ARAM DMA日志记录。\n•修复了外围设备池引入后的JSON列表配置处理问题。\n•改进的GFX帧计数和显示拷贝处理。\n•增加了广泛的测试，涵盖新的外围系统、保存状态、图形捕获和其他仿真组件。\n• Linux便携式测试套件现在通过了所有380项测试。\n\n此时没有生成。",
+      "originalContent": "Pureikyubu est un émulateur open source de Nintendo GameCube, intégrant également l'émulation de la Game Boy et de la Game Boy Advance, actuellement en cours de développement et basé sur Dolwin.\n\nLe but de l'émulateur est de rechercher les caractéristiques matérielles de la GameCube et de faire de la rétro-ingénierie sur les technologies utilisées pour développer des jeux pour cette plateforme.\n\nLes améliorations sont les suivantes:\n\n- Completely redesigned the peripheral system, with controllers, memory cards, the Game Boy Player, Game Boy Advance link cable, Broadband Adapter and Modem Adapter now handled as independent devices with their own settings.\n- Added Broadband Adapter (DOL-015) emulation, including Ethernet frame transfer through UDP between emulator instances.\n- Added Modem Adapter (DOL-012) emulation, including its registers, identification, command handling and AT interface.\n- Added GameCube memory card support, including correct EXI communication, address wrapping, streaming reads, erase commands and the card unlock challenge. All six memory card capacities from 4 to 128 Mbit are supported.\n- Added Game Boy Player emulation through the GameCube's ARAM expansion interface, including its command channels, handshake and interrupt handling.\n- Added Game Boy Advance link cable emulation using the DOL-011 JOY protocol.\n- Added GameCube save states with 10 slots, keyboard shortcuts, menu commands and debug interface support.\n- Added a unified device configuration system with a new Settings window covering general settings, GameCube hardware, controllers, memory cards, network, high-speed devices and interface options.\n- Added a dedicated Stand-alone GBA settings window.\n- Added 8 interface themes: Flipper, Nebula, Emerald, Crimson, Amber, Graphite, Sakura and Daylight.\n- Added Japanese character support to the game selector.\n- Improved font rendering at different display scales for sharper text.\n- Added a resizable and maximizable video output window with automatic aspect-ratio preservation.\n- Added backend and FPS information to the video output window title.\n- Added emulation and host clock information to the status bar.\n- Added the GFX Dump debugger, allowing graphics command streams, raw data and texture/TLUT data to be captured and inspected.\n- The software graphics pipeline is no longer considered experimental and can now render the boot ROM splash screen and movie player output.\n- Fixed the GX BP write mask, correcting rendering issues such as the black sky in The Legend of Zelda: The Wind Waker's title screen.\n- Fixed stale TLB translations after DSI/ISI page faults and corrected PTE Changed-bit handling, allowing Need for Speed: Carbon to boot.\n- Improved deterministic instruction stepping and several PowerPC/Gekko, command processor and serial interface behaviours.\n- Improved GBA emulation, including DMA repeat behaviour and DISPSTAT writes.\n- Added support for configuring the GBA BIOS and Game Pak through the peripheral system.\n- Fixed several Game Boy Player issues, including status handling and excessive ARAM DMA logging.\n- Fixed JSON list configuration handling after the introduction of the peripheral device pool.\n- Improved GFX frame counting and display-copy handling.\n- Added extensive tests covering the new peripheral system, save states, graphics capture and other emulation components.\n- The Linux portable test suite now passes all 380 tests.\n\nPas de build pour le moment.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "6aae12afeeab86d7e59a2647852f8a99c830a11d9772784ad5d75c18dd5f3e8b",
+      "translationPending": false
+    },
+    {
+      "id": "137696",
+      "title": "【其他】Ruffle v0.7.X",
+      "originalTitle": "[www] Ruffle v0.7.X",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T17:46:26Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137696-www-ruffle-v0-7-x/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/09/ruffle.png",
+      "officialUrl": "https://ruffle.rs/",
+      "summary": "Ruffle是用Rust编程语言编写的Adobe Flash Player模拟器。 Ruffle使用WebAssembly针对桌面和Web。 它将无缝集成到您的浏览器中，并允许您阅读旧网站，例如我们的MAMU_INTERNATIONAL: D 开发地点。",
+      "content": "Ruffle是用Rust编程语言编写的Adobe Flash Player模拟器。 Ruffle使用WebAssembly针对桌面和Web。 它将无缝集成到您的浏览器中，并允许您阅读旧网站，例如我们的MAMU_INTERNATIONAL: D\n开发地点。",
+      "originalContent": "Ruffle est un émulateur Adobe Flash Player écrit dans le langage de programmation Rust. Ruffle cible à la fois le bureau et le Web à l’aide de WebAssembly. Il s'intégrera parfaitement dans votre navigateur en toute transparence et vous permettra ainsi de lire des vieux sites web comme par exemple celui de notre Mamu_ international :D\n\nSite de développement.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "ruffle_android",
+        "ruffle_pc"
+      ],
+      "contentHash": "7e79b1f3dd793cdb7bdf4cdedf850a3e9a2e7c55e1468b109e74cb65c8316706",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20261007",
+      "title": "【Android更新】ARMSX2 nightly-20261007",
+      "originalTitle": "ARMSX2 nightly-20261007 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T16:01:51Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261007",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20261007，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261007。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,所以用 Qt Appimage 代替)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧夜里来的? 噩梦现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:稳定无法在旧的夜晚安装。 备份你的储蓄和记忆卡, 解开旧的夜晚, 然后安装稳定的APK。\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n或\n• Android:不要让用户下载他们选择的malix2包\n• 测试:将每个马里Valhall v9和v11的名称标注在应用程序可以满足的上\n• Android:在马里Valhall v9和v11上提供malix2\n• 工具:用NDK 29建造游戏AAB,如副载目标\n• GS/Null:在我们的司机上为RG477V型机车增加一个马力-g615-malisx2配置图\n• Android:向malix2显示混合和付费副本警告的显示方式\n• GS/gsrunner: - 无双源运行 Vulkan 作为不双源混合设备\n• Android:当一个被支持的马里在没有malix2的情况下运行Vulkan时发出警告。\n• GS/Vulkan:每台设备上扩展的线路端对指数\n• Android:在bmd的纹理散列变化后再生成PGO剖面图\n• Android:仅在核心写完所有内容后才向画廊发布截图\n• GS/gsrunner:-无刺激顶点运行Vulkan作为一种装置,而不引发VertexLast\n• Android:在马里Valhall v9和v11上自动挑选Vulkan\n• GS:允许在malisx2上发布足够的说明\n• GS:一旦马里有ROAA,malisx2就免去马里目的地读行\n• GS/TC:重新使用纹理散列,而其读取的页面是无文字的\n• GS:在硬件渲染器制造的仓库内标出本地记忆页\n• GS:在商店写的当地记忆页上盖章\n• GS/TC:散列纹理块,但不将每个块复制到XXH3的缓冲器\n• GS:将malisx2从r44p1自读规则中豁免\n• GS:将malisx2身份上游移入剖面层\n• Android:重新生成PGO简介 2.8.2\n• GS:记录哪些驱动程序规格规则和设备规则匹配\n• GS:识别malix2驱动器及其旧的libmali名称\n• 快速菜单:内部分辨率下的纹理升级\n• i18n:bmd's Texture Upscaleing picker和预设扫描器,使用19种语言\n• Arcade:Soul Calibur II的征服卡在没有纸条的情况下进入\n• 控制器:在玩家2端口再次插入两个控制器,无论玩在哪里\n• 保存状态:保持5个自动保存\n• 控制:几个控制器可以玩一个玩家\n• IOP:再次通过Android的皮靴摘取的ELF(# 759)\n^ Android:保存状态热键总是回答,被扣的按钮被放开(#784).\n• Android:屏幕分辨率覆盖保留肖像屏幕形状(# 790)\n• 触摸:隐藏的额外部件不再留下死点(# 796)\n• 拱廊:索尔·卡利布尔二世以其征服卡开始\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261006...e194ae09e6546840dc9854341c3b15424b007495",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: don't tell a user to download the malisx2 pack they selected\n- Tests: pin every Mali Valhall v9 and v11 name the app can meet\n- Android: offer malisx2 on Mali Valhall v9 as well as v11\n- tools: build the Play AAB with NDK 29, like the sideload targets\n- GS/Null: add a mali-g615-malisx2 profile for the RG477V on our driver\n- Android: show the malisx2 notice the way the blending and paid-copy warnings show\n- GS/gsrunner: -no-dual-source runs Vulkan as a device without dual-source blending\n- Android: warn when a supported Mali runs Vulkan without malisx2\n- GS/Vulkan: expanded lines pair their ends by index on every device\n- Android: regenerate the PGO profile after bmd's texture hash changes\n- Android: publish a screenshot to the gallery only once the core has written all of it\n- GS/gsrunner: -no-provoking-vertex runs Vulkan as a device without provokingVertexLast\n- Android: Auto picks Vulkan on Mali Valhall v9 and v11\n- GS: allow push descriptors on malisx2 when it advertises enough of them\n- GS: exempt malisx2 from the Mali destination-read rows once it has ROAA\n- GS/TC: reuse a texture's hash while the pages it reads are unwritten\n- GS: mark local memory pages at the stores the hardware renderer makes\n- GS: stamp the pages of local memory that a store writes\n- GS/TC: hash texture blocks without copying each one into XXH3's buffer\n- GS: exempt malisx2 from the r44p1 self-read rule\n- GS: move the malisx2 identity predicate into the profile layer\n- Android: regenerate the PGO profile for 2.8.2\n- GS: log which driver-profile rules and device rules matched\n- GS: recognise the malisx2 driver as well as its old libmali name\n- Quick menu: Texture Upscaling under the internal resolution\n- i18n: bmd's Texture Upscaling picker and preset scanning in 19 languages\n- Arcade: Soul Calibur II's Conquest card goes in without a note\n- Controls: two controllers plug in Player 2's port again, wherever they play\n- Save states: keep up to five autosaves\n- Controls: several controllers can play one player\n- IOP: an ELF picked through Android's file picker boots again (#759)\n- Android: save state hotkeys always answer, and a held button is let go (#784)\n- Android: the screen resolution override keeps a portrait screen's shape (#790)\n- Touch: hidden extra widgets no longer leave dead spots (#796)\n- Arcade: Soul Calibur II starts with its Conquest card\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261006...e194ae09e6546840dc9854341c3b15424b007495",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "93d1c5e50dd80d09c6a03e0c67302d40c7036b293b48d4a1e439f3dc5a266d2d",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T14:42:56Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 根据gab75(dinkc64)更新msx\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• msx update from gab75 (dinkc64)\n• speccy update from gab75 (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "ab4d1f11bc6d7c1ec5147b629f3b08d8de37c1cf7b19de7cb0e2cb8a217fae35",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorex-0-4-7",
+      "title": "【Android更新】EmuCoreX 0.4.7",
+      "originalTitle": "EmuCoreX 0.4.7 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T14:17:53Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.7",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.4.7，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.4.7。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.4.6...v0.4.7\n\n有什么新情况: 0.4.7\n\n• UI的更新和改进\n• 修复和优化",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.6...v0.4.7\r\n\r\nWhat’s new: 0.4.7\r\n\r\n- UI updates and improvements\r\n- Fixes and optimizations",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "2d84fac12f5cacc57501c30349d2f433a00edf105a89cd7ea67de8fe062cedbf",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T13:19:55Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•不要锁定预取回调（ Stenzek（https://github.com/stenzek/duckstation/commit/e0668baab4282c60a83aaaf43faf05eacb47b72a） ）\n•不要试图在没有缓存的情况下获取徽章（ Stenzek（https://github.com/stenzek/duckstation/commit/df8059758b11e1b6b320dbd84dad38afba307e40） ）",
+      "originalContent": "## Commits\n- Don't lock in prefetch callback ([Stenzek](https://github.com/stenzek/duckstation/commit/e0668baab4282c60a83aaaf43faf05eacb47b72a))\n- Don't try to fetch badges without cache ([Stenzek](https://github.com/stenzek/duckstation/commit/df8059758b11e1b6b320dbd84dad38afba307e40))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "cdd72a2ab887e024f80f1aa8cb87301f9578dd79400b8df40c83de82270012c2",
+      "translationPending": false
+    },
+    {
+      "id": "137690",
+      "title": "【街机】M1FX v15 \"Reborn Edition\"",
+      "originalTitle": "[Musiques et sons] M1FX v15 \"Reborn Edition\"",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "tool",
+      "publishedAt": "2026-10-07T11:16:36Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137690-musiques-et-sons-m1fx-v15-reborn-edition/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/m1fx.png",
+      "officialUrl": "https://www.1emulation.com/forums/topic/37962-m1fx-150-released/",
+      "summary": "由Mamesick创建，最初用于其MAMEUIFX仿真器（现在的Arcade64 ） ，它是M1 ，在单个可执行文件中具有集成（和简化）前端，允许您调整音量甚至记录。 变更内容： 正如所宣布的那样，我决定在10年后（ ！ ）更新这个小工具，让您可以从街机游戏中玩OST。您可以在独立应用程序中使用，也可以从ARCADE64工具栏启动它。",
+      "content": "由Mamesick创建，最初用于其MAMEUIFX仿真器（现在的Arcade64 ） ，它是M1 ，在单个可执行文件中具有集成（和简化）前端，允许您调整音量甚至记录。\n\n变更内容：\n正如所宣布的那样，我决定在10年后（ ！ ）更新这个小工具，让您可以从街机游戏中玩OST。您可以在独立应用程序中使用，也可以从ARCADE64工具栏启动它。\n显然，支持的游戏数量约为1900个，缺少很多，但如果您想享受一些TOAPLAN、NEO-GEO、CAPCOM等OST ，这是您的计划。\n我对WIN10-WIN11进行了一些外观上的更改，但假设您仍在使用旧版Windows ，如Vista或Seven ，也应该可以。\n•图形用户界面得到了一些改进，按钮上也有了新的图标。\n•添加了UNICODE支持，尽管看起来它可以按预期工作，但它仍有待改进。\n• “选择新游戏”行为已更改，现在如果您单击“取消”按钮，程序将开始在内存中再次玩游戏。\n•新的菜单图标和一些小的修改（版权年份等）\n\n旧话题。",
+      "originalContent": "Créé par Mamesick et originellement destiné à son émulateur MAMEUIFX (à présent Arcade64), il s'agit de M1 avec un frontend intégré (et simplifié) dans un seul exécutable et permettant de régler le volume ou même d'enregistrer.\n\nLes changements:\n\nAs announced, I decided after 10 years(!) to update this little tool that allows you to play OST from arcade games. You can use at a standalone app or launch it from ARCADE64 toolbar.\nObviously the number of games supported is about 1900 and a lot are missing, but if you want to enjoy some TOAPLAN, NEO-GEO, CAPCOM etc. etc. OSTs, this is your program.\nI made some cosmetic changes for WIN10-WIN11 but it should be fine also for older Windows like Vista or Seven, assuming you are still using them.\n\n- GUI has been a little bit improved, with again new icons also on buttons.\n- UNICODE support has been added, it could be improved though it seems it works as expected.\n- \"Select new game\" behaviour changed, now if you click on \"Cancel\" button the program starts to play again the game already in memory.\n- New menu icons and some small fixes (copyright year, etc.)\n\nAncien sujet.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "cddf151a78edc026db2e61d34bdceaf8e5796482081213733e8295e69109736b",
+      "translationPending": false
+    },
+    {
+      "id": "137687",
+      "title": "【街机】PSArcadeClassic+ v2.8",
+      "originalTitle": "[Arcade] PSArcadeClassic+ v2.8",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T10:51:00Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137687-arcade-psarcadeclassic-v2-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/04/PSArcadeClassic.png",
+      "officialUrl": "https://github.com/Gaston900/PSArcadeClassic",
+      "summary": "PSArcadeClassic是一个基于MAME的仿真项目，它融合了ARCADE64和HBMAME的源代码，以提供一个统一、更稳定、更轻便的版本 。该项目使用HBMAME 0.245作为其基础，然后将ROM更新并清理到较新版本，删除数百个不必要的文件以创建单个“可收集”版本。 目标是将所有街机系统（包括现有黑客）整合到一个优化版本中，仅与Windows 7、8、10和11兼容。",
+      "content": "PSArcadeClassic是一个基于MAME的仿真项目，它融合了ARCADE64和HBMAME的源代码，以提供一个统一、更稳定、更轻便的版本\n。该项目使用HBMAME 0.245作为其基础，然后将ROM更新并清理到较新版本，删除数百个不必要的文件以创建单个“可收集”版本。\n目标是将所有街机系统（包括现有黑客）整合到一个优化版本中，仅与Windows 7、8、10和11兼容。该项目故意排除机械游戏、弹球、琐事、宾果、麻将、扑克、机会游戏、游戏机游戏、非功能游戏、黑屏游戏或需要\n有问题的冠心病。\nM68000内核已被修改，以支持所有类型的当前黑客ROM ，并集成了几项优化：删除NeoGeo边界，删除警告屏幕，添加自动射击，改善格斗游戏中的动作， PGM校正和EKMAME da接口源代码（ GUI ）的集成\nns Arcade64。",
+      "originalContent": "PSArcadeClassic est un projet d’émulation basé sur MAME qui fusionne les sources de ARCADE64 et HBMAME afin de proposer une version unifiée, plus stable et plus légère. Le projet utilise comme base HBMAME 0.245, puis met à jour et nettoie les ROMs jusqu’à une version plus récente, en supprimant des centaines de fichiers inutiles pour créer une édition « collectible » unique.\n\nL’objectif est de rassembler tous les systèmes arcade, y compris les hacks existants, dans une seule version optimisée, compatible uniquement avec Windows 7, 8, 10 et 11. Le projet exclut volontairement les jeux mécaniques, pinball, trivia, bingo, mahjong, poker, jeux de hasard, jeux console, jeux non fonctionnels, jeux en écran noir ou nécessitant des CHD problématiques.\n\nLe cœur M68000 a été modifié pour supporter tous les types de ROMs hack actuels, et plusieurs optimisations ont été intégrées : suppression des bordures NeoGeo, suppression des écrans d’avertissement, ajout d’autofire, amélioration des mouvements dans les jeux de combat, corrections PGM et intégration du code source de l’interface (GUI) d’EKMAME dans Arcade64.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "bd088250df95b80bc25fca821b80e88f7ad9dfa7c1a01a6f0ce7c14c2b97904d",
+      "translationPending": false
+    },
+    {
+      "id": "137685",
+      "title": "【电脑】Neko Project 21 v0.86 Rev. 105",
+      "originalTitle": "[Ordi.] Neko Project 21 v0.86 Rev. 105",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T10:45:02Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137685-ordi-neko-project-21-v0-86-rev-105/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/04/neko.jpg",
+      "officialUrl": "https://simk98.github.io/np21w/",
+      "summary": "这是一款PC-9801 NEC仿真器，也支持NEC PC-9821。 注：请注意，官方网站上有测试版。",
+      "content": "这是一款PC-9801 NEC仿真器，也支持NEC PC-9821。\n\n注：请注意，官方网站上有测试版。",
+      "originalContent": "Il s'agit d'un émulateur de NEC PC-9801 qui supporte également le NEC PC-9821.\n\nNB: A noter qu'une version béta est disponible sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "7b0c52f2f223eb3d7af0147b5b5c2c356039350d0f3319542bdd002c6ccefb73",
+      "translationPending": false
+    },
+    {
+      "id": "137682",
+      "title": "【电脑】POM2 v0.9.5",
+      "originalTitle": "[Ordi.] POM2 v0.9.5",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T10:41:54Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137682-ordi-pom2-v0-9-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/pom2-emu.png",
+      "officialUrl": "https://github.com/habib256/pom2/",
+      "summary": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。 它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。",
+      "content": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。\n它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。\n在其特点中， POM2提供复合NTSC渲染、CRT/磷光体效果、体素3D视图、倒带、许多扩展卡的仿真，如Mockingboard、Phasor、Super Serial Card、CFFA 2.0和U Ethernet ，以及对ImageWriter II打印机的支持。\n模拟器支持多种格式的Apple II软盘和媒体（ .dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv ） ，并集成了对磁盘II的忠实模拟。它还通过以太网提供网络支持，甚至可以通过WebAssembly直接在浏览器中运行。",
+      "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "737e86207107f5e8c249dd6f56e74c66525363f514757a08fd6f1b3b3651a46e",
+      "translationPending": false
+    },
+    {
+      "id": "137676",
+      "title": "【工具】7-Zip (x86/x64) v26.04",
+      "originalTitle": "[Utilitaires Divers] 7-Zip (x86/x64) v26.04",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-07T10:08:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137676-utilitaires-divers-7-zip-x86-x64-v26-04/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2018/01/7-Zip_Logo.png",
+      "officialUrl": "https://www.7-zip.org/",
+      "summary": "这是一个功能强大的免费压缩/解压缩实用程序。非常有用，它允许ZIP压缩，压缩比比其他格式的压缩器高得多 此外，其著名的7z格式允许您压缩比某些档案上的经典ZIP高出50% ，比RAR格式（由Winrar提供）高出50%。安装最新版本至关重要，因为Emufrance上的许多可用文件都使用最新算法重新压缩 。如果使用较旧版本，有时文件可能不再可解压缩。 它还能够解压缩多个程序使用的大量安装程序格式（有时会避免强制安装）。",
+      "content": "这是一个功能强大的免费压缩/解压缩实用程序。非常有用，它允许ZIP压缩，压缩比比其他格式的压缩器高得多\n此外，其著名的7z格式允许您压缩比某些档案上的经典ZIP高出50% ，比RAR格式（由Winrar提供）高出50%。安装最新版本至关重要，因为Emufrance上的许多可用文件都使用最新算法重新压缩\n。如果使用较旧版本，有时文件可能不再可解压缩。\n\n它还能够解压缩多个程序使用的大量安装程序格式（有时会避免强制安装）。 如果您想使用ZipMax ，强烈建议使用ClrMAMEPro作者的工具。\n改进包括：\n\n•修复了一些错误和漏洞。\n\n注：如果旧档案有问题需要打开/检索（这应该非常罕见，并且在特定情况下） ，请阅读此页面。",
+      "originalContent": "Il s'agit d'un puissant utilitaire de compression/décompression gratuit. Très utile, il permet de compresser en zip avec un taux de compression bien plus élevé que les autres compresseurs de format. De plus son célèbre format 7z permet de compresser jusqu'à 50% de + que le zip classique sur certaines archives et davantage que le format RAR (de Winrar). Installer la dernière version est indispensable, car de nombreux fichiers disponibles sur Emufrance sont recompressés avec les derniers algorithmes. Si une ancienne version est utilisée, il se peut que parfois les fichiers ne soient plus décompressibles.\n\nIl est également capable de décompacter beaucoup de formats d'installeurs que plusieurs programmes utilisent (ce qui évite parfois une installation forcée). Très recommandé si vous voulez utiliser ZipMax, outil de l'auteur de ClrMAMEPro.\n\nLes améliorations sont les suivantes:\n\n- Some bugs and vulnerabilities were fixed.\n\nNB: Si des anciennes archives avaient des problèmes pour être ouvertes/extraites (ce qui devrait être très rare et dans des cas spécifiques), lire cette page.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "c157221a4910dfe43782d909e49112d49ab1ff18692cd11bf7db96f950f42f79",
+      "translationPending": false
+    },
+    {
+      "id": "137674",
+      "title": "【移动设备】WinArcadia v36.71",
+      "originalTitle": "[Console] WinArcadia v36.71",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T10:03:55Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137674-console-winarcadia-v36-71/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/03/warcadia.png",
+      "officialUrl": "http://amigan.1emu.net/releases/",
+      "summary": "AmiArcadia是Tunix2001的增强型港口，前身为Amiga的“Win Arcadia 2001” （由Gavin Turner设计）。 由James Jacobs和Gavin Turner撰写，此版本实际上是Amiga端口的Windows端口（后端口） ！",
+      "content": "AmiArcadia是Tunix2001的增强型港口，前身为Amiga的“Win Arcadia 2001” （由Gavin Turner设计）。 由James Jacobs和Gavin Turner撰写，此版本实际上是Amiga端口的Windows端口（后端口） ！\n\n仿真系统：\n\n控制台：\n• Emerson Arcadia Family 2001 ： Bandai、Emerson、Grandstand、Hanimex、Intervision、Leisure-Vision、Leonardo、MPT-03、Ormatu、Palladium、Poppy、Robdajet、Rowtron、Tele-Fever、Tempest、Tryom、Tunix等。\n• Interton VC 4000及兼容产品： Acetronic、Cabel、Fountain、Hanimex、Interton、Prinztronic、Radofin、Rowtron、Voltmace、Waddingtons...\n• Elektor电视游戏电脑（ 1979年）\n\nPIPBUG/BINBUG机器：\n• Electronics Australia 77up2/78up5 ， Signetics Adaptable主板计算机， Eurocard 2650...\n• Signetics Instructor 50 （ 1978年）\n• Signetics TWIN （ 1976年）\n•中央数据2650 （ 1977 ）\n• PHUNSY微型计算机（ c.1980 ）\n• Ravensburger Selbstbaucomputer/2650最小计算机（ 1984年）\n• Hofacker MIKIT 2650 （ 1978年）\n\n街机：\n• Zaccaria Coin-Ops ： Astro Wars、Galaxia、Laser Battle、Lazarian\n• Coin-ops Kitronix ： Malzak 1和2\n\n电子游戏：\n• PONG控制台AY-3-8500/8550/8600 ：\n• Coleco Telstar Galaxy、Sheen TVG-201和其他AY-3-85xx系统\n\n电子教学机：\n• VTech Type-Right （ 1985 ）\n它需要Windows 9x/ME/NT/2000/XP ，也可以在Vista/8/10/11上运行。",
+      "originalContent": "AmiArcadia est le port amélioré de Tunix2001 ex 'Win Arcadia 2001' (par Gavin Turner) pour Amiga. Ecrit par James Jacobs et Gavin Turner, cette version est en fait le port Windows du port Amiga (un backport) !\n\nSystèmes émulés:\n\nConsoles:\n- Famille Emerson Arcadia 2001 : Bandai, Emerson, Grandstand, Hanimex, Intervision, Leisure-Vision, Leonardo, MPT-03, Ormatu, Palladium, Poppy, Robdajet, Rowtron, Tele-Fever, Tempest, Tryom, Tunix, etc.\n- Interton VC 4000 et compatibles : Acetronic, Cabel, Fountain, Hanimex, Interton, Prinztronic, Radofin, Rowtron, Voltmace, Waddingtons…\n- Elektor TV Games Computer (1979)\n\nMachines PIPBUG/BINBUG:\n- Electronics Australia 77up2/78up5, Signetics Adaptable Board Computer, Eurocard 2650…\n- Signetics Instructor 50 (1978)\n- Signetics TWIN (1976)\n- Central Data 2650 (1977)\n- PHUNSY microcomputer (c.1980)\n- Ravensburger Selbstbaucomputer / 2650 Minimal Computer (1984)\n- Hofacker MIKIT 2650 (1978)\n\nMachines d'arcade:\n- Coin-ops Zaccaria : Astro Wars, Galaxia, Laser Battle, Lazarian\n- Coin-ops Kitronix : Malzak 1 & 2\n\nJeux électroniques:\n- Consoles Pong AY-3-8500/8550/8600:\n- Coleco Telstar Galaxy, Sheen TVG-201, et autres systèmes AY‑3‑85xx\n\nMachine éducative électronique:\n- VTech Type-Right (1985)\n\nIl nécessite Windows 9x/ME/NT/2000/XP et fonctionne également sous Vista/8/10/11.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "winarcadia_pc"
+      ],
+      "contentHash": "8e93cbe2ce7e3b8ef290d8da423b2f04c8f57f5e44f4c62ab07eb6149167eb82",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-0-7",
+      "title": "【Android更新】ARMSX3 1.0.7",
+      "originalTitle": "ARMSX3 1.0.7 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-07T08:17:24Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.0.7",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.0.7，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.0.7。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.0.7\n\n有什么新情况:\n\n游戏\n\n• 第一次发射后, \" 时间刀锋 \" 不再冻结每次发射。\n\n\n\n业绩\n\n• 索引缓冲器在ARM上传得更快。 新的NERON代码将准备它们所花费的时间缩短了十倍,这帮助了魔魂等游戏中的帧化。 依据创用CC授权使用\n\n\n\n骗局\n\n• 阿耳忒弥斯作弊来自收藏的Android版。 下载 Artemis 作弊者现在使用@chidreams Artemis 补丁收藏为Android , 他们为它出版 ARMSX3.\n\n设置\n\n• 在没有Google服务的设备上设置工程。 在没有系统文件夹拾取器的地方, 如在 HarmonyOS 平板电脑上, 选择打开的文件夹 ARMSX3自己的文件夹浏览器。\n\n从上游 RPCS3\n\n• 冻结和坠毁几场大型比赛。 RSX现在报告它读取了PS3的指令缓冲器有多远,并游戏了他们自己的工作时间。 这在抵抗2和Ratchet & Clank游戏、LittleBigPlanet的水位崩溃、Ridge Racer Unbounded的头衔屏幕崩溃以及Harry Potter和Harry Potter的游戏中修正了随机冻结。 死神的游戏在靴子上坠落 由@elad335翻译。\n\n• Gran Turismo 5画得正确。 车影和挡风玻璃不再缺失,车窗也不再闪白。 随着MSAA的上演,印第和NASCAR的赛事也画得没错。 由@Yahfz翻译。\n• 花画其所有草。 一个超过65,536个顶点的单幅画重复了它的第一部分,而不是画其余部分。 亚赫夫兹\n• 更多游戏中的视频播放正确。 视频流开始时没有序列头,或者重复使用它们的缓冲,现在解码。 由 @ digant73 编写。\n• 音乐:游戏从文件上播放不再早结束。 音轨在 44.1 kHz失去了他们最后的5到20秒。 由@digant73翻译。\n• 网上播放RPCN更可靠。 当一个数据包两次丢失时,一个P2P连接就不再长期拖延,一个畸形的数据包不能再挂网,一个超时端不再保持线程旋转。 由@RipleyTom编写。\n• 渲染修正:在游戏关机后仍被设定的彩色书写面具,从错误的查询中读取封存结果,跳过单点画,以及一个blit tha {\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}T可能会在\"死亡的FIFO\"坠毁中结束 由@kd-11翻译 .\n• OpenGL 渲染器修正,用于速率、多边形偏移、深度清空和16位5551回读。 由@kd-11翻译 .\n• 正确保存用打开的文件夹载入的状态。 他们经常带着文件夹里的东西回来 由@Megamouse编辑。\n• 日本屏幕键盘建议显示正确的文本。 由@Megamouse编辑。\n· 更多修正:读取纹理的顶点程序保留其属性输入,多条读的RSX检查生成索引的正确的内存范围(@kd-11),顶点程序肛门 ysis运行更快 (@Whatcookie), 游戏数据大小检查查看 Rock Band 2 的歌曲导入所依赖的正确的文件夹, 由 @ digant73\n• 较小的纹理缓存修正、 GPU 内存映射和家用菜单, 游戏运行于 /app_home/ 的崩溃, 寻找一个的游戏的正确“ 无麦克风” 答案, 以及 a 在使用原始 SPU 线程的游戏中, 间接费用要少一点。 @ By Megamouse。\n\n其他小的稳定性/bug修正,(在本次发布时,PlayStore提交仍在审查中,大约4天后).\n\n\n\n\n\n\n\n<img宽=\"1920\"高=\"1080\" al...",
+      "originalContent": "# ARMSX3 1.0.7\r\n\r\nWhat's new: \r\n\r\n## Games\r\n\r\n- **Blades of Time no longer freezes on every launch after the first.** \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/35597a7b-79fb-4d3c-af53-2d4711ad75e1\" />\r\n\r\n## Performance \r\n\r\n- **Index buffers upload much faster on ARM.** New NEON code cuts the time spent preparing them by up to ten times, which helps the framerate in games like Demon's Souls. By @Whatcookie\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/37bd9ecf-4289-49a6-be6c-2d2ef37960b6\" />\r\n\r\n## Cheats\r\n\r\n- **Artemis cheats come from the collection's Android edition.** Download Artemis cheats now uses @chidreams Artemis Patch Collection for Android, which they publish for ARMSX3.\r\n\r\n## Setup\r\n\r\n- **Setup works on devices without Google services.** Where there is no system folder picker, as on HarmonyOS tablets, choosing a folder opens ARMSX3's own folder browser.\r\n\r\n## From upstream RPCS3\r\n\r\n- **Freezes and crashes fixed in several big games.** The RSX now reports how far it has read its command buffer the way a PS3 does, and games time their own work by it. That fixes random freezes in Resistance 2 and the Ratchet & Clank games, LittleBigPlanet's water level crashes, Ridge Racer Unbounded's title screen crash and both Harry Potter and the Deathly Hallows games crashing at boot. By @elad335.\r\n\r\n- **Gran Turismo 5 draws correctly.** Car shadows and windshields no longer go missing, and car windows no longer flash white. With MSAA on, the Indy and NASCAR events draw correctly too. By @Yahfz.\r\n- **Flower draws all of its grass.** A single draw of more than 65,536 vertices repeated its first part instead of drawing the rest. By Yahfz.\r\n- **Videos in more games play correctly.** Video streams that start without a sequence header, or that reuse their buffers, now decode. By @digant73 \r\n- **Music that games play from files no longer ends early.** Tracks at 44.1 kHz lost their last 5 to 20 seconds. By @digant73.\r\n- **Online play over RPCN is more reliable.** A P2P connection no longer stalls for good when a packet is lost twice, one malformed packet can no longer hang networking, and a timed-out peer no longer keeps a thread spinning. By @RipleyTom.\r\n- **Rendering fixes:** a colour write mask that stayed set after a game turned it off, occlusion results read from the wrong query, single-point draws that were skipped, and a blit that could end in a \"Dead FIFO\" crash. By @kd-11.\r\n- **OpenGL renderer fixes** for stencil, polygon offset, depth clears and 16-bit 5551 readbacks. By @kd-11.\r\n- **Save states taken with a folder open load correctly.** They used to come back with that folder's contents scrambled. By @Megamouse.\r\n- **Japanese on-screen keyboard suggestions show the right text.** By @Megamouse.\r\n- **More fixes:** vertex programs that read textures keep their attribute inputs and multithreaded RSX checks the right memory range for generated indices (@kd-11), vertex program analysis runs faster (@Whatcookie), and game data size checks look at the right folder, which Rock Band 2's song import relies on, by @digant73 \r\n- **Smaller fixes** to texture caching, GPU memory mapping and the home menu, a crash for games run from /app_home/, the right \"no microphone\" answer for games that look for one, and a little less overhead in games that use raw SPU threads. @By Megamouse.\r\n\r\nOther small stability/bug fixes, (PlayStore submission is still in review at the time of this release, around 4 days in). \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/80350d30-63b3-4a9c-9057-9a277fcee21c\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3c0f74b3-eefe-4fb1-9dcb-74a9c10c404f\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9fdf5b74-8959-4e90-87f6-28f95696d588\" />\r\n\r\n<img width=\"1920\" height=\"1080\" al…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "1a4c7449279f32d0d7197a70ce866ad4a7ce6cdad791f9c935c31879f4dc1d1d",
+      "translationPending": false
+    },
     {
       "id": "137669",
       "title": "【家用机】MesenCE v2.2.1 r20261007",
@@ -93,55 +385,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "099ed5367ffbb635cf669c5fdef56a1d72283829f14b8a1ad228e37a3e6735d1",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-2-8-2",
-      "title": "【Android更新】ARMSX2 2.8.2",
-      "originalTitle": "ARMSX2 2.8.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-07T00:57:22Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.8.2",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 2.8.2，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 2.8.2。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.8.2\n\n新增功能：\n纹理放大。RAISR滤镜可在您玩游戏时锐化游戏纹理。放大发生在背景中，因此纹理在首次出现后会锐化。对大多数游戏使用RAISR 2x ，如果以高内部分辨率播放，则使用RAISR 4x\n。您可以在“所有设置” > “渲染器”以及内部分辨率下方的快速菜单中找到它。 它适用于Vulkan和OpenGL ，如果游戏加载了纹理包，则该包胜出。由@ bmdhacks完成\n两个控制器，一个玩家。 在“控件” > “Player & Rumble”中，您可以将手持设备的内置控件和蓝牙控制器都设置为“Player 1” ，两者将同时工作。 停靠在电视上，继续播放，无需更改任何内容。 Rumble转到您上次使用的任何一个。由@ jpolo1224完成\n更多自动保存。您现在最多可以保留5个自动保存（默认情况下为3个）。 在保存状态选择器中设置。 每次新的自动保存都会将旧的自动保存推回去，因此，如果在您死前制作了一个，您仍然可以返回到更早的自动保存。由@ jpolo1224完成\n灵魂口径II的征服卡牌。 街机版现在使用SC2MAKER的空白卡牌将征服卡牌自行设置在插槽2中。 如果没有， CPU对手的行为就不对（ # 793 ）。由@ jpolo1224完成。 征服卡是SC2MAKER （ github.com/israpps/SC2MAKER ） ，由@ israpps提供\n\n\n\n\n\n固定\n触摸控制忽略水龙头(# 796, # 775)。 当额外的摇杆按钮或GunCon按钮关闭时，它们通常所在的位置仍然会阻塞水龙头。 这包括默认D-pad的顶部， L1的一部分，以及您移动到那里的任何东西。由@ jpolo1224完成\n保存状态热键(# 784)。 在游戏保存到记忆卡时按一个什么也没做。 现在，它等待存储卡完成，然后保存。 此外，如果您在保存或加载过程中松开按钮，它将不再停留在游戏中。由@ jpolo1224完成\n纵向拉伸图片（ # 790 ）。 设置了屏幕分辨率覆盖后，游戏以纵向方式在整个屏幕上展开。由@ jpolo1224完成\n\n\n\n来自Android文件选取器（ # 759 ）的ELF。 您通过Android的文件选取器添加的文件夹中的ELF打开了BIOS浏览器而不是ELF。由@ jpolo1224完成\n截止屏幕截图。使用热键拍摄的屏幕截图有时会在f…",
-      "originalContent": "# ARMSX2 2.8.2\r\n\r\nWhat's new:\r\n\r\n**Texture upscaling.** RAISR filters sharpen game textures while you play. The upscaling happens in the background, so textures sharpen a moment after they first show up. Use RAISR 2x for most games, or RAISR 4x if you play at a high internal resolution. You'll find it in All Settings > Renderer, and in the quick menu right under the internal resolution. It works on Vulkan and OpenGL, and if a game has a texture pack loaded, the pack wins. done by @bmdhacks\r\n\r\n<img width=\"774\" height=\"725\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b78cce3f-237c-4a1e-b93b-7e94e6f58b51\" />\r\n\r\n<img width=\"774\" height=\"725\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c01c01e3-1ed7-43cb-a8f5-11423c8b8882\" />\r\n\r\n<img width=\"1669\" height=\"1214\" alt=\"image\" src=\"https://github.com/user-attachments/assets/67a28834-1342-4e94-b2d9-b9e63996d025\" />\r\n\r\n<img width=\"1669\" height=\"1214\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3ec279da-da50-4f08-9d95-83bfaaf91281\" />\r\n\r\n**Two controllers, one player.** In Controls > Player & Rumble you can set your handheld's built-in controls and a Bluetooth controller both to Player 1, and both will work at the same time. Dock to a TV and keep playing without changing anything. Rumble goes to whichever one you used last. done by @jpolo1224\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c9025a11-c5f0-4bc1-9769-af3e16f042d3\" />\r\n\r\n**More autosaves.** You can keep up to 5 autosaves now (3 by default). Set it in the save state picker. Each new autosave pushes the older ones back, so if one gets made right before you die, you still have earlier ones to go back to. done by @jpolo1224\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6cc4d3ca-6f1c-435b-b71e-2edea0ea6d9b\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1506345d-fbd8-4666-b278-6bc7734e01f0\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0a51a5f4-1c1f-4f69-9bf7-71cb4a1fdcad\" />\r\n\r\n**Soul Calibur II's Conquest card.** The arcade version now sets up its Conquest card in slot 2 by itself, using SC2MAKER's blank card. Without one, the CPU opponents didn't behave right (#793). done by @jpolo1224. The Conquest card is SC2MAKER's (github.com/israpps/SC2MAKER), by @israpps\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e10c5040-52ed-43e4-976b-86a427a5b722\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/942c22a4-12af-4171-ba77-2bd97df092fe\" />\r\n\r\n## Fixed\r\n\r\n**Touch controls ignoring taps (#796, #775).** With the extra stick button or the GunCon buttons turned off, the spots where they normally sit still blocked taps. That included the top of the default D-pad, part of L1, and anything you'd moved there. done by @jpolo1224\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f3432818-c81e-43e5-80b3-0dc1e4db45df\" />\r\n\r\n**Save state hotkeys (#784).** Pressing one while the game was saving to its memory card did nothing. Now it waits for the memory card to finish and then saves. Also, if you let go of a button during a save or load, it no longer stays stuck down in the game. done by @jpolo1224\r\n\r\n**Stretched picture in portrait (#790).** With a screen resolution override set, the game got stretched across the whole screen in portrait. done by @jpolo1224\r\n\r\n<img width=\"1080\" height=\"1920\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7f2c28c6-78c1-49a8-aa0d-ae58505531ad\" />\r\n\r\n**ELFs from Android's file picker (#759).** An ELF in a folder you added through Android's file picker opened the BIOS browser instead of the ELF. done by @jpolo1224\r\n\r\n**Cut-off screenshots.** Screenshots taken with the hotkey sometimes landed in your gallery cut off after the f…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "09ff759943a233cb9a00a55d507ea6218c5eec14608990668b04128aac44560e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-06T22:32:50Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月06日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_megadrive.cpp, d_pce.cpp, d_sms.cpp: 各种... (fprietog) .",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_pce.cpp, d_sms.cpp: various... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "1ee702203fee078fb04f4b33b623a9c2ab2e8dbc834f9b70d1939c6b64d062dc",
       "translationPending": false
     },
     {
@@ -290,30 +533,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-latest",
-      "title": "【Android更新】DuckStation latest",
-      "originalTitle": "DuckStation latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-06T09:49:07Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 latest，发布日期为2026年10月06日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• a304c04翻译: duckstation-qt_es.ts (#3808) (彼得·德尔塔)#3808（https://github.com/stenzek/duckstation/pull/3808）\n• 确定一系列不正确的释放日期(Stenzek)（https://github.com/stenzek/duckstation/commit/898b6a3caada6ff6c1f7466c62f44f62bee0cca0）)\n• 纠正复制到保存状态头的错误标题( Stenzek)（https://github.com/stenzek/duckstation/commit/baf6c425d0598782decd41c6ce71679cd5294959）)\n• 在交叉辅助中使用前缀路径( Stenzek)（https://github.com/stenzek/duckstation/commit/697599c47a646a6cfcc4d246018adf4904d55001）)",
-      "originalContent": "## Commits\n- a304c04: Update duckstation-qt_es.ts (#3808) (PeterDelta) [#3808](https://github.com/stenzek/duckstation/pull/3808)\n- Fix a bunch of incorrect release dates ([Stenzek](https://github.com/stenzek/duckstation/commit/898b6a3caada6ff6c1f7466c62f44f62bee0cca0))\n- Fix incorrect title being copied into save state header ([Stenzek](https://github.com/stenzek/duckstation/commit/baf6c425d0598782decd41c6ce71679cd5294959))\n- Use prefix path in cross appimage ([Stenzek](https://github.com/stenzek/duckstation/commit/697599c47a646a6cfcc4d246018adf4904d55001))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "a93f182517825484cf1c1ee59ed1b751d26e2abc755d37ebc5780bd92a41d4d5",
-      "translationPending": false
-    },
-    {
       "id": "android-release-virtual_jaguar_core-nightly",
       "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
       "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
@@ -326,15 +545,15 @@
       "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
       "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
       "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月06日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `93e4097` — `v3.7.0` (`develop`)\n\n提交：`93e4097`（https://github.com/libretro/virtualjaguar-libretro/commit/93e4097f489b16126f147aacf04a04742bfa2187）\n构建时间：2026-10-06 09:35 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/37428844045）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有16个目标;它没有通过测试套件或任何手工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为: `v3.7.0 93e4097` 启动时 —— 在报告此构建时引用此行。\n\n自上一夜版以来的变更\n\n```\n93e4097 docs(readme):切入可淡出概览,将 BIOS 细节移动到 docs/bios.md (#807)\nc529467 增强细节和表格元素的样式\nedb924e 文件(现场):现场审计的地址审查(# 808)\nad37107 文件(网站):审计页 v3.7.0,添加已知问题列表,新的英雄\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` 以获得符号回溯跟踪。\n\nSHA-256 校验值\n\n校验 `sha256sum --check SHA256SUMS.txt` (Linux)或 (英语). `shasum -a 256 --check SHA256SUMS.txt` (macOS) (英语). 见 SECURITY.md（https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md）.\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cd…",
-      "originalContent": "### Nightly `93e4097` — `v3.7.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`93e4097`](https://github.com/libretro/virtualjaguar-libretro/commit/93e4097f489b16126f147aacf04a04742bfa2187) |\n| **Built** | 2026-10-06 09:35 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/37428844045) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 16 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.7.0 93e4097` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n93e4097 docs(readme): cut to a skimmable overview, move BIOS detail to docs/bios.md (#807)\nc529467 Enhance styles for details and table elements\nedb924e docs(site): address review on site audit (#808)\nad37107 docs(site): audit pages for v3.7.0, add known-problems list, new hero\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `shasum -a 256 --check SHA256SUMS.txt` (macOS). See [SECURITY.md](https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md).\n\n```\nb926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cd…",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `4a5cfa4` — `v3.7.0` (`develop`)\n\n提交：`4a5cfa4`（https://github.com/libretro/virtualjaguar-libretro/commit/4a5cfa4263780bb24188d0863129fe6e2339b1ff）\n构建时间：2026-10-07 15:18 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/37625262164）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了全部24个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为 `v3.7.0 4a5cfa4` 启动时 —— 报告此建构时引用该行。\n\n自上一夜版以来的变更\n\n```\n74b3496 固定( gpu): 拒绝延迟负载回击的空闲循环 (# 811)\n4388ad7 测试( blitter): 在 test_ blitter_ hung 中声明 retro_( un) 序列化为返回布尔\nd3bc33e 固定( blitter) : 一个 blit 硬件从未完成挂起 blitter 而不是主机\nc1eb2b1 fix( hle): 为上传的可执行文件停放 ILLLEGAL , 以便 homebrew 停止悬挂准确的缓存\n153d179 fix(m68k):自行修改代码的预切队列模型\ne3a0ff1 fix(dsp):外部负载的延迟回写(JTRM JERRY bug 13)\n29998fe 参考文件: JTRM 错误参考和经核实的已提炼的文件更正 (# 820)\nb480bfc 测试( gpu): ROM 游戏中的Xenowings 视频检查(# 811)\n5ed8f80 固定( gpu): 外部负载的延迟回写( JTRM TOM bug 13)\n75eb401 fix(libretro):在无内容启动时将内存轨迹曝光为 SAVE_RAM(# 810)\n82f5208 fix( tests): 语音调制解码双测试等待它的对等,而不是墙钟(# 796)\n7099c5a docs( state):在版本历史中命名两个 v16 块\n97dcd79 fix(cd):序列化真BIOS靴杆旗和CD补充相(v16)\n0983d22 测试( cd): CD 转接时失败测试_ cd_ bios_boot (# 799)\nef04767 ci: 当链接突变失败时保留 GitHub 的错误文本\n5471000 齐:制造 pr-link-issue.sh 并使用明确的信号\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirt…",
+      "originalContent": "### Nightly `4a5cfa4` — `v3.7.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`4a5cfa4`](https://github.com/libretro/virtualjaguar-libretro/commit/4a5cfa4263780bb24188d0863129fe6e2339b1ff) |\n| **Built** | 2026-10-07 15:18 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/37625262164) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.7.0 4a5cfa4` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n74b3496 fix(gpu): reject idle loops where a late load write-back fired (#811)\n4388ad7 test(blitter): declare retro_(un)serialize as returning bool in test_blitter_hung\nd3bc33e fix(blitter): a blit hardware never finishes hangs the blitter, not the host\nc1eb2b1 fix(hle): park ILLEGAL for uploaded executables so homebrew stops hanging the accurate blitter\n153d179 fix(m68k): model the prefetch queue for self-modifying code\ne3a0ff1 fix(dsp): late write-back of external loads (JTRM JERRY bug 13)\n29998fe docs: JTRM errata reference and verified corrections to the distilled docs (#820)\nb480bfc test(gpu): ROM-gated Xenowings in-game video check (#811)\n5ed8f80 fix(gpu): late write-back of external loads (JTRM TOM bug 13)\n75eb401 fix(libretro): expose the Memory Track as SAVE_RAM on no-content boot (#810)\n82f5208 fix(tests): voicemodem pair test waits for its peer, not the wall clock (#796)\n7099c5a docs(state): name both v16 chunks in the version history\n97dcd79 fix(cd): serialize real-BIOS boot-stub flag and CD refill phase (v16)\n0983d22 test(cd): fail test_cd_bios_boot when the CD transfer wedged (#799)\nef04767 ci: keep GitHub's error text when the link mutation fails\n5471000 ci: make pr-link-issue.sh and release guard use explicit signals\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirt…",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "virtual_jaguar_core"
       ],
-      "contentHash": "5702204a4f2de74f02578ad5fd9fdc501d41dbc1a930973273879b575f62c67f",
+      "contentHash": "0ddac0ce672de5782f2daa2aaa7035652865860ac27b21bcdd1777a4fb0194a5",
       "translationPending": false
     },
     {
@@ -886,30 +1105,6 @@
         "gearsystem"
       ],
       "contentHash": "dd7d39a87899d83e7a3651f0e4d26d1c5a43ab9c509ddb8ed333e3ba4bac6683",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-emucorex-0-4-6",
-      "title": "【Android更新】EmuCoreX 0.4.6",
-      "originalTitle": "EmuCoreX 0.4.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-04T17:30:33Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.4.6",
-      "imageUrl": "asset://assets/emulators/emucorex.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
-      "summary": "EmuCoreX 发布 Android 新版本 0.4.6，发布日期为2026年10月04日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreX 已发布 Android 最新版本 0.4.6。\n\n发布日期：2026年10月04日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.4.5...v0.4.6\n\n有什么新情况: 0.4.6\n\n• 最新简介\n• 添加“Top Games”标签\n• 其他修正和改进",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.4.5...v0.4.6\r\n\r\nWhat’s new: 0.4.6\r\n\r\n- Updated profile\r\n- Added the “Top Games” tab\r\n- Other fixes and improvements",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorex"
-      ],
-      "contentHash": "6f5eb326786f6390c1500c01ef9c1ec3d8d794fe7016c01a4577e358b4fed746",
       "translationPending": false
     },
     {
@@ -1843,30 +2038,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "6e85a93224f72ba046c4909a1b83f63d7ce2e6f2852247937ab3ff77b9626e92",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-1-0-6-1",
-      "title": "【Android更新】ARMSX3 1.0.6.1",
-      "originalTitle": "ARMSX3 1.0.6.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-30T17:23:31Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.0.6.1",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.0.6.1，发布日期为2026年09月30日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.0.6.1。\n\n发布日期：2026年09月30日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.0.6.1\n\n快速跟进1.0.6 （查看更新日志，了解所有新内容）\n• Turnip选项。安装了自定义驱动程序后， GPU驱动程序部分有一个新的UBWC标志提示开关，可以修复某些Adreno GPU上显示的一些最近的Turnip版本的渲染故障，以及用于您自己的Turnip设置的驱动程序变量字段（ FD_、TU_、IR3_和MESA_，每行一个名称=值）。更改将在下一场比赛开始时应用。",
-      "originalContent": "# ARMSX3 1.0.6.1\r\n\r\nQuick follow up to 1.0.6 (check that changelog for all the new stuff) \r\n\r\n- **Turnip options.** With a custom driver installed, the GPU Driver section has a new **UBWC flag hint** switch, which can fix rendering glitches some recent Turnip builds show on certain Adreno GPUs, and a **Driver variables** field for your own Turnip settings (FD_, TU_, IR3_ and MESA_, one NAME=value per line). Changes apply at the next game start. \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/26327dcb-c2b3-4dc6-ae9f-b95eee6c1055\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/eb224fbe-25a9-48a5-933f-bb21f0478db2\" />",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "2c768b38f266d65519f0256a070af3ff4895845ebdbeeee9f3362e6fda580628",
       "translationPending": false
     },
     {
