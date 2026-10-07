@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T18:24:13Z",
+  "generatedAt": "2026-10-07T06:03:28Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "86box_pc": {
@@ -59,13 +59,11 @@
       "downloadUrl": "https://github.com/ARMSX2/ARMSX1/releases/download/0.1.5/armsx11.0.5.apk"
     },
     "armsx2": {
-      "version": "nightly-20261006",
-      "releaseDate": "2026-10-06T15:44:17Z",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261006",
-      "releaseNotes": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- GS: give the shipped filters' overshoot in the clamp's comment\n- Android: Texture Upscaling is Off, RAISR 2x or RAISR 4x\n- Qt: Texture Upscaling is Off, RAISR 2x or RAISR 4x\n- GS: texture upscaling is one PS2-trained filter set, run once or twice\n- MSVC: list GSTexelAddressedDraw.h in pcsx2.vcxproj\n- Resources: add the PS2-trained RAISR filter set\n- GS: take the whole texel at a hard alpha edge in a generated upscale\n- GS: keep hard alpha edges exact in a generated upscale\n- GS: draw the guest's own texels where a draw reads a texture as swatches\n- GS: take a generated upscale's alpha range from its source texels\n- GS: clamp upscaled texels to the range of the source texels they come from\n- Android: add RAISR 4x Smooth to the texture upscaling picker\n- Qt: add RAISR 4x (Smooth) to the Texture Upscaling combo\n- GS: add a RAISR 4x (Smooth) texture upscaling mode\n- Android: add the texture upscaling picker to the Renderer tab\n- Qt: add a Texture Upscaling combo to the Texture Replacement tab\n- Tests: unit tests for the texture upscaler's queue and mip chain\n- GS: upscale textures in the background and feed them in as a generated pack\n- iOS: bundle the texture upscaler's filter sets\n- GS: add the TextureUpscaleMode setting\n- GS: use std::fma in the RAISR engine so MSVC ARM64 builds\n- Tests: unit tests for the RAISR upscaler engine\n- GS: add a RAISR 2x upscaler engine for RGBA8 textures\n- Resources: add Intel RAISR 2x filter sets for the texture upscaler\n- GS/TC: unswizzle target updates into the scratch buffer, not mapped upload memory\n- GS/TC: test what Target::Update uploads for each dirty rectangle\n- Android: show that the shader preset picker is scanning\n- Android: index shader presets once instead of on every picker open\n- GS: take a pack texture's alpha near 0x80 as 0x80 under an opaque alpha test\n- GS: make SyncWorkerThread wait for the pack worker's current job\n- GS: take the replacement-cache mutex when cancelling pending pack loads\n- GS/TC: let a replacement injected after its placeholder was evicted age out\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261005...46c06fe7ca0f1cbe94aab8b27db2a35a2330b3d5",
-      "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261006/ARMSX2-nightly-20261006-46c06fe7ca-Android-arm64.apk",
-      "devDownloadUrl": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261006/ARMSX2-nightly-20261006-46c06fe7ca-Android-arm64.apk",
-      "devReleaseNotes": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- GS: give the shipped filters' overshoot in the clamp's comment\n- Android: Texture Upscaling is Off, RAISR 2x or RAISR 4x\n- Qt: Texture Upscaling is Off, RAISR 2x or RAISR 4x\n- GS: texture upscaling is one PS2-trained filter set, run once or twice\n- MSVC: list GSTexelAddressedDraw.h in pcsx2.vcxproj\n- Resources: add the PS2-trained RAISR filter set\n- GS: take the whole texel at a hard alpha edge in a generated upscale\n- GS: keep hard alpha edges exact in a generated upscale\n- GS: draw the guest's own texels where a draw reads a texture as swatches\n- GS: take a generated upscale's alpha range from its source texels\n- GS: clamp upscaled texels to the range of the source texels they come from\n- Android: add RAISR 4x Smooth to the texture upscaling picker\n- Qt: add RAISR 4x (Smooth) to the Texture Upscaling combo\n- GS: add a RAISR 4x (Smooth) texture upscaling mode\n- Android: add the texture upscaling picker to the Renderer tab\n- Qt: add a Texture Upscaling combo to the Texture Replacement tab\n- Tests: unit tests for the texture upscaler's queue and mip chain\n- GS: upscale textures in the background and feed them in as a generated pack\n- iOS: bundle the texture upscaler's filter sets\n- GS: add the TextureUpscaleMode setting\n- GS: use std::fma in the RAISR engine so MSVC ARM64 builds\n- Tests: unit tests for the RAISR upscaler engine\n- GS: add a RAISR 2x upscaler engine for RGBA8 textures\n- Resources: add Intel RAISR 2x filter sets for the texture upscaler\n- GS/TC: unswizzle target updates into the scratch buffer, not mapped upload memory\n- GS/TC: test what Target::Update uploads for each dirty rectangle\n- Android: show that the shader preset picker is scanning\n- Android: index shader presets once instead of on every picker open\n- GS: take a pack texture's alpha near 0x80 as 0x80 under an opaque alpha test\n- GS: make SyncWorkerThread wait for the pack worker's current job\n- GS: take the replacement-cache mutex when cancelling pending pack loads\n- GS/TC: let a replacement injected after its placeholder was evicted age out\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261005...46c06fe7ca0f1cbe94aab8b27db2a35a2330b3d5"
+      "version": "2.8.2",
+      "releaseDate": "2026-10-07T00:57:22Z",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.8.2",
+      "releaseNotes": "# ARMSX2 2.8.2\r\n\r\nWhat's new:\r\n\r\n**Texture upscaling.** RAISR filters sharpen game textures while you play. The upscaling happens in the background, so textures sharpen a moment after they first show up. Use RAISR 2x for most games, or RAISR 4x if you play at a high internal resolution. You'll find it in All Settings > Renderer, and in the quick menu right under the internal resolution. It works on Vulkan and OpenGL, and if a game has a texture pack loaded, the pack wins. done by @bmdhacks\r\n\r\n<img width=\"774\" height=\"725\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b78cce3f-237c-4a1e-b93b-7e94e6f58b51\" />\r\n\r\n<img width=\"774\" height=\"725\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c01c01e3-1ed7-43cb-a8f5-11423c8b8882\" />\r\n\r\n<img width=\"1669\" height=\"1214\" alt=\"image\" src=\"https://github.com/user-attachments/assets/67a28834-1342-4e94-b2d9-b9e63996d025\" />\r\n\r\n<img width=\"1669\" height=\"1214\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3ec279da-da50-4f08-9d95-83bfaaf91281\" />\r\n\r\n**Two controllers, one player.** In Controls > Player & Rumble you can set your handheld's built-in controls and a Bluetooth controller both to Player 1, and both will work at the same time. Dock to a TV and keep playing without changing anything. Rumble goes to whichever one you used last. done by @jpolo1224\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c9025a11-c5f0-4bc1-9769-af3e16f042d3\" />\r\n\r\n**More autosaves.** You can keep up to 5 autosaves now (3 by default). Set it in the save state picker. Each new autosave pushes the older ones back, so if one gets made right before you die, you still have earlier ones to go back to. done by @jpolo1224\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6cc4d3ca-6f1c-435b-b71e-2edea0ea6d9b\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1506345d-fbd8-4666-b278-6bc7734e01f0\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0a51a5f4-1c1f-4f69-9bf7-71cb4a1fdcad\" />\r\n\r\n**Soul Calibur II's Conquest card.** The arcade version now sets up its Conquest card in slot 2 by itself, using SC2MAKER's blank card. Without one, the CPU opponents didn't behave right (#793). done by @jpolo1224. The Conquest card is SC2MAKER's (github.com/israpps/SC2MAKER), by @israpps\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e10c5040-52ed-43e4-976b-86a427a5b722\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/942c22a4-12af-4171-ba77-2bd97df092fe\" />\r\n\r\n## Fixed\r\n\r\n**Touch controls ignoring taps (#796, #775).** With the extra stick button or the GunCon buttons turned off, the spots where they normally sit still blocked taps. That included the top of the default D-pad, part of L1, and anything you'd moved there. done by @jpolo1224\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f3432818-c81e-43e5-80b3-0dc1e4db45df\" />\r\n\r\n**Save state hotkeys (#784).** Pressing one while the game was saving to its memory card did nothing. Now it waits for the memory card to finish and then saves. Also, if you let go of a button during a save or load, it no longer stays stuck down in the game. done by @jpolo1224\r\n\r\n**Stretched picture in portrait (#790).** With a screen resolution override set, the game got stretched across the whole screen in portrait. done by @jpolo1224\r\n\r\n<img width=\"1080\" height=\"1920\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7f2c28c6-78c1-49a8-aa0d-ae58505531ad\" />\r\n\r\n**ELFs from Android's file picker (#759).** An ELF in a folder you added through Android's file picker opened the BIOS browser instead of the ELF. done by @jpolo1224\r\n\r\n**Cut-off screenshots.** Screenshots taken with the hotkey sometimes landed in your gallery cut off after the f…",
+      "downloadUrl": "https://github.com/ARMSX2/ARMSX2/releases/download/2.8.2/ARMSX2-2.8.2-a11-armv8.2-sdk30.apk"
     },
     "armsx3": {
       "version": "1.0.6.1",
@@ -267,15 +265,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-10-06T16:50:17Z",
+      "releaseDate": "2026-10-06T22:32:50Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_neogeo.cpp: latest HB titles uses 320px wide (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_pce.cpp, d_sms.cpp: various... (fprietog)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-10-06T16:50:17Z",
+      "releaseDate": "2026-10-06T22:32:50Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_neogeo.cpp: latest HB titles uses 320px wide (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp, d_pce.cpp, d_sms.cpp: various... (fprietog)"
     },
     "fceux_pc": {
       "version": "interim-build",
@@ -417,10 +415,10 @@
       "releaseNotes": "# KytyPlus v3.9\r\n\r\n## Highlights\r\n\r\n- **Sonic Superstars (PPSA06888) is now Playable** — the game previously hung at\r\n  \"Downloading data. Please wait.\" in Jungle Act 1. Fixed by correcting PlayGo\r\n  `PlayGoGetChunkId` two-pass enumeration (count query then fill) and adding a\r\n  compatibility fallback that enumerates 1000 chunks when install metadata is\r\n  absent. Sustained Jungle gameplay was observed; full-campaign completion and\r\n  all bosses are **not** yet verified.\r\n\r\n- **Default upscaling: 1080p native → 4K FSR** — fresh installs and new CLI\r\n  launches now default to a 1920×1080 engine request upscaled to 3840×2160 via\r\n  Fsr1 (Performance preset, sharpness 0.3, FIFO). No manual setup required.\r\n  This is the project's FSR-inspired spatial EASU/RCAS upscaler, not temporal\r\n  FSR 2/3 or frame generation. Engines may ignore the resolution request;\r\n  actual source/output dimensions are logged at runtime.\r\n\r\n  Opt out at any time:\r\n  ```\r\n  kyty_emulator --game \"...\" --upscaler-method Off\r\n  kyty_emulator --game \"...\" --fsr-output-width 0 --fsr-output-height 0\r\n  ```\r\n  Previously saved launcher choices (including Off) are preserved.\r\n\r\n## Changes\r\n\r\n### Compatibility\r\n- Sonic Superstars PPSA06888: Ingame (playable-ish) → **Playable** ([docs](docs/SONIC_SUPERSTARS.md))\r\n- PlayGo: fix `PlayGoGetChunkId` returning 0 on the count-query pass\r\n- Add `libScePlayGoDialog` and `libSceNpCommerce` HLE stubs for import resolution\r\n- Compatibility table refresh for multiple titles (from #12, #13)\r\n\r\n### Tests\r\n- `PlayGoApiTests` — regression coverage for two-pass enumeration, fallback\r\n  bounds, caching, and locus/progress/ETA via the real `SymbolDatabase`\r\n- `LauncherConfigurationTests` — FSR default + user-override persistence\r\n\r\n## Notes & limitations\r\n- \"Playable\" reflects sustained early-game confirmation, not a full playthrough.\r\n- The PlayGo chunk fallback assumes a complete local dump; it does not download\r\n  or synthesize missing files.\r\n\r\n---"
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-10-06-6ef4065",
-      "releaseDate": "2026-10-06T18:18:34Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-06-6ef4065",
-      "releaseNotes": "## What's Changed\n* tests: make kyty_tests build and run every test without LTO by @NevesHenry in https://github.com/KytyPS5/KytyPS5/pull/1110\n\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-10-06-35c6e8f...KytyPS5-2026-10-06-6ef4065"
+      "version": "KytyPS5-2026-10-07-bb98f26",
+      "releaseDate": "2026-10-07T01:18:38Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-07-bb98f26",
+      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-10-07-cc44a43...KytyPS5-2026-10-07-bb98f26"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -1009,10 +1007,10 @@
     },
     "padforge": {
       "version": "latest-v5-dev",
-      "releaseDate": "2026-10-06T15:01:50Z",
+      "releaseDate": "2026-10-07T05:49:50Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v5-dev",
-      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/37480695412",
-      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/37480695412"
+      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/37576516152",
+      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/37576516152"
     },
     "panda3ds": {
       "version": "0.9",
@@ -1038,11 +1036,11 @@
       "releaseNotes": "Seek fixes (still incomplete and inaccurate) and to PC-FXGA emulation for BULLY OFF that gets more into the game but still has a few graphical glitches.\r\n\r\nSome of the improvements are courtesy of Paul Daniel, who leveraged Claude on Mednafen to fix a few issues related to Queen of Queens, including a longstanding bug regarding color accuracy on KING."
     },
     "pcsx2_pc": {
-      "version": "2.9.106",
-      "releaseDate": "2026-10-06T16:30:03Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.106",
-      "releaseNotes": "- [GameDB: Various name-en fixes](https://github.com/PCSX2/pcsx2/pull/14979)",
-      "devReleaseNotes": "- [GameDB: Various name-en fixes](https://github.com/PCSX2/pcsx2/pull/14979)"
+      "version": "2.9.108",
+      "releaseDate": "2026-10-07T02:53:46Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.108",
+      "releaseNotes": "- [GS:VK: Use vkCmdPipelineBarrier2KHR](https://github.com/PCSX2/pcsx2/pull/14920)",
+      "devReleaseNotes": "- [GS:VK: Use vkCmdPipelineBarrier2KHR](https://github.com/PCSX2/pcsx2/pull/14920)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.22",
@@ -1174,11 +1172,11 @@
       "devReleaseNotes": "## What's Changed\n* Bump the rust-minor group with 13 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/838\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/839\n* Bump smallvec from 1.16.0 to 1.16.1 in the rust-minor group by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/840\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/841\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/842\n* ci: Use SwANGLE GPU emulation for testing by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/847\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/848\n* Bump dawidd6/action-download-artifact from 21 to 25 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/850\n* Bump the rust-minor group across 1 directory with 25 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/851\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/852\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260907...0.260928"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-10-06",
-      "releaseDate": "2026-10-06T00:14:23Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-10-06",
-      "releaseNotes": "## What's Changed\n* avm2: Use laid-out metrics for TextLine ascent and descent by @doombubbles in https://github.com/ruffle-rs/ruffle/pull/24486\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-05...nightly-2026-10-06",
-      "devReleaseNotes": "## What's Changed\n* avm2: Use laid-out metrics for TextLine ascent and descent by @doombubbles in https://github.com/ruffle-rs/ruffle/pull/24486\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-05...nightly-2026-10-06"
+      "version": "nightly-2026-10-07",
+      "releaseDate": "2026-10-07T00:17:14Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-10-07",
+      "releaseNotes": "## What's Changed\n* build(deps-dev): bump eslint-plugin-jsdoc from 64.5.4 to 65.0.2 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24840\n* build(deps): bump compression from 1.8.1 to 1.8.2 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24841\n* build(deps): bump proxy-addr from 2.0.7 to 2.0.8 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24842\n* build(deps): bump source-map-js from 1.2.1 to 1.2.2 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24843\n* web: Convert eslint config file to TS by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24838\n* tests/framework: Show line and column number in approx comparisons by @cookie-s in https://github.com/ruffle-rs/ruffle/pull/24826\n* build(deps-dev): bump the npm-minor group across 1 directory with 11 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24839\n* build(deps): bump shell-quote from 1.10.0 to 1.12.0 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24845\n* avm1: Migrate flash.geom.Matrix to pure ActionScript by @relrelb in https://github.com/ruffle-rs/ruffle/pull/24831\n* chore: Update translations from Crowdin by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24846\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-06...nightly-2026-10-07",
+      "devReleaseNotes": "## What's Changed\n* build(deps-dev): bump eslint-plugin-jsdoc from 64.5.4 to 65.0.2 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24840\n* build(deps): bump compression from 1.8.1 to 1.8.2 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24841\n* build(deps): bump proxy-addr from 2.0.7 to 2.0.8 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24842\n* build(deps): bump source-map-js from 1.2.1 to 1.2.2 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24843\n* web: Convert eslint config file to TS by @danielhjacobs in https://github.com/ruffle-rs/ruffle/pull/24838\n* tests/framework: Show line and column number in approx comparisons by @cookie-s in https://github.com/ruffle-rs/ruffle/pull/24826\n* build(deps-dev): bump the npm-minor group across 1 directory with 11 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24839\n* build(deps): bump shell-quote from 1.10.0 to 1.12.0 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/24845\n* avm1: Migrate flash.geom.Matrix to pure ActionScript by @relrelb in https://github.com/ruffle-rs/ruffle/pull/24831\n* chore: Update translations from Crowdin by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24846\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-06...nightly-2026-10-07"
     },
     "sameboy_core": {
       "version": "1.0.3",
@@ -1199,11 +1197,11 @@
       "releaseNotes": "AI build with performance increased, rebased to old shadlix compatible with it. Up to x2 or x3 performance increase on all games."
     },
     "shadps4_android": {
-      "version": "Pre-release-shadPS4-2026-10-06-14ada48a13205ae80e9b5876ba1c98059e242ffe",
-      "releaseDate": "2026-10-06T17:38:11Z",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-06-14ada48a13205ae80e9b5876ba1c98059e242ffe",
-      "releaseNotes": "Full Changelog: [v.0.19.0...14ada48](https://github.com/shadps4-emu/shadPS4/compare/v.0.19.0...14ada48a13205ae80e9b5876ba1c98059e242ffe)",
-      "devReleaseNotes": "Full Changelog: [v.0.19.0...14ada48](https://github.com/shadps4-emu/shadPS4/compare/v.0.19.0...14ada48a13205ae80e9b5876ba1c98059e242ffe)"
+      "version": "Pre-release-shadPS4-2026-10-06-945dbc3cc3eee80ac3e053b438502ed936fa6bb2",
+      "releaseDate": "2026-10-06T22:27:51Z",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-06-945dbc3cc3eee80ac3e053b438502ed936fa6bb2",
+      "releaseNotes": "Full Changelog: [v.0.19.0...945dbc3](https://github.com/shadps4-emu/shadPS4/compare/v.0.19.0...945dbc3cc3eee80ac3e053b438502ed936fa6bb2)",
+      "devReleaseNotes": "Full Changelog: [v.0.19.0...945dbc3](https://github.com/shadps4-emu/shadPS4/compare/v.0.19.0...945dbc3cc3eee80ac3e053b438502ed936fa6bb2)"
     },
     "shadps4_qtlauncher": {
       "version": "shadPS4QtLauncher-2026-10-05-29de8facf2348a1ffd461aa52b25cc23a488e255",
@@ -1441,16 +1439,16 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_canary_pc": {
-      "version": "7ba916c",
-      "releaseDate": "2026-10-06T16:09:09Z",
-      "sourceUrl": "https://github.com/xenia-canary/xenia-canary/releases/tag/7ba916c",
-      "releaseNotes": "### Changes\n\n- [XEX] - Expand User Module log (`7ba916c`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/22a39ec...7ba916c"
+      "version": "cc4981a",
+      "releaseDate": "2026-10-06T20:13:03Z",
+      "sourceUrl": "https://github.com/xenia-canary/xenia-canary/releases/tag/cc4981a",
+      "releaseNotes": "### Changes\n\n- [GPU] Rasterize at Xenos MSAA sample positions (`cc4981a`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/7ba916c...cc4981a"
     },
     "xenia_edge_pc": {
-      "version": "9cdf7a3",
-      "releaseDate": "2026-10-06T13:26:38Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/9cdf7a3",
-      "releaseNotes": "### Changes\n\n- [App] Return to the game list when a launch or relaunch fails (`9cdf7a3`)\n- [Emulator] Keep migrated headers until every copy of them succeeds (`f7c90d0`)\n- [App] Show the data migration result over the game list (`7044f21`)\n- [App] Return to the game list windowed after a failed launch (`44fb000`)\n- [App] Show launch failures over the game list (`4bf7d08`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/c434702...9cdf7a3"
+      "version": "8dc77b0",
+      "releaseDate": "2026-10-07T05:46:24Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/8dc77b0",
+      "releaseNotes": "### Changes\n\n- [App] Detach the presenter before handing off to a new process (`8dc77b0`)\n- [UI] Log the unhandled exception report (`dcd5bba`)\n- [App] Show OG Xbox game's title id and version in the title bar (`b8e8c35`)\n- [Emulator] Persist OG Xbox game location across out-of-process launches (`4905a1c`)\n- [Config] Keep OG Xbox per-game configs under their own title id (`f39e557`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/e692776...8dc77b0"
     },
     "xenia_manager": {
       "version": "5.0.0",
