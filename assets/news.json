@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T19:02:42.750258Z",
+  "generatedAt": "2026-10-09T06:39:46.695351Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "137732",
+      "title": "【其他】Azahar v2126.2",
+      "originalTitle": "[Consoles portables] Azahar v2126.2",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-09T05:39:47Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137732-consoles-portables-azahar-v2126-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/11/azahar-logo.png",
+      "officialUrl": "https://azahar-emu.org/",
+      "summary": "Azahar是Lime3DS和PabloMK7的Citra分支的合并。 请注意，不支持加密游戏... 为了避免对Azahar的目标产生任何混淆，决定尽可能限制TPM （可信平台模块）的绕过。仅当需要与Azahar或其他任天堂代码进行任天堂代码互操作时，才会执行旁路 因此， Azahar将不允许启动或安装加密游戏，除非这些游戏是通过任天堂的官方应用程序（如eShop或系统设置）获得的。 注意：现在本机支持未加密的.3ds文件。",
+      "content": "Azahar是Lime3DS和PabloMK7的Citra分支的合并。\n\n请注意，不支持加密游戏...\n为了避免对Azahar的目标产生任何混淆，决定尽可能限制TPM （可信平台模块）的绕过。仅当需要与Azahar或其他任天堂代码进行任天堂代码互操作时，才会执行旁路\n因此， Azahar将不允许启动或安装加密游戏，除非这些游戏是通过任天堂的官方应用程序（如eShop或系统设置）获得的。\n\n注意：现在本机支持未加密的.3ds文件。\n\n变更内容：\n\n全部\n•解决了允许特制CIA文件在用户本地安装时在主机环境中执行任意代码的疏忽。| @ PabloMK7 # 2648\n•处理以下GHSA报告： GHSA-h74v-5mw8-qg8r\n•修复了使用Vulkan渲染器时xBRZ纹理滤镜应用不正确，导致外观不正确的问题。| @ OpenSauce04 # 2647\n•改进了模拟3DS应用程序中大型HTTP下载的处理，提高了内存效率和稳定性。| @ PabloMK7 # 2515\n•修复了从eShop下载大型游戏的问题。\n•添加了新的3GX加载器标志allow_homebrew_load ，如果插件支持，则允许为自制应用加载3GX插件。| @ PabloMK7 # 2649\n\n桌面\n•对GDB和RPC服务器进行了各种改进，修复了某些问题并改进了功能。 | @ PabloMK7 # 2631、# 2640、# 2633\n•有关其他信息，请参阅个人公关描述。\n脚本开发人员需要更新RPC客户端，因为这是一个突破性的更改。\n\nAndroid\n•修复了gpu_drivers目录包含子目录时可能发生的崩溃问题。| @ ygordreyer # 2592\n\n技术\n•现在可以使用svcMapProcessMemoryEx创建共享内核和配置页面的副本。\n•这是一项技术精度变更。 对最终用户几乎没有影响。\n注意： Azahar Artic设置工具是任天堂3DS的自制应用程序，允许您使用控制台从Azahar仿真器上的控制台安装唯一的系统文件和数据\n。它广播“系统设置”应用程序以及NIM系统模块以执行系统更新，并复制您的唯一控制台数据以启用在线功能。",
+      "originalContent": "Azahar est une fusion entre Lime3DS et le fork Citra de PabloMK7.\n\nSoyez informé que la prise en charge des jeux cryptés n'est pas disponible...\n\nPour éviter toute confusion concernant les objectifs d'Azahar, la décision a été prise de limiter autant que possible le contournement du TPM (Trusted Platform Module). Le contournement ne sera effectué que lorsque l'interopérabilité du code de Nintendo est nécessaire avec Azahar ou d'autres codes de Nintendo. En conséquence, Azahar n'autorisera pas le lancement ou l'installation de jeux cryptés à moins qu'ils n'aient été obtenus par le biais des applications officielles de Nintendo, telles que l'eShop ou les paramètres système.\n\nNote: Les fichiers .3ds non cryptés sont désormais pris en charge nativement.\n\nLes changements:\n\nAll\n- Addressed an oversight which allowed specially-crafted CIA files to execute arbitrary code in the host environment when locally installed by a user. | @PabloMK7 #2648\n- Addresses the following GHSA report: GHSA-h74v-5mw8-qg8r\n- Fixed an issue where the xBRZ texture filter would be applied incorrectly when using the Vulkan renderer, resulting in an incorrect appearance. | @OpenSauce04 #2647\n- Handling of large HTTP downloads within emulated 3DS applications has been improved, improving memory efficiency and stability. | @PabloMK7 #2515\n- Fixes downloading large games from the eShop.\n- Added a new 3GX loader flag allow_homebrew_load, which allows loading 3GX plugins for homebrew apps if the plugin supports it. | @PabloMK7 #2649\n\nDesktop\n- Various improvements to GDB and RPC servers, fixing certain issues and improving functionality. | @PabloMK7 #2631, #2640, #2633\n- For additional info, see individual PR descriptions.\nScript developers will need to update the RPC client as this is a breaking change.\n\nAndroid\n- Fixed a crash which could occur if the gpu_drivers directory contained a subdirectory. | @ygordreyer #2592\n\nTechnical\n- Creating a copy of the kernel shared and config pages using svcMapProcessMemoryEx is now possible.\n- This is a technical accuracy change. Little to no end-user impact.\n\nNB: L'outil Azahar Artic Setup est une application homebrew pour la Nintendo 3DS qui permet d'installer des fichiers système et des données uniques de la console sur l'émulateur Azahar en utilisant votre console. Il diffuse l'application \"Paramètres Système\" ainsi que le module système NIM pour effectuer une mise à jour système, et copie vos données uniques de la console pour activer les fonctionnalités en ligne.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar"
+      ],
+      "contentHash": "cf3196c3bef791679a3b46d6c389096ec19457f0c05a846f572630beef02be2a",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-08T18:33:10Z",
+      "publishedAt": "2026-10-08T23:32:37Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月08日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 修复arm64,增加最新变化(fprietog)\n• d_megadrive.cpp, d_snes.cpp: 各种... (fprietog) .",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Fix arm64 builds adding latest changes (fprietog)\n• d_megadrive.cpp, d_snes.cpp: various... (fprietog)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_megadrive.cpp呜呼... (fprietog)\n• d_megadrive.cpp: 各种(fprietog)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_megadrive.cpp: ooops... (fprietog)\n• d_megadrive.cpp: various... (fprietog)",
       "platforms": [
         "android"
       ],
@@ -30,7 +54,55 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "1e8921c1a558f81033372a2e5aa50b956978e8c1ca88a4eb50f793dcedc76edb",
+      "contentHash": "762e904496a1288f038148f18624e1155cfc95f7ada7ce11db8a78c349a91bea",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-ruffle_android-0-261008",
+      "title": "【Android更新】Ruffle (Android) 0.261008",
+      "originalTitle": "Ruffle (Android) 0.261008 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-08T21:11:29Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.261008",
+      "imageUrl": "asset://assets/emulators/ruffle_android.png",
+      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
+      "summary": "Ruffle (Android) 发布 Android 新版本 0.261008，发布日期为2026年10月08日。点击查看官方版本信息与更新说明。",
+      "content": "Ruffle (Android) 已发布 Android 最新版本 0.261008。\n\n发布日期：2026年10月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 生锈工具链 1.98.1 to 1.99.0 由 @dependabot [bot] 输入 https://github.com/ruffle-rs/ruffle-android/pull/853\n• 由@dependabot[bot]从21起至27起跳出 dawidd6/Action-download-artifact https://github.com/ruffle-rs/ruffle-android/pull/854\n• 由@dependabot[bot]在@dependabot[bot]中更新2个小锈块组 https://github.com/ruffle-rs/ruffle-android/pull/855\n• 弹出自 0.5.15 to 0.5.16 由 @dependabot [bot] 输入 https://github.com/ruffle-rs/ruffle-android/pull/857\n• 弦:起跳 ruffle, reqwest, and jni, 由 @torokati44 由 @torokati44 设置 TLS 为 reqwest, in https://github.com/ruffle-rs/ruffle-android/pull/858\n• 由 @ RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/860\n\n\n完整更改日志 : https://github.com/ruffle-rs/ruffle-android/compare/0.260928...0.261008",
+      "originalContent": "## What's Changed\n* Bump rust-toolchain from 1.98.1 to 1.99.0 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/853\n* Bump dawidd6/action-download-artifact from 21 to 27 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/854\n* Bump the rust-minor group with 2 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/855\n* Bump quinn-udp from 0.5.15 to 0.5.16 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/857\n* chore: Bump ruffle, reqwest, and jni, and set up TLS for reqwest by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/858\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/860\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260928...0.261008",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "ruffle_android"
+      ],
+      "contentHash": "8ba292587a6e5b4f5152b20ba57998f04995628b73732a4616e91c675b0b31c5",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-swiff-1-4-1",
+      "title": "【Android更新】Swiff 1.4.1",
+      "originalTitle": "Swiff 1.4.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-08T18:56:37Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/NaviVani-dev/Swiff/releases/tag/v1.4.1",
+      "imageUrl": "asset://assets/emulators/swiff.png",
+      "officialUrl": "https://github.com/NaviVani-dev/Swiff",
+      "summary": "Swiff 发布 Android 新版本 1.4.1，发布日期为2026年10月08日。点击查看官方版本信息与更新说明。",
+      "content": "Swiff 已发布 Android 最新版本 1.4.1。\n\n发布日期：2026年10月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n版本1.4.1\n1.4.0的较小更新，只是为了解决一些紧急问题。\n\n功能\n•增加了对x86_64和ARM32设备的支持\n•网络游戏现在可以使用Swiff运行时加载嵌入的Flash、Shockwave和Unity内容\n•添加了“允许网络连接”选项\n•运行时和支持包现在托管在Swiff的基础设施上（不再有下载错误！ ）\n•震荡波玩家现在可以从数据管理中进行管理和删除\n\n修复内容\n•改进了锁定或隐藏光标的游戏（例如第一人称游戏）的Wine运行时的鼠标处理\n• Flashpoint Navigator在ARM设备上更稳定，等待慢速游戏启动的时间更长\n•现在可以在布局编辑器中正确检测到将D-Pad报告为HAT轴的游戏手柄\n•缺少应用程序文件的J2ME游戏会在您启动时再次下载\n•固定Shockwave播放器安装检查和清理\n•刷新运行时信息时，运行时更新状态不再消失\n•校验和错误现在显示预期和接收的哈希\n\n特别消息，感谢您对Swiff的所有支持，希望下一次更新会让您大吃一惊！",
+      "originalContent": "# Version 1.4.1\r\nA smaller update for 1.4.0, just to fix some urgent issues.\r\n\r\n## Features\r\n- Added support for x86_64 and ARM32 devices\r\n- Web games can now load embedded Flash, Shockwave and Unity content with Swiff runtimes\r\n- Added an \"Allow network connections\" option\r\n- Runtimes and support packs are now hosted on Swiff's infrastructure (no more download errors!)\r\n- Shockwave players can now be managed and deleted from Data management\r\n\r\n## Fixes\r\n- Improved mouse handling on Wine runtimes for games that lock or hide the cursor (Ex. first-person games)\r\n- Flashpoint Navigator is more stable on ARM devices and waits longer for slow games to start\r\n- Gamepads that report the D-Pad as a hat axis are now detected correctly in the layout editor\r\n- J2ME games that are missing their application file are downloaded again when you launch them\r\n- Fixed Shockwave player installation checks and cleanup\r\n- The runtime update status no longer disappears when refreshing the runtime info\r\n- Checksum errors now show the expected and received hash\r\n\r\nSpecial message, thanks for all the support that you guys gave to Swiff, hopefully the next update will blow your mind!",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "swiff"
+      ],
+      "contentHash": "bca7ce65672af58f04d59e03a7773eb7e6afebad623eedbac17f60e32afe27ff",
       "translationPending": false
     },
     {
@@ -2719,30 +2791,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "50ac65333097f4c7b25c20427a40456ba08c13b9698a3dc18e7cc0b542d43ec5",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-ruffle_android-0-260928",
-      "title": "【Android更新】Ruffle (Android) 0.260928",
-      "originalTitle": "Ruffle (Android) 0.260928 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-28T11:33:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.260928",
-      "imageUrl": "asset://assets/emulators/ruffle_android.png",
-      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
-      "summary": "Ruffle (Android) 发布 Android 新版本 0.260928，发布日期为2026年09月28日。点击查看官方版本信息与更新说明。",
-      "content": "Ruffle (Android) 已发布 Android 最新版本 0.260928。\n\n发布日期：2026年09月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 由@dependabot[bot]提供13个更新, https://github.com/ruffle-rs/ruffle-android/pull/838\n• 弹出 ruffle 组合到一个目录, 由 @ dedependabot [bot] 更新 9个 https://github.com/ruffle-rs/ruffle-android/pull/839\n• 冲出小块块块 1.16.0 to 1.16.1 @dependabot[bot] 在生锈的稀释组中,@ dependabot[bot] in 互联网档案馆的存檔,存档日期2011-12-02. https://github.com/ruffle-rs/ruffle-android/pull/840\n• 弹出 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/841\n• 弹出 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/842\n校对:Soup https://github.com/ruffle-rs/ruffle-android/pull/847\n• 弹出 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/848\n• 由@dependabot[bot]从21起至25起跳出dawidd6/Action-download-artifact https://github.com/ruffle-rs/ruffle-android/pull/850\n由@dependabot[bot]在1个目录上跳出生锈微小组,并进行25个更新 https://github.com/ruffle-rs/ruffle-android/pull/851\n• 由 @ RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/852\n\n\n完整更改日志 : https://github.com/ruffle-rs/ruffle-android/compare/0.260907...0.260928",
-      "originalContent": "## What's Changed\n* Bump the rust-minor group with 13 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/838\n* Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/839\n* Bump smallvec from 1.16.0 to 1.16.1 in the rust-minor group by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/840\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/841\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/842\n* ci: Use SwANGLE GPU emulation for testing by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/847\n* Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/848\n* Bump dawidd6/action-download-artifact from 21 to 25 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/850\n* Bump the rust-minor group across 1 directory with 25 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/851\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/852\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.260907...0.260928",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "ruffle_android"
-      ],
-      "contentHash": "b7166d7c027323b7ed469b8e03befa19c0713fc1798608a35482de22024c39f8",
       "translationPending": false
     },
     {
@@ -5817,30 +5865,6 @@
         "supersnes9x_pc"
       ],
       "contentHash": "7ab3e07987aab333522e1735c37a43655be75eee4c4dc2ad65ce9ccf487be22a",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-swiff-1-4-0",
-      "title": "【Android更新】Swiff 1.4.0",
-      "originalTitle": "Swiff 1.4.0 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-12T23:40:17Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/NaviVani-dev/Swiff/releases/tag/v1.4.0",
-      "imageUrl": "asset://assets/emulators/swiff.png",
-      "officialUrl": "https://github.com/NaviVani-dev/Swiff",
-      "summary": "Swiff 发布 Android 新版本 1.4.0，发布日期为2026年09月12日。点击查看官方版本信息与更新说明。",
-      "content": "Swiff 已发布 Android 最新版本 1.4.0。\n\n发布日期：2026年09月12日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n版本 1.4.0\n提示：[!WARNING]\n提示:这个更新改变savata如何工作使其更方便用户,迁移应该是无缝的,但建议您保留保存的备份以避免问题。 如果因为任何原因,你的储蓄丢失,损坏或只是不愿加载,请打开一个问题。\n\n最后一个新的更新, 这个新的 Swiff 版本在很多方面改进了应用程序,我相信大多数人会和这个游戏玩得很开心。\n\n完成 UI 检修\n应用程序有全新的重新设计! 受一些现代材料UI应用的启发,它也使该应用完全可以使用游戏板导航! 如果你有Android手持设备 你不需要因为UI不再对游戏机友好而痛苦\n\n冲击波和团结游戏\nSwiff 现在支持 Adobe Shockwave 游戏和 Unity Web Player 游戏 ! 更新应用程序内的 Flashpoint 数据库以开始下载您最喜欢的游戏。\n\n多控制器支持\n您现在可以给单个游戏板指定不同的布局, 允许任意发行多人游戏, 只要插入您的控制器, 将其映射到新的布局并开始游戏 !\n\n解析整合\n您现在可以连接 Swiff 到您的Discord账户解锁一些社交功能( 完成可选性, Swiff 不存储您的任何个人数据,并且永远不会存储。 如果你在Android设备上安装了Discord应用程序,你就可以在开始玩游戏时获得Rich Sentences,你也可以看到你朋友目前玩什么 n 如果允许富人存在,则使用家菜单。\n\n远程播放\n现在可以创建会话开始与朋友远程播放了! 在设置中启用此选项, 输入游戏并启动会话, 您的朋友可以使用代码或链接输入, 如果您已经连接了 Discord, 甚至可以共享它们。 你的Discord朋友在应用程序里。\n\n特征\n• 整个应用程序现在可以使用Gamepad\n• Android TV现在得到同样的APK的支持\n• 为Wine runtimes(Vortek、System和Turnip驱动程序)增加硬件加速支持\n• 增加选项以改变葡萄酒集成工作方式(Graphics驱动程序、OpenGL、DX Wrapper、性能简介)\n• 你可以自己进口 Adrenotools drivers\n• 增加了双屏幕集成(点钟、电池、触摸板和二级屏幕上的键盘)\n• 快速菜单现在可以在二级屏幕上打开\n• 增加 Ruffle 作为闪光播放器( Native)\n• 移动运行时间选项(例如 Ruffle 质量)到运行时设置\n• 运行时间设置现在可以每场游戏更改\n• 重新设计大多数运行时间保存文件的工作方式\n• 在快速菜单内移动大多数快速菜单弹出\n• 游戏板映射器的布局现在显示您的特定游戏板胶片\n• 添加对角输入绘图,用于乐杆和D-Pads\n• 现在可以用软的硬拉来映射游戏板触发器\n• 增加更多游戏中通知(Ex. Gamepad 连接/ 断开连接\n• 屏幕上布局现在可以显示,即使一个游戏板被连接\n• 数据库下载如果尚未完成,可以恢复\n• 为闪点游戏添加数据包管理\n• 添加自定义游戏的代理 URL 选项,以检查其运行地点\n• 增加了使用系统字体的选项\n• 增加了日志级选项\n\n\n修复内容\n• Ruffle 现在应该可以显示特殊的角色(谢谢xade93!).\n• 虚拟键盘现在向每个运行时间正确发送输入\n游戏在新安装上设置 Games 目录后应该恢复( 需要您更新到此版本)\n• 重新设计虚拟鼠标以适当工作\n• 保存数据应适当处理葡萄酒运行时间\n• 改写\"只显示游戏内容\"剧本,与大多数游戏合作\n• 固定葡萄酒运行时间悬挂在没有Adreno GPU的装置上(马里等)\n• 当声音卡在葡萄酒运行时固定游戏冻结\n• 固定全屏问题\n• 固定闪点数据库下载\n• Swiff 现在告诉你当Android Webview坠毁而不是默默失败时\n\n谢谢你用S...",
-      "originalContent": "# Version 1.4.0\r\n> [!WARNING]\r\n> This update changes how savedata works to make it more user-friendly, migration should be seamless but it's recommended you keep  a backup of your saves to avoid issues. If by any reason your saves are lost, damaged or just won't load, please open an issue.\r\n\r\nFINALLY A NEW UPDATE, this new Swiff version improves the app in a lot of ways, I'm sure most people will have fun with this one.\r\n\r\n## Complete UI overhaul\r\nThe app had a whole new redesign! Inspired on some modern Material UI apps, it also makes the app fully navigatable with a gamepad! If you have an Android handheld you don't need to suffer with the UI not being gamepad-friendly anymore.\r\n\r\n## Shockwave and Unity games\r\nSwiff now supports Adobe Shockwave games and Unity Web Player games! Update your Flashpoint database inside the app to start downloading your favourite games.\r\n\r\n## Multi-controller support\r\nYou can now asign different layouts to individual gamepads, allowing for multiplayer games without any issues, just plug your controller, map it to a new layout and start playing!\r\n\r\n## Discord integration\r\nYou can now connect Swiff to your Discord account to unlock some social features (Completely optional, Swiff does not store any of your personal data and will never store it). If you have the Discord app installed on your Android device you can now get Rich Presence when you start playing a game, you can also see what your friends are currently playing on the Home menu if they have Rich Presence enabled.\r\n\r\n## Remote Play\r\nYou can now create sessions to start playing remotely with your friends! Enable the option in Settings, enter a game and start a session, your friends will be able to enter with the code or the link, if you have Discord connected you can even share them with your Discord friends inside the app.\r\n\r\n## Features\r\n- The entire app is navigable with a Gamepad now\r\n- Android TV is now supported with the same APK\r\n- Added hardware acceleration support for Wine runtimes (Vortek, System and Turnip drivers)\r\n- Added options to change how the Wine integration works (Graphics driver, OpenGL, DX Wrapper, Performance profiles)\r\n- You can import your own Adrenotools drivers\r\n- Added a dual-screen integration (clock, battery, touchpad and keyboard on the secondary screen)\r\n- The quick menu can now open on a secondary screen\r\n- Added Ruffle (Native) as a Flash player\r\n- Moved the runtime options (Like Ruffle quality) to the Runtime settings\r\n- Runtime settings can now be changed per game\r\n- Reworked how savefiles work for most runtimes\r\n- Moved most of the quick menu popups inside the Quick menu\r\n- The gamepad mapper layout now displays your specific gamepad glyphs\r\n- Added diagonal input mapping for joysticks and D-Pads\r\n- You can now map the gamepad triggers by soft of hard pull\r\n- Added more in-game notifications (Ex. Gamepad connecting/disconnecting)\r\n- On-screen layout can now be shown even when a gamepad is connected\r\n- Database downloads can be resumed if they didn't finish\r\n- Added Data packs management for Flashpoint games\r\n- Added a Proxy URL option for custom games that check where they are running\r\n- Added an option to use the system font\r\n- Added a log level option\r\n\r\n\r\n## Fixes\r\n- Ruffle should be able to show special characters now (Thanks xade93!)\r\n- The virtual keyboard now sends input correctly to every runtime\r\n- Games should restore after you set a Games directory on a new installation (Requires you to update to this version)\r\n- Reworked the virtual mouse to work appropriately\r\n- Savedata should work properly on Wine runtimes\r\n- Reworked the \"Only show game content\" script to work with most games\r\n- Fixed Wine runtimes hanging on devices without Adreno GPUs (Mali, etc)\r\n- Fixed games freezing when the audio got stuck on Wine runtimes\r\n- Fixed fullscreen issues\r\n- Fixed Flashpoint database downloads\r\n- Swiff now tells you when the Android WebView crashes instead of failing silently\r\n\r\n### Thanks for using S…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "swiff"
-      ],
-      "contentHash": "a7c72b282f5826a09a10da5abff6c31fb13f0cfc38d00aaea4fed9753927df27",
       "translationPending": false
     },
     {
