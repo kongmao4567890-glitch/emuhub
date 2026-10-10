@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T06:21:41.067600Z",
+  "generatedAt": "2026-10-10T17:29:23.897303Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,159 @@
   },
   "articles": [
     {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T16:56:53Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月10日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•修复桌面环境条件（ Stenzek（https://github.com/stenzek/duckstation/commit/21b05557c7d5ad56006dc31d3b3ad975378f0e37） ）\n•修复了跳过桌面文件检查时的崩溃问题（ Stenzek（https://github.com/stenzek/duckstation/commit/9cb25f7e9861e8a77e43a8abf13497a47c91a844） ）\n•更新至20261010 （ Stenzek（https://github.com/stenzek/duckstation/commit/18e2aa16152816f9197de83cca82795c14054e8f） ）\n•从FullscreenUI （ Stenzek（https://github.com/stenzek/duckstation/commit/364c7bd485c877af0a6ba70fdc5bd1efe2b6846d） ）中提取存储桶名称\n•单独的登录和凭据保存步骤（ Stenzek（https://github.com/stenzek/duckstation/commit/93e53494ac90f7c1889c3954ab2d67cf4f94c10e） ）\n•防止复制给自己（ Stenzek（https://github.com/stenzek/duckstation/commit/83153676d76b5ba80327f09df90792d4e7a559be） ）\n•将WaitFor ()添加到ConditionVariable (Stenzek（https://github.com/stenzek/duckstation/commit/dbc8b2291704c44c40fda3502823fc8b3c2d0150）)\n•按保存标题对光盘集进行排序（ Stenzek（https://github.com/stenzek/duckstation/commit/a4048c9c377e68b2e42a4d17cabc93b6b6e90c58） ）\n•刷新之间不要保留缓存映射（ Stenzek（https://github.com/stenzek/duckstation/commit/d253d0a1d9b874b3cfb775699027158f54676b8c） ）\n•允许使用外部SettingsInterface （ Stenzek（https://github.com/stenzek/duckstation/commit/e02bb9c748704055cb8d540bfb0558c4a14704e2） ）\n•在FullscreenUI和Qt之间同步设置（ Stenzek（https://github.com/stenzek/duckstation/commit/07d3a934a642ce96267c16c7c3fc1ea728b30495） ）\n•向OnSystemStarted () (Stenzek（https://github.com/stenzek/duckstation/commit/4e652d5bb95044aebaa913b8670f15d20fd81010）)提供内容详细信息\n•修复EncodeAndAppendUTF8 () (Stenzek（https://github.com/stenzek/duckstation/commit/4ad124e8d1da693d4d8669f645f6eb87063645c8）)中可能存在的整数溢出\n•为叠加添加专用密钥（ Stenzek（https://github.com/stenzek/duckstation/commit/8bb030b8cfc6f2f3f6a0e759d6e225309f2aa756） ）\n•不要将控制器类型复制到游戏（ Stenzek（https://github.com/stenzek/duckstation/commit/95722d8e99f53b75678e6c9871c86b4a9e26acbc） ）\n•重置设置时不要重置文件夹（ Stenzek（https://github.com/stenzek/duckstation/commit/ba3590f902aa4a96dc087f9bf9827379ca41d95a） ）\n•后端口附加辅助函数（ Stenzek（https://github.com/stenzek/duckstation/commit/659ff37089e94b81cc5de6c35c3d4bf18795b146） ）\n•使OpenSharedCFile ()在非Windows上包装OpenCFile () （ Stenzek（https://github.com/stenzek/duckstation/commit/60aec342eb5b453ca25816cbaf9469ab40f3eb60） ）\n•将错误参数添加到FTell64 () (Stenzek（https://github.com/stenzek/duckstation/commit/066d89715c1f5e089c4aa766b04a5d81ad878e08）)\n•将查找结果排序提取到函数（ Stenzek（https://github.com/stenzek/duckstation/commit/aaffbd66d9c85a7e60d2d9100a7542819656754a） ）\n•对ReadBinaryFile/ReadFileToString （ Stenzek（https://github.com/stenzek/duckstation/commit/a8fb9d70e42d926a3a10d9fefb05f709bfa91eea） ）使用打开的共享文件\n•更多RVO优化（ Stenzek（https://github.com/stenzek/duckstation/commit/6d9682946587e749d8025a7f7ea1169645420093） ）\n•添加更多ReadFileToString ()重载（ Stenzek（https://github.com/stenzek/duckstation/commit/9bedaa6163efd571281229f92d7412c2896f01ec） ）\n• ed990b9 ：计划工作站/重新编译器：交换NOP插槽时考虑负载延迟（ Stenzek ）\n• 0aa0c76 ：计划工作站/重新编译器：取消自身移动的挂起加载（ Stenzek ）\n• e78ab9a ： CPU/重新编译器：保持链路寄存器延迟插槽的顺序（ Stenzek ）\n• bd29ee4 ：计划工作站/重新编译器：调度解释器后备例外（ Stenzek ）\n• 3a8b6fc ： CPU/重新编译器：陷阱常量有符号算术溢出（ Stenzek ）\n• c401e93 ：计划工作站/重新编译器：保留内存异常的挂起负载（ Stenzek ）\n• cb3cfb8 ：计划工作站/重新编译器：纠正未对齐的间接跳转异常（ Stenzek ）\n• 22cc431 ： CPU/重新编译器：修复ARM32 VIXL调试版本（ Stenzek ）\n• 885d5bb ：计划工作站/重新编译器： ARM （ Stenzek ）上的掩模恒定变量移位计数\n• 6db5f05 ： CPU/重新编译器：截断ARM64多…",
+      "originalContent": "## Commits\n- Fix desktop environment conditions ([Stenzek](https://github.com/stenzek/duckstation/commit/21b05557c7d5ad56006dc31d3b3ad975378f0e37))\n- Fix crash when desktop file check is skipped ([Stenzek](https://github.com/stenzek/duckstation/commit/9cb25f7e9861e8a77e43a8abf13497a47c91a844))\n- Update to 20261010 ([Stenzek](https://github.com/stenzek/duckstation/commit/18e2aa16152816f9197de83cca82795c14054e8f))\n- Extract bucket names out of FullscreenUI ([Stenzek](https://github.com/stenzek/duckstation/commit/364c7bd485c877af0a6ba70fdc5bd1efe2b6846d))\n- Separate login and credential saving steps ([Stenzek](https://github.com/stenzek/duckstation/commit/93e53494ac90f7c1889c3954ab2d67cf4f94c10e))\n- Guard against copying to self ([Stenzek](https://github.com/stenzek/duckstation/commit/83153676d76b5ba80327f09df90792d4e7a559be))\n- Add WaitFor() to ConditionVariable ([Stenzek](https://github.com/stenzek/duckstation/commit/dbc8b2291704c44c40fda3502823fc8b3c2d0150))\n- Sort disc sets by save title ([Stenzek](https://github.com/stenzek/duckstation/commit/a4048c9c377e68b2e42a4d17cabc93b6b6e90c58))\n- Don't persist cache map between refreshes ([Stenzek](https://github.com/stenzek/duckstation/commit/d253d0a1d9b874b3cfb775699027158f54676b8c))\n- Allow use of external SettingsInterface ([Stenzek](https://github.com/stenzek/duckstation/commit/e02bb9c748704055cb8d540bfb0558c4a14704e2))\n- Synchronize settings between FullscreenUI and Qt ([Stenzek](https://github.com/stenzek/duckstation/commit/07d3a934a642ce96267c16c7c3fc1ea728b30495))\n- Provide content details to OnSystemStarted() ([Stenzek](https://github.com/stenzek/duckstation/commit/4e652d5bb95044aebaa913b8670f15d20fd81010))\n- Fix possible integer overflow in EncodeAndAppendUTF8() ([Stenzek](https://github.com/stenzek/duckstation/commit/4ad124e8d1da693d4d8669f645f6eb87063645c8))\n- Add a dedicated key for overlays ([Stenzek](https://github.com/stenzek/duckstation/commit/8bb030b8cfc6f2f3f6a0e759d6e225309f2aa756))\n- Don't copy controller type to game ([Stenzek](https://github.com/stenzek/duckstation/commit/95722d8e99f53b75678e6c9871c86b4a9e26acbc))\n- Don't reset folders when resetting settings ([Stenzek](https://github.com/stenzek/duckstation/commit/ba3590f902aa4a96dc087f9bf9827379ca41d95a))\n- Backport additional helper functions ([Stenzek](https://github.com/stenzek/duckstation/commit/659ff37089e94b81cc5de6c35c3d4bf18795b146))\n- Make OpenSharedCFile() wrap OpenCFile() on non-Windows ([Stenzek](https://github.com/stenzek/duckstation/commit/60aec342eb5b453ca25816cbaf9469ab40f3eb60))\n- Add error parameter to FTell64() ([Stenzek](https://github.com/stenzek/duckstation/commit/066d89715c1f5e089c4aa766b04a5d81ad878e08))\n- Extract find result sorting to function ([Stenzek](https://github.com/stenzek/duckstation/commit/aaffbd66d9c85a7e60d2d9100a7542819656754a))\n- Use shared file open for ReadBinaryFile/ReadFileToString ([Stenzek](https://github.com/stenzek/duckstation/commit/a8fb9d70e42d926a3a10d9fefb05f709bfa91eea))\n- More RVO optimizations ([Stenzek](https://github.com/stenzek/duckstation/commit/6d9682946587e749d8025a7f7ea1169645420093))\n- Add more ReadFileToString() overloads ([Stenzek](https://github.com/stenzek/duckstation/commit/9bedaa6163efd571281229f92d7412c2896f01ec))\n- ed990b9: CPU/Recompiler: Respect load delays when swapping NOP slots (Stenzek)\n- 0aa0c76: CPU/Recompiler: Cancel pending loads on self moves (Stenzek)\n- e78ab9a: CPU/Recompiler: Keep link-register delay slots in order (Stenzek)\n- bd29ee4: CPU/Recompiler: Dispatch interpreter fallback exceptions (Stenzek)\n- 3a8b6fc: CPU/Recompiler: Trap constant signed arithmetic overflow (Stenzek)\n- c401e93: CPU/Recompiler: Preserve pending loads on memory exceptions (Stenzek)\n- cb3cfb8: CPU/Recompiler: Correct misaligned indirect jump exceptions (Stenzek)\n- 22cc431: CPU/Recompiler: Fix ARM32 VIXL debug builds (Stenzek)\n- 885d5bb: CPU/Recompiler: Mask constant variable shift counts on ARM (Stenzek)\n- 6db5f05: CPU/Recompiler: Truncate ARM64 mult…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "ca58c238a560437620181d7436003078ad90a81867fee507a8d646c108de12dd",
+      "translationPending": false
+    },
+    {
+      "id": "137793",
+      "title": "【其他】AzaharPlus v2126.2-A",
+      "originalTitle": "[Consoles portables] AzaharPlus v2126.2-A",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T13:57:43Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137793-consoles-portables-azaharplus-v2126-2-a/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/04/azaharplus.png",
+      "officialUrl": "https://github.com/AzaharPlus/AzaharPlus",
+      "summary": "Azahar是Lime3DS和PabloMK7的Citra分支的合并。 此“Plus”版本还原了从原始版本中删除的一些功能。 AzaharPlus与Azahar相同，但以下特征除外： •与所有游戏文件兼容。 如果文件使用Citra分叉，则可以使用AzaharPlus。 •与传统处理器的兼容性（无需SSE4.2 ） •与Android 9兼容 • （在安卓系统上）能够从官方服务器下载系统文件。 不需要真正的3DS。",
+      "content": "Azahar是Lime3DS和PabloMK7的Citra分支的合并。\n\n此“Plus”版本还原了从原始版本中删除的一些功能。\n\nAzaharPlus与Azahar相同，但以下特征除外：\n•与所有游戏文件兼容。 如果文件使用Citra分叉，则可以使用AzaharPlus。\n•与传统处理器的兼容性（无需SSE4.2 ）\n•与Android 9兼容\n• （在安卓系统上）能够从官方服务器下载系统文件。 不需要真正的3DS。\n\nAndroid版本有两种版本：\n•与Azahar具有相同应用程序ID的变体，在设备上替换它。其显示名称为“AzaharPlus”。如果您有其他以Azahar为目标的应用程序（例如界面） ，请使用此选项。\n•另一个具有新应用程序ID的变体，允许与Azahar共存而不会出现问题。 其显示名称为“+ AzaharPlus +”。\n\n变更内容：\n\n•此版本修复了一个公开宣布的关键安全漏洞，因此建议立即更新\nGHSA-h74v-5mw8-qg8r\nAndroid版本有2种风格可供选择。\n•替换：它与Azahar具有相同的应用程序ID ，因此它将在设备上替换它。\n其显示名称为“AzaharPlus” ，其图标背景为蓝色。\n如果您有其他针对Azahar的应用程序，例如前端，请使用此应用程序。\n•共存：它有一个新的申请ID ，因此可以与Azahar共存，没有问题。\n其显示名称为“+ AzaharPlus +” ，图标背景为红色。",
+      "originalContent": "Azahar est une fusion entre Lime3DS et le fork Citra de PabloMK7.\n\nCette version \"Plus\" restaure certaines fonctionnalités supprimées de la version originale.\n\nAzaharPlus est identique à Azahar à l'exception des caractéristiques suivantes :\n\n- Compatibilité avec tous les fichiers du jeu. Si un fichier fonctionne avec un fork Citra, il fonctionne avec AzaharPlus.\n- Compatibilité avec les anciens processeurs (pas besoin de SSE4.2)\n- Compatibilité avec Android 9\n- (Sur Android) Possibilité de télécharger les fichiers système à partir des serveurs officiels. Aucun besoin d'une véritable 3DS.\n\nLa version Android est disponible en deux variantes :\n- Une variante avec le même identifiant d'application qu'Azahar, ce qui la remplace sur l'appareil. Son nom d'affichage est \"AzaharPlus\". Utilisez cette option si vous avez d'autres applications qui ciblent Azahar, comme une interface par exemple.\n- Une autre variante avec un nouvel identifiant d'application, permettant de coexister avec Azahar sans problème. Son nom d'affichage est \"+AzaharPlus+\".\n\nLes changements:\n\n- This version fixes a critical security vulnerability that was publicly announced so immediate update is advised\nGHSA-h74v-5mw8-qg8r\n\nThe Android build is available in 2 flavors.\n- Replace: It has the same application id as Azahar, so it will replace it on the device.\nIts display name is \"AzaharPlus\" and its icon background is blue.\nUse this one if you have other apps that target Azahar, like a frontend for example.\n- Coexist: It has a new application id so it can coexist with Azahar without issues.\nIts display name is \"+AzaharPlus+\" and its icon background is red.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar",
+        "azahar_plus"
+      ],
+      "contentHash": "c142c8a568b09a390f2236c91d6d86a62febac817dcdc783fe8631b692ac834e",
+      "translationPending": false
+    },
+    {
+      "id": "137791",
+      "title": "【工具】OpenROM v3.9.x",
+      "originalTitle": "[Utilitaires Divers] OpenROM v3.9.x",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-10T13:56:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137791-utilitaires-divers-openrom-v3-9-x/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/OpenROM.png",
+      "officialUrl": "https://github.com/M5Devs/OpenROM/",
+      "summary": "OpenROM是一个通用的、免费的、开源的软件套件，专门用于复古ROM转换。 它旨在取代专有和分散的工具，完全在本地运行（ 100 ％离线） ，无需任何数据收集。 界面和人体工程学 •游戏美学：提供在Flutter下开发的现代黑暗界面，灵感来自PS5和Xbox菜单，集成了仪表板、每个ROM的卡片和平台徽章。 •可定制：提供多种内置主题（赛博朋克、终端、迷你、游戏） ，并能够通过JSON文件创建它们。",
+      "content": "OpenROM是一个通用的、免费的、开源的软件套件，专门用于复古ROM转换。 它旨在取代专有和分散的工具，完全在本地运行（ 100 ％离线） ，无需任何数据收集。\n\n界面和人体工程学\n•游戏美学：提供在Flutter下开发的现代黑暗界面，灵感来自PS5和Xbox菜单，集成了仪表板、每个ROM的卡片和平台徽章。\n•可定制：提供多种内置主题（赛博朋克、终端、迷你、游戏） ，并能够通过JSON文件创建它们。\n•平滑处理：本机拖放支持单个或分组的文件和文件夹（批量处理）。\n\n性能和技术特点\n•完整转换矩阵：支持跨主要格式（ ISO、BIN、CUE、GDI、IMG、ECM、CHD、CSO、ZSO、XISO、RVZ、WIA、WBFS、GCZ ）的20多次转换旅程。\n•智能检测：通过数字签名（魔术字节）准确识别游戏机（ PS1、PS2、PSP、Xbox、GameCube、Wii、Dreamcast ） ，并分析CHD标头（ v4/v5 ）以区分CD和DVD。\n•生成和验证：自动为BIN文件创建缺失的cue文件，并验证通过chdman生成的CHD文件的完整性。\n\n高级功能\n•终端和自动化：在转换过程中集成实时日志，并为自动化和脚本编写提供完整的命令行工具（ openrom-core ）。",
+      "originalContent": "OpenROM est une suite logicielle universelle, gratuite et open-source dédiée à la conversion de ROMs rétro. Conçue pour remplacer les outils propriétaires et fragmentés, elle fonctionne entièrement en local (100 % hors ligne) sans aucune collecte de données.\n\nInterface et Ergonomie\n- Esthétique Gaming : Propose une interface sombre moderne développée sous Flutter, inspirée des menus PS5 et Xbox, intégrant un tableau de bord, des cartes pour chaque ROM et des badges de plateforme.\n- Personnalisable : Propose plusieurs thèmes intégrés (Cyberpunk, Terminal, Minimal, Gaming) et la possibilité d'en créer via des fichiers JSON.\n- Prise en main fluide : Prise en charge native du glisser-déposer pour les fichiers et dossiers isolés ou groupés (traitement par lot).\n\nPerformances et Fonctionnalités Techniques\n- Matrice de conversion complète : Prend en charge plus de 20 parcours de conversion parmi les formats majeurs (ISO, BIN, CUE, GDI, IMG, ECM, CHD, CSO, ZSO, XISO, RVZ, WIA, WBFS, GCZ).\n- Détection intelligente : Identifie avec précision les consoles (PS1, PS2, PSP, Xbox, GameCube, Wii, Dreamcast) grâce aux signatures numériques (magic bytes) et analyse les en-têtes CHD (v4/v5) pour différencier CD et DVD.\n- Génération et Vérification : Crée automatiquement les fichiers CUE manquants pour les fichiers BIN et vérifie l'intégrité des fichiers CHD générés via chdman.\n\nFonctionnalités Avancées\n- Terminal et Automatisation : Intègre un journal de bord en temps réel pendant la conversion et propose un outil en ligne de commande complet (openrom-core) pour l'automatisation et les scripts.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "f060fa0b303b4308c16fa1978a76b2a8be9c022f80f22c7b32942ddccf73352c",
+      "translationPending": false
+    },
+    {
+      "id": "137789",
+      "title": "【多系统】SidPlayWX v0.20.1",
+      "originalTitle": "[Musiques et sons] SidPlayWX v0.20.1",
+      "category": "multi_system",
+      "categoryLabel": "多系统",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T13:55:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137789-musiques-et-sons-sidplaywx-v0-20-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/11/sidplaywx-player.png",
+      "officialUrl": "https://github.com/bytespiller/sidplaywx/",
+      "summary": "Sidplaywx是一款PC图形播放器，专为播放Commodore 64的SID音乐而设计，具有现代化和直观的界面。 它依靠libsidplayfp进行高质量的声音模拟，依靠wxWidgets进行原生跨平台界面，而音频输出由PortAudio管理，以确保广泛的兼容性。 该项目完全可用，具有拖放、搜索、Unicode兼容性和高分辨率屏幕管理等便利功能。它可以在Windows和Linux上运行，并提供预编译的二进制文件。",
+      "content": "Sidplaywx是一款PC图形播放器，专为播放Commodore 64的SID音乐而设计，具有现代化和直观的界面。\n它依靠libsidplayfp进行高质量的声音模拟，依靠wxWidgets进行原生跨平台界面，而音频输出由PortAudio管理，以确保广泛的兼容性。\n该项目完全可用，具有拖放、搜索、Unicode兼容性和高分辨率屏幕管理等便利功能。它可以在Windows和Linux上运行，并提供预编译的二进制文件。",
+      "originalContent": "Sidplaywx est un lecteur graphique pour PC conçu pour lire les musiques SID du Commodore 64, avec une interface moderne et intuitive.\n\nIl repose sur libsidplayfp pour une émulation sonore de haute qualité et sur wxWidgets pour une interface native multi‑plateforme, tandis que la sortie audio est gérée par PortAudio afin d’assurer une compatibilité étendue.\n\nLe projet est pleinement utilisable, avec des fonctions pratiques comme le glisser‑déposer, la recherche, la compatibilité Unicode et la gestion des écrans haute résolution. Il fonctionne sur Windows et Linux avec des binaires pré‑compilés disponibles.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "sidplaywx"
+      ],
+      "contentHash": "3e6a51158941e553c024dc96d1464e65711442e92eef66a8676a98d6764da5ad",
+      "translationPending": false
+    },
+    {
+      "id": "137787",
+      "title": "【家用机】Gopher64 v1.1.40",
+      "originalTitle": "[Consoles de salon] Gopher64 v1.1.40",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T13:54:14Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137787-consoles-de-salon-gopher64-v1-1-40/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/gopher64.png",
+      "officialUrl": "https://github.com/gopher64/gopher64/",
+      "summary": "这是Logan McNaughton （ simple64 ）用Rust编写的N64模拟器，其中一些部分来自mupen64plus和/或ares。 总结目标如下： •性能。作者希望能够在他的笔记本电脑上使用此模拟器。 •易于使用。 •易于使用。动态重新编译器功能强大，但很难阅读和理解。此模拟器仅有CPU和RSP的解释器 此外，它完全用Rust （ Parallel-RDP之外）编写，这是一种现代编程语言，其用户数量不断增长。",
+      "content": "这是Logan McNaughton （ simple64 ）用Rust编写的N64模拟器，其中一些部分来自mupen64plus和/或ares。\n\n总结目标如下：\n•性能。作者希望能够在他的笔记本电脑上使用此模拟器。\n•易于使用。\n•易于使用。动态重新编译器功能强大，但很难阅读和理解。此模拟器仅有CPU和RSP的解释器\n此外，它完全用Rust （ Parallel-RDP之外）编写，这是一种现代编程语言，其用户数量不断增长。 作者尽量避免使用宏，这样既可以降低代码的重复性，又可以降低代码的可读性。\n\n这些变化是：\n\n•提高Android设备兼容性",
+      "originalContent": "Il s'agit d'un émulateur de N64 écrit en Rust par Logan McNaughton (simple64) et dont certaines portions proviennent de mupen64plus et/ou ares.\n\nLes objectifs en résumé sont les suivants:\n- Performance. L'auteur veux pouvoir utiliser cet émulateur sur son ordinateur portable.\n- Facile à utiliser.\n- Facile de travailler avec. Les recompilateurs dynamiques sont performants mais ils sont très difficiles à lire et à comprendre. Cet émulateur n'aura des interprèteurs que pour le CPU et RSP. De plus, il est entièrement écrit en Rust (en dehors de Parallel-RDP), un langage de programmation moderne dont le nombre d'utilisateurs ne cesse de croître. L'auteur a essayé d'éviter l'utilisation de macros, qui peuvent réduire la répétitivité du code, mais aussi sa lisibilité.\n\nLes changements sont:\n\n- Improve Android device compatibility",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gopher64"
+      ],
+      "contentHash": "1b1886668507a7cc5043d87505a345d99077e7f2a539e3f9e1781010d629f20d",
+      "translationPending": false
+    },
+    {
+      "id": "137785",
+      "title": "【其他】NgpCraft Emulator v3.8.7",
+      "originalTitle": "[Consoles portables] NgpCraft Emulator v3.8.7",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T13:53:21Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137785-consoles-portables-ngpcraft-emulator-v3-8-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/NgpCraft.png",
+      "officialUrl": "https://github.com/Tixul/Ngpcraft_emulator",
+      "summary": "Ngpcraft是一款Neo Geo Pocket和Neo Geo Pocket Color模拟器，将原生C + +心脏的速度与PyQt6 GUI的优雅相结合。它的引擎经过精心校准到原始硬件，调整每个微处理器周期和闪存访问时间，用于Densha等自主时钟游戏 Go终于以每秒30帧的速度拍摄了。 得益于带有封面缩略图的动态库、高级搜索、按游戏时间排序和收藏夹管理，游戏体验特别整洁 。",
+      "content": "Ngpcraft是一款Neo Geo Pocket和Neo Geo Pocket Color模拟器，将原生C + +心脏的速度与PyQt6 GUI的优雅相结合。它的引擎经过精心校准到原始硬件，调整每个微处理器周期和闪存访问时间，用于Densha等自主时钟游戏\nGo终于以每秒30帧的速度拍摄了。\n得益于带有封面缩略图的动态库、高级搜索、按游戏时间排序和收藏夹管理，游戏体验特别整洁\n。控制台使用其原始介绍序列复制官方BIOS启动，将按钮堆栈保持在内存中，以保持日期和RTC时钟最新，甚至允许在正确的时间触发游戏内闹钟。\n为了视觉和硬件舒适性，该软件通过窗口或全屏调整大小，各种视频过滤器（ LCD网格， CRT ，扫描线） ，无需重新启动的暗色和亮色主题管理，以及对Xbox控制器（ XInput ）的完全支持，可在原理图上进行可调的自动点火和直观的重新映射\n控制台显示屏。\n部分功能方面，您有每场比赛保存状态的8个位置，内部NVRAM保存，实时倒带选项（使用10-30秒缓冲区倒带） ，逐帧逐步，一键截图（ F12 ）以及从0.25 ×到4 ×的加速或慢动作\n。即使是黑色和白色墨盒，在袖珍色模式下旋转时也会自动调色板。\n最后，它是开发和保存ROM的绝佳工具：其引擎集成了真正完整的调试器（断点、堆栈检查、RAM搜索、VGM音频导出）、400帧的自动分析模块测试游戏而不会崩溃，以及CA中的超详细崩溃报告生成器\n指令出错的秒数。",
+      "originalContent": "Ngpcraft est un émulateur Neo Geo Pocket et Neo Geo Pocket Color qui combine la vitesse d'un cœur natif en C++ avec l'élégance d'une interface graphique en PyQt6. Son moteur est méticuleusement calibré sur le matériel d'origine, ajustant chaque cycle microprocesseur et temps d'accès à la mémoire flash pour que des jeux auto-cadencés comme Densha de Go tournent enfin à leurs 30 images par seconde réelles.\n\nL'expérience de jeu y est particulièrement soignée grâce à une bibliothèque dynamique avec vignettes de pochettes, recherche avancée, tri par temps de jeu et gestion des favoris. La console reproduit le démarrage BIOS officiel avec sa séquence d'intro originale, garde en mémoire la pile bouton pour maintenir la date et l'horloge RTC à jour, et permet même de déclencher les alarmes intégrées aux jeux au bon moment.\n\nPour le confort visuel et matériel, le logiciel s'adapte à vos envies grâce à un redimensionnement fenêtré ou plein écran, divers filtres vidéo (LCD-grid, CRT, scanlines), la gestion des thèmes sombre et clair sans redémarrage, ainsi qu'une prise en charge complète des manettes Xbox (XInput) avec autofire réglable et remappage intuitif sur un schéma visuel de la console.\n\nCôté fonctionnalités en partie, vous disposez de 8 emplacements de save states par jeu, de sauvegardes internes NVRAM, d'une option de rembobinage en direct (rewind avec tampon de 10 à 30 secondes), du pas-à-pas image par image, de la capture d'écran d'un clic (F12) et de l'accélération ou du ralenti de 0,25× à 4×. Même les cartouches noir et blanc profitent d'une palette de colorisation automatique lorsqu'elles tournent en mode Pocket Color.\n\nEnfin, c'est un outil formidable pour le développement et la préservation de ROMs: son moteur intègre un véritable débogueur complet (points d'arrêt, inspection de la pile, recherche RAM, export audio VGM), un module d'analyse automatique testant les jeux sur 400 frames sans planter, ainsi qu'un générateur de rapports de crash ultra-détaillés en cas d'erreur sur une instruction.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "ngpcraft_pc"
+      ],
+      "contentHash": "48823fa310d8d1b834447722d068c61252dfe8a6abb83b451d81f7a3f3afa6f1",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-10T05:54:14Z",
+      "publishedAt": "2026-10-10T13:46:07Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月10日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 辅助 d_cps2.cpp, d_cps3.cpp (# 2793) (克拉维库拉阿格语)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• adj. in d_cps2.cpp, d_cps3.cpp (#2793) (KlaviculaAG)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_invaders.cpp, d_megadrive.cpp: 各种(fprietog)\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_invaders.cpp, d_megadrive.cpp: various... (fprietog)\n• speccy update from gab75 (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,31 +169,113 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "5bfcf54036e725cd777079d60a37c3853aac7bf3dd9d810a0023da2204785518",
+      "contentHash": "4657cdfe5c50f5b0e9b701b24c45efb6ff3e51c5958f88f9799097fafc6b9d28",
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
+      "id": "137783",
+      "title": "【电脑】Copperline v1.0",
+      "originalTitle": "[Ordi.] Copperline v1.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
       "kind": "emulator",
-      "publishedAt": "2026-10-10T05:47:42Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月10日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月10日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•修复HideCursorInFullscreen (# 3809) # 3809（https://github.com/stenzek/duckstation/pull/3809） (Davide Pesavento（https://github.com/stenzek/duckstation/commit/6c1645fe561675c7622351f2b6dc3acb2e5c5e00）)的默认值\n•在Khamrai上禁用自动模拟（ Stenzek（https://github.com/stenzek/duckstation/commit/cbcbbe1ebab2b7efa4409550efca27b6668646a0） ）\n•更新至20261010 （ Stenzek（https://github.com/stenzek/duckstation/commit/e21e5a21ee98f76ffc802d94e579632a9c26d6a2） ）\n•从FullscreenUI中提取存储桶名称（ Stenzek（https://github.com/stenzek/duckstation/commit/96ac827ddc31a2dd83ff09f5aca5343755ba629c） ）\n•单独的登录和凭据保存步骤（ Stenzek（https://github.com/stenzek/duckstation/commit/897d35328b48e4b9672eb9c06dc083cfca9f6adc） ）\n•防止抄袭自己（ Stenzek（https://github.com/stenzek/duckstation/commit/cd99909a89a75ce67348517e14bb8827b6c12c17） ）\n•将WaitFor ()添加到ConditionVariable (Stenzek（https://github.com/stenzek/duckstation/commit/bc389a533e7a1f09db9f36d88494331207d5b16c）)\n•按保存标题对光盘集进行排序（ Stenzek（https://github.com/stenzek/duckstation/commit/c59381df539a76c3ec3198214d9916c74f02a256） ）\n•刷新之间不要保留缓存映射（ Stenzek（https://github.com/stenzek/duckstation/commit/589b0cd7e236e77462524a537937f11d6455a612） ）\n•允许使用外部SettingsInterface （ Stenzek（https://github.com/stenzek/duckstation/commit/3fe55abe14a0ddb251f931d16b12a15ba8be0241） ）\n•在FullscreenUI和Qt之间同步设置（ Stenzek（https://github.com/stenzek/duckstation/commit/cf4fbce6936a6d80fd2ecae43e1dcfe086b7f911） ）\n•向OnSystemStarted () （ Stenzek（https://github.com/stenzek/duckstation/commit/9db53239991d2693c993a5eb6b785d804e2991d3） ）提供内容详细信息\n•修复EncodeAndAppendUTF8 () (Stenzek（https://github.com/stenzek/duckstation/commit/d67b0a3d318622a35d032ba4e8fe86d5183640ea）)中可能存在的整数溢出\n•为叠加添加专用密钥（ Stenzek（https://github.com/stenzek/duckstation/commit/013d5860d0a861ddb1344130ea6f69e29bb10674） ）\n•不要将控制器类型复制到游戏（ Stenzek（https://github.com/stenzek/duckstation/commit/6f04957ceb9f2048bab43d9991bc0847181f0c13） ）\n•重置设置时不要重置文件夹（ Stenzek（https://github.com/stenzek/duckstation/commit/8be86cf3b9c0b56b54dc8cf2a1cfe84973eec7e1） ）\n•后端口附加辅助函数（ Stenzek（https://github.com/stenzek/duckstation/commit/435c11b011456447b565316e1ef5b8ba091c681b） ）\n•使OpenSharedCFile ()在非Windows上包装OpenCFile () （ Stenzek（https://github.com/stenzek/duckstation/commit/c52ee422dbbebe4eabfe58b5b3ec8f7f5e3e754b） ）\n•将错误参数添加到FTell64 () (Stenzek（https://github.com/stenzek/duckstation/commit/7bde29361772f05518cce93a507880aa7c46ea12）)\n•将查找结果排序提取到函数（ Stenzek（https://github.com/stenzek/duckstation/commit/4c34a8a6f933e907bd301a3c24dbbd8b86be382a） ）\n•对ReadBinaryFile/ReadFileToString （ Stenzek（https://github.com/stenzek/duckstation/commit/9a00b885e86c3067c20ba29fad379fdd7b9d814d） ）使用打开的共享文件\n•更多RVO优化（ Stenzek（https://github.com/stenzek/duckstation/commit/f480d99e7d390419f3a2874d5a764177773bb7d9） ）\n•添加更多ReadFileToString ()重载（ Stenzek（https://github.com/stenzek/duckstation/commit/392be265edaa222672226f3c491d0b69356657ba） ）\n• c1b520f ：计划工作站/重新编译器：交换NOP插槽时考虑负载延迟（ Stenzek ）\n• 9a59598 ：计划工作站/重新编译器：取消自身移动的挂起加载（ Stenzek ）\n• 840b3b6 ： CPU/重新编译器：保持链路寄存器延迟插槽的顺序（ Stenzek ）\n• 29066f0 ：计划工作站/重新编译器：调度解释器回退例外（ Stenzek ）\n• 0da4906 ： CPU/重新编译器：陷阱常量有符号算术溢出（ Stenzek ）\n• 3cb897a ：计划工作站/重新编译器：保留内存异常的挂起负载（ Stenzek ）\n• 2b0a9ad ：计划工作站/重新编译器：纠正未对齐的间接跳转异常（ Stenzek ）\n• 3a50643 ： CPU/重新编译器：修复ARM32 VIXL调试版本（ Stenzek ）\n• 47583d2 ： CPU/重新编译器：掩码恒定变量移位……",
-      "originalContent": "## Commits\n- Fix default value of HideCursorInFullscreen (#3809) [#3809](https://github.com/stenzek/duckstation/pull/3809) ([Davide Pesavento](https://github.com/stenzek/duckstation/commit/6c1645fe561675c7622351f2b6dc3acb2e5c5e00))\n- Disable auto-analog on Khamrai ([Stenzek](https://github.com/stenzek/duckstation/commit/cbcbbe1ebab2b7efa4409550efca27b6668646a0))\n- Update to 20261010 ([Stenzek](https://github.com/stenzek/duckstation/commit/e21e5a21ee98f76ffc802d94e579632a9c26d6a2))\n- Extract bucket names out of FullscreenUI ([Stenzek](https://github.com/stenzek/duckstation/commit/96ac827ddc31a2dd83ff09f5aca5343755ba629c))\n- Separate login and credential saving steps ([Stenzek](https://github.com/stenzek/duckstation/commit/897d35328b48e4b9672eb9c06dc083cfca9f6adc))\n- Guard against copying to self ([Stenzek](https://github.com/stenzek/duckstation/commit/cd99909a89a75ce67348517e14bb8827b6c12c17))\n- Add WaitFor() to ConditionVariable ([Stenzek](https://github.com/stenzek/duckstation/commit/bc389a533e7a1f09db9f36d88494331207d5b16c))\n- Sort disc sets by save title ([Stenzek](https://github.com/stenzek/duckstation/commit/c59381df539a76c3ec3198214d9916c74f02a256))\n- Don't persist cache map between refreshes ([Stenzek](https://github.com/stenzek/duckstation/commit/589b0cd7e236e77462524a537937f11d6455a612))\n- Allow use of external SettingsInterface ([Stenzek](https://github.com/stenzek/duckstation/commit/3fe55abe14a0ddb251f931d16b12a15ba8be0241))\n- Synchronize settings between FullscreenUI and Qt ([Stenzek](https://github.com/stenzek/duckstation/commit/cf4fbce6936a6d80fd2ecae43e1dcfe086b7f911))\n- Provide content details to OnSystemStarted() ([Stenzek](https://github.com/stenzek/duckstation/commit/9db53239991d2693c993a5eb6b785d804e2991d3))\n- Fix possible integer overflow in EncodeAndAppendUTF8() ([Stenzek](https://github.com/stenzek/duckstation/commit/d67b0a3d318622a35d032ba4e8fe86d5183640ea))\n- Add a dedicated key for overlays ([Stenzek](https://github.com/stenzek/duckstation/commit/013d5860d0a861ddb1344130ea6f69e29bb10674))\n- Don't copy controller type to game ([Stenzek](https://github.com/stenzek/duckstation/commit/6f04957ceb9f2048bab43d9991bc0847181f0c13))\n- Don't reset folders when resetting settings ([Stenzek](https://github.com/stenzek/duckstation/commit/8be86cf3b9c0b56b54dc8cf2a1cfe84973eec7e1))\n- Backport additional helper functions ([Stenzek](https://github.com/stenzek/duckstation/commit/435c11b011456447b565316e1ef5b8ba091c681b))\n- Make OpenSharedCFile() wrap OpenCFile() on non-Windows ([Stenzek](https://github.com/stenzek/duckstation/commit/c52ee422dbbebe4eabfe58b5b3ec8f7f5e3e754b))\n- Add error parameter to FTell64() ([Stenzek](https://github.com/stenzek/duckstation/commit/7bde29361772f05518cce93a507880aa7c46ea12))\n- Extract find result sorting to function ([Stenzek](https://github.com/stenzek/duckstation/commit/4c34a8a6f933e907bd301a3c24dbbd8b86be382a))\n- Use shared file open for ReadBinaryFile/ReadFileToString ([Stenzek](https://github.com/stenzek/duckstation/commit/9a00b885e86c3067c20ba29fad379fdd7b9d814d))\n- More RVO optimizations ([Stenzek](https://github.com/stenzek/duckstation/commit/f480d99e7d390419f3a2874d5a764177773bb7d9))\n- Add more ReadFileToString() overloads ([Stenzek](https://github.com/stenzek/duckstation/commit/392be265edaa222672226f3c491d0b69356657ba))\n- c1b520f: CPU/Recompiler: Respect load delays when swapping NOP slots (Stenzek)\n- 9a59598: CPU/Recompiler: Cancel pending loads on self moves (Stenzek)\n- 840b3b6: CPU/Recompiler: Keep link-register delay slots in order (Stenzek)\n- 29066f0: CPU/Recompiler: Dispatch interpreter fallback exceptions (Stenzek)\n- 0da4906: CPU/Recompiler: Trap constant signed arithmetic overflow (Stenzek)\n- 3cb897a: CPU/Recompiler: Preserve pending loads on memory exceptions (Stenzek)\n- 2b0a9ad: CPU/Recompiler: Correct misaligned indirect jump exceptions (Stenzek)\n- 3a50643: CPU/Recompiler: Fix ARM32 VIXL debug builds (Stenzek)\n- 47583d2: CPU/Recompiler: Mask constant variable shift…",
-      "platforms": [
-        "android"
-      ],
+      "publishedAt": "2026-10-10T11:48:51Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137783-ordi-copperline-v1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
+      "officialUrl": "https://copperline.dev/",
+      "summary": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确） 。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "content": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确）\n。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
+      "platforms": [],
       "relatedEmulatorIds": [
-        "duckstation"
+        "copperline_pc"
       ],
-      "contentHash": "e522e73b1ff6d591d880129ad2a7fd95117688d66c116b4b5b8abf0002a99e96",
+      "contentHash": "4caf2a32e6e8721844d6701bf376861616718d8bf9ca39a07234dfd18df8138f",
+      "translationPending": false
+    },
+    {
+      "id": "137777",
+      "title": "【其他】Mini sac de GIT (2026/10/10)",
+      "originalTitle": "[www] Mini sac de GIT (2026/10/10)",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T10:21:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137777-www-mini-sac-de-git-2026-10-10/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/07/git.png",
+      "officialUrl": "",
+      "summary": "以下是最新开发的模拟器，以及更新频率最高的模拟器。",
+      "content": "以下是最新开发的模拟器，以及更新频率最高的模拟器。",
+      "originalContent": "Voici les derniers émulateurs en développement, ainsi que ceux bénéficiant des mises à jour les plus fréquentes.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d0550d1a10304247aebb2c477afce9d7e1d86967b2f28c8ba74677468a3fddb9",
+      "translationPending": false
+    },
+    {
+      "id": "137775",
+      "title": "【街机】SuperModel WIP (x86/x64) v0.3a Build 261009",
+      "originalTitle": "[Arcade] SuperModel WIP (x86/x64) v0.3a Build 261009",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T09:56:52Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137775-arcade-supermodel-wip-x86-x64-v0-3a-build-261009/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/08/Supermodel.png",
+      "officialUrl": "http://www.supermodel3.com/",
+      "summary": "由Bart Trzynadlowski、Ville Linde和Stefano Teso在其开发版本中创建的第一个世嘉Model 3模拟器（请参阅此处或那里） [来源]。 在此处准备的配置文件。 变更内容： 更新系统从SVN更改为GIT ，因此版本名称更改，为简单起见，我将使用比GIT默认值更易于理解的发布日期系统。 • [vs298]更新Games.xml •固定杂项 请注意，此处提供了为Sinden添加支持的新分叉。",
+      "content": "由Bart Trzynadlowski、Ville Linde和Stefano Teso在其开发版本中创建的第一个世嘉Model 3模拟器（请参阅此处或那里） [来源]。\n在此处准备的配置文件。\n\n变更内容：\n更新系统从SVN更改为GIT ，因此版本名称更改，为简单起见，我将使用比GIT默认值更易于理解的发布日期系统。\n\n• [vs298]更新Games.xml\n•固定杂项\n\n请注意，此处提供了为Sinden添加支持的新分叉。\n\n已添加：\n• SEGA拉力赛2音乐校正（混音）\n•音乐校正vf3中的第1级2人（红色地窖） （不确定是否要修改，因此可能会导致其他游戏出现其他声音问题）。（正式包括）\n\n要生成数据，您可以使用此工具。",
+      "originalContent": "Le premier émulateur de Sega Model 3 créé par Bart Trzynadlowski, Ville Linde et Stefano Teso dans sa version de développement (voir ici ou là) [source].\nFichiers de configurations préparés ici.\n\nLes changements:\n\nLe système de mise à jour passe de SVN à GIT, du coup le nom des versions changent, par simplicité j'utiliserai un système par date de release plus compréhensible que le par défaut de GIT.\n\n- [vs298] Update Games.xml\n- Misc fixes\n\nA noter qu'un nouveau fork ajoutant le support du Sinden est dispo ici.\n\nAjout:\n- correction des musiques dans sega rally 2 (mix)\n- correction musique 1er niveau 2joueurs (la cave rouge) dans vf3 (pas sûr de la modif, et donc cela peut éventuellement entrainer d'autre problèmes sonore sur d'autre jeux).(inclut officiellement)\n\nPour générer un dat vous pouvez utiliser cet outil.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "3a3e049e87be79b19d999729b08e3b5b59152bb77af987fb3ae575ce690f15eb",
+      "translationPending": false
+    },
+    {
+      "id": "137772",
+      "title": "【家用机】Bcan v0.1.0f",
+      "originalTitle": "[Consoles de salon] Bcan v0.1.0f",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T09:45:26Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137772-consoles-de-salon-bcan-v0-1-0f/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/Bcan008b.png",
+      "officialUrl": "https://www.facebook.com/profile.php?id=61579382638861",
+      "summary": "B 'can是台湾Super A' Can控制台的模拟器，由MAME 0.287.的BillyJr开发。它还支持Famicom、Super Famicom、Sega Master System和Game Gear。 该项目接管了Super A'Can的现有仿真，旨在纠正仍然存在的问题，特别是在显示和声音方面。 BillyJr表示，他在AI的帮助下多次接管并修复了代码，并表示所有当前已知的问题都已得到修复。",
+      "content": "B 'can是台湾Super A' Can控制台的模拟器，由MAME 0.287.的BillyJr开发。它还支持Famicom、Super Famicom、Sega Master System和Game Gear。\n该项目接管了Super A'Can的现有仿真，旨在纠正仍然存在的问题，特别是在显示和声音方面。 BillyJr表示，他在AI的帮助下多次接管并修复了代码，并表示所有当前已知的问题都已得到修复。\n另一个与BillyJr无关的在线模拟项目可在此处找到。\n\nhttps://www.youtube.com/watch?v=Kajm0UIzfOw\n\n变更内容：\n\n•增加了对FC、SFC、SMS和GG的支持。\n•此次更新为未来的中文游戏翻译奠定了基础。 如果您更喜欢更清洁的A 'can仿真器，则可以坚持使用以前的版本。\n•许多功能和工具仍在开发中，这将是一个长期项目。\n•目前支持9款游戏的中文翻译：\n• CFS ：勇者斗恶龙V\n• FC ：勇者斗恶龙II ；勇者斗恶龙IV ；英雄传说；神秘的村留城堡？; Dragon Ball: Daimao Fukkatsu\n•游戏装备： Shining Force Gaiden: Ensei - Jashin no Kuni ； Shining Force Gaiden II: Jashin no Kakusei ； Shining Force Gaiden: Final Conflict\n•所有9款游戏均完全支持繁体中文（台湾）和广东话（香港）。\n•这种方法不会修改或直接翻译游戏ROM ，因此可以按原样使用原始日语ROM。\n•与传统翻译方法不同，该项目使用了不同的方法。它最初是一项从记忆中提取文本并使用人工智能进行翻译的实验。虽然这很有效，但结果感觉像是中国贴纸粘贴在单个日语字符上，类似的方法已经存在。\n•当前方法的开发允许16 × 16个汉字替换原来的8 × 8个字符空间。 6倍分辨率下，汉字最高可达48 × 48像素，用户可自行选择字体。 然而，这种方法对系统性能要求更高。\n•该项目现已可供测试。\n•如果您想支持该项目，欢迎您加入订阅区，因为当前的开发过程消耗了大量的AI代币。",
+      "originalContent": "B'can est un émulateur de la console taïwanaise Super A'Can, développé par BillyJr à partir de MAME 0.287. Il prend également en charge la Famicom, la Super Famicom, la Sega Master System et la Game Gear.\n\nLe projet reprend l’émulation existante de la Super A'Can et vise à corriger les problèmes encore présents, notamment au niveau de l’affichage et du son. BillyJr indique avoir repris et corrigé le code à de nombreuses reprises avec l’aide de l’IA et affirme que tous les problèmes actuellement connus ont été corrigés.\n\nUn autre projet (non lié à BillyJr) d'émulation online est disponible ici.\n\nhttps://www.youtube.com/watch?v=Kajm0UIzfOw\n\nLes changements:\n\n- Added support for FC, SFC, SMS, and GG.\n- This update lays the groundwork for future Chinese game translations. If you prefer a cleaner A'can emulator, you can stick with the previous version.\n- Many features and tools are still under development, and this will be a long-term project.\n- Chinese translations are currently supported for 9 games:\n- SFC: Dragon Quest V\n- FC: Dragon Quest II; Dragon Quest IV; Heroes' Legend; The Mysterious Murasame Castle?; Dragon Ball: Daimao Fukkatsu\n- Game Gear: Shining Force Gaiden: Ensei - Jashin no Kuni; Shining Force Gaiden II: Jashin no Kakusei; Shining Force Gaiden: Final Conflict\n- All 9 games fully support Traditional Chinese (Taiwan) and Cantonese (Hong Kong).\n- This approach does not modify or directly translate game ROMs, so the original Japanese ROMs can be used as-is.\n- Unlike conventional translation methods, this project uses a different approach. It initially started as an experiment to extract text from memory and translate it using AI. Although this worked, the results felt like Chinese stickers pasted over individual Japanese characters, and similar approaches already existed.\n- The current method was developed to allow 16×16 Chinese characters to replace the original 8×8 character space. At 6× resolution, Chinese characters can reach up to 48×48 pixels, and users can choose their own fonts. However, this approach is more demanding on system performance.\n- The project is now available for testing.\n- If you'd like to support the project, you're welcome to join the subscription area, as the current development process consumes a significant amount of AI tokens.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "ba6483ab3ebfaa79c26d7afb64040f874072bc2d90c342ee11811f985536d64b",
+      "translationPending": false
+    },
+    {
+      "id": "137770",
+      "title": "【其他】FCEUX v2.7",
+      "originalTitle": "[Console] FCEUX v2.7",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-10T09:20:34Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/137770-console-fceux-v2-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/07/fceux.png",
+      "officialUrl": "http://fceux.com",
+      "summary": "由zeromus和rheiny （又名SP ）创建， mz、adelikat、nitsujrehtona、Ugly Joe、maximus、CaH4e3 （ Demul、FCEU-MM ）、Sebastian Porst （ FCEUXD SP ）、qfox和Lucas Sabota加入。",
+      "content": "由zeromus和rheiny （又名SP ）创建， mz、adelikat、nitsujrehtona、Ugly Joe、maximus、CaH4e3 （ Demul、FCEU-MM ）、Sebastian Porst （ FCEUXD SP ）、qfox和Lucas Sabota加入。 不要忘记前作者的作品： Bero (FCE)、Xodnizel (FCEU)、Bbitmaster & Parasyte (FCEU XD)、Blip & nitsuja (FCEU TAS)、Luke Gustafson (FCEU TAS +)。\n\n之前\n\n之后\n2.7.0版本引入了几个新功能和改进，重点是构建系统增强、媒体编解码器支持和开发人员工具。 通过支持FFmpeg 9和增强的平台兼容性，分析和调试功能得到了显着改进。\n\n32/64位版本/64位Qt版本\n请注意， 64位版本是开发版本，为确保稳定性，您需要暂时使用32位版本。",
+      "originalContent": "Créé par zeromus et rheiny (aka SP) et rejoint par mz, adelikat, nitsujrehtona, Ugly Joe, maximus, CaH4e3 (Demul, FCEU-MM), Sebastian Porst (FCEUXD SP), qfox et Lucas Sabota. Sans oublié le travail des anciens auteurs: Bero (FCE), Xodnizel (FCEU), Bbitmaster & Parasyte (FCEU XD), Blip & nitsuja (FCEU TAS), Luke Gustafson (FCEU TAS+).\n\nAvant\n\nAprès\n\nThe 2.7.0 release introduces several new features and improvements focused on build system enhancements, media codec support, and developer tooling. Profiling and debugging capabilities have been significantly improved, with support for FFmpeg 9 and enhanced platform compatibility.\n\nVersion 32/64 bits / Version Qt 64 bits\n\nAttention, la version 64 bits est une version de développement, pour assurer la stabilité vous devez rester avec la version 32 bits pour le moment.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "fceux_pc"
+      ],
+      "contentHash": "92a9920e1a51205784b8fbfa170a45c1af6541324a6c6752275ae82ace2033e7",
       "translationPending": false
     },
     {
@@ -407,30 +628,6 @@
         "sameboy_core"
       ],
       "contentHash": "3d28f253d059e957eeffbd140f820d7dc39ee553a1d2d21b650f0d01d7421e41",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-azahar_plus-AZAHAR-PLUS-2126-2-A",
-      "title": "【Android更新】AzaharPlus AZAHAR_PLUS_2126_2_A",
-      "originalTitle": "AzaharPlus AZAHAR_PLUS_2126_2_A Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-09T10:12:07Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/AzaharPlus/AzaharPlus/releases/tag/AZAHAR_PLUS_2126_2_A",
-      "imageUrl": "asset://assets/emulators/azahar_plus.png",
-      "officialUrl": "https://github.com/AzaharPlus/AzaharPlus",
-      "summary": "AzaharPlus 发布 Android 新版本 AZAHAR_PLUS_2126_2_A，发布日期为2026年10月09日。点击查看官方版本信息与更新说明。",
-      "content": "AzaharPlus 已发布 Android 最新版本 AZAHAR_PLUS_2126_2_A。\n\n发布日期：2026年10月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n⚠️⚠️⚠️\n该版本纠正了公开宣布的重大安全弱点,因此建议立即更新\nhttps://github.com/azahar-emu/azahar/security/advisories/GHSA-h74v-5mw8-qg8r\n⚠️⚠️⚠️\n\nAzaharPlus 2126.2-A 与 Azahar 2126.2 除此外:\n\n• 兼容所有游戏文件。 如果一个文件与任何 Citra 叉工作,它与 AzaharPlus.\n• 从官方服务器下载系统文件的能力。 不需要实际3DS.\n• 与老式CPU兼容(无) SSE4.2 (所需)\n• 与Android 9相容\n• ZipPass:通过zip文件交换 StreetPass数据的新方法\n• 欺诈\n• Amiibo一代人\n• 提高多人与其他Citra叉的兼容性\n\nAndroid的构造有两种口味。\n\n• 替换:其应用代码与 Azahar,所以它会替换在设备上。\n其显示名称为\".AzaharPlus\" 其图标背景为蓝色。\n如果您有其他的应用程序, 请使用此选项 Azahar比如说前端\n\n• 共存:它有一个新的应用代号,以便与它共存 Azahar 没有问题。\n其显示名称为\"+AzaharPlus+\",其图标背景为红色。",
-      "originalContent": "⚠️⚠️⚠️\r\nThis version fixes a critical security vulnerability that was publicly announced so immediate update is advised\r\nhttps://github.com/azahar-emu/azahar/security/advisories/GHSA-h74v-5mw8-qg8r\r\n⚠️⚠️⚠️\r\n\r\nAzaharPlus 2126.2-A is the same as Azahar 2126.2 except for this:\r\n\r\n- Compatibility with all game files. If a file works with any Citra fork, it works with AzaharPlus.\r\n- Ability to download system files from official servers. No need for an actual 3DS.\r\n- Compatibility with older CPUs (no SSE4.2 required)\r\n- Compatibility with Android 9\r\n- ZipPass: A new way to exchange StreetPass data through zip files\r\n- Built in cheats\r\n- Amiibo generation\r\n- Better multiplayer compatibility with other Citra forks\r\n\r\nThe Android build is available in 2 flavors.\r\n\r\n- Replace: It has the same application id as Azahar, so it will replace it on the device.\r\nIts display name is \"AzaharPlus\" and its icon background is blue.\r\nUse this one if you have other apps that target Azahar, like a frontend for example.\r\n\r\n- Coexist: It has a new application id so it can coexist with Azahar without issues.\r\nIts display name is \"+AzaharPlus+\" and its icon background is red.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "azahar_plus"
-      ],
-      "contentHash": "dcc8338fe26b2573a3bd416e0e2e06c7b77ed59c86b31f19942d027470723354",
       "translationPending": false
     },
     {
@@ -11564,6 +11761,30 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "d712076cf35d76b1821405b94b24ac07873bc145cf4889b0eae207532c716109"
+    },
+    {
+      "id": "android-release-x360_mobile-0-6-3",
+      "title": "【Android更新】X360 Mobile 0.6.3",
+      "originalTitle": "X360 Mobile 0.6.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-08-17T19:30:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.6.3",
+      "imageUrl": "asset://assets/emulators/x360_mobile.png",
+      "officialUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL",
+      "summary": "X360 Mobile 发布 Android 新版本 0.6.3，发布日期为2026年08月17日。点击查看官方版本信息与更新说明。",
+      "content": "X360 Mobile 已发布 Android 最新版本 0.6.3。\n\n发布日期：2026年08月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nX360 Mobile 0.6.3 和 X360 伴侣 0.1.0\n\nX360 Mobile 0.6.3 通过新的 X360 引入本地无线多人游戏\n伴奏应用程序,与Android Home快捷键,一个更清晰的驱动程序\n目录和统一的触控系统。\n\nX360 伴侣 0.1.0\n\n• 增加了X360 Company,一个单独的Android应用程序,打开电话\n同一本地网络或成对的蓝牙设备进入远程 X 输入\n控制器。 控制器。\n• 最多可分给P2、P3或P4三个同伴。 临 1\n除非主机明确能够\n远程播放。\n• 增加用户确认的配对、信任的东道方管理、连接恢复、\n每名玩家朗布尔和GamerProfile选择主机。\n• 增加了一个具有兼容的TOML的共享本地化触控编辑器\n导入/导出、预设、 Xbox 播放器指示器和控制器艺术品。\n• Odin3和Honor通过Gears of War 2验证了LAN游戏机。\n蓝牙仍然具有实验性和装置依赖性。\n\n库、快捷键和输入\n\n• 增加每场Android Home快捷键。 快捷键使用嵌入的标题图像\n在可用时支持的游戏内容中,打开直接游戏加载\n屏幕上,应用已保存的游戏设置,并在\n游戏退出。\n• 统一东道主和同伴的触摸艺术、布局模型和边缘意识\n工厂安置。 标准布局现在保留了预期的控制\n以每个支持的宽度比部分扩展到屏幕边缘。\n• 扩大载有发布说明的综合驱动目录,以便用户能够\n在下载驱动程序前审查维护者兼容性说明。\n\n软件包\n\n• X360 Mobile: `emu.x360mobile.com`编辑 `0.6.3` (`versionCode 6039000`),\n资产 `x360-mobile-0.6.3.apk`.\n• X360同伴: `emu.x360mobile.controller`编辑 `0.1.0`\n(`versionCode 11002`),资产 `x360-companion-0.1.0.apk`.\n\n两个APK都与既定的 X360 Mobile 释相相。 这个\n仿真器使用 APK 签名计划 v3 并带有本地 v4 侧车; 伴行\n也包含Android 8-12相容性的v2.\n\nX360 Mobile 仍为实验软件。 它不隶属于微软\n或 Xbox ,并且必须只用于用户合法拥有的游戏和内容。",
+      "originalContent": "# X360 Mobile 0.6.3 and X360 Companion 0.1.0\n\nX360 Mobile 0.6.3 introduces local wireless multiplayer through the new X360\nCompanion application, alongside Android Home shortcuts, a clearer driver\ncatalog and a unified touch-control system.\n\n## X360 Companion 0.1.0\n\n- Added X360 Companion, a separate Android application that turns a phone on\n  the same local network or a paired Bluetooth device into a remote XInput\n  controller.\n- Up to three companions can be assigned independently to P2, P3 or P4. P1\n  remains protected from remote assignment unless the host explicitly enables\n  remote-only play.\n- Added user-confirmed pairing, trusted-host management, connection recovery,\n  per-player rumble and GamerProfile selection on the host.\n- Added a shared, localized touch-control editor with compatible TOML\n  import/export, presets, Xbox player indicator and controller artwork.\n- LAN gameplay was validated between Odin3 and Honor through Gears of War 2.\n  Bluetooth remains experimental and device-dependent.\n\n## Library, shortcuts and input\n\n- Added per-game Android Home shortcuts. A shortcut uses a title image embedded\n  in supported game content when available, opens the direct-game loading\n  screen, applies the game's saved settings and returns to the launcher when\n  the game exits.\n- Unified the host and Companion touch artwork, layout model and edge-aware\n  factory placement. Standard layouts now preserve intended controls that\n  extend partially beyond a screen edge on every supported aspect ratio.\n- Expanded the integrated driver catalog with release descriptions so users can\n  review maintainer compatibility notes before downloading a driver.\n\n## Packages\n\n- **X360 Mobile:** `emu.x360mobile.com`, version `0.6.3` (`versionCode 6039000`),\n  asset `x360-mobile-0.6.3.apk`.\n- **X360 Companion:** `emu.x360mobile.controller`, version `0.1.0`\n  (`versionCode 11002`), asset `x360-companion-0.1.0.apk`.\n\nBoth APKs are signed with the established X360 Mobile Release identity. The\nemulator uses APK Signature Scheme v3 with a local v4 sidecar; the Companion\nalso includes v2 for Android 8-12 compatibility.\n\nX360 Mobile remains experimental software. It is not affiliated with Microsoft\nor Xbox and must be used only with games and content the user legally owns.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "x360_mobile"
+      ],
+      "contentHash": "71c0b482fd2d313a14d395fd12035ba076898eabbdc4bbe5db8258ce7e2401e4",
+      "translationPending": false
     },
     {
       "id": "136027",
