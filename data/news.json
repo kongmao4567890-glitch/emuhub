@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T17:36:30.697795Z",
+  "generatedAt": "2026-10-15T05:07:57.592849Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,103 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T01:32:12Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月15日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "c8f9d15e61275240ce592f9fe281f4e5585b3779f9b21d7db83dcd4b3b2a9eea",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-1-3",
+      "title": "【Android更新】ARMSX3 1.1.3",
+      "originalTitle": "ARMSX3 1.1.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-14T22:23:01Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.1.3",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.1.3，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.1.3。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.1.3\n\n\n\n新增功能：\n\n控制器\n•左摇杆：完全向上或向左俯卧撑现在可以达到摇杆范围的尽头，就像真正的PS3控制器一样。 它停了一步，所以当你向上或向左推时，有些游戏不是跑步而是走路，其中包括GOW3、Uncharted 2、3和Last of Us。 直线向下推几度，现在也能保持全力以赴。\n•左侧的D-pad现在将棒完全推开，而不是90 ％。 放开D-pad或映射到拐杖方向的按钮，当您仍然按住拐杖时，不再取消拐杖。\n•隆隆声：控制器在整个游戏过程中不再嗡嗡作响，使电机保持在非常低的设置以保持静止，例如Ragnarok Odyssey ACE。由@ mariobob修复。\n\n\n\n从上游RPCS3\n•图形修复。装甲核心V在锁定动画期间不再丢失几何图形，并且抵抗3的闪烁光线消失。深度缓冲区现在遵循真实硬件上的测试，这可以减少Alpha效果在屏幕上时的闪烁。使用PS3硬件鼠标光标的游戏现在显示它。作者： @ kd-11。\n• 3D点阵游戏英雄不再崩溃。修复是一个新的PPU事件唤醒延迟设置， ARMSX3会自动为游戏打开它。作者： @ Yahfz。\n•适用于加载速度过快的游戏的新选项。模拟硬盘读取速度修复了Armored Core V和Armored Core: Verdict Day (by @ Yahfz)中的崩溃问题。模拟BD-ROM读取速度修复了Dragon Ball ： Raging Blast游戏中的块状视频（由@ digant73提供）。默认情况下，两者都处于关闭状态，您可以在所有核心设置中找到它们。\n• PKG安装：生化危机：黑暗面编年史不再无法以0%安装。作者： @ digant73。\n•更少的冻结。当音乐停止时，具有自定义配乐的游戏不再有冻结的风险（由@ Megamouse提供）。\n•在将已删除或替换的文件保持打开状态的游戏中，保存状态不再崩溃。作者： @ seanbrar。\n• SPU重新编译器：修复了可能产生错误结果的错误，并返回了优化通道。作者： @ Whatcookie。\n•安全：数十项内存安全修复，以及wolfSSL、curl和libpng更新（由@ Megamouse更新）。 在线（ RPCN ）数据和标题ID检查更严格（由@ acts-1631 ）。\n•此外： PPU解释器精度修复（由@ izcarti提供） ，以及没有扩展深度范围的GPU选项，用于修复Destiny的字符，默认情况下关闭（由@ desire提供）。\n\n\n\n\n\n\n\n\n\n< img width = \"1920\" height = \"1080\" alt = \"image\" src = \"https://github.com/user-attachments/assets/1…",
+      "originalContent": "# ARMSX3 1.1.3\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9374e4fd-8381-452a-9b2f-1a161fbc3c01\" />\r\n\r\nWhat's new: \r\n\r\n## Controller\r\n\r\n- **Left stick:** a full push up or left now reaches the end of the stick's range, like a real PS3 controller. It stopped one step short, so some games walked instead of running when you pushed straight up or left, GOW3, Uncharted 2, 3, and Last of Us among them. Pushes a few degrees off straight also keep their full strength now.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b2a5342c-7095-4db4-a363-4fc844ae11b7\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f09cb27d-b86a-45b1-8759-fbbe8200b431\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/def1bffa-2d2c-476e-8e62-27ae781855cc\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/16238298-cbc7-4b14-9f11-981e29c1b1b1\" />\r\n\r\n- **D-pad as left stick** now pushes the stick all the way instead of 90%. Letting go of the D-pad, or of a button mapped to a stick direction, no longer cancels the stick while you're still holding it that way.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ef32c927-6097-409b-8c05-1a3997d847b0\" />\r\n\r\n- **Rumble:** controllers no longer buzz for the whole session in games that keep the motor on a very low setting to hold it still, such as Ragnarok Odyssey ACE. Fixed by @mariobob.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/806aa911-ce5d-46c0-8139-3b9f0f047b86\" />\r\n\r\n## From upstream RPCS3\r\n\r\n- **Graphics fixes.** Armored Core V no longer loses geometry during the lock-on animation, and Resistance 3's flickering light is gone. Depth buffers now follow tests on real hardware, which may reduce flickering when alpha effects are on screen. Games that use the PS3's hardware mouse cursor now show it. By @kd-11.\r\n- **3D Dot Game Heroes should no longer crash.** The fix is a new PPU Event Wake-Up Delay setting, and ARMSX3 turns it on automatically for the game. By @Yahfz.\r\n- **New options for games that load too fast.** Emulate HDD Read Speed fixes crashes in Armored Core V and Armored Core: Verdict Day (by @Yahfz). Emulate BD-ROM Read Speed fixes blocky videos in the Dragon Ball: Raging Blast games (by @digant73). Both are off by default, you can find them in All Core Settings.\r\n- **PKG installs:** Resident Evil: The Darkside Chronicles no longer fails to install at 0%. By @digant73.\r\n- **Fewer freezes.** Games with custom soundtracks no longer risk freezing when the music stops (by @Megamouse).\r\n- **Save states** no longer crash in games that keep a deleted or replaced file open. By @seanbrar.\r\n- **SPU recompiler:** a bug that could give wrong results is fixed, and an optimization pass is back. By @Whatcookie.\r\n- **Safety:** dozens of memory-safety fixes, and wolfSSL, curl and libpng updated (by @Megamouse). Online (RPCN) data and title IDs are checked more strictly (by @acts-1631).\r\n- **Also:** a PPU interpreter accuracy fix (by @izcarti), and an option for GPUs without an extended depth range that fixes Destiny's characters there, off by default (by @desire).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/02e68513-351a-48e9-b418-d44ab590d3a7\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e8bbd298-2657-40d0-afb2-9a7bb08ab35d\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/24550cbb-d3ec-4853-9a6e-284000b7b8e8\" />\r\n\r\n<img width=\"4032\" height=\"3024\" alt=\"image\" src=\"https://github.com/user-attachments/assets/599d3f90-64a6-402d-915d-4c37b4be59ca\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "d80eed44e0edcf19312a06deca1eac35d7370528d4ab846c4b5ca52aa63d3120",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-14T21:32:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `ebaf904` — `v3.9.0` （ `develop` ）\n\n提交： `ebaf904`（https://github.com/libretro/virtualjaguar-libretro/commit/ebaf904cb029eafeb4ae8e33eb1d505649de1109）\n构建时间： 2026-10-14 21:32 UTC\nCI 任务： build log（https://github.com/libretro/virtualjaguar-libretro/actions/runs/38614675798）\n分支： `develop`\n提示： `develop`尖端的自动构建，每次推送时更换。 它针对所有24个目标进行了编译；尚未通过测试套件或任何手动QA。 对于稳定的构建，请使用最新版本的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。\n\n核心在启动时将其标识记录为`v3.9.0 ebaf904` —在报告针对此版本的错误时引用该行。\n\n自上一夜版以来的变更\n```\n76fcc8b文档（网站） ：重新拍摄主题、字体、RetroAchievements、Discord和调试工具的桌面应用程序库照片\nbd42105 CHORE ：从回购中删除公关截图\n1f382ae FIX （应用程序） ：在字体预览缓存中为新行腾出空间（完全缓存已耗尽）\n3ddf52f FIX （ APP ） ：当所选字体丢失时，不要每帧重建字体图集\nf2d5f2f FEAT （应用程序） ：带有已安装操作系统字体、收藏夹、近期和每种字体预览的字体选择器\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.g…",
+      "originalContent": "### Nightly `ebaf904` — `v3.9.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`ebaf904`](https://github.com/libretro/virtualjaguar-libretro/commit/ebaf904cb029eafeb4ae8e33eb1d505649de1109) |\n| **Built** | 2026-10-14 21:32 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/38614675798) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.9.0 ebaf904` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n76fcc8b docs(site): retake desktop-app gallery shots for themes, fonts, RetroAchievements, Discord and debug tools\nbd42105 chore: drop the PR screenshot from the repo\n1f382ae fix(app): make room in the font preview cache for new rows (a full cache starved them)\n3ddf52f fix(app): do not rebuild the font atlas every frame while the chosen font is missing\nf2d5f2f feat(app): font picker with installed OS fonts, favorites, recents and per-font previews\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.g…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "4a645c9b5dcbcbb4248df85d1528a69ba96f4d7ed3db0e1e1405029fd2cfc003",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-ruffle_android-0-261014",
+      "title": "【Android更新】Ruffle (Android) 0.261014",
+      "originalTitle": "Ruffle (Android) 0.261014 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-14T20:54:50Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.261014",
+      "imageUrl": "asset://assets/emulators/ruffle_android.png",
+      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
+      "summary": "Ruffle (Android) 发布 Android 新版本 0.261014，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
+      "content": "Ruffle (Android) 已发布 Android 最新版本 0.261014。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 建造:建造科特林部分 `rustls-platform-verifier` 由@torokati44 翻译。 https://github.com/ruffle-rs/ruffle-android/pull/866\n• 弦乐:起舞 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/868\n• 由 @ RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/869\n\n\n完整更改日志 : https://github.com/ruffle-rs/ruffle-android/compare/0.261013...0.261014",
+      "originalContent": "## What's Changed\n* build: Build the Kotlin component of `rustls-platform-verifier` from a submodule by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/866\n* chore: Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/868\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/869\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.261013...0.261014",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "ruffle_android"
+      ],
+      "contentHash": "883a07a3a533bf854303b44f81519acffc17ffbaf6d685a8184960380b6e20e2",
+      "translationPending": false
+    },
     {
       "id": "138003",
       "title": "【电脑】DanSpec Beta v0.9.555",
@@ -299,55 +396,6 @@
         "gamenative"
       ],
       "contentHash": "c4243a826eba44559c6e3ccd967fda1ff590cd50ddc9790469fdf8f4b68289a9",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-14T09:32:21Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• pcecd:只忽略 0x1ee800-0x1effff(barbudreadmon)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• pcecd: just ignore 0x1ee800-0x1effff (barbudreadmon)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "233c683837f7e9f1b5a4c3e86b33fd442eea7cafa91d38e9e05bf967b03065ec",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-14T09:25:24Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `1803585` — `v3.9.0` (`develop`)\n\n提交：`1803585`（https://github.com/libretro/virtualjaguar-libretro/commit/180358534acf1e2d0405b855061d6832f93e1eea）\n构建时间：2026-10-14 09:25 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/38540003748）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有24个目标;它没有通过测试套件或任何人工质量控制。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为: `v3.9.0 1803585` 启动时 —— 在报告此构建时引用此行。\n\n自上一夜版以来的变更\n\n```\nba93a90 docs(gdb):重新验证LLDB,记录双表站,修正 lldb 助手\nc297ebe 固定( gdb): 在非屏蔽套接字上发送全部回复\n7567d1e docs(gdb): 校正指南和 gdbinit 以说明 gdb 的实际情况 (# 936)\na2f1229 固定( gdb ) : 将 stub 从框中取出 gdb。 (# 936)\nb31693c 固定( app): 光碟菜单项和可选择选项值的独有ID, refs # 932\n420fc53 fix( app): 将接口选项移至设置 > 界面标签; 在菜单下绘制 FPS 标签\n4682e24 fix( app): 将文件系统调用从 BIOS 标签的每个框架绘图路径中调用\n4f74b83 固定( app): BIOS 选择器行获得独特的标签和 ImGui ID (# 932)\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dyli…",
-      "originalContent": "### Nightly `1803585` — `v3.9.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`1803585`](https://github.com/libretro/virtualjaguar-libretro/commit/180358534acf1e2d0405b855061d6832f93e1eea) |\n| **Built** | 2026-10-14 09:25 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/38540003748) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.9.0 1803585` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\nba93a90 docs(gdb): re-verify LLDB, document the double watch stop, fix lldb helpers\nc297ebe fix(gdb): send whole replies on the non-blocking socket\n7567d1e docs(gdb): correct the guide and gdbinit for what stock gdb really does (#936)\na2f1229 fix(gdb): make the stub work with stock gdb out of the box (#936)\nb31693c fix(app): unique IDs for disc menu items and option-value selectables, refs #932\n420fc53 fix(app): move interface options into a Settings > Interface tab; draw the FPS label beneath menus\n4682e24 fix(app): keep filesystem calls out of the BIOS tab's per-frame draw path\n4f74b83 fix(app): BIOS selector rows get unique labels and ImGui IDs (#932)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dyli…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "96312e6c421c14dbc300c0058e48409d8efe827620f78b10dac9a518cc3101ec",
       "translationPending": false
     },
     {
@@ -658,30 +706,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-ruffle_android-0-261013",
-      "title": "【Android更新】Ruffle (Android) 0.261013",
-      "originalTitle": "Ruffle (Android) 0.261013 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-13T09:45:44Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle-android/releases/tag/0.261013",
-      "imageUrl": "asset://assets/emulators/ruffle_android.png",
-      "officialUrl": "https://github.com/ruffle-rs/ruffle-android",
-      "summary": "Ruffle (Android) 发布 Android 新版本 0.261013，发布日期为2026年10月13日。点击查看官方版本信息与更新说明。",
-      "content": "Ruffle (Android) 已发布 Android 最新版本 0.261013。\n\n发布日期：2026年10月13日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n更新内容\n• 弦乐:起舞 ruffle 由 @ dedependabot[bot] 提供的9个更新的组合 https://github.com/ruffle-rs/ruffle-android/pull/864\n• 编剧:由@dependabot[bot]在1个目录上跳出生锈-小块,并更新20个 https://github.com/ruffle-rs/ruffle-android/pull/863\n• 由 @ RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/865\n\n\n完整更改日志 : https://github.com/ruffle-rs/ruffle-android/compare/0.261008...0.261013",
-      "originalContent": "## What's Changed\n* chore: Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/864\n* chore: Bump the rust-minor group across 1 directory with 20 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/863\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/865\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.261008...0.261013",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "ruffle_android"
-      ],
-      "contentHash": "5838d989a1a89813125c0504e85e23f8830ed9142b1beca6eace9cf5fc1f2687",
-      "translationPending": false
-    },
-    {
       "id": "137912",
       "title": "【电脑】WinUAE (Public Beta) v6.1.0 Beta 18",
       "originalTitle": "[Ordi.] WinUAE (Public Beta) v6.1.0 Beta 18",
@@ -701,30 +725,6 @@
         "winuae_pc"
       ],
       "contentHash": "3babd36abdcede8a00fae44a8b4e775e9d17baa70c0cd33540197005a7bfe5fa",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-1-1-2",
-      "title": "【Android更新】ARMSX3 1.1.2",
-      "originalTitle": "ARMSX3 1.1.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-12T19:33:33Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.1.2",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.1.2，发布日期为2026年10月12日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.1.2。\n\n发布日期：2026年10月12日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.1.2\n\n\n\n游戏\n•侠盗猎车手IV ：不再使用SPU XFloat精度：近似值，因此游戏现在默认使用更快的近似值（更少的CPU使用率）。该修复程序是一个内置补丁，自动打开BLUS30682 v1.02 （完整版，包括两集）和BLUS30127/NPUB30702 v1.08.的旧版本\npdate可能仍然需要Accurate （基本的1.0版本甚至不能在RPCS3上工作）。\n\n\n\n\n\n\n\n•侠盗猎车手IV ：白天的灰色透明矩形图形错误消失了。 其他以同样方式在屏幕上留下陈旧区块的游戏也会得到修复。\n在此次更新之后，我认为GTA IV可以在8台Elite及更高版本的设备上播放，然后实际上无法播放。 现在，它的性能就像真正的PS3一样，帧掉落和所有！ ;) （有没有更好的方法来尝试在Android上玩《侠盗猎车手4》？ 可能，但我不在乎，让PS3版本更好地工作是我们的目标）。\n\n\n\n性能\n•使用多线程RSX的游戏不再等待其辅助线程。 RPCS3数据库开启了大约170场比赛。 在Odin 3上，《侠盗猎车手IV》从16-18 fps降至25-30 fps。\n\n补丁\n•覆盖游戏多个版本的内置补丁现在可以为所有版本打开。 只有列出的最后一个版本得到了修复，因此Splatterhouse的美国版本， Killzone 3的欧洲版本和几个Ratchet ＆ Clank版本都没有得到修复。\n\n控制器\n• D-pad保持在打开的提示符内，而不是在导航设置时移动到其后面的设置。\n\n面向开发人员\n•在设备上重播RSX捕获：设置- >高级- >开发人员工具，重播捕获回放使用Capture RSX帧记录的帧。 来自其他设备的捕获也起作用：将.rrc.gz文件放在配置/捕获中。 回放需要@ elad335从上游RPCS3进行内存修复。\n•转储此帧：游戏菜单中Capture RSX frame下的新按钮将下一帧保存为config/captures中的图片：成品图像或沿途的每个渲染通道。在“设置”、“高级”和“开发人员工具”中选择哪一个。\n•捕获RSX帧不再使游戏暂停。游戏继续运行，并显示一条消息，说明捕获的保存位置。",
-      "originalContent": "# ARMSX3 1.1.2\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/df1c54a1-45e9-4cdf-88dc-d469e795f602\" />\r\n\r\n## Games\r\n\r\n- **Grand Theft Auto IV:** no longer falls through the world on SPU XFloat Accuracy: Approximate, so the game now uses the faster Approximate by default (less CPU usage). The fix is a built-in patch, on automatically for BLUS30682 v1.02 (Complete Edition, both episodes included) and BLUS30127 / NPUB30702 v1.08. Older versions without the update may still need Accurate (and the base 1.0 version doesn't even work on RPCS3).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/91e5fe98-18ff-48b4-b494-d6221e5c10ab\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1ab47b91-7d06-4fa8-8de3-4b9e4272355a\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/67df8147-d2ab-4407-b03b-bbe8649c8800\" />\r\n\r\n- **Grand Theft Auto IV:** the grey see-through rectangle graphical bug in daytime is gone. Other games that left stale blocks on screen the same way get the fix too.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9c95a6bf-39a6-4c45-9a62-3ff3e8b1d58a\" />\r\n\r\nI would consider GTA IV playable on 8 Elite and higher devices after this update, before it was virtually unplayable. Now it performs like a real PS3 did, frame drops and all! ;) (Is there better ways to try playing GTA 4 on Android? Probably, but I don't care, getting the PS3 version working better was the goal). \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/023cba43-559d-484b-b96f-181dd6fd7092\" />\r\n\r\n## Performance\r\n\r\n- Games that use Multithreaded RSX no longer stall waiting on its helper thread. The RPCS3 database turns it on for about 170 games. Grand Theft Auto IV went from 16-18 fps to 25-30 on an Odin 3.\r\n\r\n## Patches\r\n\r\n- Built-in patches that cover several versions of a game now turn on for all of them. Only the last version listed got its fix, so Splatterhouse's US release, Killzone 3's European release and several Ratchet & Clank versions went without.\r\n\r\n## Controller\r\n\r\n- The D-pad stays inside an open prompt instead of moving to the setting behind it while navigating settings.\r\n\r\n## For developers\r\n\r\n- **Replay RSX captures on the device:** Settings -> Advanced -> Developer tools, Replay a capture plays back a frame recorded with Capture RSX frame. Captures from other devices work too: put the .rrc.gz file in config/captures. Replays needed a memory fix from upstream RPCS3, by @elad335.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fc29bd30-2be0-4fd6-803b-3740242db66d\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/af525b08-c4c5-4e8e-b8c6-fef89ee74030\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9a3c90a8-cbc1-4ed7-b71e-1c54f70a407e\" />\r\n\r\n- **Dump this frame:** a new button in the in-game menu, under Capture RSX frame, saves the next frame as pictures in config/captures: the finished image, or every render pass along the way. Choose which in Settings, Advanced, Developer tools.\r\n- **Capture RSX frame** no longer leaves the game paused. The game keeps running, and a message says where the capture was saved.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f349ea13-42f4-41f8-92ca-bfe6a0f46d52\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ea1e7b06-2d99-4208-84a4-d16fd781086f\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f4509ce6-c9c6-4d02-b422-dcf9700bcf06\" />",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "2c4946221b7d92bd8c1092f0ad56ca58c4ab036a8626877d31581cf0c0eec944",
       "translationPending": false
     },
     {
