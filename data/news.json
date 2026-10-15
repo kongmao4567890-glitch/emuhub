@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T05:07:57.592849Z",
+  "generatedAt": "2026-10-15T17:20:20.810151Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -15,14 +15,14 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-15T01:32:12Z",
+      "publishedAt": "2026-10-15T16:06:41Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月15日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_suna8.cpp: 添加砖块区(barbudreadmon)\n• 还原 \"d_sms.cpp: 删除了\"Mad Mix Game R (HB)\"(fprietog)\n• d_sms.cpp: 删除了\"Mad Mix Game R(HB)\"(fprietog).\n• d_sms.cpp: 修复“ Mad Mix Game R (HB) ” 映射器( fprietog)\n• d_megadrive.cpp, d_neogeo.cpp, d_sms.cpp: 各种... (fprietog) .",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_suna8.cpp: add Brick Zone (barbudreadmon)\n• Revert \"d_sms.cpp: removed \"Mad Mix Game R (HB)\"\" (fprietog)\n• d_sms.cpp: removed \"Mad Mix Game R (HB)\" (fprietog)\n• d_sms.cpp: tray to fix \"Mad Mix Game R (HB)\" mapper (fprietog)\n• d_megadrive.cpp, d_neogeo.cpp, d_sms.cpp: various... (fprietog)",
       "platforms": [
         "android"
       ],
@@ -30,7 +30,229 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "c8f9d15e61275240ce592f9fe281f4e5585b3779f9b21d7db83dcd4b3b2a9eea",
+      "contentHash": "aa2d64bcbeb3cacb855a00671df33df11d1b360315245dd996bec920669701d1",
+      "translationPending": false
+    },
+    {
+      "id": "138025",
+      "title": "【电脑】ASE v1.13",
+      "originalTitle": "[Ordi.] ASE v1.13",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T15:37:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138025-ordi-ase-v1-13/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/ASE-emu.png",
+      "officialUrl": "https://github.com/thebitculture/ase/",
+      "summary": "Atari系统仿真器(ASE)是用C #开发的Atari ST仿真器，支持ST F/FM、Mega ST和STE型号。 它使用由Dirk Hoffmann博士创建的摩托罗拉68000 Moira处理器模拟器。 该项目来自于20世纪90年代末用C语言和汇编语言开发的旧模拟器。 此后，大部分代码已被重写，元素也来自Hatari。 最初， ASE被设计为一个简单的项目，用于理解和实验模拟器的工作原理。",
+      "content": "Atari系统仿真器(ASE)是用C #开发的Atari ST仿真器，支持ST F/FM、Mega ST和STE型号。 它使用由Dirk Hoffmann博士创建的摩托罗拉68000 Moira处理器模拟器。\n该项目来自于20世纪90年代末用C语言和汇编语言开发的旧模拟器。 此后，大部分代码已被重写，元素也来自Hatari。\n最初， ASE被设计为一个简单的项目，用于理解和实验模拟器的工作原理。然而，在其发展过程中，它已经大幅增长，并已成为一个更完整的模拟器。",
+      "originalContent": "Atari System Emulator (ASE) est un émulateur Atari ST développé en C#, prenant en charge les modèles ST F/FM, Mega ST et STE. Il utilise notamment l’émulateur de processeur Motorola 68000 Moira, créé par Dr. Dirk Hoffmann.\n\nLe projet est issu d’un ancien émulateur développé en C et assembleur à la fin des années 1990. Une grande partie du code a depuis été réécrite, avec également des éléments provenant de Hatari.\n\nÀ l’origine, ASE avait été conçu comme un projet simple permettant de comprendre et expérimenter le fonctionnement d’un émulateur. Au fil de son développement, il s’est toutefois considérablement enrichi et est devenu un émulateur plus complet.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d92ad7e3fd1f31cc4d100da0250445c4e0d11ae6b8530c8f039d5156a5871756",
+      "translationPending": false
+    },
+    {
+      "id": "138023",
+      "title": "【电脑】Mz800emu v2.0.6",
+      "originalTitle": "[Ordi.] Mz800emu v2.0.6",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T15:34:23Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138023-ordi-mz800emu-v2-0-6/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2020/08/Mz800emu.png",
+      "officialUrl": "http://sourceforge.net/projects/mz800emu/",
+      "summary": "适用于Windows的MZ-800/MZ-700/MZ-1500模拟器。 主要变化包括： •修复了PSG声道切换问题。 •添加了无损AVI视频录制和MP4导出。 •改进的屏幕截图捕获和自动图像录制。 •添加了带有CSV导出的计划工作站(CPU)指令分析。 •修复了MZ-800硬件滚动和Z80/CTC仿真问题。 •改进的卡盒装载、计时精度和CMTSPEED支持。 •添加了用于自动加载和执行卡盒的命令行选项。",
+      "content": "适用于Windows的MZ-800/MZ-700/MZ-1500模拟器。\n\n主要变化包括：\n\n•修复了PSG声道切换问题。\n•添加了无损AVI视频录制和MP4导出。\n•改进的屏幕截图捕获和自动图像录制。\n•添加了带有CSV导出的计划工作站(CPU)指令分析。\n•修复了MZ-800硬件滚动和Z80/CTC仿真问题。\n•改进的卡盒装载、计时精度和CMTSPEED支持。\n•添加了用于自动加载和执行卡盒的命令行选项。\n•使用最近的文件夹和收藏夹改进了文件对话框。\n•修复了调试器内存泄漏、崩溃和同步问题。\n•改进用于调试、分析和音频/视频捕获的MCP命令。",
+      "originalContent": "Un émulateur de MZ-800 / MZ-700 / MZ-1500 pour Windows.\n\nLes changements principaux sont:\n\n- Fixed PSG sound channel switching issues.\n- Added lossless AVI video recording and MP4 export.\n- Improved screenshot capture and automatic image recording.\n- Added CPU instruction profiling with CSV export.\n- Fixed MZ-800 hardware scrolling and Z80/CTC emulation issues.\n- Improved cassette loading, timing accuracy and CMTSPEED support.\n- Added command-line options for automatic cassette loading and execution.\n- Improved file dialogs with recent folders and favorites.\n- Fixed debugger memory leaks, crashes and synchronization issues.\n- Improved MCP commands for debugging, profiling and audio/video capture.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mz800emu_pc"
+      ],
+      "contentHash": "168aafd28be61f7108a02fa1d85fb17b3e95d6b0780ddda135c0591abf6b522a",
+      "translationPending": false
+    },
+    {
+      "id": "138021",
+      "title": "【家用机】Mupen64 RR Lua v1.5.0-6",
+      "originalTitle": "[Consoles de salon] Mupen64 RR Lua v1.5.0-6",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T15:27:52Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138021-consoles-de-salon-mupen64-rr-lua-v1-5-0-6/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/mupen64-lua.png",
+      "officialUrl": "",
+      "summary": "Mupen64 RR Lua （或Mupen64 Re-recording Lua ）是Mupen64的一个分叉（第3个） ，用于视频录制。 这些变化是： ✨ 功能 TASInput –较低的输入延迟（ # 1094 ） TASInput –添加切换以在emu未聚焦时禁用输入 TASInput –操纵杆复位锁定切换(# 1070) Lua – action.lock_hotkeys中的每热键锁定并添加action.get_locked_…",
+      "content": "Mupen64 RR Lua （或Mupen64 Re-recording Lua ）是Mupen64的一个分叉（第3个） ，用于视频录制。\n\n这些变化是：\n\n✨ 功能\nTASInput –较低的输入延迟（ # 1094 ）\nTASInput –添加切换以在emu未聚焦时禁用输入\nTASInput –操纵杆复位锁定切换(# 1070)\nLua – action.lock_hotkeys中的每热键锁定并添加action.get_locked_hotkeys (# 1092)\n\n🐞 错误修复\nViews.Win32 –屏幕截图无法使用集成插件\nViews.Win32 –点击外部游戏视图时未调用atmouse\nViews.Win32 –断开RAM开始格式化\nViews.Win32 –鼠标滚轮在游戏视图上两次到达Lua\nTASAudio –打开配置对话框时音频中断\nTASInput –所有控制器窗口在ROM启动时短暂可见（ # 1090 ）\nTASInput –即使在电影结束后，电影棒中的最后输入\nLua –注销未注册的回拨崩溃\nLua –调用回调后的不平衡堆栈(# 1085)\n核心–在保存期间，从x64上的cop0寄存器读取OOB\n\n原址。叉子1. 叉子2.叉子3.",
+      "originalContent": "Mupen64 RR Lua (ou Mupen64 Re-recording Lua) est un fork (le 3eme) de Mupen64 permettant l'enregistrement de vidéo.\n\nLes changements sont:\n\n✨ Features\nTASInput – Lower input latency (#1094)\nTASInput – Add toggle to disable input when emu unfocused\nTASInput – Lock toggle for joystick reset (#1070)\nLua – Per-hotkey locking in action.lock_hotkeys and add action.get_locked_hotkeys (#1092)\n\n🐞 Bugfixes\nViews.Win32 – Screenshots not working with integrated plugins\nViews.Win32 – atmouse not invoked when clicking outside game view\nViews.Win32 – Broken RAM start formatting\nViews.Win32 – Mouse wheel over the game view reaches Lua twice\nTASAudio – Audio breaks when opening config dialog\nTASInput – All controller windows briefly visible on ROM start (#1090)\nTASInput – Last input in movie sticks even after it ends\nLua – Unregistering non-registered callback crashes\nLua – Unbalanced stack after calling into action callbacks (#1085)\nCore – Oob read from cop0 registers on x64 during st saving\n\nSite original. Fork 1. Fork 2. Fork 3.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "d2c87ca50a386c7ed8d11fc7df932438245b6271910e1be2fc8b1e3324d1c07d",
+      "translationPending": false
+    },
+    {
+      "id": "138019",
+      "title": "【家用机】Ryujinx-Nextendo v1.9.3",
+      "originalTitle": "[Consoles de salon] Ryujinx-Nextendo v1.9.3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T15:25:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138019-consoles-de-salon-ryujinx-nextendo-v1-9-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/nextendo.png",
+      "officialUrl": "https://github.com/NextendoNetwork/Ryujinx-Nextendo",
+      "summary": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。 该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。",
+      "content": "Ryujinx-Nextendo是一款基于Ryujinx的Nintendo Switch模拟器，它已与对Nextendo Network的支持进行了本地集成， Nextendo Network是一种基于社区的私人在线服务，旨在取代任天堂的官方服务。\n该项目接管了Ryujinx的核心仿真，包括CPU、GPU、音频、控件和文件系统。 Nextendo所做的更改主要涉及网络部分和用户界面。\n其目的特别是允许兼容游戏通过Nextendo网络查找在线游戏功能，而无需用户进行特殊手动配置、修改HOSTS文件或绕过SSL。",
+      "originalContent": "Ryujinx-Nextendo est un émulateur Nintendo Switch basé sur Ryujinx, auquel a été intégré nativement le support du Nextendo Network, un service en ligne privé et communautaire destiné à remplacer le service officiel de Nintendo.\n\nLe projet reprend le cœur d'émulation de Ryujinx, notamment pour le processeur, le GPU, l'audio, les contrôles et le système de fichiers. Les modifications apportées par Nextendo concernent principalement la partie réseau et l'interface utilisateur.\n\nL'objectif est notamment de permettre aux jeux compatibles de retrouver des fonctionnalités de jeu en ligne via le Nextendo Network, sans nécessiter de configuration manuelle particulière, de modification du fichier hosts ou de contournement SSL de la part de l'utilisateur.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "7883ef8b5a9a92b5f2fabd53b6a8a18e581fdae93e413fe46517c5d7058b0b1c",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-gopher64-1-1-42",
+      "title": "【Android更新】Gopher64 1.1.42",
+      "originalTitle": "Gopher64 1.1.42 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T14:27:16Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/gopher64/gopher64/releases/tag/v1.1.42",
+      "imageUrl": "asset://assets/emulators/gopher64.png",
+      "officialUrl": "https://github.com/gopher64/gopher64",
+      "summary": "Gopher64 发布 Android 新版本 1.1.42，发布日期为2026年10月15日。点击查看官方版本信息与更新说明。",
+      "content": "Gopher64 已发布 Android 最新版本 1.1.42。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n视窗 :\n• 独立可执行文件: gopher64-windows-x86_64.exe（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-windows-x86_64.exe）\n\nMacOS:\n• 应用程序包: gopher64-macos-aarch64.zip（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-macos-aarch64.zip）\n• 本地工人: `brew install --cask gopher64`\n\n林纳:\n• 独立可执行文件: gopher64-linux -x86_64 (英语).（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-linux-x86_64）\n• 平板电脑: `flatpak install flathub io.github.gopher64.gopher64`\n\n机器人:\n• APK: gopher64-android.apk（https://github.com/gopher64/gopher64/releases/latest/download/gopher64-android.apk）\n\n更新内容\n• 添加对Android Intents(以对话框打开)的支持\n• 改进Android控制器的选择/配置创建\n• 用一些GPU解决崩溃问题\n\n完整更改日志 : https://github.com/gopher64/gopher64/compare/v1.1.40...v1.1.42",
+      "originalContent": "<a href=\"https://loganmc10.itch.io/gopher64\"><img src=\"https://static.itch.io/images/badge.svg\" width=\"200\" ></a>\r\n\r\nWindows:\r\n* Standalone executable: [gopher64-windows-x86_64.exe](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-windows-x86_64.exe)\r\n\r\nMacOS:\r\n* App Bundle: [gopher64-macos-aarch64.zip](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-macos-aarch64.zip)\r\n* Homebrew: `brew install --cask gopher64`\r\n\r\nLinux:\r\n* Standalone executable: [gopher64-linux-x86_64](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-linux-x86_64)\r\n* Flatpak: `flatpak install flathub io.github.gopher64.gopher64`\r\n\r\nAndroid:\r\n* APK: [gopher64-android.apk](https://github.com/gopher64/gopher64/releases/latest/download/gopher64-android.apk)\r\n\r\n## What's Changed\r\n* Add support for Android Intents (Open With dialogs)\r\n* Improve Android controller selection/profile creation\r\n* Fix crash with some GPUs\r\n\r\n**Full Changelog**: https://github.com/gopher64/gopher64/compare/v1.1.40...v1.1.42",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gopher64"
+      ],
+      "contentHash": "35e715772e929582f903a485dd4b7b8cb1029221ad4f6c074e93ad022697ae58",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx1-0-2-6",
+      "title": "【Android更新】ARMSX1 0.2.6",
+      "originalTitle": "ARMSX1 0.2.6 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T14:09:06Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/0.2.6",
+      "imageUrl": "asset://assets/emulators/armsx1.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
+      "summary": "ARMSX1 发布 Android 新版本 0.2.6，发布日期为2026年10月15日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX1 已发布 Android 最新版本 0.2.6。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n大家好！\n\n正如我所承诺的，我已经修复了以下错误\n\n修复了无法加载着色器的问题\n\n固定的内部日志功能\n\n固定前端启动退出到仿真器，而不是返回到启动器\n\n修复了重新排列虚拟按钮时未保存的问题。\n\n固定BIOS音频裂纹缓冲\n修复了OCB布局并将其清理干净，将其更改为默认关闭，并在快速菜单中添加了按游戏或全局切换开关。\n\n功能\n\n添加了在检测到具有相同游戏名称的M3u文件时隐藏多盘游戏\n\n\n在默认情况下，在背景下添加了一个PS ONE主题",
+      "originalContent": "Hi all,\r\n\r\nAs promised I have fixed the following bugs\r\n\r\nFixed shaders failing to load\r\n\r\nFixed internal log feature \r\n\r\nFixed front end launching exiting to the emulator instead going back to the launcher\r\n\r\nFixed virtual buttons not saving when rearranging them.\r\n\r\nFixed bios audio crackle buffering\r\n\r\nFixed OCB layout and cleaned it up and changed it to be off by default and added a per game or global to toggle on or off in the quick menu.\r\n\r\nFeatures\r\n\r\nAdded hiding multi disc games when an M3u file is detected with the same game name\r\n\r\n\r\nAdded a PS one theme under backgrounds to be off by default",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx1"
+      ],
+      "contentHash": "e3a6c51b411d6d6c77cb54462a8eb61d29426966d3ce842d2075fe560b05c217",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T13:59:33Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月15日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•添加Android字符串列表（ Stenzek（https://github.com/stenzek/duckstation/commit/16409920efffae93d973211ff3b2435d8d04dad6） ）\n•更新翻译字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/a1b6f64b08519fc2a5a0ffce22038b2a54ee7aba） ）\n•更新机器翻译（ Stenzek（https://github.com/stenzek/duckstation/commit/4e7516f8f6ec9ebf6c3a80014af58d54790a98ec） ）\n•向非机器翻译添加新字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/2434029f8be87d70424043a927014f4168e685d2） ）\n•添加波浪背景着色器（ Stenzek（https://github.com/stenzek/duckstation/commit/d7fce2d183c5f475dfdf6c6b0811d7a7348d5b1d） ）\n•细微的视觉改善（ Stenzek（https://github.com/stenzek/duckstation/commit/4e072ef9cf34099655c40117c7df3bb8faa80763） ）\n•修复正在禁用的排序列（ Stenzek（https://github.com/stenzek/duckstation/commit/66888ba0d448be54605d55bfbf5efb26a27ffa01） ）",
+      "originalContent": "## Commits\n- Add Android string list ([Stenzek](https://github.com/stenzek/duckstation/commit/16409920efffae93d973211ff3b2435d8d04dad6))\n- Update translation strings ([Stenzek](https://github.com/stenzek/duckstation/commit/a1b6f64b08519fc2a5a0ffce22038b2a54ee7aba))\n- Update machine translations ([Stenzek](https://github.com/stenzek/duckstation/commit/4e7516f8f6ec9ebf6c3a80014af58d54790a98ec))\n- Add new strings to non-machine translations ([Stenzek](https://github.com/stenzek/duckstation/commit/2434029f8be87d70424043a927014f4168e685d2))\n- Add Waves background shader ([Stenzek](https://github.com/stenzek/duckstation/commit/d7fce2d183c5f475dfdf6c6b0811d7a7348d5b1d))\n- Subtle visual improvements ([Stenzek](https://github.com/stenzek/duckstation/commit/4e072ef9cf34099655c40117c7df3bb8faa80763))\n- Fix sort column being disabled ([Stenzek](https://github.com/stenzek/duckstation/commit/66888ba0d448be54605d55bfbf5efb26a27ffa01))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "2d9b405e770aeb13940ff6b9d6a0d2fc86748bd026e16560aad12e97611f9aaf",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-prerelease",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) prerelease",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) prerelease Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T13:26:02Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/prerelease",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 prerelease，发布日期为2026年10月15日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 prerelease。\n\n发布日期：2026年10月15日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n释放候选`d667611` — `v3.9.1` （ `release/v3.9.1` ）\n\n提交： `d667611`（https://github.com/libretro/virtualjaguar-libretro/commit/d667611e6e8c792b755fae8c12e9d6578c69d361）\n构建时间： 2026-10-15 13:25 UTC\nCI 任务： BUILD LOG（https://github.com/libretro/virtualjaguar-libretro/actions/runs/38729109786）\n分支： `release/v3.9.1`\n提示： `release/v3.9.1`尖端的自动构建，每次推送时更换。它针对所有24个目标进行了编译；尚未通过测试套件或任何手动QA。对于稳定的构建，请使用最新版本的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）\n。这是来自发布分支的候选版本，而不是发布版本：它存在，因此24平台矩阵在即将发布的代码上运行，而不是在标记处首次遇到它。\n\n核心在启动时将其标识记录为`v3.9.1 d667611` —在报告针对此版本的错误时引用该行。\n\n自上一个候选版本以来的变化\n\n```\nd667611文档： v3.9.1注意： Skyhammer在长距离运行时有两帧不同，而不是一帧\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-prerelease-linux-aarch64.AppImage\nVirtualJaguar-prerelease-linux-x86_64.AppImage\nVirtualJaguar-prerelease-linux-x86_64.flatpak\nVirtualJaguar-prerelease-macos-universal.zip\nVirtualJaguar-prerelease-windows-arm64-setup.exe\nVirtualJaguar-prerelease-windows-arm64.zip\nVirtualJaguar-prerelease-windows-x64-setup.exe\nVirtualJaguar-prerelease-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_prerelease_amd64.deb\nvirtualjaguar_prerelease…",
+      "originalContent": "### Release candidate `d667611` — `v3.9.1` (`release/v3.9.1`)\n\n| | |\n|---|---|\n| **Commit** | [`d667611`](https://github.com/libretro/virtualjaguar-libretro/commit/d667611e6e8c792b755fae8c12e9d6578c69d361) |\n| **Built** | 2026-10-15 13:25 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/38729109786) |\n| **Branch** | `release/v3.9.1` |\n\n> Automatic build of the `release/v3.9.1` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest). This is a RELEASE CANDIDATE from a release branch, not a release: it exists so the 24-platform matrix runs on the code about to ship, instead of first meeting it at the tag.\n\nThe core logs its identity as `v3.9.1 d667611` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous release candidate\n\n```\nd667611 docs: v3.9.1 notes: Skyhammer differs at two frames in long runs, not one\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-prerelease-linux-aarch64.AppImage\nVirtualJaguar-prerelease-linux-x86_64.AppImage\nVirtualJaguar-prerelease-linux-x86_64.flatpak\nVirtualJaguar-prerelease-macos-universal.zip\nVirtualJaguar-prerelease-windows-arm64-setup.exe\nVirtualJaguar-prerelease-windows-arm64.zip\nVirtualJaguar-prerelease-windows-x64-setup.exe\nVirtualJaguar-prerelease-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_prerelease_amd64.deb\nvirtualjaguar_prerelease…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "cd7d82d05a685f57efa716aa217f20b90adfe5718f2240fda799ccf29bf29bf2",
+      "translationPending": false
+    },
+    {
+      "id": "138017",
+      "title": "【工具】Goliath v0.41 preview",
+      "originalTitle": "[Utilitaires Multi-systemes] Goliath v0.41 preview",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-15T12:45:27Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138017-utilitaires-multi-systemes-goliath-v0-41-preview/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/Goliath.png",
+      "officialUrl": "https://github.com/epsx/Goliath",
+      "summary": "它是NEO GEO专用的前端，围绕单个系统根据专门的RetroArch原则运行。 Goliath管理游戏库、设置、备份和游戏启动，而模拟由Geolith核心通过JGRF/JG提供。 它支持NEO GEO MVS/AES游戏以及NEO GEO CD ，包括变体管理、游戏搜索和排序、会话历史记录、屏幕截图、游戏时间跟踪和各种诊断工具。 Goliath还允许您自定义模拟设置和控制、管理备份、检查BIOS和游戏文件，以及执行音频基准测试和导出。",
+      "content": "它是NEO GEO专用的前端，围绕单个系统根据专门的RetroArch原则运行。 Goliath管理游戏库、设置、备份和游戏启动，而模拟由Geolith核心通过JGRF/JG提供。\n它支持NEO GEO MVS/AES游戏以及NEO GEO CD ，包括变体管理、游戏搜索和排序、会话历史记录、屏幕截图、游戏时间跟踪和各种诊断工具。\nGoliath还允许您自定义模拟设置和控制、管理备份、检查BIOS和游戏文件，以及执行音频基准测试和导出。该界面基于Qt 6 ，提供多种浅色和深色主题。",
+      "originalContent": "Il s'agit d'un frontend dédié à la Neo Geo, fonctionnant sur le principe d'un RetroArch spécialisé autour d'un seul système. Goliath assure la gestion de la ludothèque, des réglages, des sauvegardes et du lancement des jeux, tandis que l'émulation est assurée par le core Geolith via JGRF/JG.\n\nIl prend en charge les jeux Neo Geo MVS/AES ainsi que la Neo Geo CD, avec notamment la gestion des variantes, la recherche et le tri des jeux, l'historique des sessions, les captures d'écran, le suivi du temps de jeu et différents outils de diagnostic.\n\nGoliath permet également de personnaliser les paramètres d'émulation et les contrôles, de gérer les sauvegardes, de vérifier les BIOS et les fichiers de jeux, ainsi que d'effectuer des benchmarks et des exports audio. L'interface est basée sur Qt 6 et propose plusieurs thèmes clairs et sombres.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "73db1e7f1779b89a9df4340420a7e0275b737cc28d5ff7205dfe0151821120b4",
+      "translationPending": false
+    },
+    {
+      "id": "138013",
+      "title": "【其他】Mini sac de GIT (2026/10/15)",
+      "originalTitle": "[www] Mini sac de GIT (2026/10/15)",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-15T12:35:09Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138013-www-mini-sac-de-git-2026-10-15/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/07/git.png",
+      "officialUrl": "",
+      "summary": "以下是最新开发的模拟器，以及更新频率最高的模拟器。",
+      "content": "以下是最新开发的模拟器，以及更新频率最高的模拟器。",
+      "originalContent": "Voici les derniers émulateurs en développement, ainsi que ceux bénéficiant des mises à jour les plus fréquentes.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "52fe08ffb76aa37fbfe82d455c07d3b087c5da1ec4bcf307cd6feb71db402593",
       "translationPending": false
     },
     {
@@ -55,30 +277,6 @@
         "armsx3"
       ],
       "contentHash": "d80eed44e0edcf19312a06deca1eac35d7370528d4ab846c4b5ca52aa63d3120",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-14T21:32:50Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `ebaf904` — `v3.9.0` （ `develop` ）\n\n提交： `ebaf904`（https://github.com/libretro/virtualjaguar-libretro/commit/ebaf904cb029eafeb4ae8e33eb1d505649de1109）\n构建时间： 2026-10-14 21:32 UTC\nCI 任务： build log（https://github.com/libretro/virtualjaguar-libretro/actions/runs/38614675798）\n分支： `develop`\n提示： `develop`尖端的自动构建，每次推送时更换。 它针对所有24个目标进行了编译；尚未通过测试套件或任何手动QA。 对于稳定的构建，请使用最新版本的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。\n\n核心在启动时将其标识记录为`v3.9.0 ebaf904` —在报告针对此版本的错误时引用该行。\n\n自上一夜版以来的变更\n```\n76fcc8b文档（网站） ：重新拍摄主题、字体、RetroAchievements、Discord和调试工具的桌面应用程序库照片\nbd42105 CHORE ：从回购中删除公关截图\n1f382ae FIX （应用程序） ：在字体预览缓存中为新行腾出空间（完全缓存已耗尽）\n3ddf52f FIX （ APP ） ：当所选字体丢失时，不要每帧重建字体图集\nf2d5f2f FEAT （应用程序） ：带有已安装操作系统字体、收藏夹、近期和每种字体预览的字体选择器\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.g…",
-      "originalContent": "### Nightly `ebaf904` — `v3.9.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`ebaf904`](https://github.com/libretro/virtualjaguar-libretro/commit/ebaf904cb029eafeb4ae8e33eb1d505649de1109) |\n| **Built** | 2026-10-14 21:32 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/38614675798) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.9.0 ebaf904` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n76fcc8b docs(site): retake desktop-app gallery shots for themes, fonts, RetroAchievements, Discord and debug tools\nbd42105 chore: drop the PR screenshot from the repo\n1f382ae fix(app): make room in the font preview cache for new rows (a full cache starved them)\n3ddf52f fix(app): do not rebuild the font atlas every frame while the chosen font is missing\nf2d5f2f feat(app): font picker with installed OS fonts, favorites, recents and per-font previews\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.g…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "4a645c9b5dcbcbb4248df85d1528a69ba96f4d7ed3db0e1e1405029fd2cfc003",
       "translationPending": false
     },
     {
@@ -176,30 +374,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx1-0-1-6",
-      "title": "【Android更新】ARMSX1 0.1.6",
-      "originalTitle": "ARMSX1 0.1.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-14T14:44:24Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX1/releases/tag/0.1.6",
-      "imageUrl": "asset://assets/emulators/armsx1.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX1",
-      "summary": "ARMSX1 发布 Android 新版本 0.1.6，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX1 已发布 Android 最新版本 0.1.6。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nHi All,\n谢谢你的耐心\n\nARMSX1 0.1.6 已经释放\n\n现将修改如下:\n\n错误修正\n添加新的后端核心已固定以下\n\n需要设备测试,但应当固定以下\n\n没有更多的 FPS 下降和运行 在全60英尺\n\nM3U 现在正确交换盘片而不是打开文件浏览器\n\n固定 FPS 在所有分辨率设置上慢下来\n\n运行全长60英尺\n\n在 UI 内滚动的固定按钮\n\n固定慢罗姆扫描\n\n\n特征\n\n在视频下添加所有游戏的HD支持 - HD 2, HD 3和 HD 4 (HD 3是复刻设置)\n\n添加了 M3u Hotkey 映射任务,用于从 M3u 文件或盘片文件本身中互换盘片。\n\n\n为Crash Team Racing 粉丝添加了双屏幕支持(更多游戏待后添加)\n\n\n在用户界面中添加了骗取数据库, 这样您就可以切换出弊\n\n添加了\"骗局\"的下载按钮,用于我添加更多而不是等待应用程序更新时。\n\n在游戏中添加出轨的热键按钮任务用于游戏中。\n\n有以下内容很重要\n\n我在两个设备上测试过这些修正 所以请报告里面的任何错误 armsx1 频道\n\n我创建了几套我自己的作弊 贴上实验的标签 但因为整个游戏没有经过测试 所以现在还不确定他们是否继续活跃 这是Tony Hawk Pro Skater的第一场比赛\n他们非常安全使用,不会伤害你的设备。\n\n顺便说一句 - 我会在更多的游戏中加入更多自定义出轨(仅限离线播放),所以如果您想要还没有在出轨数据库中的某些出轨,请告诉我。\n\n您最后需要知道的是,HD设置您更改它, 也更改解答解析度, 以及两个设置都是设置为更好的兼容性。。。。\n\n见这里的 Changlog https://github.com/ARMSX2/ARMSX1/commits/android-compose/\n\n\n\n再次感谢,我希望你享受这个释放。",
-      "originalContent": "Hi All,\r\nThank you for your patience,\r\n\r\nARMSX1 0.1.6 has been released\r\n\r\nPlease read below the following changes\r\n\r\nBug Fixes\r\nAdding a new backend core has fixed the below\r\n\r\nDevice testing will be needed but should have fixed the below\r\n\r\nNo more FPS drops and runs at a full 60fps\r\n\r\nM3U now swaps disc correctly rather than opening up the file browser\r\n\r\nFixed FPS slow down on all resolutions settings\r\n\r\nRunahead now runs a full 60fps\r\n\r\nFixed button scrolling within the UI\r\n\r\nFixed Slow Rom Scanning\r\n\r\n\r\nFeatures\r\n\r\nAdded HD support for all games under video - HD 2, HD 3 and HD 4 (HD 3 is the recemended setting)\r\n\r\nAdded a M3u Hotkey mapping assignment for swapping discs from M3u files or disc files themselves.\r\n\r\n\r\nAdded Dual Screen support for Crash Team Racing fans (more games to be added later)\r\n\r\n\r\nAdded a Cheat Database within the UI so you can toggle cheats on and off  \r\n\r\nAdded a Cheats download button for when I add more rather than waiting for an app update.\r\n\r\nAdded a cheats hotkey button assignment to use while in the game.\r\n\r\nImportant to know the below\r\n\r\nI have tested these fixes on 2 devices so please report any bugs in the armsx1 channel\r\n\r\nI have created a couple of my own cheats labeled experimental but that is because the whole game hasn't been tested so it is still uncertain if they stay active for the all the maps - game for this is Tony Hawk Pro Skater first one.\r\nThey are very safe to use and they will not harm your device.\r\n\r\nFYI - I am going to add more custom cheats to more game (offline play only) so please let me know if you want any certain ones that are not already in the cheat database.\r\n\r\nLast thing that you need to know about is that the HD setting you change it to also changes the dispay resolution as well as both settings are setup as one for better compatibility.\r\n\r\nSee changlog here https://github.com/ARMSX2/ARMSX1/commits/android-compose/\r\n\r\n\r\n\r\nThanks again and I hope you enjoy this release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx1"
-      ],
-      "contentHash": "1dcca76d44469fcf5cb495ac04e42f49103ca2b7e707b6fb396a75b6fb9351e9",
-      "translationPending": false
-    },
-    {
       "id": "137997",
       "title": "【家用机】Meka WIP v0.80.368 (2026/10/14)",
       "originalTitle": "[Consoles de salon] Meka WIP v0.80.368 (2026/10/14)",
@@ -231,12 +405,12 @@
       "sourceUrl": "https://www.emu-france.com/news/137994-consoles-de-salon-shadnet-v0-1-0/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/shadnet.png",
       "officialUrl": "https://github.com/shadps4-emu/shadNet",
-      "summary": "shadNet是shadPS4仿真器的在线服务（替换PSN ） ，基于受RPCN （ PlayStation 3 ）启发的解决方案。 该项目允许用户在模拟PS4游戏中进行在线连接和玩游戏。 您可以在这里登记。 变更内容： •使用本地abseil子模块修复# 27中@ kalaposfos13的一些设置上的构建 • @ georgemoralis在# 28的在线奖杯 • # 29中@ georgemoralis的初始TSS支持 •修复#…",
-      "content": "shadNet是shadPS4仿真器的在线服务（替换PSN ） ，基于受RPCN （ PlayStation 3 ）启发的解决方案。 该项目允许用户在模拟PS4游戏中进行在线连接和玩游戏。\n\n您可以在这里登记。\n\n变更内容：\n•使用本地abseil子模块修复# 27中@ kalaposfos13的一些设置上的构建\n• @ georgemoralis在# 28的在线奖杯\n• # 29中@ georgemoralis的初始TSS支持\n•修复# 30中@ junminlee2004对Gravity Rush中剩余24块板的订购问题\n• @ georgemoralis在# 31中的成员\n• extdData之后的额外字段： fromAccountId和toAccountId by @ georgemoralis in # 32\n•在# 33中由@ georgemoralis更新了STUN服务器\n• Matching2 p12 by @ metr1k-91 in # 34\n• # 35中@ georgemoralis改进的邀请和Presense调试\n• Tooling由@ metr1k-91在# 36\n• （草稿） # 39中@ metr1k-91的附加工具\n• # 40中@ georgemoralis的changeableSessionData webapi调用\n•修复# 41中@ georgemoralis的个人资料关系\n• # 42中@ georgemoralis的锁定会话\n•修复# 45中@ pierluigizagaria的friendList身份字段选择\n• # 46中@ georgemoralis的配对限制\n•客户规则支持由@ georgemoralis在# 47\n• @ georgemoralis在# 48中更好地处理在线状态\n• @ georgemoralis在# 49的记分牌服务\n• @ georgemoralis在# 50的客户版本服务",
-      "originalContent": "shadNet est un service online (en remplacement du PSN) pour l’émulateur shadPS4, basé sur une solution inspirée de RPCN (PlayStation 3). Ce projet permet aux utilisateurs de se connecter et de jouer en ligne ensemble sur des jeux PS4 émulés.\n\nVous pouvez vous enregistrer ici.\n\nLes changements:\n- Use local abseil submodule to fix building on some setups by @kalaposfos13 in #27\n- online trophies by @georgemoralis in #28\n- initial TSS support by @georgemoralis in #29\n- fix ordering for remaining 24 boards in Gravity Rush by @junminlee2004 in #30\n- Members by @georgemoralis in #31\n- Extra fields after extdData: fromAccountId and toAccountId by @georgemoralis in #32\n- updated stun server by @georgemoralis in #33\n- Matching2 p12 by @metr1k-91 in #34\n- improved invites and presense debug by @georgemoralis in #35\n- Tooling docu by @metr1k-91 in #36\n- (Draft) Additional Tooling by @metr1k-91 in #39\n- changeableSessionData webapi calls by @georgemoralis in #40\n- fix profile relations by @georgemoralis in #41\n- locking session by @georgemoralis in #42\n- Fix friendList identity field selection by @pierluigizagaria in #45\n- matchmaking limitation by @georgemoralis in #46\n- client rules support by @georgemoralis in #47\n- better handling for online status by @georgemoralis in #48\n- scoreboard service by @georgemoralis in #49\n- client version service by @georgemoralis in #50",
+      "summary": "shadNet是shadPS4仿真器的在线服务（替换PSN ） ，基于受RPCN （ PlayStation 3 ）启发的解决方案。 该项目允许用户在模拟PS4游戏中进行在线连接和玩游戏。 您可以在这里登记。 变更内容： •授权支持代码 •使用本地abseil子模块修复# 27中@ kalaposfos13的一些设置上的构建 • @ georgemoralis在# 28的在线奖杯 • # 29中@ georgemoralis的初始TSS…",
+      "content": "shadNet是shadPS4仿真器的在线服务（替换PSN ） ，基于受RPCN （ PlayStation 3 ）启发的解决方案。 该项目允许用户在模拟PS4游戏中进行在线连接和玩游戏。\n\n您可以在这里登记。\n\n变更内容：\n•授权支持代码\n•使用本地abseil子模块修复# 27中@ kalaposfos13的一些设置上的构建\n• @ georgemoralis在# 28的在线奖杯\n• # 29中@ georgemoralis的初始TSS支持\n•修复# 30中@ junminlee2004对Gravity Rush中剩余24块板的订购问题\n• @ georgemoralis在# 31中的成员\n• extdData之后的额外字段： fromAccountId和toAccountId by @ georgemoralis in # 32\n•在# 33中由@ georgemoralis更新了STUN服务器\n• Matching2 p12 by @ metr1k-91 in # 34\n• # 35中@ georgemoralis改进的邀请和Presense调试\n• Tooling由@ metr1k-91在# 36\n• （草稿） # 39中@ metr1k-91的附加工具\n• # 40中@ georgemoralis的changeableSessionData webapi调用\n•修复# 41中@ georgemoralis的个人资料关系\n• # 42中@ georgemoralis的锁定会话\n•修复# 45中@ pierluigizagaria的friendList身份字段选择\n• # 46中@ georgemoralis的配对限制\n•客户规则支持由@ georgemoralis在# 47\n• @ georgemoralis在# 48中更好地处理在线状态\n• @ georgemoralis在# 49的记分牌服务\n• @ georgemoralis在# 50的客户版本服务",
+      "originalContent": "shadNet est un service online (en remplacement du PSN) pour l’émulateur shadPS4, basé sur une solution inspirée de RPCN (PlayStation 3). Ce projet permet aux utilisateurs de se connecter et de jouer en ligne ensemble sur des jeux PS4 émulés.\n\nVous pouvez vous enregistrer ici.\n\nLes changements:\n- Auth code support\n- Use local abseil submodule to fix building on some setups by @kalaposfos13 in #27\n- online trophies by @georgemoralis in #28\n- initial TSS support by @georgemoralis in #29\n- fix ordering for remaining 24 boards in Gravity Rush by @junminlee2004 in #30\n- Members by @georgemoralis in #31\n- Extra fields after extdData: fromAccountId and toAccountId by @georgemoralis in #32\n- updated stun server by @georgemoralis in #33\n- Matching2 p12 by @metr1k-91 in #34\n- improved invites and presense debug by @georgemoralis in #35\n- Tooling docu by @metr1k-91 in #36\n- (Draft) Additional Tooling by @metr1k-91 in #39\n- changeableSessionData webapi calls by @georgemoralis in #40\n- fix profile relations by @georgemoralis in #41\n- locking session by @georgemoralis in #42\n- Fix friendList identity field selection by @pierluigizagaria in #45\n- matchmaking limitation by @georgemoralis in #46\n- client rules support by @georgemoralis in #47\n- better handling for online status by @georgemoralis in #48\n- scoreboard service by @georgemoralis in #49\n- client version service by @georgemoralis in #50",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "dc32396e0df2260db2df7946cccd61afd14c5c3b0be292018109b038e89d6cd6",
+      "contentHash": "aea65f34c53c940a204d4dda97de18a79bc808704a43168554f885e9d3425b68",
       "translationPending": false
     },
     {
@@ -263,14 +437,14 @@
     },
     {
       "id": "137990",
-      "title": "【家用机】Play! v0.77 GIT (2026/10/14)",
-      "originalTitle": "[Consoles de salon] Play! v0.77 GIT (2026/10/14)",
+      "title": "【家用机】Play! v0.77 GIT (2026/10/15)",
+      "originalTitle": "[Consoles de salon] Play! v0.77 GIT (2026/10/15)",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-10-14T12:10:25Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/137990-consoles-de-salon-play-v0-77-git-2026-10-14/",
+      "sourceUrl": "https://www.emu-france.com/news/137990-consoles-de-salon-play-v0-77-git-2026-10-15/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/08/Play.jpg",
       "officialUrl": "https://github.com/jpd002/Play-",
       "summary": "Play!是Windows/MacOS/iOS/Android上的PlayStation 2和Namco System 2X6 （以及System 147/148变体）的模拟器。 它目前使用C/C + +编写，并使用指令缓存/重新编译系统在模拟CPU时实现更好的性能。 模拟器可以操作一组游戏。 作者的目标是达到一定的质量水平，让任何人都可以在PC上玩自己喜欢的PlayStation 2游戏。 • Qt ：关闭窗口时暂停模拟器。",
@@ -281,7 +455,7 @@
         "pc"
       ],
       "relatedEmulatorIds": [],
-      "contentHash": "f0312a1fe2906bd79f338c156674eeeeaf77a71149028f2264ee7ad8d2b4529f",
+      "contentHash": "cd34cc3ece5b90f47c328d59c7704b58414d2e03481dee07c7f83b1abba1b038",
       "translationPending": false
     },
     {
@@ -348,30 +522,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "947121707584b3f6ae8319d6a0f1b1341b7c040e6d112bf56721f1e198b8c58b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-14T11:23:31Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月14日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月14日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 将卡片保存为同步文件(Stenzek)（https://github.com/stenzek/duckstation/commit/34c37444aa90c2ada5b923a0d153323218d917b5）)",
-      "originalContent": "## Commits\n- Save card to file asynchronously ([Stenzek](https://github.com/stenzek/duckstation/commit/34c37444aa90c2ada5b923a0d153323218d917b5))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "7443e12a970015c2776e5ffaa92ad6ddb756cfeac3852b43b90f479ef4527ec9",
       "translationPending": false
     },
     {
@@ -8883,31 +9033,6 @@
         "copperline_pc"
       ],
       "contentHash": "5c17c3a7b3dc007faaf4def2370d6c063364eacd4989755494431b4d8bd06c1f",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-xenra_og-0-4-0",
-      "title": "【Android更新】Xenra 0.4.0",
-      "originalTitle": "Xenra 0.4.0 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-06T18:53:12Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/Yebot32/xenra/releases/tag/v0.4.0",
-      "imageUrl": "asset://assets/emulators/xenra.png",
-      "officialUrl": "https://github.com/Yebot32/xenra",
-      "summary": "Xenra 发布 Android 新版本 0.4.0，发布日期为2026年09月06日。点击查看官方版本信息与更新说明。",
-      "content": "Xenra 已发布 Android 最新版本 0.4.0。\n\n发布日期：2026年09月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nXenra 0.4.0\n\n[帕特伦]（https://img.shields.io/badge/Patreon-Support_on_Patreon-FF424D?style=for-the-badge&logo=patreon）](https://www.patreon.com/cw/Xanite/membership)\n\nXenra 0.4.0 带来主线程响应传出, 自定义 Vulkan 驱动程序支持 Exynos (马里) 设备, 实验时间框架生成, FATX 保存流线, 以及合并 联 合 国 Xenra 进入一个自由的建筑。\n\n---\n\n升级通知\n\n• 直接安装:安装 Xenra 0.4.0 直接覆盖您已有的绿色安装。 不要先卸载, 否则您的配置、 配置文件及阴影缓存将被删除。\n• 黄金版 停止:黄金已退役 0.4.0. 安装绿色( E)`Ali.Xanite.green`)将同时安装Gold. 黄金数据在您设备上仍然完好无损,但在Green上需要一次性设置(选择BIOS,游戏路径,以及授予存储权限).\n\n---\n\n要点\n\n接口和响应性\n• 触摸和D-Pad导航:触摸目标分辨率推迟到 `ACTION_UP` 不走全景树。 D-pad 导航消除了每个按压的~170文件系统探测器进行即时库滚动。\n• 背景日志分析: `xe.log` 解析 崩溃日志检查 墓碑读取完全从主线上移出 跨越库和设置屏幕。\n• Game Data & HUD:用于保存文件夹的目录行走,CPU/热读功能HUD样本在没有UI stutter的专用背景道上进行性能。\n^ 零定位动画: Glow取景动画师使用已分解的,以生命周期为约束的缓存梯度,去除连续的vsync内存分配。\n· 冷起步优化:IPC许可回转从5个下至1个倒闭, `/proc/self/maps` 解析已移到背景线程。\n\n核心修补内存( M)\n• FATX 保存导入流:将导入流以 1 MiB 块来保存,而不是分配完整的内存。 超过4个 GiB FATX 限制的文件在转移前被干净地拒绝。\n• JIT Lock & Leak Fix:在提示缓存自动保存时写出闪光 `mmap_lock` (消除中场微站),并解决了~3 MB会话内存出漏。\n• Boot & Lifecycle Guarding:在内部同步纹理的通过使锁能阻止靴子上出现黑色/错误的帧闪光,并阻止方向变化上的双载。\n• 清洁出厂:在应用程序出厂时发出禁止无害的SDL线条撕裂警报,消除幻影 \"Xenra 坠毁的\"土司。\n\n自定义 GPU 驱动程序生成和框架\n• Exynos(马里)支助:Qualcomm KGSL检查不再开启自定义Vulkan司机装载(`/dev/kgsl-3d0`) (中文(简体) ). 马里装置(`/dev/mali`)现在可以装入社区驱动程序ZIP和每场游戏的覆盖。\n• 临时动能预测:添加实验运动矢量预测模式(默认关闭),以稳定快锅和平地地期间的帧生成。 切换通过亚行直播而不重启:\n`adb shell setprop debug.xanite.fg_temporal_pred 1` (1 = On, 0 = Off)\n• 驱动卡 UI:简化了GPU驱动卡,以显示活动的运行时驱动程序状态而无需运行日志解析操作。\n\nNetplay & UI 波兰语\n• Netplay Transport Bootstrap:固定的HTTPS在靴子上自动初始化为靴子拖放,而不是需要诊断屏幕。\n• 清理 Xbox OG 上下文菜单:原版 Xbox 游戏的上下文菜单只显示相关的选项(`Set Game Folder`),隐藏Xbox 360特定存储条目。\n\n---\n\n构建细节\n\n与官员签署 Xenra 释放密钥( E)`527f6eb59054f9b0a4f8c661f9b78a9fe80cf4a9ffaff43e0a3727b16226446f`).\n\n软件包名称: 构建 APK: Version 代码\n`Ali.Xanite.green`：`Xenra-0.4.0-green-release.apk`：`31`",
-      "originalContent": "# Xenra 0.4.0\r\n\r\n[![Patreon](https://img.shields.io/badge/Patreon-Support_on_Patreon-FF424D?style=for-the-badge&logo=patreon)](https://www.patreon.com/cw/Xanite/membership)\r\n\r\n**Xenra 0.4.0** brings a main-thread responsiveness pass, custom Vulkan driver support for Exynos (Mali) devices, experimental temporal frame generation, FATX save streaming, and the consolidation of Xenra into a single free build.\r\n\r\n---\r\n\r\n## Upgrade Notice\r\n\r\n* **Install Direct:** Install Xenra 0.4.0 directly over your existing Green installation. Do not uninstall first, or your configurations, profiles, and shader caches will be deleted.\r\n* **Gold Edition Discontinued:** Gold is retired as of 0.4.0. Installing Green (`Ali.Xanite.green`) will install alongside Gold. Gold data remains intact on your device, but a one-time setup (selecting BIOS, game paths, and granting storage permissions) is required on Green.\r\n\r\n---\r\n\r\n## Highlights\r\n\r\n### Interface & Responsiveness\r\n* **Touch & D-Pad Navigation:** Touch target resolution defers to `ACTION_UP` without walking full view trees. D-pad navigation eliminates ~170 filesystem probes per press for instant library scrolling.\r\n* **Background Log Parsing:** `xe.log` parsing, crash log checks, and tombstone reads moved completely off the main thread across Library and Settings screens.\r\n* **Game Data & HUD:** Directory walks for save folders and CPU/thermal reads for the performance HUD sample on dedicated background lanes without UI stutter.\r\n* **Zero-Allocation Animations:** Glow view animators use quantized, lifecycle-bound cached gradients, eliminating continuous vsync memory allocations.\r\n* **Cold Start Optimization:** IPC permission round-trips collapsed from 5 down to 1, and `/proc/self/maps` parsing moved to a background thread.\r\n\r\n### Core Fixes & Memory\r\n* **FATX Save Import Streaming:** Save imports stream in 1 MiB chunks instead of allocating full RAM. Files exceeding the 4 GiB FATX limit are cleanly rejected prior to transfer.\r\n* **JIT Lock & Leak Fix:** Flash writes during hint cache auto-saves no longer hold `mmap_lock` (eliminating mid-game micro-stalls), and a ~3 MB session memory leak was resolved.\r\n* **Boot & Lifecycle Guarding:** Synchronized texture adoption inside render locks to stop black/wrong frame flashes on boot, and prevented double-loads on orientation change.\r\n* **Clean Exits:** Suppressed benign SDL thread teardown alerts on application exit, eliminating phantom \"Xenra crashed\" toasts.\r\n\r\n### Custom GPU Drivers & Frame Generation\r\n* **Exynos (Mali) Support:** Custom Vulkan driver loading is no longer gated by Qualcomm KGSL checks (`/dev/kgsl-3d0`). Mali devices (`/dev/mali`) can now load community driver ZIPs and per-game overrides.\r\n* **Temporal Motion Prediction:** Added an experimental motion vector prediction mode (default off) to stabilize frame generation during fast pans and flat terrain. Toggle live via ADB without restarting:\r\n  `adb shell setprop debug.xanite.fg_temporal_pred 1` (1 = On, 0 = Off)\r\n* **Driver Card UI:** Simplified the GPU driver card to display active runtime driver status without running log parsing operations.\r\n\r\n### Netplay & UI Polish\r\n* **Netplay Transport Bootstrap:** Fixed HTTPS transport initialization to bootstrap automatically at boot rather than requiring the diagnostic screen.\r\n* **Cleaned Xbox OG Context Menu:** Context menus for Original Xbox games display only relevant options (`Set Game Folder`), hiding Xbox 360-specific storage entries.\r\n\r\n---\r\n\r\n## Build Details\r\n\r\nSigned with the official Xenra release key (`527f6eb59054f9b0a4f8c661f9b78a9fe80cf4a9ffaff43e0a3727b16226446f`).\r\n\r\n| Package Name | Build APK | Version Code |\r\n| :--- | :--- | :---: |\r\n| `Ali.Xanite.green` | `Xenra-0.4.0-green-release.apk` | `31` |",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "xenra_og",
-        "xenra_360"
-      ],
-      "contentHash": "6922db6673c7044cbab20754f54e1fe33c0f57b7154d133ab430895a38f2ec56",
       "translationPending": false
     },
     {
