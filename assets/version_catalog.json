@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T15:37:54Z",
+  "generatedAt": "2026-10-18T04:37:28Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "86box_pc": {
@@ -269,15 +269,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-10-17T14:40:35Z",
+      "releaseDate": "2026-10-18T01:16:07Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• adj. in d_cps2.cpp (#2807) (KlaviculaAG)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• pre90s/d_qbert.cpp: set cpu to i8088_TYPE (dinkc64)\n• nec cpu: add i8088 and i8086 types (VezInit(x, i8086_TYPE / i8088_type..), and an actual word-handler for cpus w/16bit databus (dinkc64)\n• z80: in MSX-mode, imm2 doesn't get m1 delayed (dinkc64)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-10-17T14:40:35Z",
+      "releaseDate": "2026-10-18T01:16:07Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• adj. in d_cps2.cpp (#2807) (KlaviculaAG)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• pre90s/d_qbert.cpp: set cpu to i8088_TYPE (dinkc64)\n• nec cpu: add i8088 and i8086 types (VezInit(x, i8086_TYPE / i8088_type..), and an actual word-handler for cpus w/16bit databus (dinkc64)\n• z80: in MSX-mode, imm2 doesn't get m1 delayed (dinkc64)"
     },
     "fceux_pc": {
       "version": "fceux-2.7.0",
@@ -417,10 +417,10 @@
       "releaseNotes": "# KytyPlus v4.3 Release Notes\r\n\r\nKytyPlus v4.3 collects launcher compatibility, Vulkan shader, and Windows path-handling fixes made since v4.1. These changes improve specific code paths and do not imply a broad increase in game compatibility.\r\n\r\n## What’s new\r\n\r\n### Vulkan layer-output shader compatibility\r\n\r\n- Layer-output shaders now use the core SPIR-V `ShaderLayer` capability enabled by the Vulkan feature set, rather than the unenabled `SPV_EXT_shader_viewport_index_layer` extension.\r\n- Layer-output shaders use SPIR-V 1.5 and include their live descriptor and push-constant variables in the entry-point interface. Shaders without layer output retain SPIR-V 1.3.\r\n- Added regression coverage for SPIR-V validation and Vulkan pipeline creation.\r\n\r\n### Launcher and CLI configuration compatibility\r\n\r\n- Legacy launcher configurations can disable FSR without failing because of inherited default output dimensions.\r\n- Explicit FSR output dimensions remain validated, and invalid or incomplete dimensions are rejected.\r\n- Fixed successful launcher process starts being reported with Qt’s misleading “Unknown error” text.\r\n- Added emulator CLI regressions for the discussion #15 argument combination and FSR option ordering/validation.\r\n\r\n### Windows Unicode game paths\r\n\r\n- Mounting and resolving game paths now consistently convert UTF-8 strings to native filesystem paths on Windows.\r\n- Windows file enumeration and directory operations preserve non-ASCII names, including paths containing characters such as an en dash.\r\n- Added regression coverage for Unicode mount paths, guest filenames, directory opens, and file reads.\r\n\r\n### Compatibility data\r\n\r\n- Updated Dead Cells (`PPSA-15554`) to **Playable**, last tested with v4.1.\r\n\r\n## Limitations\r\n\r\n- The shader change has focused validation and regression coverage; it is not a guarantee that every game or graphics driver is compatible."
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-10-17-6aa3846",
-      "releaseDate": "2026-10-17T13:07:51Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-17-6aa3846",
-      "releaseNotes": "## What's Changed\n* feat: add an in-game performance panel by @juanfariasdev in https://github.com/KytyPS5/KytyPS5/pull/1090\n\n## New Contributors\n* @juanfariasdev made their first contribution in https://github.com/KytyPS5/KytyPS5/pull/1090\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-10-17-415387f...KytyPS5-2026-10-17-6aa3846"
+      "version": "KytyPS5-2026-10-18-37df7f3",
+      "releaseDate": "2026-10-18T04:16:14Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-18-37df7f3",
+      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-10-18-4059179...KytyPS5-2026-10-18-37df7f3"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -950,11 +950,11 @@
       "devReleaseNotes": "Automated pre-release built by CI from `main` @ `d9878f72a4aac607a5aa32b837158a3099bbbe00`.\n\n**Downloads**\n- Windows (x86_64): `nexium-windows-x86_64.zip`\n- Linux (x86_64): `nexium-linux-x86_64.tar.gz`\n- Android (arm64-v8a): `nexium-android-arm64.apk`\n- PS5 homebrew (PPSA99640 folder for `/data/homebrew/`): `nexium-ps5.zip`\n\n> Pre-release / experimental.\n\nNeXium archives bundle the FFmpeg command-line program under the GNU LGPL v2.1 or later. The corresponding unmodified source, license, signature, and build configuration are included in each archive under `licenses/FFmpeg`."
     },
     "ngpcraft_pc": {
-      "version": "3.8.8",
-      "releaseDate": "2026-10-11T19:58:12Z",
-      "sourceUrl": "https://github.com/Tixul/Ngpcraft_emulator/releases/tag/v3.8.8",
-      "releaseNotes": "**Full Changelog**: https://github.com/Tixul/Ngpcraft_emulator/compare/v3.8.7...v3.8.8\r\n\r\n\r\nOnline play (desktop) -  Thanks to Blueteemo for finding and fixing this  — fixes still being tested \r\nThese fixes are new and still being tested in real online matches. If you play online, your feedback is very welcome, especially if you still see games going out of sync or disconnecting.\r\n\r\nOpening the debugger's Link tab should no longer break an online match. Before, just looking at it during a game could make the two players' games go out of sync.\r\nMore reliable lobby connection. Closing the window while connecting, or leaving a room, should no longer leave things half-open. Thanks to Blueteemo for finding and fixing this.\r\nBadly formed connection messages are now refused cleanly instead of causing errors.\r\n\r\n\r\nAndroid 1.3\r\n⚠️ Important: this version installs as a NEW app.\r\nAndroid 1.3 does not update your current NgpCraft. It installs next to it, and the two apps share nothing.\r\n\r\nYour game saves and save states stay in the old app. The new one can't see them, and they can't be copied out by hand. Don't uninstall the old version while you still have progress in it you care about.\r\nIf you put ROMs, covers or a BIOS in the old app's folder (Android/data/com.example.ngpcraft_emulator/files/), copy them to a separate folder before uninstalling it. You'll need a PC for that.\r\nTo tell the two apps apart, open each one's App info from your launcher: the new one shows version 1.3.\r\nWorks with frontends like ES-DE and Daijishō. Launch your Neo Geo Pocket games straight from your favourite frontend. When you quit a game, you're back in the frontend. Setup instructions are in the Android notes.\r\nSwitching games is smoother. Starting another game while one is still open now cleanly replaces it, and your progress in the first one is saved.\r\nFixed a crash that could happen when switching games quickly.\r\nBIOS boot fixed. The console intro no longer loops, and first-time setup works.\r\nController menu. The on-screen menu button hides when a gamepad is connected and comes back when it's unplugged.\r\n\r\n\r\n**The desktop, RetroArch core, Android and web versions all run the same up-to-date emulation core.**",
-      "downloadUrl": "https://github.com/Tixul/Ngpcraft_emulator/releases/download/v3.8.8/app-release.apk"
+      "version": "3.8.9",
+      "releaseDate": "2026-10-17T20:13:28Z",
+      "sourceUrl": "https://github.com/Tixul/Ngpcraft_emulator/releases/tag/v3.8.9",
+      "releaseNotes": "**Full Changelog**: https://github.com/Tixul/Ngpcraft_emulator/compare/v3.8.8...v3.8.9\r\n\r\n# NgpCraft Emulator v3.8.9 - what's new\r\n\r\nThis is a bug-fix release. If you play games that save, please update.\r\n\r\n## Your ROM file can no longer be damaged when you quit\r\n\r\nA player reported that after leaving the emulator alone for a while, the game file got corrupted.\r\nFrom then on it only showed the BIOS screen, in other emulators too, and even after flashing it to\r\na cartridge. thanks to [hardhatwarrior](https://github.com/HardhatWarrior) for this\r\n\r\nHere is what happened. While a game is saving, the cartridge's memory is busy for a moment and\r\ndoes not show the game's data. If you closed the game at that exact moment, the emulator copied\r\nthat busy signal into your ROM file instead of the game, and the whole file was overwritten. This\r\nwas most likely when a game stalled during a save, which is why it showed up after the emulator had\r\nbeen left running.\r\n\r\nThe emulator now always saves the real contents of the cartridge, whatever the game is doing at\r\nthe time you quit.\r\n\r\nThe same problem could happen when restarting a game (F5) or when connecting a second player during\r\na save. That is fixed as well.\r\n\r\n**If one of your files is already damaged**, this update cannot repair it. Replace it with a clean\r\ncopy of the game. Saves stored in that file are lost, unless you had turned on the separate save\r\nfile option in the settings.\r\n\r\n## Android, web player and RetroArch core\r\n\r\nThese versions keep saves in a separate file, so your ROM was never at risk there. But quitting at\r\nthe wrong moment could replace your save with garbage. The same fix is included in all of them.\r\n\r\n## For homebrew developers\r\n\r\n- The command-line runner now warns when a game reads a variable before it ever wrote one, and\r\n  names the variable from your map file. On a real console that memory is not cleared at power-on,\r\n  so these reads can behave differently on hardware than in the emulator.\r\n- Crash and slowdown reports now name the right source file when your functions are declared\r\n  `static`. Before, they could be labeled with the name of an unrelated module.\r\n- The debugger's instruction decoder handles more memory-access forms correctly.",
+      "downloadUrl": "https://github.com/Tixul/Ngpcraft_emulator/releases/download/v3.8.9/app-release.apk"
     },
     "noods": {
       "version": "release",
@@ -1175,11 +1175,11 @@
       "devReleaseNotes": "## What's Changed\n* build: Build the Kotlin component of `rustls-platform-verifier` from a submodule by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/866\n* chore: Bump the ruffle group with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/868\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/869\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.261013...0.261014"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-10-17",
-      "releaseDate": "2026-10-17T00:12:33Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-10-17",
-      "releaseNotes": "## What's Changed\n* web: Avoid a reference cycle in audio buffer callbacks by @Torrekie in https://github.com/ruffle-rs/ruffle/pull/24919\n\n## New Contributors\n* @Torrekie made their first contribution in https://github.com/ruffle-rs/ruffle/pull/24919\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-16...nightly-2026-10-17",
-      "devReleaseNotes": "## What's Changed\n* web: Avoid a reference cycle in audio buffer callbacks by @Torrekie in https://github.com/ruffle-rs/ruffle/pull/24919\n\n## New Contributors\n* @Torrekie made their first contribution in https://github.com/ruffle-rs/ruffle/pull/24919\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-16...nightly-2026-10-17"
+      "version": "nightly-2026-10-18",
+      "releaseDate": "2026-10-18T00:13:39Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-10-18",
+      "releaseNotes": "## What's Changed\n* avm2: Disable Dictionary indexing fast paths in JIT mode for QNames by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24890\n* tests: Fix from_gnash/misc-ming.all/Video-EmbedSquareTest by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24935\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-17...nightly-2026-10-18",
+      "devReleaseNotes": "## What's Changed\n* avm2: Disable Dictionary indexing fast paths in JIT mode for QNames by @Lord-McSweeney in https://github.com/ruffle-rs/ruffle/pull/24890\n* tests: Fix from_gnash/misc-ming.all/Video-EmbedSquareTest by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24935\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-17...nightly-2026-10-18"
     },
     "sameboy_core": {
       "version": "1.0.4",
@@ -1200,16 +1200,16 @@
       "releaseNotes": "Full Changelog: [Shadlix-shadPS4-2026-10-15-49411e0e3221ba95cbb42b890e1dcee8caed8dfb...a60e8c258449a39d1f705b87de7e85d3936b2628](https://github.com/diegolix29/shadPS4/compare/Shadlix-shadPS4-2026-10-15-49411e0e3221ba95cbb42b890e1dcee8caed8dfb...a60e8c258449a39d1f705b87de7e85d3936b2628)"
     },
     "shadps4_android": {
-      "version": "Pre-release-shadPS4-2026-10-17-e6c79a5fe0ea2f3d03fcb9c5c50cf61af063f3f5",
-      "releaseDate": "2026-10-17T14:01:50Z",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-17-e6c79a5fe0ea2f3d03fcb9c5c50cf61af063f3f5",
-      "releaseNotes": "Full Changelog: [v.0.20.0...e6c79a5](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...e6c79a5fe0ea2f3d03fcb9c5c50cf61af063f3f5)",
-      "devReleaseNotes": "Full Changelog: [v.0.20.0...e6c79a5](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...e6c79a5fe0ea2f3d03fcb9c5c50cf61af063f3f5)"
+      "version": "Pre-release-shadPS4-2026-10-17-860a477160e08e65f8c0927677c1955be28fabc7",
+      "releaseDate": "2026-10-17T21:12:52Z",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-17-860a477160e08e65f8c0927677c1955be28fabc7",
+      "releaseNotes": "Full Changelog: [v.0.20.0...860a477](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...860a477160e08e65f8c0927677c1955be28fabc7)",
+      "devReleaseNotes": "Full Changelog: [v.0.20.0...860a477](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...860a477160e08e65f8c0927677c1955be28fabc7)"
     },
     "shadps4_qtlauncher": {
-      "version": "shadPS4QtLauncher-2026-10-14-d585d56cdef7e376aa8526d52616398cbdd6f91e",
-      "releaseDate": "2026-10-14T06:58:32Z",
-      "sourceUrl": "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/tag/shadPS4QtLauncher-2026-10-14-d585d56cdef7e376aa8526d52616398cbdd6f91e",
+      "version": "shadPS4QtLauncher-2026-10-17-3d4f8d2ec00b830c6fb5459f2de6213168370c17",
+      "releaseDate": "2026-10-17T19:35:00Z",
+      "sourceUrl": "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/tag/shadPS4QtLauncher-2026-10-17-3d4f8d2ec00b830c6fb5459f2de6213168370c17",
       "releaseNotes": "Auto-generated release for the latest commit to main.",
       "devReleaseNotes": "Auto-generated release for the latest commit to main."
     },
@@ -1356,9 +1356,9 @@
     },
     "vita3k_pc": {
       "version": "continuous",
-      "releaseDate": "2026-10-17T08:33:06Z",
+      "releaseDate": "2026-10-18T02:51:53Z",
       "sourceUrl": "https://github.com/Vita3K/Vita3K/releases/tag/continuous",
-      "releaseNotes": "Corresponding commit: fab6bfc768af03c563f4082e58029da336dc918c\nVita3K Build: 4190",
+      "releaseNotes": "Corresponding commit: 8084aa24c8987fbe8191ce5c397ee0a59672672b\nVita3K Build: 4191",
       "downloadUrl": "https://github.com/Vita3K/Vita3K/releases/download/continuous/android-latest.apk"
     },
     "vita3k_plus": {
@@ -1442,16 +1442,16 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_canary_pc": {
-      "version": "976c357",
-      "releaseDate": "2026-10-17T10:02:01Z",
-      "sourceUrl": "https://github.com/xenia-canary/xenia-canary/releases/tag/976c357",
-      "releaseNotes": "### Changes\n\n- [Kernel] XFile: Check FILE_NO_INTERMEDIATE_BUFFERING (`976c357`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/dac2794...976c357"
+      "version": "50e9c71",
+      "releaseDate": "2026-10-18T03:37:50Z",
+      "sourceUrl": "https://github.com/xenia-canary/xenia-canary/releases/tag/50e9c71",
+      "releaseNotes": "### Changes\n\n- [Kernel] Don't dereference a null KeDelayExecutionThread interval (`50e9c71`)\n- [CPU] Bounds-check basic compressed XEX blocks (`992836f`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/f03a9fc...50e9c71"
     },
     "xenia_edge_pc": {
-      "version": "81c8b2a",
-      "releaseDate": "2026-10-17T15:13:16Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/81c8b2a",
-      "releaseNotes": "### Changes\n\n- [XAM] Add a TODO for cross-platform System Link (`81c8b2a`)\n- [XAM] Fix sessions with Live features failing for Live users (`ecee0ce`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/409ca81...81c8b2a"
+      "version": "c9d39b2",
+      "releaseDate": "2026-10-18T02:10:37Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/c9d39b2",
+      "releaseNotes": "### Changes\n\n- [XAM] Implement XNetInAddrToString (`c9d39b2`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/3121ff9...c9d39b2"
     },
     "xenia_manager": {
       "version": "5.0.0",
@@ -1494,11 +1494,10 @@
       "releaseNotes": "YM2203 fixes\r\nTSConf fixes"
     },
     "ymir_pc": {
-      "version": "latest-nightly",
-      "releaseDate": "2026-10-17T08:24:35Z",
-      "sourceUrl": "https://github.com/ymir-emu/Ymir/releases/tag/latest-nightly",
-      "releaseNotes": "This is a nightly release built from the latest commit. Before you use these builds, **make sure to backup your data, especially the save states!**\n\nSave states are constantly evolving and are only guaranteed to be compatible on stable (numbered) releases.\nThe file format may be changed without notice, so be careful when using save states from nightly releases.\n\nYou can find the changelog for this build [here](https://github.com/ymir-emu/Ymir/blob/latest-nightly/CHANGELOG.md).\n\n> [!NOTE]\n> Nightly builds include experimental and in-development features that may not work properly.\n> When reporting issues, make sure to include the version number (Help > About > Copy version).\n\n> [!IMPORTANT]\n> It is recommended to install the latest GPU drivers in order to use Direct3D or Vulkan:\n> - Nvidia: [Find your GPU here](https://www.nvidia.com/Download/index.aspx?lang=en-us) or [use the Nvidia App to update drivers automatically](https://www.nvidia.com/en-us/software/nvidia-app/)\n> - AMD: [Find your GPU or CPU here](https://www.amd.com/en/support) or use the download buttons at the top to update drivers automatically\n> - Intel: [Find your GPU or CPU here](https://www.intel.com/content/www/us/en/download-center/home.html)\n>\n> Windows users: install the latest [Microsoft Visual C++ Redistributable package](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) ([x86_64 installer](https://aka.ms/vc14/vc_redist.x64.exe), [AArch64/ARM64 installer](https://aka.ms/vc14/vc_redist.arm64.exe)) before running the emulator. This is **mandatory** to avoid crashes on startup.\n>\n> macOS users: follow [these instructions](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac) to allow Ymir to run on your system. Ymir is signed with an ad-hoc certificate, flagging it as unverified.\n>\n> Linux users: if you choose to install the Flatpak version, make sure to [grant Ymir permission to access the filesystem](https://github.com/ymir-emu/Ymir/blob/main/TROUBLESHOOTING.md#game-discs-dont-load-with-the-flatpak-release) or your disc images won't load properly.\n<!-- Auto-generated section. Do not delete this! -->\n<!-- @@ Version-String [v0.4.0-dev+f688221b] @@ -->\n<!-- @@ Build-Timestamp [2026-10-17T08:01:39Z] @@ -->",
-      "devReleaseNotes": "This is a nightly release built from the latest commit. Before you use these builds, **make sure to backup your data, especially the save states!**\n\nSave states are constantly evolving and are only guaranteed to be compatible on stable (numbered) releases.\nThe file format may be changed without notice, so be careful when using save states from nightly releases.\n\nYou can find the changelog for this build [here](https://github.com/ymir-emu/Ymir/blob/latest-nightly/CHANGELOG.md).\n\n> [!NOTE]\n> Nightly builds include experimental and in-development features that may not work properly.\n> When reporting issues, make sure to include the version number (Help > About > Copy version).\n\n> [!IMPORTANT]\n> It is recommended to install the latest GPU drivers in order to use Direct3D or Vulkan:\n> - Nvidia: [Find your GPU here](https://www.nvidia.com/Download/index.aspx?lang=en-us) or [use the Nvidia App to update drivers automatically](https://www.nvidia.com/en-us/software/nvidia-app/)\n> - AMD: [Find your GPU or CPU here](https://www.amd.com/en/support) or use the download buttons at the top to update drivers automatically\n> - Intel: [Find your GPU or CPU here](https://www.intel.com/content/www/us/en/download-center/home.html)\n>\n> Windows users: install the latest [Microsoft Visual C++ Redistributable package](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) ([x86_64 installer](https://aka.ms/vc14/vc_redist.x64.exe), [AArch64/ARM64 installer](https://aka.ms/vc14/vc_redist.arm64.exe)) before running the emulator. This is **mandatory** to avoid crashes on startup.\n>\n> macOS users: follow [these instructions](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac) to allow Ymir to run on your system. Ymir is signed with an ad-hoc certificate, flagging it as unverified.\n>\n> Linux users: if you choose to install the Flatpak version, make sure to [grant Ymir permission to access the filesystem](https://github.com/ymir-emu/Ymir/blob/main/TROUBLESHOOTING.md#game-discs-dont-load-with-the-flatpak-release) or your disc images won't load properly.\n<!-- Auto-generated section. Do not delete this! -->\n<!-- @@ Version-String [v0.4.0-dev+f688221b] @@ -->\n<!-- @@ Build-Timestamp [2026-10-17T08:01:39Z] @@ -->"
+      "version": "0.4.0",
+      "releaseDate": "2026-10-17T17:51:11Z",
+      "sourceUrl": "https://github.com/ymir-emu/Ymir/releases/tag/v0.4.0",
+      "releaseNotes": "# Ymir v0.4.0\r\n[Discord](https://discord.gg/NN3A7n5dzn) | [Patreon](https://www.patreon.com/StrikerX3) | [Compatibility list](https://docs.google.com/spreadsheets/d/1SLZzL9LelSlpEmTKy8cjaQnE7mew2uW1rfCgcekO58Q/edit?usp=sharing) | [Screenshots](https://emu.layle.dev/ymir/54fead6/)\r\n\r\nSDL Renderer has been the backbone of graphics on Ymir... until now. Ymir now supports Direct3D 12 and Metal (with Vulkan to come in the future), which will enable implementation of shaders and resolution scaling down the line. Direct3D 12 also supports hardware-accelerated VDP rendering, offloading heavy graphics computations to your GPU for a significant performance boost with no accuracy compromises -- it's as accurate as the software renderer, save for undiscovered bugs. Other graphics backends will eventually support acceleration as well, hang tight!\r\n\r\nThe Virtua Gun has been promoted to a stable feature after numerous bug fixes and accuracy improvements that made it work flawlessly with most supported games. Known issues are listed in #787: only one game doesn't register shots, and three don't recognize reloads consistently.\r\n\r\nGood news for old Mac owners: Ymir should now run on macOS 12 (Monterey)! The macOS build configuration was targeting the default version, which happened to be 15 for a while until GitHub decided to upgrade their build runners and push the default to 26. This prompted us to look into those builds and lower the minimum version to 12, which is the lowest supported version by the current runner.\r\n\r\nFinally, as you've come to expect, every big release comes with dozens of polish passes, crash and bug fixes, accuracy improvements, performance boosts, and better compatibility. Ymir 0.4.0 is now compatible with 94.4% of the entire Saturn library, and can run up to 10% faster with SCSP threading compared to 0.3.3, or even more if you enable GPU-accelerated VDP1/VDP2 rendering.\r\n\r\n> [!IMPORTANT]\r\n> Windows users: install the latest [Microsoft Visual C++ Redistributable package](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) ([x86_64 installer](https://aka.ms/vs/17/release/vc_redist.x64.exe), [AArch64/ARM64 installer](https://aka.ms/vs/17/release/vc_redist.arm64.exe)) before running the emulator. This is **mandatory** to avoid crashes on startup.\r\n>\r\n> macOS users: follow [these instructions](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac) to allow Ymir to run on your system. Ymir is signed with an ad-hoc certificate, flagging it as unverified.\r\n>\r\n> Linux users: if you choose to install the Flatpak version or installed Ymir from the SteamOS's Discover Store, make sure to [grant Ymir permission to access the filesystem](https://github.com/StrikerX3/Ymir/blob/main/TROUBLESHOOTING.md#game-discs-dont-load-with-the-flatpak-release) or your multi-file disc images won't load properly.\r\n>\r\n> It is recommended to install the latest GPU drivers in order to use Direct3D or Vulkan:\r\n> - Nvidia: [Find your GPU here](https://www.nvidia.com/Download/index.aspx?lang=en-us) or [use the Nvidia App to update drivers automatically](https://www.nvidia.com/en-us/software/nvidia-app/)\r\n> - AMD: [Find your GPU or CPU here](https://www.amd.com/en/support) or use the download buttons at the top to update drivers automatically\r\n> - Intel: [Find your GPU or CPU here](https://www.intel.com/content/www/us/en/download-center/home.html)\r\n>\r\n> Do not use Windows Device Manager or Windows Update to update your GPU drivers, as they tend to have poor performance and lack support for advanced GPU features.\r\n>\r\n> Always update your integrated GPU driver first, even if you're not using it. This also applies to desktop PCs with dedicated graphics cards.\r\n\r\n\r\n## Compatibility improvements\r\n\r\nHere's a small showcase of games that now work on v0.4.0 or had major bugs fixed:\r\n\r\n<img width=\"3681\" height=\"3888\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9629dad2-4f3d-4543-bf79-3a3a…"
     },
     "zesarux": {
       "version": "ZEsarUX-13.0",
