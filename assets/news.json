@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T16:08:41.945266Z",
+  "generatedAt": "2026-10-19T05:17:04.844100Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,209 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-19T00:56:10Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月19日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 在 ppu_worker 模式下倒转时固定黑屏幕问题 (# 2811) (QQ)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• Fixed the black screen issue when rewinding in ppu_worker mode. (#2811) (林润锋)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "22389af10c176a294b7ce7fa0df8ef9ab9f69e0f2d304ffdad39f271e210aeec",
+      "translationPending": false
+    },
+    {
+      "id": "138172",
+      "title": "【其他】Vitaslop v0.1.0",
+      "originalTitle": "[Consoles portables] Vitaslop v0.1.0",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T19:44:07Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138172-consoles-portables-vitaslop-v0-1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/vitaslop.png",
+      "officialUrl": "https://github.com/cretz/vitaslop",
+      "summary": "Vitaslop是一款PlayStation Vita模拟器，可以直接在网络浏览器或桌面应用程序中工作。 仍然处于早期开发阶段，它已经可以推出一些商业游戏以及自制应用程序，存在兼容性问题和持续的错误。 模拟器尤其依赖于将ARMv7代码转换为WebAssembly和WebGPU进行图形渲染。 它还支持音频、视频和游戏扩展，以及通过与rePatch系统兼容的叠加层更改文件。",
+      "content": "Vitaslop是一款PlayStation Vita模拟器，可以直接在网络浏览器或桌面应用程序中工作。 仍然处于早期开发阶段，它已经可以推出一些商业游戏以及自制应用程序，存在兼容性问题和持续的错误。\n模拟器尤其依赖于将ARMv7代码转换为WebAssembly和WebGPU进行图形渲染。 它还支持音频、视频和游戏扩展，以及通过与rePatch系统兼容的叠加层更改文件。\nWeb版本需要与WebGPU、JSPI、共享内存和OPFS兼容的最新浏览器。 Chrome和桌面版Edge是主要的目标浏览器。 游戏、保存和设置保留在本地存储，无需发送到服务器。\n注：根据其作者的说法，该项目由人工智能完全开发和维护。 它没有详尽的兼容性列表，仍然是实验性的。\n\n[wpfilebase tag = file id = 8451 tpl = simple3/]",
+      "originalContent": "Vitaslop est un émulateur de PlayStation Vita capable de fonctionner directement dans un navigateur Web ou sous la forme d'une application de bureau. Encore en développement précoce, il permet déjà de lancer certains jeux commerciaux ainsi que des applications homebrew, avec des problèmes de compatibilité et des bugs persistants.\n\nL'émulateur repose notamment sur la traduction du code ARMv7 en WebAssembly et sur WebGPU pour le rendu graphique. Il prend également en charge l'audio, la vidéo et les extensions de jeux, ainsi que les modifications de fichiers via des overlays compatibles avec le système rePatch.\n\nLa version Web nécessite un navigateur récent compatible avec WebGPU, JSPI, la mémoire partagée et OPFS. Chrome et Edge sur ordinateur sont les principaux navigateurs ciblés. Les jeux, sauvegardes et paramètres restent stockés localement, sans envoi vers un serveur.\n\nÀ noter: le projet est entièrement développé et maintenu par une intelligence artificielle, selon son auteur. Il ne dispose pas de liste exhaustive de compatibilité et reste expérimental.\n\n[wpfilebase tag=file id=8451 tpl=simple3 /]",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d2e4e1ca34f82fa9292963e2b2832455c61cd1f00430f2f6fef9f2f4d9715c33",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-vita3k_plus-1-3",
+      "title": "【Android更新】Vita3K+ 1.3",
+      "originalTitle": "Vita3K+ 1.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T19:42:03Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nckstwrt/Vita3K-Plus/releases/tag/v1.3",
+      "imageUrl": "asset://assets/emulators/vita3k.png",
+      "officialUrl": "https://github.com/nckstwrt/Vita3K-Plus",
+      "summary": "Vita3K+ 发布 Android 新版本 1.3，发布日期为2026年10月18日。点击查看官方版本信息与更新说明。",
+      "content": "Vita3K+ 已发布 Android 最新版本 1.3。\n\n发布日期：2026年10月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n很多小修补, 特别是Audio。\n\n增强部分见主页: https://github.com/nckstwrt/Vita3K-Plus\n\n• 第四次发布增强和修正 -- -- 包括Android 17固定\n• 仍在瞄准更高端的装置(i.e. Adreno not Mali). (马里语). 但马里的兼容性越来越好。\n• Windows、Android和SteamDeck/Linux版\n\n请在此报告问题: https://github.com/nckstwrt/Vita3K-Plus/issues\n提供尽可能多的细节,如果你想修理!\n\n释放 v1.3.1 对于Android,因为一个问题,如果你在Portrait模式下发射,它可能会错误的拉伸游戏的启动。 下载文件更改如下。\nHOTFIX2: 释放 v1.3.2 在Epic Mickey 2和Sonic Transformed中发现的无尽循环音频错误。\nHOTFIX3: 释放 v1.3.3 在 Gundam Breaker 3 中发现的无尽循环音乐错误",
+      "originalContent": "Lots of little fixes, especially for Audio.\r\n\r\nSee the main page for the enhancements: https://github.com/nckstwrt/Vita3K-Plus\r\n\r\n* Fourth release of enhancements and fixes - Including Android 17 fix\r\n* Still targeting higher end devices (i.e. Adreno not Mali). But Mali compatibility is getting better and better.\r\n* Windows, Android and SteamDeck/Linux Release\r\n\r\nPlease report issues here: https://github.com/nckstwrt/Vita3K-Plus/issues \r\n**Provide as much detail as possible if you want a fix!!!**\r\n\r\nHOTFIX: Released v1.3.1 for Android because of an issue where if you launched in Portrait mode it could start the games wrongly stretched. Download file changed below.\r\nHOTFIX2: Released v1.3.2 for a endlessly looping audio bug found in Epic Mickey 2 and Sonic Transformed.\r\nHOTFIX3: Released v1.3.3 for a endlessly looping music bug found in Gundam Breaker 3",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "vita3k_plus"
+      ],
+      "contentHash": "485d327ea89c69f792078eb9caf67216e12e63f54a9963ca2b32812598d60ea9",
+      "translationPending": false
+    },
+    {
+      "id": "138168",
+      "title": "【电脑】POM2 v0.9.7",
+      "originalTitle": "[Ordi.] POM2 v0.9.7",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T19:20:55Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138168-ordi-pom2-v0-9-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/POM2-desktop.png",
+      "officialUrl": "https://github.com/habib256/pom2/",
+      "summary": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。 它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。",
+      "content": "POM2是一款现代化的开源Apple II模拟器，能够模拟Apple II系列中的多台机器，从Apple] [原始版本从1977年到1988年的Apple//c +。 它旨在实现非常精确的硬件仿真，在CPU周期级别实现同步视频渲染。\n它支持Apple] [,] [+,//e,//e Enhanced,//c和//c + ，以及两个PAL变体，包括//c “Le Chat Mauve”。\n在其特点中， POM2提供复合NTSC渲染、CRT/磷光体效果、体素3D视图、倒带、许多扩展卡的仿真，如Mockingboard、Phasor、Super Serial Card、CFFA 2.0和U Ethernet ，以及对ImageWriter II打印机的支持。\n模拟器支持多种格式的Apple II软盘和媒体（ .dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv ） ，并集成了对磁盘II的忠实模拟。 它还通过以太网提供网络支持，甚至可以通过WebAssembly直接在浏览器中运行。\n\n它模拟的内容：\n•九台机器： Apple] [、] [+、//e （未改进和改进）、//c、//c +和三个欧洲50 Hz PAL配置文件（//e和//c ） ，这对于在扫描中同步的法语演示至关重要。\n•设备从MAME穿戴，逐片芯片，并通过自动测试固定。French Touch （选集十）的演示可作为基准测试平台。\n•存储：位级磁盘II （ WOZ、DSK、PO、NIB ）、SmartPort 3.5 ”、HDV/CFFA硬盘驱动器、带有真实ROM的Liron卡、作为ProDOS卷安装的计算机文件夹。 自动磁盘备份。\n•声音：模拟板、Phasor、SSI263语音合成、机械播放器噪音。\n•三十张卡：鼠标、时钟、超级串行、以太网I/II （网络）、Grappler +带有以PDF打印的ImageWriter II、Le Chat Mauve RGB、Videx 80列、TransWarp、SoftCard Z80 （ CP/M ）...\n• NTSC OpenEmulator风格的复合显示器、RGB、绿色/琥珀色/白色单色显示器、CRT效果，甚至是屏幕的体素3D视图。\n•调试器、倒带、保存状态、全屏自助服务终端模式。\n\n包装中提供了四个软盘，以便立即开始：\n• A2FileCmd XL v0.9.6 （见下文）。\n• DIX-fix ： French Touch演示选集，带有菜单补丁。\n• ChromaBreak 1.0 ： 16色DHGR鼠标断路器（//e改进版或//c 128 KB ）。\n• Micro-Sokoban 1.2 ： 5个学习级别+ 454个Microban级别（ Apple ） [+和以下）。\n软件方面，简而言之：\n• A2FileCmd ：本着Norton/Midnight Commander的精神，在真正的Apple II上运行的双面板文件管理器。80列ProDOS版本（ 128 KB ，//e ，//c ， IIgs ） ，包含树、文本查看器、AppleWorks文档、HGR/DHGR图像、Mockingboard音乐播放器、存档提取副本\nShrinkIt和磁盘映像管理；以及40列3.3 DOS版本，在Apple上可容纳48 KB] [+.\n• pom2games ：在可启动磁盘上编写或佩戴的Apple II游戏： ChromaBreak、Arkabreakout、Micro-Sokoban、国际象棋、3D迷宫、弹球构造套装、荒野再现、徽标...",
+      "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.\n\nCe que ça émule :\n- Neuf machines : Apple ][, ][+, //e (non amélioré et amélioré), //c, //c+, et trois profils PAL 50 Hz européens (//e et //c), indispensables pour les démos françaises synchronisées sur le balayage.\n- Le matériel est porté depuis MAME, puce par puce, et épinglé par des tests automatiques. Les démos de French Touch (l'anthologie DIX) servent de banc d'essai de référence.\n- Stockage : Disk II au niveau du bit (WOZ, DSK, PO, NIB), SmartPort 3.5\", disques durs HDV / CFFA, carte Liron avec sa vraie ROM, dossier de l'ordinateur monté comme volume ProDOS. Sauvegarde automatique des disques.\n- Son : Mockingboard, Phasor, synthèse vocale SSI263, bruit mécanique des lecteurs.\n- Une trentaine de cartes : souris, horloge, Super Serial, Uthernet I/II (réseau), Grappler+ avec une ImageWriter II qui imprime en PDF, Le Chat Mauve RGB, Videx 80 colonnes, TransWarp, SoftCard Z80 (CP/M)…\n- Affichage composite NTSC façon OpenEmulator, RGB, moniteurs monochromes vert / ambre / blanc, effets CRT, et même une vue 3D en voxels de l'écran.\n- Débogueur, retour arrière dans le temps (rewind), états de sauvegarde, mode borne plein écran.\n\nQuatre disquettes sont livrées dans les paquets, pour démarrer tout de suite :\n- A2FileCmd XL v0.9.6 (voir plus bas).\n- DIX-fix : l'anthologie de démos de French Touch, avec un correctif de menu.\n- ChromaBreak 1.0 : un casse-briques DHGR 16 couleurs à la souris (//e amélioré ou //c 128 Ko).\n- Micro-Sokoban 1.2 : 5 niveaux d'apprentissage + 454 niveaux Microban (Apple ][+ et suivants).\n\nCôté logiciels, en bref :\n- A2FileCmd: un gestionnaire de fichiers à deux panneaux, dans l'esprit de Norton / Midnight Commander, qui tourne sur un vrai Apple II. Une édition ProDOS en 80 colonnes (128 Ko, //e, //c, IIgs) avec copie d'arborescences, visionneuses de textes, de documents AppleWorks, d'images HGR / DHGR, lecteur de musique Mockingboard, extraction des archives ShrinkIt et gestion des images disques ; et une édition DOS 3.3 en 40 colonnes qui tient dans 48 Ko sur un Apple ][+.\n- pom2games: des jeux Apple II écrits ou portés pour l'occasion, sur disquettes amorçables : ChromaBreak, Arkabreakout, Micro-Sokoban, des échecs, un labyrinthe 3D, Pinball Construction Set, une réimplémentation de Wilderness, un LOGO…",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "26f2b9b407d10492de72dda74d5580af32400c04de4ccc34b9baa4c3a6d9eccb",
+      "translationPending": false
+    },
+    {
+      "id": "138166",
+      "title": "【电脑】Copperline v1.0.1",
+      "originalTitle": "[Ordi.] Copperline v1.0.1",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T19:19:03Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138166-ordi-copperline-v1-0-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
+      "officialUrl": "https://copperline.dev/",
+      "summary": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确） 。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "content": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确）\n。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
+      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "copperline_pc"
+      ],
+      "contentHash": "17fa0f88165bee18b64abfd16e98e69e241f54d156ad5afd119951452a747a20",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-j2me_loader-continuous",
+      "title": "【Android更新】J2ME Loader continuous",
+      "originalTitle": "J2ME Loader continuous Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T18:46:42Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
+      "imageUrl": "asset://assets/emulators/j2me_loader.png",
+      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
+      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年10月18日。点击查看官方版本信息与更新说明。",
+      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年10月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
+      "originalContent": "J2ME Loader continuous Android release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "j2me_loader"
+      ],
+      "contentHash": "1a656881ae62597924f72ce2b7b8616528d314546928c83166eccd1c2535b6f6",
+      "translationPending": false
+    },
+    {
+      "id": "138163",
+      "title": "【其他】PRISM: le code rétro dans votre navigateur !",
+      "originalTitle": "[www] PRISM: le code rétro dans votre navigateur !",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T17:58:42Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138163-www-prism-le-code-retro-dans-votre-navigateur/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/prism.png",
+      "officialUrl": "https://github.com/jfrelat-lab/prism",
+      "summary": "Prism是Julien Frelat的一个实验项目，旨在探索直接在浏览器中运行复古软件和游戏的另一种方法。 其原理基于将C/C + +源代码编译为JavaScript ，以便无需使用WebAssembly即可执行。 与传统仿真器不同， PRISM不寻求复制硬件处理器的操作。 它依赖于相关软件的源代码来适应JavaScript执行环境。 这种方法为从浏览器访问某些历史软件开辟了有趣的前景，而无需以经典应用程序的形式安装它们。",
+      "content": "Prism是Julien Frelat的一个实验项目，旨在探索直接在浏览器中运行复古软件和游戏的另一种方法。 其原理基于将C/C + +源代码编译为JavaScript ，以便无需使用WebAssembly即可执行。\n与传统仿真器不同， PRISM不寻求复制硬件处理器的操作。 它依赖于相关软件的源代码来适应JavaScript执行环境。\n这种方法为从浏览器访问某些历史软件开辟了有趣的前景，而无需以经典应用程序的形式安装它们。 它还与本机端口不同，因为它旨在在浏览器的JavaScript环境中运行。\n因此， Prism是围绕复古软件的编译和可访问性的原创轨道，将在GitHub上发现。",
+      "originalContent": "PRISM est un projet expérimental de Julien Frelat qui explore une autre approche pour faire fonctionner des logiciels et des jeux rétro directement dans un navigateur. Son principe repose sur la compilation de code source C/C++ vers JavaScript, afin de permettre son exécution sans recourir à WebAssembly.\n\nContrairement à un émulateur traditionnel, PRISM ne cherche pas à reproduire le fonctionnement d'un processeur matériel. Il s'appuie sur le code source des logiciels concernés pour les adapter à un environnement d'exécution JavaScript.\n\nCette approche ouvre des perspectives intéressantes pour rendre certains logiciels historiques accessibles depuis un navigateur, sans nécessiter leur installation sous la forme d'applications classiques. Elle se distingue également des portages natifs, puisqu'elle vise une exécution dans l'environnement JavaScript du navigateur.\n\nPRISM constitue ainsi une piste originale autour de la compilation et de l'accessibilité des logiciels rétro, à découvrir sur GitHub.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "406840d58f5aac114f725abefefc1f2faaab1ddfb1f9a56e708ef17aa98792cd",
+      "translationPending": false
+    },
+    {
+      "id": "138161",
+      "title": "【电脑】BeBox Emulator v1.0",
+      "originalTitle": "[Ordi.] BeBox Emulator v1.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T17:49:09Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138161-ordi-bebox-emulator-v1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/beboxemu.png",
+      "officialUrl": "http://bebox-emu.fr/index.html",
+      "summary": "BeBox-Emu由David Raingeard （ Cal2 ）创建，是BeBox ， Be Inc.的双处理器PowerPC机器（ 1995-1997 ）的模拟器。它重现了Dual603-66和Dual603e-133配置，并可以像在原始机器上一样运行BeOS R4.5.2 ，具有声音、网络、与PC的共享文件夹，甚至还有3dfx Vood 3D卡 oo Graphics. 模拟器再现了BeBox的主要组件，具有16至256 MB的…",
+      "content": "BeBox-Emu由David Raingeard （ Cal2 ）创建，是BeBox ， Be Inc.的双处理器PowerPC机器（ 1995-1997 ）的模拟器。它重现了Dual603-66和Dual603e-133配置，并可以像在原始机器上一样运行BeOS R4.5.2 ，具有声音、网络、与PC的共享文件夹，甚至还有3dfx Vood 3D卡\noo Graphics.\n\n模拟器再现了BeBox的主要组件，具有16至256 MB的RAM和原始启动ROM。 它模拟IDE和SCSI控制器，支持ISO和CUE格式的磁盘和CD-ROM映像、热插拔CD以及从SCSI设备引导。\n该显示器基于4 MB Cirrus Logic GD5434卡，可在32位中实现1024 × 768的最大分辨率。3dfx Voodoo显卡通过Mesa与Glide和OpenGL兼容，可以运行3D游戏\n。通过模拟CS4231A编解码器来确保声音，而NE2000网卡允许BeOS访问网络和互联网。 共享文件夹便于模拟计算机和主机之间的文件交换。\nBeBox-Emu将PowerPC代码动态转换为主机平台的本机代码， Windows上的x86或BeOS上的PowerPC。仿真可以以实际速度或无速度限制运行\n界面还提供活动指示器、各种设置、磁盘映像创建以及机器挂起和恢复功能。",
+      "originalContent": "Créé par David Raingeard (Cal2), BeBox-Emu est un émulateur de la BeBox, la machine bi-processeur PowerPC de Be Inc. (1995-1997). Il reproduit les configurations Dual603-66 et Dual603e-133 et permet de faire tourner BeOS R4.5.2 comme sur la machine d'origine, avec le son, le réseau, un dossier partagé avec le PC et même une carte 3D 3dfx Voodoo Graphics.\n\nL'émulateur reproduit les principaux composants de la BeBox, avec 16 à 256 Mo de mémoire vive et la ROM de démarrage d'origine. Il émule les contrôleurs IDE et SCSI, prend en charge les images disque et CD-ROM aux formats ISO et CUE, le changement de CD à chaud et le démarrage depuis un périphérique SCSI.\n\nL'affichage repose sur une carte Cirrus Logic GD5434 de 4 Mo, permettant une résolution maximale de 1024 × 768 en 32 bits. La carte 3dfx Voodoo Graphics est compatible avec Glide et OpenGL via Mesa, permettant notamment de faire tourner des jeux 3D. Le son est assuré par l'émulation du codec CS4231A, tandis qu'une carte réseau NE2000 permet à BeOS d'accéder au réseau et à Internet. Un dossier partagé facilite les échanges de fichiers entre la machine émulée et le PC hôte.\n\nBeBox-Emu utilise une traduction dynamique du code PowerPC vers le code natif de la plateforme hôte, x86 sous Windows ou PowerPC sous BeOS. L'émulation peut fonctionner à vitesse réelle ou sans limitation de vitesse. L'interface propose également des témoins d'activité, différents réglages, la création d'images disque ainsi que des fonctions de suspension et de reprise de la machine.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "xemu"
+      ],
+      "contentHash": "c3b29d997f8179969bf54272cf2c27211c7017b07eeaacea79422f23bbba948b",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-3",
+      "title": "【Android更新】ARMSX3 1.3",
+      "originalTitle": "ARMSX3 1.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-18T17:22:23Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.3",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.3，发布日期为2026年10月18日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.3。\n\n发布日期：2026年10月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.3\n\n游戏\n\n•未知的2款靴子和游戏，修复了ARMSX3如何读取游戏的图形命令。作者： @ elad335\n\n\n\n\n\n\n\n\n\n控制器\n•所有控制器都可以扮演玩家1。在“设置” > “平板”或游戏内菜单> “控制器”选项卡> “控制器映射”中打开“所有控制器都作为玩家1播放” ，手持设备自己的控件和蓝牙平板都控制玩家1。停靠或拿起另一个控制器并继续播放，无需重新分配\n。你上次使用的控制器得到了隆隆声。 （也在下一个ARMSX2 NIGHTLY ）。\n\n\n\n\n\n•多个控制器可以共享一个玩家。 在游戏内控件屏幕或“设置” > “焊盘”中选择每个控制器的玩家。 两个或多个控制器可以在同一个播放器上。\n•在游戏菜单中为物理控制器映射配置文件。 打开游戏菜单中的“控制器”选项卡> “控制器映射” ，在玩游戏时单击“映射配置文件” ，只需轻触一下即可加载保存的配置文件，或将当前按钮保存为新按钮。\n\n\n\n• L2和R2适用于AYANEO Pocket DS。 感谢@ mymobileinstallment的报告和测试。\n•库上的每个是/否提示都与控制器配合使用。 D-pad在按钮之间移动， A选择一个。\n\n启动器和游戏库应用程序\n•游戏库应用程序可以将您的PKG文件发送到ARMSX3。管理您的PS3收藏的应用程序可以将您的软件包和许可证传递给ARMSX3 ，用于游戏、更新和DLC。ARMSX3显示它将要安装的内容，当您回答“是”时安装它，然后返回到该应用程序。\n•在“设置” > “应用”中与其他应用程序共享已安装的游戏，以便这些应用程序检查已安装的游戏、更新和许可证。 它会一直保持关闭状态，直到您将其打开。\n\n\n\n•由发射器准备的安装直接进入图书馆。 当启动器已将PS3固件和游戏安装到位时， ARMSX3将跳过设置屏幕。\n\nDiscord\n•当您浏览游戏时， Discord会显示“在库中” ，远程播放显示为“正在远程播放（ 2/2 ）” ，加入的人还会获得带有游戏名称的RPC ，并且如果他们不和谐，还会获得封面。 （也在下一个ARMSX2 NIGHTLY ）。\n\n\n\n\n\n•好友的游戏封面显示在好友列表中。\n\n\n\n\n\n…",
+      "originalContent": "# ARMSX3 1.3\r\n\r\n## Games\r\n\r\n- **Uncharted 2 boots and plays**, with a fix to how ARMSX3 reads a game's graphics commands. By @elad335 \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2a7d704a-f837-40e2-b572-71699b369c2c\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9353ddee-c246-472f-8cab-512ca9037267\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e1cc3dfd-e5f1-4ae9-b946-67777078b617\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/916a5981-d558-4fb3-bd0b-f7c4598d2846\" />\r\n\r\n## Controllers\r\n\r\n- **All controllers can play as Player 1.** Turn on \"All controllers play as Player 1\" in Settings > Pad or in the in-game menu > controller tab > controller mapping, and a handheld's own controls and a Bluetooth pad both control Player 1. Dock it or pick up the other controller and keep playing, with nothing to reassign. The controller you used last gets the rumble. (Also in the next ARMSX2 nightly). \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2a7b6692-c0d7-4819-80ce-ad1c33156040\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c5c2e646-3541-4518-850b-1bfee2a07ccd\" />\r\n\r\n- **Several controllers can share a player.** Pick each controller's player in the in-game Controls screen or in Settings > Pad. Two or more controllers can be on the same player.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/395c3041-a687-4cbc-beb9-692b51d4249a\" />\r\n\r\n- **Mapping profiles for physical controllers in the in-game menu.** Open the in game-menu, controller tab > controller mapping and click on Mapping Profiles while playing to load a saved profile with one tap, or save the current buttons as a new one. \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/93895587-ddfc-4164-92b8-d989c2f68ac0\" />\r\n\r\n- **L2 and R2 work on the AYANEO Pocket DS.** Thanks to @mymobileinstallment for reporting and testing.\r\n- **Every yes/no prompt over the library works with a controller.** The D-pad moves between the buttons and A picks one.\r\n\r\n## Launchers and game library apps\r\n\r\n- **Game library apps can send your PKG files to ARMSX3.** An app that manages your PS3 collection can pass your packages and licenses to ARMSX3, for games, updates and DLC. ARMSX3 shows what it is about to install, installs it when you say yes, and goes back to that app. \r\n- **Share installed games with other apps** in Settings > App lets those apps check which games, updates and licences are installed. It stays off until you turn it on.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b337a7bc-91e0-45d0-bb93-ad214d47286a\" />\r\n\r\n- **Installs prepared by a launcher go straight to the library.** When a launcher has already put the PS3 firmware and your games in place, ARMSX3 skips the setup screens. \r\n\r\n## Discord\r\n\r\n- **Discord shows \"In the library\"** while you browse your games, and remote play shows as \"Playing remote play (2 of 2)\" and the person joining also gets RPC with the game's name and cover if they're discord is connected. (Also in the next ARMSX2 nightly). \r\n\r\n<img width=\"611\" height=\"740\" alt=\"image\" src=\"https://github.com/user-attachments/assets/803dec11-ebcb-4049-80d5-c8da741f2d1e\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/40db973a-ef48-481f-b439-d550b7855338\" />\r\n\r\n- **Your friends' game covers show in the Friends list.**\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1b5e4346-c22b-4550-80d7-0db9613e2fb2\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5cb47669-50e0-44ec-baaf-6e848c611166\" />\r\n\r\n##…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "b261264dd8602cdc0cb6e01cb50b4a29702616416b6c35c82f4f78be91286efb",
+      "translationPending": false
+    },
     {
       "id": "android-release-emucorex-0-4-8",
       "title": "【Android更新】EmuCoreX 0.4.8",
@@ -30,31 +233,6 @@
         "emucorex"
       ],
       "contentHash": "9940bcde4b0355bfafb1a0860a12360d4228a0f0b7fb3105faf054a1c4546bf7",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-18T15:09:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月18日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 致命性(drojaazu)的irem解密表(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• irem decryption table for lethalth [drojaazu] (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "e005c1ea6cf9eaa270b339f8b1d3619f03009c7044de73743b37aa9cdc93e08c",
       "translationPending": false
     },
     {
@@ -405,30 +583,6 @@
         "winuae_pc"
       ],
       "contentHash": "60230f2e5499665692766f46f85f614be2f9294a6bd4b11ce7c885eec544e533",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-1-2-1",
-      "title": "【Android更新】ARMSX3 1.2.1",
-      "originalTitle": "ARMSX3 1.2.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-17T13:42:21Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.2.1",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.2.1，发布日期为2026年10月17日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.2.1。\n\n发布日期：2026年10月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.2.1\n\n\n\n改进\n\n•每场比赛的设置更可靠。 即使您在一个会话中在多个游戏之间切换，每个游戏也会始终加载并保存自己的设置。\n•模拟时钟速度错误修复。 现在，更改将在游戏开始时正确应用，游戏内菜单现在在游戏内性能选项卡的“速度限制%”下方有一个应用和重新启动按钮。 时钟带动时间的游戏会加速或减速，而帧带动的游戏则会保持正常的速度。\n• Idolm @ ster 2已固定，现在可以可靠地启动\n\n\n\n\n\n•系统消息始终等待您的回复，因此在The Idolm @ ster 2等游戏中的首次设置将顺利进行。",
-      "originalContent": "# ARMSX3 1.2.1\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/648241c3-1f4d-438f-933f-fbebbbce84bc\" />\r\n\r\n## Improvements\r\n\r\n- **Per-game settings are more reliable.** Each game always loads and saves its own settings, even when you switch between several games in one session.\r\n\r\n- **Emulated Clock Speed bug fix.** Changes now apply correctly when the game starts, and the in-game menu now has an Apply & Restart button for it under \"Speed Limit %\" in the in-game performance tab. Games that keep time by the clock speed up or slow down with it, while games paced by frames keep their normal speed.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/552e6842-4235-4e40-b23f-7f6aa7bb3aae\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/488b4584-0efb-4209-8c18-883511fc1a0c\" />\r\n\r\n- **The Idolm@ster 2 is fixed and now starts reliably**\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5b1766c3-b798-4c9f-935f-7e74a00679b5\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1750bfeb-1062-465e-8d77-14c082cc3503\" />\r\n\r\n- **System messages always wait for your answer**, so first-time setup in games like The Idolm@ster 2 goes through smoothly.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4f6e6f02-8e87-4c6a-b4c2-7a4ef411f651\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/348b6b80-e954-4e60-869c-e9434c6b2a6c\" />",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "b64a6d971e54aa7451744efe923832db2a6636c5c7bdf73b8822a2c5559546ea",
       "translationPending": false
     },
     {
@@ -909,30 +1063,6 @@
         "caprice32_gx"
       ],
       "contentHash": "f1747c7c824eb214177001bd8cc0e21c8e34781080cc251fd747509862fba77e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-j2me_loader-continuous",
-      "title": "【Android更新】J2ME Loader continuous",
-      "originalTitle": "J2ME Loader continuous Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-16T11:05:16Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
-      "imageUrl": "asset://assets/emulators/j2me_loader.png",
-      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
-      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年10月16日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年10月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "J2ME Loader continuous Android release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "j2me_loader"
-      ],
-      "contentHash": "a3d53ba24d747e99184bd7d9a6fb64246573b8cef07b6a68c15f9b335e7cf498",
       "translationPending": false
     },
     {
@@ -5141,30 +5271,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "6e85a93224f72ba046c4909a1b83f63d7ce2e6f2852247937ab3ff77b9626e92",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-vita3k_plus-1-2",
-      "title": "【Android更新】Vita3K+ 1.2",
-      "originalTitle": "Vita3K+ 1.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-30T10:30:12Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nckstwrt/Vita3K-Plus/releases/tag/v1.2",
-      "imageUrl": "asset://assets/emulators/vita3k.png",
-      "officialUrl": "https://github.com/nckstwrt/Vita3K-Plus",
-      "summary": "Vita3K+ 发布 Android 新版本 1.2，发布日期为2026年09月30日。点击查看官方版本信息与更新说明。",
-      "content": "Vita3K+ 已发布 Android 最新版本 1.2。\n\n发布日期：2026年09月30日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n多次再修正 :) 增强部分见主页: https://github.com/nckstwrt/Vita3K-Plus\n\n• 第三次发布增强和修正(出现一些倒退) v1.1 现在也该修好了)\n• 仍然瞄准更高端的装置(i.e. Adreno not Mali)——但马里也有一大堆改进之处。\n· Windows、Android和现在的SteamDeck/Linux发行(这几乎是未经测试的 -- -- 但手指交叉的作品:)\n\n您可以在此报告问题: https://github.com/nckstwrt/Vita3K-Plus/issues 提供尽可能多的细节,如果你想要的固定",
-      "originalContent": "A lot of fixes again :) See the main page for the enhancements: https://github.com/nckstwrt/Vita3K-Plus\r\n\r\n* Third release of enhancements and fixes (some regressions that broke in v1.1 should now be fixed too)\r\n* Still targeting higher end devices (i.e. Adreno not Mali) - but there's a bunch of Mali improvements in there too\r\n* Windows, Android and now SteamDeck/Linux Release (that is pretty much untested - but fingers crossed works :) )\r\n\r\nYou can report issues here: https://github.com/nckstwrt/Vita3K-Plus/issues Provide as much detail as possible if you want a fix",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "vita3k_plus"
-      ],
-      "contentHash": "c3e53d54b6fde13eb3dceb55eedbd60f0f2043c4db88ddba07de6bfdc5ead739",
       "translationPending": false
     },
     {
