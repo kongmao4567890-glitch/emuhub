@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T17:26:56.317934Z",
+  "generatedAt": "2026-10-24T04:59:36.209417Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,167 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-24T04:21:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 611c96d ： CPU/PGXP ：添加RTPS日志记录（ Stenzek ）\n•更新作弊元数据类型（ Stenzek（https://github.com/stenzek/duckstation/commit/b4a9a6b8f2e424cf97f4ca6d84ff3b70bc90fc5d） ）\n• 15f0234 ： dep/cubeb ：启动时重新打开已关闭的WASAPI流，而不是中止（ Stenzek ）\n• 0c58cca ： dep/cubeb ：在流启动时应用延迟的WASAPI设备重新配置（ Stenzek ）\n• 958156f: dep/cubeb:在重新配置失败时保持WASAPI渲染循环处于活动状态（ Stenzek ）\n• 4542c1b: dep/cubeb:修复初始化失败时WASAPI线程就绪事件泄漏（ Stenzek ）\n• e34d2ed ： CPU/PGXP ：在班次中修复跨越16位边界的精确值的符号（ Stenzek ）\n• e90b83b ： CPU/PGXP ：通过GTE GPF/GPL （ Stenzek ）跟踪精度\n• d7a74d2 ： CPU/PGXP ：修复目标为源时增加/减少深度（ Stenzek ）\n• 560be22 ：计划工作站（ CPU ）/计划工作站（ PGXP ） ：在实际半字边界处携带和包裹小数值（ Stenzek ）\n• eb333a1 ：计划工作站/PGXP ：分割上半字时使用地板（ Stenzek ）\n• 299a3b1 ： CPU/PGXP ：使用原生结果除以零（ Stenzek ）\n• d21600b ： CPU/PGXP ：使用SLT/SLTU/SLTI/SLTIU （ Stenzek ）的原生结果\n•在SLTIU源被覆盖之前将其传递给PGXP （ Stenzek（https://github.com/stenzek/duckstation/commit/48f9b6ada3b048918fba9f62b94a6e7974a43cb3） ）\n• 6eef7c8 ： CPU/PGXP ： MTC2/LWC2 （ Stenzek ）中的镜像GTE半字寄存器扩展\n• c90e550 ：计划工作站（ CPU ）/计划工作站（ PGXP ） ：不要在右侧班次中将移出的位留在上半部分（ Stenzek ）\n• fa591af ：计划工作站/PGXP ：从右班的精确值中取上半部符号（ Stenzek ）\n• f86e410 ： CPU/PGXP ：不要在班次中使用无效组件（ Stenzek ）\n• 8404d32 ：计划工作站（ CPU ）/计划工作站（ PGXP ） ：在16个或更多的右侧班次中直接提取上半部分（ Stenzek ）\n• e67b852 ： CPU/PGXP ：通过零的OR/XOR保持精度，首选精确光源（ Stenzek ）\n• 1648a29 ： CPU/PGXP ：通过ANDI/ORI保持精度，不改变下半部分（ Stenzek ）\n• 7c143e4 ： CPU/PGXP ：在ADDI （ Stenzek ）中使用双精度且仅有效的组件\n•添加PGXP CPU移位、逐位和ADDI测试（ Stenzek（https://github.com/stenzek/duckstation/commit/d9880a923a739b9cdb2403350505e821098421b3） ）\n•为ForcePGXPPreserveProjectionPrecision (Stenzek（https://github.com/stenzek/duckstation/commit/de1cb7225d6ec8eb59608f712bf30ce20f117fa3）)添加覆盖",
+      "originalContent": "## Commits\n- 611c96d: CPU/PGXP: Add logging of RTPS (Stenzek)\n- Update cheat metadata type ([Stenzek](https://github.com/stenzek/duckstation/commit/b4a9a6b8f2e424cf97f4ca6d84ff3b70bc90fc5d))\n- 15f0234: dep/cubeb: Reopen closed WASAPI stream on start instead of aborting (Stenzek)\n- 0c58cca: dep/cubeb: Apply deferred WASAPI device reconfigure on stream start (Stenzek)\n- 958156f: dep/cubeb: Keep WASAPI render loop alive when reconfigure fails (Stenzek)\n- 4542c1b: dep/cubeb: Fix WASAPI thread ready event leak on init failure (Stenzek)\n- e34d2ed: CPU/PGXP: Fix sign of precise values crossing the 16-bit boundary in shifts (Stenzek)\n- e90b83b: CPU/PGXP: Track precision through GTE GPF/GPL (Stenzek)\n- d7a74d2: CPU/PGXP: Fix ADD/SUB losing depth when the destination is a source (Stenzek)\n- 560be22: CPU/PGXP: Carry and wrap fractional values at the real halfword boundary (Stenzek)\n- eb333a1: CPU/PGXP: Use floor when splitting off the upper halfword (Stenzek)\n- 299a3b1: CPU/PGXP: Use the native result for division by zero (Stenzek)\n- d21600b: CPU/PGXP: Use the native result for SLT/SLTU/SLTI/SLTIU (Stenzek)\n- Pass SLTIU source to PGXP before it is overwritten ([Stenzek](https://github.com/stenzek/duckstation/commit/48f9b6ada3b048918fba9f62b94a6e7974a43cb3))\n- 6eef7c8: CPU/PGXP: Mirror GTE halfword register extension in MTC2/LWC2 (Stenzek)\n- c90e550: CPU/PGXP: Don't leave shifted-out bits in the upper half in right shifts (Stenzek)\n- fa591af: CPU/PGXP: Take the upper half sign from the precise value in right shifts (Stenzek)\n- f86e410: CPU/PGXP: Don't use invalid components in shifts (Stenzek)\n- 8404d32: CPU/PGXP: Extract the upper half directly in right shifts of 16 or more (Stenzek)\n- e67b852: CPU/PGXP: Keep precision through OR/XOR with zero, prefer precise sources (Stenzek)\n- 1648a29: CPU/PGXP: Keep precision through ANDI/ORI that don't change the lower half (Stenzek)\n- 7c143e4: CPU/PGXP: Use double precision and only valid components in ADDI (Stenzek)\n- Add PGXP CPU shift, bitwise and ADDI tests ([Stenzek](https://github.com/stenzek/duckstation/commit/d9880a923a739b9cdb2403350505e821098421b3))\n- Add override for ForcePGXPPreserveProjectionPrecision ([Stenzek](https://github.com/stenzek/duckstation/commit/de1cb7225d6ec8eb59608f712bf30ce20f117fa3))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "897f609739a129dd4b2c8cb42b807cab6e1314d00eeae1b6a2e6460ef868b7f7",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-24T01:39:49Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `aa5b73b` — `v3.10.0` （ `develop` ）\n\n提交： `aa5b73b`（https://github.com/libretro/virtualjaguar-libretro/commit/aa5b73bd2bb9f8a09fe7785c7988d7430ca59d87）\n构建时间： 2026-10-24 01:39 UTC\nCI 任务： BUILD LOG（https://github.com/libretro/virtualjaguar-libretro/actions/runs/40026450417）\n分支： `develop`\n提示： `develop`尖端的自动构建，每次推送时更换。 它针对所有24个目标进行了编译；尚未通过测试套件或任何手动QA。 对于稳定的构建，请使用最新版本的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。\n\n核心在启动时将其标识记录为`v3.10.0 aa5b73b` —在报告针对此版本的错误时引用该行。\n\n自上一夜版以来的变更\n```\naa5b73bd ci:使用RUNNER_TEMP获取自托管Studio runner将保留的临时文件(# 1084)\n1dec1cb2 FEAT （ APP ） ： NIGHTLY构建默认仿真线程开启，带有相位3门（ # 967 3d ） （ # 1082 ）\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_nightly_amd64.deb\nvirtualjaguar_nightly_arm64.deb\n```\n\n每个平台都与其拆分调试符号的`-debug.tar.gz`一起发货；将其提取到二进制文件旁边，以获得象征性的回溯。\n\nSHA-25…",
+      "originalContent": "### Nightly `aa5b73b` — `v3.10.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`aa5b73b`](https://github.com/libretro/virtualjaguar-libretro/commit/aa5b73bd2bb9f8a09fe7785c7988d7430ca59d87) |\n| **Built** | 2026-10-24 01:39 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/40026450417) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.10.0 aa5b73b` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\naa5b73bd ci: use RUNNER_TEMP for scratch files the self-hosted Studio runner would keep (#1084)\n1dec1cb2 feat(app): nightly builds default the emulation thread On, with the phase 3 gate (#967 3d) (#1082)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_nightly_amd64.deb\nvirtualjaguar_nightly_arm64.deb\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-25…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "ccdc6a25f10ab5e93aa2214f1af099091319d7087715c160d720cd524d6fd1e8",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-nesd-nightly",
+      "title": "【Android更新】NESd nightly",
+      "originalTitle": "NESd nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-24T01:35:04Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
+      "officialUrl": "https://github.com/jpjonte/NESd",
+      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
+      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n•可绑定的下一帧操作\n• Android ：触摸控件在按下时振动，默认情况下启用\n•游戏可以标记为收藏，首先显示在主菜单中\n•桌面和网络：将ROM放到窗口上以打开它\n•增加了对Waixing MMC3 （映射器74和192 ）和TQROM （映射器119 ）的支持\n•增加了对BNROM/NINA-001 （映射器34 ）和带WRAM的BxROM （映射器241 ）的支持\n•文件选取器可以按名称、上次播放或上次修改进行排序\n•增加了对万代分立板的支持（映射器70和152 ）\n•增加了对南京FC-001 （ Mapper 163 ）的支持\n\n固定\n•在游戏运行时打开无效的ROM将不再在没有保存的情况下结束该游戏\n• DMA读取现在可以像处理真正的硬件一样处理总线冲突\n•提高DMC DMA精度\n•改进了PPU读/写时间\n•改进的精灵渲染精度",
+      "originalContent": "### Added\n- Bindable Next Frame action\n- Android: Touch controls vibrate on press, enabled by default\n- Games can be marked as favorite, showing up first in the main menu\n- Desktop and web: Drop a ROM onto the window to open it\n- Added support for Waixing MMC3 (Mappers 74 and 192) and TQROM (Mapper 119)\n- Added support for BNROM / NINA-001 (Mapper 34) and BxROM with WRAM (Mapper 241)\n- The file picker can be sorted by name, last played or last modified\n- Added support for Bandai discrete boards (Mappers 70 and 152)\n- Added support for Nanjing FC-001 (Mapper 163)\n\n### Fixed\n- Opening an invalid ROM while a game is running no longer ends that game without saving\n- DMA reads now handle bus conflicts like real hardware\n- Improved DMC DMA accuracy\n- Improved PPU read/write timing\n- Improved sprite rendering accuracy",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "nesd"
+      ],
+      "contentHash": "2de023670941e559653646e6a4f730ee9f482f19fc3b0fab4a4fafae15e0f723",
+      "translationPending": false
+    },
+    {
+      "id": "138427",
+      "title": "【街机】SuperModel Sinden Edition v0.3a r261024",
+      "originalTitle": "[Arcade] SuperModel Sinden Edition v0.3a r261024",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-23T22:14:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138427-arcade-supermodel-sinden-edition-v0-3a-r261024/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/semu-sinden-transpa.png",
+      "officialUrl": "https://github.com/DirtBagXon/model3emu-code-sinden/",
+      "summary": "这是名为SuperModel的世嘉Model 3模拟器的一个分支，但它支持使用名为Sinden的LightGun。",
+      "content": "这是名为SuperModel的世嘉Model 3模拟器的一个分支，但它支持使用名为Sinden的LightGun。",
+      "originalContent": "Il s'agit d'un fork de l'émulateur Sega Model 3 nommé SuperModel mais qui prend en charge l'utilisation du LightGun appelé Sinden.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "bd4130beafdbf0dd3395083b4ba99631efec49da559ec83a6fcda985e8c93f0d",
+      "translationPending": false
+    },
+    {
+      "id": "138425",
+      "title": "【街机】SuperModel WIP (x86/x64) v0.3a Build 261024",
+      "originalTitle": "[Arcade] SuperModel WIP (x86/x64) v0.3a Build 261024",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-23T22:13:48Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138425-arcade-supermodel-wip-x86-x64-v0-3a-build-261024/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/08/Supermodel.png",
+      "officialUrl": "http://www.supermodel3.com/",
+      "summary": "由Bart Trzynadlowski、Ville Linde和Stefano Teso在其开发版本中创建的第一个世嘉Model 3模拟器（请参阅此处或那里） [来源]。 在此处准备的配置文件。 变更内容： 更新系统从SVN更改为GIT ，因此版本名称更改，为简单起见，我将使用比GIT默认值更易于理解的发布日期系统。 •修复广告牌输出。 它现在是自己的独立设备，而不是与驱动板共享代码。 仅当您设置了实际输出时，设备才会运行。",
+      "content": "由Bart Trzynadlowski、Ville Linde和Stefano Teso在其开发版本中创建的第一个世嘉Model 3模拟器（请参阅此处或那里） [来源]。\n在此处准备的配置文件。\n\n变更内容：\n更新系统从SVN更改为GIT ，因此版本名称更改，为简单起见，我将使用比GIT默认值更易于理解的发布日期系统。\n•修复广告牌输出。 它现在是自己的独立设备，而不是与驱动板共享代码。 仅当您设置了实际输出时，设备才会运行。 使输出类线程安全。\n•固定杂项\n\n请注意，此处提供了为Sinden添加支持的新分叉。\n\n已添加：\n• SEGA拉力赛2音乐校正（混音）\n•音乐校正vf3中的第1级2人（红色地窖） （不确定是否要修改，因此可能会导致其他游戏出现其他声音问题）。（正式包括）\n\n要生成数据，您可以使用此工具。",
+      "originalContent": "Le premier émulateur de Sega Model 3 créé par Bart Trzynadlowski, Ville Linde et Stefano Teso dans sa version de développement (voir ici ou là) [source].\nFichiers de configurations préparés ici.\n\nLes changements:\n\nLe système de mise à jour passe de SVN à GIT, du coup le nom des versions changent, par simplicité j'utiliserai un système par date de release plus compréhensible que le par défaut de GIT.\n\n- Fix the billboard output. It's now it's own separate device rather than sharing code with the driveboard. The device only runs if you set actual outputs. Made the output class thread safe.\n- Misc fixes\n\nA noter qu'un nouveau fork ajoutant le support du Sinden est dispo ici.\n\nAjout:\n- correction des musiques dans sega rally 2 (mix)\n- correction musique 1er niveau 2joueurs (la cave rouge) dans vf3 (pas sûr de la modif, et donc cela peut éventuellement entrainer d'autre problèmes sonore sur d'autre jeux).(inclut officiellement)\n\nPour générer un dat vous pouvez utiliser cet outil.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "a879c917f253e7a9564d4d0a82239f2149331ff5aea8b0f6acc713f3dae1d3f8",
+      "translationPending": false
+    },
+    {
+      "id": "138423",
+      "title": "【家用机】Ryujinx-Stereo v0.6.0",
+      "originalTitle": "[Consoles de salon] Ryujinx-Stereo v0.6.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-23T22:07:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138423-consoles-de-salon-ryujinx-stereo-v0-6-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/ryu-sterero.png",
+      "officialUrl": "https://github.com/AlonBorodAHub/Ryujinx-Stereo",
+      "summary": "Ryujinx Stereo是任天堂Switch Ryujinx仿真器的变体，增加了对立体3D的支持。 该项目修改图形渲染以生成浮雕图像，并分离视图以恢复场景的深度。 提供多种输出模式，包括并排（ SBS ）和过下，适用于不同类型的立体显示器。 参数还可用于调整深度和收敛性。 兼容性取决于开发商制作的游戏和改编。 该项目仍处于试验阶段。",
+      "content": "Ryujinx Stereo是任天堂Switch Ryujinx仿真器的变体，增加了对立体3D的支持。 该项目修改图形渲染以生成浮雕图像，并分离视图以恢复场景的深度。\n提供多种输出模式，包括并排（ SBS ）和过下，适用于不同类型的立体显示器。 参数还可用于调整深度和收敛性。\n\n兼容性取决于开发商制作的游戏和改编。 该项目仍处于试验阶段。",
+      "originalContent": "Ryujinx Stereo est une variante de l'émulateur Nintendo Switch Ryujinx qui ajoute la prise en charge de la 3D stéréoscopique. Le projet modifie le rendu graphique afin de générer une image en relief, avec une séparation des vues permettant de restituer la profondeur des scènes.\n\nPlusieurs modes de sortie sont proposés, notamment Side-by-Side (SBS) et Over-Under, pour différents types d'affichage stéréoscopique. Des paramètres permettent également d'ajuster la profondeur et la convergence.\n\nLa compatibilité dépend des jeux et des adaptations réalisées par le développeur. Le projet reste expérimental.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "e3fa097f7e1f5aca697ca19233ac965b4802e93139d908c0c4de4d0e53a552c8",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-23T18:47:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月23日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• midcvsd,更新(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• midcvsd, update (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "1b6dffdfdadf9b1d499bc913a84f24e95fff01412207dad27c2f90fb77bd198c",
+      "translationPending": false
+    },
     {
       "id": "138419",
       "title": "【电脑】VirtualBox (32/64 Bits) v7.2.22",
@@ -28,31 +189,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "3e832d9a5076ef508aa4e3ebde1ba4dee24133df1942af00c11da4b09f3350f2",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-23T15:00:18Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月23日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 特大驱动器:更新.(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• megadrive: updates... (fprietog)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "26cfdae346d3cd8477bf209bfb8353274d64035392ed77ffbbe1d557d19ce937",
       "translationPending": false
     },
     {
@@ -123,30 +259,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-23T12:14:19Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月23日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• fbf93c3翻译: duckstation-qt_es.ts (# 3813) (彼得·德尔塔)# 3813（https://github.com/stenzek/duckstation/pull/3813）",
-      "originalContent": "## Commits\n- fbf93c3: Update duckstation-qt_es.ts (#3813) (PeterDelta) [#3813](https://github.com/stenzek/duckstation/pull/3813)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "6bd8895faccd2aa1b47735fad4c259aebecde5d6c10f22ca5cb63e02edb6314b",
-      "translationPending": false
-    },
-    {
       "id": "138409",
       "title": "【工具】AmigaWinLauncher v1.11",
       "originalTitle": "[Utilitaires Multi-systemes] AmigaWinLauncher v1.11",
@@ -166,30 +278,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "31ae7222382fc0a04553032bfb458dd068bacfcf55df0279cd70ee470c65160b",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-23T11:40:15Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年10月23日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `617fe83` — `v3.10.0` (`develop`)\n\n提交：`617fe83`（https://github.com/libretro/virtualjaguar-libretro/commit/617fe83e15135615d0d851f5bd15a3e0b1bf78a1）\n构建时间：2026-10-23 11:39 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/39937556520）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有24个目标;它没有通过测试套件或任何人工质量控制。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为: `v3.10.0 617fe83` 启动时 —— 在报告此构建时引用此行。\n\n自上一夜版以来的变更\n\n```\n617fe83e 测试( app): 字体_ system_ unit 报告一个缓慢的主机而不是失败 (# 1078) (# 1080)\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_nightly_amd64.deb\nvirtualjaguar_nightly_arm64.deb\n```\n\n每艘月台舰与一艘 `-debug.tar.gz` 以获得符号回溯跟踪。\n\nSHA-256 校验值\n\n用 `sha256sum --check SHA256SUMS.txt` (林纳克) o.",
-      "originalContent": "### Nightly `617fe83` — `v3.10.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`617fe83`](https://github.com/libretro/virtualjaguar-libretro/commit/617fe83e15135615d0d851f5bd15a3e0b1bf78a1) |\n| **Built** | 2026-10-23 11:39 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/39937556520) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.10.0 617fe83` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n617fe83e test(app): fonts_system_unit reports a slow host instead of failing (#1078) (#1080)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_nightly_amd64.deb\nvirtualjaguar_nightly_arm64.deb\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) o…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "8cf01caee130a6746a78262801ade6752f8e734db05b9215dd3cf0d6abf42a2c",
       "translationPending": false
     },
     {
@@ -216,14 +304,14 @@
     },
     {
       "id": "138405",
-      "title": "【家用机】KytyPlus v4.8",
-      "originalTitle": "[Consoles de salon] KytyPlus v4.8",
+      "title": "【家用机】KytyPlus v5.0",
+      "originalTitle": "[Consoles de salon] KytyPlus v5.0",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-10-23T11:22:46Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/138405-consoles-de-salon-kytyplus-v4-8/",
+      "sourceUrl": "https://www.emu-france.com/news/138405-consoles-de-salon-kytyplus-v5-0/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/kytyplus-scaled.png",
       "officialUrl": "https://github.com/Coder787-source/KytyPlus",
       "summary": "KytyPlus是KytyPS5的分支，其本身源自原始Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了一些改进，包括通过shadPS4对PS4游戏的实验性支持， FSR 1.0 ， Vulkan缓存，以保持管道编译和不同的优化 集成GPU （ iGPU ）的选项。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。",
@@ -235,7 +323,7 @@
         "kytyplus_pc",
         "kyty_ps5_pc"
       ],
-      "contentHash": "1fc8ccfc83c582983e77c06741cd58bda7699948f98ccfa04a5b234a1342e8ae",
+      "contentHash": "689c025d9214247fa6dac23b8c6fc5021e73cd3c7384da1852eb6881079d6b2b",
       "translationPending": false
     },
     {
@@ -4481,30 +4569,6 @@
         "sameboy_core"
       ],
       "contentHash": "3d28f253d059e957eeffbd140f820d7dc39ee553a1d2d21b650f0d01d7421e41",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-nesd-nightly",
-      "title": "【Android更新】NESd nightly",
-      "originalTitle": "NESd nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-09T06:56:04Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/jpjonte/NESd/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/nes_emu_ex.png",
-      "officialUrl": "https://github.com/jpjonte/NESd",
-      "summary": "NESd 发布 Android 新版本 nightly，发布日期为2026年10月09日。点击查看官方版本信息与更新说明。",
-      "content": "NESd 已发布 Android 最新版本 nightly。\n\n发布日期：2026年10月09日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已添加\n• 可捆绑的下一个框架行动\n• Android:触控会震动按压,默认启用\n• 游戏可标为最受欢迎,在主菜单中首先显示\n• 桌面和网络:将一个ROM放入窗口打开\n• 增加支助Waixing MMC3(Mappers 74和192)和TQROM(Mapper 119)\n• 增加支持BNROM / NINA-001(Mapper 34)和BxROM(Mapper 241)\n• 文件拾取器可按名称排序、上次播放或最后一次修改\n• 增加支持班代离散板(马珀斯70和152)\n• 向南京FC-001(马普163)增加支助\n\n固定\n• 当游戏运行时打开无效的ROM,该游戏不再保存而结束\n• DMA 读取像真正的硬件一样处理总线冲突\n• 改进DMC DMA的准确性\n• 改进PPU读取/写出时间\n• 改善图示渲染准确性",
-      "originalContent": "### Added\n- Bindable Next Frame action\n- Android: Touch controls vibrate on press, enabled by default\n- Games can be marked as favorite, showing up first in the main menu\n- Desktop and web: Drop a ROM onto the window to open it\n- Added support for Waixing MMC3 (Mappers 74 and 192) and TQROM (Mapper 119)\n- Added support for BNROM / NINA-001 (Mapper 34) and BxROM with WRAM (Mapper 241)\n- The file picker can be sorted by name, last played or last modified\n- Added support for Bandai discrete boards (Mappers 70 and 152)\n- Added support for Nanjing FC-001 (Mapper 163)\n\n### Fixed\n- Opening an invalid ROM while a game is running no longer ends that game without saving\n- DMA reads now handle bus conflicts like real hardware\n- Improved DMC DMA accuracy\n- Improved PPU read/write timing\n- Improved sprite rendering accuracy",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "nesd"
-      ],
-      "contentHash": "14319f7b1b7a51ce2346bf5eee70e94744a222881d1625414cc6bd935e94b920",
       "translationPending": false
     },
     {
