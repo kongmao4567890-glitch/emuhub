@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T16:15:00.989174Z",
+  "generatedAt": "2026-10-25T05:15:13.375194Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -15,21 +15,112 @@
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-24T15:48:27Z",
+      "publishedAt": "2026-10-25T04:41:38Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
       "imageUrl": "asset://assets/emulators/duckstation.png",
       "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•添加MC_SSAO.fx （ Stenzek（https://github.com/stenzek/duckstation/commit/c5ffc4a978674ec9650fed89b35997fadbb14682） ）\n•更新翻译字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/6caf8b2eded2bde2aee46e8642957b051cd452b2） ）\n•使用VK_KHR_PRESENT_WAIT （ Stenzek（https://github.com/stenzek/duckstation/commit/85fe47af8e55b800ecbeb4b6f6ada15ffeaa9aae） ）等待礼物\n• ShouldPresentFrame () （ Stenzek（https://github.com/stenzek/duckstation/commit/3551eef7f891995252bc5d985db882837639e53b） ）拆分延迟退房\n•当GAP基线上升时探测演示文稿积压（ Stenzek（https://github.com/stenzek/duckstation/commit/7763167550af36895e8ec147bcdef6b37d94ea11） ）\n•更新SDL游戏控制器数据库（ Stenzek（https://github.com/stenzek/duckstation/commit/8d9f6e8bf7aac17142f5fd0c8864612e7898c19d） ）",
-      "originalContent": "## Commits\n- Add MC_SSAO.fx ([Stenzek](https://github.com/stenzek/duckstation/commit/c5ffc4a978674ec9650fed89b35997fadbb14682))\n- Update translation strings ([Stenzek](https://github.com/stenzek/duckstation/commit/6caf8b2eded2bde2aee46e8642957b051cd452b2))\n- Wait for presents with VK_KHR_present_wait ([Stenzek](https://github.com/stenzek/duckstation/commit/85fe47af8e55b800ecbeb4b6f6ada15ffeaa9aae))\n- Split late present check out of ShouldPresentFrame() ([Stenzek](https://github.com/stenzek/duckstation/commit/3551eef7f891995252bc5d985db882837639e53b))\n- Probe for presentation backlog when gap baseline rises ([Stenzek](https://github.com/stenzek/duckstation/commit/7763167550af36895e8ec147bcdef6b37d94ea11))\n- Update SDL game controller database ([Stenzek](https://github.com/stenzek/duckstation/commit/8d9f6e8bf7aac17142f5fd0c8864612e7898c19d))",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月25日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 8962d84 ： GPU/HW ：添加缺失的深度清除记录（ Stenzek ）\n•在松开而不是按下时激活切换按钮（ Stenzek（https://github.com/stenzek/duckstation/commit/20916bd898bc67642278baa0f0e2e673237c9bd2） ）\n•支持惯性拖动/滑动滚动（ Stenzek（https://github.com/stenzek/duckstation/commit/c3b58f2563730d22c7d5c11876ed719a9bd38230） ）\n• 968d20a: dep/imgui:出现窗口时不要平滑滚动请求（ Stenzek ）\n•修复ForceKeyNavEnabled ()猛击游戏手柄导航源（ Stenzek（https://github.com/stenzek/duckstation/commit/fd8bcdcf189f1aa86796d97d274b53e98214b3d9） ）\n•在打开的对话框检查中包括目录选择器（ Stenzek（https://github.com/stenzek/duckstation/commit/7d64f8223e63a1bcde938b3a45ecfb6ae1912ac5） ）\n•关闭时清除所有对话框（ Stenzek（https://github.com/stenzek/duckstation/commit/414d8f2049c128555b919e5a364b233fe480785a） ）\n•修复不确定的进度条扫描范围（ Stenzek（https://github.com/stenzek/duckstation/commit/49a2ff938ec5911d53a254a43857927df8ec159a） ）\n•避免下拉宽度中的倒置std:: clamp ()边界（ Stenzek（https://github.com/stenzek/duckstation/commit/aa9916b882c17354bfe4b64feb1ae381ed0048da） ）\n•在MenuButtonFrame () overload (Stenzek（https://github.com/stenzek/duckstation/commit/f4fe9de23f015429c132ef9975f3118dbd5bb5b8）)中传递按钮标志\n•在BeginBlurWindow () (Stenzek（https://github.com/stenzek/duckstation/commit/ae4658a7b540859219dae7932cceb8da0a854110）)中传递p_open通过\n•隐藏时保持水平菜单/侧边栏状态平衡（ Stenzek（https://github.com/stenzek/duckstation/commit/b73f8b2731133a3f5165152138aa67c2ef74a98b） ）\n•调用前复制/移动可检查的选择对话框回调（ Stenzek（https://github.com/stenzek/duckstation/commit/9bbf341bebf00549bf378edd8e5235e4d4abdcf8） ）",
+      "originalContent": "## Commits\n- 8962d84: GPU/HW: Add missing logging of depth clears (Stenzek)\n- Activate toggle buttons on release instead of press ([Stenzek](https://github.com/stenzek/duckstation/commit/20916bd898bc67642278baa0f0e2e673237c9bd2))\n- Support drag/swipe scrolling with inertia ([Stenzek](https://github.com/stenzek/duckstation/commit/c3b58f2563730d22c7d5c11876ed719a9bd38230))\n- 968d20a: dep/imgui: Don't smooth scroll requests made while window is appearing (Stenzek)\n- Fix ForceKeyNavEnabled() clobbering gamepad nav source ([Stenzek](https://github.com/stenzek/duckstation/commit/fd8bcdcf189f1aa86796d97d274b53e98214b3d9))\n- Include directory selector in open dialog checks ([Stenzek](https://github.com/stenzek/duckstation/commit/7d64f8223e63a1bcde938b3a45ecfb6ae1912ac5))\n- Clear all dialogs on shutdown ([Stenzek](https://github.com/stenzek/duckstation/commit/414d8f2049c128555b919e5a364b233fe480785a))\n- Fix indeterminate progress bar sweep range ([Stenzek](https://github.com/stenzek/duckstation/commit/49a2ff938ec5911d53a254a43857927df8ec159a))\n- Avoid inverted std::clamp() bounds in dropdown width ([Stenzek](https://github.com/stenzek/duckstation/commit/aa9916b882c17354bfe4b64feb1ae381ed0048da))\n- Pass button flags through in MenuButtonFrame() overload ([Stenzek](https://github.com/stenzek/duckstation/commit/f4fe9de23f015429c132ef9975f3118dbd5bb5b8))\n- Pass p_open through in BeginBlurWindow() ([Stenzek](https://github.com/stenzek/duckstation/commit/ae4658a7b540859219dae7932cceb8da0a854110))\n- Keep horizontal menu/sidebar state balanced when hidden ([Stenzek](https://github.com/stenzek/duckstation/commit/b73f8b2731133a3f5165152138aa67c2ef74a98b))\n- Copy/move checkable choice dialog callback before invoking ([Stenzek](https://github.com/stenzek/duckstation/commit/9bbf341bebf00549bf378edd8e5235e4d4abdcf8))",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "duckstation"
       ],
-      "contentHash": "636ad18da69e6999079fceb9887e5fcb23fdba65cd777c01d70e79a6a84db327",
+      "contentHash": "d2d5d3fa143d724aabdcfe392418e9f32824b6b380a8c594b33f0b7287b90e5d",
+      "translationPending": false
+    },
+    {
+      "id": "138467",
+      "title": "【工具】OpenRetro v0.6.2",
+      "originalTitle": "[Utilitaires Multi-systemes] OpenRetro v0.6.2",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-24T21:40:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138467-utilitaires-multi-systemes-openretro-v0-6-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/openretro.png",
+      "officialUrl": "https://github.com/kauanbgs/openretro",
+      "summary": "OpenRetro是专门用于复古游戏的Windows开源前端。 它允许您集中游戏库，管理其元数据和封面，然后从单个界面启动游戏。 它将RetroArch融入了专为该项目设计的简约版本中，没有通常的界面。必要的Libretro内核会自动下载，兼容游戏直接在OpenRetro窗口中运行 该软件还支持用于PlayStation 3仿真的RPCS3 ，并允许添加外部仿真器。",
+      "content": "OpenRetro是专门用于复古游戏的Windows开源前端。 它允许您集中游戏库，管理其元数据和封面，然后从单个界面启动游戏。\n它将RetroArch融入了专为该项目设计的简约版本中，没有通常的界面。必要的Libretro内核会自动下载，兼容游戏直接在OpenRetro窗口中运行\n该软件还支持用于PlayStation 3仿真的RPCS3 ，并允许添加外部仿真器。\nOpenRetro提供多项附加功能：根据游戏的不同，本地多人游戏最多可容纳四名玩家，通过连接到同一Wi-Fi网络的手机浏览器进行远程游戏，以及允许三位客人加入PC上托管的游戏的派对模式\n。在线游戏也可用于某些系统，每个参与者然后在自己的计算机上运行游戏。大画面模式使您可以在带有控制器的电视上轻松使用，而自动状态备份则允许您在兼容系统上恢复游戏。",
+      "originalContent": "OpenRetro est un frontend open source pour Windows dédié aux jeux rétro. Il permet de centraliser sa bibliothèque de jeux, de gérer leurs métadonnées et leurs jaquettes, puis de lancer les jeux depuis une interface unique.\n\nIl intègre RetroArch dans une version minimaliste spécialement conçue pour le projet, sans son interface habituelle. Les cœurs Libretro nécessaires sont téléchargés automatiquement, et les jeux compatibles s'exécutent directement dans la fenêtre d'OpenRetro. Le logiciel prend également en charge RPCS3 pour l'émulation PlayStation 3 et permet d'ajouter des émulateurs externes.\n\nOpenRetro propose plusieurs fonctions complémentaires: multijoueur local jusqu'à quatre joueurs selon les jeux, jeu à distance depuis un navigateur sur téléphone connecté au même réseau Wi-Fi, et mode Party permettant à trois invités de rejoindre une partie hébergée sur le PC. Le jeu en ligne est également disponible pour certains systèmes, chaque participant exécutant alors le jeu sur son propre ordinateur. Un mode Big Picture facilite l'utilisation sur téléviseur avec une manette, tandis que les sauvegardes d'état automatiques permettent de reprendre une partie sur les systèmes compatibles.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8b33d033b83310f6058b7daa0b588f03212343234cd03dd4fb20e8dd59bf853d",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-j2me_loader-continuous",
+      "title": "【Android更新】J2ME Loader continuous",
+      "originalTitle": "J2ME Loader continuous Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-24T20:35:00Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
+      "imageUrl": "asset://assets/emulators/j2me_loader.png",
+      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
+      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
+      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
+      "originalContent": "J2ME Loader continuous Android release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "j2me_loader"
+      ],
+      "contentHash": "3cf62ba7c15cad6bb5632bc88471e326bacf2228cac30ce491fb24206251e3e9",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-24T17:35:32Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• FBNeo: 配置模拟器热键新功能 :) 参见菜单\"输入->配置模拟器热键\"(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• FBNeo: Configure emulator hotkeys **new function** :) See menu \"Input -> Configure emulator hotkeys\" (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "8bd3711dc7e610a46857239900b19ae976e6ecc82b665eb624c80afe9a26a3c1",
+      "translationPending": false
+    },
+    {
+      "id": "138460",
+      "title": "【工具】CosmoU v0.6.0",
+      "originalTitle": "[Utilitaires Multi-systemes] CosmoU v0.6.0",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-24T16:26:15Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138460-utilitaires-multi-systemes-cosmou-v0-6-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/cosmo-u-fe-scaled.png",
+      "officialUrl": "https://github.com/Eryski/CosmoU",
+      "summary": "CosmoU是Wii U模拟器Cemu的免费启动器，旨在找到受主机主菜单启发的界面，而不是简单的游戏列表。 它允许您使用多种显示模式管理库，包括带封面的视图、网格和受Wii U启发的动画界面。 该软件提供Cemu的自动下载和配置、封面的恢复和游戏标题的清洗。它还允许您为每个游戏单独配置分辨率，以及图形、音频和显示设置、控制器类型及其配置文件 。也可以激活背景音乐作为选项。",
+      "content": "CosmoU是Wii U模拟器Cemu的免费启动器，旨在找到受主机主菜单启发的界面，而不是简单的游戏列表。 它允许您使用多种显示模式管理库，包括带封面的视图、网格和受Wii U启发的动画界面。\n该软件提供Cemu的自动下载和配置、封面的恢复和游戏标题的清洗。它还允许您为每个游戏单独配置分辨率，以及图形、音频和显示设置、控制器类型及其配置文件\n。也可以激活背景音乐作为选项。",
+      "originalContent": "CosmoU est un lanceur gratuit pour l’émulateur Wii U Cemu, conçu pour retrouver une interface inspirée du menu d’accueil de la console plutôt qu’une simple liste de jeux. Il permet de gérer sa bibliothèque avec plusieurs modes d’affichage, notamment une vue avec jaquettes, une grille et une interface animée inspirée de la Wii U.\n\nLe logiciel propose le téléchargement et la configuration automatiques de Cemu, la récupération des jaquettes et le nettoyage des titres des jeux. Il permet également de configurer la résolution individuellement pour chaque jeu, ainsi que les paramètres graphiques, audio et d’affichage, les types de manettes et leurs profils. Une musique de fond peut aussi être activée en option.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "1e5f97c9f73996924e5595614a1c79fe85d278468285494ecfc71fcb71c862da",
       "translationPending": false
     },
     {
@@ -281,14 +372,14 @@
     },
     {
       "id": "138434",
-      "title": "【家用机】Flycast Dojo v7.8",
-      "originalTitle": "[Consoles de salon] Flycast Dojo v7.8",
+      "title": "【家用机】Flycast Dojo v7.9",
+      "originalTitle": "[Consoles de salon] Flycast Dojo v7.9",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-10-24T09:46:37Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/138434-consoles-de-salon-flycast-dojo-v7-8/",
+      "sourceUrl": "https://www.emu-france.com/news/138434-consoles-de-salon-flycast-dojo-v7-9/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/05/flycast-dojo-300x239.png",
       "officialUrl": "https://github.com/blueminder/flycast-dojo/releases",
       "summary": "Flycast Dojo是Flycast的分支， Flycast是世嘉Dreamcast、Naomi/2和源自Reicast的Atomiswave跨平台模拟器，专注于netplay功能和重播。 Flycast Dojo可以从GitHub或作为Fightcade配对服务的一部分检索。",
@@ -299,32 +390,7 @@
         "flycast",
         "flycast_vmu_pc"
       ],
-      "contentHash": "3c6e02609eed719a5e633367aa042fd210b1bf0cf68c9982ca07942584d621df",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-24T06:58:45Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月24日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 在Gaiapolis的地图屏幕上固定黑方[Pasky](barbudreadmon)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• fix black squares on gaiapolis's map screen [Pasky] (barbudreadmon)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "ceb28443f8dcf69208dc925be2aeb85f2cdf20a882fabf2b81ed01203c57732b",
+      "contentHash": "f60ba4528a0093bd1d36d8dccaae39f93a0c80772ada5229b917def7f5fb2b6c",
       "translationPending": false
     },
     {
@@ -711,30 +777,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "b10a32b1f47a05b472ca7fec162b1fcc7c37bab404a117b0dd798c16cff03dfc",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-j2me_loader-continuous",
-      "title": "【Android更新】J2ME Loader continuous",
-      "originalTitle": "J2ME Loader continuous Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-22T16:12:33Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
-      "imageUrl": "asset://assets/emulators/j2me_loader.png",
-      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
-      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年10月22日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年10月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "J2ME Loader continuous Android release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "j2me_loader"
-      ],
-      "contentHash": "949d9cf6d30c438e2c5667f9896fcf76bfe2a4b1fa2f541ac8661aa1c31fbdaa",
       "translationPending": false
     },
     {
