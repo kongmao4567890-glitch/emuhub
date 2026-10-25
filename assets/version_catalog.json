@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T04:44:44Z",
+  "generatedAt": "2026-10-25T16:25:05Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "86box_pc": {
@@ -68,11 +68,11 @@
       "devReleaseNotes": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: ARMSX2_BUILD_EERUNNER requires ENABLE_RECOMPILER_TEST_HOOKS\n- Android: add the USE_PERF_JITDUMP build option\n- Android: make pcsx2-eerunner buildable as an NDK executable\n- Android: regenerate the PGO profile on the Adreno 722 source\n- Android PGO: record internal-linkage functions by file name, not build path\n- GS: trim one native pixel off each edge when upscaling 2x or more\n- GameDB: nativeCounterDraws for Shadow of the Colossus\n- GS: nativeCounterDraws, draw colour-wrap counter draws at native resolution\n- GameDB: OPHFlagHack for Shadow of the Colossus, as NetherSX2 has it\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261022...90126bdfea7a3ffb1fd288b2f7f0ae0b033af2d6"
     },
     "armsx3": {
-      "version": "1.3.2",
-      "releaseDate": "2026-10-20T19:53:49Z",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.3.2",
-      "releaseNotes": "# ARMSX3 1.3.2\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bb95d752-5b2e-401a-b16e-58e2d8c28607\" />\r\n\r\n## Online\r\n\r\n- **RPCN has been updated so sign-in works again with the latest RPCN server**, including its new title storage (TSS) support that some games use online. \r\n\r\n## Controls\r\n\r\n- **New option: Tight L1/L2/R1/R2 touch areas**, in Settings > Controls > On-Screen Controls. The shoulder buttons respond only on the button itself, and their outlines in the touch layout editor fit the buttons. (In the next ARMSX2 nightly as well). \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7da39a82-6f88-4780-8370-8700aade5dab\" />\r\n\r\n## Home screen\r\n\r\n- **Home screen shortcuts show the game's cover** instead of the ARMSX3 icon. (In the next ARMSX2 nightly as well). \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/52582292-9c88-4f2b-8ee7-64907aa80119\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2e2e7c6c-c50b-4db0-a752-2c148cef2fef\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e5402d4c-eb93-4e7b-b36b-a62d7af50b4e\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/313a2eec-f433-4f61-9e8e-12a5866376a9\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d3b64648-52c1-45bb-852b-6e39ed913f03\" />\r\n\r\n(P.S. The Yakuza Dead Souls fix is already in ARMSX3! Start Yakuza and open All Core Settings from the in-game menu, so the setting only applies to that game. Search “PPU Event” and the setting PPU Event Wake-Up Delay will appear. \r\nSet PPU Event Wake-Up Delay (between 0 and 200 µs, experiment with what works for your device). \r\n\r\nThe 60 FPS patch: FlexBy’s patch is in RPCS3’s patch database for BLUS30826, BLES01399 and NPEB02034. Tap Download / update patch database in the Patches tab and it shows up for the game. Once your done close the game and reopen it.",
-      "downloadUrl": "https://github.com/ARMSX2/ARMSX3/releases/download/1.3.2/ARMSX3-1.3.2-a11-armv8.2-sdk30.apk"
+      "version": "1.4",
+      "releaseDate": "2026-10-25T04:58:31Z",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.4",
+      "releaseNotes": "# ARMSX3 1.4\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/43e390e0-c297-403d-8685-53e0cc3ac078\" />\r\n\r\n## Batman: Arkham Origins online\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a33ae612-d620-415a-823d-183defdf7bf2\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0e60b298-f5b7-499d-8b96-4a6b6bda600a\" />\r\n\r\n- **Batman: Arkham Origins multiplayer is back online** through Arkham: Revived, KiwifruitDev's community servers. ARMSX3 sets the game up for Revived by itself when it boots, in every language, so there's no patch file to copy. You play with other ARMSX3 players over RPCN.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6060994d-a299-44ec-a24a-e411f2fba31b\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d83398e2-1326-4bd9-ad6e-2358853a2c51\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/aff96a9b-ca83-41ec-82f3-dfdac456f9f2\" />\r\n\r\n- **Quick match and joining a friend's lobby both work.**\r\n- **Invite your RPCN friends.** When a friend invites you, a banner shows who it's from, and you join from the in-game menu in Friends. Friend requests can be accepted in Settings > RPCN or in Friends.\r\n\r\n<img width=\"1242\" height=\"2208\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2b360d85-ab85-45e5-ac5f-0836af9e1cba\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2c976ad8-99d5-4d48-a230-0dbafee6afcb\" />\r\n\r\n- **Leave ARMSX3 mid-lobby and come back to it.** The game pauses while you're away, and a \"Staying online\" notification keeps it connected. If the connection drops, ARMSX3 signs you back in by itself.\r\n- **Switching between single-player and multiplayer keeps the game's data installed** when you play from an ISO file. The first boot after updating would install it once more.\r\n- **Optional patch: Private matches start with fewer players.** A private lobby normally needs 3 players before the host can start. With this patch on, the host can start with fewer. Only the host needs it, and public lobbies stay the same. It's off by default, under Patches for Arkham Origins.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/989e13a5-44c4-4416-85d3-61d2e354d9df\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/755193b8-4fd9-4281-b10c-56f4593ec396\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1985e09f-b474-4a53-ad20-f7e96ce83194\" />\r\n\r\n### What you need to play Arkham Revived\r\n\r\n1. **Batman: Arkham Origins with update 1.06.** Get it from PKG/Data Manager > Game updates.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f0a4ed20-263f-4fba-9346-fb6cb71f191c\" />\r\n\r\n2. **Settings > RPCN:** turn on **Internet Connection** and set **PSN status** to **RPCN**.\r\n3. **An RPCN account**, signed in under Settings > RPCN or RPCN in the library menu. Creating one emails you a code to enter once. You don't need a separate Revived account: Revived knows you by your RPCN name.\r\n4. **UPnP on**, in Settings > RPCN, so other players can connect to you. Close the game and start it again after turning it on. If your router doesn't support UPnP, forward UDP port 3658 to your device.\r\n\r\nGood to know: you'll meet RPCN players only. Real PS3s play on PSN and PC plays on Steam, and neither can join RPCN games.\r\n\r\nThanks to @KiwifruitDev for Arkham: Revived. \r\n\r\n## Toy portals\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bb1f7dae-f021-4e43-bc06-63e967e48d81\" />\r\n\r\n- **Play Skylanders, Disney Infinity and LEGO Dimensions with their figures.** Portal in the in-game menu puts you…",
+      "downloadUrl": "https://github.com/ARMSX2/ARMSX3/releases/download/1.4/ARMSX3-1.4-a11-armv8.2-sdk30.apk"
     },
     "azahar": {
       "version": "2127.0-alpha3",
@@ -156,10 +156,10 @@
       "downloadUrl": "https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk"
     },
     "citron_neo": {
-      "version": "nightly-windows",
-      "releaseDate": "2026-10-24T16:17:01Z",
-      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-windows",
-      "releaseNotes": "**Citron Upstream Commit:** [`52f3ea7`](https://github.com/citron-neo/emulator/commit/52f3ea79528dae53d98436792e02e48f7ec799d0)\n\nThis build is based on the latest Citron emulator source code from the upstream repository.\n\n**Build Details:**\n- Platform: Windows (x64)\n- Toolchains: Clangtron and native clang-cl/MSVC ABI\n- Build Type: Nightly\n- Date: 2026-10-24"
+      "version": "nightly-linux",
+      "releaseDate": "2026-10-25T16:22:15Z",
+      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-linux",
+      "releaseNotes": "**Citron Upstream Commit:** [`56dad81`](https://github.com/citron-neo/emulator/commit/56dad8119520160b744b959ba07f1e19538e97c1)\n\nThis build is based on the latest Citron emulator source code from the upstream repository.\n\n**Build Details:**\n- Platform: Linux (x86_64, x86_64_v3, aarch64)\n- Format: AppImage + tar.zst packages\n- Build Type: Nightly with optimizations\n- Date: 2026-10-25"
     },
     "clownmdemu_pc": {
       "version": "1.6.12",
@@ -219,10 +219,10 @@
     },
     "duckstation": {
       "version": "preview",
-      "releaseDate": "2026-10-25T04:41:38Z",
+      "releaseDate": "2026-10-25T12:17:24Z",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "releaseNotes": "## Commits\n- 8962d84: GPU/HW: Add missing logging of depth clears (Stenzek)\n- Activate toggle buttons on release instead of press ([Stenzek](https://github.com/stenzek/duckstation/commit/20916bd898bc67642278baa0f0e2e673237c9bd2))\n- Support drag/swipe scrolling with inertia ([Stenzek](https://github.com/stenzek/duckstation/commit/c3b58f2563730d22c7d5c11876ed719a9bd38230))\n- 968d20a: dep/imgui: Don't smooth scroll requests made while window is appearing (Stenzek)\n- Fix ForceKeyNavEnabled() clobbering gamepad nav source ([Stenzek](https://github.com/stenzek/duckstation/commit/fd8bcdcf189f1aa86796d97d274b53e98214b3d9))\n- Include directory selector in open dialog checks ([Stenzek](https://github.com/stenzek/duckstation/commit/7d64f8223e63a1bcde938b3a45ecfb6ae1912ac5))\n- Clear all dialogs on shutdown ([Stenzek](https://github.com/stenzek/duckstation/commit/414d8f2049c128555b919e5a364b233fe480785a))\n- Fix indeterminate progress bar sweep range ([Stenzek](https://github.com/stenzek/duckstation/commit/49a2ff938ec5911d53a254a43857927df8ec159a))\n- Avoid inverted std::clamp() bounds in dropdown width ([Stenzek](https://github.com/stenzek/duckstation/commit/aa9916b882c17354bfe4b64feb1ae381ed0048da))\n- Pass button flags through in MenuButtonFrame() overload ([Stenzek](https://github.com/stenzek/duckstation/commit/f4fe9de23f015429c132ef9975f3118dbd5bb5b8))\n- Pass p_open through in BeginBlurWindow() ([Stenzek](https://github.com/stenzek/duckstation/commit/ae4658a7b540859219dae7932cceb8da0a854110))\n- Keep horizontal menu/sidebar state balanced when hidden ([Stenzek](https://github.com/stenzek/duckstation/commit/b73f8b2731133a3f5165152138aa67c2ef74a98b))\n- Copy/move checkable choice dialog callback before invoking ([Stenzek](https://github.com/stenzek/duckstation/commit/9bbf341bebf00549bf378edd8e5235e4d4abdcf8))",
-      "devReleaseNotes": "## Commits\n- 8962d84: GPU/HW: Add missing logging of depth clears (Stenzek)\n- Activate toggle buttons on release instead of press ([Stenzek](https://github.com/stenzek/duckstation/commit/20916bd898bc67642278baa0f0e2e673237c9bd2))\n- Support drag/swipe scrolling with inertia ([Stenzek](https://github.com/stenzek/duckstation/commit/c3b58f2563730d22c7d5c11876ed719a9bd38230))\n- 968d20a: dep/imgui: Don't smooth scroll requests made while window is appearing (Stenzek)\n- Fix ForceKeyNavEnabled() clobbering gamepad nav source ([Stenzek](https://github.com/stenzek/duckstation/commit/fd8bcdcf189f1aa86796d97d274b53e98214b3d9))\n- Include directory selector in open dialog checks ([Stenzek](https://github.com/stenzek/duckstation/commit/7d64f8223e63a1bcde938b3a45ecfb6ae1912ac5))\n- Clear all dialogs on shutdown ([Stenzek](https://github.com/stenzek/duckstation/commit/414d8f2049c128555b919e5a364b233fe480785a))\n- Fix indeterminate progress bar sweep range ([Stenzek](https://github.com/stenzek/duckstation/commit/49a2ff938ec5911d53a254a43857927df8ec159a))\n- Avoid inverted std::clamp() bounds in dropdown width ([Stenzek](https://github.com/stenzek/duckstation/commit/aa9916b882c17354bfe4b64feb1ae381ed0048da))\n- Pass button flags through in MenuButtonFrame() overload ([Stenzek](https://github.com/stenzek/duckstation/commit/f4fe9de23f015429c132ef9975f3118dbd5bb5b8))\n- Pass p_open through in BeginBlurWindow() ([Stenzek](https://github.com/stenzek/duckstation/commit/ae4658a7b540859219dae7932cceb8da0a854110))\n- Keep horizontal menu/sidebar state balanced when hidden ([Stenzek](https://github.com/stenzek/duckstation/commit/b73f8b2731133a3f5165152138aa67c2ef74a98b))\n- Copy/move checkable choice dialog callback before invoking ([Stenzek](https://github.com/stenzek/duckstation/commit/9bbf341bebf00549bf378edd8e5235e4d4abdcf8))"
+      "releaseNotes": "## Commits\n- Add PackedOptionalArray ([Stenzek](https://github.com/stenzek/duckstation/commit/0b5b8774cf471da102dcf6af0ecacb60b58b073f))\n- Ensure DeltaTime can never be negative ([Stenzek](https://github.com/stenzek/duckstation/commit/296d48a67c4ac903c2ffde59bfa3cd645f5b548f))\n- Improve drag scrolling ([Stenzek](https://github.com/stenzek/duckstation/commit/dff25dbc3a2e549e6cbd105553e6ee79c317cd0f))\n- Don't hover pointer for touchscreens ([Stenzek](https://github.com/stenzek/duckstation/commit/0d1b014ccfee1efb707b8596a77e6ddb3566fecb))\n- Sync to host refresh rates that are a multiple of the console's ([Stenzek](https://github.com/stenzek/duckstation/commit/5d47724178cc58a878bf3aa78ae06bf5ff260684))\n- Fix sensor enable early return ([Stenzek](https://github.com/stenzek/duckstation/commit/e48f86ab9852553db1c95788498f59e2e710694e))\n- Fix clear binding button clearing all ([Stenzek](https://github.com/stenzek/duckstation/commit/84e1db58705d8be8e7ca0582400ce8e69d094d4b))",
+      "devReleaseNotes": "## Commits\n- Add PackedOptionalArray ([Stenzek](https://github.com/stenzek/duckstation/commit/0b5b8774cf471da102dcf6af0ecacb60b58b073f))\n- Ensure DeltaTime can never be negative ([Stenzek](https://github.com/stenzek/duckstation/commit/296d48a67c4ac903c2ffde59bfa3cd645f5b548f))\n- Improve drag scrolling ([Stenzek](https://github.com/stenzek/duckstation/commit/dff25dbc3a2e549e6cbd105553e6ee79c317cd0f))\n- Don't hover pointer for touchscreens ([Stenzek](https://github.com/stenzek/duckstation/commit/0d1b014ccfee1efb707b8596a77e6ddb3566fecb))\n- Sync to host refresh rates that are a multiple of the console's ([Stenzek](https://github.com/stenzek/duckstation/commit/5d47724178cc58a878bf3aa78ae06bf5ff260684))\n- Fix sensor enable early return ([Stenzek](https://github.com/stenzek/duckstation/commit/e48f86ab9852553db1c95788498f59e2e710694e))\n- Fix clear binding button clearing all ([Stenzek](https://github.com/stenzek/duckstation/commit/84e1db58705d8be8e7ca0582400ce8e69d094d4b))"
     },
     "duckstation_gpl": {
       "version": "preview",
@@ -271,15 +271,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-10-24T17:35:32Z",
+      "releaseDate": "2026-10-25T14:13:19Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• FBNeo: Configure emulator hotkeys **new function** :) See menu \"Input -> Configure emulator hotkeys\" (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)\n• d_neogeo.cpp: various... (fprietog)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-10-24T17:35:32Z",
+      "releaseDate": "2026-10-25T14:13:19Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• FBNeo: Configure emulator hotkeys **new function** :) See menu \"Input -> Configure emulator hotkeys\" (dinkc64)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)\n• d_neogeo.cpp: various... (fprietog)"
     },
     "fceux_pc": {
       "version": "fceux-2.7.0",
@@ -1015,10 +1015,10 @@
     },
     "padforge": {
       "version": "latest-v5-dev",
-      "releaseDate": "2026-10-25T03:48:28Z",
+      "releaseDate": "2026-10-25T14:13:05Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v5-dev",
-      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40158397471",
-      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40158397471"
+      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40199650234",
+      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40199650234"
     },
     "panda3ds": {
       "version": "0.9",
@@ -1204,11 +1204,11 @@
       "releaseNotes": "Full Changelog: [Shadlix-shadPS4-2026-10-23-39159f8e5fbe994d15d43eadc8cc6a3348796cb5...b0d24973d77c1edb2e75438005f3e64cdac1f372](https://github.com/diegolix29/shadPS4/compare/Shadlix-shadPS4-2026-10-23-39159f8e5fbe994d15d43eadc8cc6a3348796cb5...b0d24973d77c1edb2e75438005f3e64cdac1f372)"
     },
     "shadps4_android": {
-      "version": "Pre-release-shadPS4-2026-10-24-e0845a12dc05f2fde85e7b203c76de03f93a585d",
-      "releaseDate": "2026-10-24T22:19:54Z",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-24-e0845a12dc05f2fde85e7b203c76de03f93a585d",
-      "releaseNotes": "Full Changelog: [v.0.20.0...e0845a1](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...e0845a12dc05f2fde85e7b203c76de03f93a585d)",
-      "devReleaseNotes": "Full Changelog: [v.0.20.0...e0845a1](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...e0845a12dc05f2fde85e7b203c76de03f93a585d)"
+      "version": "Pre-release-shadPS4-2026-10-25-30f4170896ce974353a6f6486d0ecec179aec54b",
+      "releaseDate": "2026-10-25T11:07:22Z",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-25-30f4170896ce974353a6f6486d0ecec179aec54b",
+      "releaseNotes": "Full Changelog: [v.0.20.0...30f4170](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...30f4170896ce974353a6f6486d0ecec179aec54b)",
+      "devReleaseNotes": "Full Changelog: [v.0.20.0...30f4170](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...30f4170896ce974353a6f6486d0ecec179aec54b)"
     },
     "shadps4_qtlauncher": {
       "version": "shadPS4QtLauncher-2026-10-18-6f6b911f4865a1c8bf2425071ca8d39ec46d9ea9",
@@ -1278,10 +1278,10 @@
       "releaseNotes": "A new major release of Stella is now available; first time in over two years!  Here are some of the changes:\r\n\r\n  * Enhanced ROM launcher to allow multiple images per ROM.\r\n\r\n  * Made heaps of additional images available for the ROM launcher.\r\n\r\n  * Added searching by filename for ROM launcher images.\r\n\r\n  * Added option to start random ROM.\r\n\r\n  * Added automatically enabled phosphor modes.\r\n\r\n  * Enhanced Game Properties dialog for multigame ROMs.\r\n\r\n  * Added 2nd UI theme and hotkey for toggling UI theme.\r\n\r\n  * Added bezel support (incl. Sinden Lightgun).\r\n\r\n  * Added optional type format detection based on colors used.\r\n\r\n  * Added Joy2B+ controller support.\r\n\r\n  * Added auto detection for QuadTari attached controllers.\r\n\r\n  * Enhanced Kid Vid support to play tape audio.\r\n\r\n  * Added port selection, used for controller default mapping.\r\n\r\n  * Added missing PlusROM support for E7 bankswitching.\r\n\r\n  * Enhanced movie cart (MVC) support.\r\n\r\n  * Accelerated emulation up to ~15% (ARM).\r\n\r\n  * Added limited GameLine Master Module bankswitching support.\r\n\r\n  * Added 03E0 bankswitching for Brazilian Parker Bros ROMs.\r\n\r\n  * Added WF8 bankswitching used by some certain Coleco white carts.\r\n\r\n  * Added JANE bankswitching used by Coleco's Tarzan prototype.\r\n\r\n  * Added ELF mapper for Mattress Monkeys.\r\n\r\n  * Added BUS bankswitching support for some older demos.\r\n\r\n  * Fixed broken 7800 pause key support.\r\n\r\n  * Added developer option for random hotspot peek values.\r\n\r\n  * Added user defined CPU cycle timers to debugger.\r\n\r\n  * Removed 'launcherroms' option, since it was causing some issues.\r\n\r\n  * Codebase now uses C++20 features, which means a minimum of gcc-11\r\n    or clang-10 for Linux/Mac, and Visual Studio 2022 for Windows.\r\n\r\n-Have fun!"
     },
     "supermodel_pc": {
-      "version": "0.3a-20261023-git-58d4b87",
-      "releaseDate": "2026-10-24T00:01:43Z",
-      "sourceUrl": "https://github.com/trzy/Supermodel/releases/tag/v0.3a-20261023-git-58d4b87",
-      "releaseNotes": "Automated release with builds for Windows, Linux, and macOS.\n\n**Full Changelog**: https://github.com/trzy/Supermodel/compare/v0.3a-20261023-git-e048c09...v0.3a-20261023-git-58d4b87"
+      "version": "0.3a-20261025-git-1481545",
+      "releaseDate": "2026-10-25T11:08:00Z",
+      "sourceUrl": "https://github.com/trzy/Supermodel/releases/tag/v0.3a-20261025-git-1481545",
+      "releaseNotes": "Automated release with builds for Windows, Linux, and macOS.\n\n**Full Changelog**: https://github.com/trzy/Supermodel/compare/v0.3a-20261025-git-0567ae7...v0.3a-20261025-git-1481545"
     },
     "supermodel_ponmi": {
       "version": "20260730",
@@ -1290,11 +1290,11 @@
       "releaseNotes": "Merge 24d2ffcfc7f14229337f05f4920fe26b56633d9d"
     },
     "supersnes9x_pc": {
-      "version": "nightly-2026-10-23",
-      "releaseDate": "2026-10-23T08:43:45Z",
+      "version": "nightly-2026-10-25",
+      "releaseDate": "2026-10-25T08:35:39Z",
       "sourceUrl": "https://github.com/shanytc/snes9x/releases/tag/nightly",
-      "releaseNotes": "Automated build of `master` at b5da6e6cd8da6c96769eb2d18db16e09814f9978.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary.",
-      "devReleaseNotes": "Automated build of `master` at b5da6e6cd8da6c96769eb2d18db16e09814f9978.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary."
+      "releaseNotes": "Automated build of `master` at 8eb8b7adc2eb3fa2fde437f2ae685f6281ccb536.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary.",
+      "devReleaseNotes": "Automated build of `master` at 8eb8b7adc2eb3fa2fde437f2ae685f6281ccb536.\n\nThese are untested snapshots and may be broken. For stable builds use the [latest release](https://github.com/shanytc/snes9x/releases/latest).\n\n**GUIs** (`super-snes9x-nightly-*`): Windows: unzip and run. Linux: `chmod +x` the AppImage. macOS: the app is universal (Intel + Apple Silicon) and self-signed, so after copying it run `xattr -dr com.apple.quarantine super-snes9x-qt.app`.\n\n**libretro cores** (`supersnes9x_libretro-nightly-*`): unzip the core and its `.info` file into RetroArch's cores directory. The macOS core is a universal x86_64 + arm64 binary."
     },
     "swiff": {
       "version": "1.4.1",
@@ -1452,10 +1452,10 @@
       "releaseNotes": "### Changes\n\n- [XAM] Return an HRESULT and no length from XamContentClose errors (`451f915`)\n- [XAM] Report an unknown device to XamContentGetDeviceState as an HRESULT (`af53787`)\n- [Kernel] Don't signal the overlapped event when a completion routine is set (`ad0d187`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/9e03494...451f915"
     },
     "xenia_edge_pc": {
-      "version": "4d07204",
-      "releaseDate": "2026-10-24T14:08:18Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/4d07204",
-      "releaseNotes": "### Changes\n\n- [3PP] Bump mesa to pick up fix for read-only constant arrays (`4d07204`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/09d405f...4d07204"
+      "version": "82a9462",
+      "releaseDate": "2026-10-25T12:19:03Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/82a9462",
+      "releaseNotes": "### Changes\n\n- [Tools] Cover basic, position and EOF information in the IO corpus (`82a9462`)\n- [Kernel] Fix NtSetInformationFile reading basic attributes from the padding (`8a179c7`)\n- [Kernel] Fix failed file information calls writing the status block (`98acc14`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/b7a2637...82a9462"
     },
     "xenia_manager": {
       "version": "5.0.0",
