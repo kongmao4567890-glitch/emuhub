@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T16:25:05Z",
+  "generatedAt": "2026-10-26T04:50:43Z",
   "selection": "greatest published_at across configured GitHub release channels",
   "entries": {
     "86box_pc": {
@@ -156,10 +156,10 @@
       "downloadUrl": "https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk"
     },
     "citron_neo": {
-      "version": "nightly-linux",
-      "releaseDate": "2026-10-25T16:22:15Z",
-      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-linux",
-      "releaseNotes": "**Citron Upstream Commit:** [`56dad81`](https://github.com/citron-neo/emulator/commit/56dad8119520160b744b959ba07f1e19538e97c1)\n\nThis build is based on the latest Citron emulator source code from the upstream repository.\n\n**Build Details:**\n- Platform: Linux (x86_64, x86_64_v3, aarch64)\n- Format: AppImage + tar.zst packages\n- Build Type: Nightly with optimizations\n- Date: 2026-10-25"
+      "version": "nightly-windows",
+      "releaseDate": "2026-10-25T16:28:03Z",
+      "sourceUrl": "https://github.com/citron-neo/CI/releases/tag/nightly-windows",
+      "releaseNotes": "**Citron Upstream Commit:** [`56dad81`](https://github.com/citron-neo/emulator/commit/56dad8119520160b744b959ba07f1e19538e97c1)\n\nThis build is based on the latest Citron emulator source code from the upstream repository.\n\n**Build Details:**\n- Platform: Windows (x64)\n- Toolchains: Clangtron and native clang-cl/MSVC ABI\n- Build Type: Nightly\n- Date: 2026-10-25"
     },
     "clownmdemu_pc": {
       "version": "1.6.12",
@@ -219,10 +219,10 @@
     },
     "duckstation": {
       "version": "preview",
-      "releaseDate": "2026-10-25T12:17:24Z",
+      "releaseDate": "2026-10-26T02:41:17Z",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "releaseNotes": "## Commits\n- Add PackedOptionalArray ([Stenzek](https://github.com/stenzek/duckstation/commit/0b5b8774cf471da102dcf6af0ecacb60b58b073f))\n- Ensure DeltaTime can never be negative ([Stenzek](https://github.com/stenzek/duckstation/commit/296d48a67c4ac903c2ffde59bfa3cd645f5b548f))\n- Improve drag scrolling ([Stenzek](https://github.com/stenzek/duckstation/commit/dff25dbc3a2e549e6cbd105553e6ee79c317cd0f))\n- Don't hover pointer for touchscreens ([Stenzek](https://github.com/stenzek/duckstation/commit/0d1b014ccfee1efb707b8596a77e6ddb3566fecb))\n- Sync to host refresh rates that are a multiple of the console's ([Stenzek](https://github.com/stenzek/duckstation/commit/5d47724178cc58a878bf3aa78ae06bf5ff260684))\n- Fix sensor enable early return ([Stenzek](https://github.com/stenzek/duckstation/commit/e48f86ab9852553db1c95788498f59e2e710694e))\n- Fix clear binding button clearing all ([Stenzek](https://github.com/stenzek/duckstation/commit/84e1db58705d8be8e7ca0582400ce8e69d094d4b))",
-      "devReleaseNotes": "## Commits\n- Add PackedOptionalArray ([Stenzek](https://github.com/stenzek/duckstation/commit/0b5b8774cf471da102dcf6af0ecacb60b58b073f))\n- Ensure DeltaTime can never be negative ([Stenzek](https://github.com/stenzek/duckstation/commit/296d48a67c4ac903c2ffde59bfa3cd645f5b548f))\n- Improve drag scrolling ([Stenzek](https://github.com/stenzek/duckstation/commit/dff25dbc3a2e549e6cbd105553e6ee79c317cd0f))\n- Don't hover pointer for touchscreens ([Stenzek](https://github.com/stenzek/duckstation/commit/0d1b014ccfee1efb707b8596a77e6ddb3566fecb))\n- Sync to host refresh rates that are a multiple of the console's ([Stenzek](https://github.com/stenzek/duckstation/commit/5d47724178cc58a878bf3aa78ae06bf5ff260684))\n- Fix sensor enable early return ([Stenzek](https://github.com/stenzek/duckstation/commit/e48f86ab9852553db1c95788498f59e2e710694e))\n- Fix clear binding button clearing all ([Stenzek](https://github.com/stenzek/duckstation/commit/84e1db58705d8be8e7ca0582400ce8e69d094d4b))"
+      "releaseNotes": "## Commits\n- dc623ca: Spanish (Spain) translation update 2026/10/25 (#3814) (Víctor \"IlDucci) [#3814](https://github.com/stenzek/duckstation/pull/3814)",
+      "devReleaseNotes": "## Commits\n- dc623ca: Spanish (Spain) translation update 2026/10/25 (#3814) (Víctor \"IlDucci) [#3814](https://github.com/stenzek/duckstation/pull/3814)"
     },
     "duckstation_gpl": {
       "version": "preview",
@@ -271,15 +271,15 @@
     },
     "fbneo_core": {
       "version": "latest",
-      "releaseDate": "2026-10-25T14:13:19Z",
+      "releaseDate": "2026-10-26T01:30:25Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)\n• d_neogeo.cpp: various... (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• add bosco 'n pals to d_galaga (dinkc64)"
     },
     "fbneo_neogeo": {
       "version": "latest",
-      "releaseDate": "2026-10-25T14:13:19Z",
+      "releaseDate": "2026-10-26T01:30:25Z",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)\n• d_neogeo.cpp: various... (fprietog)"
+      "releaseNotes": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• add bosco 'n pals to d_galaga (dinkc64)"
     },
     "fceux_pc": {
       "version": "fceux-2.7.0",
@@ -421,10 +421,10 @@
       "releaseNotes": "# KytyPlus v5.0\r\n\r\nOne fix, and it is a compatibility one: PS5 packages no longer abort during installation on\r\ntitles whose filesystem metadata is not the last thing in the package.\r\n\r\n## Package installation (issue #20)\r\n\r\n- **Gran Turismo 7's package failed before listing a single file.** The installer reported\r\n  `Invalid package range: offset=25FC1FD8031, length=3FFDC, total=1F27EE0000` — a read 2.6 TB past\r\n  the end of a 134 GB package. The offset was never the problem; the position it came from was.\r\n- **How the position is chosen was the bug.** The package layout lists one boundary per file, and\r\n  the installer took the highest boundary that was 64 KiB-aligned and treated it as the start of the\r\n  game's filesystem. That granularity is finer than the mount is served in: blocks are 256 KiB, so\r\n  a boundary 128 KiB inside a block is a file tail, not a superblock. Decoding a file tail is what\r\n  produced the impossible offset.\r\n- **The position is now proven by decoding it, not guessed.** Candidates are required to sit on a\r\n  real block boundary and are tried from the top down until one yields an actual PS5 filesystem\r\n  superblock, which is the position every later read depends on. Up to 512 candidates are tried;\r\n  each is a single block decode, so a package that resolves on the first candidate costs what it\r\n  used to.\r\n- **Failures now say which record broke.** A block address that lands outside the package reports\r\n  the records that produced it — the run record, its raw bits, the gap and the accumulated offset —\r\n  instead of a bare range check that cannot be compared between two packages. Running the extractor\r\n  with `KYTY_NAPS_TRACE=1` additionally reports the outer filesystem's flags, including whether a\r\n  package is encrypted, and the layout header's table sizes.\r\n\r\n## Known issues\r\n\r\n- **This is verified not to regress the one PS5 package we can test here** — it resolves at the same\r\n  position on the first candidate and extracts every file — but Gran Turismo 7 itself has not been\r\n  installed by us, and we will not ask anyone to send a dump. If a package's compressed-block\r\n  addressing also breaks at that size, installation will now fail later, with a message that names\r\n  the records, so the next report is actionable rather than a dead end.\r\n- **Encrypted PS5 packages still cannot be installed.** That is unchanged and not fixable here:\r\n  retail package keys are not available, so only packages that carry the plain or debug marker get\r\n  past the outer filesystem.\r\n- PS4 packages and `.ffpfsc` images do not use this code path at all, so neither is affected either\r\n  way."
     },
     "kytyps5_pc": {
-      "version": "KytyPS5-2026-10-25-83f8bfd",
-      "releaseDate": "2026-10-25T00:43:27Z",
-      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-25-83f8bfd",
-      "releaseNotes": "**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-10-24-906d255...KytyPS5-2026-10-25-83f8bfd"
+      "version": "KytyPS5-2026-10-26-597137e",
+      "releaseDate": "2026-10-26T01:25:30Z",
+      "sourceUrl": "https://github.com/KytyPS5/KytyPS5/releases/tag/KytyPS5-2026-10-26-597137e",
+      "releaseNotes": "## What's Changed\n* vulkan: enable VK_EXT_extended_dynamic_state when available by @LloydNicholson in https://github.com/KytyPS5/KytyPS5/pull/1906\n\n## New Contributors\n* @LloydNicholson made their first contribution in https://github.com/KytyPS5/KytyPS5/pull/1906\n\n**Full Changelog**: https://github.com/KytyPS5/KytyPS5/compare/KytyPS5-2026-10-25-b2c9ec7...KytyPS5-2026-10-26-597137e"
     },
     "lemuroid": {
       "version": "1.17.0",
@@ -1008,17 +1008,18 @@
       "downloadUrl": "https://github.com/CleversonSA/openmsx4android/releases/download/20260220/openmsx4android.apk"
     },
     "openmsx_pc": {
-      "version": "RELEASE_21_0",
-      "releaseDate": "2025-09-26T20:50:20Z",
-      "sourceUrl": "https://github.com/openMSX/openMSX/releases/tag/RELEASE_21_0",
-      "releaseNotes": "openMSX 21.0 has many improvements on the new GUI introduced in openMSX 20.0 (especially the debugger) and several other smaller features. It also introduces the \"setups\" concept, which enables you to define an MSX setup (e.g. a Philips VG 8020 with an external disk drive and a joystick, data recorder and printer connected). These can be created, loaded, and automatically started. They can also be saved automatically when you exit.\r\n\r\nFurthermore, flash chip emulation has become a lot more accurate, thanks to Laurens Holst."
+      "version": "RELEASE_22_0_RC2",
+      "releaseDate": "2026-10-25T23:16:25Z",
+      "sourceUrl": "https://github.com/openMSX/openMSX/releases/tag/RELEASE_22_0_RC2",
+      "releaseNotes": "Release Notes for openMSX 22.0-RC2 (2026-10-25)\r\n===============================================\r\n\r\nThanks to many contributors (who make good use of modern AI tools), we\r\nhave a very long list of changes again. Major features are found in the\r\ndebugger GUI, with a new Raster Beam Viewer and Tracer functionality. We also\r\nhave the Quick Setup Editor, for one-window access to all major setup\r\nsettings.\r\n\r\nThen AI hit us with dozens of Pull Requests with new and improved\r\nfunctionality... Not all purely AI-generated, but also using AI to analyse\r\nbulk measurements. This led to many VDP accuracy improvements and emulation of\r\nnew devices like plotters, Panasonic FS-JH1 Joy Handle steering wheel (that\r\ncame with Konami's A1 Spirit), light guns, Franky, Makoto, SD Mapper V1 and\r\nSM-X WiFi. There's even a synthetic TCP/IP UNAPI device to be able to try out\r\nnetwork programs in openMSX.\r\n\r\nAnd many, many more things...\r\n\r\nSpecial thanks to all the contributors of this release who are not in the core\r\nteam! Keep those pull requests coming!\r\n\r\nHere's the list with all highlights and details:\r\n\r\nMSX device support:\r\n- fixed Yamanooto SCC register visibility\r\n- added emulation of the Sony PRN-C41 (like) plotters, including a viewer in the\r\n  GUI\r\n- fixed details on the turboR's FDC emulation, so that now FastCopy 3.0\r\n  properly detects it, including the correct number of drives\r\n- added MSX Light Gun emulation, controlled with the mouse on the host:\r\n  - MHT GUN-STICK\r\n  - ASCII Plus-X Terminator Laser\r\n- added Korean 128-in-1 mapper type\r\n- added Namco mapper type (A13-not-connected 16kB cartridges)\r\n- added ASCII8-R (reversed) mapper type\r\n- fixed details of MSX kanji ROM emulation, adding specific behaviour in many\r\n  machines and devices\r\n- added Panasonic FS-JH1 Joy Handle (belongs with Konami's A1 Spirit),\r\n  including configuration window\r\n- added SuperSoniqs Franky emulation (allows playing Sega Master System games\r\n  on MSX)\r\n- added SuperSoniqs Makoto emulation (OPNA sound cartridge)\r\n- added SD Mapper V1 emulation\r\n- added SM-X WiFi emulation (UNAPI compatible ESP WiFi module), connecting\r\n  either to a real ESP32 on a host serial port or to an emulated one that uses\r\n  the host network\r\n- updated Neo mapper support to specification version 1.2, now using 14 bits\r\n  of the segment register (up to 16384 segments)\r\n- VDP:\r\n  - fixed VDP I/O delay to 1 cycle for machines with a T9769 MSX-ENGINE (all\r\n    subtypes)\r\n  - added implementation of the TEXT2-mode per line blink (bit 2 in VDP R#2)\r\n  - improved timing correctness of the YMMM and LMMM commands\r\n  - several other VDP command timing improvements (including start delays)\r\n  - improved VDP-VRAM timing even further\r\n  - fixed display line counter latch (fixes Sex Bomb Bunny shaking screen)\r\n  - fixed border color changes at the wrong position (last part of Utopia)\r\n  - fixed wrong location for sprite collision flag raising, causing distorted\r\n    MSX2+ logo animation\r\n  - fixed 5th/9th sprite flag raise location, obsoleting the special openMSX\r\n    workaround in the IO demo\r\n  - fixed wrong location of application of R#23 changes (8-pixel boundary)\r\n  - fixed: ignore the TP bit in text, multicolor and YAE modes\r\n- PSG:\r\n  - assume that no PSG implementation mirrors its registers (no evidence found\r\n    they do so far...)\r\n  - fixed interpretation of envelope period of 0 (same as 1)\r\n  - fixed: do not reset the envelope index when writing the envelope shape\r\n    register\r\n- added new machines/extensions, thanks to:\r\n  - bsittler: Yamaha YIS-805/256\r\n- updated machine/extension configurations of:\r\n  - Yamaha YIS-503\r\n  - Yamaha FD-03, Sony HB-701FD: added missing singlesided tag\r\n\r\nNew or improved emulator features:\r\n- GUI:\r\n  - added Quick Setup Editor window, that allows you to quickly create or\r\n    change your setup\r\n  - added a \"color blind\" theme\r\n  - added a pitch estimate column to the audio viewer (hidden by default)\r\n  - sort mapper types in the GUI alphabetically…",
+      "devReleaseNotes": "Release Notes for openMSX 22.0-RC2 (2026-10-25)\r\n===============================================\r\n\r\nThanks to many contributors (who make good use of modern AI tools), we\r\nhave a very long list of changes again. Major features are found in the\r\ndebugger GUI, with a new Raster Beam Viewer and Tracer functionality. We also\r\nhave the Quick Setup Editor, for one-window access to all major setup\r\nsettings.\r\n\r\nThen AI hit us with dozens of Pull Requests with new and improved\r\nfunctionality... Not all purely AI-generated, but also using AI to analyse\r\nbulk measurements. This led to many VDP accuracy improvements and emulation of\r\nnew devices like plotters, Panasonic FS-JH1 Joy Handle steering wheel (that\r\ncame with Konami's A1 Spirit), light guns, Franky, Makoto, SD Mapper V1 and\r\nSM-X WiFi. There's even a synthetic TCP/IP UNAPI device to be able to try out\r\nnetwork programs in openMSX.\r\n\r\nAnd many, many more things...\r\n\r\nSpecial thanks to all the contributors of this release who are not in the core\r\nteam! Keep those pull requests coming!\r\n\r\nHere's the list with all highlights and details:\r\n\r\nMSX device support:\r\n- fixed Yamanooto SCC register visibility\r\n- added emulation of the Sony PRN-C41 (like) plotters, including a viewer in the\r\n  GUI\r\n- fixed details on the turboR's FDC emulation, so that now FastCopy 3.0\r\n  properly detects it, including the correct number of drives\r\n- added MSX Light Gun emulation, controlled with the mouse on the host:\r\n  - MHT GUN-STICK\r\n  - ASCII Plus-X Terminator Laser\r\n- added Korean 128-in-1 mapper type\r\n- added Namco mapper type (A13-not-connected 16kB cartridges)\r\n- added ASCII8-R (reversed) mapper type\r\n- fixed details of MSX kanji ROM emulation, adding specific behaviour in many\r\n  machines and devices\r\n- added Panasonic FS-JH1 Joy Handle (belongs with Konami's A1 Spirit),\r\n  including configuration window\r\n- added SuperSoniqs Franky emulation (allows playing Sega Master System games\r\n  on MSX)\r\n- added SuperSoniqs Makoto emulation (OPNA sound cartridge)\r\n- added SD Mapper V1 emulation\r\n- added SM-X WiFi emulation (UNAPI compatible ESP WiFi module), connecting\r\n  either to a real ESP32 on a host serial port or to an emulated one that uses\r\n  the host network\r\n- updated Neo mapper support to specification version 1.2, now using 14 bits\r\n  of the segment register (up to 16384 segments)\r\n- VDP:\r\n  - fixed VDP I/O delay to 1 cycle for machines with a T9769 MSX-ENGINE (all\r\n    subtypes)\r\n  - added implementation of the TEXT2-mode per line blink (bit 2 in VDP R#2)\r\n  - improved timing correctness of the YMMM and LMMM commands\r\n  - several other VDP command timing improvements (including start delays)\r\n  - improved VDP-VRAM timing even further\r\n  - fixed display line counter latch (fixes Sex Bomb Bunny shaking screen)\r\n  - fixed border color changes at the wrong position (last part of Utopia)\r\n  - fixed wrong location for sprite collision flag raising, causing distorted\r\n    MSX2+ logo animation\r\n  - fixed 5th/9th sprite flag raise location, obsoleting the special openMSX\r\n    workaround in the IO demo\r\n  - fixed wrong location of application of R#23 changes (8-pixel boundary)\r\n  - fixed: ignore the TP bit in text, multicolor and YAE modes\r\n- PSG:\r\n  - assume that no PSG implementation mirrors its registers (no evidence found\r\n    they do so far...)\r\n  - fixed interpretation of envelope period of 0 (same as 1)\r\n  - fixed: do not reset the envelope index when writing the envelope shape\r\n    register\r\n- added new machines/extensions, thanks to:\r\n  - bsittler: Yamaha YIS-805/256\r\n- updated machine/extension configurations of:\r\n  - Yamaha YIS-503\r\n  - Yamaha FD-03, Sony HB-701FD: added missing singlesided tag\r\n\r\nNew or improved emulator features:\r\n- GUI:\r\n  - added Quick Setup Editor window, that allows you to quickly create or\r\n    change your setup\r\n  - added a \"color blind\" theme\r\n  - added a pitch estimate column to the audio viewer (hidden by default)\r\n  - sort mapper types in the GUI alphabetically…"
     },
     "padforge": {
       "version": "latest-v5-dev",
-      "releaseDate": "2026-10-25T14:13:05Z",
+      "releaseDate": "2026-10-26T03:30:20Z",
       "sourceUrl": "https://github.com/hifihedgehog/PadForge/releases/tag/latest-v5-dev",
-      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40199650234",
-      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40199650234"
+      "releaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40262713515",
+      "devReleaseNotes": "PadForge.zip is the x64 build. PadForge-arm64.zip is the preliminary build for Windows on ARM.\nBuild archive: https://github.com/hifihedgehog/PadForge/releases/tag/archive-v5-dev\nBuild log: https://github.com/hifihedgehog/PadForge/actions/runs/40262713515"
     },
     "panda3ds": {
       "version": "0.9",
@@ -1044,11 +1045,11 @@
       "releaseNotes": "Seek fixes (still incomplete and inaccurate) and to PC-FXGA emulation for BULLY OFF that gets more into the game but still has a few graphical glitches.\r\n\r\nSome of the improvements are courtesy of Paul Daniel, who leveraged Claude on Mednafen to fix a few issues related to Queen of Queens, including a longstanding bug regarding color accuracy on KING."
     },
     "pcsx2_pc": {
-      "version": "2.9.144",
-      "releaseDate": "2026-10-24T14:19:12Z",
-      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.144",
-      "releaseNotes": "- [OSD: Add dedicated shader comp setting](https://github.com/PCSX2/pcsx2/pull/15106)",
-      "devReleaseNotes": "- [OSD: Add dedicated shader comp setting](https://github.com/PCSX2/pcsx2/pull/15106)"
+      "version": "2.9.146",
+      "releaseDate": "2026-10-25T21:38:04Z",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.146",
+      "releaseNotes": "- [Deps/gha: Bump mathieudutour/github-tag-action from 6.2 to 7 in the ci-deps group across 1 directory](https://github.com/PCSX2/pcsx2/pull/15016)",
+      "devReleaseNotes": "- [Deps/gha: Bump mathieudutour/github-tag-action from 6.2 to 7 in the ci-deps group across 1 directory](https://github.com/PCSX2/pcsx2/pull/15016)"
     },
     "pcsx2x6_arcade": {
       "version": "0.2.22",
@@ -1179,11 +1180,11 @@
       "devReleaseNotes": "## What's Changed\n* chore: Do a selective `cargo update` by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/870\n* Bump android-activity to 0.6.1 and GameActivity to 4.4.0 by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/871\n* chore: Bump rust-toolchain from 1.99.0 to 1.99.1 by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/876\n* chore: Bump combine from 4.6.8 to 4.6.9 in the rust-minor group by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/878\n* chore: Bump the ruffle group across 1 directory with 9 updates by @dependabot[bot] in https://github.com/ruffle-rs/ruffle-android/pull/879\n* chore: Bump the gradle-minor group with 4 updates by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/880\n* chore: Bump the gradle-minor group with 3 updates by @torokati44 in https://github.com/ruffle-rs/ruffle-android/pull/882\n* Bump version number by @RuffleBuild in https://github.com/ruffle-rs/ruffle-android/pull/883\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle-android/compare/0.261014...0.261019"
     },
     "ruffle_pc": {
-      "version": "nightly-2026-10-25",
-      "releaseDate": "2026-10-25T00:14:03Z",
-      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-10-25",
-      "releaseNotes": "## What's Changed\n* avm2: Don't print non-public class namespaces in stack traces by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24940\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-24...nightly-2026-10-25",
-      "devReleaseNotes": "## What's Changed\n* avm2: Don't print non-public class namespaces in stack traces by @kjarosh in https://github.com/ruffle-rs/ruffle/pull/24940\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-24...nightly-2026-10-25"
+      "version": "nightly-2026-10-26",
+      "releaseDate": "2026-10-26T00:13:29Z",
+      "sourceUrl": "https://github.com/ruffle-rs/ruffle/releases/tag/nightly-2026-10-26",
+      "releaseNotes": "## What's Changed\n* build(deps): bump undici in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/25030\n* build(deps): bump fast-uri from 3.1.7 to 3.1.9 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/25028\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-25...nightly-2026-10-26",
+      "devReleaseNotes": "## What's Changed\n* build(deps): bump undici in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/25030\n* build(deps): bump fast-uri from 3.1.7 to 3.1.9 in /web by @dependabot[bot] in https://github.com/ruffle-rs/ruffle/pull/25028\n\n\n**Full Changelog**: https://github.com/ruffle-rs/ruffle/compare/nightly-2026-10-25...nightly-2026-10-26"
     },
     "sameboy_core": {
       "version": "1.0.4",
@@ -1204,11 +1205,11 @@
       "releaseNotes": "Full Changelog: [Shadlix-shadPS4-2026-10-23-39159f8e5fbe994d15d43eadc8cc6a3348796cb5...b0d24973d77c1edb2e75438005f3e64cdac1f372](https://github.com/diegolix29/shadPS4/compare/Shadlix-shadPS4-2026-10-23-39159f8e5fbe994d15d43eadc8cc6a3348796cb5...b0d24973d77c1edb2e75438005f3e64cdac1f372)"
     },
     "shadps4_android": {
-      "version": "Pre-release-shadPS4-2026-10-25-30f4170896ce974353a6f6486d0ecec179aec54b",
-      "releaseDate": "2026-10-25T11:07:22Z",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-25-30f4170896ce974353a6f6486d0ecec179aec54b",
-      "releaseNotes": "Full Changelog: [v.0.20.0...30f4170](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...30f4170896ce974353a6f6486d0ecec179aec54b)",
-      "devReleaseNotes": "Full Changelog: [v.0.20.0...30f4170](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...30f4170896ce974353a6f6486d0ecec179aec54b)"
+      "version": "Pre-release-shadPS4-2026-10-25-2cdefaa1298c6e4ece6c74bd84e90f3906282d51",
+      "releaseDate": "2026-10-25T23:09:13Z",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4/releases/tag/Pre-release-shadPS4-2026-10-25-2cdefaa1298c6e4ece6c74bd84e90f3906282d51",
+      "releaseNotes": "Full Changelog: [v.0.20.0...2cdefaa](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...2cdefaa1298c6e4ece6c74bd84e90f3906282d51)",
+      "devReleaseNotes": "Full Changelog: [v.0.20.0...2cdefaa](https://github.com/shadps4-emu/shadPS4/compare/v.0.20.0...2cdefaa1298c6e4ece6c74bd84e90f3906282d51)"
     },
     "shadps4_qtlauncher": {
       "version": "shadPS4QtLauncher-2026-10-18-6f6b911f4865a1c8bf2425071ca8d39ec46d9ea9",
@@ -1446,16 +1447,16 @@
       "downloadUrl": "https://github.com/rfandango/XenDroid/releases/download/XenDroid-0b11201/XenDroid_Release_0b11201.apk"
     },
     "xenia_canary_pc": {
-      "version": "451f915",
-      "releaseDate": "2026-10-24T15:43:58Z",
-      "sourceUrl": "https://github.com/xenia-canary/xenia-canary/releases/tag/451f915",
-      "releaseNotes": "### Changes\n\n- [XAM] Return an HRESULT and no length from XamContentClose errors (`451f915`)\n- [XAM] Report an unknown device to XamContentGetDeviceState as an HRESULT (`af53787`)\n- [Kernel] Don't signal the overlapped event when a completion routine is set (`ad0d187`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/9e03494...451f915"
+      "version": "44e17ac",
+      "releaseDate": "2026-10-25T19:23:51Z",
+      "sourceUrl": "https://github.com/xenia-canary/xenia-canary/releases/tag/44e17ac",
+      "releaseNotes": "### Changes\n\n- [D3D12] per-game config to enable xenos_sample_positions (`44e17ac`)\n\n**Full changelog**: https://github.com/xenia-canary/xenia-canary/compare/451f915...44e17ac"
     },
     "xenia_edge_pc": {
-      "version": "82a9462",
-      "releaseDate": "2026-10-25T12:19:03Z",
-      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/82a9462",
-      "releaseNotes": "### Changes\n\n- [Tools] Cover basic, position and EOF information in the IO corpus (`82a9462`)\n- [Kernel] Fix NtSetInformationFile reading basic attributes from the padding (`8a179c7`)\n- [Kernel] Fix failed file information calls writing the status block (`98acc14`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/b7a2637...82a9462"
+      "version": "41f438d",
+      "releaseDate": "2026-10-26T04:45:48Z",
+      "sourceUrl": "https://github.com/has207/xenia-edge/releases/tag/41f438d",
+      "releaseNotes": "### Changes\n\n- [Tools] Cover file rename in the IO corpus (`41f438d`)\n- [Kernel] Strip \\??\\ from rename target names (`3de73d3`)\n- [Base/VFS] Allow renaming host files a guest has open (`3b75fe1`)\n\n**Full changelog**: https://github.com/has207/xenia-edge/compare/a9e9a27...41f438d"
     },
     "xenia_manager": {
       "version": "5.0.0",
