@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T05:32:56.821615Z",
+  "generatedAt": "2026-10-27T18:15:15.460249Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T16:40:01Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月27日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• d381837 ：提高瑞典语翻译质量（ # 3817 ） （ Daniel Nylander ） # 3817（https://github.com/stenzek/duckstation/pull/3817）",
+      "originalContent": "## Commits\n- d381837: Improve Swedish translation quality (#3817) (Daniel Nylander) [#3817](https://github.com/stenzek/duckstation/pull/3817)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "05df4e0b1a155c97f91cd760e84766e4009f341c649b92e6b6747a7c24da57ba",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-10-27T04:24:17Z",
+      "publishedAt": "2026-10-27T16:14:41Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月27日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 巨型驱动、新地球、尼斯、ngp:各种......(fprietog)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• megadrive, neogeo, nes, ngp: various... (fprietog)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 乘pcm:不要将插槽指向保存状态(# 2838)(Nelfe80)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• multipcm: keep the slot pointers out of save states (#2838) (Nelfe80)",
       "platforms": [
         "android"
       ],
@@ -30,7 +54,188 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "aade173f390f25e375aa458ae21397bd9d1bc8be632e4552979786e63f33680d",
+      "contentHash": "660190b6cb2f568429308f7a87e78d213c9706c2bd8acf0b071e94a346a84a3d",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-psx2_izzy-1-3-2",
+      "title": "【Android更新】PSX2 1.3.2",
+      "originalTitle": "PSX2 1.3.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T15:25:58Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.3.2",
+      "imageUrl": "asset://assets/emulators/psx2_izzy.png",
+      "officialUrl": "https://github.com/izzy2lost/PSX2",
+      "summary": "PSX2 发布 Android 新版本 1.3.2，发布日期为2026年10月27日。点击查看官方版本信息与更新说明。",
+      "content": "PSX2 已发布 Android 最新版本 1.3.2。\n\n发布日期：2026年10月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n修复了崩溃和更好的稳定性。\n\n将pcsx2 CORE更新为最新版本。\n\n游戏列表现在会在设置向导后立即打开。",
+      "originalContent": "Fixed crashes and better stability. \r\n\r\nUpdated pcsx2 core to the latest. \r\n\r\nGame list now opens directly after the setup wizard.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "psx2_izzy"
+      ],
+      "contentHash": "b06b26deaad4a86d222aceedf745aca20f39be054eddda1b28590a176b1cc637",
+      "translationPending": false
+    },
+    {
+      "id": "138648",
+      "title": "【家用机】Mupen64 RR Lua v1.5.0-8",
+      "originalTitle": "[Consoles de salon] Mupen64 RR Lua v1.5.0-8",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T14:37:31Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138648-consoles-de-salon-mupen64-rr-lua-v1-5-0-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/mupen64-lua.png",
+      "officialUrl": "",
+      "summary": "Mupen64 RR Lua （或Mupen64 Re-recording Lua ）是Mupen64的一个分叉（第3个） ，用于视频录制。 这些变化是： ✨ 功能 •添加了新的emu.get_pref首选项(\"caret_blink_time\", \"high_contrast\", \"reduced_motion\") •新增dialogs.show_notification 🐞 错误修复 •修复了某些romhacks上的TASVideo…",
+      "content": "Mupen64 RR Lua （或Mupen64 Re-recording Lua ）是Mupen64的一个分叉（第3个） ，用于视频录制。\n\n这些变化是：\n\n✨ 功能\n•添加了新的emu.get_pref首选项(\"caret_blink_time\", \"high_contrast\", \"reduced_motion\")\n•新增dialogs.show_notification\n\n🐞 错误修复\n•修复了某些romhacks上的TASVideo崩溃问题（ e.g. B3313 v0.7 ）\n•修复了重新编译尚未到达的区块时崩溃的问题（受影响的memory.recompile ）\n•修复了深色模式问题\n\n原址。叉子1. 叉子2.叉子3.",
+      "originalContent": "Mupen64 RR Lua (ou Mupen64 Re-recording Lua) est un fork (le 3eme) de Mupen64 permettant l'enregistrement de vidéo.\n\nLes changements sont:\n\n✨ Features\n- Added new emu.get_pref preferences (\"caret_blink_time\", \"high_contrast\", \"reduced_motion\")\n- Added dialogs.show_notification\n\n🐞 Bugfixes\n- Fixed TASVideo crashing on certain romhacks (e.g. B3313 v0.7)\n- Fixed crash when recompiling not-yet-reached blocks (affected memory.recompile)\n- Fixed dark mode issues\n\nSite original. Fork 1. Fork 2. Fork 3.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "77c0168b1bc1340fcd368ad722fca739f63507dc78c6baa00b93057c37de3ba3",
+      "translationPending": false
+    },
+    {
+      "id": "138645",
+      "title": "【电脑】DOSBox Automation v0.86 pre1",
+      "originalTitle": "[Ordi.] DOSBox Automation v0.86 pre1",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T14:23:18Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138645-ordi-dosbox-automation-v0-86-pre1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/dosbox-automation-scaled.png",
+      "officialUrl": "https://github.com/dosbox-automation/dosbox-automation/",
+      "summary": "DOSBox Automation是DOSBox Staging的一个分支，它将仿真器转变为强烈面向自动化和外部控制的环境。它特别添加了REST HTTP API、沙盒Lua脚本、录制和重放输入、音频/视频捕获、读取屏幕上显示的文本以及功能 访问和操作内存、CPU寄存器和I/O端口。它还集成了自动安装和磁盘更改的机制，并具有安全的安装策略。",
+      "content": "DOSBox Automation是DOSBox Staging的一个分支，它将仿真器转变为强烈面向自动化和外部控制的环境。它特别添加了REST HTTP API、沙盒Lua脚本、录制和重放输入、音频/视频捕获、读取屏幕上显示的文本以及功能\n访问和操作内存、CPU寄存器和I/O端口。它还集成了自动安装和磁盘更改的机制，并具有安全的安装策略。\n与DOSBox Staging的区别： Staging仍然主要是一个DOS模拟器，旨在运行具有现代模拟和兼容性的DOS软件和游戏。DOSBox Automation恢复其基础，但增加了一个重要的自动化、脚本和反思层，允许外部程序控制情绪\n并与其内部状态进行交互。因此，它主要针对启动器、自动化测试、开发工具、调试和逆向工程，而不是仅仅针对想要玩游戏的用户。",
+      "originalContent": "DOSBox Automation est un fork de DOSBox Staging qui transforme l'émulateur en un environnement fortement orienté vers l'automatisation et le contrôle externe. Il ajoute notamment une API HTTP REST, des scripts Lua sandboxés, l'enregistrement et la relecture des entrées, la capture audio/vidéo, la lecture du texte affiché à l'écran ainsi que des fonctions d'accès et de manipulation de la mémoire, des registres CPU et des ports d'E/S. Il intègre également des mécanismes pour automatiser les installations et les changements de disques, avec une politique de montage sécurisée.\n\nDifférence avec DOSBox Staging: Staging reste avant tout un émulateur DOS destiné à faire fonctionner les logiciels et jeux DOS avec une émulation et une compatibilité modernes. DOSBox Automation reprend sa base mais ajoute une importante couche d'automatisation, de scripting et d'introspection, permettant à des programmes externes de contrôler l'émulation et d'interagir avec son état interne. Il s'adresse donc principalement aux launchers, tests automatisés, outils de développement, debugging et reverse engineering, plutôt qu'à l'utilisateur qui cherche simplement à jouer.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "3f116e2825ef846dff1568cd25891b0dd1c724600984953723ede6bf419b04a1",
+      "translationPending": false
+    },
+    {
+      "id": "138625",
+      "title": "【家用机】NX Infinity v1.0",
+      "originalTitle": "[Consoles de salon] NX Infinity v1.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T11:20:52Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138625-consoles-de-salon-nx-infinity-v1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/nx-infinity.png",
+      "officialUrl": "https://github.com/coye2/NX-Infinity",
+      "summary": "NX Infinity是一款基于Kenji-NX/Ryujinx单核的Nintendo Switch仿真界面，集成了游戏管理功能、保存、MOD和图形设置。 该版本放弃了先前设想或集成的各种内核，转而使用Kenji-NX/Ryujinx的单一内核。 现在，开发的重点是改善这一基础，而不是从一个模拟引擎转移到另一个模拟引擎。 NX Infinity在控制器上提供重新设计的桌面界面以及可导航的全屏主屏模式。",
+      "content": "NX Infinity是一款基于Kenji-NX/Ryujinx单核的Nintendo Switch仿真界面，集成了游戏管理功能、保存、MOD和图形设置。\n该版本放弃了先前设想或集成的各种内核，转而使用Kenji-NX/Ryujinx的单一内核。 现在，开发的重点是改善这一基础，而不是从一个模拟引擎转移到另一个模拟引擎。\nNX Infinity在控制器上提供重新设计的桌面界面以及可导航的全屏主屏模式。该应用程序包括游戏库，封面和背景，按标题的图形设置，保存， mod和更新的管理，以及头像定制和命令\n是有触觉的。\n开发人员还宣布了启动、加载库和启动游戏以及管理着色器缓存、纹理和控制器方面的改进。还提供适度的显卡模式和游戏特定的显卡设置\n。该项目继续开发，仍有望提高兼容性和性能。",
+      "originalContent": "NX Infinity est une interface d'émulation Nintendo Switch basée sur un cœur unique dérivé de Kenji-NX/Ryujinx, intégrant des fonctions de gestion des jeux, des sauvegardes, des mods et des paramètres graphiques.\n\nCette version abandonne les différents cœurs précédemment envisagés ou intégrés, au profit d’une base unique issue de Kenji-NX/Ryujinx. Le développement se concentre désormais sur l’amélioration de cette base, plutôt que sur le passage d’un moteur d’émulation à un autre.\n\nNX Infinity propose une interface de bureau repensée ainsi qu’un mode HOME plein écran navigable à la manette. L’application regroupe notamment la bibliothèque de jeux, les jaquettes et arrière-plans, les réglages graphiques par titre, la gestion des sauvegardes, des mods et des mises à jour, ainsi que la personnalisation des avatars et les commandes tactiles.\n\nLe développeur annonce également des améliorations concernant le démarrage, le chargement de la bibliothèque et le lancement des jeux, ainsi que la gestion du cache des shaders, des textures et des manettes. Des modes adaptés aux cartes graphiques modestes et des réglages graphiques propres à chaque jeu sont également proposés. Le projet poursuit son développement, avec des améliorations de compatibilité et de performances encore attendues.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "2e095cd440d498b16fea8595e65d77e9ac28b07430116ae49af98c7636a078ee",
+      "translationPending": false
+    },
+    {
+      "id": "138623",
+      "title": "【家用机】KytyPlus v5.1",
+      "originalTitle": "[Consoles de salon] KytyPlus v5.1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T11:15:24Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138623-consoles-de-salon-kytyplus-v5-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/kytyplus-scaled.png",
+      "officialUrl": "https://github.com/Coder787-source/KytyPlus",
+      "summary": "KytyPlus是KytyPS5的分支，其本身源自原始Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了一些改进，包括通过shadPS4对PS4游戏的实验性支持， FSR 1.0 ， Vulkan缓存，以保持管道编译和不同的优化 集成GPU （ iGPU ）的选项。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。",
+      "content": "KytyPlus是KytyPS5的分支，其本身源自原始Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了一些改进，包括通过shadPS4对PS4游戏的实验性支持， FSR 1.0 ， Vulkan缓存，以保持管道编译和不同的优化\n集成GPU （ iGPU ）的选项。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68",
+      "originalContent": "KytyPlus est un fork de KytyPS5, lui-même dérivé du projet original Kyty. Il reprend son émulation de la PlayStation 5 tout en ajoutant plusieurs améliorations, notamment le support expérimental des jeux PS4 via shadPS4, le FSR 1.0, un cache Vulkan permettant de conserver les pipelines compilés et différentes optimisations destinées aux GPU intégrés (iGPU). Il permet également l’installation des fichiers PKG depuis son interface et propose une gestion unifiée des jeux PS4 et PS5. Le projet est encore en développement et de nombreux jeux peuvent rencontrer des plantages, des écrans noirs ou des problèmes graphiques.\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "kyty_pc",
+        "kytyplus_pc",
+        "kyty_ps5_pc"
+      ],
+      "contentHash": "4a19c20bd1d38a98e95794f8480994de68486c3661f97c6add5f45f07d8d9e7e",
+      "translationPending": false
+    },
+    {
+      "id": "138619",
+      "title": "【家用机】KytyPS5 r261027",
+      "originalTitle": "[Consoles de salon] KytyPS5 r261027",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T11:11:18Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138619-consoles-de-salon-kytyps5-r261027/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
+      "officialUrl": "https://github.com/Nmzik/KytyPS5",
+      "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本 。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和对商业游戏的渐进支持。模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖 。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：在关注性能或图形准确性之前提高兼容性。",
+      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本\n。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和对商业游戏的渐进支持。模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖\n。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：在关注性能或图形准确性之前提高兼容性。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一款Kyty的非官方但假设的延续，它转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼控制台模拟的基准。",
+      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "kyty_pc",
+        "kytyps5_pc",
+        "kyty_ps5_pc"
+      ],
+      "contentHash": "6d7f2a3524188572d3f14e3f72825a3d6bbaa5c6506224a6eab7155325e9629d",
+      "translationPending": false
+    },
+    {
+      "id": "138614",
+      "title": "【工具】OpenEmux v1.17",
+      "originalTitle": "[Utilitaires Multi-systemes] OpenEmux v1.17",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-27T11:04:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138614-utilitaires-multi-systemes-openemux-v1-17/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/openemux.png",
+      "officialUrl": "https://guilhermefeitosa66.github.io/OpenEmux/fr/",
+      "summary": "OpenEmux是一款受OpenEmu启发的免费开源GUI ，旨在简化RetroArch的使用。此前端使用Python与GTK4和libadwaita一起开发，允许您浏览和组织每个系统的复古游戏库，并显示从Li的缩略图存储库中恢复的封面 bretro OpenEmux依靠RetroArch进行仿真，并从统一的界面进行配置。特别是，它允许您定义游戏目录，检查所需BIOS的存在，为每个系统配置键盘和控制器控件以及管理着色器 。",
+      "content": "OpenEmux是一款受OpenEmu启发的免费开源GUI ，旨在简化RetroArch的使用。此前端使用Python与GTK4和libadwaita一起开发，允许您浏览和组织每个系统的复古游戏库，并显示从Li的缩略图存储库中恢复的封面\nbretro\nOpenEmux依靠RetroArch进行仿真，并从统一的界面进行配置。特别是，它允许您定义游戏目录，检查所需BIOS的存在，为每个系统配置键盘和控制器控件以及管理着色器\n。在第一次启动时，应用程序准备其环境并下载必要的Libretro核心。\n最初是为Linux设计的，该项目还提供了一个适用于Windows的版本，作为便携式存档和安装程序分发，集成了必要的依赖项，以及适用于Android的版本。 Windows端口与原始Linux平台分开开发和测试。\nOpenEmux不提供任何游戏或BIOS。该项目根据麻省理工学院的许可证进行分发，独立于RetroArch和第三方嵌入式组件的特定许可证。",
+      "originalContent": "OpenEmux est une interface graphique libre et open source inspirée d'OpenEmu, conçue pour simplifier l'utilisation de RetroArch. Développé en Python avec GTK4 et libadwaita, ce frontend permet de parcourir et d'organiser une bibliothèque de jeux rétro par système, avec affichage des jaquettes récupérées depuis les dépôts de miniatures de Libretro.\n\nOpenEmux s'appuie sur RetroArch pour l'émulation et facilite sa configuration depuis une interface unifiée. Il permet notamment de définir les répertoires de jeux, de vérifier la présence des BIOS requis, de configurer les commandes clavier et manette pour chaque système et de gérer les shaders. Lors du premier lancement, l'application prépare son environnement et télécharge les cœurs Libretro nécessaires.\n\nInitialement conçu pour Linux, le projet propose également une version pour Windows, distribuée sous forme d'archive portable et d'installateur, intégrant les dépendances nécessaires, ainsi qu'une version pour Android. Le portage Windows est développé et testé séparément de la plateforme Linux d'origine.\n\nOpenEmux ne fournit aucun jeu ni BIOS. Le projet est distribué sous licence MIT, indépendamment des licences propres à RetroArch et aux composants tiers embarqués.",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "openemu_mac"
+      ],
+      "contentHash": "544e0f384956221b9cbddcd0c1fe63bfbe4a486a7747b4742012855f47d320a0",
+      "translationPending": false
+    },
+    {
+      "id": "138611",
+      "title": "【工具】CHD-Manager v1.4.0",
+      "originalTitle": "[Utilitaires Divers] CHD-Manager v1.4.0",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-10-27T10:00:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138611-utilitaires-divers-chd-manager-v1-4-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/chdmanager.png",
+      "officialUrl": "https://github.com/Mr-Shizzy/CHD-Manager",
+      "summary": "CHD Manager是一个开源的Windows实用程序，为CHDMAN提供图形界面， CHDMAN是MAME工具，专门用于管理CHD （压缩数据块）格式的磁盘映像。 它允许转换、压缩和解压缩磁盘映像，并能够在单个操作中处理多个文件。 它支持不同的格式，包括CHD、BIN/CUE、GDI、ISO、TOC、CDI和PBP ，可自动检测CD和DVD介质并管理多轨BIN映像。",
+      "content": "CHD Manager是一个开源的Windows实用程序，为CHDMAN提供图形界面， CHDMAN是MAME工具，专门用于管理CHD （压缩数据块）格式的磁盘映像。\n它允许转换、压缩和解压缩磁盘映像，并能够在单个操作中处理多个文件。 它支持不同的格式，包括CHD、BIN/CUE、GDI、ISO、TOC、CDI和PBP ，可自动检测CD和DVD介质并管理多轨BIN映像。\n便携式，该软件还包含一个可选的更新功能，并嵌入了chdman ，可以直接从应用程序进行更新。",
+      "originalContent": "CHD Manager est un utilitaire Windows open source proposant une interface graphique pour chdman, l'outil de MAME dédié à la gestion des images disque au format CHD (Compressed Hunks of Data).\n\nIl permet de convertir, compresser et décompresser des images disque, avec la possibilité de traiter plusieurs fichiers en une seule opération. Il prend en charge différents formats, notamment CHD, BIN/CUE, GDI, ISO, TOC, CDI et PBP, avec une détection automatique des supports CD et DVD et une gestion des images BIN multipistes.\n\nPortable, le logiciel intègre également une fonction de mise à jour facultative et embarque chdman, qui peut être actualisé directement depuis l'application.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "6c88f34d43d1b0ed2407005309acb52368d6efac963b2e554e99de4468fc085c",
       "translationPending": false
     },
     {
@@ -79,30 +284,6 @@
         "ruffle_android"
       ],
       "contentHash": "ff66fbc0f0a1fb5cbf23ee3c5f37f481a806b2b1cea95a83801ffceac8c6bf62",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-26T16:54:27Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月26日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•将描述添加到后期处理页面（ Stenzek（https://github.com/stenzek/duckstation/commit/a78082b8c1bbeff01ac4ed6f2847fb2b9302a598） ）\n•删除“后处理链”分组框（ Stenzek（https://github.com/stenzek/duckstation/commit/e0f6fa82b71e1c85877e8c18f642c0d2fba9209e） ）\n•定期轮询断开插槽（ Stenzek（https://github.com/stenzek/duckstation/commit/0310f59ac16388fef7603763ab1e6c6d25d4345e） ）\n•设备通知修复（ Stenzek（https://github.com/stenzek/duckstation/commit/e41bcd36df872cf90b105e67a81a67571c10e17e） ）\n•修复收缩DynamicHeapArray （ Stenzek（https://github.com/stenzek/duckstation/commit/f591ef20e2ea0fa1d35fa9940e29564896f4a9bb） ）时的堆溢出问题\n• 526b4a1 ：澄清瑞典自动设置说明（ # 3816 ） （ Daniel Nylander ） # 3816（https://github.com/stenzek/duckstation/pull/3816）",
-      "originalContent": "## Commits\n- Add descriptions to post-processing page ([Stenzek](https://github.com/stenzek/duckstation/commit/a78082b8c1bbeff01ac4ed6f2847fb2b9302a598))\n- Remove 'Post Processing Chain' groupbox ([Stenzek](https://github.com/stenzek/duckstation/commit/e0f6fa82b71e1c85877e8c18f642c0d2fba9209e))\n- Poll disconnected slots periodically ([Stenzek](https://github.com/stenzek/duckstation/commit/0310f59ac16388fef7603763ab1e6c6d25d4345e))\n- Device notification fixes ([Stenzek](https://github.com/stenzek/duckstation/commit/e41bcd36df872cf90b105e67a81a67571c10e17e))\n- Fix heap overflow when shrinking DynamicHeapArray ([Stenzek](https://github.com/stenzek/duckstation/commit/f591ef20e2ea0fa1d35fa9940e29564896f4a9bb))\n- 526b4a1: Clarify Swedish automatic setting descriptions (#3816) (Daniel Nylander) [#3816](https://github.com/stenzek/duckstation/pull/3816)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "29b57758aff01ae16ded6499ff39a564d7f147651db53add421abd8ee906136c",
       "translationPending": false
     },
     {
@@ -5765,30 +5946,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "4b65682c6ff7c3707f65d506b3dbfd31339a4aa3824ac53926e13b7d5b0d1845",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-psx2_izzy-1-3-1",
-      "title": "【Android更新】PSX2 1.3.1",
-      "originalTitle": "PSX2 1.3.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-07T21:11:49Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/izzy2lost/PSX2/releases/tag/1.3.1",
-      "imageUrl": "asset://assets/emulators/psx2_izzy.png",
-      "officialUrl": "https://github.com/izzy2lost/PSX2",
-      "summary": "PSX2 发布 Android 新版本 1.3.1，发布日期为2026年10月07日。点击查看官方版本信息与更新说明。",
-      "content": "PSX2 已发布 Android 最新版本 1.3.1。\n\n发布日期：2026年10月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n已迁移到撰写。\n更好的边缘到边缘支撑。\n将pcsx2核心更新为最新提交。\n更快的速度和更好的稳定性。",
-      "originalContent": "**Migrated to compose. \r\nBetter edge to edge support.\r\nUpdated pcsx2 core to the latest commit.\r\nFaster speed and better stability.**",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "psx2_izzy"
-      ],
-      "contentHash": "35d365a6dddbc9d912b99209ab6f4633e024489dc59383b2920eace17222281a",
       "translationPending": false
     },
     {
