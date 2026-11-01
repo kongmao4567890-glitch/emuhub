@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T06:48:14.222544Z",
+  "generatedAt": "2026-11-01T18:06:48.117836Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,337 @@
   },
   "articles": [
     {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T15:20:52Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月01日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "24a4d995439355fbb874c24740c6f28be843a70fe6d75814fbb430ae5aa89543",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T14:43:09Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月01日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• ca0dfa5: CPU/ PGXP: 不要给 PGXP 拨打写$0 (Stenzek) 的指示\n• d3d7a12: CPU/PGXP: 将值旗移到信头( Stenzek)\n• ebdbe96: CPU/PGXP:在内存模式(Stenzek)下立即修复解释器\n• e41a0fb: CPU/PGXP: 将 swr 固定到上半部, 使下半部无效 (Stenzek)\n• e762de1: CPU/PGXP:将0美元作为精确(Stenzek)\n• dde19bd: CPU/PGXP: 修复重编的 mtc0 验证其来源的垃圾值 (Stenzek)\n• 在链接列表终止符检查中丢弃冗余掩码(Stenzek)（https://github.com/stenzek/duckstation/commit/7a8335eca3474d4dbc6ec1d50aa178d229b1ef90）)",
+      "originalContent": "## Commits\n- ca0dfa5: CPU/PGXP: Don't call PGXP for instructions that write $zero (Stenzek)\n- d3d7a12: CPU/PGXP: Move value flags to the header (Stenzek)\n- ebdbe96: CPU/PGXP: Fix interpreter immediate moves in memory mode (Stenzek)\n- e41a0fb: CPU/PGXP: Fix swr into the upper half invalidating the lower half (Stenzek)\n- e762de1: CPU/PGXP: Treat $zero as precise (Stenzek)\n- dde19bd: CPU/PGXP: Fix recompiled mtc0 validating its source with a garbage value (Stenzek)\n- Drop redundant mask in linked list terminator check ([Stenzek](https://github.com/stenzek/duckstation/commit/7a8335eca3474d4dbc6ec1d50aa178d229b1ef90))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "f1acccf0cc1f795009d6315a667554987735f7194c4caa50b2bf8efa851865a5",
+      "translationPending": false
+    },
+    {
+      "id": "138882",
+      "title": "【家用机】Sharpemu v0.0.7",
+      "originalTitle": "[Consoles de salon] Sharpemu v0.0.7",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T10:24:32Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138882-consoles-de-salon-sharpemu-v0-0-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/sharpemu-logo.png",
+      "officialUrl": "https://github.com/par274/sharpemu",
+      "summary": "SharpEmu是由par274开发的实验性PlayStation 5模拟器，完全用C #编写，旨在在Windows、Linux和macOS上运行，尽管开发主要集中在Windows上 。该项目从头开始编码，不接管其他仿真器，充当仿真器以及研究PS5架构的平台。 模拟器还很年轻：没有可玩的商业游戏，但它已经可以加载eboot.bin ，执行CPU指令，读取游戏元数据，加载系统模块并启动图形流水线的某些步骤 。",
+      "content": "SharpEmu是由par274开发的实验性PlayStation 5模拟器，完全用C #编写，旨在在Windows、Linux和macOS上运行，尽管开发主要集中在Windows上\n。该项目从头开始编码，不接管其他仿真器，充当仿真器以及研究PS5架构的平台。\n模拟器还很年轻：没有可玩的商业游戏，但它已经可以加载eboot.bin ，执行CPU指令，读取游戏元数据，加载系统模块并启动图形流水线的某些步骤\n。几个经过测试的游戏达到了sceVideoOut或AGC等高级阶段，这表明渲染开始工作，即使仍然有限。\n开发处于活跃状态， Windows构建可用且进度稳定。 SharpEmu专注于在瞄准高级兼容性或游戏玩法之前建立强大的技术基础。\n总而言之， SharpEmu是一个雄心勃勃的PS5项目，有条不紊，正在建设中，为未来全面模拟控制台奠定了基础。\n\n更改内容如下：\n• [scripts/release.py] FIX utf-8 （ 0896ef68 ）\n• [自述文件]更新截图（ c6d304cc ）\n• [GPU]让没有长度单词的填充图案跨越整个图案（ 4ec21480 ）\n• [GPU]识别索引四字图案填充（ a95444f4 ）\n• [SpirvTranslator]通过插槽变量读写线程寻址LDS溢出（ 14d68762 ）\n• [SpirvTranslator]保持私有LDS阵列（ 54756cff ）中的恒定基线寻址LDS溢出\n• [诊断]报告同步原生颜色元数据的作者（ 2e23a3a3 ）\n• [诊断]在GPU等待站点中显示更多帧(fb3d2325)\n• [诊断]提高GPU间隔查询和密钥限制（ ec8f2ea1 ）\n• [诊断]报告最重的GPU间隔（ ff7f3974 ）\n• [测试]盖板分度图案填充和线程寻址LDS插槽（ 685dbae6 ）\n• [Loader]将选定的XML补丁应用于加载的游戏图像（ 540365e9 ）\n• [GUI]在本地化选择窗口中管理游戏补丁（ 71e3f277 ）\n• [Loader]支持键入值和基于模式的游戏补丁（ 2d438a59 ）\n• [GUI]识别与版本无关的模式补丁（ b34ee704 ）\n• [GUI]下载匹配游戏标题ID和版本的补丁（ b1056a44 ）\n•将用户可写数据存储在系统安装的每个用户目录中（ # 1108 ） （ 4f6d877c ）\n• [docs]将patches.md移动到文档文件夹（ b0fa905f ）\n• FIX (gpu) ：连接普通平面时保留原生模板内容(# 1106) (de22640c)\n• [GPU/HLE] SAROS ：着色器转换器、GPU内存和HLE固定（ # 1079 ） （ 412b2135 ）\n• [NGS2]修复采样器流、语音路由和ATRAC9播放（ 2cd6676e ）\n• [Agc]添加了sceAgcUpdatePrimState （ 669e54f4 ）\n• ELDEN环形剪刀（ # 1117 ） （ b6347f9f ）\n• [GPU]恢复默认AGC阻塞计数（ 8705372e ）\n• [测试]覆盖AGC默认遮挡状态和查询结果（ a1061ef3 ）\n• [GPU] UE4光线追踪：较小的着色器调用程序，在后台编译(# 1120) (6b7c1d50)\n• [平台]删除macOS支持(# 1123) (299c907c)\n• [VideoOut]在缓冲区注册前报告UHD输出状态(# 1125) (b1ec2866)\n•细分+绘图重复使用和GNM模式（ # 1130 ） （ 8ddf6601 ）\n• [GUI]添加简体中文本地化(# 1132) (c574a279)\n• [GUI]在语言文件中填写缺失和未翻译的字符串(# 1133) (504ff6a2)\n• [CI]完成中文选项，并在线程池加载下解锁视频解码（ ab1b9ed4 ）\n•古墓丽影传奇(# 1134) (11506fcf)\n• [GUI]将启动器清理移植到Windows和Linux (# 1135) (a6bc9ace)\n• CHORE ： 0.0.7-pulse的BUMP版本（ # 1136 ） （ 791a0535 ）",
+      "originalContent": "SharpEmu est un émulateur PlayStation 5 expérimental développé par par274, entièrement écrit en C# et conçu pour fonctionner sur Windows, Linux et macOS, même si le développement se concentre surtout sur Windows. Le projet est codé from scratch, sans reprendre d’autres émulateurs, et sert autant d’émulateur que de plateforme d’étude de l’architecture PS5.\n\nL’émulateur est encore très jeune: aucun jeu commercial n’est jouable, mais il peut déjà charger des eboot.bin, exécuter des instructions CPU, lire les métadonnées des jeux, charger des modules système et initier certaines étapes du pipeline graphique. Plusieurs jeux testés atteignent des stades avancés comme sceVideoOut ou AGC, ce qui montre que le rendu commence à fonctionner, même si encore limité.\n\nLe développement est actif, avec des builds Windows disponibles et des progrès réguliers. SharpEmu se concentre sur la mise en place d’une base technique solide avant de viser la compatibilité avancée ou la jouabilité.\n\nEn résumé, SharpEmu est un projet PS5 ambitieux, méthodique et en pleine construction, qui pose les fondations nécessaires pour une future émulation complète de la console.\n\nVoici les changements:\n- [scripts/release.py] fix utf-8 (0896ef68)\n- [readme] update screenshots (c6d304cc)\n- [GPU] Let a fill pattern without a length word span the whole pattern (4ec21480)\n- [GPU] Recognize indexed four-word pattern fills (a95444f4)\n- [SpirvTranslator] Read and write thread-addressed LDS spills through slot variables (14d68762)\n- [SpirvTranslator] Keep constant-base thread-addressed LDS spills out of the private LDS array (54756cff)\n- [Diagnostics] Report the writer of synchronized native color metadata (2e23a3a3)\n- [Diagnostics] Show more frames in GPU wait sites (fb3d2325)\n- [Diagnostics] Raise the GPU interval query and key limits (ec8f2ea1)\n- [Diagnostics] Report the heaviest GPU interval (ff7f3974)\n- [Tests] Cover indexed pattern fills and thread-addressed LDS slots (685dbae6)\n- [Loader] Apply selected XML patches to loaded game images (540365e9)\n- [GUI] Manage game patches in a localized selection window (71e3f277)\n- [Loader] Support typed values and pattern-based game patches (2d438a59)\n- [GUI] Identify version-independent pattern patches (b34ee704)\n- [GUI] Download patches matching the game title ID and version (b1056a44)\n- Store user-writable data in a per-user directory for system installs (#1108) (4f6d877c)\n- [docs] move patches.md to docs folder (b0fa905f)\n- fix(gpu): preserve native stencil contents when attaching ordinary planes (#1106) (de22640c)\n- [GPU/HLE] Saros: shader translator, GPU memory and HLE fixes (#1079) (412b2135)\n- [Ngs2] Fix sampler streaming, voice routing and ATRAC9 playback (2cd6676e)\n- [Agc] Added sceAgcUpdatePrimState (669e54f4)\n- Elden ring scissor (#1117) (b6347f9f)\n- [GPU] Restore default AGC occlusion counting (8705372e)\n- [Tests] Cover AGC default occlusion state and query results (a1061ef3)\n- [GPU] UE4 ray tracing: smaller shader-call programs, compiled in the background (#1120) (6b7c1d50)\n- [Platform] Remove macOS support (#1123) (299c907c)\n- [VideoOut] Report UHD output status before buffers are registered (#1125) (b1ec2866)\n- Tessellation + Draw reuse and GNM mode (#1130) (8ddf6601)\n- [GUI] Add Simplified Chinese localization (#1132) (c574a279)\n- [GUI] Fill in missing and untranslated strings in language files (#1133) (504ff6a2)\n- [CI] Complete Chinese options and unblock video decoding under thread-pool load (ab1b9ed4)\n- Tomb raider legend (#1134) (11506fcf)\n- [GUI] Port the launcher cleanup to Windows and Linux (#1135) (a6bc9ace)\n- chore: bump version to 0.0.7-pulse (#1136) (791a0535)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "sharpemu_pc"
+      ],
+      "contentHash": "6461f4bbb43ef9beaec3c4130320ea474c39dc9553db3e091040b8b62fb273a6",
+      "translationPending": false
+    },
+    {
+      "id": "138879",
+      "title": "【工具】x360ce v4.28",
+      "originalTitle": "[Utilitaires Divers] x360ce v4.28",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-01T10:16:51Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138879-utilitaires-divers-x360ce-v4-28/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/x360ce_General-300x253.png",
+      "officialUrl": "https://github.com/x360ce/x360ce",
+      "summary": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。 换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！ 请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。 更多信息请访问官方网站。",
+      "content": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。\n\n换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！\n请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。\n\n更多信息请访问官方网站。",
+      "originalContent": "'Xbox 360 Controller Emulator' est une bibliothèque de wrappers qui traduit les appels XInput en appels DirectInput, et permet le support des pads non-compatibles XInput dans les applications (surtout des jeux).\n\nEn d'autres termes: x360ce vous permet d'utiliser n'importe quel pad dans les jeux qui supportent à la base uniquement le pad XBOX360 !\n\nNotez que la version AnyCPU s'exécute nativement en 32 ou 64 bits selon le système. Elle est donc la seule version à jour à privilégier.\n\nPlus d'infos sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "41acebfc5609fc18a61200b23492a54d580b41796005523a5230f565c8321202",
+      "translationPending": false
+    },
+    {
+      "id": "138877",
+      "title": "【家用机】Zaxnes v0.4.0",
+      "originalTitle": "[Consoles de salon] Zaxnes v0.4.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T10:15:29Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138877-consoles-de-salon-zaxnes-v0-4-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/zaxnes-logo.png",
+      "officialUrl": "https://github.com/nixxou/zaxnes",
+      "summary": "Zaxnes是适用于Windows的任天堂娱乐系统（ NES ）模拟器，可将游戏的2D图像实时转换为3D环境，元素以体素表示 。特别是，它允许您管理镜头、阴影和自由相机的深度，同时保留返回原始2D显示的功能。",
+      "content": "Zaxnes是适用于Windows的任天堂娱乐系统（ NES ）模拟器，可将游戏的2D图像实时转换为3D环境，元素以体素表示\n。特别是，它允许您管理镜头、阴影和自由相机的深度，同时保留返回原始2D显示的功能。",
+      "originalContent": "Zaxnes est un émulateur de Nintendo Entertainment System (NES) pour Windows qui propose une conversion en temps réel de l'image 2D des jeux en environnement 3D, avec des éléments représentés sous forme de voxels. Il permet notamment de gérer la profondeur des plans, les ombres et une caméra libre, tout en conservant la possibilité de revenir à l'affichage 2D original.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "53d77dca5a3ff92895c8309a514f15024193bcc8add288f79f63f952cf4ff033",
+      "translationPending": false
+    },
+    {
+      "id": "138875",
+      "title": "【家用机】Plumsg v0.1.0 beta 9",
+      "originalTitle": "[Consoles de salon] Plumsg v0.1.0 beta 9",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T10:14:34Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138875-consoles-de-salon-plumsg-v0-1-0-beta-9/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/plumsg-scaled.png",
+      "officialUrl": "https://github.com/cochimbo/plumsg",
+      "summary": "Plumsg是一个模拟器Sega Mega Drive / Genesis,Mega-CD / Sega CD和32X用于Windows和Linux. 它还支持Master System和Game Gear,以及使用CD音频音轨的MSU-MD弹匣。 从 plugg 中开发出来,是一种来自同一作者的Game Gear 仿真器形式,它特别被一种伪-3D效果所区分,它将不同的图形平面分别用于它们 深度,带有横向照明和阴影。",
+      "content": "Plumsg是一个模拟器Sega Mega Drive / Genesis,Mega-CD / Sega CD和32X用于Windows和Linux. 它还支持Master System和Game Gear,以及使用CD音频音轨的MSU-MD弹匣。 从 plugg 中开发出来,是一种来自同一作者的Game Gear 仿真器形式,它特别被一种伪-3D效果所区分,它将不同的图形平面分别用于它们 深度,带有横向照明和阴影。\n\n模拟器支持BIN,SMD,CUE,ISO和CHD格式的墨盒和磁盘图像。 它还提供经典的备份和备份状态,带有缩略图,快速推进,慢化,回溯和减少控制延迟 s(运行前方). 显示可以改编为16:9,16:10或自定义全景格式,有可能去除图示限制和超小时模拟系统。 有几个图形选项可供选择,包括CRT和扫描线滤波器以及实验用xBR或Anime4K散射。\n\nPlumsg 还包括支持 Game Genie 和 Action Replay 欺骗代码, 带有夹克的游戏库和带有 Rollbac 的双玩家网络游戏 (单位:千美元) 它与RetroShipments兼容。 兼容列表允许您跟踪功能游戏。\n\n这些变化:\n• 3D帮助:主系统及其弹匣来自真型号,由@cochimbo 于 #167\n• Pistolas de luz:解释和威胁 en el puerto 2, con mira en pantalla (# 102) 由@cochimbo 于#168\n• 测试错误和 misc_test.2 由@cochimbo在#169中通过每张支票(# 137)\n• VDP Game Gear: #170 #170的@cochimbo所著,\n• Modo控制台 para Steam Deck, ROG Ally, Legion Go y otros PC con mando by @cochimbo in #171\n校对:Soup\n• Mega CD 32X 光碟和32X弹匣的型号1 (#96), 由@cochimbo在#173\n• 变换组 0.1.0-beta.9 由@cochimbo在#175中翻译。",
+      "originalContent": "Plumsg est un émulateur Sega Mega Drive / Genesis, Mega-CD / Sega CD et 32X pour Windows et Linux. Il prend également en charge la Master System et la Game Gear, ainsi que les cartouches MSU-MD utilisant des pistes audio CD. Développé à partir de plumgg, un ancien émulateur Game Gear du même auteur, il se distingue notamment par un effet pseudo-3D qui sépare les différents plans graphiques pour leur donner de la profondeur, avec éclairage latéral et ombres.\n\nL'émulateur prend en charge les cartouches et les images disque aux formats BIN, SMD, CUE, ISO et CHD. Il propose également les sauvegardes classiques et les états de sauvegarde avec vignettes, l'avance rapide, le ralenti, le retour en arrière et la réduction de latence des commandes (run-ahead). L'affichage peut être adapté aux formats panoramiques 16:9, 16:10 ou personnalisés, avec possibilité de supprimer la limite de sprites et d'overclocker les systèmes émulés. Plusieurs options graphiques sont disponibles, notamment des filtres CRT et scanlines ainsi qu'une mise à l'échelle expérimentale par xBR ou Anime4K.\n\nPlumsg intègre également la prise en charge des codes de triche Game Genie et Action Replay, une bibliothèque de jeux avec jaquettes et le jeu en réseau à deux joueurs avec rollback. Il est compatible avec RetroAchievements. Une liste de compatibilité permet de suivre les jeux fonctionnels.\n\nLes changements:\n- 3D shelf: the Master System and its cartridge from a real model by @cochimbo in #167\n- Pistolas de luz: Justifier y Menacer en el puerto 2, con mira en pantalla (#102) by @cochimbo in #168\n- misc_test and misc_test.2 pass every check (#137) by @cochimbo in #169\n- VDP Game Gear: tiempos del contador V y del H latcheado (#76) by @cochimbo in #170\n- Modo consola para Steam Deck, ROG Ally, Legion Go y otros PC con mando by @cochimbo in #171\n- Master System Light Phaser and paddle (#73) by @cochimbo in #172\n- Mega CD 32X discs and Mode 1 for 32X cartridges (#96) by @cochimbo in #173\n- CHANGELOG for 0.1.0-beta.9 by @cochimbo in #175",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8a12d4bc2eec289932e09d5d81570f9f1413797b78703aa8e40d81fc5b2631a5",
+      "translationPending": false
+    },
+    {
+      "id": "138873",
+      "title": "【街机】Model3-Vulkan v0.9.8.6a",
+      "originalTitle": "[Arcade] Model3-Vulkan v0.9.8.6a",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T10:10:21Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138873-arcade-model3-vulkan-v0-9-8-6a/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/supermodel-vk-scaled.png",
+      "officialUrl": "https://github.com/Igloo-Garage/Supermodel-VK",
+      "summary": "Model 3-Vulkan前身为SuperModel-VK ，是SEGA Model 3街机信息亭的开源模拟器Supermodel的独立演变。 它提供Vulkan 1.3渲染架构、图形增强、现代化音频管理和专用于模拟器配置的图形界面。 特点： –模拟世嘉Model 3 （ 1996-1999 ）。 –新的Vulkan 1.3渲染引擎，具有用于不兼容系统的替代OpenGL 4.1可执行文件。",
+      "content": "Model 3-Vulkan前身为SuperModel-VK ，是SEGA Model 3街机信息亭的开源模拟器Supermodel的独立演变。 它提供Vulkan 1.3渲染架构、图形增强、现代化音频管理和专用于模拟器配置的图形界面。\n特点：\n–模拟世嘉Model 3 （ 1996-1999 ）。\n–新的Vulkan 1.3渲染引擎，具有用于不兼容系统的替代OpenGL 4.1可执行文件。\n–图形改进： EWA各向异性滤波、新的着色器几何处理和减少视觉伪影。\n–具有多种模式的透明度系统，包括再现终端硬件屏幕的模式，以改善烟雾、雪和雾的某些效果。\n–支持PNG和WebP格式的高清纹理包，可自动生成mipmap。\n–全景显示，可扩展3D视野，无图像失真。\n–与原始终端频率（ 57.524 Hz ）同步，支持VRR和G-SYNC ，并改进了高频显示器的显示时间。\n–具有扫描线、荧光粉遮罩和明亮光晕效果的CRT渲染选项。\n–无论HUD分辨率如何，原始分辨率或双倍分辨率的全比例和3D渲染。\n–具有多个主题、模拟器配置和游戏启动的独立图形界面。\n–通过Tab和快速菜单访问游戏内叠加层，包括带缩略图的16个状态保存插槽。\n–状态备份压缩为Zstandard (.zst)格式，显著减小其大小。\n–在专用线程中执行音频，以限制抽搐、割伤和裂纹。\n–音频仿真改进，包括音效处理和混响校正。\n–控制器支持在现代输入接口上进行热设备检测。\n–窗口管理和界面适应屏幕和DPI缩放变化。",
+      "originalContent": "Anciennement SuperModel-VK, Model 3-Vulkan est une évolution indépendante de Supermodel, l’émulateur open source de la borne d’arcade Sega Model 3. Il propose une architecture de rendu Vulkan 1.3, des améliorations graphiques, une gestion audio modernisée et une interface graphique dédiée à la configuration de l’émulateur.\n\nCaractéristiques:\n– Émulation de la Sega Model 3 (1996-1999).\n– Nouveau moteur de rendu Vulkan 1.3, avec un exécutable OpenGL 4.1 alternatif pour les systèmes incompatibles.\n– Améliorations graphiques: filtrage anisotrope EWA, nouveau traitement de la géométrie par shaders et réduction des artefacts visuels.\n– Système de transparence à plusieurs modes, dont un mode reproduisant le tramage matériel de la borne pour améliorer certains effets de fumée, de neige et de brouillard.\n– Prise en charge des packs de textures HD aux formats PNG et WebP, avec génération automatique des mipmaps.\n– Affichage panoramique avec extension du champ de vision 3D, sans déformation de l’image.\n– Synchronisation à la fréquence originale de la borne (57,524 Hz), avec prise en charge du VRR et de G-SYNC, et amélioration du rythme d’affichage sur les écrans à haute fréquence.\n– Options de rendu CRT avec scanlines, masques de phosphore et effet de halo lumineux.\n– Mise à l’échelle entière et rendu 3D en résolution native ou doublée, indépendamment de la résolution du HUD.\n– Interface graphique autonome avec plusieurs thèmes, configuration de l’émulateur et lancement des jeux.\n– Overlay en jeu accessible avec Tab et menu rapide proposant notamment 16 emplacements de sauvegarde d’état avec vignettes.\n– Sauvegardes d’état compressées au format Zstandard (.zst), réduisant sensiblement leur taille.\n– Audio exécuté dans un thread dédié afin de limiter les saccades, coupures et grésillements.\n– Améliorations de l’émulation audio, notamment des corrections du traitement des effets sonores et de la réverbération.\n– Prise en charge des manettes avec détection à chaud des périphériques sur les interfaces d’entrée modernes.\n– Gestion des fenêtres et adaptation de l’interface aux changements d’écran et de mise à l’échelle DPI.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "91f62944d41a16cc36d9ac56af35684d8e87579f0ef6c474f8cd5e67789f9d1a",
+      "translationPending": false
+    },
+    {
+      "id": "138871",
+      "title": "【其他】DeSmuME (Dev) v0.9.14.1750",
+      "originalTitle": "[Consoles portables] DeSmuME (Dev) v0.9.14.1750",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T10:08:45Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138871-consoles-portables-desmume-dev-v0-9-14-1750/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/DesMume.png",
+      "officialUrl": "http://desmume.sourceforge.net/",
+      "summary": "这是任天堂DS模拟器,但在开发中的版本中。 (自动建筑物或那里) 自我上次新闻以来,主要的变化是: • 可可港:马克 DeSmuME.app as one that don't need NS RefersDisplay SafeArea Compatibility Mode. 互联网档案馆的存檔,存档日期2013-03-02. ^ Cocoa Port:对狮子和山狮采用现代全屏代码,并尝试用显示符修复Macs的全屏。",
+      "content": "这是任天堂DS模拟器,但在开发中的版本中。\n\n(自动建筑物或那里)\n\n自我上次新闻以来,主要的变化是:\n• 可可港:马克 DeSmuME.app as one that don't need NS RefersDisplay SafeArea Compatibility Mode. 互联网档案馆的存檔,存档日期2013-03-02.\n^ Cocoa Port:对狮子和山狮采用现代全屏代码,并尝试用显示符修复Macs的全屏。\n• 可可港:修复气体放电控制器坠毁和清洁输入\n• Cocoa港:Fix HID控制器解析和macOS兼容性。\n• 固定原生macOS全屏显示器调整尺寸\n• ci:使用先前证明的clang-cl Windows构建引用\n• 此处:编译现有仪器源并保存本地运行时间面包屑\n• 调试:登录 Windows 模拟器启动、ROM 装入和第一个跟踪帧\n• 此处:采集模拟器过程、ROM和烟雾故障工作指导证据\n• 此处:保留Windows运行时诊断,同时进行RAM跟踪烟雾测试\n• 为 CI GUI 帧- 启动失败添加运行时间进程诊断\n• 在Windows CI烟雾测试中禁用音频(在跑者身上没有直声驱动程序)\n• 将PowerShell 定名器固定在运行时间诊断中\n• 修复Windows GUI对话框诊断工作流程中的识别\n• 诊断 DeSmuME Windows 错误对话框并包含 7z 运行时间 DLL\n• 利用缓存编译的Windows手工艺品诊断运行时间痕量缺失\n• 在编译修正和宣传建设失败后,重播Windows游戏机的烟雾\n• 修复ARM9痕量:在使用前申报有效输入罩\n• 增加Windows运行时的烟雾测试,包括公共DS主机和输入/内存断言\n• 伏尔特亨特仪器模拟器: volt-hunt/README.md\n• 伏尔特亨特仪器模拟器: volt-hunt/experiment-example.txt\n• 新ROM装入时重置Volt Hunt追踪和脚本输入\n• 记录每个ARM9内存跟踪行内有效的DS控制器输入\n• 在Windows模拟器中添加可选帧区域控制器播放\n\n请注意,我们网站上定期更新文件,但只是不时更新。",
+      "originalContent": "Il s'agit de l'émulateur de Nintendo DS mais dans une version en cours de développement.\n\n(Builds automatiques ou là)\n\nLes principaux changements depuis ma news précédente sont:\n- Cocoa Port: Mark DeSmuME.app as one that doesn't need NSPrefersDisplaySafeAreaCompatibilityMode.\n- Cocoa Port: Use modern full screen code for Lion and Mountain Lion, and try to fix full screen for Macs with display notches.\n- Cocoa Port: Fix HID controller crashes and spurious input\n- Cocoa Port: Fix HID controller parsing and macOS compatibility.\n- Fixed native macOS fullscreen display resizing\n- ci: use the previously proven clang-cl Windows build invocation\n- ci: compile current instrumented source and preserve native runtime breadcrumbs\n- debug: log Windows emulator startup, ROM loading and first traced frame\n- ci: capture emulator process, ROM and working-directory evidence on smoke failures\n- ci: preserve Windows runtime diagnostics alongside RAM trace smoke test\n- Add runtime process diagnostics for CI GUI frame-loop failure\n- Disable audio in Windows CI smoke test (no DirectSound driver on runner)\n- Fix PowerShell here-string terminator in runtime diagnostics\n- Repair indentation in Windows GUI dialog diagnostics workflow\n- Diagnose DeSmuME Windows error dialog and include 7z runtime DLL\n- Diagnose runtime trace absence using cached compiled Windows artifact\n- Rerun Windows gameplay smoke after compile fix and propagate build failures\n- Fix ARM9 trace build: declare effective input mask before use\n- Add Windows runtime smoke test with public DS homebrew and input/RAM assertions\n- Document Volt Hunt instrumented emulator: volt-hunt/README.md\n- Document Volt Hunt instrumented emulator: volt-hunt/experiment-example.txt\n- Reset Volt Hunt trace and scripted input when a new ROM loads\n- Record effective DS controller input beside each ARM9 RAM trace row\n- Add optional frame-range controller playback to Windows emulator\n\nNotez que les fichiers sont mis à jour régulièrement sur notre site mais ne sont newsés que de temps en temps.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "desmume_pc"
+      ],
+      "contentHash": "86e27994ce50e039850046bec83248a65b2fc0cdbd352616a2ab07159b1b1e5b",
+      "translationPending": false
+    },
+    {
+      "id": "138868",
+      "title": "【家用机】Eglantine Build 9X",
+      "originalTitle": "[Consoles de salon] Eglantine Build 9X",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T10:03:26Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138868-consoles-de-salon-eglantine-build-9x/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/eglantine-nx2.png",
+      "officialUrl": "https://github.com/Djihads80/Eglantine",
+      "summary": "Eglantine是任天堂Switch 1和2的开源模拟器，源自Eden、YUZU和SUDACHI项目。 它采用C + +开发，旨在与Windows、Linux、macOS、Android和FreeBSD实现跨平台兼容。 该项目旨在复制控制台的操作，并逐步提高与游戏和硬件功能的兼容性。 其开发需要对设备进行勘探和逆向工程。",
+      "content": "Eglantine是任天堂Switch 1和2的开源模拟器，源自Eden、YUZU和SUDACHI项目。 它采用C + +开发，旨在与Windows、Linux、macOS、Android和FreeBSD实现跨平台兼容。\n该项目旨在复制控制台的操作，并逐步提高与游戏和硬件功能的兼容性。 其开发需要对设备进行勘探和逆向工程。\n开发人员接受财务捐赠，旨在资助收购Nintendo Switch游戏机、用于测试和逆向工程的游戏，以及托管、技术基础设施、其他硬件（包括GPU ）和持续集成（ CI ）服务器。\n对于那些总是想要更多人工智能的人来说，他们可以去这里，这将使一些游戏在等待在其他地方更好地管理的同时工作。",
+      "originalContent": "Eglantine est un émulateur open source de Nintendo Switch 1 et 2, dérivé des projets Eden, Yuzu et Sudachi. Développé en C++, il vise une compatibilité multiplateforme avec Windows, Linux, macOS, Android et FreeBSD.\n\nLe projet cherche à reproduire le fonctionnement de la console et à améliorer progressivement la compatibilité avec les jeux et les fonctionnalités matérielles. Son développement nécessite notamment des travaux d'exploration et de rétro-ingénierie du matériel.\n\nLes développeurs acceptent les dons financiers, destinés à financer l'acquisition de consoles Nintendo Switch, de jeux pour les tests et la rétro-ingénierie, ainsi que l'hébergement, l'infrastructure technique, le matériel supplémentaire (notamment des GPU) et les serveurs d'intégration continue (CI).\n\nEt pour ceux qui veulent toujours plus d'ia, ils peuvent aller ici, ca fera fonctionner quelques jeux en attendant que ce soit géré, mieux, ailleurs.",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "c6ec6595ef8f04e50bdcf3191500a3cf3a1ad0424bbdd29b4ff5fd3b44449c8c",
+      "translationPending": false
+    },
+    {
+      "id": "138866",
+      "title": "【电脑】M2000 v0.9.6",
+      "originalTitle": "[Ordi.] M2000 v0.9.6",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "tool",
+      "publishedAt": "2026-11-01T10:01:36Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138866-ordi-m2000-v0-9-6/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/06/P2000T.png",
+      "officialUrl": "https://github.com/p2000t/M2000",
+      "summary": "这是一款由Dionoid开发的飞利浦P2000T仿真器，基于Marcel de Kogel和Stafano Bodrato的版本，并由其他人进行了增强。 上一版本26年后的主要新功能如下： •串口支持； •可通过命令行参数使用，如e.g. M2000 --serial COM7 ； •增加了10倍（ 1000% ） CPU速度的选项； •支持模拟@ ifilot的SD卡盒； •面向SD卡启动器固件的开发人员； 注意：仅在符号键映射模式下",
+      "content": "这是一款由Dionoid开发的飞利浦P2000T仿真器，基于Marcel de Kogel和Stafano Bodrato的版本，并由其他人进行了增强。\n\n上一版本26年后的主要新功能如下：\n\n•串口支持；\n•可通过命令行参数使用，如e.g. M2000 --serial COM7 ；\n•增加了10倍（ 1000% ） CPU速度的选项；\n•支持模拟@ ifilot的SD卡盒；\n•面向SD卡启动器固件的开发人员；\n\n注意：仅在符号键映射模式下",
+      "originalContent": "Il s'agit d'un émulateur de Philips P2000T développé par Dionoid et basée sur la version de Marcel de Kogel et Stafano Bodrato et améliorée par d'autres.\n\nLes principales nouveautés 26 ans après la précédente version sont les suivantes:\n\n- Serial port support;\n- Available through command-line argument like e.g. M2000 --serial COM7;\n- Added option for 10x (1000%) CPU speed;\n- Support for emulating @ifilot's SD-card cartridge;\n- Targeted at developers of SD-card Launcher firmware;\n\nNote: only in Symbolic Key Mapping mode",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "692a1b478d7f5803170bce6c823995a92183b6d931ffddf0ef2fdbbad4174cee",
+      "translationPending": false
+    },
+    {
+      "id": "138864",
+      "title": "【工具】OpenROM v3.9.5",
+      "originalTitle": "[Utilitaires Divers] OpenROM v3.9.5",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-01T10:00:19Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138864-utilitaires-divers-openrom-v3-9-5/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/OpenROM.png",
+      "officialUrl": "https://github.com/M5Devs/OpenROM/",
+      "summary": "OpenROM是一个通用的、免费的、开源的软件套件，专门用于复古ROM转换。 它旨在取代专有和分散的工具，完全在本地运行（ 100 ％离线） ，无需任何数据收集。 界面和人体工程学 •游戏美学：提供在Flutter下开发的现代黑暗界面，灵感来自PS5和Xbox菜单，集成了仪表板、每个ROM的卡片和平台徽章。 •可定制：提供多种内置主题（赛博朋克、终端、迷你、游戏） ，并能够通过JSON文件创建它们。",
+      "content": "OpenROM是一个通用的、免费的、开源的软件套件，专门用于复古ROM转换。 它旨在取代专有和分散的工具，完全在本地运行（ 100 ％离线） ，无需任何数据收集。\n\n界面和人体工程学\n•游戏美学：提供在Flutter下开发的现代黑暗界面，灵感来自PS5和Xbox菜单，集成了仪表板、每个ROM的卡片和平台徽章。\n•可定制：提供多种内置主题（赛博朋克、终端、迷你、游戏） ，并能够通过JSON文件创建它们。\n•平滑处理：本机拖放支持单个或分组的文件和文件夹（批量处理）。\n\n性能和技术特点\n•完整转换矩阵：支持跨主要格式（ ISO、BIN、CUE、GDI、IMG、ECM、CHD、CSO、ZSO、XISO、RVZ、WIA、WBFS、GCZ ）的20多次转换旅程。\n•智能检测：通过数字签名（魔术字节）准确识别游戏机（ PS1、PS2、PSP、Xbox、GameCube、Wii、Dreamcast ） ，并分析CHD标头（ v4/v5 ）以区分CD和DVD。\n•生成和验证：自动为BIN文件创建缺失的cue文件，并验证通过chdman生成的CHD文件的完整性。\n\n高级功能\n•终端和自动化：在转换过程中集成实时日志，并为自动化和脚本编写提供完整的命令行工具（ openrom-core ）。",
+      "originalContent": "OpenROM est une suite logicielle universelle, gratuite et open-source dédiée à la conversion de ROMs rétro. Conçue pour remplacer les outils propriétaires et fragmentés, elle fonctionne entièrement en local (100 % hors ligne) sans aucune collecte de données.\n\nInterface et Ergonomie\n- Esthétique Gaming : Propose une interface sombre moderne développée sous Flutter, inspirée des menus PS5 et Xbox, intégrant un tableau de bord, des cartes pour chaque ROM et des badges de plateforme.\n- Personnalisable : Propose plusieurs thèmes intégrés (Cyberpunk, Terminal, Minimal, Gaming) et la possibilité d'en créer via des fichiers JSON.\n- Prise en main fluide : Prise en charge native du glisser-déposer pour les fichiers et dossiers isolés ou groupés (traitement par lot).\n\nPerformances et Fonctionnalités Techniques\n- Matrice de conversion complète : Prend en charge plus de 20 parcours de conversion parmi les formats majeurs (ISO, BIN, CUE, GDI, IMG, ECM, CHD, CSO, ZSO, XISO, RVZ, WIA, WBFS, GCZ).\n- Détection intelligente : Identifie avec précision les consoles (PS1, PS2, PSP, Xbox, GameCube, Wii, Dreamcast) grâce aux signatures numériques (magic bytes) et analyse les en-têtes CHD (v4/v5) pour différencier CD et DVD.\n- Génération et Vérification : Crée automatiquement les fichiers CUE manquants pour les fichiers BIN et vérifie l'intégrité des fichiers CHD générés via chdman.\n\nFonctionnalités Avancées\n- Terminal et Automatisation : Intègre un journal de bord en temps réel pendant la conversion et propose un outil en ligne de commande complet (openrom-core) pour l'automatisation et les scripts.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "bd9be160a01333b1b83eb80f66913d2ab42dddb6323a55b74adda3c7d9bcea6d",
+      "translationPending": false
+    },
+    {
+      "id": "138862",
+      "title": "【工具】OpenRetro v1.3.x",
+      "originalTitle": "[Utilitaires Multi-systemes] OpenRetro v1.3.x",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-01T09:59:20Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138862-utilitaires-multi-systemes-openretro-v1-3-x/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/openretro.png",
+      "officialUrl": "https://github.com/kauanbgs/openretro",
+      "summary": "OpenRetro是Windows专用于复古游戏的开源前端。 它允许集中其游戏库,管理他们的元数据和夹克,然后从单一的界面推出游戏。 综合起来 RetroArch 在专为项目设计的最小化版本中,没有它通常的接口。 必要的Libretro心脏自动下载,兼容的游戏在OpenRetro窗口直接运行。 该软件还支持 RPCS3 用于 PlayStation 3 模拟并允许添加外部模拟器。",
+      "content": "OpenRetro是Windows专用于复古游戏的开源前端。 它允许集中其游戏库,管理他们的元数据和夹克,然后从单一的界面推出游戏。\n\n综合起来 RetroArch 在专为项目设计的最小化版本中,没有它通常的接口。 必要的Libretro心脏自动下载,兼容的游戏在OpenRetro窗口直接运行。 该软件还支持 RPCS3 用于 PlayStation 3 模拟并允许添加外部模拟器。\n\nOpenRetro 提供了几种互补功能:根据游戏的不同,本地多人最多4名玩家,远程播放从手机上的浏览器连接到同一r Wi-Fi网络,以及派对模式,允许三位嘉宾加入PC上的游戏主机。 在线游戏也可用于一些系统,每个参与者在自己的电脑上运行游戏。 Big Pictures模式使得在电视上容易使用控制器,而自动状态备份则允许您接管一些compa系统 我觉得有可能",
+      "originalContent": "OpenRetro est un frontend open source pour Windows dédié aux jeux rétro. Il permet de centraliser sa bibliothèque de jeux, de gérer leurs métadonnées et leurs jaquettes, puis de lancer les jeux depuis une interface unique.\n\nIl intègre RetroArch dans une version minimaliste spécialement conçue pour le projet, sans son interface habituelle. Les cœurs Libretro nécessaires sont téléchargés automatiquement, et les jeux compatibles s'exécutent directement dans la fenêtre d'OpenRetro. Le logiciel prend également en charge RPCS3 pour l'émulation PlayStation 3 et permet d'ajouter des émulateurs externes.\n\nOpenRetro propose plusieurs fonctions complémentaires: multijoueur local jusqu'à quatre joueurs selon les jeux, jeu à distance depuis un navigateur sur téléphone connecté au même réseau Wi-Fi, et mode Party permettant à trois invités de rejoindre une partie hébergée sur le PC. Le jeu en ligne est également disponible pour certains systèmes, chaque participant exécutant alors le jeu sur son propre ordinateur. Un mode Big Picture facilite l'utilisation sur téléviseur avec une manette, tandis que les sauvegardes d'état automatiques permettent de reprendre une partie sur les systèmes compatibles.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "7ba7563f30236d5b11394a09f851d75de1819973f810e2bdad75783d6d9961e6",
+      "translationPending": false
+    },
+    {
+      "id": "138858",
+      "title": "【电脑】Fuse v1.10.1",
+      "originalTitle": "[Ordi.] Fuse v1.10.1",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T09:55:18Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138858-ordi-fuse-v1-10-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/fuse.png",
+      "officialUrl": "http://fuse-emulator.sourceforge.net/",
+      "summary": "Fuse(英語:Free Unix Spectrum impulator)是在Unix下最初旋转的仿真器。 制作了几个端口,包括用于Windows的端口。 16K,48K,128K,+2,+2A,+3,+3e,SE,TC2048,TC2068,TS2068,TTX2000S,五角大楼128和天蝎座ZS 256被效仿。 新特性 : • 支持编写PZX文件(Fredrick Meunier)。",
+      "content": "Fuse(英語:Free Unix Spectrum impulator)是在Unix下最初旋转的仿真器。 制作了几个端口,包括用于Windows的端口。 16K,48K,128K,+2,+2A,+3,+3e,SE,TC2048,TC2068,TS2068,TTX2000S,五角大楼128和天蝎座ZS 256被效仿。\n\n新特性 :\n• 支持编写PZX文件(Fredrick Meunier)。\n\n核心模拟即兴:\n• 在磁带轨迹被禁用时,提高磁带记录的准确性;\n保留已记录信号的时间和极性(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 用其他CPU时钟纠正机器上的磁带回放时间\n超过 3.5 MHz,包括Spectrum 128K(英语:Fredrick Meunier).\n• 支持标准PZX数据块的ROM磁带轨迹(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 避免将键盘扫描误用于磁带领导活动(谢谢,\n塞尔吉奥·巴尔多维(Fredrick Meunier).\n• 改进跨视频帧界限的AY音效准确性(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 装货时修复机器和外围ROM\n快照(fixes bug #348)(感谢塞尔吉奥·巴尔多维)(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 在IDU磁盘图像解码中修正定义的行为(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 理顺以色列国防军对无法获取的部门数据的解析和回收(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 在重置或装入快照时,清除游戏杆按钮状态,\n预防棒方向和消防投入(Fredrick Meunier)。\n\n机器专用改进:\n• 将Timex弹匣装入人烟间隙\n记忆库 (fredrick Meunier).\n• 在重置、重置黄金时提高Timex弹匣的可靠性\n弹出弹匣并恢复快照( 修正错误 # 536)\n(谢谢,塞尔吉奥·巴尔多维) (弗雷德里克·默尼尔).\n• 清除Stale Timex码头和EXROM在硬重置和何时绘图\n更换机器(Fredrick Meunier)。\n• 使ZXMMC弹出菜单项工作(patch #510)(弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n\nIU的改进:\n• ALSA、核心音频和SDL2:改进音频缓冲和间隔至\n尽可能减少延迟(Fredrick Meunier)。\n• SDL2: 音频回放停止时避免延长模拟器档位\n消费者数据(Fredrick Meunier).\n• 防止发援会在沉默期间自动调用(fixes bug #531)(感谢,\n阿尔贝托·加西亚(Fredrick Meunier).\n• 在部件 IUS 中添加 UTF-8 编码和扩展字体 glyphs\n(patch #66) (谢谢, Darren Salt) (弗雷德里克·默尼尔).\n• 完整保存浏览器描述中的UTF-8磁带元数据\n(弗雷德里克·慕尼尔).\n• 允许在部件 IUS 中配置游戏杆菜单按钮映射\n(fredrick) (中文(简体) ).\n(原始内容存档于2018-09-21). Meunier.\n• 显示 TZX CSW 记录细节,并储存 RLE 样本率\n浏览器类型(fixes bug #528)(thanks, AJ B)(Fredrick Meunier).\n• Win32:正确的打印机文件输出(谢谢,Joerg Pleumann)\n(弗雷德里克·慕尼尔).\n\n缩放即兴:\n• 以复合材料3x在屏幕右边缘固定渲染\n(原始内容存档于2018-09-26). scales (Fredrick Meunier).\n\nRZX 改进:\n• 在录制 RZX 回放时修复损坏的电影框\n嵌入式快照(fixes bug #537)(谢谢,Alberto Garcia)\n(弗雷德里克·慕尼尔).\n\n已删除的折旧特性 :\n• 取消SDL 1支助; SDL后端现在需要SDL 2 (弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 删除8位音频输出兼容性;现在音频输出\n需要16位PCM(弗雷德里克·默尼尔)。\n\n杂项改进:\n• 在WAV综合支助下,将Windows大楼迁移到MSYS2\n移除过时的 libaudifile 依赖( Fredrick Meunier)。\n• 大型操作系统要求 14.4 核心音频消耗进度通知\n(弗雷德里克·慕尼尔).\n• 增加一个标注选项并记录其先决条件\n(专题请求 #165) (谢谢, Witold Filipczyk) (弗雷德里克)\n(原始内容存档于2018-09-21). Meunier.\n• 改进开发自动化检查和文件工作,包括\nPC取样可配置的T-状态抵消(Fredrick Meunier)。\n• 注意释放开关掉落,以避免编译\n警告(patch #514)(弗雷德里克·默尼尔).\n\n测试改进:\n• 扩大音频排程、缓冲和回归覆盖,\n适应性节奏和后端故障处理(Fredrick Meunier).\n• 扩大磁带、快照、Timex盒、显示、事件尾巴和\n截图回归报道(Fredrick Meunier).\n• 在Windows、macOS和更多Linux CI大楼进行检查\n提高测试可移植性(Fredrick Meunier).\n\n• 其他各种小错误修复。",
+      "originalContent": "Fuse (Free Unix Spectrum Emulator) est un émulateur tournant à l'origine sous Unix. Plusieurs portages ont été fait dont celui pour Windows. Les systèmes 16K, 48K, 128K, +2, +2A, +3, +3e, SE, TC2048, TC2068, TS2068, TTX2000S, Pentagon 128 et Scorpion ZS 256 sont émulés.\n\nNew features:\n- Support writing PZX files (Fredrick Meunier).\n\nEmulation core improvements:\n- Improve tape recording accuracy when tape traps are disabled,\npreserving the timing and polarity of recorded signals (Fredrick\nMeunier).\n- Correct tape playback timing on machines with CPU clocks other\nthan 3.5 MHz, including the Spectrum 128K (Fredrick Meunier).\n- Support ROM tape traps for standard PZX data blocks (Fredrick\nMeunier).\n- Avoid mistaking keyboard scans for tape loader activity (thanks,\nSergio Baldoví) (Fredrick Meunier).\n- Improve AY sound accuracy across video frame boundaries (Fredrick\nMeunier).\n- Fix restoration of machine and peripheral ROMs when loading\nsnapshots (fixes bug #348) (thanks, Sergio Baldoví) (Fredrick\nMeunier).\n- Fix undefined behaviour in UDI disk image decoding (Fredrick\nMeunier).\n- Fix FDI parsing and recover unavailable sector data (Fredrick\nMeunier).\n- Clear joystick button state when resetting or loading snapshots,\npreventing stuck direction and fire inputs (Fredrick Meunier).\n\nMachine specific improvements:\n- Fix loading of Timex cartridges with gaps between populated\nmemory banks (fixes bug #532) (Fredrick Meunier).\n- Improve Timex cartridge reliability when resetting, replacing or\nejecting cartridges and restoring snapshots (fixes bug #536)\n(thanks, Sergio Baldoví) (Fredrick Meunier).\n- Clear stale Timex dock and EXROM mappings on hard reset and when\nchanging machines (Fredrick Meunier).\n- Make the ZXMMC eject menu item work (patch #510) (Fredrick\nMeunier).\n\nUI improvements:\n- ALSA, Core Audio and SDL2: improve audio buffering and pacing to\nreduce latency where possible (Fredrick Meunier).\n- SDL2: avoid prolonged emulator stalls when audio playback stops\nconsuming data (Fredrick Meunier).\n- Prevent DAC auto-muting during silence (fixes bug #531) (thanks,\nAlberto Garcia) (Fredrick Meunier).\n- Add UTF-8 decoding and extended font glyphs to widget UIs\n(patch #66) (thanks, Darren Salt) (Fredrick Meunier).\n- Preserve complete UTF-8 tape metadata in browser descriptions\n(Fredrick Meunier).\n- Allow joystick menu button mapping to be configured in widget UIs\n(fixes bug #373, patch #454) (thanks, Sergei Morozov) (Fredrick\nMeunier).\n- Show TZX CSW recording details and stored RLE sample rates in the\ntape browser (fixes bug #528) (thanks, AJ B) (Fredrick Meunier).\n- Win32: Correct printer file output (thanks, Joerg Pleumann)\n(Fredrick Meunier).\n\nScaler improvements:\n- Fix rendering at the right edge of the screen with composite 3x\nscalers (Fredrick Meunier).\n\nRZX improvements:\n- Fix corrupted movie frames when recording RZX playback across\nembedded snapshots (fixes bug #537) (thanks, Alberto Garcia)\n(Fredrick Meunier).\n\nDeprecated features removed:\n- Remove SDL 1 support; SDL backends now require SDL 2 (Fredrick\nMeunier).\n- Remove 8-bit audio output compatibility; audio output now\nrequires 16-bit PCM (Fredrick Meunier).\n\nMiscellaneous improvements:\n- Migrate Windows builds to MSYS2 with integrated WAV support and\nremove obsolete libaudiofile dependencies (Fredrick Meunier).\n- Require macOS 14.4 for Core Audio consumer-progress notifications\n(Fredrick Meunier).\n- Add an Emscripten build option and document its prerequisites\n(feature request #165) (thanks, Witold Filipczyk) (Fredrick\nMeunier).\n- Improve development automation checks and documentation, including\nconfigurable T-state offsets for PC sampling (Fredrick Meunier).\n- Annotate deliberate switch fallthroughs to avoid compiler\nwarnings (patch #514) (Fredrick Meunier).\n\nTesting improvements:\n- Expand regression coverage for audio scheduling, buffering,\nadaptive pacing and backend failure handling (Fredrick Meunier).\n- Expand tape, snapshot, Timex cartridge, display, event queue and\nscreenshot regression coverage (Fredrick Meunier).\n- Run checks in Windows, macOS and additional Linux CI builds and\nimprove test portability (Fredrick Meunier).\n\n- Various other minor bugfixes.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "3ced025b66ad9966f91d3a3803927a104dcf57c96a63a11e26c409eb1889069d",
+      "translationPending": false
+    },
+    {
+      "id": "138856",
+      "title": "【电脑】Copperline v1.1.0",
+      "originalTitle": "[Ordi.] Copperline v1.1.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-01T09:51:35Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138856-ordi-copperline-v1-1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
+      "officialUrl": "https://copperline.dev/",
+      "summary": "Copperline 是完全用Rust写成的模拟者Amiga。 它似乎有效地复制了原始材料的操作,精确地仿制到时钟周期的水平。 其模块化架构为机器的开发提供了便利,并模仿了机器的主要组件,如CPU,铜,Bitter,Paula和CIA.",
+      "content": "Copperline 是完全用Rust写成的模拟者Amiga。 它似乎有效地复制了原始材料的操作,精确地仿制到时钟周期的水平。 其模块化架构为机器的开发提供了便利,并模仿了机器的主要组件,如CPU,铜,Bitter,Paula和CIA.",
+      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "copperline_pc"
+      ],
+      "contentHash": "f1ca96aca3c7f91e36fcd2de1915b25251dacb28f198da6736266404aaaf5543",
+      "translationPending": false
+    },
+    {
       "id": "android-release-virtual_jaguar_core-nightly",
       "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
       "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-01T05:15:25Z",
+      "publishedAt": "2026-11-01T06:50:20Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
       "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
       "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年11月01日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `dfc09f0` — `v3.10.0` （ `develop` ）\n\n提交： `dfc09f0`（https://github.com/libretro/virtualjaguar-libretro/commit/dfc09f083d92ae865d550b228a7c51e10ba00452）\n构建时间： 2026-11-01 05:15 UTC\nCI 任务： build log（https://github.com/libretro/virtualjaguar-libretro/actions/runs/41274076460）\n分支： `develop`\n提示： `develop`尖端的自动构建，每次推送时更换。 它针对所有24个目标进行了编译；尚未通过测试套件或任何手动QA。 对于稳定的构建，请使用最新版本的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。\n\n核心在启动时将其标识记录为`v3.10.0 dfc09f0` —在报告针对此版本的错误时引用该行。\n\n自上一夜版以来的变更\n```\ndfc09f08 DOCS （ APP ） ： 5期证据， G3 HALT和3期门行（ ＃ 1039 ） （ ＃ 1133 ）\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_nightly_amd64.deb\nvirtualjaguar_nightly_arm64.deb\n```\n\n每个平台都与其拆分调试符号的`-debug.tar.gz`一起发货；将其提取到二进制文件旁边，以获得象征性的回溯。\n\nSHA-256 校验值\n\n使用`sha256sum --check SHA256SUMS.txt` （ Linux ）或`sh…",
-      "originalContent": "### Nightly `dfc09f0` — `v3.10.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`dfc09f0`](https://github.com/libretro/virtualjaguar-libretro/commit/dfc09f083d92ae865d550b228a7c51e10ba00452) |\n| **Built** | 2026-11-01 05:15 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/41274076460) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.10.0 dfc09f0` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\ndfc09f08 docs(app): phase 5 evidence, the G3 halt and phase 3 gate rows (#1039) (#1133)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libretro.info\nvirtualjaguar_nightly_amd64.deb\nvirtualjaguar_nightly_arm64.deb\n```\n\nEach platform ships alongside a `-debug.tar.gz` of its split debug symbols; extract it next to the binary to get symbolised backtraces.\n\n### SHA-256 checksums\n\nVerify with `sha256sum --check SHA256SUMS.txt` (Linux) or `sh…",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `d559e2f` — `v3.10.0` (`develop`)\n\n提交：`d559e2f`（https://github.com/libretro/virtualjaguar-libretro/commit/d559e2f0310f99e4df4d48ecba33ca1d7e4e18e4）\n构建时间：2026-11-01 06:49 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/41277411929）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了全部24个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为 `v3.10.0 d559e2f` 启动时 —— 报告此建构时引用该行。\n\n自上一夜版以来的变更\n\n```\nd559e2f0 perf( gpu): 将热的 opcode 处理器内置, 从本地 RAM (# 569) (# 1137) 中获取 Movei 的直线\na4634e08 测试( 工具) : ir_ab.sh IR_STATE,在测量的框架(# 1136) 之前装入的保存状态\n4900c62d 构建( app): CMake 预设, 并警告何时没有 librashader 运行时间将发运 (# 1132)\n7637eeda feat( app): 每个构建通道默认模拟线索。 (# 1039 5c) (# 1134)\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libre…",
+      "originalContent": "### Nightly `d559e2f` — `v3.10.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`d559e2f`](https://github.com/libretro/virtualjaguar-libretro/commit/d559e2f0310f99e4df4d48ecba33ca1d7e4e18e4) |\n| **Built** | 2026-11-01 06:49 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/41277411929) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.10.0 d559e2f` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\nd559e2f0 perf(gpu): inline the hot opcode handlers and fetch movei's immediate from local RAM (#569) (#1137)\na4634e08 test(tools): ir_ab.sh IR_STATE, a savestate loaded before the measured frames (#1136)\n4900c62d build(app): CMake presets, and warn when no librashader runtime will ship (#1132)\n7637eeda feat(app): every build channel defaults the emulation thread On (#1039 5c) (#1134)\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x86_64-debug.tar.gz\nvirtualjaguar_libretro-windows-x86_64.dll\nvirtualjaguar_libre…",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "virtual_jaguar_core"
       ],
-      "contentHash": "ba06c2bad7bf808b5015228663534a77e9f60a2b137c94f0d0675166673a6cd9",
+      "contentHash": "d03cb4f63491de2715c672761a7294cefe50b3d4b404875592afcd600686af42",
       "translationPending": false
     },
     {
@@ -62,31 +372,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-31T18:32:16Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年10月31日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年10月31日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• burner/win32/run.cpp, tweak fps 显示 (dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• burner/win32/run.cpp, tweak fps display (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "6653918715f9d0844e3bcf4ef61ae553b82ddd36a25fc64200a12237e6f2a538",
-      "translationPending": false
-    },
-    {
       "id": "android-release-armsx2-nightly-20261031",
       "title": "【Android更新】ARMSX2 nightly-20261031",
       "originalTitle": "ARMSX2 nightly-20261031 Android release",
@@ -108,30 +393,6 @@
         "armsx2"
       ],
       "contentHash": "1cdf44b9204698c7ac06aa221e3653e70126b9e727ca9e3d23155edbf326f6bf",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-31T13:33:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年10月31日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年10月31日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n•更新翻译字符串（ Stenzek（https://github.com/stenzek/duckstation/commit/4375f646bbac5a5bb931d2292f2b4f883c43aee5） ）",
-      "originalContent": "## Commits\n- Update translation strings ([Stenzek](https://github.com/stenzek/duckstation/commit/4375f646bbac5a5bb931d2292f2b4f883c43aee5))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "aff695dcf3b1e0540624a892bd600326845e2fe9cd74d9e419bcadc4772f8e41",
       "translationPending": false
     },
     {
