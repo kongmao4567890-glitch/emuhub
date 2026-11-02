@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T06:47:20.874297Z",
+  "generatedAt": "2026-11-02T21:56:55.110010Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-j2me_loader-continuous",
+      "title": "【Android更新】J2ME Loader continuous",
+      "originalTitle": "J2ME Loader continuous Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T20:20:35Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
+      "imageUrl": "asset://assets/emulators/j2me_loader.png",
+      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
+      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
+      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
+      "originalContent": "J2ME Loader continuous Android release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "j2me_loader"
+      ],
+      "contentHash": "a138cf4596c301bfe3eaab5b241ba8573297dd479a127ae89342b87bc2ed5e1e",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-02T05:44:57Z",
+      "publishedAt": "2026-11-02T19:37:48Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• mb88xx的更新驱动程序(dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• updated drivers for mb88xx (dinkc64)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• Neogeo:修理超时第一靴(巴布德雷蒙)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• neogeo: fix overclocked first boot (barbudreadmon)",
       "platforms": [
         "android"
       ],
@@ -30,7 +54,389 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "11e0682e1cf5c1d3eb4ce4966386cd22e2873d09ad8b5697262a68b39f19ff5f",
+      "contentHash": "57284b700e4d1cb8a584883ade604de66770931aec63de77964159c27d7264b9",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-emucorex-0-5-4",
+      "title": "【Android更新】EmuCoreX 0.5.4",
+      "originalTitle": "EmuCoreX 0.5.4 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T18:38:30Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.5.4",
+      "imageUrl": "asset://assets/emulators/emucorex.png",
+      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
+      "summary": "EmuCoreX 发布 Android 新版本 0.5.4，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
+      "content": "EmuCoreX 已发布 Android 最新版本 0.5.4。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.5.3...v0.5.4\n\n有什么新情况: 0.5.4\n\n• UI 修正\n• 核心补救和改进",
+      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.5.3...v0.5.4\r\n\r\nWhat's new: 0.5.4\r\n\r\n- UI fixes\r\n- Core fixes and improvements",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "emucorex"
+      ],
+      "contentHash": "3ec29f75d798738a40996c4d59d9d860cd23caadda7edf47f30f50de39eb0851",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-6-1",
+      "title": "【Android更新】ARMSX3 1.6.1",
+      "originalTitle": "ARMSX3 1.6.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T15:42:57Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.6.1",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.6.1，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.6.1。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.6.1\n\n\n\nXMB 模式\n\n• 更新所有通知 ARMSX3 告诉你。 欢迎回来,电池警告,在游戏中编译(如DLC编译在Castlevania),一个Discord朋友带着他们的照片上网,RPCN邀请, 远程游戏玩家加入和离开不再使用正常的UI横幅,XMB模式现在拥有自己的!\n\n\n\n\n\n\n\n^ RPCN的朋友请求作为控制台的通知到达,\"给你一个朋友请求\",并带有控制台的新朋友图标。 每个请求都被告知一次。\n\n\n\n• 停止显示控制台错误对话框的游戏,其错误声音在XMB之上。\n\n\n\n• 固定音乐重叠* ARMSX3 打开选中的游戏。 图书馆的音乐在你离开的时候又回来了\n\n\n\n• 关闭一个游戏,屏幕保护器固定了蓝色闪光,以显示一分秒。\n\n\n\n• 为游戏邀请更新了XMB图标,更改磁盘和相册,一个主题自己的相册图标也在那里展出。\n\n\n\n\n\n\n\n\n\n第二屏幕\n\n在有第二次显示的设备上,如AYN Thor和双屏幕加载:\n\n^ 中间玩的游戏,其图标和标题如图书室所显示,FPS在它们下面。\n• 暂停和屏幕截图按钮,下面是宏。 在游戏暂停时暂停读Resume,保存状态在游戏中菜单中。\n• ARMSX3左上方是标记,右上方是时间和电池。\n• XMB Mode在XMB Mode中的外观:月色,系统字体和玻璃按钮。\n\n\n\n(非 XMB 模式二屏幕也已更新)\n\n\n\n性能和修复\n\n• ARM上的内存访问保持个人电脑发出的命令,防止罕见的时空冻结。 由@elad335完成。\n• 准确的SPU DMA每次传输一次就使用RSX锁。 由@elad335完成。\n• USIO街机卡读卡器在命令中保持状态。 由@brian218完成。\n\n<img宽=\"1920\"高=\"1080\" alt=\"影像\"src=\".https://github.com/user-attachments/assets/6c81dd50-1d5…",
+      "originalContent": "# ARMSX3 1.6.1\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b7587a86-37cb-4bd0-8ba5-3f11bd5ab806\" />\r\n\r\n## XMB Mode\r\n\r\n- **Updated notices for everything ARMSX3 tells you.** Welcome Back, battery warnings, compiling during play (like the DLC compile in Castlevania) with its progress, a Discord friend coming online with their picture, RPCN invites, and Remote Play players joining and leaving no longer use the normal UI banners, XMB mode now has it's own! \r\n\r\n<img width=\"1300\" height=\"640\" alt=\"image\" src=\"https://github.com/user-attachments/assets/193eed49-f05e-4fd7-97ca-624d1d8c03ad\" />\r\n\r\n<img width=\"1300\" height=\"640\" alt=\"image\" src=\"https://github.com/user-attachments/assets/824b1d07-40b8-4c56-9843-d7c1d3d91d3e\" />\r\n\r\n<img width=\"1300\" height=\"640\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8dbe15f7-d301-4833-b410-39ea73ff25eb\" />\r\n\r\n- **RPCN friend requests** arrive as the console's notice, \"<name> sent you a friend request\", with the console's new-friend icon. Each request is told once.\r\n\r\n<img width=\"1300\" height=\"640\" alt=\"07-xmb-friend-request\" src=\"https://github.com/user-attachments/assets/bd2eb782-c1f5-422a-a52f-d7393f4eba09\" />\r\n\r\n- **A game that stops** shows the console's error dialog, with its error sound, over the XMB.\r\n\r\n<img width=\"2400\" height=\"1080\" alt=\"10-xmb-game-error\" src=\"https://github.com/user-attachments/assets/fc4e915d-c8d6-4e41-be68-cd92f8e5ccb3\" />\r\n\r\n- **Fixed music overlap* when ARMSX3 opens with that game selected. The library music comes back as you move off it.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e1108b5c-74b0-4420-988f-5b787526f353\" />\r\n\r\n- **Closing a game and the screensaver** fixed the blue flash that would show for a split second. \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b1e542df-14b4-45e0-9039-095550589aae\" />\r\n\r\n- **Updated XMB icons** for game invites, Change Disc and photo albums, and a theme's own photo album icon shows there too.\r\n\r\n<img width=\"620\" height=\"312\" alt=\"12-xmb-change-disc-icon\" src=\"https://github.com/user-attachments/assets/bc74d707-402e-49dd-af77-c82dc0f6305c\" />\r\n\r\n<img width=\"1120\" height=\"220\" alt=\"13-xmb-photo-album-icon\" src=\"https://github.com/user-attachments/assets/3ab1456a-f826-46d3-8fd5-1bc61e696a9f\" />\r\n\r\n<img width=\"1300\" height=\"640\" alt=\"11-xmb-game-invite\" src=\"https://github.com/user-attachments/assets/c0ebb98f-4cb5-4e99-bb53-4bb455d0e5e3\" />\r\n\r\n<img width=\"1300\" height=\"640\" alt=\"04-xmb-battery-low\" src=\"https://github.com/user-attachments/assets/a2db9d80-3b94-44b8-a8c8-9aaff29f6bb8\" />\r\n\r\n## Second screen\r\n\r\nOn devices with a second display, like the AYN Thor and dual-screen add-ons:\r\n\r\n- **The game you're playing** in the middle, with its icon and title as the library shows them, and the FPS under them.\r\n- **Pause and Screenshot** buttons, with your macros below. Pause reads Resume while the game is paused, and save states are in the in-game menu.\r\n- **ARMSX3's mark** at the top left, and the time and battery at the top right.\r\n- **XMB Mode's look in XMB Mode:** the month's colour, the system font and glass buttons.\r\n\r\n<img width=\"1240\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/978c5f7a-6c80-46bd-b4ed-bbac3d65a626\" />\r\n\r\n(Non XMB Mode second screen has also been updated) \r\n\r\n<img width=\"1240\" height=\"1080\" alt=\"02-second-screen-normal\" src=\"https://github.com/user-attachments/assets/8489e412-719a-490d-82b4-a63eb4678add\" />\r\n\r\n## Performance and fixes\r\n\r\n- **Memory access on ARM keeps the order a PC gives it**, guarding against rare timing freezes. Done by @elad335.\r\n- **Accurate SPU DMA takes the RSX lock once per transfer.** Done by @elad335.\r\n- **The USIO arcade card reader** keeps its state across commands. Done by @brian218.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6c81dd50-1d5…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "3267662b5af142ae6cba8d5a64dc283320c5d78a095483f35267a3462c8d61bb",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T14:11:00Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• f606b44页:1 duckstation-qt_es.ts (#3820) (彼得德尔塔)#3820（https://github.com/stenzek/duckstation/pull/3820）",
+      "originalContent": "## Commits\n- f606b44: Update duckstation-qt_es.ts (#3820) (PeterDelta) [#3820](https://github.com/stenzek/duckstation/pull/3820)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "25698de3a167e8b42865a2c60c2e1de4d5916b6eadafce1fb2c9f0d7ec4a32a7",
+      "translationPending": false
+    },
+    {
+      "id": "138960",
+      "title": "【驱动】Yape v1.4.1",
+      "originalTitle": "[Ordi.] Yape v1.4.1",
+      "category": "driver",
+      "categoryLabel": "驱动",
+      "kind": "driver",
+      "publishedAt": "2026-11-02T13:35:07Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138960-ordi-yape-v1-4-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/11/yape.png",
+      "officialUrl": "https://gaia.atilia.eu/",
+      "summary": "YAPE （ Yet Another Plus/4 Emulator ）是一款运行Windows XP 11的出色Commodore C16/plus4仿真器。 32位和64位兼容版本。 •大大改进了ACIA 6551 (RS-232)仿真，包括串行鼠标支持和初步虚拟Hayes调制解调器支持 • WASAPI声音驱动程序，取代传统的DirectSound、WaveMapper和XAudio声音驱动程序 •添加了复合（ +射频天线）视频输…",
+      "content": "YAPE （ Yet Another Plus/4 Emulator ）是一款运行Windows XP 11的出色Commodore C16/plus4仿真器。 32位和64位兼容版本。\n\n•大大改进了ACIA 6551 (RS-232)仿真，包括串行鼠标支持和初步虚拟Hayes调制解调器支持\n• WASAPI声音驱动程序，取代传统的DirectSound、WaveMapper和XAudio声音驱动程序\n•添加了复合（ +射频天线）视频输出和更多CRT选项\n•视频均衡脉冲仿真\n•重构CPU内核，实现精确的总线提取周期\n•在ACIA ONE旁边增加了对操纵杆端口（特洛伊木马）灯笔的支持\n•支持DigiMoooZ （ i.e.可调YM2149频率）\n•部分OS深色模式支持\n•改进了D64到GCR的转换\n•东芝T6721A语音芯片固定： 48位模式（ 8级和10级）、语音速率、激励和扭曲模式时钟\n•更好的TED渲染（浮动总线，混合模式下的NTSC渲染）\n•更强大的MP4/AVI录制功能\n•各种错误修复（胶带、SID信封、监视器、1526线对齐、鼠标抓取、主回路等）",
+      "originalContent": "YAPE (Yet Another Plus/4 Emulator) est un excellent émulateur Commodore C16/plus4 tournant sous Windows XP à 11. Version compatible 32 et 64 bits.\n\n- much improved ACIA 6551 (RS-232) emulation, including serial mouse support and preliminary virtual Hayes modem support\n- WASAPI sound driver to replace the legacy DirectSound, WaveMapper and XAudio ones\n- added Composite (+ RF antenna) video output and more CRT options\n- video equalization pulses emulation\n- refactored CPU core for exact bus fetch cycles\n- added support for the joystick port (Trojan) lightpen next to the ACIA one\n- support for DigiMoooZ (i.e. adjustable YM2149 frequency)\n- partial OS dark mode support\n- improved D64 to GCR conversion\n- Toshiba T6721A speech chip fixes: 48 bit mode (both 8 and 10 stage), speech rate, excitation and clocking in warp mode\n- better TED rendering (floating bus, NTSC rendering in mixed mode)\n- more robust recording to MP4/AVI\n- various bugfixes (tape, SID envelope, monitor, 1526 line alignment, mouse grab, main loop etc.)",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "2a11767eff710a1911c14b3315a1c7ee0f6ac6658caa0c286a16a5644711bc2c",
+      "translationPending": false
+    },
+    {
+      "id": "138958",
+      "title": "【其他】Plus42 v1.5.1",
+      "originalTitle": "[Calculatrices] Plus42 v1.5.1",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T13:17:32Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138958-calculatrices-plus42-v1-5-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2022/05/plus42.jpg",
+      "officialUrl": "https://thomasokken.com/plus42/",
+      "summary": "Plus42是一款基于Free42的HP-42S RPN可编程科学计算器模拟器。",
+      "content": "Plus42是一款基于Free42的HP-42S RPN可编程科学计算器模拟器。",
+      "originalContent": "Plus42 est un émulateur de calculatrice scientifique programmable RPN HP-42S, basée sur Free42.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "c690a74ec8509f0ab0d881a4a5caec4141b5093cdd7c3867e3020846d471dfed",
+      "translationPending": false
+    },
+    {
+      "id": "138956",
+      "title": "【其他】Free42 v3.5.1",
+      "originalTitle": "[Calculatrices] Free42 v3.5.1",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T13:17:08Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138956-calculatrices-free42-v3-5-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2014/11/free42.jpg",
+      "officialUrl": "http://thomasokken.com/free42/",
+      "summary": "Free42是HP-42S和HP-82240打印机的重新实现。Free42是一个完整的重写，不包含HP代码。Free42版本可在掌上电脑、Microsoft Windows、PalmOS、Unix和Mac OS X （仪表板应用程序和小部件）上运行。",
+      "content": "Free42是HP-42S和HP-82240打印机的重新实现。Free42是一个完整的重写，不包含HP代码。Free42版本可在掌上电脑、Microsoft Windows、PalmOS、Unix和Mac OS X （仪表板应用程序和小部件）上运行。",
+      "originalContent": "Free42 est une ré-implémentation de HP-42S et de l'imprimante HP-82240. Free42 est une réécriture complète et ne contient aucun code HP. Les versions de Free42 s'exécutent sur Pocket PC, Microsoft Windows, PalmOS, Unix, et Mac OS X (application et widget Dashboard).",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "1c704cac215865b61be3cc869569677e1cdd821e6eaa282d2830807c0d88305e",
+      "translationPending": false
+    },
+    {
+      "id": "138954",
+      "title": "【电脑】XM6 Pro-68k Release 81 (261031)",
+      "originalTitle": "[Ordi.] XM6 Pro-68k Release 81 (261031)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "tool",
+      "publishedAt": "2026-11-02T13:15:54Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138954-ordi-xm6-pro-68k-release-81-261031/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2018/08/xm6pro.png",
+      "officialUrl": "http://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k.html",
+      "summary": "这款模拟器也是当今最全面的X68000开发工具。这是PI的XM6 v2.05仿真器的分支，具有众多新功能 。这些更改主要与用户界面有关，并且一直关注开发和调试功能，而不是模拟的准确性，但是有足够的改进，建议使用此版本而不是最终的XM6 v2.06。 变更内容： •改进了一些游戏的ADPCM音频。 •改善了调光图像的兼容性。 •现在支持IPS修补程序文件。",
+      "content": "这款模拟器也是当今最全面的X68000开发工具。这是PI的XM6 v2.05仿真器的分支，具有众多新功能\n。这些更改主要与用户界面有关，并且一直关注开发和调试功能，而不是模拟的准确性，但是有足够的改进，建议使用此版本而不是最终的XM6 v2.06。\n\n变更内容：\n•改进了一些游戏的ADPCM音频。\n•改善了调光图像的兼容性。\n•现在支持IPS修补程序文件。 如果IPS文件的名称与\n正在加载的磁盘映像的名称（ .IPS文件扩展名除外） ，\n图像将被动态修补，而无需修改原始文件。\n在内部， IPS文件被视为只读增量文件。\n有关更多信息，请参阅手册。\n•存档中的软盘映像现在需要进行二次排序。\n其目的是进一步推动“系统”磁盘或其他高优先级项目\n该算法仅基于文件名，因此不会\n在任何情况下都能按预期工作。 此功能不适用于存档\n包含混合内容（状态文件、HDD映像等）或过量\n软盘映像的数量。\n•中断窗口现在更加紧凑。 中断确认计数\n不再显示。 如果XM6中没有漏洞，它始终与\n请求计数，除非中断处于挂起状态，在这种情况下，\n少一个。您可以推断当矢量列\n显示矢量编号。 （如果由于某种原因，这两个计数不同步，\n请求列下的字段将以粗体显示。 请报告此类错误。）\n\n修复了错误：\n•更换了旧的DMA例程，这是一个混乱的错误。 已修复至少一场比赛。\n•一些编程不佳的游戏现在应该很少或永远不会崩溃。\n•修复了更多与时间相关的缺陷。不过没什么大不了的。\n•修复了DMA的一些小问题。\n•在拆卸器中向上移动有一些缺陷。\n•无证件功能无法正常工作。（幸好我从未记录过！ ）",
+      "originalContent": "Cet émulateur est également le plus complet des outils de développements X68000 existant aujourd'hui. Il s'agit d'un fork de l'émulateur XM6 v2.05 de PI avec une pléthore de nouvelles fonctionnalités. Les changements sont pour la plupart liés à l'interface utilisateur et un accent a été mis sur le développement et les fonctions de débogage plutôt que sur l'exactitude de l'émulation, cependant il y a suffisamment d'améliorations pour qu'il soit recommandé d'utiliser cette version plutôt que XM6 v2.06 finale.\n\nLes changements:\n\n- ADPCM audio for a few games was improved.\n- Compatibility for DIM images was improved.\n- IPS patch files are now supported. If the name of the IPS file matches the\nname of a disk image being loaded (except with the .IPS file name extension),\nthe image will be dynamically patched without modifying the original file.\nInternally, IPS files are treated as if they were read-only delta files.\nConsult the manual for more information.\n- Floppy disk images within archives are now subject to secondary sorting.\nThe intent is to push \"system\" disks or other high-priority items further\nup the list. The algorithm is based solely on the file names, so it won't\nwork as intended in every situation. This feature does not apply to archives\nwhich contain mixed content (state files, HDD images, etc.) or an excessive\nnumber of floppy disk images.\n- The Interrupts window is now more compact. The interrupts-acknowledged count\nis no longer displayed. Absent a bug in XM6, it is always the same as the\nrequest count, except while an interrupt is pending, in which case it is\none less. You can infer that an interrupt is pending when the vector column\ndisplays a vector number. (If, for some reason, the two counts are out-of-sync,\nthe field under the Requests column will be in bold. Please report such errors.)\n\nBug fixes:\n- Replaced the old DMA routines, which were a buggy mess. Fixes at least one game.\n- A few poorly programmed games should now crash rarely or never.\n- Fixed even more timing-related defects. Nothing major though.\n- Fixed some minor problems with DMA.\n- Moving upward in the disassembler had some flaws.\n- An undocumented feature hadn't been working. (Good thing I never documented it!)",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "1d8423d93f88dedad242a953745ecc4ddd1743c9b1d26b200a7082cd060b05bd",
+      "translationPending": false
+    },
+    {
+      "id": "138951",
+      "title": "【其他】Mini sac de GIT (2026/11/02)",
+      "originalTitle": "[www] Mini sac de GIT (2026/11/02)",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T13:03:49Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138951-www-mini-sac-de-git-2026-11-02/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/07/git.png",
+      "officialUrl": "",
+      "summary": "以下是最新开发的模拟器，以及更新频率最高的模拟器。",
+      "content": "以下是最新开发的模拟器，以及更新频率最高的模拟器。",
+      "originalContent": "Voici les derniers émulateurs en développement, ainsi que ceux bénéficiant des mises à jour les plus fréquentes.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "5ccdf76c0255160751e841ca88d3d012da9e4e8064cba29b7740a179678abdaf",
+      "translationPending": false
+    },
+    {
+      "id": "138949",
+      "title": "【其他】Coffee GB v2.1.8",
+      "originalTitle": "[Consoles portables] Coffee GB v2.1.8",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T13:02:10Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138949-consoles-portables-coffee-gb-v2-1-8/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/coffee-gb-1.7.9.png",
+      "officialUrl": "https://github.com/trekawek/coffee-gb",
+      "summary": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在 控制台的真实外观。 尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台 。",
+      "content": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在\n控制台的真实外观。\n尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台\n。它支持带有MBC1到MBC5内存控制器的墨盒，以及电池备份，将游戏数据保留在真正的Game Boy上。\n模拟器还读取压缩的ROM （ .zip ） ，通过.properties文件提供密钥配置，并集成了具有回滚（仍然是实验性的）的netplay功能，以便通过状态同步在线播放。\n对于开发人员或好奇的技术人员，该项目包括通过Maven进行的自动化测试，源代码在麻省理工学院许可证下提供，可自由修改和可重用。",
+      "originalContent": "Coffee GB est un émulateur Game Boy Color développé en Java 16 (pour le cœur) et Kotlin (pour l’interface graphique). Conçu comme un projet personnel et un exercice de programmation, il se distingue par une approche technique ambitieuse: l’émulation du CPU est cycle-exacte, chaque instruction étant décomposée en micro-opérations exécutées à la cadence réelle de la console.\n\nMalgré son aspect expérimental, Coffee GB offre une compatibilité élevée, validée par les célèbres tests Blargg et Mooneye GB, garantissant un comportement fidèle à la console d’origine. Il prend en charge les cartouches avec les contrôleurs mémoire MBC1 à MBC5, ainsi que les sauvegardes sur batterie, permettant de conserver les données de jeu comme sur une vraie Game Boy.\n\nL’émulateur lit également les ROMs compressées (.zip), propose une configuration des touches via un fichier .properties, et intègre une fonctionnalité de netplay avec rollback (encore expérimentale) pour jouer en ligne avec synchronisation des états.\n\nPour les développeurs ou curieux techniques, le projet inclut des tests automatisés via Maven, et le code source est disponible sous licence MIT, librement modifiable et réutilisable.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "coffee_gb_pc"
+      ],
+      "contentHash": "e50fca05675f28b03e4ac1a6f6f114abcf3647dcc2b1ddfb45a1e3eb83d5b6e8",
+      "translationPending": false
+    },
+    {
+      "id": "138947",
+      "title": "【家用机】Virtual Jaguar App v3.11.0",
+      "originalTitle": "[Consoles de salon] Virtual Jaguar App v3.11.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T13:00:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138947-consoles-de-salon-virtual-jaguar-app-v3-11-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/vjapp-scaled.png",
+      "officialUrl": "https://jaguar.provenance-emu.com/",
+      "summary": "Virtual Jaguar是Atari Jaguar的开源模拟器，最初由Potato Emulation的David Raingeard （ Cal2 ）创建，并于2003年发布。随后，詹姆斯·哈蒙斯（ James Hammons ） （ Shamus ）继续开发，包括尼尔斯·瓦赫纳尔（ Niels Wagenaar ）和卡文·琼斯（ Carwin Jones ）的搬运作品 。",
+      "content": "Virtual Jaguar是Atari Jaguar的开源模拟器，最初由Potato Emulation的David Raingeard （ Cal2 ）创建，并于2003年发布。随后，詹姆斯·哈蒙斯（ James Hammons ） （ Shamus ）继续开发，包括尼尔斯·瓦赫纳尔（ Niels Wagenaar ）和卡文·琼斯（ Carwin Jones ）的搬运作品\n。当前版本由Joseph Mattiello （ Joe Mattiello ）开发，作为libretro核心提供，从3.9.0版本开始，作为一个名为Virtual Jaguar的独立应用程序提供，适用于Windows、macOS和Linux。\n\n特点：\n•仿真系统：雅达利捷豹和雅达利捷豹CD。\n•支持的格式： J64、JAG、ROM、ABS、COF和PRG墨盒图像，以及CUE/BIN和CDI CD图像。 当前版本也支持CHD格式。\n• BIOS ：内置BIOS ，具有HLE引导和使用实际CD BIOS的能力。\n•兼容性：模拟68000处理器、GPU、DSP、对象处理器和捷豹CD组件。兼容性因游戏而异，某些游戏仍然存在问题。\n•图形增强：内部分辨率翻倍，某些着色效果的色彩渲染更准确， 16: 9显示格式，以及用自定义高清版本替换纹理。\n•性能： Blitter的SIMD加速、GPU和DSP等待循环的优化、处理器频率的调整和自适应图像跳过。\n• Jaguar CD ：支持Memory Track备份、音频CD和虚拟灯光机。\n•外设：控制台专用控制器和配件，包括鼠标、Tempest 2000旋转控制器、方向盘、光枪和Team Tap。\n•高级备份和功能：即时备份、回滚、提前运行、作弊和RetroAchievements。\n•网络游戏：支持JagLink和CatBox接口，支持兼容游戏的网络游戏。\n有两个版本可用： libretro核心，可用于RetroArch和其他兼容接口，以及使用相同仿真引擎的独立应用程序\n后者特别提供具有封面、控制器配置、备份和网络功能的游戏库，无需安装RetroArch。\n图形增强是可选的，可以禁用以恢复原始渲染。 某些性能设置可能会影响模拟精度或游戏兼容性。\n\n[wpfilebase tag = file id = 8440 tpl = simple3/]",
+      "originalContent": "Virtual Jaguar est un émulateur open source de l’Atari Jaguar, initialement créé par David Raingeard (Cal2), de Potato Emulation, et publié en 2003. Son développement a ensuite été poursuivi par James Hammons (Shamus), avec notamment les travaux de portage de Niels Wagenaar et Carwin Jones. La version actuelle, développée par Joseph Mattiello (Joe Mattiello), est proposée sous la forme d’un core libretro et, depuis la version 3.9.0, d’une application autonome baptisée Virtual Jaguar App pour Windows, macOS et Linux.\n\nCaractéristiques:\n- Systèmes émulés: Atari Jaguar et Atari Jaguar CD.\n- Formats pris en charge: images cartouche J64, JAG, ROM, ABS, COF et PRG, ainsi que les images CD CUE/BIN et CDI. Le format CHD est également pris en charge par la version actuelle.\n- BIOS: BIOS intégrés, avec démarrage HLE et possibilité d’utiliser le BIOS CD réel.\n- Compatibilité: émulation du processeur 68000, du GPU, du DSP, de l’Object Processor et des composants du Jaguar CD. La compatibilité varie selon les jeux, et certains titres présentent encore des problèmes.\n- Améliorations graphiques: résolution interne doublée, rendu des couleurs plus précis pour certains effets d’ombrage, format d’affichage 16:9 et remplacement de textures par des versions personnalisées en haute définition.\n- Performances: accélération SIMD du blitter, optimisation des boucles d’attente du GPU et du DSP, réglage des fréquences des processeurs et saut d’images adaptatif.\n- Jaguar CD: prise en charge des sauvegardes Memory Track, des CD audio et de la Virtual Light Machine.\n- Périphériques: manettes et accessoires spécifiques de la console, dont la souris, le contrôleur rotatif de Tempest 2000, le volant, le pistolet optique et le Team Tap.\n- Sauvegardes et fonctions avancées: sauvegardes instantanées, retour en arrière, exécution anticipée (run-ahead), triches et RetroAchievements.\n- Jeu en réseau: prise en charge des interfaces JagLink et CatBox, permettant le jeu en réseau pour les titres compatibles.\n\nDeux versions sont disponibles: le core libretro, utilisable dans RetroArch et d’autres interfaces compatibles, et l’application autonome qui reprend le même moteur d’émulation. Cette dernière propose notamment une bibliothèque de jeux avec jaquettes, la configuration des contrôleurs, les sauvegardes et les fonctions réseau, sans nécessiter l’installation de RetroArch.\n\nLes améliorations graphiques sont facultatives et peuvent être désactivées pour retrouver le rendu d’origine. Certains réglages de performances peuvent influer sur la précision de l’émulation ou la compatibilité des jeux.\n\n[wpfilebase tag=file id=8440 tpl=simple3 /]",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "9f57121974d7bf6b897e61b0dd9184d6374a9f2c5e7630757e2e4d7fa826661f",
+      "translationPending": false
+    },
+    {
+      "id": "138944",
+      "title": "【家用机】VKRT-NES v0.1.0 RC1",
+      "originalTitle": "[Consoles de salon] VKRT-NES v0.1.0 RC1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T12:57:34Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138944-consoles-de-salon-vkrt-nes-v0-1-0-rc1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/VKRT.jpg",
+      "officialUrl": "https://github.com/FranTriems/VKRT-NES-Remaster",
+      "summary": "VKRT NES Remaster是任天堂娱乐系统（ NES ）的开源模拟器，由Francisco Triemstra （ VKRT ）用C + +20开发。 它提供了控制台的原生仿真，并配有图形重制系统，旨在改善游戏的视觉渲染，而无需更改其原始操作。 该软件有两种显示模式：保留经典渲染的Original （ F1 ）和利用仿真内部数据产生额外视觉效果的Remaster （ F4 ） ，特别是在浮雕、材质和光线方面 。",
+      "content": "VKRT NES Remaster是任天堂娱乐系统（ NES ）的开源模拟器，由Francisco Triemstra （ VKRT ）用C + +20开发。 它提供了控制台的原生仿真，并配有图形重制系统，旨在改善游戏的视觉渲染，而无需更改其原始操作。\n该软件有两种显示模式：保留经典渲染的Original （ F1 ）和利用仿真内部数据产生额外视觉效果的Remaster （ F4 ） ，特别是在浮雕、材质和光线方面\n。这种方法不同于应用于最终图像的简单图形过滤器。\nWindows应用程序包含用于选择ROM的界面，以及声音和控制管理。该项目根据署名保证许可证（ AAL ）进行分发，该许可证对作者规定了署名义务。不提供商业ROM。",
+      "originalContent": "VKRT NES Remaster est un émulateur open source de la Nintendo Entertainment System (NES), développé en C++20 par Francisco Triemstra (VKRT). Il propose une émulation native de la console accompagnée d'un système de remastérisation graphique visant à améliorer le rendu visuel des jeux sans modifier leur fonctionnement d'origine.\n\nLe logiciel dispose de deux modes d'affichage: Original (F1), qui conserve le rendu classique, et Remaster (F4), qui exploite les données internes de l'émulation pour produire des effets visuels supplémentaires, notamment en matière de relief, de matériaux et d'éclairage. Cette approche se distingue des simples filtres graphiques appliqués à l'image finale.\n\nL'application Windows intègre une interface permettant de sélectionner les ROMs, ainsi que la gestion du son et des contrôles. Le projet est distribué sous licence Attribution Assurance License (AAL), qui impose notamment des obligations d'attribution de l'auteur. Les ROMs commerciales ne sont pas fournies.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8d98ddafd00c3cd7faf39fbbc90dcaa9e48235e7debaf68ff3ceda84b1c15a9f",
+      "translationPending": false
+    },
+    {
+      "id": "138942",
+      "title": "【其他】Vitaslop v0.3.0",
+      "originalTitle": "[Consoles portables] Vitaslop v0.3.0",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T12:53:12Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138942-consoles-portables-vitaslop-v0-3-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/vitaslop.png",
+      "officialUrl": "https://github.com/cretz/vitaslop",
+      "summary": "Vitaslop是一款PlayStation Vita模拟器，可以直接在网络浏览器或桌面应用程序中工作。 仍然处于早期开发阶段，它已经可以推出一些商业游戏以及自制应用程序，存在兼容性问题和持续的错误。 模拟器尤其依赖于将ARMv7代码转换为WebAssembly和WebGPU进行图形渲染。 它还支持音频、视频和游戏扩展，以及通过与rePatch系统兼容的叠加层更改文件。",
+      "content": "Vitaslop是一款PlayStation Vita模拟器，可以直接在网络浏览器或桌面应用程序中工作。 仍然处于早期开发阶段，它已经可以推出一些商业游戏以及自制应用程序，存在兼容性问题和持续的错误。\n模拟器尤其依赖于将ARMv7代码转换为WebAssembly和WebGPU进行图形渲染。 它还支持音频、视频和游戏扩展，以及通过与rePatch系统兼容的叠加层更改文件。\nWeb版本需要与WebGPU、JSPI、共享内存和OPFS兼容的最新浏览器。 Chrome和桌面版Edge是主要的目标浏览器。 游戏、保存和设置保留在本地存储，无需发送到服务器。\n注：根据其作者的说法，该项目由人工智能完全开发和维护。 它没有详尽的兼容性列表，仍然是实验性的。\n\n变更内容如下：\n•又尝试了四场比赛：重力冲刺、Helldivers、Killzone ：雇佣兵和Resistance ： Burning Skies。\n•游戏运行时构建的代码（如脚本引擎的解释器）现在可以即时翻译，而不是停止游戏。\n•通过与参考CPU进行比较，修复了Vita的ARM指令模式，包括始终采用默认大小写的switch语句和始终运行的条件调用。\n•渲染：读取纹理的顶点着色器、直接写入内存的着色器和来自游戏自身缓冲区的模板现在可以正常工作，因此现在可以绘制几个黑色、缺失或平坦的场景。\n•渲染从空的缓冲区照亮的场景、被冲刷掉的橙色棒球场、灯光周围缺少的光芒、黑色世界地图、从未清除的反射白色墙壁，以及从未读取过表面颜色的黑暗场景。\n•游戏提供的纹理不再与生成的纹理模糊不清：排球网等细线现在显示，闪闪发光的边缘消失了。\n•触摸修复：旧的触摸样本不再作为虚手指读取，并且可接受旋转手势。\n•翻译了更多ARM说明，包括无特权加载和存储。\n•在融合已绘制内容的场景中，手机速度更快：一场比赛的主要区域从每秒13帧变为21帧。\n•声音修复，适用于读取压缩音频的错误部分并远远落后的游戏。\n\n[wpfilebase tag = file id = 8451 tpl = simple3/]",
+      "originalContent": "Vitaslop est un émulateur de PlayStation Vita capable de fonctionner directement dans un navigateur Web ou sous la forme d'une application de bureau. Encore en développement précoce, il permet déjà de lancer certains jeux commerciaux ainsi que des applications homebrew, avec des problèmes de compatibilité et des bugs persistants.\n\nL'émulateur repose notamment sur la traduction du code ARMv7 en WebAssembly et sur WebGPU pour le rendu graphique. Il prend également en charge l'audio, la vidéo et les extensions de jeux, ainsi que les modifications de fichiers via des overlays compatibles avec le système rePatch.\n\nLa version Web nécessite un navigateur récent compatible avec WebGPU, JSPI, la mémoire partagée et OPFS. Chrome et Edge sur ordinateur sont les principaux navigateurs ciblés. Les jeux, sauvegardes et paramètres restent stockés localement, sans envoi vers un serveur.\n\nÀ noter: le projet est entièrement développé et maintenu par une intelligence artificielle, selon son auteur. Il ne dispose pas de liste exhaustive de compatibilité et reste expérimental.\n\nLes changements sont les suivantes:\n- Four more games tried: Gravity Rush, Helldivers, Killzone: Mercenary and Resistance: Burning Skies.\n- Code a game builds while it runs, such as a scripting engine's interpreter, is now translated on the fly instead of stopping the game.\n- Fixes to the Vita's ARM instruction mode found by comparing against a reference CPU, including switch statements that always took the default case and conditional calls that always ran.\n- Rendering: vertex shaders that read textures, shaders that write memory directly, and stencil from the game's own buffers now work, so several scenes that were black, missing or flat now draw.\n- Rendering fixes for a scene lit from an empty buffer, a baseball stadium washed out orange, missing glow around lights, a black world map, white walls from a reflection that never cleared, and a dark scene whose surface colour was never read.\n- Textures the game gives a single detail level are no longer blurred with generated ones: thin lines such as a volleyball net now show, and shimmering edges are gone.\n- Touch fixes: older touch samples no longer read as phantom fingers, and rotation gestures are accepted.\n- More ARM instructions are translated, including the unprivileged loads and stores.\n- Faster on phones in scenes that blend over what is already drawn: one game's main area went from 13 to 21 frames per second.\n- Sound fix for a game that read the wrong part of its compressed audio and fell far behind.\n\n[wpfilebase tag=file id=8451 tpl=simple3 /]",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "c4c7804603d630407b8b0a77475e20aa5e046b850936fd94d643b26f65abd27c",
+      "translationPending": false
+    },
+    {
+      "id": "138940",
+      "title": "【电脑】64E (2026/11/02)",
+      "originalTitle": "[Ordi.] 64E (2026/11/02)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T12:50:55Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138940-ordi-64e-2026-11-02/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/64e.png",
+      "officialUrl": "https://snow-g.itch.io/64emulator",
+      "summary": "64E是由Snow-G用C语言开发的Commodore 64仿真器。它基于机器组件的循环仿真，包括处理器、VIC-II、SID、CIA和软盘驱动器。 它在PAL和NTSC中模拟C64和C64C型号，支持SID 6581和8580声音芯片。它支持1541和1581软盘驱动器、D64、G64、P64和D81格式、磁带盒和22种墨盒类型，包括Action Replay、Final Cartridge III和EasyFlash 。",
+      "content": "64E是由Snow-G用C语言开发的Commodore 64仿真器。它基于机器组件的循环仿真，包括处理器、VIC-II、SID、CIA和软盘驱动器。\n它在PAL和NTSC中模拟C64和C64C型号，支持SID 6581和8580声音芯片。它支持1541和1581软盘驱动器、D64、G64、P64和D81格式、磁带盒和22种墨盒类型，包括Action Replay、Final Cartridge III和EasyFlash\n。它还支持高达16MB的REU内存扩展和高达4MB的GeoRAM ，状态备份和自动加载。\n64E适用于64位Windows、Linux和Android ，以及可以在浏览器中直接使用的独立HTML版本，甚至可以离线使用。Windows版本以无需安装的便携式可执行文件和传统安装程序的形式存在\n。模拟器提供包括法语在内的多语言界面，并支持Windows和浏览器中的游戏手柄。\nCommodore 64的ROM对于模拟器的操作是必需的。读者1541和1581是可选的，但建议从他们的全面仿真中受益。在其限制中， 64e仅支持驱动器号8 ，不支持驱动器1571、打印机或用户端口。",
+      "originalContent": "64E est un émulateur du Commodore 64 développé en C par Snow-G. Il repose sur une émulation cycle par cycle des composants de la machine, notamment le processeur, le VIC-II, le SID, les CIAs et les lecteurs de disquettes.\n\nIl émule les modèles C64 et C64C en PAL et NTSC, avec prise en charge des puces sonores SID 6581 et 8580. Il gère les lecteurs de disquettes 1541 et 1581, les formats D64, G64, P64 et D81, les cassettes au format TAP, ainsi que 22 types de cartouches, dont Action Replay, Final Cartridge III et EasyFlash. Il prend également en charge les extensions mémoire REU jusqu'à 16 Mo et GeoRAM jusqu'à 4 Mo, les sauvegardes d'état et l'accélération automatique des chargements.\n\n64E est disponible sous Windows 64 bits, Linux et Android, ainsi que dans une version HTML autonome utilisable directement dans un navigateur, même hors ligne. La version Windows existe sous forme d'exécutable portable ne nécessitant aucune installation et d'installateur classique. L'émulateur propose une interface multilingue, dont le français, et prend en charge les manettes de jeu sous Windows et dans le navigateur.\n\nLes ROM du Commodore 64 sont nécessaires au fonctionnement de l'émulateur. Celles des lecteurs 1541 et 1581 sont facultatives, mais recommandées pour bénéficier de leur émulation complète. Parmi ses limitations, 64E ne prend en charge que le lecteur numéro 8 et ne gère ni le lecteur 1571, ni les imprimantes, ni le port utilisateur.",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "bc709ee6f3376c486ece61692fe856e32e39deea4926e86136e797c8d2be6ea9",
+      "translationPending": false
+    },
+    {
+      "id": "138938",
+      "title": "【工具】OpenEmux v1.19",
+      "originalTitle": "[Utilitaires Multi-systemes] OpenEmux v1.19",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-02T12:48:26Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138938-utilitaires-multi-systemes-openemux-v1-19/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/openemux.png",
+      "officialUrl": "https://guilhermefeitosa66.github.io/OpenEmux/fr/",
+      "summary": "OpenEmux是一款受OpenEmu启发的免费开源GUI ，旨在简化RetroArch的使用。此前端使用Python与GTK4和libadwaita一起开发，允许您浏览和组织每个系统的复古游戏库，并显示从Li的缩略图存储库中恢复的封面 bretro OpenEmux依靠RetroArch进行仿真，并从统一的界面进行配置。特别是，它允许您定义游戏目录，检查所需BIOS的存在，为每个系统配置键盘和控制器控件以及管理着色器 。",
+      "content": "OpenEmux是一款受OpenEmu启发的免费开源GUI ，旨在简化RetroArch的使用。此前端使用Python与GTK4和libadwaita一起开发，允许您浏览和组织每个系统的复古游戏库，并显示从Li的缩略图存储库中恢复的封面\nbretro\nOpenEmux依靠RetroArch进行仿真，并从统一的界面进行配置。特别是，它允许您定义游戏目录，检查所需BIOS的存在，为每个系统配置键盘和控制器控件以及管理着色器\n。在第一次启动时，应用程序准备其环境并下载必要的Libretro核心。\n最初是为Linux设计的，该项目还提供了一个适用于Windows的版本，作为便携式存档和安装程序分发，集成了必要的依赖项，以及适用于Android的版本。 Windows端口与原始Linux平台分开开发和测试。\nOpenEmux不提供任何游戏或BIOS。该项目根据麻省理工学院的许可证进行分发，独立于RetroArch和第三方嵌入式组件的特定许可证。",
+      "originalContent": "OpenEmux est une interface graphique libre et open source inspirée d'OpenEmu, conçue pour simplifier l'utilisation de RetroArch. Développé en Python avec GTK4 et libadwaita, ce frontend permet de parcourir et d'organiser une bibliothèque de jeux rétro par système, avec affichage des jaquettes récupérées depuis les dépôts de miniatures de Libretro.\n\nOpenEmux s'appuie sur RetroArch pour l'émulation et facilite sa configuration depuis une interface unifiée. Il permet notamment de définir les répertoires de jeux, de vérifier la présence des BIOS requis, de configurer les commandes clavier et manette pour chaque système et de gérer les shaders. Lors du premier lancement, l'application prépare son environnement et télécharge les cœurs Libretro nécessaires.\n\nInitialement conçu pour Linux, le projet propose également une version pour Windows, distribuée sous forme d'archive portable et d'installateur, intégrant les dépendances nécessaires, ainsi qu'une version pour Android. Le portage Windows est développé et testé séparément de la plateforme Linux d'origine.\n\nOpenEmux ne fournit aucun jeu ni BIOS. Le projet est distribué sous licence MIT, indépendamment des licences propres à RetroArch et aux composants tiers embarqués.",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "openemu_mac"
+      ],
+      "contentHash": "75809f037262d6d50df5855f624e59692ffdfa7939e199b09cf6b81104f630ce",
+      "translationPending": false
+    },
+    {
+      "id": "138930",
+      "title": "【家用机】ZeraPS5 v0.1.0 build 705",
+      "originalTitle": "[Consoles de salon] ZeraPS5 v0.1.0 build 705",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-11-02T12:04:37Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/138930-consoles-de-salon-zeraps5-v0-1-0-build-705/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/zeraps5.png",
+      "officialUrl": "https://github.com/zeraps5/",
+      "summary": "ZeraPS5是一个在Windows x64上模拟PlayStation 5的实验项目，由metallrockdev在人工智能工具（包括Codex和Claude Code ）的帮助下开发。 该项目提供可下载的编译版本以及兼容性列表，以跟踪测试的游戏和获得的结果。 演示包含几款游戏，包括Minecraft、Grand Theft Auto V、Red Dead Redemption和The Elder Scrolls V: Skyrim。",
+      "content": "ZeraPS5是一个在Windows x64上模拟PlayStation 5的实验项目，由metallrockdev在人工智能工具（包括Codex和Claude Code ）的帮助下开发。 该项目提供可下载的编译版本以及兼容性列表，以跟踪测试的游戏和获得的结果。\n演示包含几款游戏，包括Minecraft、Grand Theft Auto V、Red Dead Redemption和The Elder Scrolls V: Skyrim。已发布的序列显示了它们执行的不同阶段，性能仍然有限，并且根据标题而变化\n。开发人员指定结果取决于仿真器的版本、测试的场景和使用的参数。\nZeraPS5仍然是一个正在开发的项目，其兼容性和性能可能会不断发展。可用的演示概述了其当前状态，但不保证所呈现游戏的完整运行。",
+      "originalContent": "ZeraPS5 est un projet expérimental d'émulation de la PlayStation 5 sur Windows x64, développé par metallrockdev avec l'aide d'outils d'intelligence artificielle, notamment Codex et Claude Code. Le projet propose des versions compilées téléchargeables ainsi qu'une liste de compatibilité permettant de suivre les jeux testés et les résultats obtenus.\n\nDes démonstrations présentent plusieurs jeux, dont Minecraft, Grand Theft Auto V, Red Dead Redemption et The Elder Scrolls V: Skyrim. Les séquences publiées montrent différents stades de leur exécution, avec des performances encore limitées et variables selon les titres. Le développeur précise que les résultats dépendent des versions de l'émulateur, des scènes testées et des paramètres utilisés.\n\nZeraPS5 reste un projet en développement dont la compatibilité et les performances sont susceptibles d'évoluer. Les démonstrations disponibles donnent un aperçu de son état actuel, sans garantir un fonctionnement complet des jeux présentés.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "f731a4162e7dd03bb25923e53704be5aad38665a2d1805088e00a373603e3eb6",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-x360_mobile-0-6-4-f398ad183-11108",
+      "title": "【Android更新】X360 Mobile 0.6.4+f398ad183.11108",
+      "originalTitle": "X360 Mobile 0.6.4+f398ad183.11108 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T08:56:36Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.6.4%2Bf398ad183.11108",
+      "imageUrl": "asset://assets/emulators/x360_mobile.png",
+      "officialUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL",
+      "summary": "X360 Mobile 发布 Android 新版本 0.6.4+f398ad183.11108，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
+      "content": "X360 Mobile 已发布 Android 最新版本 0.6.4+f398ad183.11108。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nX360 Mobile 0.6.4 - 热补一\n\n这种维护更新修正了游戏文件夹导入和不必要的临时游戏副本,并增加了一种方式来压制重复的外部播放提示。\n\n修复内容\n\n• 新鲜设备上的游戏文件夹:固定了一个文件夹导入路径,可以报告“未找到XEX、ELF、ISO、ZAR或STFS/GOD标题”,即使所选文件夹包含支持 网易游戏。 Android 可以根据所授予的存储权限, 披露不同的文件列表; 文件夹导入现在使用授权访问方法, 而不是处理不完整的本地 li 刺为空文件夹。\n^ 直接ISO/ZAR访问:当存储提供者支持时,Android文件拾取器曝光的支持图像现在可以直接读取。 此前,缺乏正常的文件系统路径可能会触发不必要的全临时副本,即使图像是可以读取的。 仅提供流或部分文件的提供商仍可能需要明确的复制选项。\n• 重复的电视-模式提示:增加了一个禁用自动外部播放提示的持久选项,加上提示本身的“不要再问了”。 这为Android错误地报告外部屏幕时用户提供了停止重复通知的方法。 在设置 – 界面 – 显示和电视中仍然有手动电视模式和显示选择。\n\n更新\n\n• 公开版 0.6.4,构建 60411108。。。 现有设施可以更新和保存其数据。\n• 如果文件夹先前无法导入, 在更新后再次选择。 所有文件的访问通过Android的许可屏幕仍然可用。\n· 电视模式和同步播放器简介仍然极具实验性。\n• 包括原有特点和改进 0.6.4 释放（https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.6.4%2Bf398ad183）.",
+      "originalContent": "# X360 Mobile 0.6.4 — Hotfix 1\n\nThis maintenance update fixes game-folder import and unnecessary temporary game copies, and adds a way to silence repeated external-display prompts.\n\n## Fixes\n\n- **Game folders on fresh installations:** fixed a folder-import path that could report “No XEX, ELF, ISO, ZAR or STFS/GOD titles found” even when the selected folder contained supported games. Android can expose different file lists depending on the storage permissions granted; folder import now uses the authorized access method instead of treating an incomplete local listing as an empty folder.\n- **Direct ISO/ZAR access:** supported images exposed by Android's file picker can now be read directly when the storage provider supports it. Previously, the absence of a normal filesystem path could trigger an unnecessary full temporary copy even though the image was readable. Providers that only offer streams or partial files may still require the explicit copy option.\n- **Repeated TV-mode prompts:** added a persistent option to disable automatic external-display prompts, plus “Don't ask again” in the prompt itself. This gives users a way to stop repeated notices when Android incorrectly reports an external screen. Manual TV-mode and display selection remain available in Settings → Interface → Displays and TV.\n\n## Updating\n\n- Public version **0.6.4**, build **60411108**. Existing installations can update in place and keep their data.\n- If a folder failed to import previously, select it again after updating. All-files access remains available through Android's permission screen.\n- TV mode and synchronized player profiles remain highly experimental.\n- Includes the features and improvements from the [original 0.6.4 release](https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.6.4%2Bf398ad183).",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "x360_mobile"
+      ],
+      "contentHash": "4edf21fdd7a32d5eeb179f2e72c59b83dd23bbe645d7f5ad9131560241d17e69",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-manic_emu-2-0-2",
+      "title": "【Android更新】Manic EMU 2.0.2",
+      "originalTitle": "Manic EMU 2.0.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-02T08:03:58Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.2",
+      "imageUrl": "asset://assets/emulators/manic_emu.png",
+      "officialUrl": "https://github.com/Manic-EMU/ManicEMU",
+      "summary": "Manic EMU 发布 Android 新版本 2.0.2，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
+      "content": "Manic EMU 已发布 Android 最新版本 2.0.2。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n• 改善3DS的性能\n• 阿尔蒂克基地的尼姆布斯现在支持最新的假说\n• 改进家庭菜单的成绩 Azahar 核心项目\n• 受影响用户的固定Wii指针行为\n• 增加了MeloCafe链接支持\n• iPad现在支持窗口应用程序\n• 重新设计SNES皮肤\n• 增加皮肤折叠:iPad可以使用iPhone皮肤\n• 支持iPhone Duo\n• 固定的AirPlay不工作于iOS 27或以后\n• BitBop,一个新的姊妹应用程序 Manic EMU 用于复古游戏音乐\n• 其他错误修正和改进",
+      "originalContent": "- Improved 3DS performance\r\n- Nimbus in Artic Base now supports the latest Pretendo\r\n- Improved Home Menu performance on the Azahar core\r\n- Fixed Wii pointer behavior for affected users\r\n- Added MeloCafe Link support\r\n- iPad now supports windowed apps\r\n- Redesigned the SNES skin\r\n- Added skin fallback: iPad can use iPhone skins\r\n- Support for iPhone Duo\r\n- Fixed AirPlay not working on iOS 27 or later\r\n- Added BitBop, a new sister app to Manic EMU for retro game music\r\n- Other bug fixes and improvements",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "manic_emu"
+      ],
+      "contentHash": "7d3b5a0ef324d675ea2673ef459e1b196898bade620351e2dfa17b7284a4e23f",
       "translationPending": false
     },
     {
@@ -95,30 +501,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "4685631d37a775d864d7b453c435e0e10b8b8ea1bed5b7c8219a73c4d637559f",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-x360_mobile-0-6-4-f398ad183",
-      "title": "【Android更新】X360 Mobile 0.6.4+f398ad183",
-      "originalTitle": "X360 Mobile 0.6.4+f398ad183 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-01T20:28:50Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL/releases/tag/v0.6.4%2Bf398ad183",
-      "imageUrl": "asset://assets/emulators/x360_mobile.png",
-      "officialUrl": "https://github.com/Ashnar2602/X360-Mobile---OFFICIAL",
-      "summary": "X360 Mobile 发布 Android 新版本 0.6.4+f398ad183，发布日期为2026年11月01日。点击查看官方版本信息与更新说明。",
-      "content": "X360 Mobile 已发布 Android 最新版本 0.6.4+f398ad183。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nX360 Mobile 0.6.4\n\n此次更新将X360 Mobile迁移到更新的Xenia Edge核心，具有更新的Android界面，新的游戏方式和分享兼容性结果，并进一步致力于游戏兼容性和性能。\n\n新功能\n\n•可选的帧插值，通过自动和每场比赛的控制，实现更平滑的显示运动。\n•实验电视模式，具有更大的游戏封面、顶部选项卡控制器导航和外部显示选择。\n• X360 Mobile支持System Link游戏的现场大厅：直接局域网/互联网连接、公共或仅限朋友的房间、可选密码、邀请、聊天、朋友请求和朋友在场。已在《战争机器》中检查了双控制台合作模式。\n•使用X360 Mobile网站帐户进行实验性同步玩家配置文件，实现跨设备的成就和玩家分数同步。\n•自动发现添加到注册库文件夹的游戏，无需再次手动扫描。\n• Xbox风格键盘中的本地自动完成建议，用于已安装的游戏和设置搜索。\n•可配置的控制器按钮组合和快速菜单收藏夹，具有单独的全局和每场比赛偏好。\n•光盘更换提示可以建议当前文件夹中的匹配光盘，以便快速加载，同时保留手动浏览。\n•可选的三星性能控制和每场比赛对兼容图形层的支持，包括ExynosTools/MdiEx包。\n\n界面、控制和日常使用\n\n•更新了应用品牌和启动演示文稿，增加了新的启动视频、启动转换和应用图标。\n•刷新不同移动宽高比、显示切口和大屏幕的自适应布局。\n•菜单和编辑器停留在内容区域内，保持导航和上下文提示栏可用。\n•刷新了成就通知样式。\n•封面大小的游戏卡、紧凑的封面控件和收藏夹指示器、更清晰的家庭/图书馆组织和上下文控制器提示。\n•光盘艺术、封面艺术或带后备功能的封面艺术的艺术品显示模式；更清晰的刷新控制和可延迟的提供商限制通知。\n•改进的导航功能可在从设置和嵌套页面返回时保留搜索、选择和滚动位置。\n•通过可选的CPU/RAM信息、可用的设备GPU指标和可选择的温度源，扩展了性能叠加。 温度值现在使用没有传感器名称注释的紧凑型显示器。\n•更广泛的英语、意大利语、德语、法语、西班牙语和巴西葡萄牙语覆盖Android屏幕、原生菜单和设置描述。\n•精致的实验手机振动，具有更温和的效果和单独的强度控制。\n•扩展了与ES-DE、Daijishō、Beacon、Retro Hrai和Cocoon Shell的集成。\n•从以前的应用程序引导导入支持的库和触摸布局数据。\n•更清晰的内容/驱动程序清理确认，并更安全地处理不相关的游戏、保存和设置。\n\n兼容性报告和社区功能\n•通过四个可玩性评级、可审核的本地草稿、恢复中断的会话和计划的上传，重新构建了选择性兼容性报告。\n•报告按游戏组织，批量删除和手动每场比赛报告排除。\n•当会话期间设置发生变化时，报告会保留配置详细信息和单独的结果。 游戏运行时，上传将被推迟。\n•网站上的兼容性页面保留单个会话报告和现有社区数据，包括硬件、驱动程序和应用程序版本过滤器以及可扩展的配置详细信息。\n•报告作者可以添加描述性注释并澄清合作车主姓名，同时保留原始测量值。 管理包括更正历史记录和批量审核工具。\n\n核心、游戏修复和性能\n\n•更新核心中的图形、着色器、运行时计时、存储、音频和输入的一般兼容性和性能工作。\n•影响火影忍者的启动和装载改进：崛起……",
-      "originalContent": "# X360 Mobile 0.6.4\n\nThis update moves X360 Mobile to a newer Xenia Edge core, with a refreshed Android interface, new ways to play and share compatibility results, and further work on game compatibility and performance.\n\n## New features\n\n- Optional frame interpolation for smoother displayed motion, with automatic and per-game controls.\n- Experimental TV mode with larger game covers, top-tab controller navigation and external-display selection.\n- X360 Mobile Live Lobbies for supported System Link games: direct LAN/Internet connections, public or friends-only rooms, optional passwords, invitations, chat, friend requests and friend presence. Two-console co-op has been checked in Gears of War.\n- Experimental synchronized player profiles using X360 Mobile website accounts, with achievement and Gamerscore synchronization across devices.\n- Automatic discovery of games added to registered library folders, without requiring another manual scan.\n- Local autocomplete suggestions in the Xbox-style keyboard for installed games and settings searches.\n- Configurable controller button combinations and quick-menu favorites, with separate global and per-game preferences.\n- Disc-change prompts can suggest a matching disc from the current folder for quick loading, while retaining manual browsing.\n- Optional Samsung performance controls and per-game support for compatible graphics layers, including ExynosTools/MdiEx packages.\n\n## Interface, controls and everyday use\n\n- Updated app branding and startup presentation, with a new boot video, splash transition and app icon.\n- Refreshed adaptive layouts for different mobile aspect ratios, display cutouts and large screens.\n- Menus and editors stay within the content area, keeping navigation and the contextual hintbar available.\n- Refreshed achievement notification styling.\n- Cover-sized game cards, compact on-cover controls and favorites indicators, clearer home/library organization, and contextual controller hints.\n- Artwork display modes for disc art, cover art or cover art with fallback; clearer refresh controls and snoozable provider-limit notices.\n- Improved navigation preserves searches, selections and scroll positions when returning from settings and nested pages.\n- Expanded performance overlay with optional CPU/RAM information, available device GPU metrics and selectable temperature sources. Temperature values now use a compact display without sensor-name annotations.\n- Broader English, Italian, German, French, Spanish and Brazilian Portuguese coverage across Android screens, native menus and setting descriptions.\n- Refined experimental phone vibration with gentler effects and separate intensity controls.\n- Expanded integration with ES-DE, Daijishō, Beacon, Retro Hrai and Cocoon Shell.\n- Guided import of supported library and touch-layout data from the previous app.\n- Clearer content/driver cleanup confirmations and safer handling of unrelated games, saves and settings.\n\n## Compatibility reports and community features\n\n- Rebuilt opt-in compatibility reporting with four playability ratings, reviewable local drafts, recovery of interrupted sessions and scheduled uploads.\n- Reports are organized by game, with batch deletion and manual per-game reporting exclusions.\n- Reports retain configuration details and separate results when settings change during a session. Uploads are deferred while a game is running.\n- Compatibility pages on the website retain individual session reports and existing community data, with hardware, driver and app-version filters and expandable configuration details.\n- Report authors can add descriptive notes and clarify driver names while preserving the original measurements. Administration includes correction history and batch moderation tools.\n\n## Core, game fixes and performance\n\n- General compatibility and performance work across graphics, shaders, runtime timing, storage, audio and input in the updated core.\n- Startup and loading improvements affecting Naruto: Rise of a…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "x360_mobile"
-      ],
-      "contentHash": "a68c3ddd2e5d302d498942d33c6fe79f496b93dd9437483fab633fa814f302a0",
       "translationPending": false
     },
     {
@@ -187,30 +569,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx3-1-6",
-      "title": "【Android更新】ARMSX3 1.6",
-      "originalTitle": "ARMSX3 1.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-01T19:52:28Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.6",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.6，发布日期为2026年11月01日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.6。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.6\n\n\n\nXMB模式\nPS3 XMB风格的第二个主屏幕和游戏内菜单。在侧边菜单的引导XMB下使用XMB模式打开它。ARMSX3记住它，用户>退出XMB模式将带您回到库\n。XMB模式从您安装的PS3固件中获取其文字（使用ARMSX3的语言）、图标、字体、启动声音及其波形背后的设置（详见下文）。\n•控制台的启动，使用ARMSX3的字母，然后波浪逐渐消失在本月的颜色中。 离开XMB模式播放控制台风格的关机，然后是ARMSX3自己的启动。\n•控制台的波浪，以每个月的颜色绘制固件绘制的方式。深夜，它会像控制台一样变暗。主题设置可以选择颜色、循环显示月份，也可以在菜单后面显示简单的波形或屏幕保护程序\n。默认情况下，背景将根据月份和时间改变颜色和亮度。\n• PS3主题（ .p3t ）带有背景（静止、幻灯片或动画）、XMB图标和系统声音。 当.p3t仍处于下载或文档（具有所有文件访问权限）中时，在1.6之前添加的主题会自行提取其图标和声音；否则，请重新添加主题以获得图标和声音支持。\n•您的游戏有自己的媒体： pic1背景、SND0音乐和动画ICON1图标，适用于PKG、文件夹、ISO和CHD游戏。 没有SND0的游戏播放其ICON1音乐。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n< img width = \"1920\" height = \"1080\" alt = \"image\" src = \"https://github.com/user-attachments/assets…",
-      "originalContent": "# ARMSX3 1.6\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/246e49c8-5b0d-437c-8f3c-9a193b05b56f\" />\r\n\r\n## XMB Mode\r\n\r\nA second home screen and in-game menu in the style of the PS3's XMB. Turn it on with **XMB Mode** in the side menu, under Boot XMB. ARMSX3 remembers it, and **Users > Exit XMB Mode** takes you back to the library. XMB Mode takes its words (in ARMSX3's language), icons, fonts, startup sound and the settings behind its wave from your installed PS3 firmware (more on that below).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a3c56c7e-1778-49f3-be61-127d2a491087\" />\r\n\r\n- **The console's startup**, with ARMSX3's lettering, then the wave fading up in the month's colour. Leaving XMB Mode plays a console-style shutdown, then ARMSX3's own startup.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/131d81c7-0150-4362-9d14-bd9660455a45\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2e651bd8-dd81-467d-8453-2a47b8a22f9d\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a5efb3ce-f824-44ef-aca4-eb14ee985bc9\" />\r\n\r\n- **The console's wave**, drawn the way the firmware draws it, in each month's colour. Late at night it dims as the console's does. Theme Settings can pick a colour, cycle through the months, or show the simple wave or a screensaver behind the menu instead. By default, the background will change color and brightness depending on the month and time of day. \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1f3c85e7-92a7-42b8-a6ba-6b4d428d1f79\" />\r\n\r\n- **PS3 themes (.p3t)** bring their background (still, slideshow or animated), their XMB icons and their system sounds. Themes added before 1.6 pick up their icons and sounds by themselves when their .p3t is still in Download or Documents (with all-files access); otherwise, re-add the theme again for icon and sound support.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d73885ca-8abe-45a4-8ff8-f2504a01b187\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2b5a79d3-500a-4188-b95e-61e41cb7fbca\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ed4c61c7-51dd-4b13-8e9c-5f8e013ad2d3\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b18333d9-1f68-4527-bf2b-a0ceea1fa28a\" />\r\n\r\n- **Your games with their own media:** PIC1 backgrounds, SND0 music and animated ICON1 icons, for PKG, folder, ISO and CHD games. A game with no SND0 plays its ICON1 music.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/82de41d0-7254-4eb8-b004-5b9ddc32c238\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5921bfd5-c35c-42fb-bcc8-4fc850fc69ed\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c88e1096-e1a3-4354-b188-47f3dccae1f8\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fbba8a2e-97f6-4b86-aad0-4bec2053d6c3\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/822bca66-7137-46b1-862d-dad4047d18bb\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a150b245-3a82-44a1-9470-3859857105c3\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4815b925-1554-4e17-bbe2-d21a6d601e0f\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/22fc024d-c0ae-4119-910d-39b40c8eba05\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "d3ad2e900f5334d54f65c63516d1c2ecca3c4cd281638d7b3aa263d3fefd2389",
-      "translationPending": false
-    },
-    {
       "id": "android-release-azahar-2127-0-alpha4",
       "title": "【Android更新】Azahar 2127.0-alpha4",
       "originalTitle": "Azahar 2127.0-alpha4 Android release",
@@ -232,30 +590,6 @@
         "azahar"
       ],
       "contentHash": "65830379c70acca5ecd940beda5d859af3cda686d1bdd74b9ef7e04357bad514",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-01T14:43:09Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月01日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月01日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• ca0dfa5: CPU/ PGXP: 不要给 PGXP 拨打写$0 (Stenzek) 的指示\n• d3d7a12: CPU/PGXP: 将值旗移到信头( Stenzek)\n• ebdbe96: CPU/PGXP:在内存模式(Stenzek)下立即修复解释器\n• e41a0fb: CPU/PGXP: 将 swr 固定到上半部, 使下半部无效 (Stenzek)\n• e762de1: CPU/PGXP:将0美元作为精确(Stenzek)\n• dde19bd: CPU/PGXP: 修复重编的 mtc0 验证其来源的垃圾值 (Stenzek)\n• 在链接列表终止符检查中丢弃冗余掩码(Stenzek)（https://github.com/stenzek/duckstation/commit/7a8335eca3474d4dbc6ec1d50aa178d229b1ef90）)",
-      "originalContent": "## Commits\n- ca0dfa5: CPU/PGXP: Don't call PGXP for instructions that write $zero (Stenzek)\n- d3d7a12: CPU/PGXP: Move value flags to the header (Stenzek)\n- ebdbe96: CPU/PGXP: Fix interpreter immediate moves in memory mode (Stenzek)\n- e41a0fb: CPU/PGXP: Fix swr into the upper half invalidating the lower half (Stenzek)\n- e762de1: CPU/PGXP: Treat $zero as precise (Stenzek)\n- dde19bd: CPU/PGXP: Fix recompiled mtc0 validating its source with a garbage value (Stenzek)\n- Drop redundant mask in linked list terminator check ([Stenzek](https://github.com/stenzek/duckstation/commit/7a8335eca3474d4dbc6ec1d50aa178d229b1ef90))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "f1acccf0cc1f795009d6315a667554987735f7194c4caa50b2bf8efa851865a5",
       "translationPending": false
     },
     {
@@ -570,6 +904,30 @@
         "armsx2"
       ],
       "contentHash": "1cdf44b9204698c7ac06aa221e3653e70126b9e727ca9e3d23155edbf326f6bf",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-hakux-1-3-0",
+      "title": "【Android更新】hakuX 1.3.0",
+      "originalTitle": "hakuX 1.3.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-31T12:43:13Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/rfandango/hakuX/releases/tag/v1.3.0",
+      "imageUrl": "asset://assets/emulators/hakux.png",
+      "officialUrl": "https://github.com/rfandango/hakuX",
+      "summary": "hakuX 发布 Android 新版本 1.3.0，发布日期为2026年10月31日。点击查看官方版本信息与更新说明。",
+      "content": "hakuX 已发布 Android 最新版本 1.3.0。\n\n发布日期：2026年10月31日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nXbox Live通过徽章,游戏修正。\n\nXbox 现场\n• 徽章——设置 • 网络 • 连接 • Xbox Live:徽章将控制台连接到徽章,复兴原版 Xbox Live:Live games sign in, find matchs and pla y在线。 如果您的互联网供应商屏蔽了徽标的 DNS 服务器, 请将其指向运行徽标的计算机\n• Xbox Live 设置 - 设置 - 网络 - Xbox Live 设置 让你通过它,一步一步:连接,Xbox仪表板,用徽章设置注册控制台 助手(为您下载),然后在仪表板上制作或收回您的账户\n• Dashboard – 库中的Dashboard按钮(左上方)从控制台的硬盘上启动Xbox仪表板,其中Xbox Live账户制作并回收。 它第一次从它的文件拉链(dashboard 5960)中安装仪表盘,你提供: hakuX 不包括一个\n• 标题更新——一款游戏的Xbox Live更新,下载后从游戏开始。 Forza汽车港的60和120个fps Mods也覆盖了它的更新\n\n游戏\n• 寓言:失落的章节——英雄的脸和手臂不再是黑色或噪音\n• Morrowind——离开一栋大楼后不再冻结:盘子和硬盘现在像在控制台上一样,需要一点时间。 盘点的特征是适当的: 它不再站在红色上 头上有一个黑色的带子, 或留下幽灵拷贝 周围的自己 当你改变齿轮后 D. 国家\n• 光环2——雾不再显示为带相机移动的条纹,随着瞄准镜向上,周围的景色被黑线暗淡,而不是浅蓝色。\n• Munch's Oddysee——在角色的阴影下,没有黑盒在地面上\n• 零二项目——不再挂在第一个框架上\n• Amped 2——不再作为第一级负载坠毁\n• Mortal Kombat:少林僧侣——模型不再在马里-G57GPU上爆炸\n• 燃烧2:撞击点——开始时不再坠毁\n• Def Jam:为纽约而战——在内部切片场不再在一个框架上冻结: hakuX 将游戏挂起( 如其阴影编辑时), 游戏的时钟也等待\n• Double-S.T.E.A.L: 第二次碰撞——随着第一幕的开始不再停止,屏幕也不再是黑色的,同样是在装入保存状态之后\n• 财富战士II:双螺旋——你跳过内幕电影后不再坠毁\n• Touge R——HUD下的种族不再是黑色的\n\n业绩\n• 网络——在网络(系统链接或XLink Kai)上,控制台不再让大部分CPU核心忙碌\n\nApp\n• 屏幕上控制编辑器——其工具栏在较窄的屏幕上,如4:3手持设备上贴上更多行,而不是将按钮从边缘推开",
+      "originalContent": "Xbox Live through Insignia, and game fixes.\n\n### Xbox Live\n- **Insignia** — Settings → Network → Connection → Xbox Live: Insignia connects the console to Insignia, the revival of the original Xbox Live: Live games sign in, find matches and play online. If your Internet provider blocks Insignia's DNS server, point it at a computer running insigniaDNS instead\n- **Xbox Live setup** — Settings → Network → Xbox Live setup walks you through it, one step at a time: the connection, the Xbox dashboard, registering the console with Insignia's Setup Assistant (downloaded for you), then making or recovering your account in the dashboard\n- **Dashboard** — the library's Dashboard button (top left) starts the Xbox dashboard from the console's hard disk, where Xbox Live accounts are made and recovered. The first time, it installs the dashboard from a zip of its files (dashboard 5960) that you provide: hakuX doesn't include one\n- **Title updates** — a game's Xbox Live update, once downloaded, starts with the game. Forza Motorsport's 60 and 120 fps mods cover its update too\n\n### Games\n- **Fable: The Lost Chapters** — the hero's face and arms are no longer black or noise\n- **Morrowind** — no longer freezes when you leave a building: disc and hard-disk reads now take a little time, as on the console. The inventory's character is drawn properly: it no longer stands on red with a black band over its head, or leaves ghost copies of itself around it when you change gear after a load\n- **Halo 2** — the fog no longer shows as stripes that move with the camera, and with the scope up the view around it is dimmed with black lines, not light blue\n- **Munch's Oddysee** — no dark box over the ground under the characters' shadows\n- **Project Zero II (PAL)** — no longer hangs on its first frame\n- **Amped 2** — no longer crashes as its first level loads\n- **Mortal Kombat: Shaolin Monks** — the models no longer explode on Mali-G57 GPUs\n- **Burnout 2: Point of Impact** — no longer crashes as it starts\n- **Def Jam: Fight for NY** — no longer freezes on one frame at the intro cutscene: while hakuX holds a game up (such as while its shaders compile), the game's clock now waits too\n- **Double-S.T.E.A.L: The Second Clash** — no longer stops as its first scene begins, and the screen is no longer black, also after loading a savestate\n- **Soldier of Fortune II: Double Helix** — no longer crashes when you skip an intro movie\n- **Touge R** — races are no longer black under the HUD\n\n### Performance\n- **Network** — with the network on (system link or XLink Kai), the console no longer keeps most of a CPU core busy\n\n### App\n- **On-screen controls editor** — its toolbar wraps onto more rows on narrower screens, such as 4:3 handhelds, instead of pushing buttons off the edge",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "hakux"
+      ],
+      "contentHash": "423a17d9a9513aa639d4c55ed871336d6b040b3a54d764e892162b80119c7a89",
       "translationPending": false
     },
     {
@@ -1028,30 +1386,6 @@
         "fbneo_core"
       ],
       "contentHash": "f3fd5711946072b17bd799bd65172689371b90817f9d4bc46e97d154fc4770aa",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-j2me_loader-continuous",
-      "title": "【Android更新】J2ME Loader continuous",
-      "originalTitle": "J2ME Loader continuous Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-30T15:06:11Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
-      "imageUrl": "asset://assets/emulators/j2me_loader.png",
-      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
-      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年10月30日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年10月30日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "J2ME Loader continuous Android release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "j2me_loader"
-      ],
-      "contentHash": "0ef89169648761076fe52ae656fa088c45be44eac59d4a1f010dfefbc3c25ab0",
       "translationPending": false
     },
     {
@@ -1516,30 +1850,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-emucorex-0-5-3",
-      "title": "【Android更新】EmuCoreX 0.5.3",
-      "originalTitle": "EmuCoreX 0.5.3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-28T20:13:04Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreX/releases/tag/v0.5.3",
-      "imageUrl": "asset://assets/emulators/emucorex.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreX",
-      "summary": "EmuCoreX 发布 Android 新版本 0.5.3，发布日期为2026年10月28日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreX 已发布 Android 最新版本 0.5.3。\n\n发布日期：2026年10月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreX/compare/v0.5.2...v0.5.3\n\n有什么新情况: 0.5.3\n• UI 修正\n• 核心补救和改进",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreX/compare/v0.5.2...v0.5.3\r\n\r\nWhat's new: 0.5.3\r\n- UI fixes\r\n- Core fixes and improvements",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorex"
-      ],
-      "contentHash": "38b1c9bbcee97e2357af43069edcb4e48b8f85fd9c0e05bdac75c85e509c02c3",
-      "translationPending": false
-    },
-    {
       "id": "138693",
       "title": "【电脑】WinUAE (Public Beta) v6.1.0 Beta 20",
       "originalTitle": "[Ordi.] WinUAE (Public Beta) v6.1.0 Beta 20",
@@ -1782,6 +2092,30 @@
       "translationPending": false
     },
     {
+      "id": "android-release-lemon_android-1-3-0",
+      "title": "【Android更新】Lemon 1.3.0",
+      "originalTitle": "Lemon 1.3.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-28T12:57:57Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/Ghael-V/Lemon-Project/releases/tag/v1.3.0",
+      "imageUrl": "asset://assets/emulators/lemon_android.png",
+      "officialUrl": "https://github.com/Ghael-V/Lemon-Project",
+      "summary": "Lemon 发布 Android 新版本 1.3.0，发布日期为2026年10月28日。点击查看官方版本信息与更新说明。",
+      "content": "Lemon 已发布 Android 最新版本 1.3.0。\n\n发布日期：2026年10月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nLemon- 项目 v1.3.0\n\nGamepad hotkeys, 作弊下载和一个更稳定的快速保存/ LOAD. 再次感谢BitRanger再提出7项拉力请求(GitHub #17至23),欢迎加入Team Lemon!\n\nNew\n• Gamepad热键(安置) 控制(控制) 热键(热键)。 选择一个 Hotkey 启用按钮, 然后给每个动作按下按钮 : 快速保存、 快装入、 显示或隐藏性能统计数据和设备信息覆盖、 暂停或取消 暂停, 退出( 除非“ 确定退出吗 ” 关闭 )。 如是说 RetroArch,\"Hotkey Election\"在使用游戏时被保留在游戏中:对它进行快速的敲击仍然到达游戏中,而自己持有也一样。 Hotkeys需要一个物理控制器。 (Bit Ranger)\n• 下载欺骗。 欺骗窗口(游戏页面或游戏中菜单)获得一个下载按钮。 它从切换芯片中获取游戏的代码（https://github.com/HamletDuFromage/switch-cheats-db）,每天从gbatemp和NX-60FPS-RES-GFX-Cheats更新一个数据库;所有信用都归于代码的作者。 游戏机作弊和60个FPS/分辨率/图形作弊进入自己的文件夹,全部关闭。 下载时再次更新, 并保留您打开的。 只有游戏的ID被发送到GitHub.\n\n快速保存/ 关闭( Bit 朗达)\n• 横跨场景的装载不再提供黑幕。 在标题屏幕上保存的状态在开始运行后加载,在游戏运行时返回黑色状态。 一个负载现在将GPU自保存后所绘制的东西放下,并让GPU引擎状态恢复原样。\n· \"Game's busy\"更不常见。 音频持续唤醒了游戏的音频线索,同时暂停一个保存,所以一个保存持续寻找一个安静的瞬间,并带有声音的tu. 音频在保存或负载运行时被保存。\n^ 负载不再覆盖服务在游戏暂停时到达的答案(游戏在负载后随2010-0212而中止),不再匹配th字形。 d 从不同的内核调回(2001-0117).\n• 信件相互替换,而不是排队: \"Saving...\"/\"Ladding......\" 留到结果出来,用\" still processing...\"表示长时间。\n\n固定\n^ 第一次运行被缩短的线程可以从0的TLS地址开始,然后游戏关闭。 (Bit Ranger)\n^ 怪物猎人世代终极在线在Nextendo Network上:有两个朋友服务请求它制作(朋友列表ID和在线会话宣言)现在在其中获得一个答案。 而不是没有。\n· 当游戏关闭多个加载时, 保存设置不再记录一个关键错误。\n\n安装\nAndroid 12 或 更新, arm64. 签署日期: Lemon钥匙,像 1.2.2:它更新并保存您的数据。\n`Lemon-v1.3.0-standard.apk` · `Lemon-Lite-v1.3.0-lite.apk` · `Lemon-Lite-Spoofed-v1.3.0-lite-spoofed.apk`\n\n---\n\nLemon- 项目 v1.3.0 (英语).\n\nAtajos del mando, descarga de trucos y un guardado y carga rápidos mucho más estables. 中国植物物种信息数据库。 Gracias de nuevo a Bit Ranger por otras siete 牵引请求 (GitHub #17 a #23), y bienvenido al Team. Lemon!\n\n新罗\n• 阿塔霍斯·德尔曼多(Ajustes – Controles – Atajos del mando)。 Elige un botón de atahos y a signa a cada acción los acción que se pulsan con él: guardado rápido, carga rápida, mostrar u ocultar las estadimiento de rendimiento y la la inforación (法语) 互联网档案馆的存檔,存档日期2013-12-02. 人民代表大会, 科莫语 RetroArcheugo mientras lo usas: un toque rápido sí le le le lega, y también mantenerlo pulsado él solo. 中国植物物种信息数据库。 (比特兰格)\n• Descarga de Trucos。 (原始内容存档于2018-09-21). La venteana de Trucos (página del juego o menú del juego) tien un botón Descargar. 建设换乘-热量-db（https://github.com/HamletDuFromage/switch-cheats-db）, una base de datos que se actualiza cada día desde gbatemp y NX-60FPS-RES-GFX-Cheats; todo el mérito es de los autores de los códigos. 中国植物物种信息数据库。 Los trucos de juego y los de 60 FPS, reso... 卢卡斯 卢卡斯 卢卡斯 卢卡斯 卢卡斯 卢卡斯 卢卡斯 卢卡斯 卢卡斯 60 FPS, reso...",
+      "originalContent": "## Lemon-Project v1.3.0\n\nGamepad hotkeys, cheat downloads and a much steadier Quick Save/Load. Thanks again to **BitRanger** for seven more pull requests (GitHub #17 to #23), and welcome to Team Lemon!\n\n### New\n- **Gamepad hotkeys** (Settings → Controls → Hotkeys). Pick a Hotkey Enable button, then give each action the buttons to hold with it: Quick Save, Quick Load, show or hide the performance stats and the device info overlays, pause or unpause, and exit (it takes a second press unless \"Confirm on Exit?\" is turned off). As in RetroArch, Hotkey Enable is kept from the game while you use it: a quick tap of it still reaches the game, and so does holding it on its own. Hotkeys need a physical controller. (BitRanger)\n- **Download cheats.** The Cheats window (game page or in-game menu) gets a Download button. It fetches the codes for your game's build from [switch-cheats-db](https://github.com/HamletDuFromage/switch-cheats-db), a database updated every day from gbatemp and NX-60FPS-RES-GFX-Cheats; all credit goes to the authors of the codes. Gameplay cheats and 60 FPS/resolution/graphics cheats go in their own folders, all off. Downloading again updates them and keeps the ones you turned on. Only the game's ID is sent, to GitHub.\n\n### Quick Save/Load (BitRanger)\n- **Loading across scenes no longer gives a black screen.** A state saved on a title screen and loaded after starting a run came back black while the game ran on. A load now drops what the GPU drew since the save and puts the GPU engines' state back as it was.\n- **\"Game is busy\" much less often.** The audio kept waking the game's audio thread while it was paused for a save, so a save kept looking for a quiet moment, with the sound stuttering. The audio is now held while a save or a load runs.\n- A load no longer overwrites a service's answer that arrived while the game was paused for it (the game aborted with 2010-0212 right after the load), and no longer matches a thread back from a different kernel call (2001-0117).\n- Messages replace each other instead of queueing: \"Saving…\"/\"Loading…\" stay until the result, with \"still processing…\" for a long one.\n\n### Fixed\n- A thread whose first run was cut short could start with a TLS address of 0, and the game then closed. (BitRanger)\n- Monster Hunter Generations Ultimate online on Nextendo Network: two friend service requests it makes (the friend list IDs and the online session declaration) now get an answer instead of none.\n- Saving the settings no longer logs a critical error when a game has several add-ons turned off.\n\n### Install\nAndroid 12 or newer, arm64. Signed with Lemon's key, like 1.2.2: it updates in place and keeps your data.\n`Lemon-v1.3.0-standard.apk` · `Lemon-Lite-v1.3.0-lite.apk` · `Lemon-Lite-Spoofed-v1.3.0-lite-spoofed.apk`\n\n---\n\n## Lemon-Project v1.3.0 (español)\n\nAtajos del mando, descarga de trucos y un guardado y carga rápidos mucho más estables. Gracias de nuevo a **BitRanger** por otras siete pull requests (GitHub #17 a #23), y ¡bienvenido al Team Lemon!\n\n### Nuevo\n- **Atajos del mando** (Ajustes → Controles → Atajos del mando). Elige un botón de atajos y asigna a cada acción los botones que se pulsan con él: guardado rápido, carga rápida, mostrar u ocultar las estadísticas de rendimiento y la información del dispositivo, pausar o reanudar, y salir (pide una segunda pulsación salvo que desactives \"¿Confirmar al salir?\"). Como en RetroArch, el botón de atajos no le llega al juego mientras lo usas: un toque rápido sí le llega, y también mantenerlo pulsado él solo. Los atajos necesitan un mando físico. (BitRanger)\n- **Descarga de trucos.** La ventana de Trucos (página del juego o menú del juego) tiene un botón Descargar. Trae los códigos para el build de tu juego de [switch-cheats-db](https://github.com/HamletDuFromage/switch-cheats-db), una base de datos que se actualiza cada día desde gbatemp y NX-60FPS-RES-GFX-Cheats; todo el mérito es de los autores de los códigos. Los trucos de juego y los de 60 FPS, reso…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "lemon_android"
+      ],
+      "contentHash": "41efcd346b64f7783eaeadc5d4a2382d0bcf4d944be502f8adff5feed8a73d9c",
+      "translationPending": false
+    },
+    {
       "id": "138666",
       "title": "【电脑】OpenMSX v22",
       "originalTitle": "[Ordi.] OpenMSX v22",
@@ -1866,6 +2200,30 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "3af0f21eb67341a7ef8bfa1858f7fc548c385899161811b15b50e127424046a7",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-tic80-1-4-1",
+      "title": "【Android更新】TIC-80 1.4.1",
+      "originalTitle": "TIC-80 1.4.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-27T18:47:09Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nesbox/TIC-80/releases/tag/v1.4.1",
+      "imageUrl": "asset://assets/emulators/tic80.png",
+      "officialUrl": "https://github.com/nesbox/TIC-80",
+      "summary": "TIC-80 发布 Android 新版本 1.4.1，发布日期为2026年10月27日。点击查看官方版本信息与更新说明。",
+      "content": "TIC-80 已发布 Android 最新版本 1.4.1。\n\n发布日期：2026年10月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nTIC-80 v1.4.1\n\nTIC-80 v1.4.1 是一个小型的抛光发行,侧重于编辑器输入和剪贴板修正、控制器/平台支持以及构建内务管理。\n\n或\n\n• AltGr 字符现在到达代码编辑器。\n剪贴板现在保存编辑的全部代码。\n• 捆绑的珍妮特运行时间更新到 1.42.1.\n\n平台\n\n· Linux ARM64现在通过GLES进行绘图。\n• PlayStation经典控制器在Windows上工作。\n• 在macOS上,指挥部的钥匙现在起控制作用。\n\n错误修正\n\n• 代码编辑器按其绘制的列滚动,保持横向滚动对齐。\n• MiniScript主机版本报告是固定的。\n\n建设基础设施( B)\n\n• PRO Linux大楼现在包括X11头。\n\n统计:11项承诺,9项拉动请求,2项贡献。\n\n更新内容\n校对:Soup https://github.com/nesbox/TIC-80/pull/3134\n• sokol:命令密钥由@nesbox in https://github.com/nesbox/TIC-80/pull/3139\n• Janet:捆绑的运行时间是: 1.42.1 由 @nesbox 编辑。 https://github.com/nesbox/TIC-80/pull/3140\n• 工作室:由 @nesbox in https://github.com/nesbox/TIC-80/pull/3141\n• Sokol:PlayStation Classic 垫在Windows上由@nesbox in https://github.com/nesbox/TIC-80/pull/3142\n• Sokol:剪贴板由 @nesbox 保存编辑器的全部代码 https://github.com/nesbox/TIC-80/pull/3148\n• 工作室:由@nesbox in https://github.com/nesbox/TIC-80/pull/3149\n• 修复微型脚本 version.host 由 @MineRobber9000 编辑。 https://github.com/nesbox/TIC-80/pull/3144\n校对:Soup https://github.com/nesbox/TIC-80/pull/3150\n\n\n完整更改日志 : https://github.com/nesbox/TIC-80/compare/v1.4.0...v1.4.1",
+      "originalContent": "# TIC-80 v1.4.1\r\n\r\nTIC-80 v1.4.1 is a small polish release focused on editor input and clipboard fixes, controller/platform support, and build housekeeping.\r\n\r\n## What's new\r\n\r\n- AltGr characters now reach the code editor.\r\n- The clipboard now holds the editor’s entire code.\r\n- The bundled Janet runtime is updated to 1.42.1.\r\n\r\n## Platform\r\n\r\n- Linux ARM64 builds now draw through GLES.\r\n- The PlayStation Classic controller works on Windows.\r\n- On macOS, the Command key now acts as Control.\r\n\r\n## Bug fixes\r\n\r\n- The code editor scrolls by the columns it draws, keeping horizontal scrolling aligned.\r\n- MiniScript host version reporting is fixed.\r\n\r\n## Build & infrastructure\r\n\r\n- PRO Linux builds now include the X11 headers.\r\n\r\n**Statistics:** 11 commits, 9 pull requests, 2 contributors.\r\n\r\n## What's Changed\r\n* ci: the PRO Linux builds get the X11 headers by @nesbox in https://github.com/nesbox/TIC-80/pull/3134\r\n* sokol: the Command key is control by @nesbox in https://github.com/nesbox/TIC-80/pull/3139\r\n* janet: the bundled runtime is 1.42.1 by @nesbox in https://github.com/nesbox/TIC-80/pull/3140\r\n* studio: the code editor scrolls by the columns it draws by @nesbox in https://github.com/nesbox/TIC-80/pull/3141\r\n* sokol: the PlayStation Classic pad works on Windows by @nesbox in https://github.com/nesbox/TIC-80/pull/3142\r\n* sokol: the clipboard holds the editor's whole code by @nesbox in https://github.com/nesbox/TIC-80/pull/3148\r\n* studio: AltGr text reaches the code editor by @nesbox in https://github.com/nesbox/TIC-80/pull/3149\r\n* Fix MiniScript version.host by @MineRobber9000 in https://github.com/nesbox/TIC-80/pull/3144\r\n* ci: the arm64 Linux builds draw through GLES by @nesbox in https://github.com/nesbox/TIC-80/pull/3150\r\n\r\n\r\n**Full Changelog**: https://github.com/nesbox/TIC-80/compare/v1.4.0...v1.4.1",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "tic80"
+      ],
+      "contentHash": "c6a9461b96de1646e9a7824e57669147d546681d396236ee05dcad93fc8fb492",
       "translationPending": false
     },
     {
@@ -2223,6 +2581,30 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "585fca59b050896eae194151841b8baf2783976cae74a42230a733279a810a95",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-x1box-1-3-2",
+      "title": "【Android更新】X1 BOX 1.3.2",
+      "originalTitle": "X1 BOX 1.3.2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-10-26T16:38:42Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/izzy2lost/xemu/releases/tag/1.3.2",
+      "imageUrl": "asset://assets/emulators/x1box.png",
+      "officialUrl": "https://github.com/izzy2lost/xemu",
+      "summary": "X1 BOX 发布 Android 新版本 1.3.2，发布日期为2026年10月26日。点击查看官方版本信息与更新说明。",
+      "content": "X1 BOX 已发布 Android 最新版本 1.3.2。\n\n发布日期：2026年10月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n固定的前端支持方式 hakuX 核心键。\n\nhakuX 现在为默认核心,设置向导不再需要 xemu BIOS文件。\n\n保存管理器显示 hakuX 保存,即使你从未使用 xemu.\n\nhakuX 现在有快速前进,作弊,mods(60/120 fps补丁和更多)本地多人游戏机,以及使用Auto主机/join模式的System Link LAN游戏机。\n\n修复:终极蜘蛛侠在发射时不再坠毁 GTA III不再显示虚假的脏盘错误。",
+      "originalContent": "Fixed frontend support with hakuX core.\r\n\r\nhakuX is now the default core, and the setup wizard no longer requires the xemu BIOS files.\r\n\r\nThe save manager shows hakuX saves, even if you've never used xemu.\r\n\r\nhakuX now has fast-forward, cheats, mods (60/120 fps patches and more) local multiplayer, and System Link LAN play with an Auto host/join mode.\r\n\r\nFixes: Ultimate Spider-Man no longer crashes at launch, GTA III no longer shows a false dirty-disc error.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "x1box"
+      ],
+      "contentHash": "f787f27421e60f8c6717eb635fe482b70d2ba6e23b3edc070d708c7cf018af3b",
       "translationPending": false
     },
     {
@@ -7301,54 +7683,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-swiff-1-4-1",
-      "title": "【Android更新】Swiff 1.4.1",
-      "originalTitle": "Swiff 1.4.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-08T18:56:37Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/NaviVani-dev/Swiff/releases/tag/v1.4.1",
-      "imageUrl": "asset://assets/emulators/swiff.png",
-      "officialUrl": "https://github.com/NaviVani-dev/Swiff",
-      "summary": "Swiff 发布 Android 新版本 1.4.1，发布日期为2026年10月08日。点击查看官方版本信息与更新说明。",
-      "content": "Swiff 已发布 Android 最新版本 1.4.1。\n\n发布日期：2026年10月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n版本1.4.1\n1.4.0的较小更新，只是为了解决一些紧急问题。\n\n功能\n•增加了对x86_64和ARM32设备的支持\n•网络游戏现在可以使用Swiff运行时加载嵌入的Flash、Shockwave和Unity内容\n•添加了“允许网络连接”选项\n•运行时和支持包现在托管在Swiff的基础设施上（不再有下载错误！ ）\n•震荡波玩家现在可以从数据管理中进行管理和删除\n\n修复内容\n•改进了锁定或隐藏光标的游戏（例如第一人称游戏）的Wine运行时的鼠标处理\n• Flashpoint Navigator在ARM设备上更稳定，等待慢速游戏启动的时间更长\n•现在可以在布局编辑器中正确检测到将D-Pad报告为HAT轴的游戏手柄\n•缺少应用程序文件的J2ME游戏会在您启动时再次下载\n•固定Shockwave播放器安装检查和清理\n•刷新运行时信息时，运行时更新状态不再消失\n•校验和错误现在显示预期和接收的哈希\n\n特别消息，感谢您对Swiff的所有支持，希望下一次更新会让您大吃一惊！",
-      "originalContent": "# Version 1.4.1\r\nA smaller update for 1.4.0, just to fix some urgent issues.\r\n\r\n## Features\r\n- Added support for x86_64 and ARM32 devices\r\n- Web games can now load embedded Flash, Shockwave and Unity content with Swiff runtimes\r\n- Added an \"Allow network connections\" option\r\n- Runtimes and support packs are now hosted on Swiff's infrastructure (no more download errors!)\r\n- Shockwave players can now be managed and deleted from Data management\r\n\r\n## Fixes\r\n- Improved mouse handling on Wine runtimes for games that lock or hide the cursor (Ex. first-person games)\r\n- Flashpoint Navigator is more stable on ARM devices and waits longer for slow games to start\r\n- Gamepads that report the D-Pad as a hat axis are now detected correctly in the layout editor\r\n- J2ME games that are missing their application file are downloaded again when you launch them\r\n- Fixed Shockwave player installation checks and cleanup\r\n- The runtime update status no longer disappears when refreshing the runtime info\r\n- Checksum errors now show the expected and received hash\r\n\r\nSpecial message, thanks for all the support that you guys gave to Swiff, hopefully the next update will blow your mind!",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "swiff"
-      ],
-      "contentHash": "bca7ce65672af58f04d59e03a7773eb7e6afebad623eedbac17f60e32afe27ff",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-bkemu-bkemu-1-2-3",
-      "title": "【Android更新】BkEmu bkemu-1.2.3",
-      "originalTitle": "BkEmu bkemu-1.2.3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-08T13:19:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/3cky/bkemu-android/releases/tag/bkemu-1.2.3",
-      "imageUrl": "asset://assets/emulators/bkemu.png",
-      "officialUrl": "https://github.com/3cky/bkemu-android",
-      "summary": "BkEmu 发布 Android 新版本 bkemu-1.2.3，发布日期为2026年10月08日。点击查看官方版本信息与更新说明。",
-      "content": "BkEmu 已发布 Android 最新版本 bkemu-1.2.3。\n\n发布日期：2026年10月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n• Добавлен быстрый выбор конфигурации нажатием на её название в заголовке приложения.\n• Оптимизировано отображение значков действий в заголовке приложения.\n• Исправлено открытие файлов эмулятора из файловых менеджеров.\n• Улучшена обработка некорректных BIN-файлов.\n• Добавлен перехват ошибок доступа при монтировании образов дисков.\n\nПолный список изменений: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.2...bkemu-1.2.3\n\n---\n• 通过使用工具栏配置名称添加快速配置选择。\n• 优化工具栏中动作图标的显示。\n• 文件管理者的固定打开模拟器文件。\n• 改进对不正确的BIN图像的处理。\n• 磁盘图像挂载权限错误的附加抓取。\n\n完整更改日志 : https://github.com/3cky/bkemu-android/compare/bkemu-1.2.2...bkemu-1.2.3",
-      "originalContent": "* Добавлен быстрый выбор конфигурации нажатием на её название в заголовке приложения.\n* Оптимизировано отображение значков действий в заголовке приложения.\n* Исправлено открытие файлов эмулятора из файловых менеджеров.\n* Улучшена обработка некорректных BIN-файлов.\n* Добавлен перехват ошибок доступа при монтировании образов дисков.\n\n**Полный список изменений**: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.2...bkemu-1.2.3\n\n---\n* Added quick configuration selection by tapping the toolbar configuration name.\n* Optimized displaying of action icons in the toolbar.\n* Fixed opening emulator files from file managers.\n* Improved handling of incorrect BIN images.\n* Added catching of disk image mount permissions errors.\n\n**Full Changelog**: https://github.com/3cky/bkemu-android/compare/bkemu-1.2.2...bkemu-1.2.3",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "bkemu"
-      ],
-      "contentHash": "f5a9554b8c729bfc95d6f8f016f8fa3ed3e9dc64410b5015c1971ea7669029b8",
-      "translationPending": false
-    },
-    {
       "id": "137722",
       "title": "【街机】Dolphin v2609a",
       "originalTitle": "[Console] Dolphin v2609a",
@@ -8129,30 +8463,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "8549064fcdef266a0c26583c1e26796d4f2959fb62ce2ee89876d3780030e947",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-aps3e-2-43",
-      "title": "【Android更新】aPS3e 2.43",
-      "originalTitle": "aPS3e 2.43 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-05T09:08:05Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/aenu1/aps3e/releases/tag/2.43",
-      "imageUrl": "asset://assets/emulators/aps3e.png",
-      "officialUrl": "https://github.com/aenu1/aps3e",
-      "summary": "aPS3e 发布 Android 新版本 2.43，发布日期为2026年10月05日。点击查看官方版本信息与更新说明。",
-      "content": "aPS3e 已发布 Android 最新版本 2.43。\n\n发布日期：2026年10月05日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "aPS3e 2.43 Android release.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "aps3e"
-      ],
-      "contentHash": "ef24e2c39b8680c06e9293b412774b3308ab20f4503258bf660a027ee1ecfd03",
       "translationPending": false
     },
     {
@@ -9058,30 +9368,6 @@
         "nesd"
       ],
       "contentHash": "b1ddf547412b408d1fa845292e69bafd81517a3fc6fed94c1f32c9c460948123",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-dosbox_x-dosbox-x-v2026-10-01",
-      "title": "【Android更新】DOSBox-X dosbox-x-v2026.10.01",
-      "originalTitle": "DOSBox-X dosbox-x-v2026.10.01 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-02T02:29:52Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/joncampbell123/dosbox-x/releases/tag/dosbox-x-v2026.10.01",
-      "imageUrl": "asset://assets/emulators/dosbox_x.png",
-      "officialUrl": "https://github.com/joncampbell123/dosbox-x",
-      "summary": "DOSBox-X 发布 Android 新版本 dosbox-x-v2026.10.01，发布日期为2026年10月02日。点击查看官方版本信息与更新说明。",
-      "content": "DOSBox-X 已发布 Android 最新版本 dosbox-x-v2026.10.01。\n\n发布日期：2026年10月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n2026.10.01 ：\n•修复了DOS FCB操作在执行时尝试从DEVICE_CON读取/写入的问题\n在未打开或不存在的文件上。（ cimarronm ）\n•使用-conf或-userconf时不要提示输入工作目录\n（ maron2000 ）\n•新增RPC调试器代理接口（ freeng ）\n•修复了模式开关关闭时OpenGL缩放的问题（ jpernst ）\n•全屏专有的模式设置分辨率更改。（ DieSkarrj ）\n•增加了MCP协议支持（ caiiiycuk ）\n•修复了命令行可执行参数的解析（ maron2000 ）\n•启用PS2鼠标事件（ cyberfox ）\n•固定VHD固定磁盘几何形状检测，以正确解码分区\n从MBR CHS字段启动气缸（高位未移动） ，\n拒绝格式错误的CHS/LBA分区条目，而不是产生错误的或\n越界扇区地址。（ cimarronm ）\n•添加了`VER`命令的/V参数，仅报告版本（ bushtail ）\n• DRIVE_VIRTUAL ：在驱动器Z上的文件上成功修复CHDIR ：\n(MaxFreedomPollard)\n•修复了锁定(0xF0)前缀在正常、完整和动态(dyn_x86和\ndynrec) CPU内核为以下指令添加前缀，而不是\n作为自己的无操作执行，并在80186 +上引发# UD异常，如果它\n在指令锁非法之前。（ cimarronm ）\n•固定IDE CHS气缸搬运（ caiiiycuk ）\n•修复了Voodoo OpenGL纹理缓存失效（ caiiiycuk ）\n•固定底坑计时器模拟：防止臂上浮动到未签名的饱和\n模式0/4计数超过终端计数时的架构，固定门暂停\n模式0/4延迟计算，统一模式2/3门触发处理\n符合8253/8254规范。（ cimarronm ）\n•实验：为Ubuntu 22.04/24.04/26.04添加了预编译的.deb包\n（ maron2000 ）\n•实验：增加了对x64 Linux （ maron2000 ）上AppImage的支持\n•固定PIT定时器仿真BCD写入处理，以保持打包的BCD值\n在转换为二进制之前，两字节计数器写入完好无损。（ cimarronm ）\n•启用PS1音频（ cyberfox1 ）\n•调试器：向MEMDUMP和MEMDUMPBIN添加了可选的文件名参数，\n默认为MEMDUMP.TXT和MEMDUMP.BIN. （ cimarronm ）\n•修复了GLSL和语言文件选择对话框的初始目录\n（ maron2000 ）\n• ethnet ：在初始化ethnet支持（ patcade ）之前初始化SDLNet\n•修复了枚举的重新定义，以便在Macport上为旧版macOS构建\n（ maron2000 ）\n•修复了由于MSYS2而导致的MinGW 64位构建的构建错误\n删除MinGW更新并迁移到UCRT64。（ maron2000 ）\n•新增Pro Audio Spectrum、Pro Audio Spectrum Plus和Pro Audio Spectrum 16\n支持（ firevaran ）\n•添加了Crystal CS4231编解码器，以及Windows声音系统(WSS)支持\n(cyberfox1)\n•添加了Pentium Pro x87 FCMOVcc、FCOMI/FCOMIP和FUCOMI/FUCOMIP支持\ndyn_x86和dynrec CPU内核，并固定FCOMI/FUCOMI以清除AF ，\nSF和OF. (cimarronm)\n•在现有GUS实施中添加了Gravis Ultrasound Max支持，\n基于CS4231编解码器（ cyberfox1 ）构建\n• FPU ：如果推送加载指令出现故障，则还原x87堆栈元数据\n其内存操作数。（ cimarronm ）\n• FPU ： FSTENV/FNSTENV现在在保存\n环境。（ cimarronm ）\n• Linux ：修复了图像文件打开对话框中的乱码字符（ maron2000 ）\n•在BIOS C200调用（ cyberfox1 ）上启用PS/2鼠标\n• PC-98 ：保持总线鼠标中断在保存状态（ gymzatan ）中运行\n•配置工具：修复了选择“设备”部分时的崩溃问题。\n(cimarronm)\n•为S3 ViRGE （ LeonG-ZA ）添加了3D加速\n•增加PAS/OPL量以匹配DBX增益（ cyberfox1 ）\n• FPU ：重构了实现并修复了x87状态字\n条件代码报告和使用FPU状态保存的标签单词。（ cimarronm ）\n• CoreMIDI ：修复了以数字开头的名称的设备名称匹配问题。\n（ maron2000 ）\n•已添加…",
-      "originalContent": "2026.10.01:\r\n  - Fixed DOS FCB operations trying to read/write from device_CON when performed\r\n    on an unopened or non-existent file. (cimarronm)\r\n  - Don't prompt for working directory when -conf or -userconf is used\r\n    (maron2000)\r\n  - Added RPC debugger agent interface (freeng)\r\n  - Fix OpenGL scaling when modeswitch is off (jpernst)\r\n  - Modesetting resolution change exclusive to fullscreen. (DieSkarrj)\r\n  - Added MCP Protocol support (caiiiycuk)\r\n  - Fixed parsing of command-line executable arguments (maron2000)\r\n  - Enable PS2 mouse events (cyberfox)\r\n  - Fixed VHD fixed-disk geometry detection to correctly decode the partition\r\n    start cylinder from the MBR CHS fields (the high bits were not shifted),\r\n    reject malformed CHS/LBA partition entries instead of producing a bad or\r\n    out-of-bounds sector address. (cimarronm)\r\n  - Added /V arg for `VER` command to just report the version (bushtail)\r\n  - drive_virtual: fixed CHDIR succeeding on a file on drive Z:\r\n    (MaxFreedomPollard)\r\n  - Fixed the LOCK (0xF0) prefix in the normal, full, and dynamic (dyn_x86 and\r\n    dynrec) CPU cores to prefix the following instruction instead of\r\n    executing as its own no-op, and raise a #UD exception on 80186+ if it\r\n    precedes an instruction LOCK is not legal on. (cimarronm)\r\n  - Fixed IDE CHS cylinder carry handling (caiiiycuk）\r\n  - Fixed Voodoo OpenGL texture cache invalidation (caiiiycuk）\r\n  - Fixed PIT timer emulation: prevented float-to-unsigned saturation on ARM\r\n    architectures when Mode 0/4 counts past terminal count, fixed gate pause\r\n    delay calculation for Mode 0/4, and unified Mode 2/3 gate trigger handling\r\n    per 8253/8254 specification. (cimarronm)\r\n  - Experimental: Added Pre-compiled .deb package for Ubuntu 22.04/24.04/26.04\r\n    (maron2000)\r\n  - Experimental: Added support for AppImage on x64 Linux (maron2000)\r\n  - Fixed PIT timer emulation BCD write handling to keep packed BCD values\r\n    intact across two-byte counter writes before converting to binary. (cimarronm)\r\n  - Enable PS1 audio (cyberfox1)\r\n  - Debugger: Added optional filename arguments to MEMDUMP and MEMDUMPBIN,\r\n    defaulting to MEMDUMP.TXT and MEMDUMP.BIN. (cimarronm)\r\n  - Fixed initial directories for GLSL and language file selection dialogs\r\n    (maron2000)\r\n  - ethnet: Initialize SDLNet before initializing ethnet support (patcade)\r\n  - Fixed redefinition of enums to enable building on Macports for legacy macOS\r\n    (maron2000)\r\n  - Fixed build error of MinGW 64-bit builds due to MSYS2 are gradually\r\n    dropping MinGW updates and migrate to UCRT64. (maron2000)\r\n  - Added Pro Audio Spectrum, Pro Audio Spectrum Plus and Pro Audio Spectrum 16\r\n    support (firevaran)\r\n  - Added Crystal CS4231 codec, along with a Windows Sound System (WSS) support\r\n    (cyberfox1)\r\n  - Added Pentium Pro x87 FCMOVcc, FCOMI/FCOMIP, and FUCOMI/FUCOMIP support\r\n    to the dyn_x86 and dynrec CPU cores, and fixed FCOMI/FUCOMI to clear AF,\r\n    SF, and OF. (cimarronm)\r\n  - Added Gravis Ultrasound Max support to the existing GUS implementation,\r\n    building on the CS4231 codec (cyberfox1)\r\n  - FPU: Restored x87 stack metadata if a push-and-load instruction faults on\r\n    its memory operand. (cimarronm)\r\n  - FPU: FSTENV/FNSTENV now masks all floating-point exceptions after saving the\r\n    environment. (cimarronm)\r\n  - Linux: Fixed garbled characters in image file open dialog (maron2000)\r\n  - Enabled PS/2 mouse on BIOS C200 call (cyberfox1)\r\n  - PC-98: keep the bus mouse interrupt running across save states (gymzatan)\r\n  - Configuration tool: Fixed a crash when selecting the Devices section.\r\n    (cimarronm)\r\n  - Added 3D Acceleration for S3 ViRGE (LeonG-ZA)\r\n  - Increased PAS/OPL volume to match DBX gain (cyberfox1)\r\n  - FPU: Refactored the implementation and fixed x87 status-word\r\n    condition-code reporting and tag words saved with FPU state. (cimarronm)\r\n  - CoreMIDI: Fixed device name matching for names starting with digits.\r\n    (maron2000)\r\n  - Added…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "dosbox_x"
-      ],
-      "contentHash": "342da531d8662d3b568ac82e7f478107c67322ffe61b3a7d6e08971b1a48c2d9",
       "translationPending": false
     },
     {
@@ -11416,30 +11702,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "6b91f5d1ffdf626273a1f87761d3e762f2945a298f2f7ee573eb1cf7cac997e4",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-manic_emu-2-0-1",
-      "title": "【Android更新】Manic EMU 2.0.1",
-      "originalTitle": "Manic EMU 2.0.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-09-18T09:29:42Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.1",
-      "imageUrl": "asset://assets/emulators/manic_emu.png",
-      "officialUrl": "https://github.com/Manic-EMU/ManicEMU",
-      "summary": "Manic EMU 发布 Android 新版本 2.0.1，发布日期为2026年09月18日。点击查看官方版本信息与更新说明。",
-      "content": "Manic EMU 已发布 Android 最新版本 2.0.1。\n\n发布日期：2026年09月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n•添加了WonderSwan支持\n•添加了NAOMI、Atomiswave和System SP街机支持\n•新增Flash支援\n·皮肤按钮装订\n·硬件键盘输入\n·软件键盘输入\n·触摸输入\n•内置独立JIT —无需外部调试器\n•新增慢动作\n•改进的GameCube和Wii性能\n• GameCube现在支持多光盘游戏\n•改进的Wii动作控制\n•通过触摸模拟Wii红外指针\n•通过链接添加来自其他模拟器的游戏\n•修复了一些无法运行的街机系统\n•修复了Dreamcast游戏运行太快的问题\n•修复了PSP崩溃\n•新增NDS盖打开/关闭\n•改进的旋转：通过控制中心的方向锁定，应用程序不再捕捉回纵向\n•现在可以关闭游戏内快捷方式提示\n•横向库可以禁用轮播样式\n•更平滑的横向旋转木马滚动\n• MultiDisc Helper支持更多格式\n• Symbian、Amiga和C64硬件键盘输入\n•增加了RomM支持\n·仅局域网自托管服务器\n·仅对从RomM导入的游戏进行同步\n·仅限手动同步，来自服务卡的长按菜单\n·拉取ROM、封面、元数据、手册和游戏保存\n•修复了可能在旧设备上退出应用程序的启动超时问题\n• N64现在支持大于64 MB的ROM",
-      "originalContent": "- Added WonderSwan support\r\n- Added NAOMI, Atomiswave, and System SP arcade support\r\n- Added Flash support\r\n  · Skin button binding\r\n  · Hardware keyboard input\r\n  · Software keyboard input\r\n  · Touch input\r\n- Built-in, self-contained JIT — no external debugger required\r\n- Added Slow Motion\r\n- Improved GameCube and Wii performance\r\n- GameCube now supports multi-disc games\r\n- Improved Wii motion controls\r\n- Simulate the Wii IR pointer by touch\r\n- Add games from other emulators via a link\r\n- Fixed some arcade systems that wouldn’t run\r\n- Fixed Dreamcast games running too fast\r\n- Fixed PSP crashes\r\n- Added NDS lid open/close\r\n- Improved rotation: with orientation lock on in Control Center, the app no longer snaps back to portrait\r\n- In-game shortcut tips can now be turned off\r\n- Landscape library can disable carousel style\r\n- Smoother landscape carousel scrolling\r\n- MultiDisc Helper supports more formats\r\n- Hardware keyboard input for Symbian, Amiga, and C64\r\n- Added RomM support\r\n  · LAN self-hosted servers only\r\n  · Sync only for games imported from RomM\r\n  · Manual sync only, from the service card’s long-press menu\r\n  · Pull ROMs, covers, metadata, manuals, and game saves\r\n- Fixed a launch timeout that could quit the app on older devices\r\n- N64 now supports ROMs larger than 64 MB",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "manic_emu"
-      ],
-      "contentHash": "d711baf82d28e0a1bb1ad1fe270a849660c473df5e2abfaa9828017fc5c5b581",
       "translationPending": false
     },
     {
