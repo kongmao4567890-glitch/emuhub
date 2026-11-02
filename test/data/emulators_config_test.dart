@@ -235,8 +235,8 @@ void main() {
       expect(emulator.platforms.toSet(), entry.value, reason: entry.key);
     }
 
-    expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 352);
+    expect(consoleIds.length, 125);
+    expect(emulatorIds.length, 359);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -472,7 +472,19 @@ void main() {
     final joiPlayIcon = await rootBundle.load(joiPlay.iconPath);
     expect(joiPlayIcon.lengthInBytes, greaterThan(0));
 
-    expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
+    expect(
+      consoleIds,
+      containsAll({
+        'ps5',
+        'sharp_mz',
+        'emulation_tools',
+        'switch_2',
+        'iphone_os',
+        'fantasy_console',
+        'nuon',
+        'power_mac',
+      }),
+    );
     expect(
       emulatorIds,
       containsAll({
@@ -553,6 +565,13 @@ void main() {
         'pegasus_frontend',
         'daijishou',
         'obtainium',
+        'eglantine_pc',
+        'oboromi_pc',
+        'touchhle',
+        'tic80',
+        'fake08',
+        'nuance_pc',
+        'dingusppc',
       }),
     );
 

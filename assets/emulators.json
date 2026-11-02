@@ -1,6 +1,6 @@
 {
-  "version": "3.9.0",
-  "lastUpdated": "2026-10-02",
+  "version": "3.10.0",
+  "lastUpdated": "2026-11-02",
   "consoles": [
     {
       "id": "multi_system",
@@ -8260,6 +8260,218 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        }
+      ]
+    },
+    {
+      "id": "switch_2",
+      "name": "Switch 2",
+      "vendor": "nintendo",
+      "year": 2025,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/switch_2.jpg",
+      "description": "任天堂第二代 Switch，2025 年 6 月发售，采用 NVIDIA 定制 T239 芯片，屏幕扩大至 7.9 英寸并支持 4K 电视输出、磁吸式 Joy-Con 2（可作鼠标使用）与 GameChat。2026 年下半年起，基于 Eden 的实验性模拟器首次让《马力欧赛车 世界》等商业游戏在 PC 上运行，但整体仍处于非常早期阶段。",
+      "emulators": [
+        {
+          "id": "eglantine_pc",
+          "name": "Eglantine",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Djihads80/Eglantine",
+          "playStoreId": "",
+          "website": "https://github.com/Djihads80/Eglantine",
+          "core": "Eden",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "最早公开发布构建、可运行商业游戏的 Nintendo Switch 2 模拟器之一，源自 Eden / Yuzu / Sudachi，由 Camille LaVey 发起。官方说明称《马力欧赛车 世界》在高性能 PC 上可达到接近全速，《斯普拉遁 Raiders》表现不稳定；几乎每天发布 Windows、Linux（含 ARM64 AppImage）与 macOS 预览构建，并提供 PGO 优化版本。",
+          "downloadUrl": "https://github.com/Djihads80/Eglantine/releases",
+          "devUrl": "https://github.com/Djihads80/Eglantine/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/eglantine_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux（x86_64 或 ARM64）/ macOS（Apple Silicon）；需高性能 CPU 与支持 Vulkan 1.3 的显卡，并自备合法转储的密钥与固件"
+        },
+        {
+          "id": "oboromi_pc",
+          "name": "oboromi",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/0xNikilite/oboromi",
+          "playStoreId": "",
+          "website": "https://github.com/0xNikilite/oboromi",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "以 Rust 编写的 Switch 2 模拟器概念验证项目，自研面向 T239 的 ARMv9 CPU 模拟（新版本接入 dynarmic）与 NVIDIA SM86 GPU 实现，附带 Qt 6 调试前端；目前尚不能运行商业游戏或固件，适合关注底层研究进展。",
+          "downloadUrl": "https://github.com/0xNikilite/oboromi/releases",
+          "devUrl": "https://github.com/0xNikilite/oboromi/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/oboromi_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS（通用二进制）"
+        }
+      ]
+    },
+    {
+      "id": "iphone_os",
+      "name": "iPhone OS / 早期 iOS",
+      "vendor": "apple",
+      "year": 2007,
+      "icon": "📱",
+      "imagePath": "assets/consoles/iphone_os.jpg",
+      "description": "苹果 iPhone、iPod touch 与初代 iPad 使用的 iPhone OS 2.x–iOS 4 时代 32 位应用平台。随着官方停止支持，大量早期 App Store 游戏已无法在新设备上运行，相关模拟器以重新实现系统框架的方式保存这些作品。",
+      "emulators": [
+        {
+          "id": "touchhle",
+          "name": "touchHLE",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/touchHLE/touchHLE",
+          "playStoreId": "",
+          "website": "https://touchhle.org/",
+          "core": "",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "以 Rust 编写的早期 iOS 应用高层模拟器，不模拟硬件而是重新实现 UIKit、OpenGL ES 等系统框架，可运行 iPhone OS 2.x–iOS 4.0 的部分 32 位游戏，并支持《Asphalt 4》《N.O.V.A.》的本地 Wi-Fi 联机；需自备已解密的 IPA，兼容性可在官方 appdb 查询。官方发布 Android、Windows 与 macOS 构建。",
+          "downloadUrl": "https://github.com/touchHLE/touchHLE/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/touchhle.png",
+          "platforms": [
+            "android",
+            "windows",
+            "macos"
+          ],
+          "desktopRequirements": "x64 Windows 或 macOS（Apple Silicon 通过 Rosetta 运行 x64 版本）；Android 版需 ARM64"
+        }
+      ]
+    },
+    {
+      "id": "fantasy_console",
+      "name": "幻想主机 / Fantasy Console",
+      "vendor": "various",
+      "year": 2015,
+      "icon": "👾",
+      "imagePath": "assets/consoles/fantasy_console.jpg",
+      "description": "以 PICO-8、TIC-80 为代表的“虚拟游戏机”：刻意限制分辨率、色板、音频通道和卡带容量，内置代码、像素画、地图与音乐编辑器，玩家可直接打开卡带查看源代码。itch.io 与官方社区已积累数万款小游戏。",
+      "emulators": [
+        {
+          "id": "tic80",
+          "name": "TIC-80",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/nesbox/TIC-80",
+          "playStoreId": "",
+          "website": "https://tic80.com/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "7.0",
+          "description": "开源的免费幻想主机，240×136 分辨率、16 色，支持 Lua、Moonscript、JavaScript、Ruby、Wren、Fennel、Squirrel、Janet、Python 等多种语言，内置代码、精灵、地图、音效与音乐编辑器；官方同时发布 Android、Windows、Linux（含 ARM64）、macOS、3DS、Switch 与网页版。",
+          "downloadUrl": "https://github.com/nesbox/TIC-80/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/tic80.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows / Linux（x86_64 或 ARM64）/ macOS（Intel 或 Apple Silicon）"
+        },
+        {
+          "id": "fake08",
+          "name": "FAKE-08",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/jtothebell/fake-08",
+          "playStoreId": "",
+          "website": "https://github.com/jtothebell/fake-08",
+          "core": "Libretro",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "开源的 PICO-8 卡带播放器（C++ 重写，不含编辑器），可运行大多数 .p8/.p8.png 卡带，主要面向 3DS、Switch、Vita、Wii U 与各类掌机，并提供可在 Android RetroArch 中加载的 Libretro 核心；更新较少但仍是 PICO-8 在移动端最常用的方案之一。",
+          "downloadUrl": "https://github.com/jtothebell/fake-08/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/fake08.png",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nuon",
+      "name": "NUON",
+      "vendor": "vm_labs",
+      "year": 2000,
+      "icon": "📀",
+      "imagePath": "assets/consoles/nuon.jpg",
+      "description": "VM Labs 于 2000 年推出的多媒体芯片平台，被集成进三星、东芝等品牌的 DVD 播放器以及 Motorola 机顶盒中，可运行《Tempest 3000》《Iron Soldier 3》等少量专属游戏，并提供 DVD 视频增强功能。",
+      "emulators": [
+        {
+          "id": "nuance_pc",
+          "name": "Nuance Resurrection",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/andkrau/NuanceResurrection",
+          "playStoreId": "",
+          "website": "https://github.com/andkrau/NuanceResurrection",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "在 Mike Perry 原版 Nuance 基础上继续开发的 NUON 模拟器，已能运行《Tempest 3000》《Merlin Racing》等大部分商业游戏及自制软件（不追求周期级精度，部分游戏可能有同步问题）；0.6.7 起改用 miniaudio、新增 Linux 移植和 Libretro 核心（官方二进制仅提供 Windows 版）。",
+          "downloadUrl": "https://github.com/andkrau/NuanceResurrection/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/nuance_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows 7+，需支持 SSE2 的 CPU 与支持 GLSL 的 OpenGL 1.5 显卡"
+        }
+      ]
+    },
+    {
+      "id": "power_mac",
+      "name": "Power Macintosh",
+      "vendor": "apple",
+      "year": 1994,
+      "icon": "🖥️",
+      "imagePath": "assets/consoles/power_mac.jpg",
+      "description": "苹果 1994 年起推出的 PowerPC 架构 Macintosh 系列，从 Power Mac 6100 到 G3/G4，运行经典 Mac OS 7.5–9 与早期 Mac OS X，拥有大量经典 Mac 游戏与软件。",
+      "emulators": [
+        {
+          "id": "dingusppc",
+          "name": "DingusPPC",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/dingusdev/dingusppc",
+          "playStoreId": "",
+          "website": "https://github.com/dingusdev/dingusppc",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "跨平台的 PowerPC Macintosh 低层模拟器，覆盖多款 Old World / 早期 New World PowerPC Mac 以及 Apple Pippin，其中 Power Mac 6100、7500 与 G3 Beige 支持最完善，可使用原始 ROM 启动经典 Mac OS；仍处于 Alpha 阶段，官方提供 Windows、Linux 与 macOS（Intel / Apple Silicon）构建。",
+          "downloadUrl": "https://github.com/dingusdev/dingusppc/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/dingusppc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS；需自备对应机型的 Mac ROM"
         }
       ]
     },
