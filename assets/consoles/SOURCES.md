@@ -74,3 +74,15 @@ The images below were retrieved from Wikimedia Commons and normalized to 800×60
 | Fairchild Channel F | `channel_f.jpg` | [Fairchild-Channel-F-System-II-Console.jpg](https://commons.wikimedia.org/wiki/File:Fairchild-Channel-F-System-II-Console.jpg) | Public domain | Evan-Amos |
 | Apple IIGS | `apple_iigs.jpg` | [Apple IIgs 001 (transparent background).png](https://commons.wikimedia.org/wiki/File:Apple_IIgs_001_(transparent_background).png) | Public domain | Cbmeeks (Modifications as described below made by Ubcule |
 | BBC Micro | `bbc_micro.jpg` | [BBC Micro Front Restored.jpg](https://commons.wikimedia.org/wiki/File:BBC_Micro_Front_Restored.jpg) | Public domain | BBC_Micro.jpeg: Stuart Brady derivative work: Ubcule (talk) |
+
+## Original illustrations
+
+The following images are simplified vector illustrations drawn for EmuHub (no third-party artwork, logos or photographs are used). They may be replaced with photographs later.
+
+| Console | Asset |
+|---|---|
+| Nintendo Switch 2 | `switch_2.jpg` |
+| iPhone OS / 早期 iOS | `iphone_os.jpg` |
+| 幻想主机 / Fantasy Console | `fantasy_console.jpg` |
+| NUON | `nuon.jpg` |
+| Power Macintosh | `power_mac.jpg` |

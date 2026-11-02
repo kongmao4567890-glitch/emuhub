@@ -235,8 +235,8 @@ void main() {
       expect(emulator.platforms.toSet(), entry.value, reason: entry.key);
     }
 
-    expect(consoleIds.length, 120);
-    expect(emulatorIds.length, 352);
+    expect(consoleIds.length, 125);
+    expect(emulatorIds.length, 386);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -472,7 +472,19 @@ void main() {
     final joiPlayIcon = await rootBundle.load(joiPlay.iconPath);
     expect(joiPlayIcon.lengthInBytes, greaterThan(0));
 
-    expect(consoleIds, containsAll({'ps5', 'sharp_mz', 'emulation_tools'}));
+    expect(
+      consoleIds,
+      containsAll({
+        'ps5',
+        'sharp_mz',
+        'emulation_tools',
+        'switch_2',
+        'iphone_os',
+        'fantasy_console',
+        'nuon',
+        'power_mac',
+      }),
+    );
     expect(
       emulatorIds,
       containsAll({
@@ -553,6 +565,40 @@ void main() {
         'pegasus_frontend',
         'daijishou',
         'obtainium',
+        'eglantine_pc',
+        'oboromi_pc',
+        'touchhle',
+        'tic80',
+        'fake08',
+        'nuance_pc',
+        'dingusppc',
+        'geargrafx_pc',
+        'geargrafx_sgx_pc',
+        'gearlynx_pc',
+        'jgenesis_pc',
+        'amiberry_pc',
+        'vamiga_mac',
+        'virtualc64_mac',
+        'vice_pc',
+        'gopher2600_pc',
+        'clock_signal_mac',
+        'tsugaru_pc',
+        'b2_bbc_pc',
+        'vcc_coco_pc',
+        'freej2me_plus',
+        'lightspark_pc',
+        'tetanes_pc',
+        'ample_mac',
+        'lemon_android',
+        'hakux',
+        'x1box',
+        'ps3native',
+        'winlator_ludashi',
+        'flycast_dojo_pc',
+        'primehack_pc',
+        'slippi_pc',
+        'dsperate',
+        'k11mch1_drivers',
       }),
     );
 

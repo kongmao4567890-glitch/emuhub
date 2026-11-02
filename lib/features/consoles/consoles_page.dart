@@ -97,6 +97,8 @@ String vendorDisplayName(String vendor) {
       return 'Emerson';
     case 'fairchild':
       return 'Fairchild';
+    case 'vm_labs':
+      return 'VM Labs';
     case 'various':
       return '其他';
     default:
