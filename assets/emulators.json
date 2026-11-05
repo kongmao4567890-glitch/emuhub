@@ -1,6 +1,6 @@
 {
-  "version": "3.10.0",
-  "lastUpdated": "2026-11-02",
+  "version": "3.10.1",
+  "lastUpdated": "2026-11-05",
   "consoles": [
     {
       "id": "multi_system",
@@ -8902,6 +8902,90 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS（通用二进制）"
+        },
+        {
+          "id": "eden_nx2_pc",
+          "name": "Eden NX2",
+          "openSource": true,
+          "sourceType": "forgejo",
+          "sourceUrl": "https://git.eden-emu.dev/Takoroka/eden-nx2",
+          "playStoreId": "",
+          "website": "https://git.eden-emu.dev/Takoroka/eden-nx2",
+          "core": "Eden",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "开发者 Takoroka 在 Eden 自建代码托管上发布的 Eden 实验分支，2026 年 10 月 29 日公开的预览版是首批可在 PC 上启动 Switch 2 商业游戏的构建之一，可启动《马力欧赛车 世界》《大金刚 蕉力全开》等，但部分着色器未实现导致模型缺失、卡顿和崩溃较多；Eglantine 等项目均合入了它的 Switch 2 代码。非 Eden 官方团队项目。",
+          "downloadUrl": "https://git.eden-emu.dev/Takoroka/eden-nx2/releases",
+          "devUrl": "https://git.eden-emu.dev/Takoroka/eden-nx2/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/eden.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows 10/11 64 位，需 MSVC x64 运行库、显存 8GB 以上的 Vulkan 显卡与 16GB 以上内存"
+        },
+        {
+          "id": "eden_sx2a",
+          "name": "Eden SX2A (Android)",
+          "openSource": true,
+          "sourceType": "forgejo",
+          "sourceUrl": "https://git.eden-emu.dev/moceure/eden-nx2-android",
+          "playStoreId": "",
+          "website": "https://git.eden-emu.dev/moceure/eden-nx2-android",
+          "core": "Eden NX2",
+          "compatibility": "low",
+          "minAndroid": "10.0",
+          "description": "社区开发者 moceure 制作的非官方 Android 版 Switch 2 模拟器，基于 Eden NX2 / Eden-NS2 并内置 Turnip 驱动，可在高端骁龙手机上尝试运行 Switch 2 游戏；作者已于 2026 年 11 月 2 日发布最终版 v0.3.2 并停止维护，同时说明代码大量借助 AI 编写、仅在单台手机测试。Eden 团队不提供支持。",
+          "downloadUrl": "https://git.eden-emu.dev/moceure/eden-nx2-android/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/eden.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "banana_native",
+          "name": "Banana Native",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/moceure/BananaNative",
+          "playStoreId": "",
+          "website": "https://github.com/moceure/BananaNative",
+          "core": "nxnative",
+          "compatibility": "low",
+          "minAndroid": "13.0",
+          "description": "Eden SX2A 作者的后续项目：nxnative 的 Android 移植，不进行系统模拟，而是让游戏代码直接在手机 CPU 上运行、通过小型宿主处理系统调用，并把 NVN 图形转译为 Vulkan。目前仅支持极少数特定版本的游戏，需在电脑上预处理游戏目录后拷入手机，属于非官方实验项目。",
+          "downloadUrl": "https://github.com/moceure/BananaNative/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/banana_native.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "eglantine_zortos_pc",
+          "name": "Eglantine (Zortos 分支)",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/zortos293/Eglantine",
+          "playStoreId": "",
+          "website": "https://github.com/zortos293/Eglantine",
+          "core": "Eglantine / Eden",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "Zortos 维护的 Eglantine 非官方分支，在上游基础上加入内存泄漏修复、更多游戏可启动以及图形与贴图修正，提供 Windows（含 PGO 版）、Linux AppImage 与 macOS Apple Silicon 预览构建。",
+          "downloadUrl": "https://github.com/zortos293/Eglantine/releases",
+          "devUrl": "https://github.com/zortos293/Eglantine/releases",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/eglantine_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux / macOS（Apple Silicon）；需高性能 CPU 与支持 Vulkan 的显卡，并自备合法转储的密钥与固件"
         }
       ]
     },
