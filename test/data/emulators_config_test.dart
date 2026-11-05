@@ -236,7 +236,7 @@ void main() {
     }
 
     expect(consoleIds.length, 125);
-    expect(emulatorIds.length, 386);
+    expect(emulatorIds.length, 390);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -633,6 +633,24 @@ void main() {
         'kytyplus_pc',
         'kyty_ps5_pc',
         'anyps5_pc',
+      }),
+    );
+
+    // Switch 2 模拟仍处于早期阶段，保留多个独立来源（PC 与 Android）。
+    final switch2Ids = config.consoles
+        .singleWhere((console) => console.id == 'switch_2')
+        .emulators
+        .map((emulator) => emulator.id)
+        .toSet();
+    expect(
+      switch2Ids,
+      containsAll({
+        'eglantine_pc',
+        'oboromi_pc',
+        'eden_nx2_pc',
+        'eden_sx2a',
+        'banana_native',
+        'eglantine_zortos_pc',
       }),
     );
 
