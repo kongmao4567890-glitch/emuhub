@@ -291,6 +291,23 @@ void main() {
         isNull);
   });
 
+  test('skips source-only entries without counting them as failures',
+      () async {
+    final released = _emulator('emu-a');
+    final sourceOnly = _emulator('emu-src').copyWith(sourceType: 'source');
+    adapter.version = '1.0.0';
+
+    final result = await service.checkAll([released, sourceOnly]);
+
+    expect(result.checked, 1);
+    expect(result.failed, isEmpty);
+    expect(await service.checkOne(sourceOnly), isNull);
+    expect(
+      await database.cachedVersionsDao.getCachedVersion(sourceOnly.id),
+      isNull,
+    );
+  });
+
   test('deduplicates identical network sources during a batch check', () async {
     final first = _emulator('emu-a');
     final second = _emulator('emu-b');

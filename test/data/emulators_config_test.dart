@@ -25,6 +25,7 @@ void main() {
       'forgejo',
       'playstore',
       'website',
+      'source',
     };
     const supportedPlatforms = {
       'android',
@@ -236,7 +237,7 @@ void main() {
     }
 
     expect(consoleIds.length, 125);
-    expect(emulatorIds.length, 390);
+    expect(emulatorIds.length, 391);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -651,8 +652,17 @@ void main() {
         'eden_sx2a',
         'banana_native',
         'eglantine_zortos_pc',
+        'eden_ns2_pc',
       }),
     );
+
+    // 仅源码条目不参与更新检查，必须能直接打开源码仓库。
+    for (final emulator in config.consoles.expand((c) => c.emulators)) {
+      if (!emulator.isSourceOnly) continue;
+      expect(emulator.sourceUrl, isNotEmpty, reason: emulator.id);
+      expect(emulator.devUrl, isEmpty, reason: emulator.id);
+      expect(emulator.nightlyUrl, isEmpty, reason: emulator.id);
+    }
 
     final pcEmulators = config.consoles
         .expand((console) => console.emulators)

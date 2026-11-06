@@ -4,7 +4,7 @@
 
 ## 功能特性
 
-- **机种库**：125 个机种分类、390 条模拟器/核心/工具记录，覆盖 Atari、FC、SFC、MD、PS、Xbox、Switch、Switch 2、PS5、Sharp MZ、NUON、幻想主机 等机种
+- **机种库**：125 个机种分类、391 条模拟器/核心/工具记录，覆盖 Atari、FC、SFC、MD、PS、Xbox、Switch、Switch 2、PS5、Sharp MZ、NUON、幻想主机 等机种
 - **运行平台筛选**：按 Android、Windows、Linux、macOS 浏览模拟器，PC 条目展示对应系统要求
 - **平台标签审计**：以官方 README 和 Release 构建资产为依据同步运行平台，避免桌面版本漏标
 - **实用工具**：收录游戏库前端、ROM 管理、控制器映射和一体化模拟器套件
@@ -28,6 +28,7 @@ App 直接从官方数据源检测版本更新（无后端）：
 | Forgejo Releases | Eden、Ryubing 等 | Forgejo/Gitea Releases API，支持独立 Canary/每夜仓库 |
 | Google Play | .emu 系列、ePSXe、FPse、John 系列、Pizza Boy 等 | 解析 Play Store 页面版本号 |
 | 官网 | YabaSanshiro 等无 GitHub 的项目 | 解析官网下载页版本号 |
+| 仅源码 | Eden-NS2 等尚无发布版本的项目 | 不检查更新，详情页直接打开源码仓库（需自行编译） |
 
 ## 技术栈
 

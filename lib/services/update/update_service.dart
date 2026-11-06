@@ -164,7 +164,11 @@ class UpdateService {
       }
     }
 
-    final orderedEmulators = List<Emulator>.of(emulators)
+    // 仅源码（source）条目没有可下载的发布版本，跳过网络检查，既不计入
+    // 已检查也不计入失败，避免每轮检查都把它们显示为失败。
+    final orderedEmulators = emulators
+        .where((emulator) => !emulator.isSourceOnly)
+        .toList()
       ..sort((a, b) {
         int priority(Emulator emulator) {
           if (catalogIds.contains(emulator.id) &&
@@ -220,8 +224,11 @@ class UpdateService {
       }
       onProgress?.call(
         CheckProgress(
-          completed: min((batchIndex + 1) * _maxConcurrency, emulators.length),
-          total: emulators.length,
+          completed: min(
+            (batchIndex + 1) * _maxConcurrency,
+            orderedEmulators.length,
+          ),
+          total: orderedEmulators.length,
         ),
       );
     }
@@ -238,6 +245,7 @@ class UpdateService {
   ///
   /// 返回 `null` 表示抓取失败或无可用版本。
   Future<VersionInfo?> checkOne(Emulator emulator) async {
+    if (emulator.isSourceOnly) return null;
     final outcome = await _checkOneInternal(
       emulator,
       includeDetails: true,

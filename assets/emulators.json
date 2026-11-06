@@ -1,6 +1,6 @@
 {
-  "version": "3.10.1",
-  "lastUpdated": "2026-11-05",
+  "version": "3.10.2",
+  "lastUpdated": "2026-11-06",
   "consoles": [
     {
       "id": "multi_system",
@@ -8986,6 +8986,28 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS（Apple Silicon）；需高性能 CPU 与支持 Vulkan 的显卡，并自备合法转储的密钥与固件"
+        },
+        {
+          "id": "eden_ns2_pc",
+          "name": "Eden-NS2",
+          "openSource": true,
+          "sourceType": "source",
+          "sourceUrl": "https://github.com/0x2593/Eden-NS2",
+          "playStoreId": "",
+          "website": "https://github.com/0x2593/Eden-NS2",
+          "core": "Eden",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "面向 Switch 2 的 Eden 分支（GPL-3.0），由 0x2593 维护并公开完整源码。README 列出《大金刚 蕉力全开》《马力欧赛车 世界》可游玩但部分场景较慢，《宝可梦 Pokopia》《斯普拉遁 Raiders》可稳定 60 帧，《Switch 2 欢迎之旅》可启动但很慢。项目目前没有发布可下载的构建，需按 README 用 MSYS2 MINGW64 自行编译 Windows 版（Linux 编译未经测试）；GitHub 上的 maoemao/eden-ns2 等仓库是它的原样复刻。",
+          "downloadUrl": "https://github.com/0x2593/Eden-NS2",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/eden.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "需自行编译：Windows 使用 MSYS2 MINGW64 + CMake + Ninja，Linux 编译尚未测试；建议 Vulkan 显卡、12GB 内存布局，并自备合法转储的游戏、密钥与固件"
         }
       ]
     },
