@@ -211,6 +211,8 @@ class AppTheme {
         return 'Google Play';
       case 'website':
         return '官网';
+      case 'source':
+        return '仅源码';
       default:
         return '未知来源';
     }

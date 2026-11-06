@@ -147,7 +147,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                       children: [
                         _buildHeaderInfo(context, console, emulator, cached),
                         const SizedBox(height: 20),
-                        _buildVersionSection(context, cached),
+                        _buildVersionSection(context, emulator, cached),
                         const SizedBox(height: 20),
                         _buildAttributes(context, emulator),
                         const SizedBox(height: 20),
@@ -310,7 +310,11 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
   }
 
   /// 版本信息区域：当前版本 + 发布日期 + 更新说明。
-  Widget _buildVersionSection(BuildContext context, CachedVersion? cached) {
+  Widget _buildVersionSection(
+    BuildContext context,
+    Emulator emulator,
+    CachedVersion? cached,
+  ) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
     return Column(
@@ -328,9 +332,14 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
                     children: [
                       Icon(Icons.history, color: cs.onSurfaceVariant),
                       const SizedBox(width: 12),
-                      Text('暂无版本信息，请检查更新',
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                              color: cs.onSurfaceVariant)),
+                      Expanded(
+                        child: Text(
+                            emulator.isSourceOnly
+                                ? '该项目仅公开源码，暂无官方发布版本，需自行编译'
+                                : '暂无版本信息，请检查更新',
+                            style: theme.textTheme.bodyMedium?.copyWith(
+                                color: cs.onSurfaceVariant)),
+                      ),
                     ],
                   )
                 : Column(
@@ -758,6 +767,10 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         if (emulator.website.isEmpty && emulator.sourceUrl.isEmpty) return;
         url = emulator.website.isNotEmpty ? emulator.website : emulator.sourceUrl;
         break;
+      case 'source':
+        if (emulator.sourceUrl.isEmpty) return;
+        url = emulator.sourceUrl;
+        break;
       default:
         return;
     }
@@ -781,6 +794,7 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
       case 'github':
       case 'gitlab':
       case 'forgejo':
+      case 'source':
         return emulator.sourceUrl.isNotEmpty;
       case 'playstore':
         return emulator.playStoreId.isNotEmpty;
@@ -815,6 +829,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return Icons.shop;
       case 'website':
         return Icons.language;
+      case 'source':
+        return Icons.code;
       default:
         return Icons.download;
     }
@@ -832,6 +848,8 @@ class _EmulatorDetailPageState extends ConsumerState<EmulatorDetailPage> {
         return 'Google Play 下载';
       case 'website':
         return '官网下载';
+      case 'source':
+        return '查看源码（需自行编译）';
       default:
         return '下载';
     }
