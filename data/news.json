@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T19:41:58.912503Z",
+  "generatedAt": "2026-11-07T06:33:46.910253Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,103 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-duckstation-latest",
+      "title": "【Android更新】DuckStation latest",
+      "originalTitle": "DuckStation latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-07T03:09:11Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 latest，发布日期为2026年11月07日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 8962d8436 GPU/HW ：添加缺失的深度清除日志\n• 20916bd89 FullscreenUI ：在释放时激活切换按钮，而不是按下\n• c3b58f256 FullscreenUI ：支持惯性拖动/滑动滚动\n• 968d20a41 dep/imgui ：在出现窗口时不要平滑滚动请求\n• fd8bcdcf1 FullscreenUI ：修复ForceKeyNavEnabled ()猛击游戏手柄导航源\n• 7d64f8223 FullscreenUI ：在打开的对话框检查中包括目录选择器\n• 414d8f204 FullscreenUI ：关闭时清除所有对话框\n• 49a2ff938 FullscreenUI ：修复不确定的进度条扫描范围\n• aa9916b88 FullscreenUI ：避免下拉宽度中的倒置std:: clamp ()边界\n• f4fe9de23 FullscreenUI ：在MenuButtonFrame () overload中传递按钮标志\n• ae4658a7b FullscreenUI ：在BeginBlurWindow ()中通过p_open\n• b73f8b273 FullscreenUI ：隐藏时保持水平菜单/侧边栏状态平衡\n• 9bbf341be FullscreenUI ：调用前复制/移动可检查选择对话框回调\n• 92a7758b5 CDImageCHD ：使用生成的子通道Q进行虚拟预间隙\n• b2b68c3ce CDImageCCD ：两次修复包括预间隙在内的LBA计数\n• cde17ace5 CDImageCueSheet ：修复单文件预间隙和LBA计数\n• 0b5b8774c Common ：添加PackedOptionalArray\n• 296d48a67 ImGuiManager ：确保DeltaTime永远不会为负\n• dff25dbc3 FullscreenUI ：改进拖动滚动\n• 0d1b014cc ImGuiManager ：不要将鼠标指针悬停在触摸屏上\n• 5d4772417系统：同步到主机刷新率是控制平台的倍数\n• e48f86ab9 SDLInputSource ：修复传感器启用提前退货\n• 84e1db587 FullscreenUI ：修复清除绑定按钮清除所有\n• dc623cafe西班牙语（西班牙）翻译更新2026/10/25 (# 3814)\n• f78ecb81c设置：修复垂直同步/帧起搏帮助文本\n• ae250ebeb D3D12设备：在独家全屏中使用可等待的帧延迟\n• 3c81431b4 Qt ：使用X11服务器尺寸作为表面尺寸\n• 6cd67d7ef Qt ：根据分数刻度-v1的圆形Wayland表面尺寸\n• 4b524740d OpenGLContextEGL ：不查询表面尺寸\n• 60a5c21f4 GPU设备：报告交换链从当前调用调整大小\n• 1e7b6d796 Qt ：接受wayland-egl/wayland-brcm平台名称\n• 360a35ed1 Qt ：删除sync ()/processEvents () hack\n• ae7895dae Qt ：从配置事件中获取X11窗口大小更改\n• 8c68d4778改进瑞典顶点术语(# 3815)\n• 16be09afe Qt ：跳过在Windows 10上设置圆角状态\n• e7efd4261 Qt ：从最小化恢复时重新检查表面尺寸\n• a4f3e5ff7 VideoThread ：忽略零大小的渲染窗口调整大小\n• 076b133a6 CocoaTools ：使用原生显示模式获得实时缩放系数\n• 5d936496a系统：如果可以廉价切换，则在快进时禁用vsync\n• 637ff514c VulkanSwapChain ：无需重新创建即可在FIFO和立即之间切换\n• 2a0e92fe3 FullscreenUI ：修复成就禁用时的0分显示\n• a78082b8c Qt ：将描述添加到后期处理页面\n• e0f6fa82b Qt ：删除“后处理链”分组框\n• 0310f59ac XInputSource ：定期轮询断开的插槽\n• e41bcd36d InputManager ：设备通知修复\n• f591ef20e Common ：修复缩小DynamicHeapArray时的堆溢出\n• 526b4a128澄清瑞典自动设置说明(# 3816)\n• d38183754提高瑞典语翻译质量(# 3817)\n• eb68a7d22 AudioStream ：公开ApplyVolume ()\n• cf5890e26 SoundEffectManager ：添加音量控制\n• 3171f3be9秘籍：添加区块写入代码类型\n• 8cc2ef4a7脚本：将psx-exe添加到ELF转换器\n• 25ff3364c秘籍：将常量/匹配写入的运行合并为矢量化块写入\n• 94cdf91c0 Qt ：更新机器翻译\n• 831fef0e3 Qt ：修复从基本ini重置音频设置清除\n• e700391c4 Qt ：将PromptForAddress ()重命名为PromptForHexValue ()\n• 3f8df8b78 Qt ：允许在调试器中编辑CPU寄存器\n• fc48940aa CPU ：仅使用BIOS TTY日志记录在解释器中拦截TTY系统调用\n• ca184adb3系统：在游戏开始之前，请勿应用作弊或更新成就\n• b292b8477脚本：回归测试UI\n• 09f61b…",
+      "originalContent": "## Commits\r\n- 8962d8436 GPU/HW: Add missing logging of depth clears\r\n- 20916bd89 FullscreenUI: Activate toggle buttons on release instead of press\r\n- c3b58f256 FullscreenUI: Support drag/swipe scrolling with inertia\r\n- 968d20a41 dep/imgui: Don't smooth scroll requests made while window is appearing\r\n- fd8bcdcf1 FullscreenUI: Fix ForceKeyNavEnabled() clobbering gamepad nav source\r\n- 7d64f8223 FullscreenUI: Include directory selector in open dialog checks\r\n- 414d8f204 FullscreenUI: Clear all dialogs on shutdown\r\n- 49a2ff938 FullscreenUI: Fix indeterminate progress bar sweep range\r\n- aa9916b88 FullscreenUI: Avoid inverted std::clamp() bounds in dropdown width\r\n- f4fe9de23 FullscreenUI: Pass button flags through in MenuButtonFrame() overload\r\n- ae4658a7b FullscreenUI: Pass p_open through in BeginBlurWindow()\r\n- b73f8b273 FullscreenUI: Keep horizontal menu/sidebar state balanced when hidden\r\n- 9bbf341be FullscreenUI: Copy/move checkable choice dialog callback before invoking\r\n- 92a7758b5 CDImageCHD: Use generated subchannel Q for virtual pregaps\r\n- b2b68c3ce CDImageCCD: Fix LBA count including pregaps twice\r\n- cde17ace5 CDImageCueSheet: Fix single-file pregap and LBA count\r\n- 0b5b8774c Common: Add PackedOptionalArray\r\n- 296d48a67 ImGuiManager: Ensure DeltaTime can never be negative\r\n- dff25dbc3 FullscreenUI: Improve drag scrolling\r\n- 0d1b014cc ImGuiManager: Don't hover pointer for touchscreens\r\n- 5d4772417 System: Sync to host refresh rates that are a multiple of the console's\r\n- e48f86ab9 SDLInputSource: Fix sensor enable early return\r\n- 84e1db587 FullscreenUI: Fix clear binding button clearing all\r\n- dc623cafe Spanish (Spain) translation update 2026/10/25 (#3814)\r\n- f78ecb81c Settings: Fix VSync/frame pacing help text\r\n- ae250ebeb D3D12Device: Use frame latency waitable in exclusive fullscreen\r\n- 3c81431b4 Qt: Use X11 server size for surface size\r\n- 6cd67d7ef Qt: Round Wayland surface size as per fractional-scale-v1\r\n- 4b524740d OpenGLContextEGL: Don't query surface size\r\n- 60a5c21f4 GPUDevice: Report swap chain resizes from present calls\r\n- 1e7b6d796 Qt: Accept wayland-egl/wayland-brcm platform names\r\n- 360a35ed1 Qt: Remove sync()/processEvents() hack\r\n- ae7895dae Qt: Pick up X11 window size changes from configure events\r\n- 8c68d4778 Improve Swedish vertex terminology (#3815)\r\n- 16be09afe Qt: Skip setting rounded corner state on Windows 10\r\n- e7efd4261 Qt: Recheck surface size when restoring from minimized\r\n- a4f3e5ff7 VideoThread: Ignore zero-sized render window resizes\r\n- 076b133a6 CocoaTools: Use native display mode for real scaling factor\r\n- 5d936496a System: Disable vsync while fast forwarding if it can be switched cheaply\r\n- 637ff514c VulkanSwapChain: Switch between FIFO and immediate without recreating\r\n- 2a0e92fe3 FullscreenUI: Fix 0 point display when achievements disabled\r\n- a78082b8c Qt: Add descriptions to post-processing page\r\n- e0f6fa82b Qt: Remove 'Post Processing Chain' groupbox\r\n- 0310f59ac XInputSource: Poll disconnected slots periodically\r\n- e41bcd36d InputManager: Device notification fixes\r\n- f591ef20e Common: Fix heap overflow when shrinking DynamicHeapArray\r\n- 526b4a128 Clarify Swedish automatic setting descriptions (#3816)\r\n- d38183754 Improve Swedish translation quality (#3817)\r\n- eb68a7d22 AudioStream: Make ApplyVolume() public\r\n- cf5890e26 SoundEffectManager: Add volume control\r\n- 3171f3be9 Cheats: Add block write code types\r\n- 8cc2ef4a7 Scripts: Add psx-exe to elf converter\r\n- 25ff3364c Cheats: Merge runs of constant/match writes into vectorised block writes\r\n- 94cdf91c0 Qt: Update machine translations\r\n- 831fef0e3 Qt: Fix reset audio settings clearing from base ini\r\n- e700391c4 Qt: Rename PromptForAddress() to PromptForHexValue()\r\n- 3f8df8b78 Qt: Allow editing CPU registers in debugger\r\n- fc48940aa CPU: Only intercept TTY syscalls in interpreter with BIOS TTY logging\r\n- ca184adb3 System: Don't apply cheats or update achievements until the game starts\r\n- b292b8477 Scripts: Regression test UI\r\n- 09f61b…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "95c82708c8b330b042cbd224ceff1595b0f9f759e60f1aaecbf2916e4a69ffe1",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-07T01:23:46Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年11月07日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月07日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `5dafd2f` — `v3.11.0` (`develop`)\n\n提交：`5dafd2f`（https://github.com/libretro/virtualjaguar-libretro/commit/5dafd2f4d5bbceccca07947c5c22795786409566）\n构建时间：2026-11-07 01:23 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/42319605490）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了全部24个目标;它没有通过测试套件或任何人工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n快速下载\n\n平台: Standone app: Libretro核心软件\nmacOS:通用应用程序 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip）: 苹果硅（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib） 英特尔（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib）\nWindows x64 / x86: x64 安装器 (. exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe） * x64便携式(.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip）: 64 位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll） 32位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll）\nWindows ARM64: Installer (.exe) (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe） 便携式(.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip）：—\nLinux x86-64 / x86: AppImage (64- bit) (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage） * .deb(64位)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb） 平板( 64位)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak）: 64 位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so） 32位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so）\nLinux ARM64: 附录（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage） • 辩论（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb） 平板电脑（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so）\n安卓: -:ARM64 (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so） · ARMv7（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so） · x86-64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so） · x86（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so）\n| iOS / tvOS | — | iOS（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-ios-arm64.dylib） · [tvOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/v…",
+      "originalContent": "### Nightly `5dafd2f` — `v3.11.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`5dafd2f`](https://github.com/libretro/virtualjaguar-libretro/commit/5dafd2f4d5bbceccca07947c5c22795786409566) |\n| **Built** | 2026-11-07 01:23 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/42319605490) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\n### Quick downloads\n\n| Platform | Standalone app | Libretro core |\n|---|---|---|\n| macOS | [Universal app (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip) | [Apple Silicon](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib) · [Intel](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib) |\n| Windows x64 / x86 | [x64 installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe) · [x64 portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll) |\n| Windows ARM64 | [Installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe) · [Portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip) | — |\n| Linux x86-64 / x86 | [AppImage (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage) · [.deb (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb) · [Flatpak (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so) |\n| Linux ARM64 | [AppImage](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage) · [.deb](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb) · [Flatpak](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so) |\n| Android | — | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so) · [ARMv7](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so) · [x86-64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so) · [x86](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so) |\n| iOS / tvOS | — | [iOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-ios-arm64.dylib) · [tvOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/v…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "c7ce216f21d3ce327a125d6c33267206924533893c5200bff6256166fcc1f04e",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-06T21:19:47Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月06日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• segacd:为Pier Solar(barbudreadmon)添加模式1支持",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• segacd: add Mode 1 support for Pier Solar (barbudreadmon)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "f934aca354255e9b81607d44c8aa9dfbac772dd2c363266cf70e7dc4c5556294",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-azahar-2127-0-rc2",
+      "title": "【Android更新】Azahar 2127.0-rc2",
+      "originalTitle": "Azahar 2127.0-rc2 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-06T20:19:23Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2127.0-rc2",
+      "imageUrl": "asset://assets/emulators/azahar.png",
+      "officialUrl": "https://github.com/azahar-emu/azahar",
+      "summary": "Azahar 发布 Android 新版本 2127.0-rc2，发布日期为2026年11月06日。点击查看官方版本信息与更新说明。",
+      "content": "Azahar 已发布 Android 最新版本 2127.0-rc2。\n\n发布日期：2026年11月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n⚠️重要的发布候选人信息⚠️\n\n\n这是一个候选版本。 在安装之前，请展开此下拉列表，以阅读更多有关这意味着什么的信息。\n作为候选版本，此版本尚未被视为稳定版本，但如果经过充分测试且未发现重大问题，则可以升级为稳定版本。\n。理想情况下，候选发布期将持续7天，但如果发现重大问题，将延长此期限，以允许使用更正后的候选发布进行额外测试。\n尽管它处于预发布版本的状态，但我们鼓励用户测试此版本，以帮助我们在将版本提升到完整版本之前捕获任何新引入的问题。 如果您发现此类问题，请在GitHub上向我们报告，以便我们进行评估。\n如果您不愿意容忍潜在的小问题，最好等到候选版本晋升为完整版本。\n\n建议用户在使用预发布版本之前备份其Azahar用户数据目录。\n\n\n---\nAzahar 2127.0-rc2是对2127.0-rc1.的修订它解决了一个关键的回归，这可能会导致某些较旧/较低规格的设备在启动游戏时立即崩溃。\n\n要查看2127.0的完整计划更新日志，请阅读上一个候选版本（https://github.com/azahar-emu/azahar/releases/tag/2127.0-rc1）的更新日志。\n\n---\n\n提示[! NOTE]\n提示：此版本使任何现有生成的着色器缓存无效。\n提示因此，从2126.2或更早版本更新后，性能可能会暂时停止。\n演奏一段提示时间后性能会再次提升。\n\n---\n\nAzahar 2127.0-rc2更新日志\n•修复了2127.0-rc1中首次出现的回归问题，如果GPU不支持某些功能，模拟器在启动3DS应用程序时可能会立即崩溃。| @ Wunkolo # 2779",
+      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nAzahar 2127.0-rc2 is an amendment to 2127.0-rc1. It addresses a critical regression which could cause certain older/ lower spec devices to immediately crash when launching a game.\r\n\r\nTo see the full planned changlog for 2127.0, [please read the changelog for the previous release candidate](https://github.com/azahar-emu/azahar/releases/tag/2127.0-rc1).\r\n\r\n---\r\n\r\n> [!NOTE] \r\n> This release invalidates any existing generated shader cache.\r\n> Because of this, performance may temporarily be impared after updating from 2126.2 or earlier.\r\n> Performance will improve again after playing for a while.\r\n\r\n---\r\n\r\n# Azahar 2127.0-rc2 Changelog\r\n\r\n- Fixed a regression first seen in 2127.0-rc1 where, if the GPU lacked support for certain functionality, the emulator could instantly crash when launching a 3DS application. | @Wunkolo #2779",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar"
+      ],
+      "contentHash": "11e97352d7deb8b7832e81de3b3aabe2bce67a1efa3a78235a54a921a4746e9e",
+      "translationPending": false
+    },
     {
       "id": "android-release-armsx2-2-9-2",
       "title": "【Android更新】ARMSX2 2.9.2",
@@ -54,31 +151,6 @@
         "vita3k_plus"
       ],
       "contentHash": "3df88594f6d392dea33481232294f25f4506678bce0ae961763a457d4d12d1a3",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-06T18:13:11Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月06日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• Segacd: 游戏列表更新(barbudreadmon)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• segacd: game list update (barbudreadmon)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "1bcf8472909effbd9459657ea174e5d2356de4a47da37615cd69c16dfade3d10",
       "translationPending": false
     },
     {
@@ -147,54 +219,6 @@
         "armsx3"
       ],
       "contentHash": "840fa3801abe046009d3fd8c1cf9b8535347330e502a2b30e1cce187e4fb546a",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-06T15:29:39Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月06日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 确保RAM指针总是被初始化(Stenzek)（https://github.com/stenzek/duckstation/commit/a056fe398f72b221e6f3d737f80336530f5b3847）)\n• 运行游戏同时报告EXE 覆盖(Stenzek)（https://github.com/stenzek/duckstation/commit/5cbdc008df50d41367241caa09e3694c2892e40c）)\n• 由实时呼叫目标(Stenzek)对呼叫堆栈功能进行扫描（https://github.com/stenzek/duckstation/commit/715ebadf76afa500eaa512c16edc9fd1d70d49f4）)\n• 调试器代码视图地址与指令对齐(Stenzek)（https://github.com/stenzek/duckstation/commit/18543d4a5cef591b54ceddf52863cf87727cb8f9）)\n• 系统启动时刷新调试器内存视图区域( Stenzek)（https://github.com/stenzek/duckstation/commit/33245ebe56692ecb6eef1f10dd9d4033af78ca41）)\n• 为调试器添加符号支持( Stenzek)（https://github.com/stenzek/duckstation/commit/2015c40d2fc13e92aa4cae35f4167d3871dacb89）)\n• 添加调试器调用堆栈上下文菜单(Stenzek)（https://github.com/stenzek/duckstation/commit/90da456736f7427242f232aa340e277d88f94f32）)\n• 允许关闭调试器窗口(Stenzek)（https://github.com/stenzek/duckstation/commit/f46d11ec2797712cbc5e21870d67c81ff1cbf1f5）)\n• 围绕主题的南向标签底角(斯滕策克)（https://github.com/stenzek/duckstation/commit/5443d027b1c4d5853e9cb42557d589d8c5f55bbe）)\n• Tab 调试器默认调用堆栈、断点和线程(Stenzek)（https://github.com/stenzek/duckstation/commit/b85648e54c3d874975c88e8ea09fb58f133d74e6）)\n• 在垃圾堆中添加副本/视图以调试器登记和堆栈列表(Stenzek)（https://github.com/stenzek/duckstation/commit/bb4e9ac5e6b3872126dc76f1fe4f46169c96b082）)",
-      "originalContent": "## Commits\n- Ensure RAM pointer is always initialized ([Stenzek](https://github.com/stenzek/duckstation/commit/a056fe398f72b221e6f3d737f80336530f5b3847))\n- Report EXE override alongside running game ([Stenzek](https://github.com/stenzek/duckstation/commit/5cbdc008df50d41367241caa09e3694c2892e40c))\n- Bound call stack function scan by the live call target ([Stenzek](https://github.com/stenzek/duckstation/commit/715ebadf76afa500eaa512c16edc9fd1d70d49f4))\n- Align debugger code view addresses to instructions ([Stenzek](https://github.com/stenzek/duckstation/commit/18543d4a5cef591b54ceddf52863cf87727cb8f9))\n- Refresh debugger memory view region on system start ([Stenzek](https://github.com/stenzek/duckstation/commit/33245ebe56692ecb6eef1f10dd9d4033af78ca41))\n- Add symbol support to debugger ([Stenzek](https://github.com/stenzek/duckstation/commit/2015c40d2fc13e92aa4cae35f4167d3871dacb89))\n- Add debugger call stack context menu ([Stenzek](https://github.com/stenzek/duckstation/commit/90da456736f7427242f232aa340e277d88f94f32))\n- Allow debugger windows to be closed ([Stenzek](https://github.com/stenzek/duckstation/commit/f46d11ec2797712cbc5e21870d67c81ff1cbf1f5))\n- Round the bottom corners of south-facing tabs in themes ([Stenzek](https://github.com/stenzek/duckstation/commit/5443d027b1c4d5853e9cb42557d589d8c5f55bbe))\n- Tab debugger call stack, breakpoints and threads by default ([Stenzek](https://github.com/stenzek/duckstation/commit/b85648e54c3d874975c88e8ea09fb58f133d74e6))\n- Add copy/view in dump to debugger register and stack lists ([Stenzek](https://github.com/stenzek/duckstation/commit/bb4e9ac5e6b3872126dc76f1fe4f46169c96b082))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "d3c34878acb6e0067b537229ffc4a4ca55556f9d02ef5f83b9944131053ed582",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-azahar-2127-0-rc1",
-      "title": "【Android更新】Azahar 2127.0-rc1",
-      "originalTitle": "Azahar 2127.0-rc1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-06T15:25:17Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2127.0-rc1",
-      "imageUrl": "asset://assets/emulators/azahar.png",
-      "officialUrl": "https://github.com/azahar-emu/azahar",
-      "summary": "Azahar 发布 Android 新版本 2127.0-rc1，发布日期为2026年11月06日。点击查看官方版本信息与更新说明。",
-      "content": "Azahar 已发布 Android 最新版本 2127.0-rc1。\n\n发布日期：2026年11月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nQQ 重要发布候选人信息QQ\n\n\n这是一个释放候选人。 请在安装前, 将下拉扩展为更多关于这意味着什么。\n\n\n作为释放的候选者,这一建筑尚未被视为稳定的释放,而是一种建筑,如果经过充分测试,没有米,就可以晋升为稳定的释放。 ajor问题被发现。 理想的情况是,如果发现重大问题,将延长释放候选人的期限为7天,以便进行额外测试,并更正释放。 约会\n\n尽管它作为发行前的构建,但鼓励用户测试这个版本,帮助我们抓住任何新引入的问题,然后再将构建提升到全面发布。 如果你真的看到这些问题 请在GitHub上向我们报告 这样我们就可以评估它们\n\n如果你不愿意容忍潜在的小问题,你最好等到释放候选人晋升为完全释放。\n\n建议用户支持他们 Azahar 用户数据目录在使用预释构建之前。\n\n\n---\n\n内容提要\n\nAzahar 2127.0 可以说是我们出版过的最大更新, 并是一个真正巨大的发布。\n\n它包括了无数的改进,修正和新功能,包括期待已久的添加,比如在Android上设定每游戏支持,一个全重写为JIT-无的翻译器 环境允许在任何现代iOS设备上全速仿真,支持新的捆绑的ROM格式,其中包括游戏内容和单个文件中的更新,一个固定 久而久之的\"死亡\"动画\"出自\"申·梅加米·滕赛四\"等多篇其他作品。\n\n我们希望你们能快速阅读一下更改日志 看看我们一直在研究什么\n\n---\n\n提示：[!NOTE]\nQAC: 此发布会取消任何已生成的阴影缓存。\nQAC: 由于这个原因, 性能在更新后可能会被暂时切换 2126.2 或更早一点。\n提示:演奏一段时间后,表现会再有改善。\n\n---\n\nAzahar 2127.0-rc1 更改日志\n\n许可证\n\n• Azahar'许可证已经由GPLv2+改为GPLv3+. 所有下游项目 Azahar源代码必须确保它们遵循许可证条款,并正确更新任何必要的许可证元数据。 @ @ OpenSauce04 #2626#2635\n\n机器人\n\n• 每个应用程序添加设置。 @ DavidRGriswold, @ Producevity #1856, #2698\n• 模仿能够独立配置模拟应用程序的桌面行为。\n• 从申请清单中长期排出申请即可进入。\n• 使用APF API来提示CPU工作的操作系统。 @ @ PabloMK7 #2706\n• 改进大多数Android装置的性能,在马里装置上观察到15%的性能提升。\n• 扫描应用程序时跳过隐藏点文件/文件夹。 @ @ wilu222 #2362\n• 当游戏启动时, 涡轮速度被禁用, 匹配桌面平台的行为。 @ @ @ ygordoryer # 2657\n• 关闭从Android家用屏幕快捷键打开的游戏 Azahar@ ygoryer #2658 (英语).\n· 解决一个问题,即当从Android家用屏幕快捷键重新启动目前运行的游戏时, Azahar 将会显示黑幕。 @ @ 52. ordoryer # 2656\n• 解决可能引起的问题 Azahar @ DavidRGriswold # 2751\n• 放宽自定义图形驱动检查,允许非Adreno设备使用自定义驱动程序。 @ @ PabloMK7 #2767\n\nAll\n\n• 为无JIT环境实施一个显著快得多的新口译,命名如下: `FastInterp`,取代旧的 `DynCom` 翻译。\n• 这种新的解释器可以大大地改进iOS和tvOS设备的性能,允许和iPhone XS一样旧的设备使用模拟器,即使播放速度超过 200%。 200%。\n• 增加支持:",
-      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\n# Summary\r\n\r\nAzahar 2127.0 is arguably the single largest update we have ever published, and is a truly monumental release.\r\n\r\nIt includes countless improvements, fixes and new features, including long-awaited additions such as per-game setting support on Android, a fully rewritten interpreter for JIT-less environments which allows full-speed emulation on any modern iOS device, support for a new bundled ROM format which includes game content and updates in a single file, a fix for a long-standing death animation glitch in Shin Megami Tensei IV, and many, many other things.\r\n\r\nWe hope you'll take a quick read of the changelog to see what we've been working on.\r\n\r\n---\r\n\r\n> [!NOTE] \r\n> This release invalidates any existing generated shader cache.\r\n> Because of this, performance may temporarily be impared after updating from 2126.2 or earlier.\r\n> Performance will improve again after playing for a while.\r\n\r\n---\r\n\r\n# Azahar 2127.0-rc1 Changelog\r\n\r\n# License\r\n\r\n- **Azahar's license has been changed** from GPLv2+ to **GPLv3+**. All downstream projects exposed to Azahar's source code must ensure that they follow the license terms and correctly update any license metadata as necessary. | @OpenSauce04 #2626 #2635\r\n\r\n# Android\r\n\r\n- Added per-application settings. | @DavidRGriswold, @Producdevity #1856, #2698\r\n    - Mimics the desktop behaviour of being able to configure emulated applications independently.\r\n    - Can be accessed by long pressing the application from the application list. \r\n- Implemented the use of the ADPF API to hint the OS of CPU work bursts. | @PabloMK7 #2706\r\n    - Improves performance on most Android devices, with a 15% performance boost observed on a Mali device.\r\n- Skip hidden dot files/folders when scanning for applications. | @wilu222 #2362 \r\n- Turbo speed is now disabled when a game is started, matching the behaviour on desktop platforms. | @ygordreyer #2657\r\n- Closing a game which was opened from an Android home screen shortcut now closes Azahar. | @ygordreyer #2658\r\n- Fixed an issue where, when relaunching a currently running game from an Android home screen shortcut, Azahar would display a black screen. | @ygordreyer #2656\r\n- Fixed an issue which could cause Azahar to crash when connected to a secondary display under certain circumstances. | @DavidRGriswold #2751\r\n- Relaxed custom graphics driver checks to allow usage of custom drivers on non-Adreno devices. | @PabloMK7 #2767\r\n\r\n# All\r\n\r\n- Implemented a significantly faster new interpreter for JIT-less environments, named `FastInterp`, which replaces the old `DynCom` interpreter. | @warmenhoven #2376 \r\n  - This new interpreter allows greatly improved performance on iOS and tvOS devices, allowing devices as old as the iPhone XS to use the emulator, even with playback speeds of over 200%.\r\n- Added support for a…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "azahar"
-      ],
-      "contentHash": "922ee5e9778cfdead7083c8eee367910bab2c3d9c7e31edb9574d732eecd3be0",
       "translationPending": false
     },
     {
@@ -406,30 +430,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "667a8259c9d3dabf4c124c87e9026992722fa7450a499f50f13dd28a2c868c45",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-06T06:35:20Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年11月06日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月06日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `8bd23fb` — `v3.11.0` (`develop`)\n\n提交：`8bd23fb`（https://github.com/libretro/virtualjaguar-libretro/commit/8bd23fbab4dede7fdf95f195c2953aef0ec29a9f）\n构建时间：2026-11-06 06:34 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/42157910996）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有24个目标;它没有通过测试套件或任何人工质量控制。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n核心记录其特性为: `v3.11.0 8bd23fb` 启动时 —— 在报告此构建时引用此行。\n\n自上一夜版以来的变更\n\n```\n8bd23fba ci( gl- 资格): 密钥 Windows 渲染器检查Mesa回落; 绑定 Linux 阴影器_ gl (# 1182)\n0ed3c3d3 应用程序存储元数据\na314dd3a ci: GL 资质: Linux 上窗口的靴子 + 每个阴影预设, Windows x64/arm64 和 macOS (# 1155) (# 1160)\ndd0d96bb 测试(危机):核查管道计数器并记录其范围\n423ef4e6 测试(Tom,Jerry):按原因和opcode计算RISC管道摊位\n```\n\n构建产物\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-aarch64.flatpak\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x…",
-      "originalContent": "### Nightly `8bd23fb` — `v3.11.0` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`8bd23fb`](https://github.com/libretro/virtualjaguar-libretro/commit/8bd23fbab4dede7fdf95f195c2953aef0ec29a9f) |\n| **Built** | 2026-11-06 06:34 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/42157910996) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\nThe core logs its identity as `v3.11.0 8bd23fb` at startup — quote that line when reporting a bug against this build.\n\n### Changes since the previous nightly\n\n```\n8bd23fba ci(gl-qualification): key the Windows renderer check on the Mesa fallback; bound Linux shaders_gl (#1182)\n0ed3c3d3 app store metadata\na314dd3a ci: GL qualification: windowed boot + every shader preset on Linux, Windows x64/arm64 and macOS (#1155) (#1160)\ndd0d96bb test(risc): verify pipeline counter measurements and document their scope\n423ef4e6 test(tom,jerry): count RISC pipeline stalls by cause and by opcode\n```\n\n### Artifacts\n\n```\nSHA256SUMS.txt\nVirtualJaguar-nightly-linux-aarch64.AppImage\nVirtualJaguar-nightly-linux-aarch64.flatpak\nVirtualJaguar-nightly-linux-x86_64.AppImage\nVirtualJaguar-nightly-linux-x86_64.flatpak\nVirtualJaguar-nightly-macos-universal.zip\nVirtualJaguar-nightly-windows-arm64-setup.exe\nVirtualJaguar-nightly-windows-arm64.zip\nVirtualJaguar-nightly-windows-x64-setup.exe\nVirtualJaguar-nightly-windows-x64.zip\ncue2cdi-linux-x86_64\ncue2cdi-macos-universal\ncue2cdi-windows-x86_64.exe\njagcd-tools-linux-x64.zip\njagcd-tools-macos.zip\njagcd-tools-windows-x64.zip\nvirtualjaguar_libretro-android-arm64-v8a-debug.tar.gz\nvirtualjaguar_libretro-android-arm64-v8a.so\nvirtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz\nvirtualjaguar_libretro-android-armeabi-v7a.so\nvirtualjaguar_libretro-android-x86-debug.tar.gz\nvirtualjaguar_libretro-android-x86.so\nvirtualjaguar_libretro-android-x86_64-debug.tar.gz\nvirtualjaguar_libretro-android-x86_64.so\nvirtualjaguar_libretro-emscripten-wasm-debug.tar.gz\nvirtualjaguar_libretro-emscripten-wasm.bc\nvirtualjaguar_libretro-ios-arm64-debug.tar.gz\nvirtualjaguar_libretro-ios-arm64.dylib\nvirtualjaguar_libretro-linux-aarch64-debug.tar.gz\nvirtualjaguar_libretro-linux-aarch64.so\nvirtualjaguar_libretro-linux-i686-debug.tar.gz\nvirtualjaguar_libretro-linux-i686.so\nvirtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi1-armv6.so\nvirtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi2-cortex-a7.so\nvirtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi3_64-cortex-a53.so\nvirtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi4_64-cortex-a72.so\nvirtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5-cortex-a76.so\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz\nvirtualjaguar_libretro-linux-rpi5_64-cortex-a76.so\nvirtualjaguar_libretro-linux-x86_64-debug.tar.gz\nvirtualjaguar_libretro-linux-x86_64.so\nvirtualjaguar_libretro-macos-arm64-debug.tar.gz\nvirtualjaguar_libretro-macos-arm64.dylib\nvirtualjaguar_libretro-macos-x86_64-debug.tar.gz\nvirtualjaguar_libretro-macos-x86_64.dylib\nvirtualjaguar_libretro-switch-debug.tar.gz\nvirtualjaguar_libretro-switch.a\nvirtualjaguar_libretro-tvos-arm64-debug.tar.gz\nvirtualjaguar_libretro-tvos-arm64.dylib\nvirtualjaguar_libretro-vita-debug.tar.gz\nvirtualjaguar_libretro-vita.a\nvirtualjaguar_libretro-windows-i686-debug.tar.gz\nvirtualjaguar_libretro-windows-i686.dll\nvirtualjaguar_libretro-windows-x…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "17d6d37625b34c2c8671fbd8bf271eb6e505e4cde75779bd84e22249afcedf56",
       "translationPending": false
     },
     {
@@ -1183,15 +1183,15 @@
       "imageUrl": "asset://assets/emulators/j2me_loader.png",
       "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
       "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
-      "originalContent": "J2ME Loader continuous Android release.",
+      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n从master上的最新提交自动生成。",
+      "originalContent": "Automated builds from the latest commits on master.",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "j2me_loader"
       ],
-      "contentHash": "a138cf4596c301bfe3eaab5b241ba8573297dd479a127ae89342b87bc2ed5e1e",
+      "contentHash": "1ab8be33e42fa535f142f4eade8f5b14e850efa9061855eeb19f3fc979ed5a28",
       "translationPending": false
     },
     {
