@@ -99,6 +99,10 @@ String vendorDisplayName(String vendor) {
       return 'Fairchild';
     case 'vm_labs':
       return 'VM Labs';
+    case 'zeebo':
+      return 'Zeebo';
+    case 'panic':
+      return 'Panic';
     case 'various':
       return '其他';
     default:

@@ -1,6 +1,6 @@
 {
-  "version": "3.10.2",
-  "lastUpdated": "2026-11-06",
+  "version": "3.11.0",
+  "lastUpdated": "2026-11-09",
   "consoles": [
     {
       "id": "multi_system",
@@ -246,6 +246,49 @@
             "macos"
           ],
           "desktopRequirements": "macOS 10.14 或更高版本（Intel / Apple Silicon）"
+        },
+        {
+          "id": "cannoli",
+          "name": "Cannoli",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/CannoliHQ/cannoli",
+          "playStoreId": "",
+          "website": "https://cannoli.dev/",
+          "core": "Libretro",
+          "compatibility": "high",
+          "minAndroid": "9.0",
+          "description": "受 MinUI 启发、风格极简的 Android 复古游戏前端，内置 Libretro 核心，也可像传统前端一样调用 RetroArch 或独立模拟器，GPL-3.0 开源。",
+          "downloadUrl": "https://github.com/CannoliHQ/cannoli/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/cannoli.png",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "id": "ludo_pc",
+          "name": "Ludo",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/libretro/ludo",
+          "playStoreId": "",
+          "website": "https://ludo.libretro.com/",
+          "core": "Libretro",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "libretro 官方组织维护的轻量多系统模拟器前端，以 Go 编写，界面比 RetroArch 简洁，使用 Libretro 核心运行多种主机游戏。",
+          "downloadUrl": "https://github.com/libretro/ludo/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/ludo_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows x64、macOS（x86_64 / arm64）、Linux（x86_64 / arm64 / armhf）"
         }
       ]
     },
@@ -417,6 +460,27 @@
             "macos"
           ],
           "desktopRequirements": "需要 Lynx BIOS；64 位 Windows（x64/ARM64）、macOS（Intel/Apple Silicon）或 Ubuntu 24.04+"
+        },
+        {
+          "id": "felix_pc",
+          "name": "Felix",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/laoo/Felix",
+          "playStoreId": "",
+          "website": "https://github.com/laoo/Felix",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "开源 Atari Lynx 模拟器，提供 64 位与 32 位 Windows 可执行文件，也可在 Wine、Parallels 等环境中运行。",
+          "downloadUrl": "https://github.com/laoo/Felix/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/felix_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows（64 位或 32 位），可在 Wine 下运行"
         }
       ]
     },
@@ -793,6 +857,26 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "super_zsnes",
+          "name": "Super ZSNES",
+          "openSource": false,
+          "sourceType": "playstore",
+          "sourceUrl": "",
+          "playStoreId": "com.zsnes.superzsnes",
+          "website": "https://zsnes.itch.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "8.0",
+          "description": "原 ZSNES 开发者重写的新一代 SNES 模拟器，2026 年 4 月发布，提供 Windows、macOS、Linux 与 Android 版本；Android 版上架 Google Play，桌面版通过 itch.io 分发，未公开源码。",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.zsnes.superzsnes",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/super_zsnes.png",
+          "platforms": [
+            "android"
+          ]
         }
       ]
     },
@@ -1572,6 +1656,51 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS（Apple Silicon）"
+        },
+        {
+          "id": "vbam_pc",
+          "name": "VisualBoyAdvance-M",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/visualboyadvance-m/visualboyadvance-m",
+          "playStoreId": "",
+          "website": "https://visualboyadvance-m.org/",
+          "core": "VBA-M",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "经典 VisualBoyAdvance 的长期维护分支，支持 GB、GBC 与 GBA，提供金手指、即时存档、连机与多种滤镜，是最知名的 GBA 模拟器之一。",
+          "downloadUrl": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/vbam_pc.png",
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "desktopRequirements": "Windows 10/11（x64 / ARM64）或 macOS（Intel / Apple Silicon）；Linux 需使用发行版软件包或自行编译"
+        },
+        {
+          "id": "hades_pc",
+          "name": "Hades",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/hades-emu/Hades",
+          "playStoreId": "",
+          "website": "https://github.com/hades-emu/Hades",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "兼顾易用性、速度与精度的开源 GBA 模拟器，支持手柄与按键重映射、即时存档，可直接读取 zip/7z/rar 压缩包并模拟部分卡带 GPIO 外设。",
+          "downloadUrl": "https://github.com/hades-emu/Hades/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/hades_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows（x64 / ARM64）、Linux（AppImage / deb）或 macOS"
         }
       ]
     },
@@ -1727,6 +1856,51 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS（Apple Silicon），支持 Vulkan 的显卡"
+        },
+        {
+          "id": "rokuyon_pc",
+          "name": "rokuyon",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Hydr8gon/rokuyon",
+          "playStoreId": "",
+          "website": "https://github.com/Hydr8gon/rokuyon",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "Hydr8gon 开发的实验性 N64 模拟器，内置软件/硬件渲染、不使用传统插件；目前仅支持 NTSC 大端格式 ROM，存档类型需手动选择，作者称更适合尝鲜。",
+          "downloadUrl": "https://github.com/Hydr8gon/rokuyon/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/rokuyon_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows / Linux / macOS，需较强 CPU"
+        },
+        {
+          "id": "rmg_k_pc",
+          "name": "RMG-K",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Jay-Day/RMG-K",
+          "playStoreId": "",
+          "website": "https://github.com/Jay-Day/RMG-K",
+          "core": "mupen64plus",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "Rosalie's Mupen GUI 的联机分支，支持 Kaillera 服务器、免端口转发的 P2P 连接码、游戏内聊天与 .krec 录像回放；2026 年 5 月起基于 GekkoNet 为所有双人 N64 游戏加入回滚网络代码。",
+          "downloadUrl": "https://github.com/Jay-Day/RMG-K/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/rmg_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "64 位 Windows（安装包或便携版）或 Linux（AppImage）"
         }
       ]
     },
@@ -1905,6 +2079,30 @@
             "linux"
           ],
           "desktopRequirements": "64 位 ARM（aarch64）Linux 设备；Vulkan 渲染需 Vulkan 1.1"
+        },
+        {
+          "id": "melonds_ds",
+          "name": "melonDS DS",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/JesseTG/melonds-ds",
+          "playStoreId": "",
+          "website": "https://github.com/JesseTG/melonds-ds",
+          "core": "melonDS (Libretro)",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "对 melonDS Libretro 核心的增强重制，目标是在 RetroArch 中达到与独立版 melonDS 相当的功能与稳定性；除 RetroArch 核心下载器外，仓库也自行发布 Android、Windows、Linux、macOS 等平台的核心。",
+          "downloadUrl": "https://github.com/JesseTG/melonds-ds/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/melonds_ds.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "需 RetroArch 等 Libretro 前端；Windows x64、Linux（x86_64 / arm64）、macOS（x86_64 / arm64）"
         }
       ]
     },
@@ -2008,6 +2206,53 @@
           "platforms": [
             "android"
           ]
+        },
+        {
+          "id": "mandarine",
+          "name": "Mandarine",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/mandarine3ds/mandarine",
+          "playStoreId": "",
+          "website": "https://github.com/mandarine3ds/mandarine",
+          "core": "Citra",
+          "compatibility": "high",
+          "minAndroid": "10.0",
+          "description": "Citra 停更后出现的 3DS 模拟器分支，加入多项以性能为导向的改动；最新 1.3.0 以 Mandarine-Neo 名义发布，提供 Android APK 与 Windows、Linux、macOS 构建。项目自述多数用户仍推荐使用 Azahar。",
+          "downloadUrl": "https://github.com/mandarine3ds/mandarine/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mandarine.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "64 位 Windows / Linux（AppImage）/ macOS（通用版），需支持 OpenGL 或 Vulkan 的显卡"
+        },
+        {
+          "id": "threebeans_pc",
+          "name": "3Beans",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Hydr8gon/3Beans",
+          "playStoreId": "",
+          "website": "https://github.com/Hydr8gon/3Beans",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "NooDS 作者 Hydr8gon 开发的低层级（LLE）3DS 模拟器，完整运行 3DS 系统，可启动 HOME 菜单与部分游戏；需从实机导出 boot9、boot11 与 NAND，CPU 为纯解释执行，速度较慢。",
+          "downloadUrl": "https://github.com/Hydr8gon/3Beans/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/threebeans_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows / Linux / macOS，需高性能 CPU 及实机导出的系统文件"
         }
       ]
     },
@@ -2283,6 +2528,51 @@
           "platforms": [
             "android"
           ]
+        },
+        {
+          "id": "hydra_mac",
+          "name": "Hydra",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/SamoZ256/hydra",
+          "playStoreId": "",
+          "website": "https://github.com/SamoZ256/hydra",
+          "core": "",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "专为 macOS 开发的实验性 Switch 模拟器，仍处早期阶段：少数游戏与自制程序可完美运行，多数仍会崩溃；支持 NRO、NCA、NX 格式，官方游戏需额外补丁。",
+          "downloadUrl": "https://github.com/SamoZ256/hydra/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/hydra_mac.png",
+          "platforms": [
+            "macos"
+          ],
+          "desktopRequirements": "macOS（Apple Silicon 或 Intel 构建）"
+        },
+        {
+          "id": "nxemu",
+          "name": "NxEmu",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/N3xoX1/nxemu",
+          "playStoreId": "",
+          "website": "https://www.nxemu.com/",
+          "core": "NxEmu",
+          "compatibility": "medium",
+          "minAndroid": "9.0",
+          "description": "以 C++ 编写的开源实验性 Switch 模拟器（GPL-3.0），开发活跃，2026 年 6 月进度报告称《超级马力欧 奥德赛》已运行良好；官网另提供更新的稳定版与含 Android APK 的开发版。",
+          "downloadUrl": "https://github.com/N3xoX1/nxemu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/nxemu.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos",
+            "android"
+          ],
+          "desktopRequirements": "Windows x64、Linux x64 或 macOS（Apple Silicon，MoltenVK）；需 Vulkan 显卡并自备固件与密钥"
         }
       ]
     },
@@ -2577,6 +2867,30 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS"
+        },
+        {
+          "id": "play_ps2",
+          "name": "Play!",
+          "openSource": true,
+          "sourceType": "source",
+          "sourceUrl": "https://github.com/jpd002/Play-",
+          "playStoreId": "com.virtualapplications.play",
+          "website": "https://purei.org/",
+          "core": "Play!",
+          "compatibility": "medium",
+          "minAndroid": "5.0",
+          "description": "老牌开源 PS2 模拟器，使用内置高层模拟 BIOS（无需也不能使用外部 BIOS），支持 Windows、macOS、Linux、Android、iOS 与浏览器，也能运行部分 PS2 架构街机游戏；GitHub 无 Release，构建由官网与 GitHub Actions 提供，Android 版已上架 Google Play。",
+          "downloadUrl": "https://github.com/jpd002/Play-",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/play_ps2.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows 需最新 VC++ 运行库；各平台构建从官网获取"
         }
       ]
     },
@@ -3213,6 +3527,50 @@
             "windows"
           ],
           "desktopRequirements": "64 位 Windows 10/11，需安装 .NET 与 Visual C++ 运行库"
+        },
+        {
+          "id": "hypseus_pc",
+          "name": "Hypseus Singe",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/DirtBagXon/hypseus-singe",
+          "playStoreId": "",
+          "website": "https://github.com/DirtBagXon/hypseus-singe",
+          "core": "Daphne",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "经典激光影碟街机模拟器 Daphne 的活跃分支，可运行《龙穴历险记》等 LaserDisc 街机游戏及 Singe LUA 同人游戏，基于 SDL3，支持边框、多手柄热插拔与高级输入配置。",
+          "downloadUrl": "https://github.com/DirtBagXon/hypseus-singe/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/hypseus_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows x64、Linux（AppImage）或 macOS（Apple Silicon）"
+        },
+        {
+          "id": "lindbergh_loader",
+          "name": "Lindbergh Loader",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/lindbergh-loader/lindbergh-loader",
+          "playStoreId": "",
+          "website": "https://github.com/lindbergh-loader/lindbergh-loader",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "在现代 Linux 电脑上运行世嘉 Lindbergh 街机基板游戏（如《VR 战士 5》《死亡之屋 4》）的加载器，支持 Intel/AMD CPU 与主流 GPU、环绕声、联网和 JVS 输入，提供 AppImage 与 Flatpak。",
+          "downloadUrl": "https://github.com/lindbergh-loader/lindbergh-loader/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/lindbergh_loader.png",
+          "platforms": [
+            "linux"
+          ],
+          "desktopRequirements": "仅 Linux（推荐 Ubuntu 22.04，AppImage / Flatpak 适用于多数发行版），Intel / NVIDIA / AMD 显卡"
         }
       ]
     },
@@ -4174,6 +4532,73 @@
           "platforms": [
             "android"
           ]
+        },
+        {
+          "id": "bochs_pc",
+          "name": "Bochs",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/bochs-emu/Bochs",
+          "playStoreId": "",
+          "website": "https://bochs.sourceforge.io/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "历史悠久的开源 x86 PC 模拟器，以指令级解释方式模拟完整 PC 硬件，可运行 DOS、Windows 与 Linux，常用于操作系统开发调试；3.1 版于 2026 年 8 月发布。",
+          "downloadUrl": "https://github.com/bochs-emu/Bochs/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/bochs_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "Windows x64（安装程序）或 Linux x86_64（RPM），其他平台需自行编译"
+        },
+        {
+          "id": "martypc",
+          "name": "MartyPC",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/dbalsom/martypc",
+          "playStoreId": "",
+          "website": "https://martypc.net/",
+          "core": "",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "以 Rust 编写、追求周期级精确的 IBM PC/XT 及兼容机模拟器，能运行对时序要求极高的 8088 演示程序（如 8088 MPH）；官方发布仅附带 Windows 二进制，另有网页版。",
+          "downloadUrl": "https://github.com/dbalsom/martypc/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/martypc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows x64（另有 Windows 7 兼容构建）；Linux / macOS 需自行编译"
+        },
+        {
+          "id": "dosbox_pure",
+          "name": "DOSBox Pure",
+          "openSource": true,
+          "sourceType": "forgejo",
+          "sourceUrl": "https://codeberg.org/schelling/dosbox-pure",
+          "playStoreId": "",
+          "website": "https://codeberg.org/schelling/dosbox-pure",
+          "core": "DOSBox (Libretro)",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "基于 DOSBox 的“开箱即用”重制版，可直接加载 ZIP 中的 DOS 游戏，带启动菜单、即时存档与手柄映射；项目已从 GitHub 迁移到 Codeberg，正在推进 1.0 预览版，发布内容为各平台的 Libretro 核心。",
+          "downloadUrl": "https://codeberg.org/schelling/dosbox-pure/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/dosbox_pure.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "需 RetroArch 等 Libretro 前端；提供 Windows、Linux（x64 / ARM）与 macOS 核心"
         }
       ]
     },
@@ -6111,6 +6536,27 @@
             "macos"
           ],
           "desktopRequirements": "macOS 10.14 或更高；需自备对应机型 ROM"
+        },
+        {
+          "id": "mariani_mac",
+          "name": "Mariani",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/sh95014/AppleWin",
+          "playStoreId": "",
+          "website": "https://github.com/sh95014/AppleWin",
+          "core": "AppleWin",
+          "compatibility": "high",
+          "minAndroid": "",
+          "description": "AppleWin 的 macOS 原生界面移植版，沿用 AppleWin 成熟的模拟核心模拟 Apple ][ 与 //e，Mac 用户无需借助 Wine。",
+          "downloadUrl": "https://github.com/sh95014/AppleWin/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/mariani_mac.png",
+          "platforms": [
+            "macos"
+          ],
+          "desktopRequirements": "macOS"
         }
       ]
     },
@@ -7610,6 +8056,29 @@
             "macos"
           ],
           "desktopRequirements": "需要 FM TOWNS ROM（作者网站提供兼容 ROM）；主要在 Windows 10 与 macOS 上测试，Linux 亦可运行"
+        },
+        {
+          "id": "geartowns_pc",
+          "name": "Geartowns",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/drhelius/Geartowns",
+          "playStoreId": "",
+          "website": "https://github.com/drhelius/Geartowns",
+          "core": "",
+          "compatibility": "good",
+          "minAndroid": "",
+          "description": "Gearsystem/Gearboy 作者 drhelius 于 2026 年 10 月新发布的富士通 FM Towns 模拟器兼调试器，支持多代 FM Towns 机型及 Marty，可加载 CD-ROM（cue/bin、iso、chd）、软盘与 SCSI 硬盘镜像，内置 MCP 服务器并提供 Libretro 核心。",
+          "downloadUrl": "https://github.com/drhelius/Geartowns/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/geartowns_pc.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "需自备系统 ROM；Windows（x64 / ARM64）、macOS（Apple Silicon / Intel）或 Ubuntu 24.04+（需 SDL3）"
         }
       ]
     },
@@ -9097,6 +9566,29 @@
           "platforms": [
             "android"
           ]
+        },
+        {
+          "id": "vircon32",
+          "name": "Vircon32",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/vircon32/ComputerSoftware",
+          "playStoreId": "",
+          "website": "https://www.vircon32.com/",
+          "core": "",
+          "compatibility": "perfect",
+          "minAndroid": "",
+          "description": "拥有完整硬件规格与开发工具链的 32 位虚拟游戏主机（幻想主机），官方仓库持续发布模拟器，2026 年 11 月仍在更新。",
+          "downloadUrl": "https://github.com/vircon32/ComputerSoftware/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/vircon32.png",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows（x86_64 / ARM64）、Linux（x86_64 / arm64 deb，含树莓派）或 macOS（Apple Silicon）"
         }
       ]
     },
@@ -9163,6 +9655,199 @@
             "macos"
           ],
           "desktopRequirements": "64 位 Windows / Linux / macOS；需自备对应机型的 Mac ROM"
+        }
+      ]
+    },
+    {
+      "id": "xbox_one",
+      "name": "Xbox One",
+      "vendor": "microsoft",
+      "year": 2013,
+      "icon": "🎮",
+      "imagePath": "assets/consoles/xbox_one.jpg",
+      "description": "微软第八世代家用主机，搭载 AMD Jaguar 八核 CPU 与 GCN 架构 GPU，游戏运行在基于 Windows 内核的 ERA 游戏系统中。目前尚无成熟模拟器，现有项目以“转译层”方式在 Windows 上运行少量游戏。",
+      "emulators": [
+        {
+          "id": "windurango_pc",
+          "name": "WinDurango",
+          "openSource": true,
+          "sourceType": "source",
+          "sourceUrl": "https://github.com/WinDurango/WinDurango",
+          "playStoreId": "",
+          "website": "https://windurango.github.io/",
+          "core": "WinDurango",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "开源的 Xbox One 转译层，通过 UWP 在 Windows 上运行基于 ERA 的 Xbox One 游戏，已实现大部分 Xbox WinRT 接口、KernelX 与 D3D11.X。README 列出《Sonic Mania》《Minecraft: Xbox One Edition》《LIMBO》可游玩，《极限竞速：地平线 2》《极限竞速 5》《Peggle 2》可启动；暂无正式 Release，构建通过 GitHub Actions 提供。",
+          "downloadUrl": "https://github.com/WinDurango/WinDurango",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/windurango_pc.png",
+          "platforms": [
+            "windows"
+          ],
+          "desktopRequirements": "Windows 10/11，需开启开发者模式并用 PowerShell 注册游戏包；需自备游戏文件"
+        }
+      ]
+    },
+    {
+      "id": "playdate",
+      "name": "Playdate",
+      "vendor": "panic",
+      "year": 2022,
+      "icon": "🟨",
+      "imagePath": "assets/consoles/playdate.jpg",
+      "description": "Panic 公司推出的黄色小掌机，配备 1-bit 黑白屏与独特的摇杆曲柄，采用 ARM Cortex-M7 处理器，以“赛季”形式推送独立小游戏。",
+      "emulators": [
+        {
+          "id": "cranked_pc",
+          "name": "Cranked",
+          "openSource": true,
+          "sourceType": "source",
+          "sourceUrl": "https://github.com/TheLogicMaster/Cranked",
+          "playStoreId": "",
+          "website": "https://github.com/TheLogicMaster/Cranked",
+          "core": "Unicorn",
+          "compatibility": "low",
+          "minAndroid": "",
+          "description": "非官方 Playdate 模拟器，用 Unicorn 模拟 ARM CPU，已实现除音频外的大部分 Playdate API；目前主要能运行 SDK 示例与少量游戏（如 Flippy Fish、Hammer Down），多数程序可能崩溃。提供 SDL2/ImGui 桌面版与 Libretro 核心，暂无正式 Release。",
+          "downloadUrl": "https://github.com/TheLogicMaster/Cranked",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/cranked_pc.png",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "需自行编译（CMake + Conan，Windows 需 Visual Studio 2022）"
+        }
+      ]
+    },
+    {
+      "id": "zeebo",
+      "name": "Zeebo",
+      "vendor": "zeebo",
+      "year": 2009,
+      "icon": "📶",
+      "imagePath": "assets/consoles/zeebo.jpg",
+      "description": "2009 年在巴西、墨西哥推出的低价联网家用机，基于高通 BREW 平台，通过 3G 网络下载游戏，支持 Boomerang 体感手柄，2011 年停止运营。",
+      "emulators": [
+        {
+          "id": "zeebx",
+          "name": "Zeebx",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/ZeebxTeam/zeebx-emu",
+          "playStoreId": "",
+          "website": "https://github.com/ZeebxTeam/zeebx-emu",
+          "core": "Zeebx",
+          "compatibility": "medium",
+          "minAndroid": "8.0",
+          "description": "以 Rust 编写的开源 Zeebo 模拟器，2026 年 9 月起公开发布（目前均为预览版）。README 称 62 款测试游戏中 56 款可正常加载绘制，3D 游戏可实验性提升至 4K/16:9，并支持用 Wii Remote、DualSense 模拟 Boomerang 体感手柄；另提供 Libretro 核心。",
+          "downloadUrl": "https://github.com/ZeebxTeam/zeebx-emu/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/zeebx.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "Windows x86_64、Linux x86_64（AppImage / deb）或 macOS（arm64 / x86_64）；Android 版仅 arm64-v8a"
+        }
+      ]
+    },
+    {
+      "id": "windows_mobile",
+      "name": "Windows Mobile / Pocket PC",
+      "vendor": "microsoft",
+      "year": 2002,
+      "icon": "📟",
+      "imagePath": "assets/consoles/windows_mobile.jpg",
+      "description": "微软基于 Windows CE 的掌上设备平台，涵盖 Pocket PC 2002/2003 与 Windows Mobile 5/6，曾有《Asphalt》《使命召唤 2》等大量移动游戏；2005 年的 Gizmondo 掌机同样基于 Windows CE。",
+      "emulators": [
+        {
+          "id": "pockethle",
+          "name": "PocketHLE",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/j92580498-max/PocketHLE",
+          "playStoreId": "",
+          "website": "https://github.com/j92580498-max/PocketHLE",
+          "core": "PocketHLE",
+          "compatibility": "low",
+          "minAndroid": "7.0",
+          "description": "受 touchHLE 与 EKA2L1 启发的高层模拟器，直接加载原始 ARM 可执行文件并在宿主端重新实现 Windows CE API，用于运行 Pocket PC 2002/2003 与 Windows Mobile 5/6 游戏；v0.3.0 起支持 Gizmondo 游戏，已测试《Asphalt 4》《Call of Duty 2》《Zuma Deluxe》等，仍处早期阶段。",
+          "downloadUrl": "https://github.com/j92580498-max/PocketHLE/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/pockethle.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux"
+          ],
+          "desktopRequirements": "Windows x86_64（zip）或 Linux x86_64（tar.gz）"
+        }
+      ]
+    },
+    {
+      "id": "neogeo_cd",
+      "name": "Neo Geo CD",
+      "vendor": "snk",
+      "year": 1994,
+      "icon": "💿",
+      "imagePath": "assets/consoles/neogeo_cd.jpg",
+      "description": "SNK 于 1994 年推出的 Neo Geo 光盘版家用机，以低成本 CD-ROM 发行 Neo Geo 游戏，有前置式、顶置式与 CDZ 三种型号，读盘时间较长是其特点。",
+      "emulators": [
+        {
+          "id": "neocd_core",
+          "name": "NeoCD (Libretro)",
+          "openSource": true,
+          "sourceType": "source",
+          "sourceUrl": "https://github.com/libretro/neocd_libretro",
+          "playStoreId": "",
+          "website": "https://docs.libretro.com/library/neocd/",
+          "core": "NeoCD",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "以现代 C++ 完全重写的 Neo Geo CD 模拟器核心，注重精度并在硬件层面模拟 CD-ROM 驱动器，支持 CUE/CHD 镜像、即时存档与倒带；通过 RetroArch 核心下载器安装使用。",
+          "downloadUrl": "https://github.com/libretro/neocd_libretro",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/neocd_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "通过 RetroArch 使用；需前置式、顶置式或 CDZ BIOS"
+        },
+        {
+          "id": "geolith_core",
+          "name": "Geolith (Libretro)",
+          "openSource": true,
+          "sourceType": "source",
+          "sourceUrl": "https://github.com/libretro/geolith-libretro",
+          "playStoreId": "",
+          "website": "https://gitlab.com/jgemu/geolith",
+          "core": "Geolith",
+          "compatibility": "high",
+          "minAndroid": "5.0",
+          "description": "高精度 Neo Geo 模拟器的 Libretro 移植，支持 AES、MVS、CD 与 CDZ；CD 机型支持 bin/cue 与 chd 镜像，需较新 MAME 套装中的 BIOS，通过 RetroArch 核心下载器安装使用。",
+          "downloadUrl": "https://github.com/libretro/geolith-libretro",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/geolith_core.png",
+          "platforms": [
+            "android",
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "desktopRequirements": "通过 RetroArch 使用；需较新 MAME 套装中的 BIOS"
         }
       ]
     },

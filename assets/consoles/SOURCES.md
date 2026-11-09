@@ -86,3 +86,8 @@ The following images are simplified vector illustrations drawn for EmuHub (no th
 | 幻想主机 / Fantasy Console | `fantasy_console.jpg` |
 | NUON | `nuon.jpg` |
 | Power Macintosh | `power_mac.jpg` |
+| Xbox One | `xbox_one.jpg` |
+| Playdate | `playdate.jpg` |
+| Zeebo | `zeebo.jpg` |
+| Windows Mobile / Pocket PC | `windows_mobile.jpg` |
+| Neo Geo CD | `neogeo_cd.jpg` |
