@@ -236,8 +236,8 @@ void main() {
       expect(emulator.platforms.toSet(), entry.value, reason: entry.key);
     }
 
-    expect(consoleIds.length, 125);
-    expect(emulatorIds.length, 407);
+    expect(consoleIds.length, 130);
+    expect(emulatorIds.length, 419);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -484,6 +484,11 @@ void main() {
         'fantasy_console',
         'nuon',
         'power_mac',
+        'xbox_one',
+        'playdate',
+        'zeebo',
+        'windows_mobile',
+        'neogeo_cd',
       }),
     );
     expect(
@@ -616,6 +621,18 @@ void main() {
         'bochs_pc',
         'martypc',
         'vircon32',
+        'windurango_pc',
+        'cranked_pc',
+        'zeebx',
+        'pockethle',
+        'neocd_core',
+        'geolith_core',
+        'geartowns_pc',
+        'rmg_k_pc',
+        'nxemu',
+        'play_ps2',
+        'dosbox_pure',
+        'super_zsnes',
       }),
     );
 
