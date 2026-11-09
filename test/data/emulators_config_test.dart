@@ -237,7 +237,7 @@ void main() {
     }
 
     expect(consoleIds.length, 125);
-    expect(emulatorIds.length, 391);
+    expect(emulatorIds.length, 407);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -600,6 +600,22 @@ void main() {
         'slippi_pc',
         'dsperate',
         'k11mch1_drivers',
+        'vbam_pc',
+        'hades_pc',
+        'hydra_mac',
+        'mandarine',
+        'threebeans_pc',
+        'rokuyon_pc',
+        'melonds_ds',
+        'hypseus_pc',
+        'lindbergh_loader',
+        'felix_pc',
+        'mariani_mac',
+        'cannoli',
+        'ludo_pc',
+        'bochs_pc',
+        'martypc',
+        'vircon32',
       }),
     );
 
