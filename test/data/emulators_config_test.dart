@@ -237,7 +237,7 @@ void main() {
     }
 
     expect(consoleIds.length, 130);
-    expect(emulatorIds.length, 419);
+    expect(emulatorIds.length, 420);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -633,6 +633,7 @@ void main() {
         'play_ps2',
         'dosbox_pure',
         'super_zsnes',
+        'xbased_pc',
       }),
     );
 
