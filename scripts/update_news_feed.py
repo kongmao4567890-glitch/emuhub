@@ -1124,6 +1124,38 @@ def build_article(
     }
 
 
+def settle_pending_translations(
+    articles: list[dict[str, Any]],
+    previous: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Keep untranslated items out of the published feed.
+
+    A single article whose translation still contains English prose used to
+    fail the whole refresh, so no other news was published either. Such an
+    article now falls back to its last fully translated version, or is left
+    out until a later run translates it (it has no previous entry, so the next
+    run retries it from scratch).
+    """
+    settled: list[dict[str, Any]] = []
+    for article in articles:
+        if not article.get("translationPending"):
+            settled.append(article)
+            continue
+        old = previous.get(str(article.get("id")))
+        if old and not old.get("translationPending") and old.get("content"):
+            print(
+                f"warning: kept previous translation for {article.get('id')}",
+                file=sys.stderr,
+            )
+            settled.append(old)
+        else:
+            print(
+                f"warning: deferred untranslated article {article.get('id')}",
+                file=sys.stderr,
+            )
+    return settled
+
+
 def write_payload(payload: dict[str, Any]) -> None:
     rendered = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
     ASSET_PATH.write_text(rendered, encoding="utf-8")
@@ -1187,6 +1219,7 @@ def main() -> int:
             continue
         if published >= cutoff and article.get("content"):
             articles.append(article)
+    articles = settle_pending_translations(articles, previous)
     articles.sort(key=lambda value: str(value["publishedAt"]), reverse=True)
 
     if not articles:
