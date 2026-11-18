@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T13:54:41.985844Z",
+  "generatedAt": "2026-11-18T20:53:20.024399Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,187 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T18:25:24Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月18日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• Namco: MAME 同步和其它小更新( barbudreadmon)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• namco: MAME sync and other minor updates (barbudreadmon)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "be9d207105b85166712f83e50a6567cb31583728b89fb868bc63609d3f9da11f",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-azahar-2127-0-rc4",
+      "title": "【Android更新】Azahar 2127.0-rc4",
+      "originalTitle": "Azahar 2127.0-rc4 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T16:47:43Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2127.0-rc4",
+      "imageUrl": "asset://assets/emulators/azahar.png",
+      "officialUrl": "https://github.com/azahar-emu/azahar",
+      "summary": "Azahar 发布 Android 新版本 2127.0-rc4，发布日期为2026年11月18日。点击查看官方版本信息与更新说明。",
+      "content": "Azahar 已发布 Android 最新版本 2127.0-rc4。\n\n发布日期：2026年11月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n⚠️重要发布候选版本信息⚠️\n\n\n这是候选发布版本。请在安装前展开此下拉菜单，详细了解其含义。\n作为候选发布版本，此版本尚不被视为稳定发布版本，但如果经过充分测试且未发现重大问题，则可以升级为稳定发布版本。\n。理想情况下，候选版本期将持续7天，但如果发现重大问题，该期限将延长，以便使用已更正的候选版本进行额外测试。\n尽管此版本为预发布版本，但我们仍鼓励用户测试此版本，以帮助我们在该版本升级为正式发布版本之前发现任何新出现的问题。如果您确实发现了此类问题，请在 GitHub 上向我们报告，以便我们进行评估。\n如果您不愿意容忍潜在的次要问题，最好等到候选版本升级为正式版本后再使用。\n\n建议用户在使用预发布版本之前，先备份其Azahar用户数据目录。\n\n\n---\n此预发布版本是对 2127.0-rc3. 的修订。它解决了 2127.0-rc3 中首次出现的一个问题，即在 Android 17+ 设备上从现有的 Azahar Google Play 版本进行更新会导致启动时崩溃。除此之外，它与 2127.0-rc3. 大体相同。\n\n---\n\n提示：[!NOTE]\n提示：此版本将使所有已生成的着色器缓存失效。\n提示：因此，从2126.2或更早版本更新后，性能可能会暂时受到影响。\n提示：玩一段时间后，性能将再次得到改善。\n\n---\n\nAzahar 2127.0-rc4 更新日志\n\nAndroid\n• 修复了一个回归问题：在已设置 Azahar 但未授予“附近设备”权限的情况下，在 Android 17+ 设备上启动 Google Play 版本会导致因异常断言而立即崩溃。| @OpenSauce04 #2830",
+      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nThis prerelease is an amendment to 2127.0-rc3. It addresses an issue first introduced in 2127.0-rc3 where updating from an existing Google Play build of Azahar on an Android 17+ device would result in a crash on launch. It is otherwise mostly identical to 2127.0-rc3.\r\n\r\n---\r\n\r\n> [!NOTE] \r\n> This release invalidates any existing generated shader cache.\r\n> Because of this, performance may temporarily be impared after updating from 2126.2 or earlier.\r\n> Performance will improve again after playing for a while.\r\n\r\n---\r\n\r\n# Azahar 2127.0-rc4 Changelog\r\n\r\n# Android\r\n\r\n- Fixed a regression where launching the Google Play build with Azahar already set up but no Nearby Devices permission granted would result in an immediate crash on Android 17+ devices due to a stray assert. | @OpenSauce04 #2830",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar"
+      ],
+      "contentHash": "20c1eadfe5836a85f50730dd4edc01b1a4a4d24964226b22988dde21dc920579",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-j2me_loader-continuous",
+      "title": "【Android更新】J2ME Loader continuous",
+      "originalTitle": "J2ME Loader continuous Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T14:41:24Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
+      "imageUrl": "asset://assets/emulators/j2me_loader.png",
+      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
+      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月18日。点击查看官方版本信息与更新说明。",
+      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n根据主分支上的最新提交自动构建。",
+      "originalContent": "Automated builds from the latest commits on master.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "j2me_loader"
+      ],
+      "contentHash": "3e14adbfaa2181ae3a1a8372fa8e1b43368afbc24ea25e00130275285500c043",
+      "translationPending": false
+    },
+    {
+      "id": "144800",
+      "title": "【电脑】M88x v2.21a (2026/10/13)",
+      "originalTitle": "[Ordi.] M88x v2.21a (2026/10/13)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T14:14:29Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/144800-ordi-m88x-v2-21a-2026-10-13/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/08/m88x2.png",
+      "officialUrl": "https://rednow.cloudfree.jp/",
+      "summary": "这是 Nec PC8801 模拟器 M88 的升级版。",
+      "content": "这是 Nec PC8801 模拟器 M88 的升级版。",
+      "originalContent": "Il s'agit d'une version améliorée de M88, émulateur de Nec PC8801.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "85221acce372789bb57f9d61724b63920f5e50e468ae2f63df490d6e1c34db4f",
+      "translationPending": false
+    },
+    {
+      "id": "144798",
+      "title": "【电脑】Neko Project 21 v0.86 Rev. 106",
+      "originalTitle": "[Ordi.] Neko Project 21 v0.86 Rev. 106",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T14:07:59Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/144798-ordi-neko-project-21-v0-86-rev-106/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/04/neko.jpg",
+      "officialUrl": "https://simk98.github.io/np21w/",
+      "summary": "这是一款 NEC PC-9801 模拟器，也支持 NEC PC-9821。 注：请注意，官方网站上提供了测试版。",
+      "content": "这是一款 NEC PC-9801 模拟器，也支持 NEC PC-9821。\n\n注：请注意，官方网站上提供了测试版。",
+      "originalContent": "Il s'agit d'un émulateur de NEC PC-9801 qui supporte également le NEC PC-9821.\n\nNB: A noter qu'une version béta est disponible sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "514ac88e01d142861fe2dd6c7fd3199b42ba837f4491ac9cc48cbc767ca603e6",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-7",
+      "title": "【Android更新】ARMSX3 1.7",
+      "originalTitle": "ARMSX3 1.7 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T13:59:37Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.7",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.7，发布日期为2026年11月18日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.7。\n\n发布日期：2026年11月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.7\n\n\n\n要点\n• 在背景中编译出新的SPU代码。 游戏在编译时会不断运行,所以新区域可以不拖累。 游戏需要旧的暂停 保持它。\n· 编译的SPU代码现在在更新(包括游戏更新)之间结转,所以在更新后的第一个靴子是快的。 每个游戏在此更新后在它的首个后靴上再次编译。\n\n\n\n\n\n我们的末日\n\n\n\n• 在游戏中固定冻结。 游戏将工作交给了背景工作并等待,在手机上,一份工作清单可以随工作还在其中而停止,将游戏从几分钟到小时的任何地方冻结。 ARMSX3 现在让这些工作继续前进。\n\n\n\n^ 在播放数小时后修复了崩溃(在此情况下持续播放了4小时):Android的内存映射限制被填充,而新的遮阳器等待被保存到磁盘上。\n\n\n\n\n\n\n\n^ 游戏后期修复了崩溃,而其遮阳器则用上了相同的极限。 它还使用约1GB减量的内存。\n\n\n\n\n\n\n\n\n\n^ 在游戏编译其SPU代码时将第一只靴子上的相撞,装入图标上的相撞进行固定,后一只靴子上的PPU陷阱。 新的SPU代码现在在播放时在背景中编译。\n\n\n\n• 关闭或重新启动游戏时,在游戏装入屏幕上被冻结后,将应用程序关闭。\n\n\n\n\n\n\n\n• SPU编译过程中固定CPU自旋:线程等待编译完成,现在休息而不是旋转。\n\n\n\n\n\n• RPCS3'被推荐的补丁默认是:更好的性能,能起作用的分辨率缩放,以及对被断开的头撞和大学指甲炸弹软锁的修复。 .",
+      "originalContent": "# ARMSX3 1.7\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0c315c44-4ddf-4e01-9a87-c38e26b17496\" />\r\n\r\n## Highlights\r\n- **New SPU code compiles in the background.** Games keep running while it compiles, so new areas load without pausing. Games that need the old pause keep it.\r\n- **Compiled SPU code now carries over between updates,** including game updates, so first boots after them are quick. Each game compiles once more on its first boot after this update.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9cb8777e-ebd4-4bb8-b0b2-7291bc171586\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fb6928e6-5b5c-4dc1-8f63-4d17de71343e\" />\r\n\r\n## The Last of Us\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/64b64a6f-a55b-48e7-bb90-59324edb8b65\" />\r\n\r\n- **Fixed the freeze during play.** The game hands its work to background jobs and waits for them, and on phones a job list could stop with work still in it, freezing the game anywhere from minutes to hours in. ARMSX3 now keeps those jobs moving.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fd3dc958-8e4a-4044-b9da-2868ccbd7492\" />\r\n\r\n- **Fixed a crash after hours of play (4 hours of continuous play in this case):** Android's limit on memory mappings filled up while new shaders waited to be saved to disk.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e0ea275c-55db-4c78-b1f9-8a277c24f67a\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/685340e0-b8cd-457a-a700-b1823c238872\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/61c5a2eb-c66a-423c-8131-63ede454e382\" />\r\n\r\n- **Fixed a crash late in the game,** when its shaders used up the same limit. It also uses about 1 GB less memory.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8c3bd90f-6e88-4666-a29b-d1871cb506af\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2a05456e-6d30-45db-a00e-23a07d5ffb5d\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6ecb6a97-11cc-4111-b123-5aafb4d3eca5\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e2b7b1b9-ab43-4756-9d1e-a05e77933d4c\" />\r\n\r\n- **Fixed the crash on the first boot,** on the loading icon while the game compiled its SPU code, and the PPU trap on the boot after it. New SPU code now compiles in the background while you play.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bb0a68fb-3fdf-4d52-8979-cef4c1f7ba43\" />\r\n\r\n- **Fixed the app closing** when you closed or restarted the game after it froze on its loading screen.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3f2d1a51-6c46-41e0-a70d-dd2130e1d386\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/24afe85c-4bf5-45e1-9ca8-628a2cdd3a2b\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/76d4e833-1aa7-47e9-8e6d-56ee3f2e29c3\" />\r\n\r\n- **Fixed the CPU spin during SPU compiles:** threads waiting for a compile to finish now rest instead of spinning.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/24fcc869-b8ca-47e0-bf28-3d9e1a4eda26\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/862c6f02-82ec-4601-be76-a9c9f29b0a53\" />\r\n\r\n- **RPCS3's recommended patches are on by default:** better performance, resolution scaling that works, and fixes for the severed head crash and the University nail bomb softlock…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "f624304d550de84259a4d785c066560a92674abe839b113a4e88bbc9013e5c87",
+      "translationPending": false
+    },
+    {
+      "id": "144796",
+      "title": "【其他】Mini sac de GIT (2026/11/18)",
+      "originalTitle": "[www] Mini sac de GIT (2026/11/18)",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T13:56:52Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/144796-www-mini-sac-de-git-2026-11-18/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/07/git.png",
+      "officialUrl": "",
+      "summary": "以下是正在开发的最新模拟器，以及更新频率最高的模拟器。",
+      "content": "以下是正在开发的最新模拟器，以及更新频率最高的模拟器。",
+      "originalContent": "Voici les derniers émulateurs en développement, ainsi que ceux bénéficiant des mises à jour les plus fréquentes.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "a030b779c4e6119b8b43a8df10aedbd25522767abf5dfa1ef08dc48b04cabab2",
+      "translationPending": false
+    },
+    {
+      "id": "144794",
+      "title": "【家用机】Snes9xRD v0.7",
+      "originalTitle": "[Consoles de salon] Snes9xRD v0.7",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-18T13:55:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/144794-consoles-de-salon-snes9xrd-v0-7/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/snes9xrd.png",
+      "officialUrl": "https://github.com/Deathsoul56/snes9xrd",
+      "summary": "Snes9xrd 是 Super Nintendo Snes9x 模拟器的个人分支。它完全保留了官方的模拟核心以及 GTK、Win32、macOS 和 libretro 前端，同时对 Qt 前端进行了重大重构，使其更加完善、更加一致、使用起来更加顺手。 此次分叉的主要目标之一是通过重新引入缺失的功能，使 Qt 界面与 Win32 界面一样完善。",
+      "content": "Snes9xrd 是 Super Nintendo Snes9x 模拟器的个人分支。它完全保留了官方的模拟核心以及 GTK、Win32、macOS 和 libretro 前端，同时对 Qt 前端进行了重大重构，使其更加完善、更加一致、使用起来更加顺手。\n此次分叉的主要目标之一是通过重新引入缺失的功能，使 Qt 界面与 Win32 界面一样完善。显示设置、透明度选项、着色器、软件滤镜、帧跳过以及高级音频设置现已完全……\n自 Qt 起可转让。模拟和配置菜单也经过重新布局，以提供更清晰、更直观、更统一的界面。\nSnes9xrd 还对控制器管理进行了多项改进。代表 SNES 手柄的小部件现在可以准确显示所按的按钮，不会出现高亮显示错误，同时在视觉上与界面的整体主题融为一体。\n。手柄配置的可靠性得到提升：不同类型的输入（按钮、模拟轴和方向）得到正确区分，按键组合可以保存和恢复，且不会丢失信息，显示的按钮与实际检测到的输入完全一致。\n整体界面也得到了简化。实验性侧边栏已被移除，取而代之的是一个更传统的、围绕经典菜单栏组织的主窗口。“帮助 → 关于”菜单已重新引入，其中现已包含特定于分叉的致谢信息，从而增强了整体的一致性。\n总之，Snes9xrd 并未对 SNES 模拟器本身进行修改，而是主要致力于通过改进 Qt 界面、提高控制器管理的可靠性以及提供更简洁、更全面、更易于使用的环境来使用户体验现代化并更加稳定。\n\n具体变化如下：\n\n网络对战（NETPLAY）\n• 在客户端和服务器套接字上启用了 TCP_NODELAY，因此小型手柄/心跳数据包不再受纳格尔算法的限制。\n• 修复了服务器心跳时钟。它将帧时间截断为整数毫秒（16 毫秒，约 62.5 Hz，而非 60 Hz）。现在，它以微秒为单位进行计时。\n• 服务器现在会在下一帧截止时间之前等待客户端套接字，而不是进入休眠状态，因此在帧中间到达的游戏手柄不再被额外延迟一帧。在长时间停顿后，它还会重新同步时钟，而不是发出心跳信号。\n• Windows：在网络对战服务器/客户端运行时请求 1 毫秒的计时器分辨率。\n• Qt：控制器和鼠标按钮事件现在在心跳等待期间应用，并且会立即发送更改后的手柄状态。这减少了本地输入延迟。\n• “显示 ping”现在报告输入回显时间、心跳间隔、抖动和排队心跳积压，而不是标称 ping 值。\n\nWINDOWS / 项目\n• 移除了旧版 Win32 桌面前端及其构建/依赖项树。Windows 系统仍支持 Qt 前端，Windows libretro 核心版本亦然。\n• 应用程序标题、关于对话框和 Windows 文件元数据现在标识为 snes9xrd v0.7.\n• 更新了自述文件，以记录游戏库、RetroAchievements 和网络对战。\n\n软件包\n• snes9xrd-v0.7-win64.zip 包含 snes9xrd-qt.exe、libwinpthread-1.dll、cheats.bml、LICENSE 和 changes.txt.\n• 将 libwinpthread-1.dll 保存在与可执行文件相同的文件夹中。",
+      "originalContent": "Snes9xrd est un fork personnel de l’émulateur Super Nintendo Snes9x. Il conserve intégralement le cœur d’émulation officiel ainsi que les front-ends GTK, Win32, macOS et libretro, tout en proposant une refonte importante du front-end Qt afin de le rendre plus complet, plus cohérent et plus agréable à utiliser.\n\nL’un des principaux objectifs de ce fork est de rendre l’interface Qt aussi complète que l’interface Win32 en y réintroduisant les fonctionnalités qui lui faisaient défaut. Les paramètres d’affichage, les options de transparence, les shaders, les filtres logiciels, le frame skipping ainsi que les réglages audio avancés sont désormais entièrement accessibles depuis Qt. Les menus d’émulation et de configuration ont également été réorganisés afin d’offrir une présentation plus claire, plus intuitive et plus homogène.\n\nSnes9xrd apporte également plusieurs améliorations à la gestion des contrôleurs. Le widget représentant la manette SNES indique désormais avec précision le bouton pressé, sans erreurs de surbrillance, tout en s’intégrant visuellement au thème général de l’interface. La configuration des manettes a été rendue plus fiable: les différents types d’entrées (boutons, axes analogiques et directions) sont correctement distingués, les associations de touches peuvent être sauvegardées et restaurées sans perte d’informations, et les boutons affichés correspondent fidèlement aux entrées réellement détectées.\n\nL’interface générale a également été simplifiée. La sidebar expérimentale a été supprimée au profit d’une fenêtre principale plus traditionnelle, organisée autour d’une barre de menus classique. Le menu « Help → About » a été réintroduit et inclut désormais les crédits spécifiques au fork, renforçant ainsi la cohérence de l’ensemble.\n\nEn résumé, Snes9xrd ne modifie pas l’émulation SNES elle-même, mais vise avant tout à moderniser et à stabiliser l’expérience utilisateur en améliorant l’interface Qt, en fiabilisant la gestion des contrôleurs et en proposant un environnement plus propre, plus complet et plus agréable à utiliser.\n\nLes changements sont les suivants:\n\nNETPLAY\n- Enabled TCP_NODELAY on client and server sockets, so small joypad/heartbeat packets are no longer held back by Nagle's algorithm.\n- Fixed the server heartbeat clock. It truncated the frame time to whole milliseconds (16 ms, about 62.5 Hz instead of 60 Hz). It now paces in microseconds.\n- The server now waits on its client sockets until the next frame deadline instead of sleeping, so joypads that arrive mid-frame are no longer delayed by an extra frame. It also resyncs the clock after a long stall instead of bursting heartbeats.\n- Windows: requests 1 ms timer resolution while a netplay server/client is running.\n- Qt: controller and mouse button events are now applied during heartbeat waits, and changed joypad state is sent immediately. This reduces local input delay.\n- \"Show ping\" now reports input echo time, heartbeat interval, jitter and queued heartbeat backlog, instead of a nominal ping value.\n\nWINDOWS / PROJECT\n- Removed the legacy Win32 desktop frontend and its build/dependency tree. The Qt frontend remains supported on Windows, as does the Windows libretro core build.\n- Application title, About dialog and Windows file metadata now identify snes9xrd v0.7.\n- README updated to document the game library, RetroAchievements and netplay.\n\nPACKAGE\n- snes9xrd-v0.7-win64.zip contains snes9xrd-qt.exe, libwinpthread-1.dll, cheats.bml, LICENSE and changes.txt.\n- Keep libwinpthread-1.dll in the same folder as the executable.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "snes9x_core"
+      ],
+      "contentHash": "453019a2aae2d50fc88c2f7dea2a2bb69cc9f65bc65edb2f54af5f8456b101b5",
+      "translationPending": false
+    },
     {
       "id": "144791",
       "title": "【工具】Uzai v0.16.92",
@@ -52,31 +233,6 @@
         "desmume_pc"
       ],
       "contentHash": "bcb0feb44dde72844a1d5df5b89f6c134f032938ab7006744f7521e3cb21bfb8",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-18T12:58:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月18日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月18日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_zaccaria.cpp: MAME 同步( barbudreadmon )\n• d_taitol.cpp: MAME 同步( barbudreadmon )",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_zaccaria.cpp: MAME sync (barbudreadmon)\n• d_taitol.cpp: MAME sync (barbudreadmon)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "11cd8fbd31b1e948ebd7d6eac17cc1c9f99837aed0fd07f61747b822e5da60c2",
       "translationPending": false
     },
     {
@@ -171,30 +327,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "5372f47178b371f9c0345879a1c1f6d8b81b3de842d610a150a62962c1de0c9e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-ios-0-0-3",
-      "title": "【Android更新】ARMSX3 ios-0.0.3",
-      "originalTitle": "ARMSX3 ios-0.0.3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-17T22:24:53Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/ios-0.0.3",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 ios-0.0.3，发布日期为2026年11月17日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 ios-0.0.3。\n\n发布日期：2026年11月17日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nXMB 模式\n\nPS3自有菜单。 ARMSX3 现在可以像PS3的XMB那样看和工作:波浪和闪光,靴子,每个柱子都有其排和设置,音乐有波浪,谷和盖亚视觉器,一个视频播放器 r,一个带有幻灯片放映,XMB键盘,以及带有保存状态的游戏中 XMB,更改磁盘和关闭系统的照片查看器。 图标,单词,字体和声音来自您安装的固件,一个PS3主题带来了自己的。 在库栏或设置的最后一步,用波按钮打开。 在iPhone上,它在景观中持有屏幕,当游戏运行时,它会放任其波浪,让游戏留下更多的记忆。\n\n内建轨接关。 音乐专栏播放一个内置的音轨,\"诊断\"列出一个以\"关闭系统\"(Turn off System)结束的会话作为\"关闭\"(Turned off System),里面说由iOS关闭。\n\n黑色行动III\n\n剖面载荷后或僵尸中不再冻结。 游戏在你的档案装上几秒钟后就冻结了 在僵尸队的菜单里 在自己的工作守则里 有两个种族 僵尸作为一个单独的程序运行 旧的固定没有到达。 这两项规定现在适用于BLES02166和BLUS31527,适用于: 01.07,多人则固定 01.06 我也一样。 在iPhone上,多人菜单运行了5分钟超过配置负载,僵尸运行了数轮而没有冻结。\n\n4GB iPhone (英语).\n\niPhone 12和13上的记忆减少致死。 图形环缓冲器在这些手机上停留在128 MB,在满时等待GPU,在那里它们不断生长。 纹理上传缓冲器首先释放完成的帧并真正释放空间,在其中它一直被标记在使用中直到下一个帧 ;在类似4GB手机的Mac设置上,战神三世在游戏玩法期间的缓冲互换从31到零。\n\n两个编译线程。 PPU代码编译在两个线条上而不是一个线条上,所以第一只靴子更快,没有耗尽内存。\n\n固定\n\n末日的开始 游戏在编译其SPU代码时冻结了30至40秒进入冷门开始。 它现在在代码编译时暂停。 在iPhone上测试过。\n\n把应用程序丢掉 在游戏期间离开应用程序可以以\"GPU设备丢失\"阻止游戏。 现在所有GPU工作在应用程序的背景中等待。 在iPhone上测试过。\n\n黑色行动II僵尸。 它一次运行两个SPU线程,因此SPU不再饿死主游戏线程。\n\n共享回读。 客串同时读回相同的图形内存,等待已经运行的读取,而不是每次开始自己的读取,而我们最后的读取经常如此。\n\n5个 RPCS3 修正。 SPU在ARM上读取保留数据时的内存顺序,堆栈守护页会过度渲染游戏内存,以及编译的PPU代码中的脏分支目标。\n\narm64上的未解函数。 编译的代码调用一个缺失的函数,现在将其命名,在错误处理器中崩溃的地方。\n\n快点\n\n赤尸救赎深度副本。 游戏样本其反异名深度缓冲器每帧约100次,每份拷贝在数个步骤中以两倍大小制作,约四分之三的GPU时间在一个iPhone上。。。。 它现在是一个合适的尺寸的副本。\n\n图形\n\n战神三世。 它运行于iOS上的近似SPU浮标精度,其中Lacreased将Kratos的眉毛和胡子变成了白色斑点。 一拍开口的切口 仍然显示他的脸太亮。\n\n辛普森斯游戏。 它保持了高的遮光度精度,可以修复其黑色的纹理。\n\n黑行动 它不再强迫扩展深度范围, 这导致瞄准下视线模糊。\n\n隐藏框架生成设置。 iOS架构从未有过帧生成,打开它仍然改变了帧的呈现方式。\n\n控件\n\n舒适的电话倾斜。 当您第一次触摸屏幕时, 手机握住的倾斜度, 游戏菜单中的新倾斜度, 小摇晃被忽略, Invert Tilt Y向前翻转, 提尔特敏感度从50%到200%\n\n运动按钮。 运动可以是bou...",
-      "originalContent": "## XMB mode\r\n\r\n**The PS3's own menu.** ARMSX3 can now look and work like the PS3's XMB: the wave and sparkles, the boot, every column with its rows and settings, music with the Waves, Valley and Gaia visualizers, a video player, a photo viewer with slideshows, the XMB keyboard, and the in-game XMB with save states, Change Disc and Turn Off System. The icons, words, font and sounds come from your installed firmware, and a PS3 theme brings its own. Turn it on with the wave button in the library bar or in the last step of setup. On an iPhone it holds the screen in landscape, and while a game runs it lets go of its wave to leave the game more memory.\r\n\r\n**Built-in Track and Turned off.** The Music column plays a built-in track, and Diagnostics lists a session you ended with Turn Off System as Turned off, where it said Closed by iOS.\r\n\r\n## Black Ops III\r\n\r\n**No more freezes after the profile loads or in Zombies.** The game froze a few seconds after your profile loaded, and in the Zombies menu, on two races in its own job code. Zombies runs as a separate program the old fix never reached. Both fixes now apply to BLES02166 and BLUS31527 on 01.07, and the multiplayer fix on 01.06 too. On an iPhone the multiplayer menu ran 5 minutes past the profile load and Zombies ran several rounds without a freeze.\r\n\r\n## 4 GB iPhones\r\n\r\n**Fewer memory kills on the iPhone 12 and 13.** The graphics ring buffers stop at 128 MB on these phones and wait for the GPU when full, where they kept growing. The texture upload buffer frees finished frames first and the space is really released, where it stayed marked in use until the next frame; on a Mac set up like a 4 GB phone, God of War III's buffer swaps during gameplay went from 31 to none.\r\n\r\n**Two compile threads.** PPU code compiles on two threads instead of one, so first boots are faster without running out of memory.\r\n\r\n## Fixed\r\n\r\n**The Last of Us cold start.** The game froze 30 to 40 seconds into a cold start while its SPU code compiled. It now pauses while that code compiles. Tested on an iPhone.\r\n\r\n**Swiping the app away.** Leaving the app during a game could stop the game with \"GPU device lost\". All GPU work now waits while the app is in the background. Tested on an iPhone.\r\n\r\n**Black Ops II Zombies.** It runs two SPU threads at a time, so the SPUs no longer starve the main game thread.\r\n\r\n**Shared readbacks.** Guest threads reading back the same graphics memory at once wait for the read already running instead of each starting their own, which The Last of Us does often.\r\n\r\n**Five RPCS3 fixes.** Memory order when SPUs read reservation data on ARM, stack guard pages that overwrote game memory, and dirty branch targets in compiled PPU code.\r\n\r\n**Unresolved functions on arm64.** Compiled code that calls a missing function now names it, where it crashed in the error handler.\r\n\r\n## Faster\r\n\r\n**Red Dead Redemption's depth copies.** The game samples its anti-aliased depth buffer about 100 times a frame, and each copy was made at twice the size in several steps, about three quarters of the GPU time on an iPhone. It is now one copy at the right size.\r\n\r\n## Graphics\r\n\r\n**God of War III.** It runs at Approximate SPU float accuracy on iOS, where Relaxed turned Kratos's brows and beard into white streaks. One shot of the opening cutscene still shows his face too bright.\r\n\r\n**The Simpsons Game.** It keeps high shader precision, which fixes its black textures.\r\n\r\n**Black Ops.** It no longer forces Extended Depth Range, which cost the aim-down-sights blur.\r\n\r\n**Frame Generation settings hidden.** The iOS build has never had frame generation, and turning it on still changed how frames were presented.\r\n\r\n## Controls\r\n\r\n**Comfortable phone tilt.** Tilt levels at the way you hold the phone when you first touch the screen, Recentre Tilt in the game menu levels it again, small shakes are ignored, Invert Tilt Y flips forward and back, and Tilt Sensitivity goes from 50 to 200%.\r\n\r\n**Motion buttons.** Motion can be bou…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "a7b8a5147dc181281c85d9bbbcd028e4e26e11f08b3cfe1c30da30324d03a335",
       "translationPending": false
     },
     {
@@ -622,30 +754,6 @@
         "nxemu"
       ],
       "contentHash": "2360edf9b1a0c091017e98a47cbc64195e9c53d3656c252eec7f981b966d366c",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-azahar-2127-0-rc3",
-      "title": "【Android更新】Azahar 2127.0-rc3",
-      "originalTitle": "Azahar 2127.0-rc3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-12T22:19:52Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2127.0-rc3",
-      "imageUrl": "asset://assets/emulators/azahar.png",
-      "officialUrl": "https://github.com/azahar-emu/azahar",
-      "summary": "Azahar 发布 Android 新版本 2127.0-rc3，发布日期为2026年11月12日。点击查看官方版本信息与更新说明。",
-      "content": "Azahar 已发布 Android 最新版本 2127.0-rc3。\n\n发布日期：2026年11月12日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nQQ 重要发布候选人信息QQ\n\n\n这是一个释放候选人。 请在安装前, 将这个下拉扩展为更多关于这意味着什么。\n\n\n作为释放的候选者,这一建筑尚未被视为稳定的释放,而是一种建筑,如果经过充分测试而无 m,则可以晋升为稳定的释放。 ajor问题被发现。 理想的情况是,释放候选人的期限将持续7天,但如果发现重大问题,则将予以延长,以便进行额外测试,并更正释放日期c 约会\n\n尽管它具有发行前的建设地位,但还是鼓励用户测试这个版本,帮助我们抓住任何新引入的问题,然后再将建设提升为全面发行。 如果你确实注意到这些问题,请在GitHub上向我们报告,以便我们评估这些问题。\n\n如果你不愿容忍潜在的小问题,你最好等到释放候选人晋升为完全释放。\n\n建议用户支持其 Azahar 用户数据目录在使用预释构建之前。\n\n\n---\n\n提示：[!NOTE]\nQAC: 此释放会取消任何已生成的阴影缓存。\nQAC:由于这个原因,在更新后可能会暂时无法进行性能。 2126.2 或更早一点。\n提示:演奏一段时间后表现会再次改善。\n\n---\n\nAzahar 2127.0-rc3 更改日志\n\nAll\n\n^ 添加了一个新的\"Limit框架在GPU前方\"设置,以切换之前引入的优化,从而改进耐久性,现在默认禁用。 @ DavidRGriswold #2793\n• 自 2127.0-alpha4,这种行为总是被启用的,但一些用户报告说,这导致了性能回归。\n• 拥有足够强大的设备的用户现在可以选择手动减少输入延迟以换取性能。\n\n机器人\n\n• 纠正所有设置值在其中的错误 Azahar's `config.ini` 文件将被直接写入, 而不是留下未更改的值。 @ @ DavidRGriswold # 2784\n• 由于这一问题, Azahar 运行的设置 Azahar 2127.0-rc1 or 2127.0-rc2 将不再适当反映今后对 Azahar默认设置。\n• 可以通过重置所有设置来解决 Azahar升级到此修正的版本后设置菜单。\n• 解决了一个问题,即运行Android 17或以后的设备将无法连接到真正的3DS设备或其他本地设备。 @ @ OpenSauce04 #2803\n• Azahar 将在更新后首次运行这些设备时请求新的本地网络访问/接近设备许可。\n\n桌面\n\n• 与默认热键值有关的固定多重问题。 @ DavidRGriswold #2791\n• 在游戏列表中解决一些与键盘导航有关的问题。 @ DavidRGriswold #2783",
-      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\n> [!NOTE] \r\n> This release invalidates any existing generated shader cache.\r\n> Because of this, performance may temporarily be impared after updating from 2126.2 or earlier.\r\n> Performance will improve again after playing for a while.\r\n\r\n---\r\n\r\n# Azahar 2127.0-rc3 Changelog\r\n\r\n# All\r\n\r\n- Added a new \"Limit frames ahead of GPU\" setting to toggle a previously introduced optimization which improves latency, now disabled by default. | @DavidRGriswold #2793\r\n  - Since 2127.0-alpha4, this behaviour was always enabled, but some users reported that it caused a performance regression.\r\n  - Users with a sufficiently powerful device can now choose to enable it manually to reduce input latency in exchange for performance.\r\n\r\n# Android\r\n\r\n- Fixed a bug where all setting values in Azahar's `config.ini` file would be written directly, rather than leaving untouched values blank. | @DavidRGriswold #2784 \r\n  - Due to this issue, Azahar setups which have run on Azahar 2127.0-rc1 or 2127.0-rc2 will no longer properly reflect any future changes to Azahar's default settings.\r\n    - This can be resolved by resetting all settings in Azahar's settings menu after upgrading to a version with this fix.\r\n- Fixed an issue where devices running Android 17 or later would be unable to connect to a real 3DS device or other local devices. | @OpenSauce04 #2803 \r\n  - Azahar will request a new Local Network Access/ Nearby Devices permission on these devices when run for the first time after updating.\r\n\r\n# Desktop\r\n\r\n- Fixed multiple issues relating to default hotkey values. | @DavidRGriswold #2791 \r\n- Fixed some issues relating to keyboard navigation in the game list. | @DavidRGriswold #2783",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "azahar"
-      ],
-      "contentHash": "d1a14a819fc7953f54acf66540163de1e43c467359fbd98f3430b0e4be91ac08",
       "translationPending": false
     },
     {
@@ -2222,30 +2330,6 @@
         "sameboy_core"
       ],
       "contentHash": "805da1f806d12b13b544c125b706ca517dfc0459cd8f8d27c3e6e7a80a079c48",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-j2me_loader-continuous",
-      "title": "【Android更新】J2ME Loader continuous",
-      "originalTitle": "J2ME Loader continuous Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-02T20:20:35Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
-      "imageUrl": "asset://assets/emulators/j2me_loader.png",
-      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
-      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月02日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月02日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n从master上的最新提交自动生成。",
-      "originalContent": "Automated builds from the latest commits on master.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "j2me_loader"
-      ],
-      "contentHash": "1ab8be33e42fa535f142f4eade8f5b14e850efa9061855eeb19f3fc979ed5a28",
       "translationPending": false
     },
     {
