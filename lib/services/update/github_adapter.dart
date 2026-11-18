@@ -108,6 +108,18 @@ class GitHubReleasesAdapter implements VersionAdapter {
     if (parsed == null) return null;
     final (owner, repo) = parsed;
 
+    // 同一仓库发布多个产品时，latest 重定向、Atom 与 API 首条都可能属于
+    // 另一个产品。此时只按标签过滤后的 Release 卡片取发布时间最新的一条。
+    final tagFilter = emulator.releaseTagFilter;
+    if (tagFilter != null) {
+      return _fetchLatestPublishedReleaseFromHtml(
+        emulator,
+        owner,
+        repo,
+        tagFilter: tagFilter,
+      );
+    }
+
     VersionInfo? result;
 
     // 策略 1：轻量重定向法（不消耗 API 配额，也不下载完整 release 页面）
@@ -749,8 +761,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
   Future<VersionInfo?> _fetchLatestPublishedReleaseFromHtml(
     Emulator emulator,
     String owner,
-    String repo,
-  ) async {
+    String repo, {
+    RegExp? tagFilter,
+  }) async {
     try {
       final response = await _dio.get(
         'https://github.com/$owner/$repo/releases',
@@ -770,6 +783,9 @@ class GitHubReleasesAdapter implements VersionAdapter {
                 .firstMatch(href)
                 ?.group(1);
         if (tag == null || tag.isEmpty) continue;
+        if (tagFilter != null && !tagFilter.hasMatch(Uri.decodeComponent(tag))) {
+          continue;
+        }
 
         final publishedAt = _extractReleaseDateFromHtml(card.outerHtml);
         if (selectedCard == null ||

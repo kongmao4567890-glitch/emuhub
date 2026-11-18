@@ -5,6 +5,73 @@ import 'package:emuhub/data/models/emulator.dart';
 import 'package:emuhub/services/update/github_adapter.dart';
 
 void main() {
+  test('only accepts releases whose tag matches the entry pattern', () async {
+    final dio = Dio();
+    final requested = <String>[];
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final path = options.uri.path;
+          requested.add(path);
+          if (path.endsWith('/Ghael-V/Lemon-Project/releases')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: _releaseCard(
+                      '/Ghael-V/Lemon-Project/releases/tag/ironlemon-v0.2.0',
+                      'Iron Lemon v0.2.0',
+                      '2026-11-18T12:00:00Z',
+                      'Iron Lemon preview',
+                      prerelease: true,
+                    ) +
+                    _releaseCard(
+                      '/Ghael-V/Lemon-Project/releases/tag/v1.5.0',
+                      'Lemon-Project v1.5.0',
+                      '2026-11-18T10:00:00Z',
+                      'Lemon 1.5 notes',
+                    ),
+              ),
+            );
+            return;
+          }
+          if (path.contains('/expanded_assets/v1.5.0')) {
+            handler.resolve(
+              Response<String>(
+                requestOptions: options,
+                statusCode: 200,
+                data: '<a href="/Ghael-V/Lemon-Project/releases/download/'
+                    'v1.5.0/Lemon-v1.5.0-standard.apk">APK</a>',
+              ),
+            );
+            return;
+          }
+          handler.reject(
+            DioException(
+              requestOptions: options,
+              type: DioExceptionType.badResponse,
+            ),
+          );
+        },
+      ),
+    );
+
+    final result = await GitHubReleasesAdapter(dio: dio).fetchLatestVersion(
+      _lemon(),
+    );
+
+    expect(result?.version, '1.5.0');
+    expect(result?.releaseNotes, 'Lemon 1.5 notes');
+    expect(
+      result?.downloadUrl,
+      'https://github.com/Ghael-V/Lemon-Project/releases/download/v1.5.0/'
+      'Lemon-v1.5.0-standard.apk',
+    );
+    // The shared latest redirect may point at another product, so it is
+    // never consulted for filtered entries.
+    expect(requested.any((p) => p.endsWith('/releases/latest')), isFalse);
+  });
+
   test('lightweight check only follows the latest redirect', () async {
     final dio = Dio();
     var nonHeadRequests = 0;
@@ -1134,5 +1201,23 @@ Emulator _citron() {
     description: 'test',
     downloadUrl: 'https://github.com/citron-neo/emulator/releases',
     nightlyUrl: 'https://github.com/citron-neo/CI/releases',
+  );
+}
+
+Emulator _lemon() {
+  return const Emulator(
+    id: 'lemon_android',
+    name: 'Lemon',
+    openSource: true,
+    sourceType: 'github',
+    sourceUrl: 'https://github.com/Ghael-V/Lemon-Project',
+    playStoreId: '',
+    website: 'https://lemon-emu.org/',
+    core: '',
+    compatibility: 'medium',
+    minAndroid: '12.0',
+    description: 'test',
+    downloadUrl: 'https://github.com/Ghael-V/Lemon-Project/releases',
+    releaseTagPattern: r'^v\d',
   );
 }

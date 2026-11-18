@@ -244,6 +244,16 @@ def main() -> int:
             for repo in emulator_repos.get(emulator_id, [])
             for release in releases_by_repo.get(repo, [])
         ]
+        # One repository can publish several products (e.g. Lemon and Iron
+        # Lemon). Only releases whose tag matches the entry's pattern count.
+        pattern = str(emulator.get("releaseTagPattern") or "")
+        if pattern:
+            tag_filter = re.compile(pattern)
+            candidates = [
+                release
+                for release in candidates
+                if tag_filter.search(str(release.get("tag_name") or ""))
+            ]
         selected = newest_release(candidates)
         if selected is not None:
             entries[emulator_id] = catalog_entry(selected)
