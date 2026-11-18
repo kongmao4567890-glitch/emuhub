@@ -13,7 +13,11 @@ val hasReleaseSigning = listOf(
     releaseKeystorePassword,
     releaseKeyAlias,
     releaseKeyPassword,
-).all { !it.isNullOrBlank() }
+).all { !it.isNullOrBlank() } &&
+    // PR 构建能读取密钥口令，但签名文件只在 main 分支解码。文件不存在时
+    // 回退 debug 签名，避免 validateSigningRelease 失败；main 分支另有
+    // 证书校验步骤，不会因此发布错误签名的 APK。
+    java.io.File(releaseKeystorePath!!).isFile
 
 android {
     namespace = "com.emuhub.app"
