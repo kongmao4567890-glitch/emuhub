@@ -1,6 +1,6 @@
 {
   "version": "3.11.0",
-  "lastUpdated": "2026-11-09",
+  "lastUpdated": "2026-11-18",
   "consoles": [
     {
       "id": "multi_system",
@@ -2520,14 +2520,36 @@
           "core": "yuzu / Eden",
           "compatibility": "medium",
           "minAndroid": "12.0",
-          "description": "基于 yuzu / Eden 系核心的 Android 专用 Switch 模拟器，主要针对 Adreno GPU 优化并已加入 Mali 支持，内置金手指下载、手柄快捷键与实验性快速存读档；每个版本提供标准版与 Lite 版 APK。",
+          "description": "基于 Eden 系核心的 Android 专用 Switch 模拟器，主要针对 Adreno GPU 优化并支持 Mali，内置金手指下载、Lemon Cheater 内存修改、多槽快速存档与 NSZ/XCZ 支持。1.5 起以“速度 / 普通 / 画质”三种模式取代原 Lite 版，默认开启异步 GPU 模拟以减少卡顿；另提供改包名的 Spoofed 版 APK。",
           "downloadUrl": "https://github.com/Ghael-V/Lemon-Project/releases",
           "devUrl": "",
           "nightlyUrl": "",
           "iconPath": "assets/emulators/lemon_android.png",
           "platforms": [
             "android"
-          ]
+          ],
+          "releaseTagPattern": "^v\\d"
+        },
+        {
+          "id": "iron_lemon",
+          "name": "Iron Lemon",
+          "openSource": true,
+          "sourceType": "github",
+          "sourceUrl": "https://github.com/Ghael-V/Lemon-Project",
+          "playStoreId": "",
+          "website": "https://lemon-emu.org/",
+          "core": "yuzu",
+          "compatibility": "low",
+          "minAndroid": "11.0",
+          "description": "Lemon 团队 2026 年 11 月推出的预览版分支：改用未经 Eden 修改的原版 yuzu 核心，作为独立应用可与 Lemon 共存安装，提供速度 / 普通 / 画质模式、三档 GPU 精度、Lemon FG 插帧、快速存档、金手指、宏、Nextendo Network 联机与内置 Lemon-Ade 驱动。官方说明 Lemon 仍是主力版本。",
+          "downloadUrl": "https://github.com/Ghael-V/Lemon-Project/releases",
+          "devUrl": "",
+          "nightlyUrl": "",
+          "iconPath": "assets/emulators/lemon_android.png",
+          "platforms": [
+            "android"
+          ],
+          "releaseTagPattern": "^ironlemon-"
         },
         {
           "id": "hydra_mac",

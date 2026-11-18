@@ -81,6 +81,9 @@ void main() {
           expect(emulator.desktopRequirements, isNotEmpty,
               reason: emulator.id);
         }
+        if (emulator.releaseTagPattern.isNotEmpty) {
+          expect(emulator.releaseTagFilter, isNotNull, reason: emulator.id);
+        }
 
         for (final url in [
           emulator.sourceUrl,
@@ -237,7 +240,7 @@ void main() {
     }
 
     expect(consoleIds.length, 130);
-    expect(emulatorIds.length, 420);
+    expect(emulatorIds.length, 421);
 
     final bachataS4 = config.consoles
         .singleWhere((console) => console.id == 'ps4')
@@ -634,6 +637,7 @@ void main() {
         'dosbox_pure',
         'super_zsnes',
         'xbased_pc',
+        'iron_lemon',
       }),
     );
 
@@ -697,6 +701,15 @@ void main() {
       expect(emulator.devUrl, isEmpty, reason: emulator.id);
       expect(emulator.nightlyUrl, isEmpty, reason: emulator.id);
     }
+
+    // Lemon 与 Iron Lemon 共用同一仓库，必须靠标签过滤区分各自的版本。
+    final lemon = allEmulators.singleWhere((e) => e.id == 'lemon_android');
+    final ironLemon = allEmulators.singleWhere((e) => e.id == 'iron_lemon');
+    expect(lemon.sourceUrl, ironLemon.sourceUrl);
+    expect(lemon.releaseTagFilter!.hasMatch('v1.5.0'), isTrue);
+    expect(lemon.releaseTagFilter!.hasMatch('ironlemon-v0.2.0'), isFalse);
+    expect(ironLemon.releaseTagFilter!.hasMatch('ironlemon-v0.2.0'), isTrue);
+    expect(ironLemon.releaseTagFilter!.hasMatch('v1.5.0'), isFalse);
 
     final pcEmulators = config.consoles
         .expand((console) => console.emulators)

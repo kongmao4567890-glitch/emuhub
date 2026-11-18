@@ -37,6 +37,9 @@ class Emulator with _$Emulator {
     /// 模拟器官方图标资源路径（如 assets/emulators/dolphin.png）。
     /// 为空时回退到通用手柄图标。
     @Default('') String iconPath,
+    /// 发布标签过滤正则。同一仓库发布多个产品（如 Lemon 与 Iron Lemon）时，
+    /// 只把标签匹配的 Release 视为本条目的版本；空字符串表示不过滤。
+    @Default('') String releaseTagPattern,
   }) = _Emulator;
 
   factory Emulator.fromJson(Map<String, dynamic> json) =>
@@ -48,6 +51,16 @@ extension EmulatorPlatformInfo on Emulator {
 
   /// 仅公开源码、没有发布版本的条目（需自行编译），不参与更新检查。
   bool get isSourceOnly => sourceType == 'source';
+
+  /// [releaseTagPattern] 编译后的正则；未配置或格式无效时为 `null`。
+  RegExp? get releaseTagFilter {
+    if (releaseTagPattern.isEmpty) return null;
+    try {
+      return RegExp(releaseTagPattern);
+    } on FormatException {
+      return null;
+    }
+  }
 
   bool get supportsDesktop =>
       supportsPlatform('windows') ||
