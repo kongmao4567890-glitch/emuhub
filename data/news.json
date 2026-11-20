@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T21:00:27.414123Z",
+  "generatedAt": "2026-11-20T07:43:06.432980Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,100 @@
   },
   "articles": [
     {
-      "id": "android-release-virtual_jaguar_core-prerelease",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) prerelease",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) prerelease Android release",
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-19T18:56:24Z",
+      "publishedAt": "2026-11-20T06:02:48Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/prerelease",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月20日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 更新艺术品(巴布德雷蒙)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• artworks update (barbudreadmon)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "9efdb2e6970c6994cb4bdd15ca49aa541064fb0c56e9ad38e377dd7868226d73",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-20T04:57:39Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月20日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 更新功能列表 (Stenzek（https://github.com/stenzek/duckstation/commit/edfec5e7e0129391b573d201cfde3d2861e7112b）)\n• 在安全模式下禁用空闲循环快进（Stenzek（https://github.com/stenzek/duckstation/commit/6f6ddd772084f66fdbd5d0b2d3d65ecaf4d986c2））",
+      "originalContent": "## Commits\n- Update feature list ([Stenzek](https://github.com/stenzek/duckstation/commit/edfec5e7e0129391b573d201cfde3d2861e7112b))\n- Disable idle-loop fast forward in safe mode ([Stenzek](https://github.com/stenzek/duckstation/commit/6f6ddd772084f66fdbd5d0b2d3d65ecaf4d986c2))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "2534439bc1890c0960456a094ac85a4824fe0ec18ba9f20c78a7fd5e0cb5f0de",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20261120",
+      "title": "【Android更新】ARMSX2 nightly-20261120",
+      "originalTitle": "ARMSX2 nightly-20261120 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-20T02:24:38Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261120",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20261120，发布日期为2026年11月20日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261120。\n\n发布日期：2026年11月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧nightly? 夜行现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:在旧夜里无法稳定地安装。 备份您的保存和内存卡, 解开旧的夜晚, 然后安装稳定的APK.\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n有什么新情况\n• 目录:提前一秒钟盖有缓存记录的条目是新鲜的\n• SDL前端:从命令行推出的游戏不再退出\n• GS/Vulkan:管道建造者对照每个顶点阵列的自有限度进行核查\n• 测试:具有8个顶点属性的Vulkan管道需要第二次缓冲和第九次属性\n• eerunner: --frame-hashes在VU1线程闲置后读取 VU1 内存\n• GS/HW:低于1x,使每个渲染目标具有精确的缩放规模\n• Android:启动额外启动器,启动PINE并选择GPU驱动程序\n• gsctl: 站台命令和一个 TCP 连接\n• eerunner: --pad-script、 --pad-cord、 --frame-hashes和无线渲染器\n• PINE:保存垫、播放垫脚本和记录垫输入的信息\n• 文件:脚本、客户端和录音可以持有DualShock 2\n• GS/Vulkan:宣布跑荫器的深度写入深度\n• GS/Vulkan:再次声明像素遮荫器的深度写入深度\n• GS/Vulkan:在提交之前冲出运行机器的索引和桌环\n• Android:说明已安装的malisx2但未从malisx2中选择\n• gsrunner:回放-读取-ick-passes\n• Android:一个已更改的PGO配置文件可以重建每个对象\n• SIF:强制停止SIF0或SIF1,结束转让的EE方面\n• GS/Vulkan:不转GPU回放马里\n• Qt:在无地表情况下给GS一个待决窗口类型\n• GS/Vulkan:Turnip每跑一次抽样呼叫\n• GS/Vulkan:在混合跑道中绕一圈未混合的平面\n• GS/Vulkan:Af无法通过混合常数运行\n• GS/Vulkan:将混合单元自己的α混合物合并成跑道\n• Android:在源代码上再生成PGO配置图,并配有斯匹特斜坡,α矩形,IOP线程滞后和文件夹内存卡的更改\n• FoldersMcd:读取保存文件,主机不会打开写入\n• 测试:文件夹卡块重写保存文件时的暂停冲出\n• FoldersMcd:在每个冲浪上重建集群对文件映射\n· FoldersMcd: 上次没有写时跳过一盘\n• FoldersMcd:保留一个缓存后无法写入的页面\n• Android:通过缓存方法ID呼叫Java文件助手\n• IOP线程:在内存卡服务器调用运行时按紧后放\n• GS/Vulkan:决定Windows上的窗口系统独家全屏\n• GS/Metal:收缩输油管选择器对二字节VSS选择器的粘贴\n• GS/Vulkan:接受VK_KHR_校正_时间戳以及EXT名称\n• GS/Vulkan:在Android表面消失时提供设备窗口支持\n• GS/Vulkan:仅在自旋有自己排队时才发出自旋信号\n• GS/Vulkan:试验无整数分型的丝绸花坡道\n• GS:从Sprite斜坡注释中去掉私人笔记\n· GS/Vulkan:用自己的顶点遮阳器来搭载斯皮克斜坡。 .",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Catalog: a cache entry stamped one second ahead of time() is fresh\n- SDL frontend: pausing a game launched from the command line no longer quits\n- GS/Vulkan: the pipeline builder checks each vertex array against its own limit\n- tests: a Vulkan pipeline with eight vertex attributes takes a second buffer and a ninth attribute\n- eerunner: --frame-hashes reads VU1 memory once the VU1 thread is idle\n- GS/HW: below 1x, give every render target an exact scaled size\n- Android: launch extras that turn PINE on and pick the GPU driver\n- gsctl: pad commands and a TCP connection\n- eerunner: --pad-script, --pad-record, --frame-hashes and the nullhw renderer\n- PINE: messages to hold pads, play pad scripts and record pad input\n- Pad: scripts, clients and recordings can hold a DualShock 2\n- GS/Vulkan: declare the run shader's depth write depth_less too\n- GS/Vulkan: declare the pixel shader's depth write depth_less again\n- GS/Vulkan: flush the run machine's index and table rings before the submit\n- Android: tell apart malisx2 installed but not selected from malisx2 missing\n- gsrunner: drop -readback-kick-passes\n- Android: a changed PGO profile rebuilds every object\n- SIF: a forced stop of SIF0 or SIF1 ends the EE side of the transfer\n- GS/Vulkan: do not spin the GPU for readbacks on Mali\n- Qt: give the GS a pending window type while surfaceless\n- GS/Vulkan: one sampling call per run on Turnip\n- GS/Vulkan: round an unblended draw's output in a blending run\n- GS/Vulkan: no run way for Af through the blend constant\n- GS/Vulkan: merge the blend unit's own alpha blend into runs\n- Android: regenerate the PGO profile on the source with the sprite ramp, alpha rectangle, IOP thread lag and folder memory card changes\n- FolderMcd: read a save file the host will not open for writing\n- tests: a pause flush during a folder card block rewrite keeps the files\n- FolderMcd: rebuild the cluster-to-file map on every flush\n- FolderMcd: skip a flush when nothing was written since the last one\n- FolderMcd: keep a cached page that the flush could not write\n- Android: call the Java file helpers through cached method IDs\n- IOP thread: hold the tight lag bound while a memory card server call runs\n- GS/Vulkan: decide full-screen exclusive from the window system on Windows\n- GS/Metal: shrink the pipeline selector's padding for the two-byte VSSelector\n- GS/Vulkan: accept VK_KHR_calibrated_timestamps as well as the EXT name\n- GS/Vulkan: give a device window support while its Android surface is gone\n- GS/Vulkan: signal the spin semaphore only when the spin has its own queue\n- GS/Vulkan: test the sprite ramp without integer division\n- GS: drop a reference to private notes from the sprite ramp comment\n- GS/Vulkan: carry the sprite ramp in its own vertex shader va…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "4b2605e1c1c47f3fa163fa48bcafe61ddbb4fbf57213350eb6a5a142172b9e5b",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-20T00:43:06Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
       "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
       "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 prerelease，发布日期为2026年11月19日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 prerelease。\n\n发布日期：2026年11月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n释放候选人 `7ed67d2` — `v3.13.1` (`release/v3.13.1`)\n\n提交：`7ed67d2`（https://github.com/libretro/virtualjaguar-libretro/commit/7ed67d20480b89e16078761fcfedd08cca9753af）\n构建时间：2026-11-19 18:56 UTC\nCI Q: 建立日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/44479037504）\n分支：`release/v3.13.1`\n\n提示:自动建造 `release/v3.13.1` 提示,每推一次就换掉 它汇编了所有24个目标;它没有通过测试套件或任何手工质量保证。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。。。 这是来自放行分支的RELASE CANDIDATE,不是放行:它存在,所以24平台矩阵运行在即将发运的代码上,而不是在标记上第一次遇到它。\n\n快速下载\n\n平台: Standone app: Libretro核心软件\nmacOS:通用应用程序 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-macos-universal.zip）: 苹果硅（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-macos-arm64.dylib） 英特尔（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-macos-x86_64.dylib）\nWindows x64 / x86: x64 安装器 (. exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-x64-setup.exe） * x64便携式(.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-x64.zip）: 64 位元（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-windows-x86_64.dll） 32位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-windows-i686.dll）\nWindows ARM64: Installer (.exe) (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-arm64-setup.exe） 便携式(.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-arm64.zip）：—\nLinux x86-64 / x86: AppImage (64- bit) (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-x86_64.AppImage） * .deb(64位)（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_prerelease_amd64.deb） 平板( 64位)（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-x86_64.flatpak）: 64 位元（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-linux-x86_64.so） 32位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-linux-i686.so）\nLinux ARM64: 附录（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-aarch64.AppImage） • 辩论（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_prerelease_arm64.deb） 平板电脑（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-aarch64.flatpak）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-linux-aarch64.so）\n- 安卓 - ARM64 (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-android-arm64-v8a.so） · ARMv7（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-android-armeabi-v7a.so） · x86-64（https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-android-x86_64.so） · [x86](https://github.com/libretro/virtualjaguar-l…",
-      "originalContent": "### Release candidate `7ed67d2` — `v3.13.1` (`release/v3.13.1`)\n\n| | |\n|---|---|\n| **Commit** | [`7ed67d2`](https://github.com/libretro/virtualjaguar-libretro/commit/7ed67d20480b89e16078761fcfedd08cca9753af) |\n| **Built** | 2026-11-19 18:56 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/44479037504) |\n| **Branch** | `release/v3.13.1` |\n\n> Automatic build of the `release/v3.13.1` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest). This is a RELEASE CANDIDATE from a release branch, not a release: it exists so the 24-platform matrix runs on the code about to ship, instead of first meeting it at the tag.\n\n### Quick downloads\n\n| Platform | Standalone app | Libretro core |\n|---|---|---|\n| macOS | [Universal app (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-macos-universal.zip) | [Apple Silicon](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-macos-arm64.dylib) · [Intel](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-macos-x86_64.dylib) |\n| Windows x64 / x86 | [x64 installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-x64-setup.exe) · [x64 portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-x64.zip) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-windows-x86_64.dll) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-windows-i686.dll) |\n| Windows ARM64 | [Installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-arm64-setup.exe) · [Portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-windows-arm64.zip) | — |\n| Linux x86-64 / x86 | [AppImage (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-x86_64.AppImage) · [.deb (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_prerelease_amd64.deb) · [Flatpak (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-x86_64.flatpak) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-linux-x86_64.so) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-linux-i686.so) |\n| Linux ARM64 | [AppImage](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-aarch64.AppImage) · [.deb](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_prerelease_arm64.deb) · [Flatpak](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/VirtualJaguar-prerelease-linux-aarch64.flatpak) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-linux-aarch64.so) |\n| Android | — | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-android-arm64-v8a.so) · [ARMv7](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-android-armeabi-v7a.so) · [x86-64](https://github.com/libretro/virtualjaguar-libretro/releases/download/prerelease/virtualjaguar_libretro-android-x86_64.so) · [x86](https://github.com/libretro/virtualjaguar-l…",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年11月20日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月20日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `4e27ea4` — `v3.13.1` (`develop`)\n\n提交：`4e27ea4`（https://github.com/libretro/virtualjaguar-libretro/commit/4e27ea44da58978d7f02a68a4d6bf36553cc25a2）\n构建时间：2026-11-20 00:42 UTC\nCI 任务：构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/44637972366）\n分支：`develop`\n提示：`develop` tip 的自动构建，每次推送时都会替换。它已在所有 24 个目标上编译；尚未经过测试套件或任何人工质量保证。如需稳定版本，请使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。\n\n快速下载\n\n平台：独立应用程序：Libretro核心\nmacOS：通用应用（.zip）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip）：Apple Silicon（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib） · Intel（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib）\nWindows x64/x86：x64 安装程序 (.exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe） · x64 便携版 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip）：64 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll） · 32 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll）\nWindows ARM64：安装程序 (.exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe） · 便携版 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip）：—\nLinux x86-64 / x86：AppImage（64 位）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage） · .deb（64 位）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb） · Flatpak（64 位）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak）：64 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so） · 32 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so）\nLinux ARM64：AppImage（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage） · .deb（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb） · Flatpak（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so）\nAndroid：—：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so） · ARMv7（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so） · x86-64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so） · x86（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so）\n| iOS/tvOS | — | iOS（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-ios-arm64.dylib） · [tvOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/v…",
+      "originalContent": "### Nightly `4e27ea4` — `v3.13.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`4e27ea4`](https://github.com/libretro/virtualjaguar-libretro/commit/4e27ea44da58978d7f02a68a4d6bf36553cc25a2) |\n| **Built** | 2026-11-20 00:42 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/44637972366) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\n### Quick downloads\n\n| Platform | Standalone app | Libretro core |\n|---|---|---|\n| macOS | [Universal app (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip) | [Apple Silicon](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib) · [Intel](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib) |\n| Windows x64 / x86 | [x64 installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe) · [x64 portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll) |\n| Windows ARM64 | [Installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe) · [Portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip) | — |\n| Linux x86-64 / x86 | [AppImage (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage) · [.deb (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb) · [Flatpak (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so) |\n| Linux ARM64 | [AppImage](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage) · [.deb](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb) · [Flatpak](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so) |\n| Android | — | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so) · [ARMv7](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so) · [x86-64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so) · [x86](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so) |\n| iOS / tvOS | — | [iOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-ios-arm64.dylib) · [tvOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/v…",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "virtual_jaguar_core"
       ],
-      "contentHash": "1f295698c75b49170d4436be5b8d1e5105e56efb3f1e7d12c4318d322673379d",
+      "contentHash": "486401bb796198653c1c1a57c5f4ce151968ac80b1aab9fabd6f70da7455c14a",
       "translationPending": false
     },
     {
@@ -78,31 +151,6 @@
         "armsx3"
       ],
       "contentHash": "32a428cf48b99f659b735e04ff275b89c1d8f0c4bc82a725553de37f216d52c0",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-19T17:43:23Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月19日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_neogeo.cpp: 更新最后的希望 - 粉红色子弹到 v1.30 (芭芭拉梦)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_neogeo.cpp: update Last Hope - Pink Bullets to v1.30 (barbudreadmon)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "deaf9917f37d5d6cb3b7c62cacd2fb4109166cd68cda78884b61fa157fcefe6a",
       "translationPending": false
     },
     {
@@ -173,30 +221,6 @@
         "zeebx"
       ],
       "contentHash": "a4a9866d4b1517b98ca110748122d6702101853998a4ce12aa463f09ed7608a7",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-19T15:40:23Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月19日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 装入时添加快速前进选项( Stenzek)（https://github.com/stenzek/duckstation/commit/734dc4d78841866dd975da59670f30e26e601738）)\n• 当补丁目录更改时重新装入补丁( Stenzek)（https://github.com/stenzek/duckstation/commit/6615fcc4497d3a227761701fda5dac20d48534c7）)\n• 包括用户边框覆盖预设(Stenzek)（https://github.com/stenzek/duckstation/commit/1798a8be00001602eab925f3b2c011d809df28cf）)\n• 添加全局文件夹设置(Stenzek)（https://github.com/stenzek/duckstation/commit/3ab1c7a6772f96ba23918e519ce5de85edabc867）)\n• 将文件夹打开/重置动作移至溢出菜单(Stenzek)（https://github.com/stenzek/duckstation/commit/fb278f1c0384b0a90a024b2335eb8b00c65e6528）)\n• 将物理驱动器和读头选项移动到高级(Stenzek)（https://github.com/stenzek/duckstation/commit/43be44d279711b762d0ba659e28c31c6c20adf44）)\n• 将RAM/VRAM大小分成单独的行(Stenzek)（https://github.com/stenzek/duckstation/commit/524858ede233fcfe069ad7464f161d6c38c80c47）)\n• 支持在游戏列表设置中拖放(Stenzek)（https://github.com/stenzek/duckstation/commit/e270cf538922d062869046a9e83fb3c6a8daf2e0）)\n• 改进游戏列表设置和帮助(Stenzek)（https://github.com/stenzek/duckstation/commit/065890c6f797cb327dcade7e4f64389b07ade085）)\n• 在设置窗口页脚按钮中添加图标( Stenzek)（https://github.com/stenzek/duckstation/commit/71adff4bbc94912c8cedfb550d469f7623240553）)",
-      "originalContent": "## Commits\n- Add Fast Forward While Loading option ([Stenzek](https://github.com/stenzek/duckstation/commit/734dc4d78841866dd975da59670f30e26e601738))\n- Reload patches when the patches directory changes ([Stenzek](https://github.com/stenzek/duckstation/commit/6615fcc4497d3a227761701fda5dac20d48534c7))\n- Include user border overlay presets ([Stenzek](https://github.com/stenzek/duckstation/commit/1798a8be00001602eab925f3b2c011d809df28cf))\n- Add global folder settings ([Stenzek](https://github.com/stenzek/duckstation/commit/3ab1c7a6772f96ba23918e519ce5de85edabc867))\n- Move folder open/reset actions into overflow menu ([Stenzek](https://github.com/stenzek/duckstation/commit/fb278f1c0384b0a90a024b2335eb8b00c65e6528))\n- Move physical drive and readahead options to Advanced ([Stenzek](https://github.com/stenzek/duckstation/commit/43be44d279711b762d0ba659e28c31c6c20adf44))\n- Split RAM/VRAM size into separate rows ([Stenzek](https://github.com/stenzek/duckstation/commit/524858ede233fcfe069ad7464f161d6c38c80c47))\n- Support drag and drop in game list settings ([Stenzek](https://github.com/stenzek/duckstation/commit/e270cf538922d062869046a9e83fb3c6a8daf2e0))\n- Improve game list settings layout and help ([Stenzek](https://github.com/stenzek/duckstation/commit/065890c6f797cb327dcade7e4f64389b07ade085))\n- Add icons to settings window footer buttons ([Stenzek](https://github.com/stenzek/duckstation/commit/71adff4bbc94912c8cedfb550d469f7623240553))",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "f7e838766d3a6ea5b7bd40e69be549bdd355156b1e0c4c29ef269f8fb780b23e",
       "translationPending": false
     },
     {
@@ -881,30 +905,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "b160b8945238cb0076684438d7206b1e6d71037f1426199b84553360077dd5c9",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-2-9-5",
-      "title": "【Android更新】ARMSX2 2.9.5",
-      "originalTitle": "ARMSX2 2.9.5 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-16T21:49:02Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.9.5",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 2.9.5，发布日期为2026年11月16日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 2.9.5。\n\n发布日期：2026年11月16日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.9.5\n\n\n\n有什么新情况:\n\n内存卡\n\n文件夹内存卡保存每个保存。 如果您的内存卡类型是文件夹, 现在每个保存都写完整。 在您离开应用程序前完成的保存可以回到空白状态, 或者作为旧版本, 因为卡片是在保存数据与文件条目之间存储的 这不可能再发生 重新使用已删除保存的空间的新保存将保留它自己的名字, 而不是在已删除的空间下重新出现。 一个保存文件,设备不会打开用于写入,仍然读取,游戏在那里显示它为损坏。 在存储时创建了新的保存, 需要Android自己的文件访问, 并启用 IOP 线程, 当卡片上没有任何变化时, 应用程序则不重写 由 @bmdhacks 完成。\n\n\n\n\n\n武士勇士2号用IOP线节省。 用 IOP 线程装入保存工作, 游戏可以报告损坏的好保存。 由 @ bmdhacks 完成\n\n\n\n快点\n\n在最小混合时绘制批量。 Vulkan 的批量从 2.9.4 由@bmdhacks完成。\n\n超越善恶之水。 它大约285个经过测试的α水在遮蔽器中绘制一个框架测试α,而不是为每个都打破渲染通道,后来在通过共享屏幕上绘制一个拷贝, Alpha 已知的字母框内区域让图画能够读取屏幕。 由 @ bmdhacks 完成\n\n优化的建筑 训练在这个发行。 优化后的构建背后的配置图将在此发行的代码上重新训练, 横跨相同的16个游戏。 完成于 @ bmdhacks\n\n\n\n固定\n\n超越善恶之水。 湖和海在硬件渲染器上以真实的颜色而非红色渲染。 在Texel边缘上绘制的螺旋体遵循控制台自己的坐标步骤,因此水的尖端在它应该到达的地方,游戏数据库给出了两种零售发行(SLUS-20763, 由@bmdhacks完成。\n\n抽筋从特鲁尼普身上抽出来 所以蜘蛛侠3号的灯光 从跑到跑都一样 在阿德雷诺可以改变 由 @bmdhacks 完成。\n\n\n\nIOP线程转移。 当一个游戏在 EE 和 IOP 之间重新启动带有 IOP 线程的传输时, IOP 得到新的数据,在那里它可以得到剩余数据并用一个\"SIF1 Overrun\"停止。 由 @bmdhacks 完成。\n\n\n\n为 Readbacks 旋转 GPU。 在Turnip和MaliSX2的作品上翻转, 在马里,\n\n\n\n回归游戏。 在设置屏幕覆盖游戏时重开渲染器的设置, 或者当应用程序处于背景状态时, 游戏返回时不再关闭应用程序 由 @bmdhacks 完成。\n\n<img宽=\"1080\"高度=\"2340\" alt=\"图像\"src=\".https://github.c…",
-      "originalContent": "# ARMSX2 2.9.5\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e3277dda-04bb-4e9c-a8fe-c04851675e7b\" />\r\n\r\nWhat's new:\r\n\r\n## Memory cards\r\n\r\n**Folder memory cards keep every save.** If your memory card's Type is Folder, every save is now written whole. A save made just before you left the app could come back blank or as the older version, because the card was written to storage between the save's data and its file entry; that can no longer happen. A new save that reuses a deleted save's space keeps its own name instead of reappearing under the deleted one's. A save file the device won't open for writing is still read, where the game showed it as damaged. New saves are created on storage that needs Android's own file access with the IOP thread on, and leaving the app rewrites nothing when nothing on the card changed. done by @bmdhacks\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/86cfb8d6-b73b-4cbc-b2e1-4bba6c025d84\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4445b982-60af-494f-9a1f-318667de6d4f\" />\r\n\r\n**Samurai Warriors 2's saves with the IOP thread.** Loading a save works with the IOP thread on, where the game could report a good save as damaged. done by @bmdhacks\r\n\r\n<img width=\"830\" height=\"616\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4115c655-b343-4e9e-a9d6-e666a601cff6\" />\r\n\r\n## Faster\r\n\r\n**Draw batching at Minimum blending.** Vulkan's draw batching from 2.9.4 now takes the draws of Minimum blending as well, where Spider-Man 3 sent about 3,960 draws a frame against 92 at Basic. done by @bmdhacks\r\n\r\n**Beyond Good & Evil's water.** Its roughly 285 alpha-tested water draws a frame test alpha in the shader instead of breaking the render pass for each one, later draws in a pass share one copy of the screen, and alpha known inside letterboxed areas spares the draws there a read of the screen. done by @bmdhacks\r\n\r\n**Optimized build trained on this release.** The profile behind the optimized build is retrained on this release's code across the same 16 games. done by @bmdhacks\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e8dd18e0-3e30-4095-bbb0-07c23b8f1824\" />\r\n\r\n## Fixed\r\n\r\n**Beyond Good & Evil's water.** The lake and sea render in their real colours on the hardware renderers instead of red. Sprites drawn on texel edges follow the console's own coordinate steps, so the water's stipple lands where it should, and the game database gives both retail releases (SLUS-20763, SLES-51917) High blending. done by @bmdhacks\r\n\r\n**Batched draws on Turnip.** Draws batched together sample their textures one way, so Spider-Man 3's lighting stays the same from run to run on Adreno, where it could change at Minimum and Basic blending. done by @bmdhacks\r\n\r\n<img width=\"1600\" height=\"720\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d0f9556e-ba0b-46eb-86f8-aaaed55e8a70\" />\r\n\r\n**IOP thread transfers.** When a game restarts a transfer between the EE and the IOP with the IOP thread on, the IOP gets the new data, where it could get leftovers and stop with a \"SIF1 Overrun\". done by @bmdhacks\r\n\r\n<img width=\"2510\" height=\"1156\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e8c3de85-8526-4682-8e20-a69fe391645d\" />\r\n\r\n**Spin GPU For Readbacks.** Turning it on works on Turnip and MaliSX2, where it closed the app once it started. It now stays off on Mali GPUs, where it made no difference. done by @bmdhacks\r\n\r\n<img width=\"2510\" height=\"1156\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6a0d6112-3ab6-473e-a1b4-c197d97542a3\" />\r\n\r\n**Returning to a game.** A setting that reopens the renderer while a settings screen covers the game, or while the app is in the background, no longer closes the app when the game comes back. done by @bmdhacks\r\n\r\n<img width=\"1080\" height=\"2340\" alt=\"image\" src=\"https://github.c…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "c519b59ed5b0a88ffb4b7c642236f820860e59893edf626425b95724890c7fc7",
       "translationPending": false
     },
     {
