@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T19:46:17.428635Z",
+  "generatedAt": "2026-11-22T07:25:02.957664Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,44 @@
   },
   "articles": [
     {
+      "id": "android-release-armsx2-nightly-20261122",
+      "title": "【Android更新】ARMSX2 nightly-20261122",
+      "originalTitle": "ARMSX2 nightly-20261122 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-22T06:28:24Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261122",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20261122，发布日期为2026年11月22日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261122。\n\n发布日期：2026年11月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核(如果不确定, 运行获得信任 PAGESIZE)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage)\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧nightly? 夜行现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:在旧夜里无法稳定地安装。 备份您的保存和内存卡, 解开旧的夜晚, 然后安装稳定的APK.\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n有什么新情况\n• GameDB:命运故事的VU1夹克模式外加\n• GS/Vulkan:在Qualcomm的司机上运行程序\n• 评论:投出指针,指针指针指针不在本树上\n• eerunner: --gamedb 在游戏系列和CRC下运行一个无磁盘保存状态\n• eerunner: -- dump-config负载 -- -- 先保存状态\n• eerunner: -- 无磁盘靴子,托盘为空并装入保存状态\n• Android:去掉现场GS应用队列,无任何呼号\n• Android:排队设置适用于CPU线程而不是等待\n• Android:每当轴移动时,就放下触发器的重复密钥事件(# 674)\n• arm64:在末尾去掉空白线 BaseblockEx-arm64.h\n• gsrunner:-panvk-bifrost将PanVK的Bifrost路径放入任何Vulkan设备上\n• GS/Vulkan:在PanVK上不临时装入或储存一个装有Bifrost GPU的快板1\n• GS:在原始数据重叠时,暂时保持同步一DATE\n• GS:没有深度缓冲器的DATE用Bifrost GPU读取PanVK上的目标\n• GS/Vulkan:用Bifrost GPU在PanVK上保持游戏深度而无需加速度\n• GS/Vulkan:开放渲染器通过PanVK上的图纸,并带有Bifrost GPU\n• arm64:IOP再编译器使用每页块索引\n• arm64:FindByHostPc的评论再次说行走只读取,不取锁而无分。\n• arm64:BlockPageIndex头条载有 ARMSX2 贡献者版权线\n• EE arm64:减少JIT区块索引插入站\n• GS:已安装的备注,列出现在的布局和计数\n• 测试: {RGBAQ, XYZF2} 通过传输、绘制缓冲、中记录恢复和一个绘图启动的对子\n• 测试:NOP-加法{ST、RGBAQ、XYZ2}在移动环境和取出时的三倍\n• GS:顶点内核中装有标记的Fuse {RGBAQ, XYZF2}\n• GS:Fuse NOP-加法ST/RGBAQ/XYZ2三角条\n• FullscreenUI:在没有AM/PM文本的情况下,在12小时的时钟上显示AM或PM\n• 全屏UI:再生翻译字符串块\n• 全屏UI:为菜单时钟添加时钟格式设置\n• Android:当集群id未知时,在app的 cpuinfo 副本中忽略集群_cpus_list\n• 第3个方/cpuinfo:当集群代号未知时忽略集群_cpus_list\n• 自由:仅在启动时应用多图选项\n• 自由:增加多选项\n• 自由:将朗布尔送入该地的自由港\n• 自由:从每个控制端口读取输入\n• 一般事务人员:带有属性的三道羊排部队,而不是强迫\n• Android:提供最新产品 ARMSX2 每次应用程序更新后一次 GPU 驱动程序\n• iOS:降低用于编写报告的发射触发器\n• iOS: 放下平面遥测和模拟器无JIT开关\n• vtlb: 放弃 IPSX2_FORCE_NO_FASTMEM 开关\n• iOS:用 ARC 构建运行时间\n• iOS:拆分 SceneDelegate.mm 输入 VM 线程和 AirPlay 文件\n• iOS:…",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- GameDB: VU1 clamp mode Extra for Tales of Destiny\n- GS/Vulkan: run program off on Qualcomm's driver\n- Comments: drop pointers to notes that are not in this tree\n- eerunner: --gamedb runs a no-disc savestate under a game's serial and CRC\n- eerunner: --dump-config loads --savestate first\n- eerunner: --nodisc boots with the tray empty and loads the savestate\n- Android: remove the live GS apply queue, which nothing calls\n- Android: queue settings applies on the CPU thread instead of waiting for them\n- Android: drop a trigger's duplicate key event whenever its axis moves (#674)\n- arm64: drop the blank line at the end of BaseblockEx-arm64.h\n- gsrunner: -panvk-bifrost puts PanVK's Bifrost paths on any Vulkan device\n- GS/Vulkan: neither load nor store a stencil-one temporary on PanVK with a Bifrost GPU\n- GS: keep stencil-one DATE on a temporary when its primitives overlap\n- GS: DATE without a depth buffer reads the target on PanVK with a Bifrost GPU\n- GS/Vulkan: keep game depth without stencil on PanVK with a Bifrost GPU\n- GS/Vulkan: open render passes over their draws on PanVK with a Bifrost GPU\n- arm64: the IOP recompiler uses the per-page block index\n- arm64: FindByHostPc's comment says again that the walk only reads, takes no locks and allocates nothing\n- arm64: BlockPageIndex header carries the ARMSX2 Contributors copyright line\n- EE arm64: reduce JIT block-index insertion stalls\n- GS: the fused-layout comments name the layouts and counts that are there now\n- tests: the {RGBAQ, XYZF2} pair through Transfer, draw buffering, the mid-record resume and a draw start\n- tests: the NOP-padded {ST, RGBAQ, XYZ2} triple under a moving environment and at a draw start\n- GS: Fuse {RGBAQ, XYZF2} packed tags in the vertex kernel\n- GS: Fuse NOP-padded ST/RGBAQ/XYZ2 triangle strips\n- FullscreenUI: show AM or PM on the 12-hour clock in locales without AM/PM text\n- FullscreenUI: regenerate the translation string block\n- FullscreenUI: add a clock format setting for the menu clocks\n- Android: ignore cluster_cpus_list in the app's cpuinfo copy when the cluster id is unknown\n- 3rdparty/cpuinfo: ignore cluster_cpus_list when the cluster id is unknown\n- libretro: apply the Multitap option at startup only\n- libretro: add a Multitap option\n- libretro: send rumble to the pad's libretro port\n- libretro: read input from every controller port\n- GS: force-inline three lambdas with the attribute, not __forceinline\n- Android: offer the newest ARMSX2 GPU driver once after each app update\n- iOS: drop the launch trigger that builds a report\n- iOS: drop the perf telemetry and simulator no-JIT switches\n- vtlb: drop the iPSX2_FORCE_NO_FASTMEM switch\n- iOS: build the runtime with ARC\n- iOS: split SceneDelegate.mm into the VM thread and AirPlay files\n- iOS:…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "b31772825f086e2ef5c320f91f04eea7c4cf09e93ed4571bb3caa8d131db810b",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-21T17:57:11Z",
+      "publishedAt": "2026-11-22T02:11:54Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月21日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• d_neogeo.cpp: 更新 Neo Turf Masters / 大赛高尔夫(Hack, Plus) v1.0) (巴布罗德蒙语).",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_neogeo.cpp: update Neo Turf Masters / Big Tournament Golf (Hack, Plus v1.0) (barbudreadmon)",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月22日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• 纠正枪战扭曲的声音(dinkc64)\n• scrn.cpp,在有艺术品时可禁用大小包(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• fix gunfight's distorted sound (dinkc64)\n• scrn.cpp, disable hires size-hack when artwork is available (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,31 +54,75 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "9a1bcbf895756b873937b2784f3ce7f1741e2cd545405e384e6745295b68059c",
+      "contentHash": "2861a0ed0893608bd0cc6dc2e3522eaf8b3e51c8aea7cdb2ef18e864b9e2571b",
       "translationPending": false
     },
     {
-      "id": "android-release-armsx2-nightly-20261121",
-      "title": "【Android更新】ARMSX2 nightly-20261121",
-      "originalTitle": "ARMSX2 nightly-20261121 Android release",
+      "id": "android-release-tamadroid-0-3-0",
+      "title": "【Android更新】TamaDroid 0.3.0",
+      "originalTitle": "TamaDroid 0.3.0 Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-21T16:45:32Z",
+      "publishedAt": "2026-11-22T01:58:12Z",
       "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261121",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20261121，发布日期为2026年11月21日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261121。\n\n发布日期：2026年11月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64-4K-pages.AppImage 在大多数 Distros 上,或者在 Asahi Linux 和其他 Apple 硅内核上的 16K 内核上(运行后获得信任 PAGESIZE 如果不确定)\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst,4K页的建筑\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst,一个4K页的建筑(Rocknix和Batocera运行堆肥器,故使用Qt Appimage在那里)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧夜里来的? 噩梦现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:稳定无法在旧的夜晚安装。 备份您的保存和记忆卡, 解开旧的夜晚, 然后安装稳定的APK。\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n或\n• iOS:拆分菜单控制器输入路由器\n• iOS:分割控制器可访问性导航文件\n• iOS:将 Orb 字段文件拆分,将主题表格移至外观\n• iOS:将报告本地化,以9种语文制作问题屏幕\n• iOS:在会议结束后提出报告\n• iOS:用已暂停的框架从暂停菜单中报告一个问题\n• iOS:用报告表添加设置诊断\n• iOS:在报告内携带暂停的框架、照片和崩溃文件\n• iOS:从会话日志构建一个经编辑的问题报告拉链\n• iOS:从日志标记读取每个会话的结束\n• iOS:将每个发射台的日志保存在一个带有标记的会话文件夹中\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261120...8bee9fff99b2063ecb032af45a313c4cee5d8f6b",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- iOS: split the menu controller input router\n- iOS: split the controller accessibility navigation file\n- iOS: split the orb field file and move the theme tables to Appearance\n- iOS: localize the Report a Problem screens in nine languages\n- iOS: offer a report after a session that ended badly\n- iOS: report a problem from the pause menu with the paused frame\n- iOS: add Settings Diagnostics with the report sheet\n- iOS: carry the paused frame, a photo and crash files in the report\n- iOS: build a redacted problem report zip from the session logs\n- iOS: read how each session ended from its log markers\n- iOS: keep each launch's logs in a session folder with markers\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261120...8bee9fff99b2063ecb032af45a313c4cee5d8f6b",
+      "sourceUrl": "https://github.com/twelvehouse/TamaDroid/releases/tag/v0.3.0",
+      "imageUrl": "asset://assets/emulators/tamadroid.png",
+      "officialUrl": "https://github.com/twelvehouse/TamaDroid",
+      "summary": "TamaDroid 发布 Android 新版本 0.3.0，发布日期为2026年11月22日。点击查看官方版本信息与更新说明。",
+      "content": "TamaDroid 已发布 Android 最新版本 0.3.0。\n\n发布日期：2026年11月22日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/twelvehouse/TamaDroid/compare/v0.2.1...v0.3.0",
+      "originalContent": "**Full Changelog**: https://github.com/twelvehouse/TamaDroid/compare/v0.2.1...v0.3.0",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
-        "armsx2"
+        "tamadroid"
       ],
-      "contentHash": "c1f327b200d9352bfbdc80f5b6e85aed32761066cf080fa0e6ae07581b9fa401",
+      "contentHash": "9daa62b2aede2107a4bb244866ef678b2768b793fdbb139cedf6f00a3d7b0467",
+      "translationPending": false
+    },
+    {
+      "id": "144921",
+      "title": "【街机】SuperModel Sinden Edition v0.4 r261121",
+      "originalTitle": "[Arcade] SuperModel Sinden Edition v0.4 r261121",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-21T22:07:59Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/144921-arcade-supermodel-sinden-edition-v0-4-r261121/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/semu-sinden-transpa.png",
+      "officialUrl": "https://github.com/DirtBagXon/model3emu-code-sinden/",
+      "summary": "这是名为 SuperModel 的世嘉 Model 1/2/3 模拟器的分支版本，但它支持使用名为 Sinden 的光枪。",
+      "content": "这是名为 SuperModel 的世嘉 Model 1/2/3 模拟器的分支版本，但它支持使用名为 Sinden 的光枪。",
+      "originalContent": "Il s'agit d'un fork de l'émulateur Sega Model 1/2/3 nommé SuperModel mais qui prend en charge l'utilisation du LightGun appelé Sinden.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "18099c548abf211cada5e0ee6448ec4cd75cf1d6fbf6e219d3b23965ce7a5a24",
+      "translationPending": false
+    },
+    {
+      "id": "144919",
+      "title": "【街机】SuperModel v0.4 Build 261121",
+      "originalTitle": "[Arcade] SuperModel v0.4 Build 261121",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-21T22:07:24Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/144919-arcade-supermodel-v0-4-build-261121/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/SUPERMODEL-Arcade-Emulateur.png",
+      "officialUrl": "https://github.com/trzy/Supermodel",
+      "summary": "Supermodel 已成为首屈一指的模拟器，最初由巴特·特日纳德洛夫斯基（Bart Trzynadlowski）、维尔·林德（Ville Linde）和斯特凡诺·泰索（Stefano Teso）开发，旨在高度还原著名世嘉 Model 3 架构的游戏（《房车争霸》（Scud Race）、《Daytona USA 2》、《勒芒 24 小时耐力赛》（Le Mans 24）等）。",
+      "content": "Supermodel 已成为首屈一指的模拟器，最初由巴特·特日纳德洛夫斯基（Bart Trzynadlowski）、维尔·林德（Ville Linde）和斯特凡诺·泰索（Stefano Teso）开发，旨在高度还原著名世嘉 Model 3 架构的游戏（《房车争霸》（Scud Race）、《Daytona USA 2》、《勒芒 24 小时耐力赛》（Le Mans 24）等）。\n随着项目的不断发展，贡献者们大大扩展了其功能，使其能够全面支持前几代街机，现在还包括世嘉 Model 1 和世嘉 Model 2 系统（以及所有 2A、2B 和 2C 版本）。\n得益于众多技术优化，包括利用 GPU 加速的现代化图形渲染、对原始处理器和声音芯片的忠实还原，以及对街机专用控制外设（方向盘、变速箱、操纵杆和光枪）的广泛支持，\nSupermodel 提供特别逼真、流畅的模拟体验，让您在最佳条件下重温世嘉街机的经典游戏。\n\n• 旧版参考资料 [此处/",
+      "originalContent": "Supermodel s'impose comme l'émulateur de référence, initialement développé par Bart Trzynadlowski, Ville Linde et Stefano Teso pour restituer avec une grande fidélité les jeux de la célèbre architecture Sega Model 3 (Scud Race, Daytona USA 2, Le Mans 24, etc.).\n\nAu fil des évolutions du projet, ses contributeurs ont considérablement étendu ses capacités pour intégrer la prise en charge complète des générations d'arcades précédentes, englobant désormais les systèmes Sega Model 1 et Sega Model 2 (avec toutes leurs variantes 2A, 2B et 2C).\n\nGrâce à ses nombreuses optimisations techniques, notamment un rendu graphique moderne exploitant l'accélération GPU, une reproduction fidèle des processeurs et des puces sonores d'origine, ainsi qu'une prise en charge étendue des périphériques de contrôle spécifiques aux bornes d'arcade (volants, boîtes de vitesses, manches de vol et pistolets optiques), Supermodel offre une expérience d'émulation particulièrement fidèle et fluide, permettant de retrouver les grands classiques de l'arcade Sega dans des conditions optimales.\n\n- Anciennes références [ici/",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "14b347870b50af79258b6668cdf376ea68e9946c7de69325dc3b1b7515ef1c4f",
       "translationPending": false
     },
     {
@@ -4959,30 +5027,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "7f604a6deb7eb5c889a6c4c1153daac4e5459f462b9ec11fda2467783cbce6b0",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-emucorev-0-2-7",
-      "title": "【Android更新】EmuCoreV 0.2.7",
-      "originalTitle": "EmuCoreV 0.2.7 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-10-27T22:05:54Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/sashkinbro/EmuCoreV/releases/tag/v0.2.7",
-      "imageUrl": "asset://assets/emulators/emucorev.png",
-      "officialUrl": "https://github.com/sashkinbro/EmuCoreV",
-      "summary": "EmuCoreV 发布 Android 新版本 0.2.7，发布日期为2026年10月27日。点击查看官方版本信息与更新说明。",
-      "content": "EmuCoreV 已发布 Android 最新版本 0.2.7。\n\n发布日期：2026年10月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n完整更改日志 : https://github.com/sashkinbro/EmuCoreV/compare/v0.2.6...v0.2.7\n\n有什么新情况: 0.2.7\n\n• UI 修正\n• 核心补救和改进",
-      "originalContent": "**Full Changelog**: https://github.com/sashkinbro/EmuCoreV/compare/v0.2.6...v0.2.7\r\n\r\nWhat's new: 0.2.7\r\n\r\n- UI fixes\r\n- Core fixes and improvements",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "emucorev"
-      ],
-      "contentHash": "26fc95a85bb6e90673197c47eff5e6f8e7d8ddb5b2277ebc9067ecd66ec81b1b",
       "translationPending": false
     },
     {
