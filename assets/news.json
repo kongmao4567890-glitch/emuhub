@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T09:06:40.598796Z",
+  "generatedAt": "2026-11-25T21:59:48.308148Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,90 @@
   },
   "articles": [
     {
+      "id": "android-release-armsx2-nightly-20261125",
+      "title": "【Android更新】ARMSX2 nightly-20261125",
+      "originalTitle": "ARMSX2 nightly-20261125 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T21:31:21Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261125",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20261125，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261125。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64.AppImage,4K,16K和64K页内核相同\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst (Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage).\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧nightly? 夜行现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:在旧夜里无法稳定地安装。 备份您的保存和内存卡, 解开旧的夜晚, 然后安装稳定的APK.\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n有什么新情况\n• COP2: VU0同步将 VU0 运行到 EE 的时钟,从未通过它\n• iOS:撞到 2.6.1\n• Android:将GS阴影和GameDB编译为核心\n• 嵌入式资源:编入式副本胜过资源文件夹\n• iOS:平板布局中的L3和R3按钮\n• iOS:将 D- pad 和面部按钮作为一个在垫面编辑器中移动\n• iOS:放下旧的垫子布局编辑器\n• iOS:平板布局中的浮动棒\n• iOS:带有滴出卡、控制器和VoiceOver的触地板编辑器\n• iOS:每级平板布局,不透明并设有书槽\n• Android:在Adreno 8xx部件上提供我们的Turnip包,其设备表列表\n• Turnip上的Adreno 8xx 使用每道深层屏障的申报反馈回路\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261124...d4fe08faebcb977da891b20477a3f8b7eb9ee531",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64.AppImage, for 4K, 16K and 64K page kernels alike\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- COP2: a VU0 sync runs VU0 to the EE's clock, never past it\n- iOS: bump to 2.6.1\n- Android: compile the GS shaders and the GameDB into the core\n- Embedded resources: the compiled-in copy wins over the resources folder\n- iOS: L3 and R3 buttons in the pad layout\n- iOS: move the D-pad and face buttons as one in the pad editor\n- iOS: drop the old pad layout editor\n- iOS: floating sticks in the pad layout\n- iOS: touch pad editor with drop cards, controller and VoiceOver\n- iOS: per-class pad layouts with opacity and a book slot\n- Android: offer our Turnip pack on the Adreno 8xx parts its device table lists\n- Adreno 8xx on Turnip takes the declared feedback loop with the per-draw barriers\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261124...d4fe08faebcb977da891b20477a3f8b7eb9ee531",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "efcf69ded16ff85e31247bdb586041ec5b38642182cad8cb1b80f62df7552962",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-zeebx-nightly",
+      "title": "【Android更新】Zeebx nightly",
+      "originalTitle": "Zeebx nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T16:40:32Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ZeebxTeam/zeebx-emu/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/zeebx.png",
+      "officialUrl": "https://github.com/ZeebxTeam/zeebx-emu",
+      "summary": "Zeebx 发布 Android 新版本 nightly，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
+      "content": "Zeebx 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n`development` 在 c73500bf40d87b03b575daa731caee21874a11bf 的自动构建。\n\n这不是一个版本。它包含即将推出的功能，但尚未经过任何人的测试，以确认其\n正常工作：预计它会出问题，并保留一份您的存档副本。要从模拟器内部接收它，\n模拟器中获取，请在“设置”>“更新”下选择“夜间”频道；要停止，请选择“稳定”频道。\n已发布版本位于发布页面（https://github.com/ZeebxTeam/zeebx-emu/releases/latest）。",
+      "originalContent": "The automatic build of `development` at c73500bf40d87b03b575daa731caee21874a11bf.\n\n**This is not a release.** It has what is coming, before anyone has checked that it\nworks: expect it to break, and keep a copy of your saves. To receive it from inside the\nemulator, choose the nightly channel under Settings, Updates; to stop, choose stable.\n\nThe released versions are on the [releases page](https://github.com/ZeebxTeam/zeebx-emu/releases/latest).",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "zeebx"
+      ],
+      "contentHash": "52fb9f1d110957d87b792838570c0d8ec230ceeac179125e328708daa10bbe19",
+      "translationPending": false
+    },
+    {
+      "id": "145121",
+      "title": "【电脑】AMSpiriT (Lite) v1.18.3",
+      "originalTitle": "[Ordi.] AMSpiriT (Lite) v1.18.3",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T16:40:24Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145121-ordi-amspirit-lite-v1-18-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/09/amspiritlite-scaled.png",
+      "officialUrl": "https://www.amspirit.fr/",
+      "summary": "AMSpiriT Lite 是由 Siko 用 C++ 编写的跨平台 Amstrad CPC 模拟器，基于与 AMSpiriT 相同的模拟核心。它适用于 Windows、Linux 和 macOS，并提供多种界面，包括 SDL2 和 Qt。 AMSpiriT Lite 的目的是尽可能忠实地再现真实 CPC 的硬件行为，同时提供一个便携且更具实验性的模拟器版本。 。",
+      "content": "AMSpiriT Lite 是由 Siko 用 C++ 编写的跨平台 Amstrad CPC 模拟器，基于与 AMSpiriT 相同的模拟核心。它适用于 Windows、Linux 和 macOS，并提供多种界面，包括 SDL2 和 Qt。\nAMSpiriT Lite 的目的是尽可能忠实地再现真实 CPC 的硬件行为，同时提供一个便携且更具实验性的模拟器版本。\n。它还集成了面向开发和测试的高级功能，例如 Lua/CSL 脚本、调试 REST API 和 BASIC 程序注入。",
+      "originalContent": "AMSpiriT Lite est un émulateur Amstrad CPC multiplateforme codé en C++ par Siko, basé sur le même cœur d'émulation qu'AMSpiriT. Il est disponible pour Windows, Linux et macOS, avec plusieurs interfaces, dont SDL2 et Qt.\n\nAMSpiriT Lite a pour finalité de reproduire le plus fidèlement possible le comportement hardware d'un vrai CPC, tout en proposant une version portable et plus expérimentale de l'émulateur. Il intègre également des fonctions avancées destinées notamment au développement et aux tests, comme le scripting Lua/CSL, une API REST de débogage et l'injection de programmes BASIC.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "8d21d20a41d3d18bd54f71087b857b70bb7f10d6838d182eaff0fe1112152343",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-25T07:25:10Z",
+      "publishedAt": "2026-11-25T15:14:16Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• mips3/y2:清理(barbudreadmon)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• mips3/y2: cleanup (barbudreadmon)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• speccy 更新自 gab75(dinkc64)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• speccy update from gab75 (dinkc64)",
       "platforms": [
         "android"
       ],
@@ -30,7 +100,207 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "f2f747d80ce9d32ed831b69eb72883746dfa0a2c0afde4fbd96dca49c3daaa43",
+      "contentHash": "6ab0b880280e6d6023b747c9884a1fa6edb70d7805d558782c3ebaf1ecf73226",
+      "translationPending": false
+    },
+    {
+      "id": "145110",
+      "title": "【街机】ArcadeDuck v0.7.0 / 0.8.0 Dev",
+      "originalTitle": "[Arcade] ArcadeDuck v0.7.0 / 0.8.0 Dev",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T13:44:37Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145110-arcade-arcadeduck-v0-7-0-0-8-0-dev/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/arcadeduck-ingame.jpg",
+      "officialUrl": "https://stilljc.github.io/ArcadeDuck-Site/",
+      "summary": "ArcadeDuck 是一款开源模拟器，专注于基于 PlayStation 1 架构的街机系统，由 StillJC 基于 DuckStation 的代码开发。 。它支持源自 PS1 的街机硬件，包括 Namco System 10/11/12、Taito G-Net、Konami GV/GQ/System 573 和 Sony ZN-1/ZN-2 等主板，以及其专用外设（JVS、轨迹球、投币器）。 。",
+      "content": "ArcadeDuck 是一款开源模拟器，专注于基于 PlayStation 1 架构的街机系统，由 StillJC 基于 DuckStation 的代码开发。\n。它支持源自 PS1 的街机硬件，包括 Namco System 10/11/12、Taito G-Net、Konami GV/GQ/System 573 和 Sony ZN-1/ZN-2 等主板，以及其专用外设（JVS、轨迹球、投币器）。\n。该软件专为街机游戏设计，可直接管理 MAME 格式的 ROM 存档、通过命令行启动游戏以及使用 XML 格式的作弊码。\n与旨在模拟商用 PlayStation 的 DuckStation 不同，ArcadeDuck 整合了街机特有功能：专用 BIOS、ROM 和 CHD 存储镜像、游戏专用控制、投币器管理、服务按钮、轨迹球和光枪。\n。它还提供针对每款游戏的专属控制和配置方案。\n\n变更内容（稳定版/开发版）：\n\n=== 2026 年 11 月 11 日 ===\n• 改进 Techno Drive 收据的渲染\n• 从父级初始化每套街机设置\n\n=== 2026 年 11 月 12 日 ===\n• 将 HBMAME ZN 克隆和范围克隆菜单添加到 ROM 文件夹\n• 为卡丁车对决和科技飞车设置种子校准的 EEPROM 默认值\n• 每个绑定仅捕获一个控制器输入\n\n=== 2026 年 11 月 13 日 ===\n• 在冷启动释放写入时启动 System 12 H8 定时\n• 将测验和 SWS 2000/2001 套件连接到 Cyber Lead I/O 板\n• 在保留 RAM 的启动重置时重启 System 12 H8\n• 当 2 型多边形设置纹理页时，保留 E1h 的“绘制到显示字段”功能\n• 将 System 12 设置的 DAC 视频增益应用于显示器\n• 删除未使用的 FCA10 参数和 Techno Drive 常数\n• 应用游戏设置后加载 Cyber Lead LED 固件\n\n=== 2026 年 11 月 14 日 ===\n• 完成 ArcadeDuck 用户界面的八种语言翻译\n=== 2026 年 11 月 15 日 ===\n• 将开发分支合并到 experimental/system10\n• 为“Kono e Tako”按钮标签编号\n• 在 System 10 上遵循 Cyber Lead LED 硬件设置\n• 修复 System 10 上合并和拆分 ROM 集的加载问题\n\n=== 2026 年 11 月 21 日 ===\n• 将版本升级至 0.8.0-dev 并更新 Windows 资源元数据\n• 合并 System 12 稳定版本的开发版本\n=== 2026 年 11 月 22 日 ===\n• 当设置在未发出查询的情况下关闭时，确定 Cyber Lead 的保存就绪状态\n• 为兼容的游戏添加可选的 Cyber Lead 机柜\n• 在“游戏属性”中描述 Cyber Lead LED 的行为\n• 当两个 TMP95C061 共享解释器时，保留每个 TMP95C061 的 CPU 上下文\n• 使用 LED 硬件设置连接可选的 Cyber Lead 机柜\n• 为《青春问答》（Seishun Quiz）提供 Cyber Lead 街机柜\n• 标记《超级世界体育场 2000》和《超级世界体育场 2001》为正常运行\n\n=== 2026 年 11 月 23 日 ===\n• System 10：更正《青春问答》JVS 机柜和按钮映射\n• 为兼容的南梦宫游戏使用原生 Cyber Lead JVS\n• System10：为《星三角》（Star Trigon）启用 Cyber Lead JVS\n• 修复全屏暂停菜单导航环绕问题\n如果您在启动时遇到错误，可以在此处下载所需的库和运行时软件包。",
+      "originalContent": "ArcadeDuck est un émulateur open source spécialisé dans les systèmes d'arcade basés sur l'architecture de la PlayStation 1, développé par StillJC à partir du code de DuckStation. Il prend en charge le matériel d'arcade dérivé de la PS1 — notamment les cartes Namco System 10/11/12, Taito G-Net, Konami GV/GQ/System 573 et Sony ZN-1/ZN-2 — ainsi que leurs périphériques dédiés (JVS, trackballs, monnayeurs). Pensé pour l'arcade, il gère directement les archives ROMs au format MAME, le lancement par ligne de commande et les codes de triche XML.\n\nContrairement à DuckStation, qui vise l'émulation de la PlayStation commerciale, ArcadeDuck intègre les spécificités des bornes d'arcade: BIOS dédiés, ROM et images de stockage CHD, commandes spécifiques aux jeux, gestion des monnayeurs, boutons de service, trackballs et pistolets optiques. Il propose également des profils de commandes et de configuration propres à chaque jeu.\n\nLes changements sont (stable/dev):\n\n=== 11 novembre 2026 ===\n- Improve Techno Drive receipt rendering\n- Initialize per-set arcade settings from parent\n\n=== 12 novembre 2026 ===\n- Add HBMAME ZN clones and scope clone menus to ROM folders\n- Seed calibrated EEPROM defaults for Kart Duel and Techno Drive\n- Capture only one controller input per binding\n\n=== 13 novembre 2026 ===\n- Start System 12 H8 time at the cold-boot release write\n- Connect quiz and SWS 2000/2001 sets to the Cyber Lead I/O board\n- Restart the System 12 H8 on the RAM-preserving boot reset\n- Keep E1h draw-to-displayed-field when type-2 polygons set texpage\n- Apply the System 12 settings DAC video gain to the display\n- Remove unused FCA10 parameters and Techno Drive constant\n- Load Cyber Lead LED firmware after applying game settings\n\n=== 14 novembre 2026 ===\n- Complete ArcadeDuck UI translations across eight languages\n\n=== 15 novembre 2026 ===\n- Merge dev into experimental/system10\n- Number the Kono e Tako button labels\n- Honor the Cyber Lead LED hardware setting on System 10\n- Fix merged and split ROM set loading on System 10\n\n=== 21 novembre 2026 ===\n- Bump version to 0.8.0-dev and update Windows resource metadata\n- Merge dev for System 12 stable release\n\n=== 22 novembre 2026 ===\n- Settle Cyber Lead save readiness when setup closes without a query\n- Add an optional Cyber Lead cabinet for compatible games\n- Describe Cyber Lead LED behaviour in Game Properties\n- Keep each TMP95C061's CPU context when two share the interpreter\n- Attach the optional Cyber Lead cabinet with the LED hardware setting\n- Offer the Cyber Lead cabinet for Seishun Quiz\n- Mark Super World Stadium 2000 and 2001 working\n\n=== 23 novembre 2026 ===\n- System 10: correct Seishun Quiz JVS cabinet and button mapping\n- Use native Cyber Lead JVS for compatible Namco games\n- System10: enable Cyber Lead JVS for Star Trigon\n- Fix fullscreen pause menu navigation wraparound\n\nSi vous rencontrez des erreurs au lancement, un pack de bibliothèques et runtimes nécessaires est téléchargeable ici.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "09c5eb355489a73dfae655db072db71c3c80aa9f9fb9d3c298466e01a53bdcbe",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-gamenative-1-4-1",
+      "title": "【Android更新】GameNative 1.4.1",
+      "originalTitle": "GameNative 1.4.1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T13:26:32Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/utkarshdalal/GameNative/releases/tag/v1.4.1",
+      "imageUrl": "asset://assets/emulators/gamenative.png",
+      "officialUrl": "https://github.com/utkarshdalal/GameNative",
+      "summary": "GameNative 发布 Android 新版本 1.4.1，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
+      "content": "GameNative 已发布 Android 最新版本 1.4.1。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n下载\n• `gamenative-v1.4.1.apk` ——标准建设。 建议大多数用户使用。\n• `gamenative-v1.4.1-legacy-xr.apk` ——XR为查询头像所建。\n\n\n更新内容\n\n在预释后添加\n• 已添加 OpenGL 4.0 马里/马里 https://github.com/utkarshdalal/GameNative/pull/2481\n• EA游戏采用集装箱语言 https://github.com/utkarshdalal/GameNative/pull/2485\n• 固定:游戏镜问题 1.4.1 (fps 限制, Isfg,光标和shim上的 GL 标题) 由 @ joshuatam in https://github.com/utkarshdalal/GameNative/pull/2484\n• 质子 11.0-2 13 + FEX 2611-gn-8 添加,修正 Castlevania: Belmont 使用已知配置的诅咒\n• HTML5:收集的运行时间修正(fshim readdir, Electron preload/saves/entry/scroll, Constructive bunds) 由 @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/2466\n• Rockstar:由@utkarshdalal在推特上推出, https://github.com/utkarshdalal/GameNative/pull/2491\n• 固定游戏在根文件夹所在的库中显示 `.` (斯克勒顿地狱) https://github.com/utkarshdalal/GameNative/pull/2496\n• 未登录时从前端修复Steam发射装置 https://github.com/utkarshdalal/GameNative/pull/2495\n• 支助Adreno 85x in https://github.com/utkarshdalal/GameNative/pull/2503\n• HTML5:温蒂·奎斯特不再挂在负载屏幕上, https://github.com/utkarshdalal/GameNative/pull/2492\nHTML5:关于马里的平面接合, https://github.com/utkarshdalal/GameNative/pull/2494\n\n从预释\n• 增加主题+可配置的声音,包括从Decky公司改编的声音 https://github.com/utkarshdalal/GameNative/pull/2402\n• 更新包装gamenative 以正确操作几乎所有马里、PowerVR和Exynos设备 https://github.com/utkarshdalal/GameNative/pull/2262\n· 添加优化 - 使游戏在更平滑,更高的FPS中运行而热量较少 https://github.com/utkarshdalal/GameNative/pull/2363\n• 固定GTA IV、Hogwarts遗产、Slay the Spire和晶体管(需要最新的质子)\n• Steam 游戏的 Ubisoft 连接支持(在无头模式下需要 Steam 客户端 - 云保存未测试并默认关闭的上传) https://github.com/utkarshdalal/GameNative/pull/2428\n• 增加共享遮阳器和FEX缓冲器(小结巴、快靴子) https://github.com/utkarshdalal/GameNative/pull/2356\n• 游戏镜:固定撕裂,较少使用内存和CPU,由@joshuatam in https://github.com/utkarshdalal/GameNative/pull/2393\n• 为基于铬的游戏添加了 HTML5 本地Webview 运行时间(使其运行得更好!) 由 @jeremybernstein in! https://github.com/utkarshdalal/GameNative/pull/1570\n• 本地云保存备份,并在其中恢复 https://github.com/utkarshdalal/GameNative/pull/2355\n• 控制器使应用软件完全可导航 https://github.com/utkarshdalal/GameNative/pull/2460\n• 固定游戏镜控制器问题 https://github.com/utkarshdalal/GameNative/pull/2394 和 https://github.com/utkarshdalal/GameNative/pull/2397\n• 运行游戏 Steam 安装脚本的已知步骤( PlayStation 库缺失) 由 @ joshuatam in https://github.com/utkarshdalal/GameNative/pull/2384\n由@danielrutley 翻译。 https://github.com/utkarshdalal/GameNative/pull/2464 和 https://github.com/utkarshdalal/GameNative/pull/2463\n• 固定Java游戏回归 https://github.com/utkarshdalal/GameNative/pull/2422\n• 修复 \"未知的失败\" 以保存云 https://github.com/utkarshdalal/GameNative/pull/2400\n• 调整存储管理器的大小 https://github.com/utkarshdalal/GameNative/pull/2367\n• 将集装箱的可执行性保留在冷的离线意图发射上 https://github.com/utkarshdalal/GameNative/pull/2365\n• 固定前缀,安装共同控制装置 6.0 由@joshuatam 组成 https://github.com/utkarshdalal/GameNative/pull/2368\n• 修复32位CPU设置 https://github.com/utkarshd…",
+      "originalContent": "## Downloads\r\n- **`gamenative-v1.4.1.apk`** — Standard build. Recommended for most users.\r\n- **`gamenative-v1.4.1-legacy-xr.apk`** — XR build for Quest headsets.\r\n\r\n\r\n## What's Changed\r\n\r\n### Added after prerelease\r\n* Added OpenGL 4.0 support on Mali/PowerVR in https://github.com/utkarshdalal/GameNative/pull/2481\r\n* EA games follow the container language in https://github.com/utkarshdalal/GameNative/pull/2485\r\n* fix: gamescope issues in 1.4.1 (fps limit, lsfg, cursor, and GL titles on the shim) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2484\r\n* Proton 11.0-2 13 + FEX 2611-gn-8 added, fixes Castlevania: Belmont's Curse using known config\r\n* HTML5: collected runtime fixes (fs shim readdir, Electron preload/saves/entry/scroll, Construct bundles) by @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/2466\r\n* Rockstar: launch without internet by @utkarshdalal in https://github.com/utkarshdalal/GameNative/pull/2491\r\n* Fixed games showing in library where root folder was `.` (Skeleton Hell) in https://github.com/utkarshdalal/GameNative/pull/2496\r\n* Fix Steam launches from frontends when not logged in in https://github.com/utkarshdalal/GameNative/pull/2495\r\n* Support for Adreno 85x in https://github.com/utkarshdalal/GameNative/pull/2503\r\n* HTML5: Wendy Quest no longer hangs on the load screen by @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/2492\r\n* HTML5: tilemap seams on Mali, more Get AI help diagnostics by @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/2494\r\n\r\n### From prerelease\r\n* Added themes + configurable sounds including ones adapted from Decky in https://github.com/utkarshdalal/GameNative/pull/2402\r\n* Updated wrapper-gamenative to work correctly on almost all Mali, PowerVR and Exynos devices in https://github.com/utkarshdalal/GameNative/pull/2262\r\n* Added Optimize - make games run at smoother, higher FPS with less heat in https://github.com/utkarshdalal/GameNative/pull/2363\r\n* Fixed GTA IV, Hogwarts Legacy, Slay the Spire and Transistor (requires latest proton)\r\n* Ubisoft Connect support for Steam games (requires Steam client in headless mode - cloud save uploads not tested and turned off by default) in https://github.com/utkarshdalal/GameNative/pull/2428\r\n* Added shared shader and FEX caching (less stutters, faster boot) in https://github.com/utkarshdalal/GameNative/pull/2356\r\n* gamescope: fixed tearing, use less memory and CPU, made rendering engine code public by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2393\r\n* Added HTML5 native WebView runtime for Chromium-based games (makes them run way better!) by @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/1570\r\n* Local cloud save backups with restore in https://github.com/utkarshdalal/GameNative/pull/2355\r\n* Made app completely navigable by controller in https://github.com/utkarshdalal/GameNative/pull/2460\r\n* Fixed Gamescope controller issues in https://github.com/utkarshdalal/GameNative/pull/2394 and https://github.com/utkarshdalal/GameNative/pull/2397\r\n* run a known step of a game's Steam install script (fixes PlayStation library missing) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2384\r\n* Fixes for XCOM: Enemy Unknown (appmanifest and DLC) by @danielruttley in https://github.com/utkarshdalal/GameNative/pull/2464 and https://github.com/utkarshdalal/GameNative/pull/2463\r\n* Fixed Java games regression in https://github.com/utkarshdalal/GameNative/pull/2422\r\n* Fix \"Unknown Fail\" for cloud saves in https://github.com/utkarshdalal/GameNative/pull/2400\r\n* Fix storage manager size counting in https://github.com/utkarshdalal/GameNative/pull/2367\r\n* Keep the container executable on cold offline intent launches in https://github.com/utkarshdalal/GameNative/pull/2365\r\n* fix prefix installs the Common-Controls 6.0 assembly by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2368\r\n* Fix 32-bit CPU setting in https://github.com/utkarshd…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gamenative"
+      ],
+      "contentHash": "16374325a6da05f45d304c83062c1f1d506b3de4578ce32314373b3cfe728e92",
+      "translationPending": false
+    },
+    {
+      "id": "145108",
+      "title": "【家用机】Eglantine v0.1.0 RC4 build 261124",
+      "originalTitle": "[Consoles de salon] Eglantine v0.1.0 RC4 build 261124",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T12:57:17Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145108-consoles-de-salon-eglantine-v0-1-0-rc4-build-261124/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/eglantine-nx2.png",
+      "officialUrl": "https://github.com/Djihads80/Eglantine",
+      "summary": "Eglantine 是一款开源的 Nintendo Switch 1 和 2 模拟器，源自 Eden、Yuzu 和 Sudachi 项目。该模拟器使用 C++ 开发，旨在实现与 Windows、Linux、macOS、Android 和 FreeBSD 的跨平台兼容性。 该项目旨在重现游戏机的运行方式，并逐步提高与游戏和硬件功能的兼容性。该项目的开发尤其需要对硬件进行探索和逆向工程。",
+      "content": "Eglantine 是一款开源的 Nintendo Switch 1 和 2 模拟器，源自 Eden、Yuzu 和 Sudachi 项目。该模拟器使用 C++ 开发，旨在实现与 Windows、Linux、macOS、Android 和 FreeBSD 的跨平台兼容性。\n该项目旨在重现游戏机的运行方式，并逐步提高与游戏和硬件功能的兼容性。该项目的开发尤其需要对硬件进行探索和逆向工程。\n开发人员接受捐款，用于购买 Nintendo Switch 游戏机、用于测试和逆向工程的游戏，以及托管服务、技术基础设施、额外硬件（包括 GPU）和持续集成 (CI) 服务器。",
+      "originalContent": "Eglantine est un émulateur open source de Nintendo Switch 1 et 2, dérivé des projets Eden, Yuzu et Sudachi. Développé en C++, il vise une compatibilité multiplateforme avec Windows, Linux, macOS, Android et FreeBSD.\n\nLe projet cherche à reproduire le fonctionnement de la console et à améliorer progressivement la compatibilité avec les jeux et les fonctionnalités matérielles. Son développement nécessite notamment des travaux d'exploration et de rétro-ingénierie du matériel.\n\nLes développeurs acceptent les dons financiers, destinés à financer l'acquisition de consoles Nintendo Switch, de jeux pour les tests et la rétro-ingénierie, ainsi que l'hébergement, l'infrastructure technique, le matériel supplémentaire (notamment des GPU) et les serveurs d'intégration continue (CI).",
+      "platforms": [
+        "android",
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "eglantine_pc",
+        "eglantine_zortos_pc"
+      ],
+      "contentHash": "cd7143f53f05985297766cad613a2e6a996efabafe42790ff6f2cc55a29b4fd3",
+      "translationPending": false
+    },
+    {
+      "id": "145105",
+      "title": "【家用机】ZeraPS5 v0.1.1 build 1152",
+      "originalTitle": "[Consoles de salon] ZeraPS5 v0.1.1 build 1152",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "tool",
+      "publishedAt": "2026-11-25T12:53:34Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145105-consoles-de-salon-zeraps5-v0-1-1-build-1152/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/zeraps5.png",
+      "officialUrl": "https://github.com/zeraps5/",
+      "summary": "ZeraPS5 是一个在 Windows x64 系统上模拟 PlayStation 5 的实验性项目，由 metallrockdev 在人工智能工具（包括 Codex 和 Claude Code）的帮助下开发。该项目提供可下载的编译版本，以及一份兼容性列表，用于跟踪已测试的游戏和所获得的结果。 演示展示了多款游戏，包括《我的世界》《侠盗猎车手 5》《荒野大镖客：救赎》和《上古卷轴 5：天际》。",
+      "content": "ZeraPS5 是一个在 Windows x64 系统上模拟 PlayStation 5 的实验性项目，由 metallrockdev 在人工智能工具（包括 Codex 和 Claude Code）的帮助下开发。该项目提供可下载的编译版本，以及一份兼容性列表，用于跟踪已测试的游戏和所获得的结果。\n演示展示了多款游戏，包括《我的世界》《侠盗猎车手 5》《荒野大镖客：救赎》和《上古卷轴 5：天际》。发布的视频片段展示了这些游戏的不同运行阶段，其性能仍然有限，且因游戏而异。\n。开发人员指出，结果取决于模拟器的版本、测试的场景以及所使用的参数。\nZeraPS5 仍处于开发阶段，其兼容性和性能可能会发生变化。现有的演示版展示了其当前状态，但并不保证所展示的游戏能够完全运行。",
+      "originalContent": "ZeraPS5 est un projet expérimental d'émulation de la PlayStation 5 sur Windows x64, développé par metallrockdev avec l'aide d'outils d'intelligence artificielle, notamment Codex et Claude Code. Le projet propose des versions compilées téléchargeables ainsi qu'une liste de compatibilité permettant de suivre les jeux testés et les résultats obtenus.\n\nDes démonstrations présentent plusieurs jeux, dont Minecraft, Grand Theft Auto V, Red Dead Redemption et The Elder Scrolls V: Skyrim. Les séquences publiées montrent différents stades de leur exécution, avec des performances encore limitées et variables selon les titres. Le développeur précise que les résultats dépendent des versions de l'émulateur, des scènes testées et des paramètres utilisés.\n\nZeraPS5 reste un projet en développement dont la compatibilité et les performances sont susceptibles d'évoluer. Les démonstrations disponibles donnent un aperçu de son état actuel, sans garantir un fonctionnement complet des jeux présentés.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "06c970b862f5087dfb6444baf1d1616b3a1fd2cdbbf3a0a8682243ab68966aa3",
+      "translationPending": false
+    },
+    {
+      "id": "145103",
+      "title": "【街机】Kitsune v0.2.2",
+      "originalTitle": "[Multi-systemes] Kitsune v0.2.2",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T12:52:24Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145103-multi-systemes-kitsune-v0-2-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/katsune.png",
+      "officialUrl": "https://github.com/tsukina123/kitsune-releases/releases",
+      "summary": "Kitsune 是一款多系统模拟器，围绕不同的“核心”运行。该项目目前主要面向街机系统的模拟，提供三个核心：Konami Viper、IGS PC 和 IGS PGM 3。 IGS PC 内核尤其能够运行该平台的多款街机游戏，而 Konami Viper 内核则支持使用该硬件的各种 Konami 游戏。 该项目似乎仍处于非常初期的阶段，但其架构允许逐步集成新的核心，从而将Kitsune的兼容性扩展到其他系统。 。",
+      "content": "Kitsune 是一款多系统模拟器，围绕不同的“核心”运行。该项目目前主要面向街机系统的模拟，提供三个核心：Konami Viper、IGS PC 和 IGS PGM 3。\nIGS PC 内核尤其能够运行该平台的多款街机游戏，而 Konami Viper 内核则支持使用该硬件的各种 Konami 游戏。\n该项目似乎仍处于非常初期的阶段，但其架构允许逐步集成新的核心，从而将Kitsune的兼容性扩展到其他系统。\n。该模拟器已具备游戏库管理、收藏夹、同一游戏的多个版本以及与操控、显示和核心配置相关的众多设置功能。\n由于开发工作进展尤为活跃，Kitsune 是一个值得关注的项目，尤其是为了了解未来将添加哪些新系统。\n\n变更：\n\n改进\n• 在录制常规鼠标按钮之前添加一秒钟的保护倒计时，然后允许在绑定窗口的任何位置进行点击。专用光枪仅从所选设备进行捕获，并且可以直接在编辑器中添加“窗口外”。\n• 在“添加游戏”页面上选择要扫描的 Core。从“系统”或经过筛选的“游戏库”进入时，会自动预先选择相关 Core。\n\n修复内容\n• 升级旧版游戏库时，允许跳过无法读取的非必选数据。卡片将逐一导入，因此已导入的数据仍可完成升级。\n• 当库升级失败时，显示受影响的游戏、Core 版本、步骤和文件路径。\n• 即使原始游戏文件丢失或不再受支持，也允许删除旧的库条目，如果清理失败，则显示确切的文件夹。\n• 修复打开“操作绑定”页面时出现的间歇性崩溃。\n• 修复导入仅在字母大小写上存在差异的文件名的 ZIP 压缩包的问题。\n• 在每款游戏的瞄准设置和全局输入设置之间使用一致的 Windows 显示标识。\n• 在将绑定复制到其他版本时，保留兼容的先前操作绑定，并跳过具有不同控件的机台。",
+      "originalContent": "Kitsune est un émulateur multisystème fonctionnant autour de différents « cores ». Le projet est actuellement principalement orienté vers l'émulation de systèmes d'arcade, avec trois cores disponibles: Konami Viper, IGS PC et IGS PGM 3.\n\nLe core IGS PC permet notamment de faire fonctionner plusieurs jeux d'arcade de la plateforme, tandis que le core Konami Viper prend en charge différents titres Konami utilisant ce hardware.\n\nLe projet semble encore très récent, mais son architecture permet d'intégrer progressivement de nouveaux cores et donc d'étendre la compatibilité de Kitsune à d'autres systèmes. L'émulateur dispose déjà d'une gestion de bibliothèque de jeux, des favoris, de différentes versions d'un même jeu ainsi que de nombreux réglages liés aux contrôles, à l'affichage et à la configuration des cores.\n\nLe développement étant particulièrement actif, Kitsune est un projet à suivre, notamment pour voir quels nouveaux systèmes seront ajoutés à l'avenir.\n\nLes changements:\n\nImprovements\n- Add a one-second protection countdown before recording regular mouse buttons, then allow clicks anywhere in the binding window. Dedicated light guns capture only from the selected device, and \"Outside window\" can be added directly in the editor.\n- Choose which Core to scan for on the Add games page. Entering from Systems or a filtered Library automatically preselects the relevant Core.\n\nFixes\n- Allow skipping unreadable optional data when upgrading a previous game library. Cards are imported one by one so already-imported data can still complete the upgrade.\n- Show the affected game, Core version, step and file path when a library upgrade fails.\n- Allow removing old Library entries even when the original game files are missing or no longer supported, and display the exact folder if cleanup fails.\n- Fix an intermittent crash when opening the Operation bindings page.\n- Fix importing ZIP archives containing filenames that differ only in letter case.\n- Use consistent Windows display identities between per-game aiming and global input settings.\n- Preserve compatible previous operation bindings and skip cabinets with different controls when copying bindings to other versions.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "ca2a9eb3b85355ac3be41d3361d1eea906ddd6c58899967e0c7ee60eda36b84a",
+      "translationPending": false
+    },
+    {
+      "id": "145101",
+      "title": "【家用机】rPS5e v0.1.9 alpha",
+      "originalTitle": "[Consoles de salon] rPS5e v0.1.9 alpha",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T12:50:30Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145101-consoles-de-salon-rps5e-v0-1-9-alpha/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/RustPS5Emu-scaled.png",
+      "officialUrl": "https://github.com/keklick1337/rps5e",
+      "summary": "RustPS5Emu 是一款使用 Rust 开发的 PlayStation 5 实验性模拟器。它采用兼容层式方法：游戏的 x86-64 代码由处理器原生执行，而主机的系统库则使用 Rust 重新实现。 。图形命令被转换为 Vulkan，RDNA 着色器被重新编译为 SPIR-V。 该模拟器配备图形界面，可用于管理游戏库、设置、控制器和着色器缓存。",
+      "content": "RustPS5Emu 是一款使用 Rust 开发的 PlayStation 5 实验性模拟器。它采用兼容层式方法：游戏的 x86-64 代码由处理器原生执行，而主机的系统库则使用 Rust 重新实现。\n。图形命令被转换为 Vulkan，RDNA 着色器被重新编译为 SPIR-V。\n该模拟器配备图形界面，可用于管理游戏库、设置、控制器和着色器缓存。它特别支持 DualSense、DualShock 4 和 Xbox 手柄，以及奖杯、作弊码和着色器预编译。\n该项目处于 Alpha 阶段。多款游戏已进入游戏玩法阶段，兼容性因游戏而异。2D 游戏总体上兼容性良好，而某些 3D 游戏仍存在图形问题、运行缓慢或崩溃等情况。",
+      "originalContent": "RustPS5Emu est un émulateur expérimental de PlayStation 5 développé en Rust. Il utilise une approche de type couche de compatibilité: le code x86-64 des jeux est exécuté nativement par le processeur, tandis que les bibliothèques système de la console sont réimplémentées en Rust. Les commandes graphiques sont traduites vers Vulkan et les shaders RDNA recompilés en SPIR-V.\n\nL'émulateur dispose d'une interface graphique permettant de gérer sa bibliothèque de jeux, les paramètres, les contrôles et les caches de shaders. Il prend notamment en charge les manettes DualSense, DualShock 4 et Xbox, ainsi que les trophées, les cheats et la précompilation des shaders.\n\nLe projet est au stade alpha. Plusieurs jeux atteignent le stade du gameplay, avec une compatibilité variable selon les titres. Les jeux 2D sont globalement bien pris en charge, tandis que certains jeux 3D présentent encore des problèmes graphiques, des ralentissements ou des plantages.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "7e43d31fbf5342b77dc2cdc44728581fe344f475a541643e874fe1109f4d2303",
+      "translationPending": false
+    },
+    {
+      "id": "145099",
+      "title": "【电脑】POM2 v1.2.4",
+      "originalTitle": "[Ordi.] POM2 v1.2.4",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T12:49:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145099-ordi-pom2-v1-2-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/POM2-desktop.png",
+      "officialUrl": "https://github.com/habib256/pom2/",
+      "summary": "POM2 是一款现代开源的 Apple II 模拟器，能够模拟 Apple II 系列的多款机型，从 1977 年的初代 Apple ][ 到 1988 年的 Apple //c+。它旨在实现高度精确的硬件仿真，并提供与 CPU 时钟周期同步的视频渲染。 它特别支持Apple ][、][+、//e、//e Enhanced、//c和//c+，以及两种PAL版本，包括//c“紫猫”（Le Chat Mauve）。",
+      "content": "POM2 是一款现代开源的 Apple II 模拟器，能够模拟 Apple II 系列的多款机型，从 1977 年的初代 Apple ][ 到 1988 年的 Apple //c+。它旨在实现高度精确的硬件仿真，并提供与 CPU 时钟周期同步的视频渲染。\n它特别支持Apple ][、][+、//e、//e Enhanced、//c和//c+，以及两种PAL版本，包括//c“紫猫”（Le Chat Mauve）。\nPOM2 的特色功能包括 NTSC 复合视频渲染、CRT/磷光效果、体素 3D 视图、倒带功能、对 Mockingboard、Phasor、Super Serial Card、CFFA 2.0 和 Uthernet 等众多扩展卡的模拟，以及对 ImageWriter II 打印机的支持。\n该模拟器支持多种 Apple II 软盘和介质格式（.dsk、.do、.po、.nib、.2mg、.2img、.woz、.hdv），并集成了对 Disk II 的忠实模拟。它还通过 Uthernet 提供网络支持，甚至可以借助 WebAssembly 直接在浏览器中运行。\n\n它模拟的内容：\n• 九台机器：Apple ][、][+、//e（未升级和已升级）、//c、//c+，以及三台欧洲PAL 50 Hz规格的机器（//e和//c），这些机器对于与扫描同步的法国演示至关重要。\n• 硬件从 MAME 一步步移植，并通过自动化测试进行验证。French Touch 的演示曲目（DIX 合辑）将作为基准测试平台。\n• 存储：位级 Disk II（WOZ、DSK、PO、NIB）、SmartPort 3.5™、HDV/CFFA 硬盘、带真实 ROM 的 Liron 卡、作为 ProDOS 卷挂载的计算机文件夹。自动备份磁盘。\n• 音频：Mockingboard、Phasor、SSI263语音合成、驱动器的机械噪音。\n• 约三十种卡：鼠标、时钟、Super Serial、Uthernet I/II（网络）、Grappler+（带可打印为 PDF 的 ImageWriter II）、Le Chat Mauve RGB、Videx 80 列、TransWarp、SoftCard Z80（CP/M）……\n• OpenEmulator 风格的 NTSC 复合显示、RGB、绿色/琥珀色/白色单色显示器、CRT 效果，甚至还有屏幕的体素 3D 视图。\n• 调试器、回溯（rewind）、保存状态、全屏终端模式。\n\n软件包中附有四张软盘，可立即开始使用：\n• A2FileCmd XL v0.9.6（见下文）。\n• DIX-fix：French Touch 演示合集，包含菜单补丁。\n• ChromaBreak 1.0：一款使用鼠标操作的 16 色 DHGR 打砖块游戏（//e 增强版或 //c 128 KB）。\n• Micro-Sokoban 1.2：5 个学习关卡 + 454 个 Microban 关卡（Apple ][+ 及更高版本）。\n软件方面，简而言之：\n• A2FileCmd：一款双面板文件管理器，与 Norton/Midnight Commander 类似，可在真正的 Apple II 上运行。80 列 ProDOS 版本（128 KB，//e、//c、IIgs），具备目录树复制、文本查看器、AppleWorks 文档查看器、HGR/DHGR 图像查看器、Mockingboard 音乐播放器、归档提取等功能\nShrinkIt 和磁盘映像管理；以及一个 40 列的 DOS 3.3 版本，可以在 Apple ][+ 上占用 48 KB 的空间。\n• pom2games：为此次活动编写或移植的 Apple II 游戏，存储在可引导软盘上： ChromaBreak、Arkabreakout、Micro-Sokoban、国际象棋、3D 迷宫、Pinball Construction Set、《荒野》（Wilderness）的重制版、LOGO……",
+      "originalContent": "POM2 est un émulateur Apple II moderne et open source, capable d’émuler plusieurs machines de la famille Apple II, de l’Apple ][ original de 1977 jusqu’à l’Apple //c+ de 1988. Il vise une émulation très précise du matériel, avec un rendu vidéo synchronisé au niveau du cycle CPU.\n\nIl prend notamment en charge l’Apple ][, ][+, //e, //e Enhanced, //c et //c+, ainsi que deux variantes PAL, dont le //c « Le Chat Mauve ».\n\nParmi ses particularités, POM2 propose un rendu NTSC composite, des effets CRT/phosphore, une vue 3D en voxels, le rewind, l’émulation de nombreuses cartes d’extension comme les Mockingboard, Phasor, Super Serial Card, CFFA 2.0 et Uthernet, ainsi que la prise en charge des imprimantes ImageWriter II.\n\nL’émulateur gère de nombreux formats de disquettes et supports Apple II (.dsk, .do, .po, .nib, .2mg, .2img, .woz, .hdv) et intègre une émulation fidèle du Disk II. Il dispose également d'un support réseau via Uthernet et peut même fonctionner directement dans un navigateur grâce à WebAssembly.\n\nCe que ça émule :\n- Neuf machines : Apple ][, ][+, //e (non amélioré et amélioré), //c, //c+, et trois profils PAL 50 Hz européens (//e et //c), indispensables pour les démos françaises synchronisées sur le balayage.\n- Le matériel est porté depuis MAME, puce par puce, et épinglé par des tests automatiques. Les démos de French Touch (l'anthologie DIX) servent de banc d'essai de référence.\n- Stockage : Disk II au niveau du bit (WOZ, DSK, PO, NIB), SmartPort 3.5\", disques durs HDV / CFFA, carte Liron avec sa vraie ROM, dossier de l'ordinateur monté comme volume ProDOS. Sauvegarde automatique des disques.\n- Son : Mockingboard, Phasor, synthèse vocale SSI263, bruit mécanique des lecteurs.\n- Une trentaine de cartes : souris, horloge, Super Serial, Uthernet I/II (réseau), Grappler+ avec une ImageWriter II qui imprime en PDF, Le Chat Mauve RGB, Videx 80 colonnes, TransWarp, SoftCard Z80 (CP/M)…\n- Affichage composite NTSC façon OpenEmulator, RGB, moniteurs monochromes vert / ambre / blanc, effets CRT, et même une vue 3D en voxels de l'écran.\n- Débogueur, retour arrière dans le temps (rewind), états de sauvegarde, mode borne plein écran.\n\nQuatre disquettes sont livrées dans les paquets, pour démarrer tout de suite :\n- A2FileCmd XL v0.9.6 (voir plus bas).\n- DIX-fix : l'anthologie de démos de French Touch, avec un correctif de menu.\n- ChromaBreak 1.0 : un casse-briques DHGR 16 couleurs à la souris (//e amélioré ou //c 128 Ko).\n- Micro-Sokoban 1.2 : 5 niveaux d'apprentissage + 454 niveaux Microban (Apple ][+ et suivants).\n\nCôté logiciels, en bref :\n- A2FileCmd: un gestionnaire de fichiers à deux panneaux, dans l'esprit de Norton / Midnight Commander, qui tourne sur un vrai Apple II. Une édition ProDOS en 80 colonnes (128 Ko, //e, //c, IIgs) avec copie d'arborescences, visionneuses de textes, de documents AppleWorks, d'images HGR / DHGR, lecteur de musique Mockingboard, extraction des archives ShrinkIt et gestion des images disques ; et une édition DOS 3.3 en 40 colonnes qui tient dans 48 Ko sur un Apple ][+.\n- pom2games: des jeux Apple II écrits ou portés pour l'occasion, sur disquettes amorçables : ChromaBreak, Arkabreakout, Micro-Sokoban, des échecs, un labyrinthe 3D, Pinball Construction Set, une réimplémentation de Wilderness, un LOGO…",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "d787703411db01f49c02a2780736bbfd7efe70bd1a6c9513564bd5f4d85e8795",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-25T12:47:06Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 放弃LoongArch64支助(Stenzek)（https://github.com/stenzek/duckstation/commit/bdd45d2d9e4db83ac9f3b97cd0198aba4596361f）)\n• 切换到不折旧的Windows图像(Stenzek)（https://github.com/stenzek/duckstation/commit/0c9a4033433e1ad7ae2ec4ed37368d9cef78af10）)\n• 切换到 XCode 27 MacOS 图像(Stenzek)（https://github.com/stenzek/duckstation/commit/2de83b8a9f6321ceb61a57e8c96befa5d5555eb7）)\n• 更新至 20261125 (施坦策克语)（https://github.com/stenzek/duckstation/commit/b1571db5c7e8734200ce591389f5b3694418c245）)\n• 更新翻译字符串(Stenzek)（https://github.com/stenzek/duckstation/commit/d60127b9030965d3dfe518130ed01431fc1eaf31）)\n• 重新设置时纠正崩溃(Stenzek)（https://github.com/stenzek/duckstation/commit/2c79bd36a705b3b08ac7761257bbcff71bfc27ec）)",
+      "originalContent": "## Commits\n- Drop LoongArch64 support ([Stenzek](https://github.com/stenzek/duckstation/commit/bdd45d2d9e4db83ac9f3b97cd0198aba4596361f))\n- Switch to non-deprecated Windows image ([Stenzek](https://github.com/stenzek/duckstation/commit/0c9a4033433e1ad7ae2ec4ed37368d9cef78af10))\n- Switch to XCode 27 MacOS image ([Stenzek](https://github.com/stenzek/duckstation/commit/2de83b8a9f6321ceb61a57e8c96befa5d5555eb7))\n- Update to 20261125 ([Stenzek](https://github.com/stenzek/duckstation/commit/b1571db5c7e8734200ce591389f5b3694418c245))\n- Update translation strings ([Stenzek](https://github.com/stenzek/duckstation/commit/d60127b9030965d3dfe518130ed01431fc1eaf31))\n- Fix crash when resetting settings ([Stenzek](https://github.com/stenzek/duckstation/commit/2c79bd36a705b3b08ac7761257bbcff71bfc27ec))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "4d9ac8a379c5ddd9d7b268e7151bdbac008c2307388c6038861150a8b3044f25",
+      "translationPending": false
+    },
+    {
+      "id": "145096",
+      "title": "【工具】ShadPS4 (GUI) v428",
+      "originalTitle": "[Utilitaires Multi-systemes] ShadPS4 (GUI) v428",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-25T11:07:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145096-utilitaires-multi-systemes-shadps4-gui-v428/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/shadps4-gui1.png",
+      "officialUrl": "https://shadps4.net/",
+      "summary": "shadPS4 是一款开源的 PlayStation 4 模拟器。自 0.12.1 版本起，该模拟器不再使用内置图形界面，而是仅通过命令行运行。 为了便于使用，提供了一个外部界面。通过简单直观的视觉界面，该界面可用于启动游戏、配置选项和跟踪性能。 该界面是独立开发的，并与未来版本的 shadPS4 保持兼容。",
+      "content": "shadPS4 是一款开源的 PlayStation 4 模拟器。自 0.12.1 版本起，该模拟器不再使用内置图形界面，而是仅通过命令行运行。\n为了便于使用，提供了一个外部界面。通过简单直观的视觉界面，该界面可用于启动游戏、配置选项和跟踪性能。\n\n该界面是独立开发的，并与未来版本的 shadPS4 保持兼容。\n\n变更内容：\n• 更新翻译\n• user_settings：统一保存迁移并添加数据库重建\n• 新的 Crowdin 更新\n• 其他修复",
+      "originalContent": "shadPS4 est un émulateur PlayStation 4 open-source. Depuis la version 0.12.1, il abandonne son interface graphique intégrée pour fonctionner uniquement en ligne de commande.\n\nPour faciliter son usage, une interface externe est disponible. Elle permet de lancer des jeux, configurer les options, et suivre les performances via une interface visuelle simple et intuitive.\n\nCette interface est développée séparément et reste compatible avec les futures versions de shadPS4.\n\nLes changements:\n- Update Translation\n- user_settings: Unify save migration and add database rebuild\n- New Crowdin updates\n- Misc fixes",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "shadps4_android"
+      ],
+      "contentHash": "39fc3289eb9acddd3bbdca84e6ac758f38a089d3f67e7680580bb461bcf4488e",
       "translationPending": false
     },
     {
@@ -77,30 +347,6 @@
         "azahar"
       ],
       "contentHash": "b7bdf3c23c79147443bc05de07d6e75fc964fe66ac640d242ef574ca5add431e",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-nightly-20261124",
-      "title": "【Android更新】ARMSX2 nightly-20261124",
-      "originalTitle": "ARMSX2 nightly-20261124 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-25T00:49:03Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261124",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20261124，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261124。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64.AppImage,4K,16K和64K页内核相同\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst (Rocknix和Batocera运行堆肥机,所以用Qt Appimage代替)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧夜里来的? 噩梦现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:稳定无法在旧的夜晚安装。 备份您的保存和记忆卡, 解开旧的夜晚, 然后安装稳定的APK。\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n或\n• iOS:跳过缩进的罪责\n• 翻译:所有19种语文的MaliSX2驾驶员通知\n• Android:用VU1块店和EE两期计时模型重新生成源头上的PGO剖面图\n• microVU:程序内存绑定为192 MiB\n• VU1块商店:安装一个实体的查询不写日志行\n• VU AOT:例行工作可维持多达32个层次的机构\n• VU AOT:例行工作完成后等待自己的副本\n· VU AOT:从复制品中提取的分层体留下其根部的工作,供复制品外部使用\n• VU1 块店:例行公事会像头部一样带回许多层层的身体\n• VU1 块店:只有副本,其分层体在首次运行时无法放置\n• VU1 块店:例行公事将最后使用的16具普通尸体带回\n• VU1块店:每次重置时打印其柜台,并计算重置后的第一个分层放置\n• VU AOT:层层状态在块店的包里,侧车记录去\n• VU1: 块店包替换程序图像\n• VU1块店:将其尸体保存在程序缓存包中\n• VU1块存储:跳过的数量包括保释目标的汇编\n• VU AOT:一个工作总是占据港口的第一席之地\n• VU1 块存储:删除更改选项的已退出路径\n• microVU:删除VU1检索转向架测试钩\n• VU AOT:删除活层车钩\n• 测试:VU AOT级的工作和例行记录的绊线记账\n• VU1 块存储:保留根的16个平面体,最后使用\n• microVU:当程序及其块持有96 MiB时重置\n• VU AOT:为粘贴阅读器扫描其微图像的分级工作\n• VU AOT:用它搜索的状态计算一个汇编发送件\n• 微型VU:IbitHack Imm11 LQ、SQ、ILW和ISW在一个sbfx中\n• MicroVU:VU1 IbitHack从放置的微内存直接负载\n• VU1块存储:IbitHack的测试横跨根顶端和底端\n• 测试:在VU1和VU0上进行T位端测试\n• microVU:放置VU1块的复制件,共享其代码的跳动表\n• VU AOT:一个已完成的工作等待一份需要的拷贝,跳跃路径不会再次询问\n• VU AOT:关闭层层簿记的4个漏洞,以复制常规文件\n• VU AOT:删除侧车格式\n• VU AOT:分级日志线也给出常规跳跃条目\n• VU AOT:每份一份都建一个常规区域\n• 微型VU:一个VU1 JR或JALR从放置槽中取出其块\n• 测试:比较BAL和JALR在块存储和重新装入测试中的链接值和TPC整体\n• microVU:按照编译器读到的内容保留编译的VU1块,并安装,而不是再次编译\n• microVU:VU1代码通过放置槽从块中到达块及其链接\n• MicroVU:VU1代码从根部取其微模地址\n· 测试:VU1微米地址在。",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64.AppImage, for 4K, 16K and 64K page kernels alike\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- iOS: skip the indentation commit in git blame\n- Translations: the MaliSX2 driver notice in all 19 languages\n- Android: regenerate the PGO profile on the source with the VU1 chunk store and the EE two-issue timing model\n- microVU: the program memory bound is 192 MiB\n- VU1 chunk store: a lookup that installs a body writes no log line\n- VU AOT: a routine keeps up to 32 tiered bodies\n- VU AOT: a routine's finished jobs wait for their own copies\n- VU AOT: a tiered body taken in at a copy leaves its root's job for a copy outside it\n- VU1 chunk store: a routine brings back as many of the tier's bodies as a head keeps\n- VU1 chunk store: only a copy whose tiered body cannot be placed asks at its first run\n- VU1 chunk store: a routine brings back the 16 plain bodies used last\n- VU1 chunk store: print its counters at each reset, and count the first tiered placement since the reset\n- VU AOT: the tier's state goes in the chunk store's pack, and sidecar records go\n- VU1: the chunk store's pack replaces program images\n- VU1 chunk store: keep its bodies in the program cache's pack\n- VU1 chunk store: the skipped count includes the compiles of bail targets\n- VU AOT: a job always takes the port's first pass of its root\n- VU1 chunk store: delete the retire path for a change of options\n- microVU: delete the VU1 lookup shift test hook\n- VU AOT: delete the live tier's body hook\n- Tests: the VU AOT tier's job and tripwire bookkeeping of a routine's copies\n- VU1 chunk store: keep the 16 plain bodies of a root used last\n- microVU: reset when the programs and their blocks hold 96 MiB\n- VU AOT: a tier-up job scans its micro image for sticky readers\n- VU AOT: count a compiling dispatch with the state it searched with\n- microVU: IbitHack Imm11 of LQ, SQ, ILW and ISW in one sbfx\n- microVU: VU1 IbitHack immediates load from the placement's micro memory\n- VU1 chunk store: tests for IbitHack reads across the top and below the root\n- Tests: run the T-bit end tests on VU1 as well as VU0\n- microVU: placed copies of a VU1 chunk share the jump tables of its code\n- VU AOT: a finished job waits for a copy that needs it, and the jump path does not ask again at once\n- VU AOT: close four holes in the tier's bookkeeping of a routine's copies\n- VU AOT: delete the sidecar format\n- VU AOT: the tier-up log line gives the routine's jump entries too\n- VU AOT: a routine's regions are built once and shared by every copy\n- microVU: a VU1 JR or JALR takes its block from the placement's slot\n- Tests: compare BAL and JALR link values and TPC whole in the chunk store and reload tests\n- microVU: keep compiled VU1 chunks by what the compiler read, and install them instead of compiling again\n- microVU: VU1 code reaches its blocks and its links out of a chunk through placement slots\n- microVU: VU1 code takes its micro-memory addresses from a root\n- Tests: VU1 micro-memory addresses at…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "8233a4b266cf117ec5bdd3cb5e7058c07f16778322f4732cbf85d91f6ef8b91b",
       "translationPending": false
     },
     {
@@ -216,30 +462,6 @@
         "armsx3"
       ],
       "contentHash": "dcad2dbe9e5e1fae39228dd983e331781b20e6d859c9fda98cd2cbafe43e03a4",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-zeebx-nightly",
-      "title": "【Android更新】Zeebx nightly",
-      "originalTitle": "Zeebx nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-24T16:53:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ZeebxTeam/zeebx-emu/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/zeebx.png",
-      "officialUrl": "https://github.com/ZeebxTeam/zeebx-emu",
-      "summary": "Zeebx 发布 Android 新版本 nightly，发布日期为2026年11月24日。点击查看官方版本信息与更新说明。",
-      "content": "Zeebx 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n自动构建 `development` at b51116beccfd7eac79483adf25fde0e35aa60c6a.\n\n这不是一个释放。 在有人查清之前 它会有什么结果\n工作:希望它能破解,并保存一份你的节省。 从里面得到它\n模拟器,在设置,更新下选择夜间通道;停止,选择稳定。\n\n发布版本在发布页面上（https://github.com/ZeebxTeam/zeebx-emu/releases/latest）.",
-      "originalContent": "The automatic build of `development` at b51116beccfd7eac79483adf25fde0e35aa60c6a.\n\n**This is not a release.** It has what is coming, before anyone has checked that it\nworks: expect it to break, and keep a copy of your saves. To receive it from inside the\nemulator, choose the nightly channel under Settings, Updates; to stop, choose stable.\n\nThe released versions are on the [releases page](https://github.com/ZeebxTeam/zeebx-emu/releases/latest).",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "zeebx"
-      ],
-      "contentHash": "f8e36f4c752b37a8b300ea718e602735ab46175ce915a091263c8355a8c2f062",
       "translationPending": false
     },
     {
@@ -464,30 +686,6 @@
         "supermodel_pc"
       ],
       "contentHash": "7ee742943d598a0a1a229b2d19ea0aac091654e275c5e6b7493f1d6effaa3525",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-preview",
-      "title": "【Android更新】DuckStation preview",
-      "originalTitle": "DuckStation preview Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-24T01:53:52Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月24日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 0403d3c翻译: duckstation-qt_es.ts (# 3833) (彼得德尔塔语).（https://github.com/stenzek/duckstation/pull/3833）",
-      "originalContent": "## Commits\n- 0403d3c: Update duckstation-qt_es.ts (#3833) (PeterDelta) [#3833](https://github.com/stenzek/duckstation/pull/3833)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "b363a89448aefa3e81d838988d13151b1fc9778041ac56255baea7841383a457",
       "translationPending": false
     },
     {
@@ -2181,30 +2379,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "c4f39891240d1ed1452a51ec65d7bd88c8845b917e55c8ca263e9ffc03840154",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-gamenative-1-4-1-prerelease",
-      "title": "【Android更新】GameNative 1.4.1-prerelease",
-      "originalTitle": "GameNative 1.4.1-prerelease Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-19T06:15:00Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/utkarshdalal/GameNative/releases/tag/v1.4.1-prerelease",
-      "imageUrl": "asset://assets/emulators/gamenative.png",
-      "officialUrl": "https://github.com/utkarshdalal/GameNative",
-      "summary": "GameNative 发布 Android 新版本 1.4.1-prerelease，发布日期为2026年11月19日。点击查看官方版本信息与更新说明。",
-      "content": "GameNative 已发布 Android 最新版本 1.4.1-prerelease。\n\n发布日期：2026年11月19日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n下载\n• `gamenative-v1.4.1-prerelease.apk` ——标准建设。 推荐给大多数用户。\n• `gamenative-v1.4.1-prerelease-legacy-xr.apk` ——XR建设用于查询头像。\n\n\n更新内容\n• 增加主题+可配置的声音,包括由Decky公司改编的声音 https://github.com/utkarshdalal/GameNative/pull/2402\n• 更新包装gamenative 对马里、PowerVR和Exynos几乎所有设备进行正确操作 https://github.com/utkarshdalal/GameNative/pull/2262\n• 添加优化 - 使游戏在更平滑,更高的FPS中运行,热量较少 https://github.com/utkarshdalal/GameNative/pull/2363\n• 固定的GTA IV、Hogwarts遗产、Slay the Spire和晶体管(需要最新的质子)\n• Steam 游戏的 Ubisoft 连接支持(无头模式下需要 Steam 客户端 - 云保存未测试的上传和默认关闭) https://github.com/utkarshdalal/GameNative/pull/2428\n• 增加共享遮阳器和FEX缓冲器(小结巴、快靴) https://github.com/utkarshdalal/GameNative/pull/2356\n• 游戏镜:固定撕裂,较少使用内存和CPU,由@joshuatam in https://github.com/utkarshdalal/GameNative/pull/2393\n• 为基于铬的游戏添加了 HTML5 本地Webview 运行时间(使其运行得更好!) 作者: @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/1570\n• 本地云保存备份,并在其中恢复 https://github.com/utkarshdalal/GameNative/pull/2355\n• 控制器使应用软件完全可导航 https://github.com/utkarshdalal/GameNative/pull/2460\n• 固定游戏镜控制器问题 https://github.com/utkarshdalal/GameNative/pull/2394 和 https://github.com/utkarshdalal/GameNative/pull/2397\n• 运行游戏 Steam 安装脚本的已知步骤( PlayStation 库缺失), 由 @ joshuatam in https://github.com/utkarshdalal/GameNative/pull/2384\n由@danielrutley翻译。 https://github.com/utkarshdalal/GameNative/pull/2464 和 https://github.com/utkarshdalal/GameNative/pull/2463\n• 固定Java游戏回归 https://github.com/utkarshdalal/GameNative/pull/2422\n• 修复“未知的失败”以保存云 https://github.com/utkarshdalal/GameNative/pull/2400\n• 调整存储管理器的大小 https://github.com/utkarshdalal/GameNative/pull/2367\n• 将集装箱的可执行性保留在冷的离线意图发射上 https://github.com/utkarshdalal/GameNative/pull/2365\n• 固定前缀,安装共同控制装置 6.0 由@joshuatam 编辑。 https://github.com/utkarshdalal/GameNative/pull/2368\n• 修复32位CPU设置 https://github.com/utkarshdalal/GameNative/pull/2383\n• 保留由@tapionallanaire在@tapionallanaire在其他设备上提供的三星专用UBW旗的提示 https://github.com/utkarshdalal/GameNative/pull/2379\n• Epic:在其中修正EOS回归 https://github.com/utkarshdalal/GameNative/pull/2398\n• GOG:将DLC固定在 https://github.com/utkarshdalal/GameNative/pull/2401\n• 蒸汽父母许可名单仅适用于家庭的儿童成员; https://github.com/utkarshdalal/GameNative/pull/2415\n• 更新到最新的Goldberg Coldclient in https://github.com/utkarshdalal/GameNative/pull/2275\n• 正确应用 FEX 覆盖 https://github.com/utkarshdalal/GameNative/pull/2430\n• 粘贴和d-pad捆绑:按键一次,加上歇斯底里语,由@kudyk in按前发布 https://github.com/utkarshdalal/GameNative/pull/2272\n• 解决CrashHandler和CrashFingerprint的问题 https://github.com/utkarshdalal/GameNative/pull/2405 和 https://github.com/utkarshdalal/GameNative/pull/2406\n• 添加一个选项以导出游戏上一个运行度量( 这样用户可以优化本地)。 https://github.com/utkarshdalal/GameNative/pull/2440\n• 保留集装箱 user.reg 当其基准前缀由 @magarto 更改时 https://github.com/utkarshdalal/GameNative/pull/2377\n• 功绩:由@abesmon in https://github.com/utkarshdalal/GameNative/pull/1849\n• 由 @jma 添加存储页面链接到游戏细节...",
-      "originalContent": "## Downloads\r\n- **`gamenative-v1.4.1-prerelease.apk`** — Standard build. Recommended for most users.\r\n- **`gamenative-v1.4.1-prerelease-legacy-xr.apk`** — XR build for Quest headsets.\r\n\r\n\r\n## What's Changed\r\n* Added themes + configurable sounds including ones adapted from Decky in https://github.com/utkarshdalal/GameNative/pull/2402\r\n* Updated wrapper-gamenative to work correctly on almost all Mali, PowerVR and Exynos devices in https://github.com/utkarshdalal/GameNative/pull/2262\r\n* Added Optimize - make games run at smoother, higher FPS with less heat in https://github.com/utkarshdalal/GameNative/pull/2363\r\n* Fixed GTA IV, Hogwarts Legacy, Slay the Spire and Transistor (requires latest proton)\r\n* Ubisoft Connect support for Steam games (requires Steam client in headless mode - cloud save uploads not tested and turned off by default) in https://github.com/utkarshdalal/GameNative/pull/2428\r\n* Added shared shader and FEX caching (less stutters, faster boot) in https://github.com/utkarshdalal/GameNative/pull/2356\r\n* gamescope: fixed tearing, use less memory and CPU, made rendering engine code public by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2393\r\n* Added HTML5 native WebView runtime for Chromium-based games (makes them run way better!) by @jeremybernstein in https://github.com/utkarshdalal/GameNative/pull/1570\r\n* Local cloud save backups with restore in https://github.com/utkarshdalal/GameNative/pull/2355\r\n* Made app completely navigable by controller in https://github.com/utkarshdalal/GameNative/pull/2460\r\n* Fixed Gamescope controller issues in https://github.com/utkarshdalal/GameNative/pull/2394 and https://github.com/utkarshdalal/GameNative/pull/2397\r\n* run a known step of a game's Steam install script (fixes PlayStation library missing) by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2384\r\n* Fixes for XCOM: Enemy Unknown (appmanifest and DLC) by @danielruttley in https://github.com/utkarshdalal/GameNative/pull/2464 and https://github.com/utkarshdalal/GameNative/pull/2463\r\n* Fixed Java games regression in https://github.com/utkarshdalal/GameNative/pull/2422\r\n* Fix \"Unknown Fail\" for cloud saves in https://github.com/utkarshdalal/GameNative/pull/2400\r\n* Fix storage manager size counting in https://github.com/utkarshdalal/GameNative/pull/2367\r\n* Keep the container executable on cold offline intent launches in https://github.com/utkarshdalal/GameNative/pull/2365\r\n* fix prefix installs the Common-Controls 6.0 assembly by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/2368\r\n* Fix 32-bit CPU setting in https://github.com/utkarshdalal/GameNative/pull/2383\r\n* Keep the Samsung-only UBWC flag hint out of best configs on other devices by @tapionallanaire in https://github.com/utkarshdalal/GameNative/pull/2379\r\n* Epic: fix EOS regression in https://github.com/utkarshdalal/GameNative/pull/2398\r\n* GOG: fix DLC in https://github.com/utkarshdalal/GameNative/pull/2401\r\n* Steam parental allowlist applies only to child members of a family in https://github.com/utkarshdalal/GameNative/pull/2415\r\n* Updated to latest Goldberg Coldclient in https://github.com/utkarshdalal/GameNative/pull/2275\r\n* Correctly apply FEX overrides in https://github.com/utkarshdalal/GameNative/pull/2430\r\n* Stick and d-pad bindings: press keys once, add hysteresis, release before press by @kudyk in https://github.com/utkarshdalal/GameNative/pull/2272\r\n* fix CrashHandler and CrashFingerprint issues in https://github.com/utkarshdalal/GameNative/pull/2405 and https://github.com/utkarshdalal/GameNative/pull/2406\r\n* Add an option to export a game's last run metrics (so users can Optimize locally) in https://github.com/utkarshdalal/GameNative/pull/2440\r\n* Keep a container's user.reg when its base prefix changes by @magarto in https://github.com/utkarshdalal/GameNative/pull/2377\r\n* feat: explicit progress [QoL] by @abesmon in https://github.com/utkarshdalal/GameNative/pull/1849\r\n* Add store page links to game details by @jma…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "gamenative"
-      ],
-      "contentHash": "b16f2b627a1cfd3b67317236e12e081365e46fb5f9299f7c18a4331944f5faa2",
       "translationPending": false
     },
     {
@@ -19717,188 +19891,6 @@
         "snes9x_core"
       ],
       "contentHash": "759d972f6ba2df51deced4fbf13bcfa6e909b6890b57f7a2bae21a00651169be",
-      "translationPending": false
-    },
-    {
-      "id": "136286",
-      "title": "【家用机】MesenCE v2.2.1 r20260827",
-      "originalTitle": "[Consoles de salon] MesenCE v2.2.1 r20260827",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "tool",
-      "publishedAt": "2026-08-27T11:09:47Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136286-consoles-de-salon-mesence-v2-2-1-r20260827/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/05/mesen-ce.png",
-      "officialUrl": "https://github.com/nesdev-org/MesenCE",
-      "summary": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。 MesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续 。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。",
-      "content": "Mesen Community Edition是一款适用于Windows、Linux和macOS的开源多系统模拟器，由社区从Mesen2项目开发。 它旨在实现高精度、出色的兼容性，并为玩家和开发人员提供具有高级工具的现代界面。\nMesenCE最初是为了弥补原创者（ SOUR ）暂停Mesen2的开发而诞生的，现在已成为该项目的官方和独家延续\n。面对社区动态， Sour选择积极加入MesenCE团队，以集中所有未来的发展。这种向完全社区管理模式的过渡有助于更快地集成补丁、提高跨平台兼容性并添加新功能\ntES ，同时保持原始项目的卓越精神。\n\n变更内容：\n\nMesen正在成为MesenCE ，这是一个由SOUR和各种社区成员维护的社区版本。 所有开发都将在这个新的分叉中进行，因此只要Sour离开项目，它就可以继续进行。\n•调试器： Profiler/Trace logger/Watch -固定空窗口/单个CPU的所有游戏机/游戏缺少选项(# 266)\n•调试器： GSU -添加了分析器支持(# 261)\n• Lua ：使用默认CPU内存类型以外的内存类型时，内存回调中的固定地址值（ # 265 ）",
-      "originalContent": "Mesen Community Edition est un émulateur multi‑systèmes open‑source pour Windows, Linux et macOS, développé par la communauté à partir du projet Mesen2. Il vise une haute précision, une excellente compatibilité, et propose une interface moderne accompagnée d’outils avancés pour les joueurs comme pour les développeurs.\n\nNé initialement comme un fork pour pallier la mise en pause du développement de Mesen2 par son créateur original (Sour), MesenCE est désormais devenu la continuation officielle et exclusive du projet. Face à la dynamique communautaire, Sour a choisi de rejoindre activement l'équipe de MesenCE afin d'y centraliser tout le développement futur. Cette transition sous un modèle entièrement géré par la communauté permet d'intégrer plus rapidement les correctifs, d'améliorer la compatibilité multiplateforme et d'ajouter de nouvelles fonctionnalités, tout en préservant l’esprit d’excellence du projet d'origine.\n\nLes changements:\n\nMesen is becoming MesenCE, a Community Edition maintained by Sour and various community members. All development will occur in this new fork going forward so it can continue whenever Sour is away from the project.\n\n- Debugger: Profiler/Trace logger/Watch - Fixed empty window/missing options for all consoles/games with a single CPU (#266)\n- Debugger: GSU - Added profiler support (#261)\n- Lua: Fixed address value in memory callbacks when using memory types other than the default cpu memory type (#265)",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "mesence_pc"
-      ],
-      "contentHash": "95db7cd55111c5c1e4b5ea39d0654b49073ce79d7988a3778d61268f2ef42971",
-      "translationPending": false
-    },
-    {
-      "id": "136284",
-      "title": "【电脑】DOSBox Staging v0.83",
-      "originalTitle": "[Ordi.] DOSBox Staging v0.83",
-      "category": "computer",
-      "categoryLabel": "电脑",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T10:09:21Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136284-ordi-dosbox-staging-v0-83/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/02/dosbox-staging.png",
-      "officialUrl": "https://dosbox-staging.github.io/",
-      "summary": "DOSBox Staging是DOSBox的现代延续，具有先进的功能和当前的开发方法。 此外，它还提供真实的CRT仿真，无需从Hercules到SVGA清晰度等配置，即可自动调整屏幕分辨率（ 720p至4K ）。 您可以在此处查看变化。",
-      "content": "DOSBox Staging是DOSBox的现代延续，具有先进的功能和当前的开发方法。 此外，它还提供真实的CRT仿真，无需从Hercules到SVGA清晰度等配置，即可自动调整屏幕分辨率（ 720p至4K ）。\n您可以在此处查看变化。",
-      "originalContent": "DOSBox Staging est une continuation moderne de DOSBox avec des fonctionnalités avancées et des méthodes de développement actuelles. Il propose, en outre, une émulation CRT authentique et sans configuration allant de l’Hercule à la définition en SVGA qui s'ajuste automatiquement à la résolution de votre écran (720p à 4K).\n\nLes changements sont visibles ici.",
-      "platforms": [],
-      "relatedEmulatorIds": [
-        "dosbox_staging_pc"
-      ],
-      "contentHash": "779f747f7cf700d899890287f0f5544c3ec2bc6667d0392389bf307b39f00f27",
-      "translationPending": false
-    },
-    {
-      "id": "136282",
-      "title": "【家用机】GearGRAFX v1.7.19",
-      "originalTitle": "[Consoles de salon] GearGRAFX v1.7.19",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T10:00:05Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136282-consoles-de-salon-geargrafx-v1-7-19/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/07/Geargrafx-1.6.0.png",
-      "officialUrl": "https://github.com/drhelius/Geargrafx",
-      "summary": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。 ⚡ TurboLink支持 💾 IPS软修补支持 🎨 改进的浅色主题 🐛 许多错误修复和改进",
-      "content": "它是一个多平台PC引擎/TurboGrafx-16/CD-ROM ²/Super CD-ROM ²和Arcade CD-ROM ²/SuperGrafx仿真器。\n\n⚡ TurboLink支持\n💾 IPS软修补支持\n🎨 改进的浅色主题\n🐛 许多错误修复和改进",
-      "originalContent": "Il s'agit d'un émulateur de PC Engine / TurboGrafx-16 / CD-ROM² / Super CD-ROM² et Arcade CD-ROM² / SuperGrafx multi plateformes.\n\n⚡ TurboLink support\n💾 IPS soft-patching support\n🎨 Improved light theme\n🐛 Many bug fixes and improvements",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "567d36cdf8fbf55b8ebc35a7cba2aef0821efccb6c8456ab4df98b576637a4a1",
-      "translationPending": false
-    },
-    {
-      "id": "136280",
-      "title": "【其他】GearLynx v1.2.30",
-      "originalTitle": "[Consoles portables] GearLynx v1.2.30",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T09:58:30Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136280-consoles-portables-gearlynx-v1-2-30/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/Gearlynx-0.0.4.png",
-      "officialUrl": "https://github.com/drhelius/Gearlynx",
-      "summary": "GearLynx是适用于Windows的Atari Lynx模拟器。 这些变化是： 💾 IPS软修补支持 🎨 改进的浅色主题 🐛 许多错误修复和改进",
-      "content": "GearLynx是适用于Windows的Atari Lynx模拟器。\n\n这些变化是：\n💾 IPS软修补支持\n🎨 改进的浅色主题\n🐛 许多错误修复和改进",
-      "originalContent": "GearLynx est un émulateur d'Atari Lynx pour Windows.\n\nLes changements sont:\n💾 IPS soft-patching support\n🎨 Improved light theme\n🐛 Many bug fixes and improvements",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [],
-      "contentHash": "d57b417c369ee77dbaac4b9bf805355014da7f043bff71f2ebaf068416739489",
-      "translationPending": false
-    },
-    {
-      "id": "136278",
-      "title": "【掌机】Gearboy v3.8.14",
-      "originalTitle": "[Console portable] Gearboy v3.8.14",
-      "category": "handheld",
-      "categoryLabel": "掌机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T09:31:24Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136278-console-portable-gearboy-v3-8-14/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2020/04/gearboy2.jpg",
-      "officialUrl": "https://github.com/drhelius/Gearboy",
-      "summary": "Gearboy是一款用C + +编写的任天堂GameBoy/Super GameBoy/Gameboy Color模拟器，可在iOS、Raspberry Pi、Mac、Windows和Linux上运行。 重点放在源代码的可读性和高度的兼容性上。 🔌 游戏链路电缆支持 🎮 MBC6 （ Net of Get ）地图支持 💾 IPS软修补 🎨 改进的浅色主题 🐛 许多错误修复和改进 32位版本由Lo v2编译。",
-      "content": "Gearboy是一款用C + +编写的任天堂GameBoy/Super GameBoy/Gameboy Color模拟器，可在iOS、Raspberry Pi、Mac、Windows和Linux上运行。\n\n重点放在源代码的可读性和高度的兼容性上。\n\n🔌 游戏链路电缆支持\n🎮 MBC6 （ Net of Get ）地图支持\n💾 IPS软修补\n🎨 改进的浅色主题\n🐛 许多错误修复和改进\n\n32位版本由Lo v2编译。",
-      "originalContent": "Gearboy est un émulateur de Nintendo GameBoy / Super GameBoy / Gameboy Color écrit en C++ qui fonctionne sur iOS, Raspberry Pi, Mac, Windows & Linux.\n\nL'accent a été mis sur la lisibilité du code source avec un haut degré de compatibilité.\n\n🔌 Game Link Cable support\n🎮 MBC6 (Net de Get) mapper support\n💾 IPS soft-patching\n🎨 Improved light theme\n🐛 Many bug fixes and improvements\n\nLe builds 32 bits est compilé par Lo v2.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "gearboy_pc"
-      ],
-      "contentHash": "ab8b9c31fb1e4592367d3929fb2d9273a8ace182280d31eff280b22db0f7d011",
-      "translationPending": false
-    },
-    {
-      "id": "136276",
-      "title": "【家用机】GearColeco v1.6.12",
-      "originalTitle": "[Consoles de salon] GearColeco v1.6.12",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T09:30:01Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136276-consoles-de-salon-gearcoleco-v1-6-12/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/02/gearcoleco-qbert.png",
-      "officialUrl": "https://github.com/drhelius/Gearcoleco",
-      "summary": "Gearcoleco是一款用C + +编写的高精度跨平台ColecoVision仿真器，可在Windows、macOS、Linux、BSD、Raspberry Pi和RetroArch上运行。 变更内容： 🕹️ 新增F18A支援 💾 IPS软修补 🐛 许多错误修复和改进",
-      "content": "Gearcoleco是一款用C + +编写的高精度跨平台ColecoVision仿真器，可在Windows、macOS、Linux、BSD、Raspberry Pi和RetroArch上运行。\n\n变更内容：\n🕹️ 新增F18A支援\n💾 IPS软修补\n🐛 许多错误修复和改进",
-      "originalContent": "Gearcoleco est un émulateur ColecoVision multiplateforme très précis écrit en C++ qui fonctionne sous Windows, macOS, Linux, BSD, Raspberry Pi et RetroArch.\n\nLes changements:\n🕹️ Added F18A support\n💾 IPS soft-patching\n🐛 Many bug fixes and improvements",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "gearcoleco_core"
-      ],
-      "contentHash": "11328e6b4930ecdf908c7b0656c974c9d33c63f31354ceeefeed251c467c6552",
-      "translationPending": false
-    },
-    {
-      "id": "136274",
-      "title": "【家用机】Snes9xRD v0.4",
-      "originalTitle": "[Consoles de salon] Snes9xRD v0.4",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-27T09:27:56Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136274-consoles-de-salon-snes9xrd-v0-4/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/snes9xrd.png",
-      "officialUrl": "https://github.com/Deathsoul56/snes9xrd",
-      "summary": "Snes9xrd是超级任天堂模拟器Snes9x的个人分叉。 它完全保留了官方仿真核心以及GTK、Win32、macOS和libretro前端，同时对Qt前端进行了重大重新设计，使其更加完整、一致和愉快地使用。 此分叉的主要目标之一是通过重新引入它缺少的功能，使Qt界面像Win32界面一样完整。显示设置、透明度选项、着色器、软件滤镜、帧跳过以及高级音频设置现在可以完全访问 可从Qt转移。",
-      "content": "Snes9xrd是超级任天堂模拟器Snes9x的个人分叉。 它完全保留了官方仿真核心以及GTK、Win32、macOS和libretro前端，同时对Qt前端进行了重大重新设计，使其更加完整、一致和愉快地使用。\n此分叉的主要目标之一是通过重新引入它缺少的功能，使Qt界面像Win32界面一样完整。显示设置、透明度选项、着色器、软件滤镜、帧跳过以及高级音频设置现在可以完全访问\n可从Qt转移。仿真和配置菜单也进行了重组，以提供更清晰、更直观、更同质的呈现。\nSnes9xrd还对控制器管理进行了几项改进。代表SNES控制器的小部件现在可以准确地指示按下的按钮，而不会突出显示错误，同时在视觉上与界面的一般主题集成\n。控制器配置更加可靠：正确区分不同类型的输入（按钮、模拟轴和方向） ，可以保存和恢复关键关联，而不会丢失信息，显示的按钮与实际检测到的输入忠实对应。\n通用界面也得到了简化。 实验性侧边栏已被删除，转而采用更传统的主窗口，围绕经典菜单栏进行组织。 “帮助”菜单→已重新引入，现在包括分叉特定的积分，从而加强了整体的一致性。\n综上所述， Snes9xrd不修改SNES仿真本身，但首先旨在通过改进Qt界面来现代化和稳定用户体验，使控制器管理更可靠，并提供更干净，更完整，更舒适的使用环境。\n\n变更内容如下：\n•保存状态/加载状态故障现在通过屏幕消息叠加层显示，而不是静默失败。\n•音频驱动程序初始化失败现在会显示错误消息，而不是静默失败。\n•修复了OpenGL渲染器在上下文创建失败时不会回退到Qt渲染器的问题（它现在的行为与Vulkan渲染器的行为类似）。\n•着色器预设加载失败（ OpenGL和Vulkan ）现在通过屏幕消息叠加层报告，而不仅仅是打印到控制台。\n•修复了设置窗口悬挂指针/寿命问题。\n•修复了“着色器参数”对话框从“模拟设置”对话框中窃取焦点的问题。\n•声音设置：展开播放速率列表和缓冲区大小步骤，并添加了“帧前进”静音选项。\n•增加了锐利双线性柔性软件滤波器。\n•全局旋转盒式抛光。\n•在干净的配置下，默认倒带缓冲区大小现在为10MB ，而不是禁用（ 0 ）。\n•冻结文件未找到和成功的屏幕截图通知现在使用屏幕上的消息叠加，而不是模式对话框。\n•修复了屏幕截图保存被较新的libpng位深度/颜色类型验证拒绝的问题。\n•修复了Windows内部版本未在应用程序图标/清单/版本资源中编译的问题。\n•关于对话框：添加了一个指向snes9xrd GitHub存储库的链接。",
-      "originalContent": "Snes9xrd est un fork personnel de l’émulateur Super Nintendo Snes9x. Il conserve intégralement le cœur d’émulation officiel ainsi que les front-ends GTK, Win32, macOS et libretro, tout en proposant une refonte importante du front-end Qt afin de le rendre plus complet, plus cohérent et plus agréable à utiliser.\n\nL’un des principaux objectifs de ce fork est de rendre l’interface Qt aussi complète que l’interface Win32 en y réintroduisant les fonctionnalités qui lui faisaient défaut. Les paramètres d’affichage, les options de transparence, les shaders, les filtres logiciels, le frame skipping ainsi que les réglages audio avancés sont désormais entièrement accessibles depuis Qt. Les menus d’émulation et de configuration ont également été réorganisés afin d’offrir une présentation plus claire, plus intuitive et plus homogène.\n\nSnes9xrd apporte également plusieurs améliorations à la gestion des contrôleurs. Le widget représentant la manette SNES indique désormais avec précision le bouton pressé, sans erreurs de surbrillance, tout en s’intégrant visuellement au thème général de l’interface. La configuration des manettes a été rendue plus fiable: les différents types d’entrées (boutons, axes analogiques et directions) sont correctement distingués, les associations de touches peuvent être sauvegardées et restaurées sans perte d’informations, et les boutons affichés correspondent fidèlement aux entrées réellement détectées.\n\nL’interface générale a également été simplifiée. La sidebar expérimentale a été supprimée au profit d’une fenêtre principale plus traditionnelle, organisée autour d’une barre de menus classique. Le menu « Help → About » a été réintroduit et inclut désormais les crédits spécifiques au fork, renforçant ainsi la cohérence de l’ensemble.\n\nEn résumé, Snes9xrd ne modifie pas l’émulation SNES elle-même, mais vise avant tout à moderniser et à stabiliser l’expérience utilisateur en améliorant l’interface Qt, en fiabilisant la gestion des contrôleurs et en proposant un environnement plus propre, plus complet et plus agréable à utiliser.\n\nLes changements sont les suivants:\n\n- Save State / Load State failures are now surfaced via the on-screen message overlay instead of failing silently.\n- Audio driver initialization failures now show an error message instead of failing silently.\n- Fixed the OpenGL renderer not falling back to the Qt renderer on context creation failure (it now behaves like the Vulkan renderer already did).\n- Shader preset load failures (OpenGL and Vulkan) now report through the on-screen message overlay instead of only printing to the console.\n- Fixed a settings-window dangling pointer/lifetime issue.\n- Fixed the Shader Parameters dialog stealing focus from the Emulation Settings dialog.\n- Sound Settings: expanded the playback rate list and buffer size step, and added a Frame Advance mute option.\n- Added the sharp-bilinear-flexible software filter.\n- Global spinbox style polish.\n- Default rewind buffer size is now 10MB on a clean config instead of disabled (0).\n- Freeze-file-not-found and successful-screenshot notices now use the on-screen message overlay instead of a modal dialog.\n- Fixed screenshot saving being rejected by newer libpng bit-depth/color-type validation.\n- Fixed the Windows build not compiling in the app icon/manifest/version resource.\n- About dialog: added a link to the snes9xrd GitHub repository.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "snes9x_core"
-      ],
-      "contentHash": "707dcfb7c52a086a8f975aa2975b4272bf5e0d056f34b9fcbff64cbd03b153a3",
-      "translationPending": false
-    },
-    {
-      "id": "136272",
-      "title": "【工具】GamePlay v0.96b",
-      "originalTitle": "[Utilitaires Multi-systemes] GamePlay v0.96b",
-      "category": "tools",
-      "categoryLabel": "工具",
-      "kind": "tool",
-      "publishedAt": "2026-08-27T09:25:22Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136272-utilitaires-multi-systemes-gameplay-v0-96b/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/gameplay.jpg",
-      "officialUrl": "https://github.com/leniad/GamePlay",
-      "summary": "GamePlay是一个集中DosBox、DosBox ‑ X、ScummVM和DSP Emulator的界面，无需任何配置即可启动MS-DOS、Arcade、游戏机和8位微电脑游戏 。所提供的游戏已经过优化以提供最佳渲染，您也可以通过简单地导入ZIP存档或CD-ROM来添加自己的标题。 应用程序会自动检测语言，并通过编译在Windows以及Linux或macOS上运行。",
-      "content": "GamePlay是一个集中DosBox、DosBox ‑ X、ScummVM和DSP Emulator的界面，无需任何配置即可启动MS-DOS、Arcade、游戏机和8位微电脑游戏\n。所提供的游戏已经过优化以提供最佳渲染，您也可以通过简单地导入ZIP存档或CD-ROM来添加自己的标题。 应用程序会自动检测语言，并通过编译在Windows以及Linux或macOS上运行。\n\n变更内容如下：\n•扩展了同一游戏版本列表的容量\n•现在，游戏列表存储了正常运行所需的最低GamePlay版本。 如果使用的版本较旧，则会显示警告\n\n您可以在此处访问包含图像、手册、模拟器和更多内容的完整版本。",
-      "originalContent": "GamePlay est une interface qui centralise DosBox, DosBox‑X, ScummVM et DSP Emulator pour lancer des jeux MS‑DOS, Arcade, consoles et micro‑ordinateurs 8‑bits sans aucune configuration. Les jeux fournis sont déjà optimisés pour offrir le meilleur rendu possible, et vous pouvez aussi ajouter vos propres titres en important simplement une archive ZIP ou un CD‑ROM. L’application détecte automatiquement la langue et fonctionne aussi bien sous Windows que sous Linux ou macOS via compilation.\n\nLes changements sont les suivants:\n\n- Expanded the capacity of the version list for the same game\n- Now the game list stores the minimum GamePlay version required to function correctly. If the version being used is older, a warning is displayed\n\nUne version intégrale comprenant des images, manuels, émulateurs et bien plus encore est accessible ici.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [],
-      "contentHash": "234d4fa68e6eab49e2abc0cf4d8b16f7d01e13bc54ceb61a8251503696f49930",
       "translationPending": false
     }
   ]
