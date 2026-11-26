@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T08:52:40.636688Z",
+  "generatedAt": "2026-11-26T21:55:18.098466Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,20 +9,68 @@
   },
   "articles": [
     {
+      "id": "android-release-j2me_loader-continuous",
+      "title": "【Android更新】J2ME Loader continuous",
+      "originalTitle": "J2ME Loader continuous Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T20:51:46Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
+      "imageUrl": "asset://assets/emulators/j2me_loader.png",
+      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
+      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
+      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n师傅最新承诺的自动化建设。",
+      "originalContent": "Automated builds from the latest commits on master.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "j2me_loader"
+      ],
+      "contentHash": "f0205fc44f27d4788ac7acc1b12f7f761bdbeb68093b041e8bf608d0db674c9b",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20261126",
+      "title": "【Android更新】ARMSX2 nightly-20261126",
+      "originalTitle": "ARMSX2 nightly-20261126 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T18:57:46Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261126",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20261126，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261126。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64.AppImage,4K,16K和64K页内核相同\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst (Rocknix和Batocera运行堆肥机,所以用Qt Appimage代替)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧夜里来的? 噩梦现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:稳定无法在旧的夜晚安装。 备份您的保存和记忆卡, 解开旧的夜晚, 然后安装稳定的APK。\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n或\n• Discord:离开后状态恢复 ARMSX2\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261125...46f157520540a2538b8cb48f4695398ef2908025",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64.AppImage, for 4K, 16K and 64K page kernels alike\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Discord: the status comes back after leaving ARMSX2\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261125...46f157520540a2538b8cb48f4695398ef2908025",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "83430f61466377e1b83b144a6f4a94daf0cf8beac9b1fab6436a1edc89f8c235",
+      "translationPending": false
+    },
+    {
       "id": "android-release-fbneo_core-latest",
       "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
       "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-26T07:51:36Z",
+      "publishedAt": "2026-11-26T18:01:51Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
       "imageUrl": "asset://assets/emulators/fbneo_core.png",
       "officialUrl": "https://github.com/finalburnneo/FBNeo",
       "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• tlcs900 cpu, 添加端口处理器和adc处理器 m6809 cpu, 检查irq之后的状态变化 adsp2181, io 处理器和 dmoverlay stuff (dinkc64)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• tlcs900 cpu, add port handlers and adc handler m6809 cpu, check irq's after irq enable status changes adsp2181, io handlers and dmoverlay stuff (dinkc64)",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 增加世嘉型号1驱动程序(barbudreadmon)",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• add Sega Model 1 driver (barbudreadmon)",
       "platforms": [
         "android"
       ],
@@ -30,27 +78,235 @@
         "fbneo_core",
         "fbneo_neogeo"
       ],
-      "contentHash": "fb106a8f9c44d0843c69e7b450d4aaa237dd1b69710058bc55d8dd87f97a2f84",
+      "contentHash": "18320695ebf10c8d74e0734b38a1fc3f163015d30a575dbbe82075639b2bfd2c",
+      "translationPending": false
+    },
+    {
+      "id": "145157",
+      "title": "【家用机】DuckStation v0.1 r261126",
+      "originalTitle": "[Consoles de salon] DuckStation v0.1 r261126",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T15:20:42Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145157-consoles-de-salon-duckstation-v0-1-r261126/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/duckstation-lomax.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "这是PlayStation One的最好的模拟器,在前面 ePSXe et pSX. 特征 : • 编译器/JIT CPU(x86-64,arv7/AArch32,AArch64,RISC-V/RV64). • 制造与D3D11、D3D12、OpenGL、Vulkan和Metal API兼容的硬件。 • 缩放、过滤的硬件渲染引擎中的真实(24位)纹理和颜色。 • PGXP,用于几何精确度、纹理校正和深度缓冲模拟。",
+      "content": "这是PlayStation One的最好的模拟器,在前面 ePSXe et pSX.\n\n特征 :\n• 编译器/JIT CPU(x86-64,arv7/AArch32,AArch64,RISC-V/RV64).\n• 制造与D3D11、D3D12、OpenGL、Vulkan和Metal API兼容的硬件。\n• 缩放、过滤的硬件渲染引擎中的真实(24位)纹理和颜色。\n• PGXP,用于几何精确度、纹理校正和深度缓冲模拟。\n• 通过Rasterizer Order Views/Flagment Shader Interlock进行精密混合。\n• 物理渲染发动机中的纹理替换系统。\n• 软件矢量化和多条线化。\n• 适应运动。\n• 适应性子取样过滤器。\n• 为垂直或“TETE”射击装置进行屏幕旋转。\n• 后处理的荫影链(GLSL、Reshade FX和Slang预设)。\n• 围绕游戏内容显示的装饰边框。\n^ \"快速启动\"忽略BIOS内幕。\n• 支持状态备份,及早执行和恢复。\n• 与Windows、Linux和macOS兼容。\n• 从CD、bin/cue图像、原始bin/img文件直接播放, MAME CHD,单轨ECM,MDS/MDF,CCD和未加密的PBP格式。\n• 在RAM中预装磁盘图像,以避免由于磁盘亭而中断。\n· 将列表/grill中的多盘游戏与共享内存卡融合。\n• 自动加载/应用PPF补丁。\n• 直接启动土生土长可执行文件。\n• 直接装入便携式声音格式(psf)文件。\n• 音速耗尽时,音量会随时间推移而拉长。\n• 支持数字和模拟控制器(向主机传送回力)。\n• 火炮和Justifier火炮支援(类似使用)。\n• 支持NeGcon控制器。\n• 控制器预设和游戏配置。\n• Qt用户界面和大图片模式。\n• 自动更新预览和稳定的频道。\n• 自动内容分析——标题/标题 redump.org.\n• 每场游戏可选择自动切换记忆卡。\n• 骗局从现有清单中得到支持。\n• 记忆卡编辑器和备用进口商。\n• 模拟超时CPU。\n• 支持4 000多个游戏的奶酪编码数据库。\n• 校正数据库(patch),具有视觉改进、刷新率和图像格式。\n• 分析和修改现场记忆。\n• ISO图像探索和文件提取。\n• 远程综合调试。\n• 多塔普控制器支持(最多8个设备)。\n• 重新整合\n• 存在丰富迪斯科德。\n• 通过媒体基金会(Windows)和FFmpeg(所有平台)获取视频。\n• 免费照相机功能。\n• 通过平行端口模拟弹匣。\n\n系统要求:\n• Windows 10/11(7/8/8.1 Linux (附录/Flatpak), macOS.\n• CPU比土豆快。 但必须是x86_64,AArch32/armv7,AArch64/ARMv8或RISC-V/RV64.\n• 能够打开GL的GPU 3.1 / OpenGL ES 软件 3.1 / Direct3D 11 功能级别 10.0 / 武尔坎语 1.0. 所以,基本上,在过去的十年里, 任何事情都做了。\n• SDL,XInput或DInput兼容控制器(如XB360/XBOne/XBSeries). DualShock 3在Windows上的用户需要安装包含在PlayStation Now中的官方DualShock 3驱动程序。\n\n改进措施包括:\n\n预览构建 :\n• PGXP-CPU为大胆魔鬼Derby 3D (Stenzek)\n• 使用预览版/稳定版发行标题(Stenzek)\n\n稳定构建(或滚动发布) :\n• dep/rcheevos:跳跃至 a1ba160\n• 全屏UI:链式挂载过渡回调而不是运行内线\n• GameDB:为Tomba重编部队ICACH!/Tombi!/Ore! 汤巴\n• 脚本:添加 TIM 纹理替换名称生成器\n• GPUTextureCache:从 pal_min 缩小调色板范围\n• GPUTextureCache:未对齐的8位托盘第五页\n• GPUTextureCache:修复 VRAM 写入分割\n• GPUTextureCache:将 MaxVRAMWriteSplits 分析为整数 config.yaml\n• GPUTextureCache:不要合并已绘制的 VRAM 信件\n• GPUTextureCache:为选择最封闭的绘图矩整齐矩形()\n• GPUTextureCache:不返回装入失败的替换图像\n• GPUTextureCache:解析C16替换名称时初始化调色板字段\n• GPUTextureCache:只为跨越页面的写作更换一次\n• GPUTextureCache:修复纹理重置\n• GPUTextureCache:在缺失的别名文件错误中修补参数顺序\n• GPUTextureCache: 本地 VRAM 复制之前的原始垃圾堆像素\n• SPU:季度/第八期时段的时钟噪音\n• SPU: 将相位应用为指数递减扫描\n• SPU:在 DMA 写作期间不要设置 STATX 繁忙\n• SPU:将第一个块的循环启动应用在信头迷信的密钥上\n• SPU:与样本生成相隔的内存传输\n• SPU:用32个周期/半词将 DMA FIFO 写入内存\n• CDROM:在播放CD-DA时不要应用读速\n• GPU:将多线缓冲器限制在1MB\n• 系统:从活动配置中计算保存状态大小\n• 系统:在加载时添加快速前进选项\n• 系统:当补丁目录更改时重新装入补丁\n• VideoPresenter:包含用户边框覆盖预设\n• Qt: 添加全局文件夹设置\n• Qt: 将文件夹打开/重置动作移动到溢出菜单中\n• Qt: 将物理驱动器和前置选项移动到高级\n• Qt:将RAM/VRAM大小分成独立的行\n• Qt:支持在游戏列表设置中拖放\n• Qt:改进游戏列表设置布局和帮助\n• Qt: 在设置窗口页脚按钮中添加图标\n• Qt: 修补重编剪切选项而不失效\n• CPU/编译器:添加负载ArgRegWindstant()\n• CPU/编译器:快速前进VwaitidleLoop\n• Qt:将非官方成就改为未推广\n• README:更新特性列表\n• 设置:在安全模式下禁用闲闲快速移动\n• D3D12Device:推迟所有管道和动态状态以绘制/发送时间\n• VulkanDevice:延迟图形状态,直到第一次图形管道绑定\n• VulkanDevice:推迟所有管道和动态状态以绘制/发送时间\n• VulkanDevice:为调试事件假设验证层扩展\n• VulkanDevice:为默认布局修复错误的掩码\n• dep/rcheevos:删除未使用的文件\n• 成就:更非官方 -- -- 未促进的变化\n• GameList: 添加缺失向量包括\n• GPUDevice:以纹理表格式修复类型\n• Android:更新翻译字符串\n• 数据:删除目前未使用的封面占位符\n• 脚本:从 AppImage 中删除 AppStream 元信息\n• Qt: 绑定悬浮/焦点上突出控制器图像部分\n• Qt:为JogCon、DDGO和Popn控制器添加绑定布局\n• GameList:不要从封面请求中调用\n• HTTPDownloader:在等待请求时不要扣锁\n• 全屏UI:在堆栈上动态创建对话框\n• 全屏UI:用回调替换固定弹出对话框\n• 输入管理器:将宏作为绑定和等待的顺序播放\n• 输入管理器:添加宏记录,将输入事件映射为粘贴\n• Qt:编辑和记录宏序列\n• Qt:在Windows和Linux上按下帮助键\n• Qt:可探测XKB自重装X11\n• Qt: 在控制器设置页脚按钮中添加图标\n• Qt:改进宏编辑器UI\n• README:更新特性列表\n• LRUCACHE:增加基于重量的选择性驱逐\n• ImGuiManager:上传后控制纹理更新\n• FullscreenUI:为缓存纹理制作艺术作品\n• 全屏UI:通过 VRAM 使用限制纹理缓存\n• 西班牙文(西班牙)翻译最新情况2026/11/22(#3831)\n• ImGuiManager:添加 PushNestSampler()/PopNearestSampler()\n• 全屏UI:关闭对话框后恢复导航光标\n• 全屏UI:水平添加拖放\n• 全屏UI:增加页头、分区控制和文本样式部件\n• 全屏UI:在游戏列表中使用页头\n• 全屏UI:添加旋转木马游戏列表视图\n• FullscreenUI:重制游戏列表标题\n• FullscreenUI:用最近的过滤绘制小游戏图标\n• 全屏UI:绘图后设置模糊/最接近的回调\n• 全屏UI:在游戏列表设置中固定选项顺序\n• 全屏UI:使搜索框可扩展\n• 杂项:用linux取代 ENBLEX11/ENBLE_WAYLAND\n• 数据:更新SDL游戏控制器数据库\n• 主机:以相对时间格式纠正不正确的条件\n• 最新情况 duckstation-qt_es.ts (#3833)\n• 杂项:放弃LoongArch64支助\n• CI:切换到未损坏的Windows图像\n• CI:切换到XCode 27 MacOS图像\n• 阻塞:更新至 20261125\n• Android:更新翻译字符串\n• Qt:在重置设置时纠正崩溃\n\n[wpfilebase标签=file id=8213 tpl=simple3/] (中文(简体) ).",
+      "originalContent": "Il s'agit du meilleur émulateur de PlayStation One, devant ePSXe et pSX.\n\nCaractéristiques:\n- Recompilateur/JIT CPU (x86-64, armv7/AArch32, AArch64, RISC-V/RV64).\n- Rendu matériel compatible avec les API D3D11, D3D12, OpenGL, Vulkan et Metal.\n- Mise à l’échelle, filtrage des textures et couleurs vraies (24 bits) dans les moteurs de rendu matériels.\n- PGXP pour la précision géométrique, la correction des textures et l’émulation du tampon de profondeur.\n- Mélange précis via Rasterizer Order Views / Fragment Shader Interlock.\n- Système de remplacement de textures dans les moteurs de rendu matériels.\n- Rendu logiciel vectorisé et multi-threadé.\n- Désentrelacement adaptatif au mouvement.\n- Filtre de sous-échantillonnage adaptatif.\n- Rotation d’écran pour les jeux de tir verticaux ou en mode \"TATE\".\n- Chaînes de shaders de post-traitement (GLSL, Reshade FX et préréglages Slang).\n- Bordures décoratives affichées autour du contenu du jeu.\n- \"Démarrage rapide\" pour ignorer l’intro du BIOS.\n- Prise en charge des sauvegardes d’état, avec exécution anticipée et rembobinage.\n- Compatible avec Windows, Linux et macOS.\n- Lecture directe depuis CD, images bin/cue, fichiers bin/img bruts, MAME CHD, ECM à piste unique, MDS/MDF, CCD et formats PBP non chiffrés.\n- Préchargement des images disque en RAM pour éviter les interruptions dues à la mise en veille du disque.\n- Fusion des jeux multi-disques dans la liste/grille avec cartes mémoire partagées.\n- Chargement/application automatique des patchs PPF.\n- Démarrage direct des exécutables homebrew.\n- Chargement direct des fichiers Portable Sound Format (psf).\n- Audio étiré dans le temps lors de l’exécution hors de la vitesse 100 %.\n- Prise en charge des manettes numériques et analogiques (le retour de force est transmis à l’hôte).\n- Support des pistolets GunCon et Justifier (simulés à la souris).\n- Support de la manette NeGcon.\n- Préréglages de manette et configuration par jeu.\n- Interface utilisateur Qt et mode \"Big Picture\".\n- Mises à jour automatiques avec canaux preview et stable.\n- Analyse automatique du contenu — titres/hachages fournis par redump.org.\n- Commutation automatique optionnelle des cartes mémoire par jeu.\n- Prise en charge des cheats à partir de listes existantes.\n- Éditeur de carte mémoire et importateur de sauvegardes.\n- Overclocking CPU émulé.\n- Base de données de codes de triche (cheats) avec prise en charge de plus de 4 000 jeux.\n- Base de données de correctifs (patchs) avec améliorations visuelles, du taux de rafraîchissement et du format d'image.\n- Analyse et modification de la mémoire en direct.\n- Exploration d'images ISO et extraction de fichiers.\n- Débogage intégré et à distance.\n- Support des manettes multitap (jusqu’à 8 appareils).\n- Intégration RetroAchievements.\n- Présence enrichie Discord.\n- Capture vidéo via Media Foundation (Windows) et FFmpeg (toutes plateformes).\n- Fonction de caméra libre.\n- Émulation de cartouches via port parallèle.\n\nConfiguration requise:\n- Windows 10/11 (7/8/8.1 ici), Linux (AppImage/Flatpak), macOS.\n- Un CPU plus rapide qu'une patate. Mais il doit être x86_64, AArch32/armv7, AArch64/ARMv8 ou RISC-V/RV64.\n- Un GPU capable de OpenGL 3.1 / OpenGL ES 3.1 / Direct3D 11 niveau de fonctionnalité 10.0 / Vulkan 1.0. Donc, en gros, n’importe quoi fabriqué au cours des 10 dernières années.\n- Une manette compatible SDL, XInput ou DInput (par exemple XB360/XBOne/XBSeries). Les utilisateurs de DualShock 3 sous Windows devront installer les pilotes officiels DualShock 3 inclus dans PlayStation Now.\n\nLes améliorations sont:\n\nPreview Build:\n- PGXP-CPU for Dare Devil Derby 3D (Stenzek)\n- Use Preview Release/Stable Release for release titles (Stenzek)\n\nStable Build (or rolling release):\n- dep/rcheevos: Bump to a1ba160\n- FullscreenUI: Chain pending transition callbacks instead of running inline\n- GameDB: Force recompiler ICache for Tomba!/Tombi!/Ore! Tomba\n- Scripts: Add TIM texture replacement name generator\n- GPUTextureCache: Hash reduced palette range from pal_min\n- GPUTextureCache: Track fifth page of unaligned 8-bit palettes\n- GPUTextureCache: Fix VRAM write splitting\n- GPUTextureCache: Parse MaxVRAMWriteSplits as an integer in config.yaml\n- GPUTextureCache: Don't merge VRAM writes that have already been drawn with\n- GPUTextureCache: Fix RectDistance() for picking the closest draw rect\n- GPUTextureCache: Don't retry loading replacement images that failed to load\n- GPUTextureCache: Initialize palette fields when parsing C16 replacement names\n- GPUTextureCache: Only apply replacements once for writes spanning pages\n- GPUTextureCache: Fix TextureReplacementIndex comparison\n- GPUTextureCache: Fix argument order in missing alias file error\n- GPUTextureCache: Dump original pixels before local VRAM copies\n- SPU: Clock noise on quarter/eighth-period slots\n- SPU: Apply Phase bit in exponential decrease sweeps\n- SPU: Don't set STATX busy during DMA writes\n- SPU: Apply the first block's loop start on the key on header fetches\n- SPU: Interleave RAM transfers with sample generation\n- SPU: Write the DMA FIFO to RAM at 32 cycles/halfword\n- CDROM: Don't apply read speedup while playing CD-DA\n- GPU: Limit the polyline buffer to 1MB\n- System: Calculate save state size from active configuration\n- System: Add Fast Forward While Loading option\n- System: Reload patches when the patches directory changes\n- VideoPresenter: Include user border overlay presets\n- Qt: Add global folder settings\n- Qt: Move folder open/reset actions into overflow menu\n- Qt: Move physical drive and readahead options to Advanced\n- Qt: Split RAM/VRAM size into separate rows\n- Qt: Support drag and drop in game list settings\n- Qt: Improve game list settings layout and help\n- Qt: Add icons to settings window footer buttons\n- Qt: Fix recompiler icache option not disabling\n- CPU/Recompiler: Add LoadArgRegWithConstant()\n- CPU/Recompiler: Fast forward VWaitIdleLoop\n- Qt: Rename unofficial achievements to unpromoted\n- README: Update feature list\n- Settings: Disable idle-loop fast forward in safe mode\n- D3D12Device: Defer all pipeline and dynamic state to draw/dispatch time\n- VulkanDevice: Defer graphics state until first graphics pipeline bind\n- VulkanDevice: Defer all pipeline and dynamic state to draw/dispatch time\n- VulkanDevice: Enumerate validation layer extensions for debug instances\n- VulkanDevice: Fix incorrect mask for default layout\n- dep/rcheevos: Remove unused file\n- Achievements: More unofficial -> unpromoted changes\n- GameList: Add missing vector include\n- GPUDevice: Fix typo in texture format table\n- Android: Update translation strings\n- Data: Remove now-unused cover placeholder\n- Scripts: Remove AppStream metainfo from AppImage\n- Qt: Highlight controller image part on binding hover/focus\n- Qt: Add binding layouts for JogCon, DDGo and Popn controllers\n- GameList: Don't reference save callback from cover requests\n- HTTPDownloader: Don't hold lock while waiting for requests\n- FullscreenUI: Create dialogs dynamically on a stack\n- FullscreenUI: Replace fixed popup dialogs with callbacks\n- InputManager: Play macros as sequences of binds and waits\n- InputManager: Add macro recording, mapping input events to pad binds\n- Qt: Edit and record macro sequences\n- Qt: Drop presses for held keys on Windows and Linux\n- Qt: Enable XKB detectable auto-repeat on X11\n- Qt: Add icons to controller settings footer buttons\n- Qt: Improve the macro editor UI\n- README: Update feature list\n- LRUCache: Add optional weight-based eviction\n- ImGuiManager: Consume texture updates after uploading\n- FullscreenUI: Render generated artwork to cached textures\n- FullscreenUI: Limit texture cache by VRAM usage\n- Spanish (Spain) Translation Update 2026/11/22 (#3831)\n- ImGuiManager: Add PushNearestSampler()/PopNearestSampler()\n- FullscreenUI: Restore nav cursor after closing dialogs\n- FullscreenUI: Add horizontal drag/fling\n- FullscreenUI: Add page header, segmented control and text style widgets\n- FullscreenUI: Use page header in game list\n- FullscreenUI: Add carousel game list view\n- FullscreenUI: Rework game list header\n- FullscreenUI: Draw small game icons with nearest filtering\n- FullscreenUI: Set blur/nearest callbacks after drawing\n- FullscreenUI: Fix order of options in game list settings\n- FullscreenUI: Make search box expandable\n- Misc: Replace ENABLE_X11/ENABLE_WAYLAND with linux\n- Data: Update SDL game controller database\n- Host: Fix incorrect condition in relative time format\n- Update duckstation-qt_es.ts (#3833)\n- Misc: Drop LoongArch64 support\n- CI: Switch to non-deprecated Windows image\n- CI: Switch to XCode 27 MacOS image\n- Deps: Update to 20261125\n- Android: Update translation strings\n- Qt: Fix crash when resetting settings\n\n[wpfilebase tag=file id=8213 tpl=simple3 /]",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "3880d2765acda150640f576dc617e8778b8ead15cdd63ec7b7f7d93065b162d2",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-duckstation-preview",
+      "title": "【Android更新】DuckStation preview",
+      "originalTitle": "DuckStation preview Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T14:18:48Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
+      "imageUrl": "asset://assets/emulators/duckstation.png",
+      "officialUrl": "https://github.com/stenzek/duckstation",
+      "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• PGXP-CPU为大胆恶魔Derby 3D(斯滕策克)（https://github.com/stenzek/duckstation/commit/ace7c7c1095a567b5ae1046461de25467d73ca78）)\n• 使用预览版/稳定版发布标题(Stenzek)（https://github.com/stenzek/duckstation/commit/030a61799fdd2236254bffed232b60620ae91954）)",
+      "originalContent": "## Commits\n- PGXP-CPU for Dare Devil Derby 3D ([Stenzek](https://github.com/stenzek/duckstation/commit/ace7c7c1095a567b5ae1046461de25467d73ca78))\n- Use Preview Release/Stable Release for release titles ([Stenzek](https://github.com/stenzek/duckstation/commit/030a61799fdd2236254bffed232b60620ae91954))",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "duckstation"
+      ],
+      "contentHash": "a58d0f771a15f03eb039a4a6cc431fb973e34c7d995740baf1975cc12e66e6fb",
+      "translationPending": false
+    },
+    {
+      "id": "145155",
+      "title": "【电脑】Caprice32 v4.6.0 (2026/11/26)",
+      "originalTitle": "[Ordi.] Caprice32 v4.6.0 (2026/11/26)",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T12:40:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145155-ordi-caprice32-v4-6-0-2026-11-26/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/Caprice32_v4.6.0_20260214.png",
+      "officialUrl": "https://github.com/ColinPitrat/caprice32/releases",
+      "summary": "此版本直接沿袭了 Ulrich Doewich 之前的版本，目前由 Colin Pitrat 维护。 Caprice 32 的最新版本，具备最新酷炫功能和最新漏洞。",
+      "content": "此版本直接沿袭了 Ulrich Doewich 之前的版本，目前由 Colin Pitrat 维护。\n\nCaprice 32 的最新版本，具备最新酷炫功能和最新漏洞。",
+      "originalContent": "Cette version fait directement suite aux précédentes créées par Ulrich Doewich et est à présent maintenue par Colin Pitrat.\n\nLatest build of Caprice 32, with the newest cool features and the most recent bugs.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "caprice32_cpc",
+        "caprice32_pc",
+        "caprice32_gx"
+      ],
+      "contentHash": "8483dfce2e79c73dce820746548b8e3cc1b615f0e85d957768ee052f41c7475b",
+      "translationPending": false
+    },
+    {
+      "id": "145149",
+      "title": "【移动设备】WinArcadia v36.82",
+      "originalTitle": "[Console] WinArcadia v36.82",
+      "category": "mobile",
+      "categoryLabel": "移动设备",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T11:39:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145149-console-winarcadia-v36-82/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/03/warcadia.png",
+      "officialUrl": "http://amigan.1emu.net/releases/",
+      "summary": "阿米阿尔卡迪亚是Tunix2001 ex 'Win Arcadia 2001'(由Gavin Turner)为阿米加改进的港口。 这个版本由James Jacobs和Gavin Turner编写,目前是Amiga端口的Windows端口(一个背港)! 模拟系统: 康乐 : • Emerson Arcadia家族,2001年:班达伊、埃默森、格兰斯坦、哈尼梅克斯、Intervision、休闲-视觉、莱昂纳多、MPT-03、奥尔马图斯、Pa…",
+      "content": "阿米阿尔卡迪亚是Tunix2001 ex 'Win Arcadia 2001'(由Gavin Turner)为阿米加改进的港口。 这个版本由James Jacobs和Gavin Turner编写,目前是Amiga端口的Windows端口(一个背港)!\n\n模拟系统:\n\n康乐 :\n• Emerson Arcadia家族,2001年:班达伊、埃默森、格兰斯坦、哈尼梅克斯、Intervision、休闲-视觉、莱昂纳多、MPT-03、奥尔马图斯、Palladium、Poppy、Robdajet、Rowtron、Tele-Fever、Tempe 圣,特罗姆,图尼克斯等。\n• Interton VC 4000 和兼容性: ACTONIC, Cabel, Fountain, Hanimex, Interton, Prinztronic, Radofin, Rowtron, Voltmace, Wadingtons...\n• Elektor电视游戏机(1979年)\n\nPIPBUG/BINBUG 机器:\n• Electronics Australia 77up2/78up5,书签可适应板电脑,Eurocard 2650...\n• 书签指导员50(1978)\n• TWIN书签(1976年)\n• 中央数据2650(1977年)\n• PHUNSY微型计算机(c.1980)\n• Ravensburger Selbstbau计算机/2650微型计算机(1984年)\n• Hofacker MIKIT 2650(1978)\n\n街机:\n• Zaccaria Corner-ops: Astro Wars, Galaxia, 激光战,拉扎里安\n• Kitronix Corner-ops:Malzak 1 & 2\n\n电子游戏:\n• Pong AY-3-8500/850/8600号大楼:\n• Coleco Telstar Galaxy、Sheen TVG-201和其他AY-3‐85xx系统\n\n电子教育机器:\n• 技术类型权利(1985年)\n\n它需要Windows 9x/ME/NT/2000/XP,同时也在Vista/8/10/11上工作。",
+      "originalContent": "AmiArcadia est le port amélioré de Tunix2001 ex 'Win Arcadia 2001' (par Gavin Turner) pour Amiga. Ecrit par James Jacobs et Gavin Turner, cette version est en fait le port Windows du port Amiga (un backport) !\n\nSystèmes émulés:\n\nConsoles:\n- Famille Emerson Arcadia 2001 : Bandai, Emerson, Grandstand, Hanimex, Intervision, Leisure-Vision, Leonardo, MPT-03, Ormatu, Palladium, Poppy, Robdajet, Rowtron, Tele-Fever, Tempest, Tryom, Tunix, etc.\n- Interton VC 4000 et compatibles : Acetronic, Cabel, Fountain, Hanimex, Interton, Prinztronic, Radofin, Rowtron, Voltmace, Waddingtons…\n- Elektor TV Games Computer (1979)\n\nMachines PIPBUG/BINBUG:\n- Electronics Australia 77up2/78up5, Signetics Adaptable Board Computer, Eurocard 2650…\n- Signetics Instructor 50 (1978)\n- Signetics TWIN (1976)\n- Central Data 2650 (1977)\n- PHUNSY microcomputer (c.1980)\n- Ravensburger Selbstbaucomputer / 2650 Minimal Computer (1984)\n- Hofacker MIKIT 2650 (1978)\n\nMachines d'arcade:\n- Coin-ops Zaccaria : Astro Wars, Galaxia, Laser Battle, Lazarian\n- Coin-ops Kitronix : Malzak 1 & 2\n\nJeux électroniques:\n- Consoles Pong AY-3-8500/8550/8600:\n- Coleco Telstar Galaxy, Sheen TVG-201, et autres systèmes AY‑3‑85xx\n\nMachine éducative électronique:\n- VTech Type-Right (1985)\n\nIl nécessite Windows 9x/ME/NT/2000/XP et fonctionne également sous Vista/8/10/11.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "winarcadia_pc"
+      ],
+      "contentHash": "39e530b90b6e5dd6c2969bcc7b97991c2a1f212fa2ba8337d5d76847a8fb9c3a",
+      "translationPending": false
+    },
+    {
+      "id": "145147",
+      "title": "【电脑】JNEXT v1.4",
+      "originalTitle": "[Ordi.] JNEXT v1.4",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T11:30:01Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145147-ordi-jnext-v1-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/JNEXT-boot.png",
+      "officialUrl": "https://www.jnext.es/",
+      "summary": "JNEXT是由豪尔赫·冈萨雷斯(英语:Jorge González (ZXjogv))根据GPLv3许可证在C++17和Qt6中开发的ZX Spectrum Next的开源仿真器,可在Linux,Windows和macOS上查阅。",
+      "content": "JNEXT是由豪尔赫·冈萨雷斯(英语:Jorge González (ZXjogv))根据GPLv3许可证在C++17和Qt6中开发的ZX Spectrum Next的开源仿真器,可在Linux,Windows和macOS上查阅。 它主要为开发与调试设计,允许您实时运行 Next 软件同时检查机器的内部状态: 单独生活 图形层, 访问 256 个登记簿, 128 个图案, 铜, 瓷砖, 三个 AY 音频芯片, 以及 exe 中一个逐步后退的功能 执行。\n\nZX Spectrum Next是2017年(通过Kickstarter)推出的一台复古现代计算机,是1980年代著名的ZX Spectrum的官方和现代化套件。\n\n由Sinclair最初的设计师(Rick Dickinson)设计,它不是塑料套房中的软件仿真器,而是基于芯片的真硬件机 可编程(FPGA)可以准确复制原始电路,同时增加80年代末/90年代初期16位机值的能力。\n\n这里有一个在线版本。\nWin7+的32位和64位版本可在官方网站查阅。",
+      "originalContent": "JNEXT est un émulateur open source du ZX Spectrum Next développé en C++17 et Qt6 sous licence GPLv3 par Jorge González (ZXjogv), disponible sur Linux, Windows et macOS. Pensé avant tout pour le développement et le débogage, il permet d'exécuter les logiciels Next en temps réel tout en inspectant l'état interne de la machine : visualisation séparée des couches graphiques, accès aux 256 registres, aux 128 sprites, au Copper, à la tilemap, aux trois puces audio AY, ainsi qu'une fonction de retour en arrière pas à pas dans l'exécution.\n\nLe ZX Spectrum Next est un ordinateur rétro-moderne lancé en 2017 (via Kickstarter) qui est la suite officielle et modernisée du célèbre ZX Spectrum des années 1980.\n\nConçu avec le designer d'origine de Sinclair (Rick Dickinson), ce n'est pas un émulateur logiciel dans un boîtier en plastique, mais une vraie machine matérielle basée sur une puce programmable (FPGA) capable de reproduire exactement les circuits d'origine tout en ajoutant des capacités dignes des machines 16-bit de la fin des années 80 / début 90.\n\nUne version online est disponible ici.\nDes versions 32 et 64 bits pour Win7+ sont disponibles sur le site officiel.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "18f00228df1d7aef7f06d2cb518a547bbb9f4f16f03bb5d5ff0ec16707211241",
+      "translationPending": false
+    },
+    {
+      "id": "145142",
+      "title": "【街机】SuperModel Dojo (2026/11/26)",
+      "originalTitle": "[Arcade] SuperModel Dojo (2026/11/26)",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "tool",
+      "publishedAt": "2026-11-26T11:18:19Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145142-arcade-supermodel-dojo-2026-11-26/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2023/12/SMD.png",
+      "officialUrl": "https://github.com/blueminder/supermodel-dojo",
+      "summary": "Supermodel 道场是一个从 Supermodel,是世嘉模式3的仿制者,特别关注网球特性,重玩和竞技游戏的培训选项。 注意提交人打算维持 Supermodel Dojo更新了母项目的最新变化。 除了上述特点外, Supermodel Dojo还包含一个模拟器的前端,使推出你最喜欢的游戏和调整设置变得比以往任何时候都容易。",
+      "content": "Supermodel 道场是一个从 Supermodel,是世嘉模式3的仿制者,特别关注网球特性,重玩和竞技游戏的培训选项。 注意提交人打算维持 Supermodel Dojo更新了母项目的最新变化。\n\n除了上述特点外, Supermodel Dojo还包含一个模拟器的前端,使推出你最喜欢的游戏和调整设置变得比以往任何时候都容易。\n\n目前, Supermodel Dojo只支持带有战斗游戏命令的游戏,包括:\n\n• Virtua战斗机3\n• Virtua战斗机3队战役\n• 战斗毒蛇2\n• Virtua罢工者2\n\n在同一物理终端上,所有带有本地多人的游戏都提供重读和网络功能。 真正在数字指令上的游戏是最早参与的游戏。\n\n变动情况如下:\n\n检查一下",
+      "originalContent": "Supermodel Dojo est une version dérivée de Supermodel, un émulateur de Sega Model 3, avec un accent particulier sur les fonctionnalités netplay, le replay et les options d'entraînement pour le jeu compétitif. A noter qu'il y a l'intention de l'auteur de maintenir Supermodel Dojo à jour avec les dernières modifications apportées au projet parent.\n\nEn plus des fonctionnalités décrites ci-dessus, Supermodel Dojo contient également un frontend pour l'émulateur afin de rendre le lancement de vos jeux préférés et l'ajustement des paramètres plus facile que jamais.\n\nActuellement, Supermodel Dojo ne prend en charge que les jeux avec des commandes de jeu de combat, y compris :\n\n- Virtua Fighter 3\n- Virtua Fighter 3 Team Battle\n- Fighting Vipers 2\n- Virtua Striker 2\n\nLes fonctionnalités de relecture et de jeu en réseau sont prévues pour tous les jeux avec multijoueur local sur la même borne physique. Les jeux qui reposent sur des commandes numériques sont les premiers concernés.\n\nLes changements sont les suivants:\n\nCheck here.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "ff1989d26df3f50b2c8099d1c068090f1f8e31af89ea81cdc3a7408869bdf300",
+      "translationPending": false
+    },
+    {
+      "id": "145140",
+      "title": "【街机】SuperModel Sinden Edition v0.4 r261126",
+      "originalTitle": "[Arcade] SuperModel Sinden Edition v0.4 r261126",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T11:15:42Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145140-arcade-supermodel-sinden-edition-v0-4-r261126/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/06/semu-sinden-transpa.png",
+      "officialUrl": "https://github.com/DirtBagXon/model3emu-code-sinden/",
+      "summary": "这是世嘉模式1/2/3的叉子,命名为 SuperModel 但支持使用名为辛登的灯光枪",
+      "content": "这是世嘉模式1/2/3的叉子,命名为 SuperModel 但支持使用名为辛登的灯光枪",
+      "originalContent": "Il s'agit d'un fork de l'émulateur Sega Model 1/2/3 nommé SuperModel mais qui prend en charge l'utilisation du LightGun appelé Sinden.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "1b90c879a80f86c46e092032af65d8f1f9dc1dcac13180471bb1fb6bd9fd75b7",
+      "translationPending": false
+    },
+    {
+      "id": "145138",
+      "title": "【街机】SuperModel v0.4 Build 261126",
+      "originalTitle": "[Arcade] SuperModel v0.4 Build 261126",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T11:15:26Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145138-arcade-supermodel-v0-4-build-261126/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/SUPERMODEL-Arcade-Emulateur.png",
+      "officialUrl": "https://github.com/trzy/Supermodel",
+      "summary": "Supermodel 最初由Bart Trzynadlowski、City Linde和Stefano Teso开发 , 以非常忠实地恢复名人游戏 世嘉模式3(Scud Race, Daytona USA 2, Le Mans 24等). 作为该项目的志愿人员,其贡献者大大扩展了能力,以整合前几代拱廊的全力支持,包括: 世嘉模式1和世嘉模式2系统(其所有变体为2A,2B和2C). 由于它的数值技术优化,包括使用GPU加速的现代图形渲染…",
+      "content": "Supermodel 最初由Bart Trzynadlowski、City Linde和Stefano Teso开发 , 以非常忠实地恢复名人游戏 世嘉模式3(Scud Race, Daytona USA 2, Le Mans 24等).\n\n作为该项目的志愿人员,其贡献者大大扩展了能力,以整合前几代拱廊的全力支持,包括: 世嘉模式1和世嘉模式2系统(其所有变体为2A,2B和2C).\n\n由于它的数值技术优化,包括使用GPU加速的现代图形渲染,处理器和音效芯片的实际复制 以及广泛支持专用于街机终端的控制装置, Supermodel 提供一种特别真实和流畅的仿真经验,在最佳条件下可以找到世嘉拱廊的伟大经典。\n\n• 以前参考文献(此处/",
+      "originalContent": "Supermodel s'impose comme l'émulateur de référence, initialement développé par Bart Trzynadlowski, Ville Linde et Stefano Teso pour restituer avec une grande fidélité les jeux de la célèbre architecture Sega Model 3 (Scud Race, Daytona USA 2, Le Mans 24, etc.).\n\nAu fil des évolutions du projet, ses contributeurs ont considérablement étendu ses capacités pour intégrer la prise en charge complète des générations d'arcades précédentes, englobant désormais les systèmes Sega Model 1 et Sega Model 2 (avec toutes leurs variantes 2A, 2B et 2C).\n\nGrâce à ses nombreuses optimisations techniques, notamment un rendu graphique moderne exploitant l'accélération GPU, une reproduction fidèle des processeurs et des puces sonores d'origine, ainsi qu'une prise en charge étendue des périphériques de contrôle spécifiques aux bornes d'arcade (volants, boîtes de vitesses, manches de vol et pistolets optiques), Supermodel offre une expérience d'émulation particulièrement fidèle et fluide, permettant de retrouver les grands classiques de l'arcade Sega dans des conditions optimales.\n\n- Anciennes références [ici/",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "a44bbf371360b645f72acd053c47980a5d6fbb86ace96be737ec51fcd40f7754",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-bachata_s4-jit-v1-2-0-3",
+      "title": "【Android更新】Bachata S4 jit-v1.2.0-3",
+      "originalTitle": "Bachata S4 jit-v1.2.0-3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-26T09:29:34Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/jit-v1.2.0-3",
+      "imageUrl": "asset://assets/emulators/bachata_s4.png",
+      "officialUrl": "https://github.com/JICA98/Bachata-S4",
+      "summary": "Bachata S4 发布 Android 新版本 jit-v1.2.0-3，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
+      "content": "Bachata S4 已发布 Android 最新版本 jit-v1.2.0-3。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n巴恰塔S4号 1.2.0\n\n应用存储 : 1.2.0 (124) 捆绑 games.bachatas4只有翻译。\nGitHub (侧载): BachataS4 JIT 1.2.0 (3),捆绑 games.bachatas4.jit.\n资料来源:排放金属。 4778beed8 (=金属释放装置)。\n\nNew\n• 原生金属渲染器,警告并默认关闭。 在设置 > 运行时间 > 中打开\n\"天然金属制造器(实验)\". 它从下一个游戏发布时开始适用。 MoltenVK 留下来\n默认渲染器。 金属只在血液中试验过 有些游戏可能错误地或没有从Metal开始;如果有,就关掉。\n\n业绩\n^ MoltenVK队列提交是iOS上的同步:模拟器不再在每次提交上等待。\n· 金属遮蔽器编译使用QoS运行的工人,因此他们与游戏线条的竞争较少。\n\n固定器(金属渲染器)\n• 将待决的GPU写作目标拖住的页面写作保护;GPU在包裹的嘉宾页面被卸载之前等待(战争之神三号靴故障)。\n• 影印机HLE将元素从目的地缓冲器上扔下。\n• 当图纸绑定时,只读的宾客小数据会被复制。\n• 缓冲写跳过它覆盖的图像的回写。\n• 等待等待等待等待结束提交排队的GPU工作。\n• 大型瓦片使目标只按要求返回客人记忆。\n\nJIT 构建( 只有 GitHub)\n安装侧载工具(SideStore, AltStore 或类似),由它重新签名。 JIT需要一个\n附加为调试器的 JIT 启用器( StikDebug 样式); 没有它运行在解释器上。\n文件 : BachataS4-JIT-1.2.0-3.ipa,权利(重新签字者), .ipa.sha256.\n\n安装\n\n用 SideStore 安装,然后用 StikDebug 打开 JIT。 在 StikDebug 中,指定 universal.js 脚本给巴恰塔S4 JIT一次。\n建议设立付费开发商账户。 免费账户可能无法获得大型游戏所需的额外内存。\n步步指南: INSTALL.md（https://github.com/JICA98/Bachata-S4/releases/download/jit-v1.2.0-3/INSTALL.md）",
+      "originalContent": "# BachataS4 1.2.0\r\n\r\nApp Store: 1.2.0 (124), bundle games.bachatas4, interpreter only.\r\nGitHub (sideload): BachataS4 JIT 1.2.0 (3), bundle games.bachatas4.jit.\r\nSource: release-metal 4778beed8 (= metal-release-fixes).\r\n\r\n## New\r\n- Native Metal renderer, EXPERIMENTAL and off by default. Turn it on in Settings > Runtime >\r\n  \"Native Metal renderer (Experimental)\". It applies from the next game launch. MoltenVK stays\r\n  the default renderer. Metal has been tested on Bloodborne only. Some games may render wrongly or not start with Metal; switch it off if so.\r\n\r\n## Performance\r\n- MoltenVK queue submits are asynchronous on iOS: the emulator no longer waits on each submit.\r\n- Metal shader compile workers run at utility QoS, so they compete less with the game threads.\r\n\r\n## Fixes (Metal renderer)\r\n- Write protection of pages a pending GPU write targets is held back; the GPU is waited for before wrapped guest pages are unmapped (God of War III boot fault).\r\n- The copy-shader HLE drops elements past the destination buffer.\r\n- Small read-only guest data is copied when a draw binds it.\r\n- A buffer write skips the write-back of images it covers.\r\n- A wait that a pending fence ends submits the queued GPU work.\r\n- Large tiled render targets go back to guest memory only on demand.\r\n\r\n## JIT build (GitHub only)\r\nInstall with a sideloading tool (SideStore, AltStore or similar), which re-signs it. JIT needs a\r\nJIT enabler that attaches as a debugger (StikDebug style); without one it runs on the interpreter.\r\nFiles: BachataS4-JIT-1.2.0-3.ipa, .entitlements (for re-signers), .ipa.sha256.\r\n\r\n## Install\r\n\r\nInstall with SideStore, then turn on JIT with StikDebug. In StikDebug, assign the universal.js script to BachataS4 JIT once.\r\nA paid developer account is recommended. A free account may not get the extra memory that large games need.\r\nStep-by-step guide: [INSTALL.md](https://github.com/JICA98/Bachata-S4/releases/download/jit-v1.2.0-3/INSTALL.md)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "bachata_s4"
+      ],
+      "contentHash": "8b9efa58ed043ab17d02cba14dfe56f2cbdfb83d685e085de44212fdf086ba4c",
       "translationPending": false
     },
     {
       "id": "145134",
-      "title": "【家用机】nullDC (Rust) v2.0 pre 416",
-      "originalTitle": "[Consoles de salon] nullDC (Rust) v2.0 pre 416",
+      "title": "【家用机】nullDC (Rust) v2.0 pre 418",
+      "originalTitle": "[Consoles de salon] nullDC (Rust) v2.0 pre 418",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "tool",
       "publishedAt": "2026-11-26T07:19:04Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/145134-consoles-de-salon-nulldc-rust-v2-0-pre-416/",
+      "sourceUrl": "https://www.emu-france.com/news/145134-consoles-de-salon-nulldc-rust-v2-0-pre-418/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2025/10/nullDC_rust.png",
       "officialUrl": "https://nulldc.emudev.org/",
-      "summary": "这是 nullDC 的最新版本，由 drkIIRaziel（又名 skmp）使用 Rust 语言重写。 版本页面。 开发工具。 关于 nulldc/reicast/flycast 争议的信息。 [wpfilebase tag=file id=8229 tpl=simple3 /]",
-      "content": "这是 nullDC 的最新版本，由 drkIIRaziel（又名 skmp）使用 Rust 语言重写。\n\n版本页面。\n开发工具。\n关于 nulldc/reicast/flycast 争议的信息。\n\n[wpfilebase tag=file id=8229 tpl=simple3 /]",
+      "summary": "这是LindDC的最新版本,由drkIIRaziel(别名skmp)在Rust语言中改写。 建筑页。 发展工具。 剧情信息 无效/重播/flycast. [wpfilebase tag=file id=8229 tpl=simple3/] (中文(简体) ).",
+      "content": "这是LindDC的最新版本,由drkIIRaziel(别名skmp)在Rust语言中改写。\n\n建筑页。\n发展工具。\n剧情信息 无效/重播/flycast.\n\n[wpfilebase tag=file id=8229 tpl=simple3/] (中文(简体) ).",
       "originalContent": "Il s'agit de la version la plus récente de nullDC, réécrite en langage Rust par drkIIRaziel (alias skmp).\n\nPage des builds.\nOutils de développement.\nInfo sur le drama nulldc/reicast/flycast.\n\n[wpfilebase tag=file id=8229 tpl=simple3 /]",
       "platforms": [],
       "relatedEmulatorIds": [],
-      "contentHash": "082153e8ffe20b25c710c8b12819650db228de6f51121e957a2999362eb157f6",
+      "contentHash": "7aa54f3536d3aed9814c4073e20a4e088c22a67154a1d7e4ee8882ca4eb1934e",
       "translationPending": false
     },
     {
@@ -95,54 +351,6 @@
         "virtual_jaguar_core"
       ],
       "contentHash": "55d20c3d043fa35b5b00999983be3cd3b53414f913ac7235291ae27a75cdd8c1",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-duckstation-latest",
-      "title": "【Android更新】DuckStation latest",
-      "originalTitle": "DuckStation latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-26T01:40:51Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/duckstation.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "DuckStation 发布 Android 新版本 latest，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 35a791fe8 dep/rcheevos：升级至 a1ba160\n• 4077754a6 全屏UI：将待处理的过渡回调链接起来，而不是内联运行\n• fb6d3627e GameDB：强制为《汤姆耙子/汤姆耙子！/Ore! Tomba》重新编译 ICache\n• 0d7d4b7d9 脚本：添加 TIM 纹理替换名称生成器\n• ea48b1cff GPUTextureCache：哈希值减少的调色板范围来自 pal_min\n• 6d7977782 GPUTextureCache：跟踪未对齐的 8 位调色板的第五页\n• f4e98e72d GPUTextureCache：修复 VRAM 写操作拆分\n• 88c60c567 GPUTextureCache：在config.yaml中将MaxVRAMWriteSplits解析为整数\n• dbefb5471 GPUTextureCache：不要合并已经绘制过的 VRAM 写操作\n• 2c8e8c1c4 GPUTextureCache：修复 RectDistance() 以选择最近的绘制矩形\n• af7dda34a GPUTextureCache：不要重试加载未能成功加载的替换图像\n• e647d0845 GPUTextureCache：解析 C16 替换名称时初始化调色板字段\n• 0beda20e8 GPUTextureCache：对于跨页面的写入，仅应用一次替换\n• e0999bbb6 GPUTextureCache：修复 TextureReplacementIndex 比较\n• d468343c1 GPUTextureCache：修复缺少别名文件错误中的参数顺序\n• c9d1f5ca3 GPUTextureCache：在本地 VRAM 复制之前转储原始像素\n• eadb46105 SPU：四分之一/八分之一周期时隙上的时钟噪声\n• 64629f2d1 SPU：在指数递减扫描中应用相位位\n• 90cce7fef SPU：在 DMA 写操作期间不要将 STATX 设置为忙碌\n• 970044fac SPU：在标头获取的键上应用第一个区块的循环开始\n• 39f081e1a SPU：将 RAM 传输与样本生成交织\n• e83373430 SPU：以32个周期/半字的速率将DMA FIFO写入RAM\n• a88c6b20e CDROM：播放CD-DA时不要应用读取加速\n• aed260488 GPU：将折线缓冲区限制为 1MB\n• a48eb6ca8 系统：根据活动配置计算存档状态大小\n• 734dc4d78 系统：添加“加载时快进”选项\n• 6615fcc44 系统：补丁目录发生变化时重新加载补丁\n• 1798a8be0 VideoPresenter：包含用户边框叠加预设\n• 3ab1c7a67 Qt：添加全局文件夹设置\n• fb278f1c0 Qt：将文件夹打开/重置操作移至溢出菜单\n• 43be44d27 Qt：将物理驱动器和预读选项移至“高级”\n• 524858ede Qt：将 RAM/VRAM 大小拆分为单独的行\n• e270cf538 Qt：在游戏列表设置中支持拖放操作\n• 065890c6f Qt：改进游戏列表设置布局和帮助\n• 71adff4bb Qt：为设置窗口页脚按钮添加图标\n• 24036a307 Qt：修复重编译器 icache 选项未禁用的问题\n• 102fbc673 CPU/重编译器：添加 LoadArgRegWithConstant()\n• 228ca362d CPU/重编译器：快进VWaitIdleLoop\n• 8b2532e05 Qt：将非官方成就重命名为未推广成就\n• edfec5e7e自述文件：更新功能列表\n• 6f6ddd772 设置：在安全模式下禁用空闲循环快进\n• 0207c6d17 D3D12Device：将所有管线和动态状态延迟到绘制/分发时间\n• 3d8f00a39 VulkanDevice：将图形状态延迟到第一次图形管线绑定时\n• e64403520 VulkanDevice：将所有管线和动态状态延迟到绘制/分发时\n• adf3d019e VulkanDevice：枚举调试实例的验证层扩展\n• 43e017f56 VulkanDevice：修复默认布局的掩码不正确的问题\n• 8a545fbe9 dep/rcheevos：移除未使用的文件\n• c5a755cfc 成就：更多非官方 -> 未推广的更改\n• 334fdbfe2 GameList：添加缺失的向量包含\n• b7254cbb9 GPUDevice：修复纹理格式表中的拼写错误\n• cd3b0c3f7 Android：更新翻译字符串\n• e39940aca 数据：移除现已不再使用的封面占位符\n• ccaf22207 脚本：从 AppImage 中移除 AppStream 元信息\n• d713f2f05 Qt：在绑定悬停/聚焦时突出显示控制器图像部分\n• ce8721b29 Qt：为JogCon、DDGo和Popn控制器添加绑定布局\n• a294f5661 游戏列表：不要从封面请求中引用保存回调\n• 2af44e182 HTTPDownloader：在等待请求时不要持有锁\n• 3a49cb973 全屏UI：在栈上动态创建对话框\n• 6384ada28 全屏UI：用回调替换固定的弹出对话框\n• 108cc75ad Inp…",
-      "originalContent": "## Commits\r\n- 35a791fe8 dep/rcheevos: Bump to a1ba160\r\n- 4077754a6 FullscreenUI: Chain pending transition callbacks instead of running inline\r\n- fb6d3627e GameDB: Force recompiler ICache for Tomba!/Tombi!/Ore! Tomba\r\n- 0d7d4b7d9 Scripts: Add TIM texture replacement name generator\r\n- ea48b1cff GPUTextureCache: Hash reduced palette range from pal_min\r\n- 6d7977782 GPUTextureCache: Track fifth page of unaligned 8-bit palettes\r\n- f4e98e72d GPUTextureCache: Fix VRAM write splitting\r\n- 88c60c567 GPUTextureCache: Parse MaxVRAMWriteSplits as an integer in config.yaml\r\n- dbefb5471 GPUTextureCache: Don't merge VRAM writes that have already been drawn with\r\n- 2c8e8c1c4 GPUTextureCache: Fix RectDistance() for picking the closest draw rect\r\n- af7dda34a GPUTextureCache: Don't retry loading replacement images that failed to load\r\n- e647d0845 GPUTextureCache: Initialize palette fields when parsing C16 replacement names\r\n- 0beda20e8 GPUTextureCache: Only apply replacements once for writes spanning pages\r\n- e0999bbb6 GPUTextureCache: Fix TextureReplacementIndex comparison\r\n- d468343c1 GPUTextureCache: Fix argument order in missing alias file error\r\n- c9d1f5ca3 GPUTextureCache: Dump original pixels before local VRAM copies\r\n- eadb46105 SPU: Clock noise on quarter/eighth-period slots\r\n- 64629f2d1 SPU: Apply Phase bit in exponential decrease sweeps\r\n- 90cce7fef SPU: Don't set STATX busy during DMA writes\r\n- 970044fac SPU: Apply the first block's loop start on the key on header fetches\r\n- 39f081e1a SPU: Interleave RAM transfers with sample generation\r\n- e83373430 SPU: Write the DMA FIFO to RAM at 32 cycles/halfword\r\n- a88c6b20e CDROM: Don't apply read speedup while playing CD-DA\r\n- aed260488 GPU: Limit the polyline buffer to 1MB\r\n- a48eb6ca8 System: Calculate save state size from active configuration\r\n- 734dc4d78 System: Add Fast Forward While Loading option\r\n- 6615fcc44 System: Reload patches when the patches directory changes\r\n- 1798a8be0 VideoPresenter: Include user border overlay presets\r\n- 3ab1c7a67 Qt: Add global folder settings\r\n- fb278f1c0 Qt: Move folder open/reset actions into overflow menu\r\n- 43be44d27 Qt: Move physical drive and readahead options to Advanced\r\n- 524858ede Qt: Split RAM/VRAM size into separate rows\r\n- e270cf538 Qt: Support drag and drop in game list settings\r\n- 065890c6f Qt: Improve game list settings layout and help\r\n- 71adff4bb Qt: Add icons to settings window footer buttons\r\n- 24036a307 Qt: Fix recompiler icache option not disabling\r\n- 102fbc673 CPU/Recompiler: Add LoadArgRegWithConstant()\r\n- 228ca362d CPU/Recompiler: Fast forward VWaitIdleLoop\r\n- 8b2532e05 Qt: Rename unofficial achievements to unpromoted\r\n- edfec5e7e README: Update feature list\r\n- 6f6ddd772 Settings: Disable idle-loop fast forward in safe mode\r\n- 0207c6d17 D3D12Device: Defer all pipeline and dynamic state to draw/dispatch time\r\n- 3d8f00a39 VulkanDevice: Defer graphics state until first graphics pipeline bind\r\n- e64403520 VulkanDevice: Defer all pipeline and dynamic state to draw/dispatch time\r\n- adf3d019e VulkanDevice: Enumerate validation layer extensions for debug instances\r\n- 43e017f56 VulkanDevice: Fix incorrect mask for default layout\r\n- 8a545fbe9 dep/rcheevos: Remove unused file\r\n- c5a755cfc Achievements: More unofficial -> unpromoted changes\r\n- 334fdbfe2 GameList: Add missing vector include\r\n- b7254cbb9 GPUDevice: Fix typo in texture format table\r\n- cd3b0c3f7 Android: Update translation strings\r\n- e39940aca Data: Remove now-unused cover placeholder\r\n- ccaf22207 Scripts: Remove AppStream metainfo from AppImage\r\n- d713f2f05 Qt: Highlight controller image part on binding hover/focus\r\n- ce8721b29 Qt: Add binding layouts for JogCon, DDGo and Popn controllers\r\n- a294f5661 GameList: Don't reference save callback from cover requests\r\n- 2af44e182 HTTPDownloader: Don't hold lock while waiting for requests\r\n- 3a49cb973 FullscreenUI: Create dialogs dynamically on a stack\r\n- 6384ada28 FullscreenUI: Replace fixed popup dialogs with callbacks\r\n- 108cc75ad Inp…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "b61d6420d9291a5f059ac0dc70258554ffd2c14bfbb4345d42a71b826c704e08",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx2-2-9-7",
-      "title": "【Android更新】ARMSX2 2.9.7",
-      "originalTitle": "ARMSX2 2.9.7 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-26T00:18:24Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/2.9.7",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 2.9.7，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 2.9.7。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX2 2.9.7\n\n\n\n新功能：\n\n2.9.6.的快速跟进：在每部手机更新后首次启动时游戏即可开始，《瑞奇与叮当2》、《瑞奇与叮当3》和《瑞奇与叮当：死斗》能够正确绘制角色，骁龙8 Elite等Adreno 8xx GPU可使用ARMSX2自研的Turnip驱动程序及其更快的绘制路径。\n\n已修复\n在某些手机上，更新后的首次启动可能会导致所有游戏停止运行，并显示“无法编译实用程序管线”，直到手机重启后才会恢复正常。渲染器的着色器和游戏数据库现在已内置于应用中，不再在每次更新时复制到您的数据文件夹中，因此每款游戏都能立即启动。由@bmdhacks完成。\n《瑞奇与叮当2》、《瑞奇与叮当3》和《瑞奇与叮当：死机》。角色、敌人和一些道具可能会破碎成碎片。现在它们可以正确绘制：VU0与EE完全同步，因此它始终读取游戏刚刚给出的输入。由@bmdhacks完成。\n\n\n\n新\nARMSX2 的 Turnip，适用于 Adreno 810、829、830 和 840。更新后的驱动程序选项和 GPU 驱动程序设置现在建议在这些 GPU 上使用 ARMSX2 自家的 Turnip。其他Adreno 8xx GPU仍保持当前的推荐。由@bmdhacks完成。\n\n\n\n\n\n更快\nARMSX2 的 Turnip 上的 Adreno 8xx。在搭载 Turnip 的 Adreno 8xx GPU 上，读取所绘制内容的特效与 Adreno 740 上一样走快速路径，而不是先复制图像。\n. 在 Adreno 830（骁龙 8 Elite）上以 2 倍速进行 GS 转储重放时，《特技演员》从 860 次渲染通道和每帧 432 次拷贝降至 18 次和 7 次，其 GS 线程在每帧上花费的时间减少了约 29%。由 @bmdhacks 完成。\n\n\n\nLinux\n\n《瑞奇与叮当》的修复也包含在 Linux 版本中。\n\n致谢\n@bmdhacks（Brian Degenhardt）：此版本中的每个更改。\n\n@jpolo1224：发布版本。\n\n感谢所有测试过夜间版本并提供反馈的人！",
-      "originalContent": "# ARMSX2 2.9.7\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ca5b0232-a87c-4cdc-9f08-1c9440848075\" />\r\n\r\nWhat's new:\r\n\r\nA quick follow-up to 2.9.6. Games start on the first launch after an update on every phone, Ratchet & Clank 2, 3 and Deadlocked draw their characters correctly, and Adreno 8xx GPUs such as the Snapdragon 8 Elite's get ARMSX2's own Turnip driver and its faster draw path.\r\n\r\n## Fixed\r\n\r\n**On some phones**, the first launch after an update could stop every game with \"Failed to compile utility pipelines\" until the phone was restarted. The renderer's shaders and the game database are now built into the app instead of being copied into your data folder at each update, so every game starts right away. done by @bmdhacks\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/80036103-6e17-4a0b-aae3-151cab56faa8\" />\r\n\r\n**Ratchet & Clank 2, 3 and Deadlocked.** Characters, enemies and some props could break apart into shards. They draw correctly now: VU0 stays exactly in step with the EE, so it always reads the input the game just gave it. done by @bmdhacks\r\n\r\n<img width=\"2412\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e3b10e87-c9a1-4ee2-b1d9-132b9dd0b998\" />\r\n\r\n## New\r\n\r\n**ARMSX2's Turnip on the Adreno 810, 829, 830 and 840.** The driver offer after an update and the GPU Driver setting now recommend ARMSX2's own Turnip on these GPUs. Other Adreno 8xx GPUs keep their current recommendation. done by @bmdhacks\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/afa3974d-d9b5-4fd1-a22a-060308739335\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/080c102f-762d-4334-a1ea-4d4a2098aa56\" />\r\n\r\n## Faster\r\n\r\n**Adreno 8xx on ARMSX2's Turnip.** On an Adreno 8xx GPU with Turnip, effects that read back what they are drawing take the same fast path as on the Adreno 740 instead of copying the picture first. In GS dump replays at 2x on an Adreno 830 (Snapdragon 8 Elite), Stuntman goes from 860 render passes and 432 copies a frame to 18 and 7, and its GS thread spends about 29% less time on each frame. done by @bmdhacks\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/221eaef2-25a2-4df5-b2a9-5f044c93f5e3\" />\r\n\r\n## Linux\r\n\r\nThe Ratchet & Clank fix is in the Linux build as well.\r\n\r\n## Credits\r\n\r\n@bmdhacks (Brian Degenhardt): every change in this release.\r\n\r\n@jpolo1224: the release builds.\r\n\r\nThanks to everyone who tested the nightly and reported back!\r\n\r\n<img width=\"2340\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f6bf23ca-acbd-474c-8015-1c48a51d7c0b\" />\r\n\r\n<img width=\"2533\" height=\"1871\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f5861d7b-b7cd-4e3b-8cc2-a8707ce6b19d\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/56df6afa-4000-4b60-a8ae-a990099b44cd\" />",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "70404d19652e4c2ab822a9aaaa23bce00eaeedda15b2aaec812664578f9fadb0",
       "translationPending": false
     },
     {
@@ -237,18 +445,18 @@
     },
     {
       "id": "145108",
-      "title": "【家用机】Eglantine v0.1.0 RC4 build 261124",
-      "originalTitle": "[Consoles de salon] Eglantine v0.1.0 RC4 build 261124",
+      "title": "【家用机】Eglantine v0.1.0 RC4 build 261126",
+      "originalTitle": "[Consoles de salon] Eglantine v0.1.0 RC4 build 261126",
       "category": "home_console",
       "categoryLabel": "家用机",
       "kind": "emulator",
       "publishedAt": "2026-11-25T12:57:17Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/145108-consoles-de-salon-eglantine-v0-1-0-rc4-build-261124/",
+      "sourceUrl": "https://www.emu-france.com/news/145108-consoles-de-salon-eglantine-v0-1-0-rc4-build-261126/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/eglantine-nx2.png",
       "officialUrl": "https://github.com/Djihads80/Eglantine",
-      "summary": "Eglantine 是一款开源的 Nintendo Switch 1 和 2 模拟器，源自 Eden、Yuzu 和 Sudachi 项目。该模拟器使用 C++ 开发，旨在实现与 Windows、Linux、macOS、Android 和 FreeBSD 的跨平台兼容性。 该项目旨在重现游戏机的运行方式，并逐步提高与游戏和硬件功能的兼容性。该项目的开发尤其需要对硬件进行探索和逆向工程。",
-      "content": "Eglantine 是一款开源的 Nintendo Switch 1 和 2 模拟器，源自 Eden、Yuzu 和 Sudachi 项目。该模拟器使用 C++ 开发，旨在实现与 Windows、Linux、macOS、Android 和 FreeBSD 的跨平台兼容性。\n该项目旨在重现游戏机的运行方式，并逐步提高与游戏和硬件功能的兼容性。该项目的开发尤其需要对硬件进行探索和逆向工程。\n开发人员接受捐款，用于购买 Nintendo Switch 游戏机、用于测试和逆向工程的游戏，以及托管服务、技术基础设施、额外硬件（包括 GPU）和持续集成 (CI) 服务器。",
+      "summary": "Eglantine 是任天堂Switch 1和2的开源模拟器,由项目驱动 Eden于祖与须陀achi. 在C++中开发,它寻找多平台兼容Windows,Linux,macOS,Android和FreeBSD. 该项目似乎复制了控制台的操作,并逐渐改善了与游戏和硬件特性的兼容性。 其开发要求,除其他外,还包括设备的勘探和再造。",
+      "content": "Eglantine 是任天堂Switch 1和2的开源模拟器,由项目驱动 Eden于祖与须陀achi. 在C++中开发,它寻找多平台兼容Windows,Linux,macOS,Android和FreeBSD.\n\n该项目似乎复制了控制台的操作,并逐渐改善了与游戏和硬件特性的兼容性。 其开发要求,除其他外,还包括设备的勘探和再造。\n\n开发者接受财务捐赠,旨在资助任天堂Switch控制台的购置,用于测试和再造的游戏,以及房屋 t,技术基础设施,额外的硬件(包括GPU)和连续集成服务器(CI).",
       "originalContent": "Eglantine est un émulateur open source de Nintendo Switch 1 et 2, dérivé des projets Eden, Yuzu et Sudachi. Développé en C++, il vise une compatibilité multiplateforme avec Windows, Linux, macOS, Android et FreeBSD.\n\nLe projet cherche à reproduire le fonctionnement de la console et à améliorer progressivement la compatibilité avec les jeux et les fonctionnalités matérielles. Son développement nécessite notamment des travaux d'exploration et de rétro-ingénierie du matériel.\n\nLes développeurs acceptent les dons financiers, destinés à financer l'acquisition de consoles Nintendo Switch, de jeux pour les tests et la rétro-ingénierie, ainsi que l'hébergement, l'infrastructure technique, le matériel supplémentaire (notamment des GPU) et les serveurs d'intégration continue (CI).",
       "platforms": [
         "android",
@@ -258,7 +466,7 @@
         "eglantine_pc",
         "eglantine_zortos_pc"
       ],
-      "contentHash": "cd7143f53f05985297766cad613a2e6a996efabafe42790ff6f2cc55a29b4fd3",
+      "contentHash": "765216c17eaf8d224a51830bc6d0bb164ecce84cdc453bcabec3a3f830dd2d21",
       "translationPending": false
     },
     {
@@ -922,30 +1130,6 @@
         "lemon_android"
       ],
       "contentHash": "053ea0bee165d1dace88145141fed3d117f52d6e1f8991be399b1e1ba4341c96",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-j2me_loader-continuous",
-      "title": "【Android更新】J2ME Loader continuous",
-      "originalTitle": "J2ME Loader continuous Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-23T20:32:01Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
-      "imageUrl": "asset://assets/emulators/j2me_loader.png",
-      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
-      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月23日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月23日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n师傅最新承诺的自动化建设。",
-      "originalContent": "Automated builds from the latest commits on master.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "j2me_loader"
-      ],
-      "contentHash": "51900eb4458050e4178fb20c7c914dd429b2c2f5a7020b24764a1498dea6823f",
       "translationPending": false
     },
     {
@@ -1778,30 +1962,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "782646b47ee7d60637cf7d158f6ff8c78e7249a1c837973c7bcb7239c9a29dc2",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-bachata_s4-0-2-6",
-      "title": "【Android更新】Bachata S4 0.2.6",
-      "originalTitle": "Bachata S4 0.2.6 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-21T04:49:41Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.2.6",
-      "imageUrl": "asset://assets/emulators/bachata_s4.png",
-      "officialUrl": "https://github.com/JICA98/Bachata-S4",
-      "summary": "Bachata S4 发布 Android 新版本 0.2.6，发布日期为2026年11月21日。点击查看官方版本信息与更新说明。",
-      "content": "Bachata S4 已发布 Android 最新版本 0.2.6。\n\n发布日期：2026年11月21日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n要点\n\n• 马里GPU和特鲁尼普主用PanVK V4舰 27.0-devel Glibc和Bionic的Adreno GPU的船舶。\n• 现在有10场比赛没有上场 0.2.5包括\"战神\",\"鹤岛之鬼\",\"格兰图里斯莫7\",\"埃尔登环\"和\"塞基罗\".\n• InFAMOUS First Light运行速度快近2x,崩溃在未查,\"礼记\":1886年,\"吾人遗事\"重订。\n• 12个游戏的回转测试补丁预设,现在也在GitHub和F-Droid架构中,重新设计了面部按钮。\n\n\n战神 佐岛沙铎 宇宙之神\nGran Turismo 7Elden RingRatchet & amp; 互联网档案馆的存檔,存档日期2014-09-02. 颜色\n救世主Sekiro Callisto协议\n最后的守护者FAMOUS 第一亮 我们的末日重现\n\n\n游戏兼容性补丁( P)\n\n• 现在在局(fps中位数/分数,Snapdragon 8 Gen 3):战争之神 11.2 / 8.5Tsu岛的鬼魂 12 / 3 宇宙之影 9.2 / 4.6, Gran Turismo 7 4 / 0, 埃尔登环形山 (01.21) 6 / 0, Ratchet & Clank 37 / 9, 红色死亡救赎 19 / 14, Sekiro 29.5 / 16.5 (30上限),卡利斯托协议 15.7 / 0.3,最后的守护者 15.4 / 12.8\n• FAMOUS First Light运行时间为41/39英尺/秒,而不是22/13,LDS分组屏障被取消,以便消除面部和身上的腐败\n• 《最后的我们》从11/5提高到13/6英尺\n• 未知号,命令:1886年和\"我们最后的结局\" 重制不再在FindBuffer坠毁:故障缓冲处理器跳过客机页0,未知号1船级现在播放\n• Ratchet & Clank不再在内幕电影中崩溃:Android上只跳过macOS补丁\n• Tsushima的幽灵使世界变得如此,在Turnip上添加了64位的LDS,一个FreeMem崩溃修正和一个标题内存预设\n• 战争之神不再在计算图像时显示来自NaN的黑色方块,并获得无故障的特尼普默认值\n• Gran Turismo 7 靴子和在地址空间、FEX绘图和不良格式绘图后进行比赛,但保持非常缓慢\n\n新建补丁\n\n· 未知的2和3:现在的补丁适用于发射装置以LoadExec开头的可执行器,以及一个补丁。",
-      "originalContent": "## Highlights\n\n- PanVK V4 ships for Mali GPUs, and Turnip main 27.0-devel ships for Adreno GPUs in glibc and Bionic builds.\n- 10 games are now in-game that were not on 0.2.5, including God of War, Ghost of Tsushima, Gran Turismo 7, Elden Ring and Sekiro.\n- inFAMOUS First Light runs nearly 2x faster, and crashes are fixed in Uncharted, The Order: 1886 and The Last of Us Remastered.\n- Regression-tested patch presets for 12 games, now also in the GitHub and F-Droid builds, and redesigned face buttons.\n\n<table>\n<tr><td align=\"center\"><b>God of War</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-god-of-war.jpg\" width=\"300\"></td><td align=\"center\"><b>Ghost of Tsushima</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-ghost-of-tsushima.jpg\" width=\"300\"></td><td align=\"center\"><b>Shadow of the Colossus</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-shadow-of-the-colossus.jpg\" width=\"300\"></td></tr>\n<tr><td align=\"center\"><b>Gran Turismo 7</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-gran-turismo-7.jpg\" width=\"300\"></td><td align=\"center\"><b>Elden Ring</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-elden-ring.jpg\" width=\"300\"></td><td align=\"center\"><b>Ratchet &amp; Clank</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-ratchet-clank.jpg\" width=\"300\"></td></tr>\n<tr><td align=\"center\"><b>Red Dead Redemption</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-red-dead-redemption.jpg\" width=\"300\"></td><td align=\"center\"><b>Sekiro</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-sekiro.jpg\" width=\"300\"></td><td align=\"center\"><b>The Callisto Protocol</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-the-callisto-protocol.jpg\" width=\"300\"></td></tr>\n<tr><td align=\"center\"><b>The Last Guardian</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-the-last-guardian.jpg\" width=\"300\"></td><td align=\"center\"><b>inFAMOUS First Light</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-infamous-first-light.jpg\" width=\"300\"></td><td align=\"center\"><b>The Last of Us Remastered</b><br><img src=\"https://raw.githubusercontent.com/JICA98/Bachata-S4/release-assets/0.2.6/shot-the-last-of-us-remastered.jpg\" width=\"300\"></td></tr>\n</table>\n\n## Game Compatibility & Patches\n\n- Now in-game (fps median / min, Snapdragon 8 Gen 3): God of War 11.2 / 8.5, Ghost of Tsushima 12 / 3, Shadow of the Colossus 9.2 / 4.6, Gran Turismo 7 4 / 0, Elden Ring (01.21) 6 / 0, Ratchet & Clank 37 / 9, Red Dead Redemption 19 / 14, Sekiro 29.5 / 16.5 (30 cap), The Callisto Protocol 15.7 / 0.3, The Last Guardian 15.4 / 12.8\n- inFAMOUS First Light runs at 41 / 39 fps instead of 22 / 13, and LDS subgroup barriers are off for this title to remove block corruption on faces and bodies\n- The Last of Us Remastered improves from 11 / 5 to 13 / 6 fps\n- Uncharted, The Order: 1886 and The Last of Us Remastered no longer crash in FindBuffer: the fault buffer handler skips guest page 0, and the Uncharted 1 boat level now plays\n- Ratchet & Clank no longer crashes in the intro movie: macOS-only patches are skipped on Android\n- Ghost of Tsushima renders the world, with 64-bit LDS add emulated on Turnip, a ReleaseMem crash fix and a title memory preset\n- God of War no longer shows black squares from NaN in compute image writes, and gets a glitch-free Turnip default\n- Gran Turismo 7 boots and races after address space, FEX mapping and bad-format draw guard fixes, but stays very slow\n\n## New Patches\n\n- Uncharted 2 and 3: patches now apply to the executable the launcher starts with LoadExec, and a patch for one…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "bachata_s4"
-      ],
-      "contentHash": "746ceb61280336388e3bb7123c6a1adb430a917c358d5c8ab35065bd596f917c",
       "translationPending": false
     },
     {
@@ -19628,243 +19788,6 @@
         "pcsx2_pc"
       ],
       "contentHash": "904e230a081a51434b756e3e4a6a5521f3b55b3b4502d594128c5bd3fbc67653",
-      "translationPending": false
-    },
-    {
-      "id": "136332",
-      "title": "【移动设备】Rejoignez-nous sur Discord ! / Join Us on Discord !",
-      "originalTitle": "[Auto Pub] Rejoignez-nous sur Discord ! / Join Us on Discord !",
-      "category": "mobile",
-      "categoryLabel": "移动设备",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T19:25:20Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136332-auto-pub-rejoignez-nous-sur-discord-join-us-on-discord/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/discord-ad2.png",
-      "officialUrl": "",
-      "summary": "想讨论模拟，关注新闻直播，还是只是在爱好者之间度过美好时光？ 我们的社区在官方Emu-France Discord上等着您。 快来讨论，提出您的问题，分享您的发现，并享受一个专门用于模仿和复古游戏的友好空间。 立即加入我们！ 想聊聊模拟，实时关注最新动态，或者只是和其他爱好者一起玩？ 我们的社区在官方Emu-France Discord服务器上等着您。 快来分享您的发现，提出问题，并享受一个专门用于模拟和复古游戏的温馨空间。",
-      "content": "想讨论模拟，关注新闻直播，还是只是在爱好者之间度过美好时光？\n\n我们的社区在官方Emu-France Discord上等着您。\n\n快来讨论，提出您的问题，分享您的发现，并享受一个专门用于模仿和复古游戏的友好空间。\n\n立即加入我们！\n想聊聊模拟，实时关注最新动态，或者只是和其他爱好者一起玩？\n我们的社区在官方Emu-France Discord服务器上等着您。\n\n快来分享您的发现，提出问题，并享受一个专门用于模拟和复古游戏的温馨空间。\n\n立即加入我们！ ！",
-      "originalContent": "Envie de discuter émulation, de suivre l’actu en direct ou simplement de passer un bon moment entre passionnés ?\n\nNotre communauté vous attend sur le Discord officiel d’Emu-France.\n\nVenez échanger, poser vos questions, partager vos trouvailles et profiter d’un espace convivial dédié à l’émulation et au rétro‑gaming.\n\nRejoignez-nous dès maintenant !\n\nWant to chat about emulation, follow the latest updates in real time, or just hang out with fellow enthusiasts?\nOur community is waiting for you on the official Emu‑France Discord server.\n\nCome share your discoveries, ask questions, and enjoy a welcoming space dedicated to emulation and retro gaming.\n\nJoin us now !!",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "8d7614404ee2b4a9b5f35cde9b8ad652caf1bb312085b63ada5b31f2fed1c6cf",
-      "translationPending": false
-    },
-    {
-      "id": "136328",
-      "title": "【电脑】emu6502 v0.9.8",
-      "originalTitle": "[Ordi.] emu6502 v0.9.8",
-      "category": "computer",
-      "categoryLabel": "电脑",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T19:10:15Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136328-ordi-emu6502-v0-9-8/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/11/emu6502.png",
-      "officialUrl": "https://github.com/univta0001/emu6502",
-      "summary": "这是Apple仿真器] [和Apple//e完全用Rust、SDL和HTML5编写。",
-      "content": "这是Apple仿真器] [和Apple//e完全用Rust、SDL和HTML5编写。",
-      "originalContent": "Il s'agit de l'émulateur Apple ][ et Apple //e entièrement écrit en Rust, SDL et HTML5.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "eac6f10b36f170347b090d76947b0fe77d0d1fc726fcf98b7ddb2463f0b4b61f",
-      "translationPending": false
-    },
-    {
-      "id": "136325",
-      "title": "【其他】NumWorks (Scientifique) v4.1.0",
-      "originalTitle": "[Calculatrices] NumWorks (Scientifique) v4.1.0",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T19:00:30Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136325-calculatrices-numworks-scientifique-v4-1-0/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/numworks-scientifique.png",
-      "officialUrl": "https://www.numworks.com/fr/emulateur/scientifique/",
-      "summary": "NumWorks是一家法国公司，于2026年在法国推出了一款面向大学生的科学计算器。NumWorks科学计算器旨在通过简单直观的界面为6年级至3年级的学生提供帮助。",
-      "content": "NumWorks是一家法国公司，于2026年在法国推出了一款面向大学生的科学计算器。NumWorks科学计算器旨在通过简单直观的界面为6年级至3年级的学生提供帮助。",
-      "originalContent": "NumWorks est une société française qui a lancé en France en 2026 une calculatrice scientifique visant un public collégien. La calculatrice scientifique NumWorks a été conçue pour accompagner les élèves de la 6e à la 3e avec une interface simple et intuitive.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "e5dc207a5601699a66661e9b6c4ec2a78270fa855e5bf2d4ddeda51233100557",
-      "translationPending": false
-    },
-    {
-      "id": "136321",
-      "title": "【其他】NumWorks (Graphique) v26.3.0",
-      "originalTitle": "[Calculatrices] NumWorks (Graphique) v26.3.0",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T18:49:25Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136321-calculatrices-numworks-graphique-v26-3-0/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/numworks-graphique.png",
-      "officialUrl": "https://www.numworks.com/fr/emulateur/graphique/",
-      "summary": "NumWorks是一家法国公司，于2017年夏天在法国推出了一款针对高中生观众的图形计算器。NumWorks计算器很快被许多法国高中生采用，并已成为传统图形计算器的替代品。",
-      "content": "NumWorks是一家法国公司，于2017年夏天在法国推出了一款针对高中生观众的图形计算器。NumWorks计算器很快被许多法国高中生采用，并已成为传统图形计算器的替代品。",
-      "originalContent": "NumWorks est une société française qui a lancé en France à l'été 2017 une calculatrice graphique visant un public lycéen. La calculatrice NumWorks a été rapidement adoptée par de nombreux lycéens français et s'est depuis imposée comme une alternative aux calculatrices graphiques traditionnelles.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "fec2f14d42e79b5ed7b0a3090c60f3af0fa9b2c94bf67f5fefa40bd0f9b6bbe3",
-      "translationPending": false
-    },
-    {
-      "id": "136319",
-      "title": "【其他】Emu28 v1.40",
-      "originalTitle": "[Calculatrices] Emu28 v1.40",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T18:38:56Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136319-calculatrices-emu28-v1-40/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2019/08/HP28C.jpg",
-      "officialUrl": "http://hp.giesselink.com/emu28.htm",
-      "summary": "HP18C和HP28C的仿真器。",
-      "content": "HP18C和HP28C的仿真器。",
-      "originalContent": "Un émulateur d'HP18C et de HP28C.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "fa8158aa50e28e3f7f51591cb3f7fdf26ed88ccebc556bb0c86b04c09704e817",
-      "translationPending": false
-    },
-    {
-      "id": "136317",
-      "title": "【家用机】miniCDi v0.1",
-      "originalTitle": "[Consoles de salon] miniCDi v0.1",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T16:01:57Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136317-consoles-de-salon-minicdi-v0-1/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/miniCDi.png",
-      "officialUrl": "https://github.com/CatmanFan/miniCDi",
-      "summary": "它是用C + +17开发的飞利浦CD-i的跨平台模拟器。 以下是一些功能： •全面支持Mono-I卡（ CD-i 200、CD-i 220/20 ） ，可启动商业和自制游戏。 •部分支持Mono-II和Mono-IV卡。 •前置荧光显示器(FTD)仿真。 •部分音频支持。 •对CD-i控制器的实验性支持。 •兼容Windows、macOS、Wii、Wii U和任天堂3DS。 •使用MUSASHI 4.10进行68070处理器仿真。",
-      "content": "它是用C + +17开发的飞利浦CD-i的跨平台模拟器。\n\n以下是一些功能：\n•全面支持Mono-I卡（ CD-i 200、CD-i 220/20 ） ，可启动商业和自制游戏。\n•部分支持Mono-II和Mono-IV卡。\n•前置荧光显示器(FTD)仿真。\n•部分音频支持。\n•对CD-i控制器的实验性支持。\n•兼容Windows、macOS、Wii、Wii U和任天堂3DS。\n•使用MUSASHI 4.10进行68070处理器仿真。",
-      "originalContent": "Il s'agit d'un émulateur multiplateforme de Philips CD-i, développé en C++17.\n\nVoici quelques caractéristiques:\n- Support complet des cartes Mono-I (CD-i 200, CD-i 220/20), permettant de lancer des jeux commerciaux et homebrews.\n- Support partiel des cartes Mono-II et Mono-IV.\n- Émulation de l'afficheur fluorescent frontal (FTD).\n- Support audio partiel.\n- Support expérimental du contrôleur CD-i.\n- Compatible Windows, macOS, Wii, Wii U et Nintendo 3DS.\n- Utilise Musashi 4.10 pour l'émulation du processeur 68070.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [],
-      "contentHash": "a8243913eb9af13ba059428d65da19bb35eb02170c55e668e002753c7c9ea507",
-      "translationPending": false
-    },
-    {
-      "id": "136314",
-      "title": "【家用机】CD-i Emulator v0.5.3 beta 10",
-      "originalTitle": "[Consoles de salon] CD-i Emulator v0.5.3 beta 10",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T15:56:56Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136314-consoles-de-salon-cd-i-emulator-v0-5-3-beta-10/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2018/08/CDI-emu.jpg",
-      "officialUrl": "http://www.cdiemu.org/",
-      "summary": "CD-i模拟器（ cdiemu ）提供了相当完整的CD-i播放器模拟器，它可能是同类产品中最好的模拟器，但它的使用时间仅限于3分钟（除非您已经在机器上激活了无限版本，或者您正在使用飞利浦Mono-I播放器设备） ，并且您不会 除非您为该计划付费以获得完整且不受限制的版本，否则请勿保存。 感谢Anna的镜头和潜意识信息;) 新增功能： •内置到期日已更新为2027/01/01。",
-      "content": "CD-i模拟器（ cdiemu ）提供了相当完整的CD-i播放器模拟器，它可能是同类产品中最好的模拟器，但它的使用时间仅限于3分钟（除非您已经在机器上激活了无限版本，或者您正在使用飞利浦Mono-I播放器设备） ，并且您不会\n除非您为该计划付费以获得完整且不受限制的版本，否则请勿保存。\n\n感谢Anna的镜头和潜意识信息;)\n\n新增功能：\n•内置到期日已更新为2027/01/01。\n\n• 44.1 kHz的立体声CD-DA音频错误地产生单声道输出；\n两个频道都在播放左频道音频。 此问题已得到解决。\n\n•请求的CD-DA音频光盘扇区扇区不正确\n光盘映像文件的格式；此问题已得到纠正。因此，\n现在可以从加扰的光盘映像中播放CD-DA音频。\n\n•通过替换之前的样本，改进了ADPCM音频上采样\n复制方法与多相后置过滤器，产生显著\n更流畅的音频输出。这在默认情况下是启用的，可以关闭\n使用-nopostfilteraudio选项。\n\n• CD-i CDIC硬件使用四个重复声音参数中的最后一个\n与音频扇区标头一起传输的字节；模拟器以前是\n使用第一个。这已被纠正，可能会影响音频解码\n一些头衔。\n\n•修复了DMA信道初始化问题： DMA信道1\n被视为通道0。\n\n• FMV中断状态寄存器中的VSYNC中断位现在\n正确模拟；这是正确的IMPEG和VMPEG FMV所必需的\n墨盒操作。音频流状态寄存器现在也\n正确实施。\n\n•已添加视频数据边界检查；以前，越界\ncD-i视频数据中的视频坐标可能会导致内存访问错误。\n\n•添加了新的-runshell选项，可立即启动OS-9 shell\n而无需通过正常的CD-i播放器启动序列。\n此选项仅适用于包含OS-9外壳模块的播放器ROM ；\n它适用于CD-i软件开发人员。\n\n•添加了新的调试器命令“unset”以清除模拟器变量\n先前使用“set”命令或命令行-set选项设置。\n•添加了新的调试器命令“ei”以显示OS-9 IRQ\n轮询表。\n\n•现在支持CD-i 200播放器的前面板LED显示屏。\n\n•扩展名为.scm的光盘映像文件现已包含在\n光盘映像文件选择对话框；某些人使用此扩展名\n用于加密光盘映像的光盘转储工具。\n•已添加对预标准JNMS光盘标签的支持；某些光盘使用\n早于已发布标准的光盘标签格式。\n\n•光盘目录和路径表读取中的缓冲区分配错误已被\n已修复；因此现在启用了调试窗口中的文件读取跟踪，\n它曾经导致内存损坏崩溃。\n•拆装机中PC相对地址和标签的显示具有\n已更正。\n\n•拆装器现在在地址上显示大小后缀：绝对字\n地址显示.W和绝对长地址显示.L;短分支\n说明（ BRA、BSR、Bcc ）现在显示.S后缀。\n• MA_CREATE和MA_PLAY OS-9陷阱的参数大小规格\n反汇编程序中显示的定义包含一个拼写错误；这已经被\n已更正。\n\n•在中添加或更正了几个OS-9陷阱定义。\n拆卸，包括额外的F $陷阱条目； SS_PS陷阱具有\n已重命名为SS_SL （ GetSlave/SetSlave ）以匹配正确的OS-9\n定义。\n\n•为分支和跳跃指令构建时钟循环表（ BRA、BSR、JMP、\nJSR ）已更正；助记符比较默默失败\n由于table语句中的重命名未反映在\n盘点周期代码。\n•调试器“d” （转储）命令的语法帮助文本已被\n已更正。\n\n•已修复内部文本格式中的缓冲区分配错误\n负动态字段宽度可能导致缓冲区溢出的代码。\n\n•从设备仿真中未初始化的指针可能导致\n随机崩溃；此问题已得到修复。\n•还进行了其他一些小修复：指针初始化和\n空指针修复、单字符模式通配符修复、\n更正CD-i 490播放器NVRAM大小（现在正确32\nkB ） ，对CD-i 740 IKAT固件版本的修正，以及\nscanModules的缓存模块无效修复。\nTgames注意：只有Beta 4及更高版本具有NVRAM实现，即您可以（最终）使用0.5.3版本保存！ 测试版3、2和1的作者自愿删除代码以进行保存，这是不可能的。\n\n有关更多信息，请查看专用部分...",
-      "originalContent": "L'émulateur de CD-i (cdiemu) fournit une émulation assez complète du lecteur de CD-i, il s'agit probablement du meilleur émulateur du genre, toutefois il est limité (sauf si vous avez déjà activé une édition illimitée sur votre machine ou que vous utilisez un appareil Philips Mono-I player) en durée d'utilisation à seulement 3 minutes et vous ne pourrez pas sauvegarder à moins de payer le programme pour obtenir une version complète et sans restriction.\n\nMerci Anna pour le shot et le message subliminal ;)\n\nLes nouveautés:\n- The built-in expiration date has been updated to 2027/01/01.\n\n- Stereo CD-DA audio at 44.1 kHz was incorrectly producing mono output;\nboth channels were playing left-channel audio. This has been fixed.\n\n- CD-DA audio disc sectors were being requested with an incorrect sector\nformat from disc image files; this has been corrected. As a result,\nplaying CD-DA audio from scrambled disc images now works.\n\n- ADPCM audio upsampling has been improved by replacing the previous sample\nduplication method with a polyphase post-filter, producing significantly\nsmoother audio output. This is enabled by default and can be turned off\nwith the -nopostfilteraudio option.\n\n- The CD-i CDIC hardware uses the last of four duplicate sound parameter\nbytes transmitted with audio sector headers; the emulator was previously\nusing the first. This has been corrected and may affect audio decoding\nfor some titles.\n\n- A DMA channel initialization problem has been fixed: DMA channel 1 was\nbeing treated as channel 0.\n\n- The VSYNC interrupt bit in the FMV interrupt status register is now\nemulated correctly; this is needed for correct IMPEG and VMPEG FMV\ncartridge operation. The audio stream status register is now also\nimplemented correctly.\n\n- Video data bounds checking has been added; previously, out-of-bounds\nvideo coordinates in CD-i video data could cause memory access errors.\n\n- A new -runshell option has been added to start an OS-9 shell immediately\nfrom ROM without going through the normal CD-i player startup sequence.\nThis option only works on player ROMs that include the OS-9 shell module;\nit is intended for CD-i software developers.\n\n- A new debugger command \"unset\" has been added to clear emulator variables\npreviously set with the \"set\" command or a command-line -set option.\n\n- A new debugger command \"ei\" has been added to display the OS-9 IRQ\npolling table.\n\n- The front panel LED display for the CD-i 200 player is now supported.\n\n- Disc image files with the .scm extension are now included in the\ndisc image file selection dialog; this extension is used by some\ndisc dumping tools for scrambled disc images.\n\n- Support for pre-standard JNMS disc labels has been added; some discs use\na disc label format that predates the published standard.\n\n- A buffer allocation bug in disc directory and path table reading has been\nfixed; file read tracing in the debug window is therefore now enabled,\nit used to result in memory corruption crashes.\n\n- The display of PC-relative addresses and labels in the disassembler has\nbeen corrected.\n\n- The disassembler now shows size suffixes on addresses: absolute word\naddresses show .W and absolute long addresses show .L; short branch\ninstructions (BRA, BSR, Bcc) now show a .S suffix.\n\n- The parameter size specifications for the MA_Create and MA_Play OS-9 trap\ndefinitions as shown in the disassembler contained a typo; this has been\ncorrected.\n\n- Several OS-9 trap definitions have been added or corrected in the\ndisassembler, including additional F$ trap entries; the SS_PS trap has\nbeen renamed to SS_SL (GetSlave/SetSlave) to match the correct OS-9\ndefinition.\n\n- Clock cycle table building for branch and jump instructions (BRA, BSR, JMP,\nJSR) has been corrected; the mnemonic comparisons were failing silently\ndue to a rename in the instruction table that was not reflected in the\ncycle counting code.\n\n- The syntax help text for the debugger \"d\" (dump) command has been\ncorrected.\n\n- A buffer allocation bug has been fixed in the internal text formatting\ncode where a negative dynamic field width could cause a buffer overrun.\n\n- An uninitialized pointer in the slave device emulation could cause\nrandom crashes; this has been fixed.\n\n- Several other minor fixes have been made: pointer initialization and\nnull pointer fixes, a single-character pattern wildcard fix, a\ncorrection to the CD-i 490 player NVRAM size (now correctly 32\nkilobytes), a correction to the CD-i 740 IKAT firmware version, and\na module cache invalidation fix for ScanModules.\n\nNB de Tgames: Seule la version Beta 4 et supérieur a l'implémentation de la NVRAM, c'est à dire que vous pouvez (enfin) sauvegarder avec la version 0.5.3 ! Chose impossible avec la Beta 3, 2 et 1 dont l'auteur avait volontairement supprimé le code permettant de sauvegarder.\n\nAllez voir la section dédiée pour plus d'infos...",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "42abd5551e8c998b95a19cf10a40fd8a11bfd43782659b221ac0f737172a1cac",
-      "translationPending": false
-    },
-    {
-      "id": "136309",
-      "title": "【家用机】KytyPS5 r260830",
-      "originalTitle": "[Consoles de salon] KytyPS5 r260830",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T10:18:53Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136309-consoles-de-salon-kytyps5-r260830/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/kytyPS5-scaled.png",
-      "officialUrl": "https://github.com/Nmzik/KytyPS5",
-      "summary": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持 sive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。",
-      "content": "KytyPS5项目是由Nmzik开发的PlayStation 5 Windows模拟器，它基于InoriRus创建的原始Kyty的深度修改版本。它旨在提供比原始项目更高的PS5兼容性，专注于游戏启动、稳定性和渐进式支持\nsive of commercial titles.模拟器设计为无需外部LLE模块即可工作，这简化了其使用并减少了技术依赖性。开发人员表示，该项目仍处于实验阶段，但已经能够推出一些2D游戏和几款3D游戏，目标明确：提高兼容性\n在关注性能或图形准确性之前。\nKytyPS5仅在Windows上运行，似乎主要针对NVIDIA显卡进行了优化，尽管其他GPU可能具有不同的结果\n。该项目采取务实的方法：它首先寻求开始游戏，即使这意味着在第一个版本中牺牲视觉保真度或执行速度。代码积极开发，频繁更新，使其成为目前最具活力的PS5项目之一\n。开发人员强调了对透明度的渴望，明确感谢InoriRus的原始项目，同时假设对代码进行了重大重写和重新设计。\n总而言之， KytyPS5是第一代Kyty的非官方但假设的延续，后者转变为现代PS5模拟器，更雄心勃勃，更具功能性，旨在成为索尼游戏机模拟的参考。\n\n变更内容：\n• fix (agc) ：实现AgcDcbCopyDataGetSize\n•用户：使本地配置文件可配置\n•着色器：支持SDWA字节移位计数\n•着色器：支持SDWA字节左移计数\n• nlibc ：将房客tm与房东ABI隔离\n•光纤：保存上下文而不编译帧\n\n（从此分叉编译的临时版本正在等待正式发布。）",
-      "originalContent": "Le projet KytyPS5 est un émulateur PlayStation 5 pour Windows, développé par Nmzik, qui s’appuie sur une version profondément modifiée du Kyty original créé par InoriRus. Il vise à offrir une compatibilité PS5 nettement supérieure à celle du projet initial, en se concentrant sur le démarrage des jeux, la stabilité et la prise en charge progressive des titres commerciaux. L’émulateur est conçu pour fonctionner sans modules LLE externes, ce qui simplifie son utilisation et réduit les dépendances techniques. Le développeur indique que le projet est encore en phase expérimentale, mais déjà capable de lancer certains jeux 2D et plusieurs jeux 3D, avec un objectif clair: améliorer la compatibilité avant de se concentrer sur les performances ou la précision graphique.\n\nKytyPS5 fonctionne exclusivement sous Windows et semble optimisé en priorité pour les cartes graphiques NVIDIA, même si d’autres GPU peuvent fonctionner avec des résultats variables. Le projet adopte une approche pragmatique: il cherche d’abord à faire démarrer les jeux, quitte à sacrifier la fidélité visuelle ou la vitesse d’exécution dans les premières versions. Le code est activement développé, avec des mises à jour fréquentes, ce qui en fait l’un des projets PS5 les plus dynamiques actuellement disponibles. Le développeur met en avant une volonté de transparence, en remerciant explicitement InoriRus pour le projet original, tout en assumant une réécriture et une refonte majeure du code.\n\nEn résumé, KytyPS5 est une continuation non officielle mais assumée du premier Kyty, transformée en un émulateur PS5 moderne, plus ambitieux et plus fonctionnel, qui cherche à devenir une référence dans l’émulation de la console de Sony.\n\nLes changements:\n- fix(agc): implement AgcDcbCopyDataGetSize\n- user: make the local profile configurable\n- shader: support SDWA byte shift counts\n- shader: support SDWA byte left-shift counts\n- nlibc: isolate guest tm from host ABI\n- fiber: save contexts without compiler frames\n\n(Temporary build compiled from this fork pending official releases.)",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "kytyps5_pc"
-      ],
-      "contentHash": "eb416725917d9c27b82acc6f48cd558ed3d6aeb8c63c3e2d5779022ace6135dd",
-      "translationPending": false
-    },
-    {
-      "id": "136307",
-      "title": "【电脑】Commodore-64-Emulator v0.8.4.6 alpha",
-      "originalTitle": "[Ordi.] Commodore-64-Emulator v0.8.4.6 alpha",
-      "category": "computer",
-      "categoryLabel": "电脑",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T10:13:27Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136307-ordi-commodore-64-emulator-v0-8-4-6-alpha/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/03/c64emulator.png",
-      "officialUrl": "https://github.com/cbroschard/Commodore-64-Emulator",
-      "summary": "它是用现代C + +编写的Commodore 64仿真器，基于SDL2 ，旨在尽可能忠实地复制原始材料。该项目强调精确模拟，优先考虑C64的实际行为，而不是快速近似 。它还集成了高级调试基础设施，包括内部监视器、断点、监视点以及运行时机器状态的详细可见性。该集合仍在积极开发中，这意味着某些功能仍不完整或处于实验阶段。",
-      "content": "它是用现代C + +编写的Commodore 64仿真器，基于SDL2 ，旨在尽可能忠实地复制原始材料。该项目强调精确模拟，优先考虑C64的实际行为，而不是快速近似\n。它还集成了高级调试基础设施，包括内部监视器、断点、监视点以及运行时机器状态的详细可见性。该集合仍在积极开发中，这意味着某些功能仍不完整或处于实验阶段。",
-      "originalContent": "Il s’agit d’un émulateur de Commodore 64 écrit en C++ moderne et basé sur SDL2, conçu pour offrir une reproduction la plus fidèle possible du matériel d’origine. Le projet met l’accent sur une émulation précise, privilégiant le comportement réel du C64 plutôt que des approximations rapides. Il intègre également une infrastructure de débogage avancée, avec un moniteur interne, des breakpoints, des watchpoints et une visibilité détaillée sur l’état de la machine pendant l’exécution. L’ensemble est encore en développement actif, ce qui signifie que certaines fonctionnalités restent incomplètes ou expérimentales.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "758129c0e29d35da35ad5e05b9ef1a526052dc2381d5c7ddc54a307f6b3b5927",
-      "translationPending": false
-    },
-    {
-      "id": "136305",
-      "title": "【街机】GroovyMAME v0.289 SwitchRes 2.22f",
-      "originalTitle": "[Multi-systemes] GroovyMAME v0.289 SwitchRes 2.22f",
-      "category": "arcade",
-      "categoryLabel": "街机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T10:12:03Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136305-multi-systemes-groovymame-v0-289-switchres-2-22f/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/groovy2.jpg",
-      "officialUrl": "https://github.com/antonioginer/GroovyMAME",
-      "summary": "GroovyMAME是一款基于MAME （ Arcade + Console + Computers ）的多系统仿真器，专注于在CRT屏幕（特定频率的PC或街机监视器）上进行渲染，因为作者确信CRT技术在享受其辉煌时是必不可少的 。但是， GroovyMAME也可用于LCD屏幕（主要用于允许以自定义速率刷新的型号）。",
-      "content": "GroovyMAME是一款基于MAME （ Arcade + Console + Computers ）的多系统仿真器，专注于在CRT屏幕（特定频率的PC或街机监视器）上进行渲染，因为作者确信CRT技术在享受其辉煌时是必不可少的\n。但是， GroovyMAME也可用于LCD屏幕（主要用于允许以自定义速率刷新的型号）。\n不久前， Groovy的许多改进已经集成到MAME中，使Groovy过时了，但从那时起，新的功能同时开发出来，证明了这些新版本的合理性。\n\n请注意， LiveCD也可在官方网站上找到。\n\n变更内容：\n•与mame v0.289同步\n\n音频延迟减少和代码修复/简化：\n\n•对于未使用VIDEO_UPDATE_AFTER_VBLANK的游戏，请减少音频延迟的vblank时间\n•在emusynclog的两个音频更新中注册最小计数缓冲区计数\n•以m_vactive_ratio而不是1.0更新音频，音频推送更早，减少端到端延迟，但无需-afd即可保持非负延迟\n•减少对0.1毫秒的最小缓冲延迟，将跳过持续时间增加到1秒，减少对0.25毫秒的最小调整，只对PipeWire真正重要\n•修复XAudio2/WASAPI可用()计算\n•为水槽注册添加互斥\n•修复因部分音频更新、固定回旋（可能还有其他）而导致的超限读取\n\n关于D3D9EX版本的注意事项（内部版本仅适用于Windows 7或更高版本） ：\n此版本包含Direct3D9Ex补丁（也称为Direct3D 9.0L或9.L ， L指Longhorn ， Windows Vista代码库的名称） ，允许您从使用WDDM驱动程序引入的某些功能中受益，同时保持与应用程序的兼容性。\ndirect3D 9的标准。 Windows Aero界面基于D3D 9Ex构建，并使用Direct3D 9中不存在的一些功能，例如跨多个进程共享DirectX表面的功能。\n\n此时没有32位二进制文件。\n\n更新：我编译了32位二进制文件和64位非ex。\n\n官方镜子\n官方论坛",
-      "originalContent": "GroovyMAME est un émulateur multi-systèmes basé sur MAME (Arcade + Consoles + Ordinateurs) et qui se focalise sur le rendu sur écran CRT (Moniteur de PC ou d'arcade avec fréquence particulière) car les auteurs sont convaincus que la technologie CRT est un must quand il s'agit de profiter de l'émulation dans toute sa splendeur. Cependant GroovyMAME peut être utilisé également sur écran LCD (principalement sur les modèles qui permettent un rafraîchissant à des taux personnalisés).\n\nBeaucoup d'améliorations provenant de Groovy avaient été intégrées dans MAME il y a quelques temps rendant Groovy obsolète, mais depuis de nouvelles fonctions ont été développées en parallèles justifiant ces nouveaux builds.\n\nA noter que des LiveCD sont également disponibles sur le site officiel.\n\nLes changements:\n\n- Sync with mame v0.289\n\nAudio latency reduction and code fixes/simplifications:\n\n- For games not using VIDEO_UPDATE_AFTER_VBLANK, shave off vblank time for audio latency\n- Register minimum count buffer count across both audio updates for emusynclog\n- Update audio at m_vactive_ratio instead of 1.0, pushes audio earlier and reduces end-to-end latency, but maintains non-negative latency without -afd\n- Reduce minimum buffering latency to 0.1 ms, increase skip duration to 1 second, decrease minimum adjustment to 0.25 ms, only really matters for PipeWire\n- Fix XAudio2/WASAPI available() calculation\n- Add mutex for sink registration\n- Fix out-of-bound read resulting from fractional audio updates, fixes gyruss (and maybe others)\n\nNote sur la version D3D9EX (les builds ne sont valables que pour windows 7 ou supérieur):\nCette version intègre un patch Direct3D9Ex (également connu sous le nom de Direct3D 9.0L ou 9.L, le L faisant référence à Longhorn, nom de la base de code de Windows Vista) qui permet de bénéficier de certaines fonctionnalités introduites par l’utilisation des drivers WDDM tout en maintenant la compatibilité avec les applications écrites pour Direct3D 9. L’interface Windows Aero s’appuie sur D3D 9Ex et utilise certaines des fonctionnalités non présentes dans Direct3D 9 comme la possibilité de partager des surfaces DirectX entre plusieurs processus.\n\nPas de binaires 32 bits pour le moment.\n\nMAJ: J'ai compilé les binaires 32 bits et le 64 bits non Ex.\n\nMiroir officiel\nForum officiel",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "mame_pc",
-        "mame_gw_core",
-        "mame_arcadia_pc",
-        "mame_chip8_pc",
-        "mame_tamagotchi_pc",
-        "mame_apple2",
-        "mame_pc88",
-        "mame_pc98"
-      ],
-      "contentHash": "e3ba20fa28d695c99ee0c4ccff5da7c6d9d9b3ecae6650697389faa04eb484ca",
-      "translationPending": false
-    },
-    {
-      "id": "136303",
-      "title": "【街机】Obentou v0.2.0",
-      "originalTitle": "[Multi-systemes] Obentou v0.2.0",
-      "category": "arcade",
-      "categoryLabel": "街机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-28T10:09:02Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136303-multi-systemes-obentou-v0-2-0/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/01/Obentou.png",
-      "officialUrl": "https://github.com/yughias/Obentou",
-      "summary": "Obentou是一个用C编写的多系统仿真器，旨在将作者多年来开发的所有仿真器汇集在一个单一的程序中。 该项目是开源的，并根据GPL-3.0.许可证进行分发 当前支持的系统： •太空侵略者商场 • 吃豆人核心游戏 — 吃豆人、吃豆小姐、小吃豆人以及其他基于吃豆人的街机卡带 • CHIP-8 • Bytepusher — 一台只有 1 个操作码的幻想机器 • GBC — Game Boy / Game Boy Color / Mega Du…",
-      "content": "Obentou是一个用C编写的多系统仿真器，旨在将作者多年来开发的所有仿真器汇集在一个单一的程序中。\n该项目是开源的，并根据GPL-3.0.许可证进行分发\n\n当前支持的系统：\n•太空侵略者商场\n• 吃豆人核心游戏 — 吃豆人、吃豆小姐、小吃豆人以及其他基于吃豆人的街机卡带\n• CHIP-8\n • Bytepusher — 一台只有 1 个操作码的幻想机器\n• GBC — Game Boy / Game Boy Color / Mega Duck\n • GBA - Game Boy Advance\n • NES——任天堂娱乐系统\n• PCE — PC引擎\n• PV1000 — 卡西欧 PV-1000\n• TMS80 — TMS9918 + Z80系统（ SMS/游戏装备/SG-1000/SC-3000 ）\n• Coleco Vision —需要BIOS\n• WATARA — WATARA Super Vision\n• SPECCY — ZX Spectrum 48K\n• JACE — Jupiter Ace\n\n这些变化是：\n\n•新增GBA核心",
-      "originalContent": "Obentou est un émulateur multi‑systèmes écrit en C, conçu pour regrouper en un seul programme tous les émulateurs développés par son auteur au fil des années.\nLe projet est open‑source et distribué sous licence GPL‑3.0.\n\nSystèmes actuellement supportés:\n- Space Invaders Arcade\n- Pacman core — Pacman, Ms. Pacman, Jr. Pacman et autres cartes d'arcade basées sur Pacman\n- CHIP-8\n- Bytepusher — machine fantasy à 1 opcode\n- GBC — Game Boy / Game Boy Color / Mega Duck\n- GBA - Game Boy Advance\n- NES — Nintendo Entertainment System\n- PCE — PC-Engine\n- PV1000 — Casio PV-1000\n- TMS80 — systèmes TMS9918 + Z80 (SMS / Game Gear / SG-1000 / SC-3000)\n- Coleco Vision — BIOS requis\n- WATARA — Watara Super Vision\n- SPECCY — ZX Spectrum 48K\n- JACE — Jupiter Ace\n\nLes changements sont:\n\n- added gba core",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "e67b4772610d265540efc910d9434ca3742d92c486fedef10ead00941df60a7b",
       "translationPending": false
     }
   ]
