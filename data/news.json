@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T09:01:35.648269Z",
+  "generatedAt": "2026-11-27T21:38:41.310730Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -8,6 +8,314 @@
     "feedUrl": "https://www.emu-france.com/flux/rss/"
   },
   "articles": [
+    {
+      "id": "android-release-azahar-2127-1-rc1",
+      "title": "【Android更新】Azahar 2127.1-rc1",
+      "originalTitle": "Azahar 2127.1-rc1 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T21:19:05Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2127.1-rc1",
+      "imageUrl": "asset://assets/emulators/azahar.png",
+      "officialUrl": "https://github.com/azahar-emu/azahar",
+      "summary": "Azahar 发布 Android 新版本 2127.1-rc1，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
+      "content": "Azahar 已发布 Android 最新版本 2127.1-rc1。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n⚠️重要候选发布版本信息⚠️\n\n\n这是候选发布版本。请在安装前展开此下拉菜单，详细了解其含义。\n作为候选发布版本，此版本尚不被视为稳定发布版本，但如果经过充分测试且未发现重大问题，则可以升级为稳定发布版本。\n。理想情况下，候选版本期将持续7天，但如果发现重大问题，该期限将延长，以便对已更正的候选版本进行额外测试。\n尽管此版本为预发布版本，但我们仍鼓励用户测试此版本，以帮助我们在该版本升级为正式发布版本之前发现任何新出现的问题。如果您确实发现了此类问题，请在 GitHub 上向我们报告，以便我们进行评估。\n如果您不愿意容忍潜在的次要问题，最好等到候选版本升级为正式版本后再使用。\n\n建议用户在使用预发布版本之前，先备份其Azahar用户数据目录。\n\n\n---\nAzahar 2127.1 是 2127 分支的一个次要版本，主要侧重于解决性能和稳定性方面的退化问题。\n请参阅下方的变更日志，了解详情。\n\n---\n\n提示：[!NOTE]\n提示：Azahar 2127.0 会使所有已生成的着色器缓存失效。\n提示：因此，从2126.2或更早版本更新后，性能可能会暂时受到影响。\n提示：玩一段时间后，性能将再次得到改善。\n\n---\n\nAzahar 2127.1-rc1 更新日志\n\n全部\n• 使用Vulkan渲染器时，Anime4K纹理滤镜存在的问题现已修复，因此，在使用Vulkan渲染器时，现在可以再次选择Anime4K。| @PabloMK7 #2893\n• 解决了 2126.1 中首次引入的损坏表面回收导致的性能退化问题，该问题主要导致使用 OpenGL 渲染器时的性能下降。| @PabloMK7 #2889\n• 解决了启用“跳过重复帧”时 Vulkan 渲染器的性能问题。| @PabloMK7 #2850\n• 修复了几个调试设置无法从设置文件正确加载的问题。| @Davey-Hughes #2846\n• 修复了 DLC 在与“插入”模拟 3DS 游戏卡槽的 ROM 捆绑包一起使用时无法正常工作的问题。| @PabloMK7 #2882\n\n桌面版\n• 修复了首次出现在 2126.0 中的一个问题，即当以长格式提供时，有几个命令行选项无法正常工作。| @Davey-Hughes #2798、@PabloMK7 #2887\n\nAndroid\n• 修复了新安装后最初生成的触摸叠加层布局可能使用不正确的屏幕区域测量值构建的问题，导致按钮有时部分位于屏幕外。| @OpenSauce04 #2878\n• 修复了将 Azahar 置于后台后再重新打开时有时会发生的应用程序崩溃问题。| @OpenSauce04 #2880\n• 修复了某项设置的预期默认值未在 Azahar 的 C++ 代码中正确反映的问题。| @OpenSauce04 #2895\n• 由于最近对 Android 上 Azahar 设置处理方式的更改，这可能不会对用户端造成任何影响，主要属于正确性修复。\n\nlibretro\n\n• 修复了一个可能导致某些 libretro 前端无法正确卸载 Azahar 内核的问题。| @sunlollyking #2805\n• 修复了 libretro 内核可能使用未启用的 Vulkan 功能，从而引发未定义行为的问题。| @Davey-Hughes #2849",
+      "originalContent": "<h3>⚠️Important Release Candidate Information⚠️</h3>\r\n<details>\r\n<summary>\r\n\tThis is a release candidate. Please expand this drop-down to read more about what this means before installing.\r\n</summary>\r\n<br>\r\nAs a release candidate, this build is not yet considered a stable release, but is instead a build which could be promoted to a stable release if it is sufficiently tested with no major issues being discovered. Ideally, the release candidate period will last for 7 days, however if major issues are discovered, this will be extended to allow for additional testing with a corrected release candidate.\r\n<br><br>\r\nDespite its status as a pre-release build, users are encouraged to test this version to help us catch any newly introduced issues before the build is promoted to a full release. If you do observe such issues, please report them to us on GitHub so we can evaluate them.\r\n<br><br>\r\nIf you are unwilling to tolerate potential minor issues, you may be better off waiting until a release candidate is promoted to a full release.\r\n<br><br>\r\nUsers are advised to back up their Azahar user data directory before using a pre-release build.\r\n</details>\r\n\r\n---\r\n\r\nAzahar 2127.1 is a minor release for the 2127 branch which primarily focuses on addressing performance and stability regressions.\r\nSee the changelog below for details.\r\n\r\n---\r\n\r\n> [!NOTE] \r\n> Azahar 2127.0 invalidates any existing generated shader cache.\r\n> Because of this, performance may temporarily be impared after updating from 2126.2 or earlier.\r\n> Performance will improve again after playing for a while.\r\n\r\n---\r\n\r\n# Azahar 2127.1-rc1 Changelog\r\n\r\n# All\r\n\r\n- Previous issues present when using the Anime4K texture filter with the Vulkan renderer have now been fixed, and because of this, Anime4K is now selectable again when using the Vulkan renderer. | @PabloMK7 #2893\r\n- Addressed a performance regression caused by broken surface recycling first introduced in 2126.1, which primarily resulted in reduced performance when using the OpenGL renderer. | @PabloMK7 #2889\r\n- Addressed a performance issue in the Vulkan renderer when Skip Duplicate Frames is enabled. | @PabloMK7 #2850\r\n- Fixed an issue where a couple of debug settings weren't being properly loaded from the settings file. | @Davey-Hughes #2846\r\n- Fixed an issue where DLC wouldn't work correctly if used with a ROM bundle which had been \"inserted\" into the emulated 3DS's game cartridge slot. | @PabloMK7 #2882\r\n\r\n# Desktop\r\n\r\n- Fixed an issue first seen in 2126.0 where several command line options wouldn't work correctly when provided in their long forms. | @Davey-Hughes #2798, @PabloMK7 #2887\r\n\r\n# Android\r\n\r\n- Fixed an issue where the initially generated touch overlay layout after a fresh install could be built with an incorrect screen area measurement, resulting in buttons sometimes being placed partially off-screen. | @OpenSauce04 #2878 \r\n- Fixed an app crash which could sometimes occur after putting Azahar in the background and then re-opening it. | @OpenSauce04 #2880\r\n- Fixed the intended default value for a setting not being correctly reflected in Azahar's C++ code. | @OpenSauce04 #2895\r\n  - Because of recent changes to how Azahar's settings are handled on Android, this likely doesn't change anything on the user's end, and is mostly a correctness fix.\r\n\r\n# libretro\r\n\r\n- Fixed an issue which could prevent certain libretro frontends from correctly unloading Azahar's core. | @sunlollyking #2805\r\n- Fixed an issue where the libretro core could use Vulkan features which weren't enabled, triggering undefined behaviour. | @Davey-Hughes #2849",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "azahar"
+      ],
+      "contentHash": "d546cccb1221690a60f61ae5da1240339a22f3678ce6b070cdc2582cc2d47f6b",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T19:32:30Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• sel.cpp,按预设按钮(dinkc64)后给出游戏列表焦点",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• sel.cpp, give the game list focus after pressing a preset button (dinkc64)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "a5494d9a68929114e12eee81a66fee0d010b88effb25a3f04a72b42e68cb25cd",
+      "translationPending": false
+    },
+    {
+      "id": "145175",
+      "title": "【电脑】SugarBox v2.2.0",
+      "originalTitle": "[Ordi.] SugarBox v2.2.0",
+      "category": "computer",
+      "categoryLabel": "电脑",
+      "kind": "tool",
+      "publishedAt": "2026-11-27T17:55:40Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145175-ordi-sugarbox-v2-2-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/04/sugarbox1-300x247.jpg",
+      "officialUrl": "http://sugarbox.free.fr/",
+      "summary": "这是一款由 Thomas Guillemin 设计的适用于 Windows 的优秀 Amstrad CPC（464/664/6128 及兼容机型）模拟器。Sugarbox 易于使用，令人愉悦。 更新内容： 前端和打包 • 在 Qt 前端旁边添加一个 SDL3 + ImGui 前端（Windows、Linux）。 每个前端都有自己的软件包（SugarboxV2Qt、SugarboxV2SDL）； 可执行文件仍名为 Sugarbox。",
+      "content": "这是一款由 Thomas Guillemin 设计的适用于 Windows 的优秀 Amstrad CPC（464/664/6128 及兼容机型）模拟器。Sugarbox 易于使用，令人愉悦。\n\n更新内容：\n前端和打包\n• 在 Qt 前端旁边添加一个 SDL3 + ImGui 前端（Windows、Linux）。\n每个前端都有自己的软件包（SugarboxV2Qt、SugarboxV2SDL）；\n可执行文件仍名为 Sugarbox。\n• CI：Windows 和 Linux（AppImage）上有一个 Qt/SDL 矩阵，macOS 上有一个 Qt 矩阵。\n当推送 v* 标签时，发布工作流会收集所有软件包。\nWindows 在 windows-2022 上编译（openal-soft 不使用\nMSVC 14.52）。\n• 发布版本使用项目中的版本，而不是固定版本。\n仿真（CPCCore f86b705）\n• CRTC 类型 0 至 4 根据 ACCC 纲要、SHAKER 和\n在真实机器上进行的测量。\n• 门阵列、中断和 I/O：ink、模式切换、VSYNC 和 INT\n时序、PAL、总线冲突。\n• CPC+ / GX4000：游戏机支持、ASIC DMA 序列器、拒绝\n拒绝的卡带。\n• CTM644 显示器型号（水平 AFC），G-Sync 模式在\n显示器上。\n• 磁带：新的输入模型和驱动器启动，Speedlock 加载器已修复\n（《蝙蝠侠》《狼之行动》）。\n• 磁盘：修复了 FDC 状态和格式问题。\n• 快照：保存了真正的 CPC 类型，修复了 CRTC 和 PSG 状态。\n\n修复内容\n• 无效的调试请求不再导致模拟器关闭；getState 返回\n其报告的停止的 PC；64K RAM 存储区被正确读取；\n删除了由开发合并重复的设置命令。\n• 音频同步不再阻止仿真；开机时会重置音频\n驱动程序并清除上一个图像和颜色。\n• CSL 转义键、“软重置”、磁带冻结和快照\n命令、CRTC 对话框。",
+      "originalContent": "Il s'agit d'un très bon émulateur Amstrad CPC (464/664/6128 et compatibles) pour Windows conçu par Thomas Guillemin. Sugarbox est agréable pour sa simplicité d'utilisation.\n\nLes changements:\nFrontends and packaging\n- Add an SDL3 + ImGui frontend next to the Qt one (Windows, Linux).\nEach frontend has its own package (SugarboxV2Qt, SugarboxV2SDL);\nthe executable is still named Sugarbox.\n- CI: one Qt/SDL matrix on Windows and Linux (AppImage), Qt on macOS.\nThe release workflow gathers every package when a v* tag is pushed.\nWindows builds on windows-2022 (openal-soft does not build with\nMSVC 14.52).\n- The release build uses the version from the project, not a fixed one.\n\nEmulation (CPCCore f86b705)\n- CRTC types 0 to 4 reworked from the ACCC compendium, SHAKER and\nmeasures on real machines.\n- Gate Array, interrupts and I/O: inks, mode changes, VSYNC and INT\ntimings, PAL, bus conflicts.\n- CPC+ / GX4000: console support, ASIC DMA sequencer, malformed\ncartridges refused.\n- CTM644 monitor model (horizontal AFC), G-Sync mode paced on the\ndisplay.\n- Tape: new input model and drive start-up, Speedlock loaders fixed\n(Batman, Operation Wolf).\n- Disk: FDC status and FORMAT fixes.\n- Snapshots: the real CPC type is saved, CRTC and PSG states fixed.\n\nFixes\n- Invalid debug requests no longer close the emulator; getState gives\nthe PC of the stop it reports; the 64K RAM bank is read correctly;\nthe settings commands doubled by the develop merge are removed.\n- Sound sync no longer blocks the emulation; power on resets the sound\ndriver and clears the previous picture and colours.\n- CSL escape keys, \"reset soft\", freezes of the tape and snapshot\ncommands, CRTC dialog.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "e95d7e5acf729d915e541a0293f6f63ac03f2163e2e9b3e4b19dbdb8a20fda35",
+      "translationPending": false
+    },
+    {
+      "id": "145173",
+      "title": "【多系统】pfeMame v3.11.1",
+      "originalTitle": "[MAME Support Files] pfeMame v3.11.1",
+      "category": "multi_system",
+      "categoryLabel": "多系统",
+      "kind": "tool",
+      "publishedAt": "2026-11-27T17:52:28Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145173-mame-support-files-pfemame-v3-11-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2014/06/pfemame_main-1024x838.jpg",
+      "officialUrl": "http://sourceforge.net/projects/pfemame/",
+      "summary": "pfeMame（由 Gareth Finch 编写）是使用 Python 编写的 MAME 前端。它是一款跨平台软件（已在 Linux - Ubuntu 和 Windows 上测试）。它还包含一个适用于 MameCab 的图形界面，可使用摇杆/手柄进行控制。",
+      "content": "pfeMame（由 Gareth Finch 编写）是使用 Python 编写的 MAME 前端。它是一款跨平台软件（已在 Linux - Ubuntu 和 Windows 上测试）。它还包含一个适用于 MameCab 的图形界面，可使用摇杆/手柄进行控制。",
+      "originalContent": "pfeMame (écrit par Gareth Finch) est un frontend pour MAME, écrit en Python. Il est multiplateforme (testé sur Linux - Ubuntu et Windows). Il comprend également une interface graphique destinée aux MameCab qui permet le contrôle à l'aide de joystick / manette.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mame_pc",
+        "mame_gw_core",
+        "mame_arcadia_pc",
+        "mame_chip8_pc",
+        "mame_tamagotchi_pc",
+        "mame_apple2",
+        "mame_pc88",
+        "mame_pc98"
+      ],
+      "contentHash": "1ccd382ba6087bdbd07349ae6a49992b06c64f43bf1dd86c263eaf68bfabf0a1",
+      "translationPending": false
+    },
+    {
+      "id": "145171",
+      "title": "【家用机】Ootake v3.07",
+      "originalTitle": "[Consoles de salon] Ootake v3.07",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T17:49:33Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145171-consoles-de-salon-ootake-v3-07/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2016/03/ootake.jpg",
+      "officialUrl": "http://www.ouma.jp/ootake/",
+      "summary": "Ootake 是一款来自日本的 PC-Engine 模拟器，基于 PC2E，可在 Windows 2000、XP、Vista、7、8、10 和 11 上运行。它至少需要 Direct X v9.0c。 • 一些可追溯至 Windows 98 时代的旧代码，来自 Ootake 开发的早期阶段， Ootake 开发早期的一些旧代码已经过审核和重写，以优先考虑 提高了计时精度。我认为这改善了音质。 • 启用垂直同步时稳定性得到提升。",
+      "content": "Ootake 是一款来自日本的 PC-Engine 模拟器，基于 PC2E，可在 Windows 2000、XP、Vista、7、8、10 和 11 上运行。它至少需要 Direct X v9.0c。\n\n• 一些可追溯至 Windows 98 时代的旧代码，来自 Ootake 开发的早期阶段，\nOotake 开发早期的一些旧代码已经过审核和重写，以优先考虑\n提高了计时精度。我认为这改善了音质。\n• 启用垂直同步时稳定性得到提升。在 Windows 11 上，画面撕裂现象很少发生，\n即使在 Ootake 的垂直同步设置关闭的情况下，撕裂现象也很少发生，因此我们建议关闭垂直同步。\n垂直同步。\n在垂直同步关闭的情况下，输入延迟更低，且每帧的持续时间更接近\n与真正的 PC Engine 硬件相当。刷新率为 240Hz 的显示器\n或更高的显示器，更能避免微卡顿并降低延迟。\n• 使单帧时长更接近真实硬件的单帧时长。\n• 新增对 XInput 游戏手柄上 LT 和 RT 扳机的支持。\n• 扳机现在可响应部分输入，包括 DirectInput 游戏\n控制器。\n• 配置扳机时，必须将扳机完全按下。\n• 调整了音量平衡，使其更接近原始\n硬件。\n• 提高了处理声音的线程的优先级。这可能会\n在某些电脑上提升音质。\n• 提高了 CD-ROM 访问过程中的速度稳定性。\n• 将“速度”菜单中的 CD 访问速度选项更改为三个设置。\n对于大多数游戏，建议使用“快速 CD（默认）”。当您希望有意将访问速度\n当您希望有意将访问速度放慢至更接近真实\n硬件的速度。\n• 当《幻影都市传奇》（Kaze no Densetsu Xanadu）开始时，CD 访问\nCD 读取速度会自动降低，以与真实硬件相匹配。\n• 从“The Legend of Xanadu”的开头到结尾，调整了每个视觉场景中的唇形同步动画，\n“The Legend of Xanadu”的结尾，使其更接近原版\n硬件。\n• 遮蔽了可能在屏幕右边缘显示多余图形的区域，\n例如“Asuka 120%”中的角色介绍界面。\n• 在“屏幕”菜单中的视频捕获模式中添加了 1280x960。（此功能已在\n已在 v3.06 中添加，但我忘了在发布说明中提及。）\n• 修复了在“屏幕”菜单中选择“视频捕获”模式时，游戏屏幕的宽高比变得略微过宽的问题。\n在“屏幕”菜单中选择视频捕捉模式时，游戏屏幕的宽高比会变得略微过宽。\n• 修复并改进了各种细枝末节。",
+      "originalContent": "Ootake est un émulateur PC-Engine en provenance du Japon et basé sur PC2E, tournant sous Windows 2000, XP, Vista, 7, 8, 10 et 11. Il nécessite Direct X v9.0c au minimum.\n\n- Some of the old code dating back to the Windows 98 era, from the early days\nof Ootake's development, has been reviewed and rewritten to prioritize\ntiming accuracy. I think this has improved sound quality.\n- Improved stability when V-Sync is enabled. On Windows 11, tearing is rare\neven with Ootake's V-Sync setting turned off, so we recommend turning V-Sync\noff.\nWith V-Sync off, input latency is lower, and each frame's duration is closer\nto that of real PC Engine hardware. A monitor with a refresh rate of 240Hz\nor higher is even better for avoiding microstutter and reducing latency.\n- Made the duration of one frame closer to that of real hardware.\n- Added support for the LT and RT triggers on XInput game controllers.\n- Triggers now respond to partial input, including on DirectInput game\ncontrollers.\n* You must press the triggers all the way down when configuring them.\n- Adjusted the sound volume balance to more closely match the original\nhardware.\n- Raised the priority of the thread that handles sound processing. This may\nimprove sound quality on some PCs.\n- Improved speed stability during CD-ROM access.\n- Changed the CD access speed options in the \"Speed\" menu to three settings.\n\"Fast CD (Default)\" is recommended for most games. Use the other settings\nwhen you want to intentionally slow access to speeds closer to those of real\nhardware.\n- When \"The Legend of Xanadu (Kaze no Densetsu Xanadu)\" starts, CD access\nspeed is automatically reduced to match real hardware.\n- Adjusted the lip-sync animation in each visual scene, from the beginning to\nthe ending of \"The Legend of Xanadu\", to more closely match the original\nhardware.\n- Masked areas that could show unwanted graphics along the right edge of the\nscreen, such as on the character introduction screen in \"Asuka 120%.\"\n- Added 1280x960 to the VideoCapture modes in the \"Screen\" menu. (This was\nadded in v3.06, but I forgot to mention it in the release notes.)\n- Fixed an issue where the game screen's aspect ratio became slightly too wide\nwhen a VideoCapture mode was selected in the \"Screen\" menu.\n- Fixed and improved various minor details.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "97ecd4fafa29b33dda152009232713dce1071365f2977a40fc49c2fa71378fde",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-zeebx-nightly",
+      "title": "【Android更新】Zeebx nightly",
+      "originalTitle": "Zeebx nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T16:03:05Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ZeebxTeam/zeebx-emu/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/zeebx.png",
+      "officialUrl": "https://github.com/ZeebxTeam/zeebx-emu",
+      "summary": "Zeebx 发布 Android 新版本 nightly，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
+      "content": "Zeebx 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n自动构建 `development` at 220ab2e589d6d1d739de154fd57463c507c87a3c.\n\n这不是一个释放。 在有人查清之前 它会有什么结果\n工作:希望它能破解,并保存一份你的节省。 从里面得到它\n模拟器,在设置,更新下选择夜间通道;停止,选择稳定。\n\n发布版本在发布页面上（https://github.com/ZeebxTeam/zeebx-emu/releases/latest）.",
+      "originalContent": "The automatic build of `development` at 220ab2e589d6d1d739de154fd57463c507c87a3c.\n\n**This is not a release.** It has what is coming, before anyone has checked that it\nworks: expect it to break, and keep a copy of your saves. To receive it from inside the\nemulator, choose the nightly channel under Settings, Updates; to stop, choose stable.\n\nThe released versions are on the [releases page](https://github.com/ZeebxTeam/zeebx-emu/releases/latest).",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "zeebx"
+      ],
+      "contentHash": "3696a660505075cd145d814ed786dab06e90bb1a256e3dfb38755b394f76f4a3",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-x1box-1-3-4",
+      "title": "【Android更新】X1 BOX 1.3.4",
+      "originalTitle": "X1 BOX 1.3.4 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T15:59:31Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/izzy2lost/xemu/releases/tag/1.3.4",
+      "imageUrl": "asset://assets/emulators/x1box.png",
+      "officialUrl": "https://github.com/izzy2lost/xemu",
+      "summary": "X1 BOX 发布 Android 新版本 1.3.4，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
+      "content": "X1 BOX 已发布 Android 最新版本 1.3.4。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n什么是新来的!\n\n• 自动宽度比现在是默认值:宽屏游戏填充屏幕,其他则停留4:3\n\n• 重置所有设置按钮\n\n• hakuX 核心: Rumble 支持, 正确的 HD 视频模式, 保存与您的控制台密钥签名\n\n• 固定随机GPU崩溃/冻结 xemu 核心项目\n\n• 马里GPU的固定型号和一些MediaTek手机的坠毁\n\n• 高分辨率的固定拉伸纹理\n\n• 为雾、点阵、二维效果和纹理制作修正\n\n• 速度小,稳定性小",
+      "originalContent": "What's New!\r\n\r\n• Auto aspect ratio is now the default: widescreen games fill the screen, others stay 4:3\r\n\r\n• Reset All Settings button\r\n\r\n• hakuX core: rumble support, correct HD video modes, saves signed with your console keys\r\n\r\n• Fixed a random GPU crash/freeze in the xemu core\r\n\r\n• Fixed spiky models on Mali GPUs and a crash on some MediaTek phones\r\n\r\n• Fixed stretched textures at higher resolutions\r\n\r\n• Rendering fixes for fog, point sprites, 2D effects and textures\r\n\r\n• Small speed and stability improvements",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "x1box"
+      ],
+      "contentHash": "c89be775467090b7ac9627bdc521c6a3eb7567329f3cfc1e38b5cc33ed5c92f6",
+      "translationPending": false
+    },
+    {
+      "id": "145168",
+      "title": "【工具】Wine D3D For Windows v11.21",
+      "originalTitle": "[Utilitaires Divers] Wine D3D For Windows v11.21",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-27T14:21:01Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145168-utilitaires-divers-wine-d3d-for-windows-v11-21/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/wined3d_upscal.png",
+      "officialUrl": "http://wined3d.fdossena.com",
+      "summary": "WineD3D For Windows 是一款基于 WineD3D 的 DirectX 1-11 至 OpenGL 的转换器，WineD3D 是 Wine 中使用的近乎完整的 DirectX 实现。 尽管 Windows 原生支持 DirectX，但使用 WineD3D 可以提高与较旧游戏的兼容性，尤其是在不支持 16 位屏幕模式的 Windows 8 及更高版本上。 。",
+      "content": "WineD3D For Windows 是一款基于 WineD3D 的 DirectX 1-11 至 OpenGL 的转换器，WineD3D 是 Wine 中使用的近乎完整的 DirectX 实现。\n尽管 Windows 原生支持 DirectX，但使用 WineD3D 可以提高与较旧游戏的兼容性，尤其是在不支持 16 位屏幕模式的 Windows 8 及更高版本上。\n。另一种可能的用途是模拟不受支持的 DirectX 版本，或将 DirectX 应用程序转换为 OpenGL，而无需重写渲染代码。\n请注意，WineD3D 远非完美，许多游戏将无法运行。\n\n其中还包含有关使用 DLL 的说明。\n1.7.x 版本可从 Windows 2000 开始运行。\n7.x 版本适用于 Windows Vista 及更高版本。\n高于 8.x 的版本可从 Windows 8 开始运行。",
+      "originalContent": "WineD3D For Windows est un wrapper DirectX 1-11 vers OpenGL basé sur WineD3D, qui est une implémentation presque complète de DirectX utilisée dans Wine.\n\nMême si Windows prend en charge DirectX de manière native, l'utilisation de WineD3D peut améliorer la compatibilité avec les jeux plus anciens, en particulier sur Windows 8 et supérieurs qui ne prennent pas en charge les modes d'écran 16 bits. Une autre utilisation possible est d'imiter les versions non prises en charge de DirectX ou de transférer des applications DirectX vers OpenGL sans avoir à réécrire le code de rendu.\nNotez que WineD3D est loin d'être parfait, et de nombreux jeux ne fonctionneront pas.\n\nDes instructions sur l'utilisation des DLL sont également incluses.\n\nVersion 1.7.x fonctionne à partir de Windows 2000.\nVersion 7.x fonctionne à partir de Windows Vista.\nVersion supérieur à 8.x fonctionne à partir de Windows 8.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "dbfee4466e12a905363db68f5dd77f748595ddf211cdba40ac24fb715712504f",
+      "translationPending": false
+    },
+    {
+      "id": "145165",
+      "title": "【工具】DXVK v3.2",
+      "originalTitle": "[Utilitaires Divers] DXVK v3.2",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-27T14:05:57Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145165-utilitaires-divers-dxvk-v3-2/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2020/01/dxvk.png",
+      "officialUrl": "https://github.com/doitsujin/dxvk/",
+      "summary": "这是一个基于 Vulkan 的 D3D9/10/11 实现，可使用 Wine 在 Linux 上运行 3D 应用程序。不过，它也可以在 Windows 上运行，但并非专门针对该系统设计，因此在该系统上可能会出现漏洞（官方不支持）。",
+      "content": "这是一个基于 Vulkan 的 D3D9/10/11 实现，可使用 Wine 在 Linux 上运行 3D 应用程序。不过，它也可以在 Windows 上运行，但并非专门针对该系统设计，因此在该系统上可能会出现漏洞（官方不支持）。",
+      "originalContent": "Il s'agit d'une implémentation de D3D9/10/11 basée sur Vulkan qui permet d'exécuter des applications 3D sur Linux en utilisant Wine, toutefois il fonctionne également sous Windows mais ne lui est pas spécifiquement destiné donc des bugs peuvent apparaitre sur ce système (officiellement non pris en charge).",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "2b2077bd52560e8f25293f15382336bcbea29d016e314dd55f57b00498b84af7",
+      "translationPending": false
+    },
+    {
+      "id": "145163",
+      "title": "【其他】NgpCraft Emulator v3.16.1",
+      "originalTitle": "[Consoles portables] NgpCraft Emulator v3.16.1",
+      "category": "other",
+      "categoryLabel": "其他",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T14:02:10Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145163-consoles-portables-ngpcraft-emulator-v3-16-1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/NgpCraft.png",
+      "officialUrl": "https://github.com/Tixul/Ngpcraft_emulator",
+      "summary": "Ngpcraft 是一款 Neo Geo Pocket 和 Neo Geo Pocket Color 模拟器，将原生 C++ 内核的速度与 PyQt6 图形用户界面的优雅性相结合。其引擎经过精心校准，与原装硬件保持一致，调整了每个微处理器周期和闪存访问时间，以便像《Densha de Go!》这样的自定帧率游戏能够 Go 终于达到了真正的每秒 30 帧。",
+      "content": "Ngpcraft 是一款 Neo Geo Pocket 和 Neo Geo Pocket Color 模拟器，将原生 C++ 内核的速度与 PyQt6 图形用户界面的优雅性相结合。其引擎经过精心校准，与原装硬件保持一致，调整了每个微处理器周期和闪存访问时间，以便像《Densha de Go!》这样的自定帧率游戏能够\nGo 终于达到了真正的每秒 30 帧。\n得益于包含专辑封面缩略图、高级搜索、按播放时间排序和收藏管理功能的动态曲库，这里的播放体验尤为出色。\n. 控制台重现了官方 BIOS 的启动过程，包括其原始的开场动画；它会保存纽扣电池的电量，以保持日期和 RTC 时钟的准确性；甚至还能在适当的时候触发游戏中内置的闹钟。\n为了提供视觉和操作上的舒适体验，该软件通过窗口或全屏模式的尺寸调整、多种视频滤镜（LCD 网格、CRT、扫描线）、无需重启即可切换的深色和浅色主题管理，以及对 Xbox 手柄（XInput）的全面支持（包括可调节的自动连发和直观的按键映射功能），根据您的喜好进行自适应调整。\n控制台的示意图。\n在功能方面，每个游戏有 8 个存档位置、NVRAM 内部存档、实时倒带选项（倒带缓冲时间为 10 至 30 秒）、逐帧播放、一键截图（F12）以及 0.25 倍至 4 倍的加速或减速。\n。即使是黑白墨盒，在 Pocket Color 模式下打印时也能受益于自动着色调色板。\n最后，它是一款用于开发和保存 ROM 的出色工具：其引擎集成了一个真正完整的调试器（断点、堆栈检查、RAM 搜索、VGM 音频导出），一个自动分析模块，可以在 400 帧内对游戏进行测试而不会崩溃，以及一个在发生崩溃时生成超详细崩溃报告的工具。\n语句出错。",
+      "originalContent": "Ngpcraft est un émulateur Neo Geo Pocket et Neo Geo Pocket Color qui combine la vitesse d'un cœur natif en C++ avec l'élégance d'une interface graphique en PyQt6. Son moteur est méticuleusement calibré sur le matériel d'origine, ajustant chaque cycle microprocesseur et temps d'accès à la mémoire flash pour que des jeux auto-cadencés comme Densha de Go tournent enfin à leurs 30 images par seconde réelles.\n\nL'expérience de jeu y est particulièrement soignée grâce à une bibliothèque dynamique avec vignettes de pochettes, recherche avancée, tri par temps de jeu et gestion des favoris. La console reproduit le démarrage BIOS officiel avec sa séquence d'intro originale, garde en mémoire la pile bouton pour maintenir la date et l'horloge RTC à jour, et permet même de déclencher les alarmes intégrées aux jeux au bon moment.\n\nPour le confort visuel et matériel, le logiciel s'adapte à vos envies grâce à un redimensionnement fenêtré ou plein écran, divers filtres vidéo (LCD-grid, CRT, scanlines), la gestion des thèmes sombre et clair sans redémarrage, ainsi qu'une prise en charge complète des manettes Xbox (XInput) avec autofire réglable et remappage intuitif sur un schéma visuel de la console.\n\nCôté fonctionnalités en partie, vous disposez de 8 emplacements de save states par jeu, de sauvegardes internes NVRAM, d'une option de rembobinage en direct (rewind avec tampon de 10 à 30 secondes), du pas-à-pas image par image, de la capture d'écran d'un clic (F12) et de l'accélération ou du ralenti de 0,25× à 4×. Même les cartouches noir et blanc profitent d'une palette de colorisation automatique lorsqu'elles tournent en mode Pocket Color.\n\nEnfin, c'est un outil formidable pour le développement et la préservation de ROMs: son moteur intègre un véritable débogueur complet (points d'arrêt, inspection de la pile, recherche RAM, export audio VGM), un module d'analyse automatique testant les jeux sur 400 frames sans planter, ainsi qu'un générateur de rapports de crash ultra-détaillés en cas d'erreur sur une instruction.",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "ngpcraft_pc"
+      ],
+      "contentHash": "00d6dfaa13ac06e96707b80858fd27bee41b2d0d75e6e197e56ddde7fee2ac43",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx3-1-7-3",
+      "title": "【Android更新】ARMSX3 1.7.3",
+      "originalTitle": "ARMSX3 1.7.3 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T13:41:49Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.7.3",
+      "imageUrl": "asset://assets/emulators/armsx3.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
+      "summary": "ARMSX3 发布 Android 新版本 1.7.3，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX3 已发布 Android 最新版本 1.7.3。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.7.3\n\n\n\n常规 UI 改进( 非 XMB 模式)\n\n\n\n• 自己的暂停菜单顺序:在暂停菜单的第一个标签上按行或卡片标题排列,按你喜欢的顺序排列。 使用控制器, 请使用此标签。 装入/ 管理保存现在坐落在关闭下面。\n\n\n\n^ Peek:暂停菜单中的眼睛按钮会隐藏它,这样你就可以读取它后面屏幕上的内容,游戏仍然暂停。\n\n\n\n\n\n• 在制表符间互换:在暂停菜单的制表符间和设置区间互换侧道。\n\n\n\n• 滑动器:箭头位于两端一步(按住一个继续前进),对数值的敲击可以输入。\n\n\n\n\n\n• 图书馆搜索:将工具栏放在底部,搜索就放在上面,XX清除搜索。\n\n\n\n\n\n修复内容\n• 老马里GPU:游戏以马里-G52手机开始,如MediaTek Helio G85手机。\n\n\n\n^ 清除GPU错误:当手机的GPU无法启动游戏时,消息将阻止游戏的Vulkan错误命名。\n\n\n\n• Discord:当你返回时,你的地位会自行恢复 ARMSX3即便在另一个应用中 或关闭屏幕之后\n\n\n\n• 零升降机 1.2.1:当一个字符跨过一个移动背景时,生成的帧会填充字符沿背景自身运动而发现的像素,所以读作运动模糊。 由@hy300leosquizz-ctrl (# 341) 翻译 .\n\n\n\n从 RPCS3\n• 保存状态:在只运行于PPU的游戏中保存作品,如GTA San Andreas (@Digant73,#20160).\n\n说明\n• 您的 SPU 缓存 1.7.2 结转,所以游戏开始时不再编译他们的SPU代码。",
+      "originalContent": "# ARMSX3 1.7.3\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/599a6e54-9a03-4e21-a244-1fe8902fd55d\" />\r\n\r\n## Regular UI Improvements (Not XMB Mode) \r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3ba15596-fb4c-4a82-a79b-9b0f4092bc26\" />\r\n\r\n- **Your own pause menu order:** hold a row or a card's title on the pause menu's first tab to put it in the order you like. With a controller, use Rearrange this tab. Load / Manage Saves now sits right under Close.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6bd9922f-12cb-4e3a-881a-84f9c6354a41\" />\r\n\r\n- **Peek:** the eye button in the pause menu hides it so you can read what is on screen behind it, with the game still paused.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/16f9e906-e1db-4dcb-a828-9effeb0e3f39\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a29e3ca6-dac4-4bfb-9a9b-167677ecfac7\" />\r\n\r\n- **Swipe between tabs:** swipe sideways to move between the pause menu's tabs and between the Settings sections.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9f5ffb6c-8ad8-4c64-bed7-abdd0b03841a\" />\r\n\r\n- **Sliders:** arrows at both ends step one at a time (hold one to keep going), and a tap on the value lets you type it in.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/50fb7004-a28f-4272-8b63-3b2f187c73df\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/17231d3f-5873-44b3-b1a8-8d1dcf9b2807\" />\r\n\r\n- **Library search:** with the toolbar at the bottom, the search sits right above it, and ✕ clears a search.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3a2eafe7-5e4d-48f5-8171-ca9a43db4193\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/99d1400f-edde-4b0c-8ee7-73074b7339e0\" />\r\n\r\n## Fixes\r\n- **Older Mali GPUs:** games start on phones with a Mali-G52, such as those with a MediaTek Helio G85.\r\n\r\n<img width=\"1600\" height=\"720\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f0db1799-8531-41fb-a824-71e0d96dbae9\" />\r\n\r\n- **Clearer GPU errors:** when a phone's GPU can't start a game, the message names the Vulkan error that stopped it.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fee0936a-772d-4313-b77b-d20492266e0b\" />\r\n\r\n- **Discord:** your status comes back by itself when you return to ARMSX3, even after a long time in another app or with the screen off.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e73eae9d-607b-4f38-b6a8-d633f83f80c3\" />\r\n\r\n- - **ZeroFG 1.2.1:** where a character crosses a moving background, the generated frames fill the pixels the character uncovers along the background's own motion, so it reads as motion blur. By @hy300leosquizz-ctrl (#341).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/22e7b492-6ba1-41d4-b2f9-9c76086ac5f6\" />\r\n\r\n## From RPCS3\r\n- **Save states:** saving works in games that run on the PPU alone, such as GTA San Andreas (@digant73, #20160).\r\n\r\n## Notes\r\n- Your SPU caches from 1.7.2 carry over, so games start without compiling their SPU code again.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f5fdb278-ceb5-4e32-bbd9-b317201f9b23\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c082d671-9f1c-4e01-a021-dd3fc53dcb3c\" />",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx3"
+      ],
+      "contentHash": "ca77263b7777d203acbfd5fa644d0745acc6e85e390794a31bd0f4d22f859ffd",
+      "translationPending": false
+    },
+    {
+      "id": "145160",
+      "title": "【街机】Keisho v0.9.64",
+      "originalTitle": "[Arcade] Keisho v0.9.64",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T11:02:00Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145160-arcade-keisho-v0-9-64/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/sm2-emu.png",
+      "officialUrl": "https://github.com/dmanlfc/sm2-emu",
+      "summary": "Keisho（前身为 SM2-EMU）是一款由 dmanlfc 开发的开源模拟器，用于模拟世嘉 Model 1、Model 2 和 Model 3 街机主板。该项目于 2025 年 2 月启动，最初的目标是改进 Linux 系统下的 Model 2 模拟，因为当时 Linux 系统尚无性能足够出色的原生解决方案，特别是在……方面。 ARM 系统，例如 Raspberry Pi 5。",
+      "content": "Keisho（前身为 SM2-EMU）是一款由 dmanlfc 开发的开源模拟器，用于模拟世嘉 Model 1、Model 2 和 Model 3 街机主板。该项目于 2025 年 2 月启动，最初的目标是改进 Linux 系统下的 Model 2 模拟，因为当时 Linux 系统尚无性能足够出色的原生解决方案，特别是在……方面。\nARM 系统，例如 Raspberry Pi 5。随后，该项目又增加了对 Model 1 和 Model 3 的支持。\n其开发工作主要基于对 MAME 和 Supermodel（Sega Model 3 模拟器）运行机制的研究。后者尤其为 Batocera 的 OpenGL ES 和 Vulkan 相关工作提供了灵感，使我们得以探索 ARM 机器上的模拟可能性。\n该模拟器现已支持 Model 2 的各种硬件架构（Model 2、Model 2A、Model 2B 和 Model 2C）以及世嘉 Model 1 和 Model 3。它集成了这些系统所使用的各种处理器和协处理器，包括英特尔 i960、NEC V60 和 PowerPC 603e/603ev，以及 MB86233 和 MB86234 TGP。\nADSP-21062 SHARC 和 MB86235 TGPx4。图形部分还包括 System 24 图形卡及其纹理和色彩处理系统，以及 Model 3 的 Real3D Pro-1000。\n提供四种渲染引擎：Vulkan、OpenGL、OpenGL ES 和软件引擎。音频模拟涵盖了各平台的不同声音系统，包括 CRX 系列的 68000/SCSP 组合、由 68000 处理器、YM3438 和两块 MultiPCM 组成的 Model 1 音频卡，以及 MPEG DSB1 和 DSB 音频卡。\nModel 3 的 2 辆。\n该系统还支持特定外设和设备的管理，包括读卡器控制卡、光枪、方向盘和踏板、终端连接系统以及保护装置。Model 3 还支持其 SCSI DMA 卡和 MPC10x 网桥。\n。控制方式可通过 SDL 控制杆或键盘进行配置，射击类游戏还支持鼠标操作。\n模拟与终端的固有频率（57.5245 Hz）同步，与屏幕的刷新频率无关。图像在放大之前以 496 × 384 像素的硬件分辨率合成，以保留原始像素的渲染效果。\n该项目还提供多项附加功能，包括状态保存、回放、纹理自定义以及在多个模拟终端之间管理局域网游戏。\n该项目主要面向 Linux 开发，尤其关注 Batocera，但也提供 Windows 和 macOS 版本。后者通过 MoltenVK 使用 Vulkan。\n。该项目与大部分 Model 1 和 Model 2 型号的游戏目录兼容，在测试的 54 款 Model 3 型号游戏中，有 52 款达到了可玩阶段。",
+      "originalContent": "Keisho (anciennement SM2-EMU) est un émulateur open source des cartes d'arcade Sega Model 1, Model 2 et Model 3, développé par dmanlfc. Lancé en février 2025, le projet avait initialement pour objectif d'améliorer l'émulation du Model 2 sous Linux, qui ne disposait pas à l'époque d'une solution native suffisamment performante, notamment sur les petits systèmes ARM comme le Raspberry Pi 5. Par la suite, le projet s'est élargi avec l'ajout de la prise en charge du Model 1, puis du Model 3.\n\nSon développement s'appuie notamment sur l'étude du fonctionnement de MAME et de Supermodel, l'émulateur Sega Model 3. Ce dernier a notamment inspiré les travaux sur OpenGL ES et Vulkan pour Batocera, permettant d'explorer les possibilités d'émulation sur les machines ARM.\n\nL'émulateur prend désormais en charge les différentes architectures matérielles du Model 2 (Model 2, Model 2A, Model 2B et Model 2C), ainsi que les Sega Model 1 et Model 3. Il intègre les différents processeurs et coprocesseurs utilisés par ces systèmes, notamment les Intel i960, NEC V60 et PowerPC 603e/603ev, ainsi que les MB86233 et MB86234 TGP, l'ADSP-21062 SHARC et le MB86235 TGPx4. La partie graphique comprend également les cartes System 24 et leur système de traitement des textures et des couleurs, ainsi que le Real3D Pro-1000 du Model 3.\n\nQuatre moteurs de rendu sont disponibles: Vulkan, OpenGL, OpenGL ES et un moteur logiciel. L'émulation audio couvre les différents systèmes sonores des plateformes, notamment le couple 68000/SCSP de la famille CRX, la carte audio Model 1 composée d'un processeur 68000, d'un YM3438 et de deux MultiPCM, ainsi que les cartes musicales MPEG DSB1 et DSB2 du Model 3.\n\nLa gestion des périphériques et équipements spécifiques est également assurée, avec notamment les cartes de contrôle des lecteurs, les pistolets optiques, les volants et pédales, le système de liaison entre bornes et les dispositifs de protection. Le Model 3 bénéficie également de la prise en charge de ses cartes SCSI DMA et de son pont MPC10x. Les commandes peuvent être configurées à l'aide de manettes SDL ou du clavier, tandis que la souris est également prise en charge pour les jeux de tir.\n\nL'émulation est synchronisée sur la fréquence native des bornes, soit 57,5245 Hz, indépendamment de la fréquence de rafraîchissement de l'écran. L'image est composée à sa résolution matérielle de 496 × 384 pixels avant d'être agrandie, afin de préserver le rendu original des pixels.\n\nLe projet propose également plusieurs fonctionnalités complémentaires, dont les sauvegardes d'état, le retour en arrière (rewind), la personnalisation des textures et la gestion des parties en réseau local entre plusieurs bornes émulées.\n\nLe projet est principalement développé pour Linux, avec une attention particulière portée à Batocera, mais propose également des versions pour Windows et macOS. Ce dernier utilise Vulkan via MoltenVK. Le projet propose une compatibilité jouable avec une grande partie des catalogues Model 1 et Model 2, tandis que 52 des 54 jeux Model 3 testés atteignent le stade du gameplay.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "3572a48b13676354c6fbfdd0d648cdceec569bb152295ca471107c337f25f820",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-j2me_loader-1-9-0",
+      "title": "【Android更新】J2ME Loader 1.9.0",
+      "originalTitle": "J2ME Loader 1.9.0 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-27T10:34:38Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/1.9.0",
+      "imageUrl": "asset://assets/emulators/j2me_loader.png",
+      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
+      "summary": "J2ME Loader 发布 Android 新版本 1.9.0，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
+      "content": "J2ME Loader 已发布 Android 最新版本 1.9.0。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n官方未提供详细更新说明。",
+      "originalContent": "J2ME Loader 1.9.0 Android release.",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "j2me_loader"
+      ],
+      "contentHash": "1ec0e1ee18b7b3613f797d4036da147cd9183945609c6fbe68d5a978d8608335",
+      "translationPending": false
+    },
     {
       "id": "android-release-melondualds-0-8-0",
       "title": "【Android更新】WatermelonDS 0.8.0",
@@ -57,30 +365,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-j2me_loader-continuous",
-      "title": "【Android更新】J2ME Loader continuous",
-      "originalTitle": "J2ME Loader continuous Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-26T20:51:46Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/nikita36078/J2ME-Loader/releases/tag/continuous",
-      "imageUrl": "asset://assets/emulators/j2me_loader.png",
-      "officialUrl": "https://github.com/nikita36078/J2ME-Loader",
-      "summary": "J2ME Loader 发布 Android 新版本 continuous，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "J2ME Loader 已发布 Android 最新版本 continuous。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n师傅最新承诺的自动化建设。",
-      "originalContent": "Automated builds from the latest commits on master.",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "j2me_loader"
-      ],
-      "contentHash": "f0205fc44f27d4788ac7acc1b12f7f761bdbeb68093b041e8bf608d0db674c9b",
-      "translationPending": false
-    },
-    {
       "id": "android-release-armsx2-nightly-20261126",
       "title": "【Android更新】ARMSX2 nightly-20261126",
       "originalTitle": "ARMSX2 nightly-20261126 Android release",
@@ -102,31 +386,6 @@
         "armsx2"
       ],
       "contentHash": "83430f61466377e1b83b144a6f4a94daf0cf8beac9b1fab6436a1edc89f8c235",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-26T18:01:51Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• 增加世嘉型号1驱动程序(barbudreadmon)",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• add Sega Model 1 driver (barbudreadmon)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "18320695ebf10c8d74e0734b38a1fc3f163015d30a575dbbe82075639b2bfd2c",
       "translationPending": false
     },
     {
@@ -179,18 +438,18 @@
     },
     {
       "id": "145155",
-      "title": "【电脑】Caprice32 v4.6.0 (2026/11/26)",
-      "originalTitle": "[Ordi.] Caprice32 v4.6.0 (2026/11/26)",
+      "title": "【电脑】Caprice32 v4.6.0 (2026/11/27)",
+      "originalTitle": "[Ordi.] Caprice32 v4.6.0 (2026/11/27)",
       "category": "computer",
       "categoryLabel": "电脑",
       "kind": "emulator",
       "publishedAt": "2026-11-26T12:40:05Z",
       "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/145155-ordi-caprice32-v4-6-0-2026-11-26/",
+      "sourceUrl": "https://www.emu-france.com/news/145155-ordi-caprice32-v4-6-0-2026-11-27/",
       "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/02/Caprice32_v4.6.0_20260214.png",
       "officialUrl": "https://github.com/ColinPitrat/caprice32/releases",
-      "summary": "此版本直接沿袭了 Ulrich Doewich 之前的版本，目前由 Colin Pitrat 维护。 Caprice 32 的最新版本，具备最新酷炫功能和最新漏洞。",
-      "content": "此版本直接沿袭了 Ulrich Doewich 之前的版本，目前由 Colin Pitrat 维护。\n\nCaprice 32 的最新版本，具备最新酷炫功能和最新漏洞。",
+      "summary": "此版本直接沿用了 Ulrich Doewich 之前的版本，目前由 Colin Pitrat 维护。 Caprice 32 的最新版本，具备最新酷炫功能和最新漏洞。",
+      "content": "此版本直接沿用了 Ulrich Doewich 之前的版本，目前由 Colin Pitrat 维护。\n\nCaprice 32 的最新版本，具备最新酷炫功能和最新漏洞。",
       "originalContent": "Cette version fait directement suite aux précédentes créées par Ulrich Doewich et est à présent maintenue par Colin Pitrat.\n\nLatest build of Caprice 32, with the newest cool features and the most recent bugs.",
       "platforms": [],
       "relatedEmulatorIds": [
@@ -198,7 +457,7 @@
         "caprice32_pc",
         "caprice32_gx"
       ],
-      "contentHash": "8483dfce2e79c73dce820746548b8e3cc1b615f0e85d957768ee052f41c7475b",
+      "contentHash": "7073718e24119ecdd3c4be653321a275a750111ce26e3f96dfc3217274561be1",
       "translationPending": false
     },
     {
@@ -399,30 +658,6 @@
         "virtual_jaguar_core"
       ],
       "contentHash": "55d20c3d043fa35b5b00999983be3cd3b53414f913ac7235291ae27a75cdd8c1",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-zeebx-nightly",
-      "title": "【Android更新】Zeebx nightly",
-      "originalTitle": "Zeebx nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-25T16:40:32Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ZeebxTeam/zeebx-emu/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/zeebx.png",
-      "officialUrl": "https://github.com/ZeebxTeam/zeebx-emu",
-      "summary": "Zeebx 发布 Android 新版本 nightly，发布日期为2026年11月25日。点击查看官方版本信息与更新说明。",
-      "content": "Zeebx 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月25日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n`development` 在 c73500bf40d87b03b575daa731caee21874a11bf 的自动构建。\n\n这不是一个版本。它包含即将推出的功能，但尚未经过任何人的测试，以确认其\n正常工作：预计它会出问题，并保留一份您的存档副本。要从模拟器内部接收它，\n模拟器中获取，请在“设置”>“更新”下选择“夜间”频道；要停止，请选择“稳定”频道。\n已发布版本位于发布页面（https://github.com/ZeebxTeam/zeebx-emu/releases/latest）。",
-      "originalContent": "The automatic build of `development` at c73500bf40d87b03b575daa731caee21874a11bf.\n\n**This is not a release.** It has what is coming, before anyone has checked that it\nworks: expect it to break, and keep a copy of your saves. To receive it from inside the\nemulator, choose the nightly channel under Settings, Updates; to stop, choose stable.\n\nThe released versions are on the [releases page](https://github.com/ZeebxTeam/zeebx-emu/releases/latest).",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "zeebx"
-      ],
-      "contentHash": "52fb9f1d110957d87b792838570c0d8ec230ceeac179125e328708daa10bbe19",
       "translationPending": false
     },
     {
@@ -646,30 +881,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-azahar-2127-0-1",
-      "title": "【Android更新】Azahar 2127.0.1",
-      "originalTitle": "Azahar 2127.0.1 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-24T22:55:12Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/azahar-emu/azahar/releases/tag/2127.0.1",
-      "imageUrl": "asset://assets/emulators/azahar.png",
-      "officialUrl": "https://github.com/azahar-emu/azahar",
-      "summary": "Azahar 发布 Android 新版本 2127.0.1，发布日期为2026年11月24日。点击查看官方版本信息与更新说明。",
-      "content": "Azahar 已发布 Android 最新版本 2127.0.1。\n\n发布日期：2026年11月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n这份更新是对 Azahar 2127.0 解决了释放后发现的两个突出问题。\n\n• 其中一个问题可能妨碍某些类型的ROM在下列文件中得到正确识别: Azahar在某些情况下的用户界面。\n• 另一问题是阻碍普遍建立macOS的问题; Azahar 从正确装入ARM64(相当于“Apple硅”)设备。\n\n鼓励桌面平台(Windows,macOS,Linux)上的用户更新以避免这些问题。\n\n我们鼓励更多用户在稳定发布前尝试我们未来的释放候选人,以帮助我们提前抓住这些问题。\n\n---\n\nAzahar 2127.0 可以说是我们出版过的最大规模更新, 并是一个真正巨大的发布。\n\n它包括无数的改进,修正和新功能,包括期待已久的添加,如每游戏设置支持Android,一个全重写为JIT无功能的翻译 环境允许在任何现代iOS设备上全速模拟,支持新的捆绑ROM格式,包括游戏内容和单个文件中的更新,一个固定的 久远的死亡动画在申美加美腾讯四号的故障,以及很多,很多其他的东西。\n\n如果你还没有,我们鼓励你 读一下这里的更改日志 看看我们一直在研究什么:\nhttps://github.com/azahar-emu/azahar/releases/tag/2127.0\n\n---\n\n提示：[!NOTE]\n提示：Azahar 2127.0 无效任何已生成的阴影缓存。\nQAC:由于这个原因,在更新后可能会暂时无法执行。 2126.2 或更早一点。\n提示:演奏一段时间后表现会再次改善。\n\n---\n\nAzahar 2127.0.1 更改日志\n\n桌面\n\n• 在某些领域确定一个问题: Azahar用户界面,带有某些文件扩展名的ROM有时不被正确识别为有效的3DS ROM. @ @ OpenSauce04 #2864\n\n马科斯\n\n• 由于缺少图书馆,无法在ARM64设备上启动通用macOS。",
-      "originalContent": "This update is an amendment to Azahar 2127.0 that fixes two prominent issues which were discovered post-release.\r\n\r\n- One is an issue which could prevent certain ROM types from being correctly recognized in Azahar's user interface in certain scenarios.\r\n- The other is a problem which prevented the universal macOS build of Azahar from loading correctly on ARM64 (aka \"Apple Silicon\") devices.\r\n\r\nUsers on desktop platforms (Windows, macOS, Linux) are encouraged to update to avoid these issues.\r\n\r\nWe encourage more users to try out our future release candidates before the stable release to help us catch problems like these ahead of time.\r\n\r\n---\r\n\r\nAzahar 2127.0 is arguably the single largest update we have ever published, and is a truly monumental release.\r\n\r\nIt includes countless improvements, fixes and new features, including long-awaited additions such as per-game setting support on Android, a fully rewritten interpreter for JIT-less environments which allows full-speed emulation on any modern iOS device, support for a new bundled ROM format which includes game content and updates in a single file, a fix for a long-standing death animation glitch in Shin Megami Tensei IV, and many, many other things.\r\n\r\nIf you haven't already, we encourage you to take a read of the changelog here to see what we've been working on:\r\nhttps://github.com/azahar-emu/azahar/releases/tag/2127.0\r\n\r\n---\r\n\r\n> [!NOTE] \r\n> Azahar 2127.0 invalidates any existing generated shader cache.\r\n> Because of this, performance may temporarily be impared after updating from 2126.2 or earlier.\r\n> Performance will improve again after playing for a while.\r\n\r\n---\r\n\r\n# Azahar 2127.0.1 Changelog\r\n\r\n# Desktop\r\n\r\n- Fixed an issue where, in certain areas of Azahar's user interface, ROMs with certain file extensions would sometimes not be recognized correctly as valid 3DS ROMs. | @OpenSauce04 #2864\r\n\r\n# macOS\r\n\r\n- Fixed an issue which prevented the universal macOS build from launching on ARM64 devices due to missing libraries. | @OpenSauce04 #2867",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "azahar"
-      ],
-      "contentHash": "b2b23e86b606c3d4efb5626b8d282f87f6b70b1a36c704ccf358e52d649d217b",
-      "translationPending": false
-    },
-    {
       "id": "145084",
       "title": "【电脑】Rust-Dos v1.9.3",
       "originalTitle": "[Ordi.] Rust-Dos v1.9.3",
@@ -734,30 +945,6 @@
         "playnite"
       ],
       "contentHash": "749db3820d509ee6b448fb33b09ddbba5b73b74eb5c5168635dae8c736f36fb9",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-armsx3-1-7-2",
-      "title": "【Android更新】ARMSX3 1.7.2",
-      "originalTitle": "ARMSX3 1.7.2 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-24T17:34:18Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX3/releases/tag/1.7.2",
-      "imageUrl": "asset://assets/emulators/armsx3.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX3",
-      "summary": "ARMSX3 发布 Android 新版本 1.7.2，发布日期为2026年11月24日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX3 已发布 Android 最新版本 1.7.2。\n\n发布日期：2026年11月24日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\nARMSX3 1.7.2\n\n\n\nNew\n^ ZeroFG 帧生成: (实验性) 在游戏绘图, x2, x3 或 x4 之间添加帧, 最高达到显示的刷新速率。 它在设置 > 性能和游戏中菜单中。 在游戏开始前切换它, 在游戏开始前切换它, 在游戏开始前切换它。 由@hy300leosquizz-ctrl(#331)翻译 .\n\n\n\n\n\n\n\n• DualShock 3 凌驾于USB之上:开启直接USB控制(PlayStation pads),并通过电缆连接DualShock 3. 读取按钮压力的PS3游戏回应了您所按的多硬度,控制器的玩家灯光出现,以及朗布尔作品。 几个可以同时连接。 带过来的 ARMSX2,由@0t4k0n 和 @bmdhacks 编写。\n\n\n\n\n\nPS3主题\n• 战争之神:阿森松收藏家版的动态主题用XMB Mode播放其动画,并作为图书库背景(Thanks alkhly_2001 for the report).\n\n\n\n\n\n从 RPCS3\n^ 较少悬挂:游戏在显示事件堆积时不再冻结(@kd-11,#20139).\n• 图形:用于绘制8位目标的游戏的混合修饰(@kd-11,#20133).\n^ 保存数据: 游戏获得PS3给予的保存大小和旗帜( @ digant73, #910).\n• Shader编译:在游戏的遮阳器编译时退出一款游戏,而遮阳器加载屏幕则标注其\"坚持跳过\"按钮(@Megamouse,#20154)。\n\n说明\n• 每场比赛第一次开始 1.7.2,其SPU代码由于ZeroFG被添加而再次编译。",
-      "originalContent": "# ARMSX3 1.7.2\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0f54b219-0320-4771-8bf1-421bb40bbabe\" />\r\n\r\n## New\r\n- **ZeroFG frame generation:** (experimental) adds frames between the ones a game draws, x2, x3 or x4, up to your display's refresh rate. It's in Settings > Performance and in the in-game menu. Switch it on before starting a game, switched on during one, it starts after Apply & Restart. By @hy300leosquizz-ctrl (#331).\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/642fa4ff-2009-442b-9776-5e645a05680d\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4c6d9995-33f6-46ab-8a8d-f7cc218e7e75\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0bb68774-d99e-4603-bc43-1d9cea0a9077\" />\r\n\r\n- **DualShock 3 over USB:** turn on Direct USB control (PlayStation pads) and connect a DualShock 3 by cable. PS3 games that read button pressure respond to how hard you press, the controller's player light comes on, and rumble works. Several can be connected at once. Brought over from ARMSX2, by @0t4k0n and @bmdhacks.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd95d2f5-a25c-4e5d-8268-73f0aa3d1da5\" />\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c35cc5a1-0c95-46ee-9193-20b8802aa294\" />\r\n\r\n## PS3 themes\r\n- **God of War: Ascension Collector's Edition** dynamic theme plays its animated paintings in XMB Mode and as the library background (thanks alkhly_2001 for the report).\r\n\r\n<img width=\"2400\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/26eb7ba8-4a59-4f4a-8a45-4f03ae35e99d\" />\r\n\r\n<img width=\"2400\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a5c60aee-15f4-4947-9901-1a534070961a\" />\r\n\r\n## From RPCS3\r\n- **Fewer hangs:** games no longer freeze when their display events pile up (@kd-11, #20139).\r\n- **Graphics:** a blending fix for games that draw to 8-bit targets (@kd-11, #20133).\r\n- **Save data:** games get the save sizes and flags a PS3 gives them (@digant73, #19910).\r\n- **Shader compilation:** quitting a game while its shaders compile stops right away, and the shader loading screen labels its \"Hold to skip\" button (@Megamouse, #20154).\r\n\r\n## Notes\r\n- The first time each game starts in 1.7.2, its SPU code compiles once more due to ZeroFG being added.\r\n\r\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/33c32d6b-b6b0-44ef-aaa0-88e1f722c6ee\" />",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx3"
-      ],
-      "contentHash": "dcad2dbe9e5e1fae39228dd983e331781b20e6d859c9fda98cd2cbafe43e03a4",
       "translationPending": false
     },
     {
@@ -3081,30 +3268,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "a6c2b589009e15dc9157a9e7f5310a44bf69a688645c448f5aab29ef10696e87",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-x1box-1-3-3",
-      "title": "【Android更新】X1 BOX 1.3.3",
-      "originalTitle": "X1 BOX 1.3.3 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-08T13:43:08Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/izzy2lost/xemu/releases/tag/1.3.3",
-      "imageUrl": "asset://assets/emulators/x1box.png",
-      "officialUrl": "https://github.com/izzy2lost/xemu",
-      "summary": "X1 BOX 发布 Android 新版本 1.3.3，发布日期为2026年11月08日。点击查看官方版本信息与更新说明。",
-      "content": "X1 BOX 已发布 Android 最新版本 1.3.3。\n\n发布日期：2026年11月08日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n• 新:Chihiro街机游戏 hakuX 核心:死亡之家3,虚拟警察3,幽灵小队,奥利·金,OutRun 2,最大Tune及更多\n\n• 在两个核心上为奇郎游戏保存状态\n\n• 支持CDD光盘图像\n\n• 网上标志 hakuX,加上 XLink Kai 系统链接\n\n• 分辨率达到6x\n\n• 主计长热键和更好的重新绘图编辑器\n\n• 设置自动保存\n\n• 修补:Def Jam FFNY、墓葬突击传奇、I-Ninja、功夫混乱、绝地学院、安培2",
-      "originalContent": "• New: Chihiro arcade games on the hakuX core: House of the Dead 3, Virtual Cop 3, Ghost Squad, Ollie King, OutRun 2, Maximum Tune and more\r\n\r\n• Save states for Chihiro games on both cores\r\n\r\n• CHD disc images supported\r\n\r\n• Insignia online on hakuX, plus XLink Kai for System Link\r\n\r\n• Resolution scale up to 6x\r\n\r\n• Controller hotkeys and a better remapping editor\r\n\r\n• Settings save automatically\r\n\r\n• Fixes: Def Jam FFNY, Tomb Raider Legend, I-Ninja, Kung Fu Chaos, Jedi Academy, Amped 2",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "x1box"
-      ],
-      "contentHash": "ace7e634a476179def7790204d1f26dbdb20e6e4aa34a85d3d79e714adf8f3ae",
       "translationPending": false
     },
     {
@@ -19645,149 +19808,6 @@
       ],
       "relatedEmulatorIds": [],
       "contentHash": "5afeab6c9de332f80a260db62274085fbd2ca7a8ab629bd2bbb34de73585fa62",
-      "translationPending": false
-    },
-    {
-      "id": "136351",
-      "title": "【其他】Coffee GB v2.0.7",
-      "originalTitle": "[Consoles portables] Coffee GB v2.0.7",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T20:45:37Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136351-consoles-portables-coffee-gb-v2-0-7/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/coffee-gb-1.7.9.png",
-      "officialUrl": "https://github.com/trekawek/coffee-gb",
-      "summary": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在 控制台的真实外观。 尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台 。",
-      "content": "Coffee GB是用Java 16 （用于核心）和Kotlin （用于GUI ）开发的Game Boy Color模拟器。它被设计为一个个人项目和一个编程练习，其特点是雄心勃勃的技术方法： CPU模拟是循环精确的，每个指令被分解为在\n控制台的真实外观。\n尽管它的实验方面， Coffee GB提供高兼容性，通过著名的Blargg和Mooneye GB测试验证，保证行为忠实于原始控制台\n。它支持带有MBC1到MBC5内存控制器的墨盒，以及电池备份，将游戏数据保留在真正的Game Boy上。\n模拟器还读取压缩的ROM （ .zip ） ，通过.properties文件提供密钥配置，并集成了具有回滚（仍然是实验性的）的netplay功能，以便通过状态同步在线播放。\n对于开发人员或好奇的技术人员，该项目包括通过Maven进行的自动化测试，源代码在麻省理工学院许可证下提供，可自由修改和可重用。",
-      "originalContent": "Coffee GB est un émulateur Game Boy Color développé en Java 16 (pour le cœur) et Kotlin (pour l’interface graphique). Conçu comme un projet personnel et un exercice de programmation, il se distingue par une approche technique ambitieuse: l’émulation du CPU est cycle-exacte, chaque instruction étant décomposée en micro-opérations exécutées à la cadence réelle de la console.\n\nMalgré son aspect expérimental, Coffee GB offre une compatibilité élevée, validée par les célèbres tests Blargg et Mooneye GB, garantissant un comportement fidèle à la console d’origine. Il prend en charge les cartouches avec les contrôleurs mémoire MBC1 à MBC5, ainsi que les sauvegardes sur batterie, permettant de conserver les données de jeu comme sur une vraie Game Boy.\n\nL’émulateur lit également les ROMs compressées (.zip), propose une configuration des touches via un fichier .properties, et intègre une fonctionnalité de netplay avec rollback (encore expérimentale) pour jouer en ligne avec synchronisation des états.\n\nPour les développeurs ou curieux techniques, le projet inclut des tests automatisés via Maven, et le code source est disponible sous licence MIT, librement modifiable et réutilisable.",
-      "platforms": [],
-      "relatedEmulatorIds": [
-        "coffee_gb_pc"
-      ],
-      "contentHash": "820e8f308d1c21a5efffd5f13a1bf34336c5859bbb1757cdcc4fa7bb865eaf42",
-      "translationPending": false
-    },
-    {
-      "id": "136345",
-      "title": "【电脑】Copperline v0.18.0",
-      "originalTitle": "[Ordi.] Copperline v0.18.0",
-      "category": "computer",
-      "categoryLabel": "电脑",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T12:04:07Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136345-ordi-copperline-v0-18-0/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/06/coperline.png",
-      "officialUrl": "https://copperline.dev/",
-      "summary": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确） 。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
-      "content": "Copperline是一个完全用Rust编写的Amiga模拟器。它旨在忠实地再现原始硬件的操作，精确仿真到时钟周期的水平（周期精确）\n。其模块化架构便于开发，并且可以模拟机器的主要组件，例如CPU、Copper、Blitter、Paula和CIA。",
-      "originalContent": "Copperline est un émulateur Amiga écrit entièrement en Rust. Il vise à reproduire fidèlement le fonctionnement du matériel d'origine, avec une émulation précise jusqu'au niveau des cycles d'horloge (cycle-accurate). Son architecture modulaire facilite le développement et permet d'émuler les principaux composants de la machine, comme le CPU, le Copper, le Blitter, Paula et les CIA.",
-      "platforms": [],
-      "relatedEmulatorIds": [
-        "copperline_pc"
-      ],
-      "contentHash": "3180c754af3d9eb5a536f3d8dec33bd1128187bc06fbaf864e98e3ae8882267e",
-      "translationPending": false
-    },
-    {
-      "id": "134713",
-      "title": "【街机】MAME 32 bits binaries v0.289",
-      "originalTitle": "[Multi.] MAME 32 bits binaries v0.289",
-      "category": "arcade",
-      "categoryLabel": "街机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T12:01:06Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/134713-multi-mame-32-bits-binaries-v0-289/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/09/sthiryu-transformed.png",
-      "officialUrl": "https://retrodanuart.com/mamexp/",
-      "summary": "StHiryu编译的32位版本的XP兼容MAME现已推出。 从0.249版本开始， MESSUI不再更新，但MAME的MESS部分是可编译的，但没有MAMEUI的特定接口。 官方页面 32位（和64位） MESS二进制文件由我编译。",
-      "content": "StHiryu编译的32位版本的XP兼容MAME现已推出。\n\n从0.249版本开始， MESSUI不再更新，但MAME的MESS部分是可编译的，但没有MAMEUI的特定接口。\n\n官方页面\n32位（和64位） MESS二进制文件由我编译。\n\n我还添加了由我自己编译并与XP兼容的MAME Arcade版本的二进制文件（此处为64位） ：\n为了记录，这些肯定是此提交后限制访问的最后一个XP兼容版本（但不是32位） ，因此限制OSD/Inputs对Vista的访问（鉴于代码）可能根本不是强制性的，但无论如何，事情将继续逐渐中断，它只会延长\n截止日期...我可以通过修补某些东西来延长的截止日期（目前对当前GIT有效） ，但我不知道还要多久...\n请注意， DirectSound已恢复，因此声音在XP下再次工作。请记住在MAME配置文件中选择此API。阅读自述文件。",
-      "originalContent": "Les builds 32 bits de MAME compatibles XP et compilés par StHiryu sont à présent disponibles.\n\nA partir de la version 0.249, MESSUI n'est plus mis à jour, reste que la partie MESS de MAME est compilable mais sans l'interface particulière de MAMEUI.\n\nPage Officielle\n\nLes binaires de MESS 32 bits (et 64 bits) sont compilés par moi-même.\n\nJ'ajoute également le binaire de MAME version Arcade (64 bits ici), compilé par moi-même et compatible XP:\n\nPour info, il s'agit certainement des derniers builds compatibles XP (mais pas 32 bits) suite à ce commit qui en limite l'accès, alors ce n'était probablement pas obligatoire du tout de limiter l'accès de l'OSD/Inputs à Vista (au vu du code) mais bon comme de toute façon les choses continueront à ce casser progressivement ca ne serait que prolonger l'échéance...échéance que je pourrai peut-être allonger en bricolant un truc (qui fonctionne pour l'instant avec le GIT en cours) mais pour combien de temps encore, je l'ignore...\n\nNotez que DirectSound a été restauré, le son fonctionne donc de nouveau sous XP. N'oubliez pas de sélectionner cet API dans le fichier de config de MAME. Lire le readme.",
-      "platforms": [],
-      "relatedEmulatorIds": [
-        "mame_pc",
-        "mame_gw_core",
-        "mame_arcadia_pc",
-        "mame_chip8_pc",
-        "mame_tamagotchi_pc",
-        "mame_apple2",
-        "mame_pc88",
-        "mame_pc98"
-      ],
-      "contentHash": "a2cee756a5305fd2bc2fe37c8d149bd8dca7878712377956e6eeb69e070ef6ff",
-      "translationPending": false
-    },
-    {
-      "id": "136343",
-      "title": "【家用机】DuckStation v0.1 r260829",
-      "originalTitle": "[Consoles de salon] DuckStation v0.1 r260829",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T10:24:21Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136343-consoles-de-salon-duckstation-v0-1-r260829/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/duckstation-lomax.png",
-      "officialUrl": "https://github.com/stenzek/duckstation",
-      "summary": "这是PlayStation One的最好的模拟器,在前面 ePSXe et pSX. 特征 : • 编译器/JIT CPU(x86-64,arv7/AArch32,AArch64,RISC-V/RV64). • 制造与D3D11、D3D12、OpenGL、Vulkan和Metal API兼容的硬件。 • 缩放、过滤的硬件渲染引擎中的真实(24位)纹理和颜色。 • PGXP,用于几何精确度、纹理校正和深度缓冲模拟。",
-      "content": "这是PlayStation One的最好的模拟器,在前面 ePSXe et pSX.\n\n特征 :\n• 编译器/JIT CPU(x86-64,arv7/AArch32,AArch64,RISC-V/RV64).\n• 制造与D3D11、D3D12、OpenGL、Vulkan和Metal API兼容的硬件。\n• 缩放、过滤的硬件渲染引擎中的真实(24位)纹理和颜色。\n• PGXP,用于几何精确度、纹理校正和深度缓冲模拟。\n• 通过Rasterizer Order Views/Flagment Shader Interlock进行精密混合。\n• 物理渲染发动机中的纹理替换系统。\n• 软件矢量化和多条线化。\n• 适应运动。\n• 适应性子取样过滤器。\n• 为垂直或“TETE”射击装置进行屏幕旋转。\n• 后处理的荫影链(GLSL、Reshade FX和Slang预设)。\n• 围绕游戏内容显示的装饰边框。\n^ \"快速启动\"忽略BIOS内幕。\n• 支持状态备份,及早执行和恢复。\n• 与Windows、Linux和macOS兼容。\n• 从CD、bin/cue图像、原始bin/img文件直接播放, MAME CHD,单轨ECM,MDS/MDF,CCD和未加密的PBP格式。\n• 在RAM中预装磁盘图像,以避免由于磁盘亭而中断。\n· 将列表/grill中的多盘游戏与共享内存卡融合。\n• 自动加载/应用PPF补丁。\n• 直接启动土生土长可执行文件。\n• 直接装入便携式声音格式(psf)文件。\n• 音速耗尽时,音量会随时间推移而拉长。\n• 支持数字和模拟控制器(向主机传送回力)。\n• 火炮和Justifier火炮支援(类似使用)。\n• 支持NeGcon控制器。\n• 控制器预设和游戏配置。\n• Qt用户界面和大图片模式。\n• 自动更新预览和稳定的频道。\n• 自动内容分析——标题/标题 redump.org.\n• 每场游戏可选择自动切换记忆卡。\n• 骗局从现有清单中得到支持。\n• 记忆卡编辑器和备用进口商。\n• 模拟超时CPU。\n• 远程综合调试。\n• 多塔普控制器支持(最多8个设备)。\n• 重新整合\n• 存在丰富迪斯科德。\n• 通过媒体基金会(Windows)和FFmpeg(所有平台)获取视频。\n• 免费照相机功能。\n• 通过平行端口模拟弹匣。\n\n系统要求:\n• Windows 10/11(7/8/8.1 Linux (附录/Flatpak), macOS.\n• CPU比土豆快。 但必须是x86_64,AArch32/armv7,AArch64/ARMv8或RISC-V/RV64.\n• 能够打开GL的GPU 3.1 / OpenGL ES 软件 3.1 / Direct3D 11 功能级别 10.0 / 武尔坎语 1.0. 所以,基本上,在过去的十年里, 任何事情都做了。\n• SDL,XInput或DInput兼容控制器(如XB360/XBOne/XBSeries). DualShock 3在Windows上的用户需要安装包含在PlayStation Now中的官方DualShock 3驱动程序。\n\n改进措施包括:\n\n预览构建 :\n• 处理模糊/过渡的预先轮换(施滕策克)\n\n稳定构建(或滚动发布) :\n• 骗局:固定导入半断裂文件\n• Qt:纠正一些机器翻译错误\n• Qt:在内存查看器中纠正错误的突出显示\n• Qt: 添加缺失图标以欺骗导入弹出\n• 全屏UI:在屏幕上添加键盘\n• FullscreenUI: 在一些弹出对话框上修复初始输入而不激活\n• 全屏UI:为 D- Pad 添加缺失的 PS 图标\n• ImGuiManager:删除主机: BeginText 输入( )\n• 成就:添加丰富的显示器调试设置\n• 全屏UI:增加价值背景的增量\n• 系统:启动时固定初始捕获模式\n• 全屏UI:装入屏幕,另列绘图列表\n• 系统:改进游戏设置重装工作流程\n• 系统:持久设置接口对象\n• Qt: 编辑游戏特定控制器配置时修改窗口标题\n• PageFaultHandler:将SA_NODEFER也设置在MacOS上\n• PageFaultHandler:在MacOS ARM64上确定ESR的书写旗帜\n• CPU:确保内存代码页在核心线程上无效\n• CPU/CodeCache:用于处理器执行核心线程的惯性\n• PageFaultHandler:删除例外处理器 mutex\n• 全屏UI:修复编译警告\n• Qt:更新机器翻译\n• GameDB:Sentou Kokka - 空地战\n• CDROM:减少中断的延迟\n• dep/rcheevos:跳跃至 f1417fb\n• ImGui Overlays:在保存状态选择器关闭时清除列表\n• GPUDevice:不要在同一框架尾巴下立即修剪纹理\n• ImGuiOverlays:添加动画以保存状态选择器\n• ImGuiOverlays:在设备开关上关闭保存状态选择器\n• GameDB:为超越未来添加HASH(# 3782)\n• 公共汽车:在禁用 Dev 记录时修补CPE 解析\n• LRUCACHE:在添加时未遵守的修复 m_manual_evict\n• LRUCACH:添加客户删除器覆盖\n• 全屏UI:删除共享的用户\n• 杂项:在显示时间戳时使用相对时间\n• GameDB:为多个游戏添加散列(# 3784)\n• Qt:改进意大利语翻译(#3783)\n• dep/rcheevos:替换rc_json_get_datetime()中使用scanf()\n• Qt:再次更新意大利语翻译(# 3785)\n• 成绩:在提交时间提示时使用标题格式\n• 系统:确保在装入状态前确定成绩游戏\n• Atualização Português do Brasil (# 3787)\n• GPU/TextureCache:在GPU线上读取的固定 CPU 线程\n• GPU/ TextureCache: 固定最后一个_ vram_ write and number_splits 不序列化\n• GPU/TextureCache:限制保存到状态的上传量\n• 系统:启用时保留纹理缓存状态内存\n• GameDB:重罪11-79/Runaabout\n• MediaCapture:在 OSD 中显示文件大小\n• 主机:修复断裂的相对时间复数\n• 主机:将全屏UI相对时间变体与主机合并\n• Qt:增加翻译更新和清理脚本\n• CI:确保应请求清理翻译\nưμ㼯A\n• SQLite帮助者:添加宾德Int64()/ColumnInt64()\n• 全屏UI:允许空页脚阵列组件\n• 成就:地方非正式成就的跟踪\n• PageFaultHandler:在Linux ARM64上阅读ESR\n• 数据:更新SDL游戏控制器数据库\n• Qt:澄清retroAchievements登录消息\n• Qt: 使用 variadic arg() 而不是连锁多重引用\n• Qt: 子菜单中与工具栏有关的菜单项(# 3789)\n• Qt:更新机器翻译\n• 最新情况 duckstation-qt_es.ts (#3786)\n• 测试:修复使用测试楼\n• 记忆标记:将全宽字符替换为 ASCII\n• CDImage QS: 修正由于路径空而无法检测的游戏\n• 全屏UI:修正倒置参数\n• CDImage:用路径替换文件名标识\n• 西班牙文(西班牙)翻译更新2026/08/25(# 3790)\n• 意大利语翻译最新情况(# 3791)\n• Qt: 确定游戏列表中的位置区域\n• 全屏UI:以批量模式修复欺骗菜单热键\n• Qt:启用未扫描文件的校验\n• ImGuiManager:微软OSD及时消退\n\n[wpfilebase标签=file id=8213 tpl=simple3/] (中文(简体) ).",
-      "originalContent": "Il s'agit du meilleur émulateur de PlayStation One, devant ePSXe et pSX.\n\nCaractéristiques:\n- Recompilateur/JIT CPU (x86-64, armv7/AArch32, AArch64, RISC-V/RV64).\n- Rendu matériel compatible avec les API D3D11, D3D12, OpenGL, Vulkan et Metal.\n- Mise à l’échelle, filtrage des textures et couleurs vraies (24 bits) dans les moteurs de rendu matériels.\n- PGXP pour la précision géométrique, la correction des textures et l’émulation du tampon de profondeur.\n- Mélange précis via Rasterizer Order Views / Fragment Shader Interlock.\n- Système de remplacement de textures dans les moteurs de rendu matériels.\n- Rendu logiciel vectorisé et multi-threadé.\n- Désentrelacement adaptatif au mouvement.\n- Filtre de sous-échantillonnage adaptatif.\n- Rotation d’écran pour les jeux de tir verticaux ou en mode \"TATE\".\n- Chaînes de shaders de post-traitement (GLSL, Reshade FX et préréglages Slang).\n- Bordures décoratives affichées autour du contenu du jeu.\n- \"Démarrage rapide\" pour ignorer l’intro du BIOS.\n- Prise en charge des sauvegardes d’état, avec exécution anticipée et rembobinage.\n- Compatible avec Windows, Linux et macOS.\n- Lecture directe depuis CD, images bin/cue, fichiers bin/img bruts, MAME CHD, ECM à piste unique, MDS/MDF, CCD et formats PBP non chiffrés.\n- Préchargement des images disque en RAM pour éviter les interruptions dues à la mise en veille du disque.\n- Fusion des jeux multi-disques dans la liste/grille avec cartes mémoire partagées.\n- Chargement/application automatique des patchs PPF.\n- Démarrage direct des exécutables homebrew.\n- Chargement direct des fichiers Portable Sound Format (psf).\n- Audio étiré dans le temps lors de l’exécution hors de la vitesse 100 %.\n- Prise en charge des manettes numériques et analogiques (le retour de force est transmis à l’hôte).\n- Support des pistolets GunCon et Justifier (simulés à la souris).\n- Support de la manette NeGcon.\n- Préréglages de manette et configuration par jeu.\n- Interface utilisateur Qt et mode \"Big Picture\".\n- Mises à jour automatiques avec canaux preview et stable.\n- Analyse automatique du contenu — titres/hachages fournis par redump.org.\n- Commutation automatique optionnelle des cartes mémoire par jeu.\n- Prise en charge des cheats à partir de listes existantes.\n- Éditeur de carte mémoire et importateur de sauvegardes.\n- Overclocking CPU émulé.\n- Débogage intégré et à distance.\n- Support des manettes multitap (jusqu’à 8 appareils).\n- Intégration RetroAchievements.\n- Présence enrichie Discord.\n- Capture vidéo via Media Foundation (Windows) et FFmpeg (toutes plateformes).\n- Fonction de caméra libre.\n- Émulation de cartouches via port parallèle.\n\nConfiguration requise:\n- Windows 10/11 (7/8/8.1 ici), Linux (AppImage/Flatpak), macOS.\n- Un CPU plus rapide qu'une patate. Mais il doit être x86_64, AArch32/armv7, AArch64/ARMv8 ou RISC-V/RV64.\n- Un GPU capable de OpenGL 3.1 / OpenGL ES 3.1 / Direct3D 11 niveau de fonctionnalité 10.0 / Vulkan 1.0. Donc, en gros, n’importe quoi fabriqué au cours des 10 dernières années.\n- Une manette compatible SDL, XInput ou DInput (par exemple XB360/XBOne/XBSeries). Les utilisateurs de DualShock 3 sous Windows devront installer les pilotes officiels DualShock 3 inclus dans PlayStation Now.\n\nLes améliorations sont:\n\nPreview Build:\n- Fix prerotation handling with blur/transitions (Stenzek)\n\nStable Build (or rolling release):\n- Cheats: Fix importing semi-broken files\n- Qt: Fix some machine translation errors\n- Qt: Fix incorrect highlight in memory viewer\n- Qt: Add missing icons to cheat import popup\n- FullscreenUI: Add on-screen keyboard\n- FullscreenUI: Fix initial input not activating on some popup dialogs\n- FullscreenUI: Add missing PS icon for D-Pad\n- ImGuiManager: Remove Host::BeginTextInput()\n- Achivements: Add rich presence monitor debug setting\n- FullscreenUI: Increase padding on value backgrounds\n- System: Fix initial capture mode on start\n- FullscreenUI: Render loading screen with separate draw list\n- System: Improve game setting reload workflow\n- System: Persist settings interface objects\n- Qt: Fix window title when editing game specific controller config\n- PageFaultHandler: Set SA_NODEFER on MacOS as well\n- PageFaultHandler: Determine write flag from ESR on MacOS ARM64\n- CPU: Ensure RAM code pages are invalidated on core thread\n- CPU/CodeCache: Assert that handlers execute on core thread\n- PageFaultHandler: Remove the exception handler mutex\n- FullscreenUI: Fix compiler warning\n- Qt: Update machine translations\n- GameDB: Sentou Kokka - Air Land Battle\n- CDROM: Reduce pause-while-paused delay\n- dep/rcheevos: Bump to f1417fb\n- ImGuiOverlays: Clear list on save state selector close\n- GPUDevice: Don't immediately trim textures queued in same frame\n- ImGuiOverlays: Add animation to save state selector\n- ImGuiOverlays: Close save state selector on device switch\n- GameDB: Add HASH for Beyond the Beyond (#3782)\n- Bus: Fix CPE parsing when dev logging is disabled\n- LRUCache: Fix m_manual_evict not respected when adding\n- LRUCache: Add custom deleter override\n- FullscreenUI: Remove shared_ptr usage\n- Misc: Use relative time when displaying timestamps\n- GameDB: Add hashes for multiple games (#3784)\n- Qt: Improve Italian translation (#3783)\n- dep/rcheevos: Replace usage of sscanf() in rc_json_get_datetime()\n- Qt: Update Italian translation again (#3785)\n- Achievements: Use title format in submit time tooltip\n- System: Ensure achievements game is identified before loading state\n- Atualização Português do Brasil (#3787)\n- GPU/TextureCache: Fix CPU thread read on GPU thread\n- GPU/TextureCache: Fix last_vram_write and num_splits not being serialized\n- GPU/TextureCache: Limit the amount of uploads saved to state\n- System: Reserve state memory for texture cache when enabled\n- GameDB: Felony 11-79/Runabout\n- MediaCapture: Show file size in OSD\n- Host: Fix broken relative time plurals\n- Host: Merge FullscreenUI relative time variant with Host\n- Qt: Add translation update and cleanup scripts\n- CI: Ensure translations are cleaned on pull request\n- dep/rcheevos: Add rc_client_set_unofficial_achievement_unlock_state()\n- SQLiteHelpers: Add BindInt64()/ColumnInt64()\n- FullscreenUI: Permit empty footer array component\n- Achievements: Track unlocks of unofficial achievements locally\n- PageFaultHandler: Read ESR on Linux ARM64 as well\n- Data: Update SDL game controller database\n- Qt: Clarify RetroAchievements login message\n- Qt: Use variadic arg() instead of chaining multiple invocations\n- Qt: Group toolbar-related menu items into a submenu (#3789)\n- Qt: Update machine translations\n- Update duckstation-qt_es.ts (#3786)\n- Tests: Fix util-tests building\n- MemoryCardImage: Replace full-width characters with ASCII\n- CDImageMDS: Fix games not detecting due to empty path\n- FullscreenUI: Fix inverted parameters\n- CDImage: Replace filename identifier with path\n- Spanish (Spain) translation update 2026/08/25 (#3790)\n- Update Italian translation (#3791)\n- Qt: Fix localised disc regions in game list\n- FullscreenUI: Fix cheats menu hotkey in batch mode\n- Qt: Enable verification for unscanned files\n- ImGuiManager: Tweak OSD fade in time\n\n[wpfilebase tag=file id=8213 tpl=simple3 /]",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "duckstation"
-      ],
-      "contentHash": "804ba0cf38bb7a8d7bfa36c3a87b0cea95f4750d961db8e77f0f10377dfe53cb",
-      "translationPending": false
-    },
-    {
-      "id": "136341",
-      "title": "【其他】Hades v1.1.1 Build 260830",
-      "originalTitle": "[Consoles portables] Hades v1.1.1 Build 260830",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T10:22:34Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136341-consoles-portables-hades-v1-1-1-build-260830/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/hades-emu.png",
-      "officialUrl": "https://github.com/Arignir/Hades",
-      "summary": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。 目前，哈迪斯具有以下特点： •良好的准确性 •色彩校正 •快速备份（也称为保存状态） •实时时钟支持（ RTC ） •游戏控制器支持 这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。 新增功能： •修复精度套件。",
-      "content": "Hades是一款正在开发中的任天堂GameBoy Advance模拟器，旨在实现可用性、速度和准确性之间的满意平衡。\n\n目前，哈迪斯具有以下特点：\n\n•良好的准确性\n•色彩校正\n•快速备份（也称为保存状态）\n•实时时钟支持（ RTC ）\n•游戏控制器支持\n\n这是第三个通过用于测试Game Boy Advance系统的AGS老化墨盒基准测试的模拟器。\n\n新增功能：\n\n•修复精度套件。\n•修复MacOS、Windows x64和Windows ARM64上的GitHub操作CI。\n•修复`reset`调试器命令。\n•固定杂项",
-      "originalContent": "Hades est un émulateur de Nintendo GameBoy Advance en cours de développement, il vise à atteindre un équilibre satisfaisant entre convivialité, vitesse et précision.\n\nActuellement, Hades présente les caractéristiques suivantes:\n\n- Une précision décente\n- Correction des couleurs\n- Sauvegarde rapide (également connue sous le nom de Save State)\n- Support de l'horloge en temps réel (RTC)\n- Support des contrôleurs de jeu\n\nC'est le troisième émulateur à passer les benchs de la cartouche AGS Aging Cartridge utilisée pour tester les systèmes Game Boy Advance.\n\nLes nouveautés:\n\n- Fix the accuracy suite.\n- Fix the GitHub action CI on MacOS, Windows x64 and Windows ARM64.\n- Fix the `reset` debugger command.\n- Misc fixes",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [],
-      "contentHash": "40b0da0b21bdaa0c4690fb74fb933f407fa9f7b28bc4b747a0b64e67247bd711",
-      "translationPending": false
-    },
-    {
-      "id": "136336",
-      "title": "【其他】PCSX2 v2.8.0",
-      "originalTitle": "[Console] PCSX2 v2.8.0",
-      "category": "other",
-      "categoryLabel": "其他",
-      "kind": "emulator",
-      "publishedAt": "2026-08-29T09:04:22Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136336-console-pcsx2-v2-8-0/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/pcsx2-fusion.png",
-      "officialUrl": "https://pcsx2.net/",
-      "summary": "此 Playstation 2 模拟器的新版本仅与 Windows 10 兼容。 这里可以看到附有说明的改进报告。 详情如下: • GS/HW:只扩大页面界限重叠(折射pcsx2) • GS/HW:弥补洗涤中的缺陷(违章) • Qt:删除不需要的BPM处理代码(SternXD) • GSRunner:删除不需要的节点(SternXD) • 测试:去掉不需要的根(SternXD) • 全屏UI:执行封面下载支持(SternXD) • Ga…",
-      "content": "此 Playstation 2 模拟器的新版本仅与 Windows 10 兼容。\n\n这里可以看到附有说明的改进报告。\n\n详情如下:\n\n• GS/HW:只扩大页面界限重叠(折射pcsx2)\n• GS/HW:弥补洗涤中的缺陷(违章)\n• Qt:删除不需要的BPM处理代码(SternXD)\n• GSRunner:删除不需要的节点(SternXD)\n• 测试:去掉不需要的根(SternXD)\n• 全屏UI:执行封面下载支持(SternXD)\n• GameList: 如果下载封面前缺少封面目录( SternXD) 创建封面目录\n• Qt: 将游戏列表视图与空游戏列表切换( Adso Castro)\n• Qt/ ImGui:添加剪贴板支持并修正modfier密钥(SternXD)\n• Qt/ ImGui:使用macOS键盘行为(SternXD)\n• Qt: 在控制器绑定标题( Adso Castro) 中显示 multitap 槽名\n• Qt:从控制器绑定标题中删除翻译评论(Adso Castro)\n• Qt:第一个槽也使用多插槽名称(Adso Castro)\n• Qt: 在宏窗口标题块( Adso Castro) 周围添加空白行\n• GameDB: 固定多种(wxvu)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS/DX11:用于uav/rov的再使用框架缓冲优化(光线恐怖分子)\n• GS/DX11:如果没有活跃的潜伏者,则返回卫生组织和正规的“潜伏目标”。\n• GS/DX11:摧毁乌夫资源。\n• ImGuiOverlays:添加缺少的空间以绘制缓冲(约旦图)\n• GameDB:Dragon Quest VIII固定版(约旦Toaster)\n• GH 动作:报告平面杂乱无章的错误(Ty)\n• 修改“GS/GL:在使用峰值时不使用时显示速率”。\n• GS/GL:增加基本的剪辑控制回落。\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS/DX11/GL:确定RT/DS取样危险的采样区域计算。 (TJnotJT)\n• GS/DX11:扩大bb优化命中探测。\n• GS/GL:扩大bb优化命中探测。\n• 第三方:更新D3D12MA至 v3.2.0 (The LastRar) (英语).\n• GS/DX12:实现紧凑对齐(The LastRar)\n• 常见/缩写:将xMovRtoR输入xImpl_Mov操作器(SternXD)\n• FullscreenUI:分区圆形模式(SternXD)的正确默认标签\n• FullscreenUI:将成就页面/日志移动到设置文件(SternXD)\n• 全屏UI:从 Qt (SternXD) 添加一些缺失的设置\n• FullscreenUI:将音量滑动器固定在 Qts 最大 200% (SternXD)\n• 全屏UI:添加模拟控制(jasaaved)\n• 全屏UI:取消对角导航(jasaaved)\n• 全屏UI:修复模拟棒输入破裂(jasaaved)\n• 全屏UI:为Xinput和Dinput添加模拟导航(jasaaved)\n• 全屏UI:在控制器之间共享的固定模拟/dpad导航状态(jasaaved)\n• 全屏UI:清理格式(jasaaved)\n• 全屏UI:修复模拟,要求中性位置重置(jasaaved)\n• Qt:修改状态栏(KamFretoZ)\n• Qt:当Languange改变时,固定状态栏的可见度(KamFretoZ)\n• 成就:简化音效回放(KamFretoZ)\n• Qt/Shortcut:用最近的邻居散射来预览图标(KamFretoZ)\n• Qt/ OSD: 当显示 GPU 用法设置未启用时, 修正未更新的 GPU 统计 (KamFretoZ)\n• Qt:固定格式(KamFretoZ)\n• 成就:按分组和跟踪状态(SternXD)分列的小组领导\n• 杂项:清理COM代码(Oleg Tolmatcev)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• Qt: 禁用 VK Rov 屏障对其它渲染器进行切换。 (照明恐怖分子)\n• QT/FSUI:设置ROV默认并移动设置到Graphics>渲染中。 (TJnotJT)\n• OSD:在使用“ 取消/ 选择全部” 按钮时包括“ 显示 GPU 调试信息 ” (Bobby Smith)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• 记忆:修复SysMemory中的打字: 弹出MemoryMap(choticgd)\n• FullscreenUI:在Big Pictures Mode 窗口调整大小(jasaaved)后修复控制器导航\n• GS/HW:调整AA1号线与升级模糊。 (TJnotJT)\n• GS/GL:纠正最近出现的阴暗倒退。\n• 跨1个目录的Ci-deps组的跳跃动作/检查(dependabot[bot])\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• GS/DX12:消除不必要的无人驾驶航空器状态和简单的无约束力纹理。 (TJnotJT)\n• GS/TC:使用有效的重叠检查,准确的Tex是RT匹配(折射pcsx2)\n• GS/HW:日期设置变化。 (点燃恐怖分子)\n• GS/DX11:从GL获得第二次反馈的后港ds rt。\n• Qt/GameListBackground:自动纯游戏列表文本颜色(KamFretoZ)\n• Qt/GameListBackground:自动仅仅是游戏列表类型图标颜色(KamFretoZ)\n• Qt/GameListBackground:半透明制作高清(KamFretoZ)\n• Qt/GameListBackground:小型固定(KamFretoZ)\n• Qt/GameListBackground:减少重点探测(KamFretoZ)\n• Qt/GameListBackground:不要继续重新编码框架(KamFretoZ)\n• Qt:在内存卡列表(SternXD)中添加日期\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS/DX11/DX12:记录中报告ROV支助(约旦Toaster)\n• ImGuiOverlay:在GPU地位上添加ROV(约旦托阿斯特)\n• GameDB:向DB(约旦Toaster)添加AAT建议\n• GameDB:在DB中添加AA1 rec(约旦Toaster)\n• GameDB:各种固定型(约旦托阿斯特)\n• 游戏摘要:重定向 redump.info (约旦)\n• GS/HW:在使用aa1时修理box。\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• IR5900: DUMP_BLOCKS:符号化文本 ptr 相对 (Ziemas)\n• IR3000A:DUMP_BLOCKS:文本相对符号化(齐马斯)\n• IR5900:将 recMemcheck 固定为未缓存加载的正则(齐马斯)\n• IR5900:用SmallString与Zydis formatter(齐马斯)\n• IR3000A:用SmallString与Zydis formatter(齐马斯)\n• 调试器:修复一些未初始化的变量(缺省)\n• AudioStream:不要比较初始化的垫片(choticgd)\n• Qt: 在网格模式下显示完整的游戏标题。 (Devloon)\n• GS/HW:在纹理缓存中使用创建兼容()来传播正确的格式。 (TJnotJT)\n• GS:改变GSTexture:转写为GSTexture:使用(TJnotJT)\n• GS/HW:ROV订正本。\n• GS/HW:ROV激活修订。 (TJnotJT)\n• GS/VK:为无帧缓冲器探测最大支持的帧缓冲尺寸。 (TJnotJT)\n• GS/DX12:Fix DX12 Transpass恢复最佳再基准错误。 (TJnotJT)\n• GS/HW: 更改偏爱的_未使用_文本参数,以便在 GSDevice: FetchSurface () 中选择_使用。 (TJnotJT)\n• GS:在OSD(TJnotJT)中添加GPU管道数据。\n• GameDB: 固定多种(wxvu)\n• GS/HW:Tweak AF 遮阳器(最后一台)\n• GS:如果缓冲宽度增加,则在移动中更新目标TEX0。 (TJnotJT)\n• VTLB:重写 vtlb_ramRead 函数模板(choticgd)\n• PINE:使用自定义的VTLB处理器(choticgd)无法访问页面\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• GameDB:各种Gran Turismo固定型(约旦托阿斯特)\n• GS/DX12:扩大bb优化命中探测。\n• GS/HW:更好地处理一些纹理制作帽子。\n• GS/HW:改进ROV显示行为。 (TJnotJT)\n• GS/HW:如果α测试需要深度反馈,则部队深度ROV。 (TJnotJT)\n• 成就:将软核改为Casual(Mrlinkwii先生)\n• 杂项:另一个COM代码清理(Oleg Tolmatcev)\n• GameDB:去除无声山3中的游戏修饰(Mrlinkwii)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS:更好地处理成形纹理造成的危险。 (点燃恐怖分子)\n• 阻塞:更新SDL3至 v3.4.12 (约旦)\n• GameDB:固定多种(raid273)\n• GameDB:从Mana-Khemia(raid273)中移除cpuSpriteRender\n• GS:MTL:固定纹理旗帜(TellowKrink)\n• GS:MTL:减少不必要纹理重组(TellowKrink)\n• GS:MTL:GPU ROV特征检测(TellowKrink)\n• GS:MTL:ROV执行(TellowKreink)\n• GS:MTL:为RW Textures Tier 1硬件(TellowKrink)添加ROV支持\n• FullscreenUI:将游戏信息和封面艺术移至暂停菜单(SternXD)左上角\n• 全屏UI:在登陆页面上使用当地时间,而不是24小时(SternXD)\n• 成就:改进子集旁栏导航/焦点行为(SternXD)\n• 调试器:允许从符号树上编辑字符串(chaoticgd)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS/DX12:确保无纹理有正确的插槽描述器类型。 (TJnotJT)\n• GS:DX12:正确阴影缓存表中的索引管道。 (TJnotJT)\n• QT:删除图形高级部分的ROV制表台。 (TJnotJT)\n• 第三方:更新CPUInfo以便执行 b1a5d63 (约旦)\n• Deps:将libjpegturbo更新为 3.2.0 (约旦)\n• 第三方:更新Vulkan-headers至 v1.4.356 (约旦)\n• GS:纠正编译器警告。\n• YAML:添加对解析锚的支持,并将其用于 GameDB (Silent)\n• GameDB: 更新 Gran Turismo 条目以使用主机和超载( 静态)\n• Deps:用PlutoVG(The LastRar)恢复MSVC ICE的工作\n• GS/HW:在某些平坦的遮阳箱中使所有顶点颜色相同。 (TJnotJT)\n• Qt: 从快捷键CreationDialog(KamFretoZ) 中创建夫妇加速\n• Qt: 添加创建 PCSX2 设置向导的快捷键选项 (KamFretoZ)\n• Qt/Launcher:修复启动WMClass值(KamFretoZ)\n• Qt:清理设置向导的标签(KamFretoZ)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• 常见:基于ryml的固定装置 < 0.11 (Tellow Krink) (Tellow Krink) (美国英语).\n• Deps/gha:将 Ci-deps 组跳过1个目录并进行2个更新(# 14644)(dependabot[bot])\n• GS/DX:用Primid init输出修复类型。 (TJnotJT)\n• GS:DX:VK:使用无人驾驶航空器时总是作无纹理。 (TJnotJT)\n• GS:从保存 RT (refractionpcsx2) 中将回读图像堆放到传输图像参数\n• [本跳] GitIgnore:忽略凯特项目文件(RedPanda4552)\n• GS:弹幕暗影缓存版。\n• GS/HW:调整只有32bit(折射pcsx2)下的纹理格式的洗涤预检测器\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• USB:日本版《时代危机II》(Bobby Smith)增加GunCon 2值\n• 帕德:修补enum条目检查(Tundrak)\n• 调试器:改进版式编辑器对话框(chaoticgd)\n• GS/OGL:增加补充程序选择器大小(The LastRar)\n• 调试器:改进菜单项的排序(缺省)\n• 调试器:添加带有前后按钮的导航历史(chaoticgd)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS/TC:如果缩小,只有双线抵抗(折射)\n• GS:HW:用首选的纹理迷信旗修复回归。 (TJnotJT)\n• GS/TC:如果仅部分清除目标,不要清除有效旗帜(折射)\n• GS: 制作大小宏缩合表达式(折射pcsx2)\n• GS/HW:在一半为零+改变不匹配的DHC检查(折射pcsx2)时改进清理\n• GS/TC:改进预装(折射)不同格式重叠的处理\n• GS/TC:在包含的目标swizzle不匹配(折射pcsx2)上无效的rgb + alpha\n• USB:复制Virtua Cop 乘以Re-Birth JP版本(RedPanda4552)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• Qt:在打开日志窗口时发出沉默警告(缺音)\n• FullscreenUI:在登录到RA(SternXD)后修复导航损失\n• GS:HW:为时间Z(TJnotJT)修复ROV纹理类型转换\n• ImGui:在保存状态覆盖中修复切除传说(SternXD)\n• GS:增加特殊情况CSM2,改为 \" 火龙区呼吸 \" (折射)\n• GameDB:修复声音RPC的补丁(齐马斯)\n• GameDB:疯狂青蛙赛车固定(约旦托阿斯特)\n• GS:减少绘图缓冲复制(折射pcsx2)\n• GS:在热路径中替换一组指针逻辑(折射pcsx2)\n• GS:优化绘图缓冲指针逻辑和一些小扭矩(折射pcsx2)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• AudioStream:围绕未初始化的立方体读物(缺氧)开展工作\n• ImGuiOverlays:在SW隐藏调试器和ROV状态(约旦Toaster)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• 核心:Fix - Wsign-compare warning in R3000A 口译员(Briella Bugs)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• 第三方:更新LZMA/7zipSDK 26.02 (约旦)\n• Qt: 修正不继承全局的优化框架(SternXD)\n• 全屏UI:曝光缺失设置(SternXD)\n• 全屏UI:与 Qt(SternXD)对齐设置名称\n• FullscreenUI:将成就设置与 Qt(SternXD)对齐\n• Qt:纠正错误的设置密钥(SternXD)\n• 全屏UI:在土司通知中修正图标布局(SternXD)\n• 全屏UI:在所有 ShowToasts (SternXD) 中添加图标\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS:HW:为 VK 深度速率创建添加反馈标记。 (TJnotJT)\n• 阻塞:将 KDDockWidgets 更新到 v2.4.1 (恶作剧)\n• Deps:围绕libjpeg-turbo建设问题开展工作\n• 第三方:更新rcheevos v12.4.0 (标准XD)\n• 第三方:配置 D3D12MemAlloc 在CMake(The LastRar) 下使用 DirectX- headers\n• FSUI:添加游戏列表热键扫描新游戏(KamFretoZ)\n• FSUI:向CPU名称 OSD (KamFretoZ) 添加后退\n• Qt: 降低自定义后灰色缓存的文件大小限制( KamFretoZ)\n• GS/TC:如果预装图像匹配目标参数,更新有效区域(折射pcsx2)\n• GS/TC:只在整页上调整目标起始(折射pcsx2)\n• [本跳 AGENTS.md: init (GovanifY) (英语).\n• [这个跳过] Deps/gha:更新 CI 跳出(# 14769)(dependbot[bot])\n• GS:MTL:固定管道 选择器MTL贴板(TellowKrink)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• 全屏UI:恢复时关闭菜单,打开时隐藏 OSD(SternXD)\n• Qt: 改变盘片时修正重置 VM 的逻辑(缺省)\n• GS/VK:在没有创建设备时解决崩溃问题,Vk是选定的渲染器。 (闪光恐怖分子)\n• GameDB: 添加缺失的游戏和 memcardFilters (Mrlinkwii)\n• GameDB:为一些GITS区域添加缺失的tex。 (点燃恐怖分子)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• Qt: 删除 m_待定_窗口 * (TellowKrink)\n• 微型VU:EATAN系数(缺损)\n• FullscreenUI:在退出和重新进入(jasaaved)后将游戏列表修正为空\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS:HW:只有在启用该选项时,才能在后端启用GPU计时/数据(TJnotJT)\n• GS:DX11:在查询销毁中修复类型。 (TJnotJT)\n• GS/VK:删除未定义的阴影器宏。\n• GS/VK:在交换ROV目标时处理Nvidia问题(The LastRar)\n• GS/DX11:修复无文字的使用。\n• 输入:错误地使用每个标注的装订(jasaaved)修复菜单导航\n• 输入:修复Xinput控制器图标和布局检测(jasaaved)\n• 输入/全屏UI:修复SDL未知控制器图标倒置,并添加缺失的标准/Xbox/任天堂按钮名称表(jasaaved)\n• 输入/全屏UI:添加通用控制格莱弗样式(jasaaved)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• GS: 当OSD GPU停止使用时, 固定状态栏 GPU% (SternXD)\n• GS:VK:如果纹理屏障得到支持,只使用反馈循环布局进行深度。 (TJnotJT)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• GS:当前使用原始模式备份备用绿色缓冲器(折射pcsx2)\n• GS:将顶点复制到新的缓冲器+小扭矩(折射)\n• GS:固定线2Sprites缓冲增长(TellowKrink)\n• GS:修复Vertex缓冲生长(TellowKrink)\n• GS:纠正未使用的变量警告。 (点燃恐怖分子)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• EE/IOP:通过相对路径(齐马斯)修复装填精灵\n• GS/TC:改进RT中RT中单像素重叠检测(折射pcsx2)\n• GS/HW:避免探测洗涤作为目标格式的真相来源(违反pcsx2)\n• GameDB:在Steambot Chronicles(折射pcsx2)中添加优先级的低速修正\n• Qt/macOS:在主窗口保持全屏(SternXD)\n• [本跳 Qt: 更新基础翻译。 (PCSX2 Bot)\n• SPU2:在64位时通过 IOP 周期计数(折射pcsx2)\n• 翻译:同步Crowdin翻译 2.8 (Ty)\n• [本跳]PAD:更新到最新的控制器数据库。 (PCSX2 Bot)\n• 翻译:同步Crowdin翻译(# 14879)(Ty)\n\n这里可提供教程和一组遮阳器(可能与版本不兼容) 2.0 (见A/CN.9/WG.III/WP.83,附件)。 这里和那儿的纹理包,和这里可用的补丁(宽屏幕,修复错误,图像频率等).\n\n如果你想要更多的图形效果,这里有一个站点来解释如何用Reshade和其他遮阳器来定制模拟器。\n\nNB:注意,64位版本现在是唯一可稳定版本。 还建议重新配置所有东西,因为前一个版本和前一个版本之间变化太多。\n\n项目开发站点。",
-      "originalContent": "Nouvelle version de cet émulateur de Playstation 2, celle-ci n'est compatible qu'à partir de Windows 10.\n\nUn rapport des améliorations avec illustrations, est visible ici.\n\nLe détails ci-dessous:\n\n- GS/HW: Only expand overlaps on page boundaries (refractionpcsx2)\n- GS/HW: Fix draw offsets in shuffles (refractionpcsx2)\n- Qt: Remove unneeded BPM handling code (SternXD)\n- GSRunner: Remove noops that aren't needed (SternXD)\n- Tests: remove stubs that aren't needed (SternXD)\n- FullscreenUI: Implement cover download support (SternXD)\n- GameList: Create covers directory if missing before downloading covers (SternXD)\n- Qt: Fix game list view toggle with an empty game list (Adso Castro)\n- Qt/ImGui: Add clipboard support and fix modfier keys (SternXD)\n- Qt/ImGui: Use macOS keyboard behaviors (SternXD)\n- Qt: Show multitap slot names in controller binding titles (Adso Castro)\n- Qt: Remove translator comments from controller binding titles (Adso Castro)\n- Qt: Use multitap slot names for the first slot too (Adso Castro)\n- Qt: Add blank lines around the macro window title block (Adso Castro)\n- GameDB: Various fixes (wxvu)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS/DX11: Reuse frame buffer optimizations for uav/rov. (lightningterror)\n- GS/DX11: Fallback to regular OMSetRenderTargets if no uav are active. (lightningterror)\n- GS/DX11: Destroy uav resources. (lightningterror)\n- ImGuiOverlays: Add missing space to draw buffering (JordanTheToaster)\n- GameDB: Dragon Quest VIII fixes (JordanTheToaster)\n- GHActions: Report flathub cronjob errors to discord (Ty)\n- Revert \"GS/GL: Discard stencil when not in use while using depth.\" (lightningterror)\n- GS/GL: Add basic clip control fallback. (lightningterror)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS/DX11/GL: Fix sample area calculation for RT/DS sampling hazard. (TJnotJT)\n- GS/DX11: Expand the fb optimization hit detection. (lightningterror)\n- GS/GL: Expand the fb optimization hit detection. (lightningterror)\n- 3rdparty: Update D3D12MA to v3.2.0 (TheLastRar)\n- GS/DX12: Enable tight alignment (TheLastRar)\n- Common/Emitter: Inline xMovRtoR into xImpl_Mov operator (SternXD)\n- FullscreenUI: Correct default label for Division Rounding Mode (SternXD)\n- FullscreenUI: Move Achievement page/login to settings file (SternXD)\n- FullscreenUI: Add some missing settings from Qt (SternXD)\n- FullscreenUI: Fix volume sliders to match Qts max 200% (SternXD)\n- FullscreenUI: Add analog control (jasaaved)\n- FullscreenUI: Remove diagonal navigation (jasaaved)\n- FullscreenUI: Fix analog stick input bursting (jasaaved)\n- FullscreenUI: Add analog navigation for Xinput and Dinput (jasaaved)\n- FullscreenUI: Fix analog/dpad nav state shared across controllers (jasaaved)\n- FullscreenUI: Cleanup formatting (jasaaved)\n- FullscreenUI: Fix analog requiring neutral position to reset (jasaaved)\n- Qt: Revamp the status bar (KamFretoZ)\n- Qt: Fix Status Bar visibility when Languange Changes (KamFretoZ)\n- Achievements: Simplify sound effects playback (KamFretoZ)\n- Qt/Shortcut: Use Nearest-Neighbor scaling for icon preview (KamFretoZ)\n- Qt/OSD: Fix GPU stats not updating when Show GPU Usage settings arent enabled (KamFretoZ)\n- Qt: Fix Formatting (KamFretoZ)\n- Achievements: Group leaderboards by subset and tracking state (SternXD)\n- Misc: clean up COM code (Oleg Tolmatcev)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- Qt: Disable VK Rov barrier toggle on other renderers. (lightningterror)\n- QT/FSUI: Set ROV default off and move the settings to Graphics>Rendering. (TJnotJT)\n- OSD: Include \"Show GPU Debug Info\" when using the \"De/Select All\" buttons (Bobby Smith)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- Memory: Fix typo in SysMemory::DumpMemoryMap (chaoticgd)\n- FullscreenUI: Fix controller navigation breaking after Big Picture Mode window resized (jasaaved)\n- GS/HW: Adjust line AA1 blur with upscaling. (TJnotJT)\n- GS/GL: Fix recent aa1 shader regressions. (lightningterror)\n- Bump actions/checkout in the ci-deps group across 1 directory (dependabot[bot])\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- GS/DX12: Remove unnecessary UAV state and simplify texture unbinding. (TJnotJT)\n- GS/TC: Use ValidOverlaps check for exact Tex is RT matches (refractionpcsx2)\n- GS/HW: DATE setup changes. (lightningterror)\n- GS/DX11: Backport ds as rt from GL for depth feedback. (lightningterror)\n- Qt/GameListBackground: Auto adjust gamelist text color (KamFretoZ)\n- Qt/GameListBackground: Auto adjust gamelist type icon color (KamFretoZ)\n- Qt/GameListBackground: Make highlight semi-transparent (KamFretoZ)\n- Qt/GameListBackground: Small fixes (KamFretoZ)\n- Qt/GameListBackground: Make focus detection less agressive (KamFretoZ)\n- Qt/GameListBackground: Dont keep re-encoding frames (KamFretoZ)\n- Qt: Add sorting to memory card list (SternXD)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS/DX11/DX12: Report ROV support in log (JordanTheToaster)\n- ImGuiOverlay: Add ROV to GPU status (JordanTheToaster)\n- GameDB: Add AAT rec to the DB (JordanTheToaster)\n- GameDB: Add AA1 rec to the DB (JordanTheToaster)\n- GameDB: Various fixes (JordanTheToaster)\n- GameSummary: Redirect to redump.info (JordanTheToaster)\n- GS/HW: Fix bbox when using aa1. (lightningterror)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- IR5900: DUMP_BLOCKS: Symbolize text ptr relative (Ziemas)\n- IR3000A: DUMP_BLOCKS: Symbolize text ptr relative (Ziemas)\n- IR5900: fix recMemcheck to not cache loaded reg (Ziemas)\n- IR5900: Use SmallString with Zydis formatter (Ziemas)\n- IR3000A: Use SmallString with Zydis formatter (Ziemas)\n- Debugger: Fix some uninitialized variables (chaoticgd)\n- AudioStream: Don't compare uninitialized padding (chaoticgd)\n- Qt: show full game titles in grid mode. (Devloon)\n- GS/HW: Use CreateCompatible() in texture cache to propagate correct formats. (TJnotJT)\n- GS: Change GSTexture::Type to GSTexture::Usage (TJnotJT)\n- GS/HW: ROV revisions. (TJnotJT)\n- GS/HW: ROV activation revisions. (TJnotJT)\n- GS/VK: Detect max supported framebuffer dimensions for null framebuffer. (TJnotJT)\n- GS/DX12: Fix DX12 renderpass restart optimization rebase error. (TJnotJT)\n- GS/HW: Change prefer_unused_texture parameter to prefer_reuse in GSDevice::FetchSurface(). (TJnotJT)\n- GS: Add GPU pipeline stats to OSD. (TJnotJT)\n- GameDB: Various fixes (wxvu)\n- GS/HW: Tweak AF shader (TheLastRar)\n- GS: Update target TEX0 on a move if buffer width is increased. (TJnotJT)\n- VTLB: Rewrite vtlb_ramRead function template (chaoticgd)\n- PINE: Disallow access to pages with custom VTLB handlers (chaoticgd)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- GameDB: Various Gran Turismo fixes (JordanTheToaster)\n- GS/DX12: Expand the fb optimization hit detection. (lightningterror)\n- GS/HW: Better handle some texture creation hazards. (lightningterror)\n- GS/HW: Improve ROV discard behavior. (TJnotJT)\n- GS/HW: Force depth ROV if alpha test needs depth feedback. (TJnotJT)\n- Achievements: Rename softcore to Casual (Mrlinkwii)\n- Misc: another COM code cleanup (Oleg Tolmatcev)\n- GameDB: remove gamefixes from silent hill 3 (Mrlinkwii)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS: Better handle imgui texture creation hazards. (lightningterror)\n- Deps: Update SDL3 to v3.4.12 (JordanTheToaster)\n- GameDB: Various fixes (raid273)\n- GameDB: Remove cpuSpriteRender from Mana-Khemia (raid273)\n- GS:MTL: Fix texture flags (TellowKrinkle)\n- GS:MTL: Reduce unneccessary texture rebinds (TellowKrinkle)\n- GS:MTL: GPU ROV feature detection (TellowKrinkle)\n- GS:MTL: Implement ROV (TellowKrinkle)\n- GS:MTL: Add ROV support for RW Textures Tier 1 hardware (TellowKrinkle)\n- FullscreenUI: Move game info and cover art to top left of pause menu (SternXD)\n- FullscreenUI: Use locale time on landing page instead of 24 hour (SternXD)\n- Achievements: Improve subset sidebar nav/focus behavior (SternXD)\n- Debugger: Allow strings to be edited from the symbol trees (chaoticgd)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS/DX12: Make sure null texture has correct descriptor type for slot. (TJnotJT)\n- GS:DX12: Index pipelines in correct shader cache table. (TJnotJT)\n- QT: Remove ROV tabstop in graphics advanced section. (TJnotJT)\n- 3rdparty: Update CPUInfo to commit b1a5d63 (JordanTheToaster)\n- Deps: Update libjpegturbo to 3.2.0 (JordanTheToaster)\n- 3rdparty: Update Vulkan-Headers to v1.4.356 (JordanTheToaster)\n- GS: Fix Compiler warnings. (lightningterror)\n- YAML: Add support for resolving anchors, and use it for GameDB (Silent)\n- GameDB: Update Gran Turismo entries to use anchors and overrides (Silent)\n- Deps: Revert workaround for MSVC ICE with PlutoVG (TheLastRar)\n- GS/HW: Make all vertices the same color in certain flat shading cases. (TJnotJT)\n- Qt: Decouple CreateShortcut from the ShortcutCreationDialog (KamFretoZ)\n- Qt: Add Create PCSX2 shortcut option to setup wizard (KamFretoZ)\n- Qt/Launcher: Fix StartupWMClass Value (KamFretoZ)\n- Qt: Clean up Setup Wizard's labels (KamFretoZ)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- common: Fix build on ryml < 0.11 (TellowKrinkle)\n- Deps/gha: Bump the ci-deps group across 1 directory with 2 updates (#14644) (dependabot[bot])\n- GS/DX: Fix typo with primid init output. (TJnotJT)\n- GS:DX:VK: Always make null texture with UAV usage. (TJnotJT)\n- GS: Move readback image dump to Transfer Images parameter from Save RT (refractionpcsx2)\n- [ci skip] GitIgnore: Ignore Kate project files (RedPanda4552)\n- GS: Bump shader cache version. (lightningterror)\n- GS/HW: Adjust shuffle predetect for only texture formats under 32bit (refractionpcsx2)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- USB: Add GunCon 2 values for the Japanese versions of Time Crisis II (Bobby Smith)\n- Pad: Fix enum entries check (Tundrak)\n- Debugger: Improve layout editor dialog (chaoticgd)\n- GS/OGL: Increase padding to fill ProgramSelector size (TheLastRar)\n- Debugger: Improve menu item sorting (chaoticgd)\n- Debugger: Add navigation history with back and forward buttons (chaoticgd)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS/TC: Only bilinear resize depth if downscaled (refractionpcsx2)\n- GS:HW: Fix regression with prefer_reuse texture fetching flag. (TJnotJT)\n- GS/TC: Don't clear valid flags if render target is only partially cleared (refractionpcsx2)\n- GS: Make size macros const expressions (refractionpcsx2)\n- GS/HW: Improve clears when half is zero + alter mismatched DHC lookup (refractionpcsx2)\n- GS/TC: Improve handling of different format overlap in preload (refractionpcsx2)\n- GS/TC: Invalidate rgb + alpha on contained target swizzle mismatch (refractionpcsx2)\n- USB: Copy Virtua Cop offsets to Re-Birth JP version (RedPanda4552)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- Qt: Silence warning when opening log window (chaoticgd)\n- FullscreenUI: Fix nav loss after logging in to RA (SternXD)\n- GS:HW: Fix ROV texture type conversion for temporary Z. (TJnotJT)\n- ImGui: Fix cut off legend in save state overlay (SternXD)\n- GS: Add special case CSM2 read for Breath of Fire Dragon Quarter (refractionpcsx2)\n- GameDB: Patch The Gift to fix sound RPC (Ziemas)\n- GameDB: Crazy Frog Racer fixes (JordanTheToaster)\n- GS: Reduce draw buffer copying (refractionpcsx2)\n- GS: Replace a bunch of pointer logic in hot paths (refractionpcsx2)\n- GS: Optimize draw buffering pointer logic and some small tweaks (refractionpcsx2)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- AudioStream: Work around uninitialized read in cubeb (chaoticgd)\n- ImGuiOverlays: Hide Debug and ROV status in SW (JordanTheToaster)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- Core: Fix -Wsign-compare warning in R3000A Interpreter (Briella Bugs)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- 3rdparty: Update LZMA/7zipSDK to 26.02 (JordanTheToaster)\n- Qt: Fix Optimal Frame Pacing not inheriting from global (SternXD)\n- FullscreenUI: Expose missing settings (SternXD)\n- FullscreenUI: Align setting names with Qt (SternXD)\n- FullscreenUI: Align Achievements settings layout with Qt (SternXD)\n- Qt: Fix incorrect setting keys (SternXD)\n- FullscreenUI: Fix icon layout in toast notifications (SternXD)\n- FullscreenUI: Add icons to all ShowToasts (SternXD)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS:HW: Add feedback flags for VK depth stencil creation. (TJnotJT)\n- Deps: Update KDDockWidgets to v2.4.1 (chaoticgd)\n- Deps: Work around libjpeg-turbo build issue (chaoticgd)\n- 3rdparty: Update rcheevos to v12.4.0 (SternXD)\n- 3rdparty: Configure D3D12MemAlloc to use DirectX-Headers under CMake (TheLastRar)\n- FSUI: Add gamelist hotkey to scan for new games (KamFretoZ)\n- FSUI: Add Fallback to CPU Name OSD (KamFretoZ)\n- Qt: Decrease File Size Limit for Custom Backgroudn Cache (KamFretoZ)\n- GS/TC: If preloaded image matches target parameters, update valid area (refractionpcsx2)\n- GS/TC: Only adjust target start on full pages (refractionpcsx2)\n- [ci skip] AGENTS.md: init (GovanifY)\n- [ci skip] Deps/gha: Update CI deps (#14769) (dependabot[bot])\n- GS:MTL: Fix PipelineSelectorMTL padding (TellowKrinkle)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- FullscreenUI: Close menus on resume, hide OSD while open (SternXD)\n- Qt: Fix logic for resetting the VM when changing discs (chaoticgd)\n- GS/VK: Fix crash when no device is created and vk is the selected renderer. (lightningterror)\n- GameDB: add missing games and memcardFilters (Mrlinkwii)\n- GameDB: Add missing tex in rt for some GITS regions. (lightningterror)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- Qt: Remove m_pending_window* (TellowKrinkle)\n- MicroVU: Unjumble EATAN coefficients (chaoticgd)\n- FullscreenUI: Fix game list appearing empty after exiting and re-entering (jasaaved)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS:HW: Only enable GPU timing/stats in backend if the option is enabled. (TJnotJT)\n- GS:DX11: Fix typo in query destruction. (TJnotJT)\n- GS/VK: Remove undefined unused shader macro. (lightningterror)\n- GS/VK: Workaround Nvidia issue when swapping ROV targets (TheLastRar)\n- GS/DX11: Fix uav null_texture usage. (lightningterror)\n- Input: Fix menu navigation incorrectly using per-profile bindings (jasaaved)\n- Input: Fix Xinput controller icon and layout detection (jasaaved)\n- Input/FullscreenUI: Fix SDL unknown-controller icon fallback and add missing Standard/Xbox/Nintendo button name tables (jasaaved)\n- Input/FullscreenUI: Add Generic controller glyph style (jasaaved)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- GS: Fix status bar GPU % when OSD GPU usage is off (SternXD)\n- GS:VK: Only use feedback loop layout for depth if texture barrier is supported. (TJnotJT)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- GS: Use current primitive mode for backing up spare vert buffers (refractionpcsx2)\n- GS: Improve vertex copy over to new buffer + small tweaks (refractionpcsx2)\n- GS: Fix Lines2Sprites buffer growth (TellowKrinkle)\n- GS: Fix Vertex Buffer Growth (TellowKrinkle)\n- GS: Fix unused variable warning. (lightningterror)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- EE/IOP: Fix loading elf's through relative path (Ziemas)\n- GS/TC: Improve single pixel overlap detection in RT in RT (refractionpcsx2)\n- GS/HW: Avoid detecting shuffles as source of truth for target format (refractionpcsx2)\n- GameDB: Add Prioritize Lower depth fix to Steambot Chronicles (refractionpcsx2)\n- Qt/macOS: Keep Fullscreen on the main window (SternXD)\n- [ci skip] Qt: Update Base Translation. (PCSX2 Bot)\n- SPU2: Pass IOP cycle count at 64bit (refractionpcsx2)\n- Translations: Sync Crowdin translations for 2.8 (Ty)\n- [ci skip] PAD: Update to latest controller database. (PCSX2 Bot)\n- translations: Syncing Crowdin translations (#14879) (Ty)\n\nUn tutorial est disponible ici et un pack de shaders là (probablement incompatible avec les versions 2.0 et supérieur). Pack de textures ici et là, et Patchs disponibles ici (écran large, correction de bugs, fréquence d’images, etc).\n\nEt si vous voulez davantage d'effets graphiques, un site expliquant comment customiser l'émulateur avec Reshade et autre shaders, est disponible ici.\n\nNB: Notez que la version 64 bits est à présent la seule version stable possible. Il est également recommandé de tout reconfigurer car les changements sont trop nombreux entre la précédente version et celle-ci.\n\nSite de développement du projet.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "pcsx2_pc"
-      ],
-      "contentHash": "904e230a081a51434b756e3e4a6a5521f3b55b3b4502d594128c5bd3fbc67653",
       "translationPending": false
     }
   ]
