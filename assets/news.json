@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T08:24:33.700815Z",
+  "generatedAt": "2026-11-28T20:33:58.969028Z",
   "retentionDays": 90,
   "source": {
     "name": "Emu-France",
@@ -9,27 +9,347 @@
   },
   "articles": [
     {
+      "id": "android-release-fbneo_core-latest",
+      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
+      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T19:40:14Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
+      "imageUrl": "asset://assets/emulators/fbneo_core.png",
+      "officialUrl": "https://github.com/finalburnneo/FBNeo",
+      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月28日。点击查看官方版本信息与更新说明。",
+      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• Macos 和 linux 独立端口没有积极维护,可能缺少重要特征,使用我们的 libretro 端口或运行窗口通过葡萄酒/越野来建造 r被认为是这些平台的安全选择\n• 马可斯建筑可能首先需要运行 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 为避免出现 \"FinalBurn Neo 已损坏\"错误\n\n上个晚上以来的承诺\n• d_y2.cpp: socd 支持 (barbudreadmon) (中文(简体) ).",
+      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• d_y2.cpp: socd support (barbudreadmon)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core",
+        "fbneo_neogeo"
+      ],
+      "contentHash": "d7956ae5e5cedc97f0182fbc6cb5d242b6c5c930c3bfb31e4c7b4f1057fb4719",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-armsx2-nightly-20261128",
+      "title": "【Android更新】ARMSX2 nightly-20261128",
+      "originalTitle": "ARMSX2 nightly-20261128 Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T18:40:59Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261128",
+      "imageUrl": "asset://assets/emulators/armsx2.png",
+      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
+      "summary": "ARMSX2 发布 Android 新版本 nightly-20261128，发布日期为2026年11月28日。点击查看官方版本信息与更新说明。",
+      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261128。\n\n发布日期：2026年11月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每一次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64.AppImage,4K,16K和64K页内核相同\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上显示: Linux-arm64-libretro-core.tar.zst\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst (Rocknix和Batocera运行堆肥器,故取而代之的是Qt Appimage).\n• 机器人: Android-arm64.apk (作为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧nightly? 夜行现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:在旧夜里无法稳定地安装。 备份您的保存和内存卡, 解开旧的夜晚, 然后安装稳定的APK.\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n有什么新情况\n• iOS(固定):iOS 27+上的固定播放\n• Katsanva PR #1069的信用代码\n• GS: 防伪复制行道、DATE链和散列缓存限制与延迟抓取复制\n• GS:推迟纯抓取副本和缓存产生的Mip步骤\n• Android:一行游戏不显示它在第一个标签顺序中的位置\n• 缩小分辨率:在Android上默认为67% ARMSX3\n• 沙德决议: RetroArch 百分百、七十五、六十七分百或全尺寸50%的阴影链\n• Android:由RetroAchievements公司自己取名的反光点\n• Android:一行被拖入排列视图的手指后\n• Android:在他们的名片中保存下来,菜单在卷轴上重新打开,一行被拖走,RA键没有同步\n• Android:滑动箭头、可重排的第一个分页、偷看、在分页之间刷取、盘片选择、垂直伸展、倒接点\n• Android:接受来自发射器的VEW型意图\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261126...c727c2d13c973a8144cf5abfb553b060d0c90d01",
+      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64.AppImage, for 4K, 16K and 64K page kernels alike\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- iOS(fix): fixed airplay on iOS 27+\n- Credit katsanva in code for PR #1069\n- GS: guard copy road, DATE chain, and hash cache limits against deferred scratch copies\n- GS: defer plain scratch copies and cache derived mip steps\n- Android: a row a game doesn't show keeps its place in the first tab's order\n- Shader Resolution: 67 percent by default on Android, as on ARMSX3\n- Shader Resolution: the RetroArch shader chain at 100, 75, 67 or 50 percent of full size\n- Android: RetroPoints by RetroAchievements' own name\n- Android: a row dragged in the arrange view follows the finger\n- Android: saves stay in their card, the menu reopens at its scroll, a dragged row stays put, RA key without a sync\n- Android: slider arrows, a reorderable first tab, peek, swipe between tabs, disc choices, Vertical Stretch, RetroPoints\n- Android: accept typed VIEW intents from launchers\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261126...c727c2d13c973a8144cf5abfb553b060d0c90d01",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "armsx2"
+      ],
+      "contentHash": "8aabcdbac1e9c5d5346ea9ea584330d4ad0d56415ddf0637c87da1f58c899dac",
+      "translationPending": false
+    },
+    {
+      "id": "145254",
+      "title": "【街机】SuperModel v0.4 Build 261128",
+      "originalTitle": "[Arcade] SuperModel v0.4 Build 261128",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T18:34:11Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145254-arcade-supermodel-v0-4-build-261128/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/SUPERMODEL-Arcade-Emulateur.png",
+      "officialUrl": "https://github.com/trzy/Supermodel",
+      "summary": "Supermodel 已成为行业领先的模拟器，最初由巴特·特日纳德洛夫斯基（Bart Trzynadlowski）、维尔·林德（Ville Linde）和斯特凡诺·特索（Stefano Teso）开发，旨在高度还原著名世嘉 Model 3 架构的游戏（如《Scud Race》、《Daytona USA 2》、《Le Mans 24》等）。",
+      "content": "Supermodel 已成为行业领先的模拟器，最初由巴特·特日纳德洛夫斯基（Bart Trzynadlowski）、维尔·林德（Ville Linde）和斯特凡诺·特索（Stefano Teso）开发，旨在高度还原著名世嘉 Model 3 架构的游戏（如《Scud Race》、《Daytona USA 2》、《Le Mans 24》等）。\n随着项目的不断发展，贡献者们大大扩展了其功能，实现了对早期街机世代的全面支持，现已涵盖世嘉 Model 1 和世嘉 Model 2 系统（包括所有 2A、2B 和 2C 版本）。\n得益于众多技术优化，包括利用 GPU 加速的现代化图形渲染、对原始处理器和声卡的忠实还原，以及对街机专用控制外设（方向盘、变速箱、操纵杆和光枪）的广泛支持，\nSupermodel 提供特别逼真流畅的模拟体验，让您在最佳条件下重温世嘉街机的经典游戏。\n\n• 旧版参考资料 [此处/",
+      "originalContent": "Supermodel s'impose comme l'émulateur de référence, initialement développé par Bart Trzynadlowski, Ville Linde et Stefano Teso pour restituer avec une grande fidélité les jeux de la célèbre architecture Sega Model 3 (Scud Race, Daytona USA 2, Le Mans 24, etc.).\n\nAu fil des évolutions du projet, ses contributeurs ont considérablement étendu ses capacités pour intégrer la prise en charge complète des générations d'arcades précédentes, englobant désormais les systèmes Sega Model 1 et Sega Model 2 (avec toutes leurs variantes 2A, 2B et 2C).\n\nGrâce à ses nombreuses optimisations techniques, notamment un rendu graphique moderne exploitant l'accélération GPU, une reproduction fidèle des processeurs et des puces sonores d'origine, ainsi qu'une prise en charge étendue des périphériques de contrôle spécifiques aux bornes d'arcade (volants, boîtes de vitesses, manches de vol et pistolets optiques), Supermodel offre une expérience d'émulation particulièrement fidèle et fluide, permettant de retrouver les grands classiques de l'arcade Sega dans des conditions optimales.\n\n- Anciennes références [ici/",
+      "platforms": [],
+      "relatedEmulatorIds": [
+        "supermodel_pc"
+      ],
+      "contentHash": "b5486a2c37642447da65015fcbb40e3c8bd199fdf621cd2f25c90a61049e5f3e",
+      "translationPending": false
+    },
+    {
+      "id": "145252",
+      "title": "【家用机】OpenCDi v0.4.3",
+      "originalTitle": "[Consoles de salon] OpenCDi v0.4.3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T18:23:25Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145252-consoles-de-salon-opencdi-v0-4-3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/opencdi.png",
+      "officialUrl": "https://github.com/sigsantilio/opencdi",
+      "summary": "OpenCDi 是使用 Rust 开发的飞利浦 CD-i 游戏机的开源模拟器。其目标是重现原版硬件的功能，包括处理器、视频系统、音频和 CD 播放。它还支持用于播放 MPEG-1 视频的数字视频卡（DVC）。 功能： • CPU：飞利浦 SCC68070 仿真，具备 68000/68010 指令、内部定时器、UART 和 DMA。",
+      "content": "OpenCDi 是使用 Rust 开发的飞利浦 CD-i 游戏机的开源模拟器。其目标是重现原版硬件的功能，包括处理器、视频系统、音频和 CD 播放。它还支持用于播放 MPEG-1 视频的数字视频卡（DVC）。\n\n功能：\n• CPU：飞利浦 SCC68070 仿真，具备 68000/68010 指令、内部定时器、UART 和 DMA。\n• 视频：模拟飞利浦 MCD-212 控制器，具有 A 和 B 平面、硬件背景、CLUT4/7/8 图形模式、7/8 位 RLE、DYUV 和 RGB555，以及逐行执行 ICA/DCA 指令列表。\n• 音频和 CD：CDIC 控制器仿真，支持 CD-DA 音频解码和 A、B、C 级 ADPCM 解码，并原生支持 CHD 镜像。\n• 数字视频：模拟数字视频卡盒 (DVC)，包括 MPEG-1 音频/视频流的硬件解复用、视频解码、通过 MCD-212 进行合成以及呈现时间戳的同步。\n• 外设：68HC05 从微控制器的<em>高级仿真</em>，支持键盘、鼠标和游戏手柄。\n兼容性：《Hotel Mario》可完全游玩，《Striker Pro》则可游玩菜单和音频。《龙穴》（Dragon's Lair）、《第七访客》（The 7th Guest）和《失落的 Eden》（Lost Eden）均可启动并运行，尤其是其视频片段，但兼容性仍不完全。",
+      "originalContent": "OpenCDi est un émulateur open source de la console Philips CD-i, développé en Rust. Il vise à reproduire le fonctionnement du matériel original, notamment le processeur, le système vidéo, l'audio et la lecture des CD. Il prend également en charge le Digital Video Cartridge (DVC), utilisé pour la lecture de vidéos MPEG-1.\n\nFonctionnalités:\n- CPU: émulation du Philips SCC68070, avec instructions 68000/68010, timers internes, UART et DMA.\n- Vidéo: émulation du contrôleur Philips MCD-212, avec plans A et B, fond matériel, modes graphiques CLUT4/7/8, RLE 7/8 bits, DYUV et RGB555, ainsi que l'exécution des listes d'instructions ICA/DCA ligne par ligne.\n- Audio et CD: émulation du contrôleur CDIC, avec décodage audio CD-DA et ADPCM de niveaux A, B et C, et prise en charge native des images de disques CHD.\n- Vidéo numérique: émulation du Digital Video Cartridge (DVC), avec démultiplexage matériel des flux MPEG-1 audio/vidéo, décodage vidéo, composition via le MCD-212 et synchronisation des timestamps de présentation.\n- Périphériques: émulation de haut niveau du microcontrôleur esclave 68HC05, avec prise en charge du clavier, de la souris et des manettes.\n\nCompatibilité: Hotel Mario est entièrement jouable, tandis que Striker Pro permet de jouer avec menus et audio. Dragon's Lair, The 7th Guest et Lost Eden démarrent et exécutent notamment leurs séquences vidéo, avec une compatibilité encore partielle.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "cc93ae033422b3135a1216e480a76e47efb5d0f460acb3b80644c1bf0e08b48d",
+      "translationPending": false
+    },
+    {
       "id": "android-release-duckstation-preview",
       "title": "【Android更新】DuckStation preview",
       "originalTitle": "DuckStation preview Android release",
       "category": "android_update",
       "categoryLabel": "Android更新",
       "kind": "emulator",
-      "publishedAt": "2026-11-28T07:48:24Z",
+      "publishedAt": "2026-11-28T16:26:03Z",
       "sourceName": "EmuHub 版本追踪",
       "sourceUrl": "https://github.com/stenzek/duckstation/releases/tag/preview",
       "imageUrl": "asset://assets/emulators/duckstation.png",
       "officialUrl": "https://github.com/stenzek/duckstation",
       "summary": "DuckStation 发布 Android 新版本 preview，发布日期为2026年11月28日。点击查看官方版本信息与更新说明。",
-      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• b63169f翻译: duckstation-qt_ru.ts (#3834) (bl@ck_m@ge)\n• 更正一些标识名称(Stenzek)（https://github.com/stenzek/duckstation/commit/f733c78fda58753ace6a18eb812a94b1230aface）)\n• 使用描述性函数名称(Stenzek)（https://github.com/stenzek/duckstation/commit/63a0fdbe54ab4089e7c18960a2e77ab6a8077c37）)\n• 撰写 JOY_STAT TX 旗并开始传输时更新( Stenzek)（https://github.com/stenzek/duckstation/commit/4a12cd931f224ebde3ed537634b9deecef6efe74）)\n• 添加垫子/多发试验(斯滕策克)（https://github.com/stenzek/duckstation/commit/c68b5e2f366615c44126d7b31e74fdbebc463b73）)\n• 重新设置时清除 JOY_BAUD(Stenzek)（https://github.com/stenzek/duckstation/commit/7a8bdaf294302826344e66c48252bdba319fc7e1）)\n• 将baud重装因子用于传输时间(Stenzek)（https://github.com/stenzek/duckstation/commit/1d8f71af0c04482b1d8da1b7c16075498df94db2）)\n• 当设备没有 ACK( Stenzek) 时, 发送一个在传输时排队的字节（https://github.com/stenzek/duckstation/commit/457672d21fe8ecc5e88f1ee952aa25ee9abf2dae）)\n• 在收到字节后清除RXEN,而不是将其设定为转让(Stenzek)（https://github.com/stenzek/duckstation/commit/7a2483f3a176bcad12a5ceaa0ef9ed7611d2de6a）)\n• 答复FFFF, 并读取无效扇区(Stenzek)（https://github.com/stenzek/duckstation/commit/19c666ef6651fc59707cc976160855a84f8c9448）)\n• 在字尾字节中报告差的校验和差的部门(Stenzek)（https://github.com/stenzek/duckstation/commit/757b2c10ca2bc843604e42f1354c964ad6079e0a）)\n• 合并成多块 pad.cpp 并修正所有控制器访问( Stenzek)（https://github.com/stenzek/duckstation/commit/e43a1fcb55d9743666f98d56db6b4e2f70185718）)\n• 跳过内存卡状态而不是装入假卡(Stenzek)（https://github.com/stenzek/duckstation/commit/7611735438dde285f65875ba15f02d7d7ef642c3）)\n• 将字节移出(Stenzek)（https://github.com/stenzek/duckstation/commit/2e2205e41e5acd8ddd23b7a240c4cbb4938b8deb）)\n• 增加数字/模拟控制器测试(Stenzek)（https://github.com/stenzek/duckstation/commit/cee941a8554950a2d7411757b4b89bbe12dc617f）)\n• 使用所有六个起动器对齐字节(Stenzek)（https://github.com/stenzek/duckstation/commit/c2a958a4e1018f0579474a4a0e18ebfb3bce8c20）)\n• 遮住44h锁字节而不是忽略其他值(Stenzek)（https://github.com/stenzek/duckstation/commit/b0a0f729b6e74d901c920837cd8818a24c9781de）)\n• 回复其余的配置模式命令(Stenzek)（https://github.com/stenzek/duckstation/commit/b207ca2611ff6a310d839f865e9b01c8665ddb75）)\n• 用ID字节回复未知命令(Stenzek)（https://github.com/stenzek/duckstation/commit/1200cdd6d18a50a7a475334224009455159baa15）)\n• 只以模拟和配置模式发送L3/R3(Stenzek)（https://github.com/stenzek/duckstation/commit/b87c4809b84952cd643354da6684e220a5b5f972）)\n• 修复正在交换的小型/大型电动机振动偏差(Stenzek)（https://github.com/stenzek/duckstation/commit/de8b4d2e0505ccf5c3ed57dde5243f323d4d7d7f）)\n• 清除重置的模拟锁(Stenzek)（https://github.com/stenzek/duckstation/commit/f7f61d790d8757dbf00cc7fd32d0861e8695979c）)\n• 成员默认与设定默认相匹配(Stenzek)（https://github.com/stenzek/duckstation/commit/65bd3e4d0a86667c8bf3786696b39a8a52e02828）)\n• 离开死区时更新两根棍斧(Stenzek)（https://github.com/stenzek/duckstation/commit/e1eecf63c78237cd622b059b8efa1f0150188a84）)\n• 添加其余控制器类型的测试(Stenzek)（https://github.com/stenzek/duckstation/commit/52382dabb5645e42710b8026ac2049634d862493）)\n• 转换到数字模式时保持配置模式(Stenzek)（https://github.com/stenzek/duckstation/commit/b24a90500f5b31a8d952de0942b32ad4d4078439）)\n• 移植模拟控制器配置模式修正(Stenzek)（https://github.com/stenzek/duckstation/commit/a3190d4be682a181a46a4b261480e5dbf785232e）)\n• 修正倒转的按钮状态比特和签名的偏移格式([Stenzek])(https://gi…",
-      "originalContent": "## Commits\n- b63169f: Update duckstation-qt_ru.ts (#3834) (bl@ck_m@ge)\n- Correct some identifier names ([Stenzek](https://github.com/stenzek/duckstation/commit/f733c78fda58753ace6a18eb812a94b1230aface))\n- Use descriptive function names ([Stenzek](https://github.com/stenzek/duckstation/commit/63a0fdbe54ab4089e7c18960a2e77ab6a8077c37))\n- Update JOY_STAT TX flags when writing JOY_DATA and starting a transfer ([Stenzek](https://github.com/stenzek/duckstation/commit/4a12cd931f224ebde3ed537634b9deecef6efe74))\n- Add pad/multitap tests ([Stenzek](https://github.com/stenzek/duckstation/commit/c68b5e2f366615c44126d7b31e74fdbebc463b73))\n- Clear JOY_BAUD on reset ([Stenzek](https://github.com/stenzek/duckstation/commit/7a8bdaf294302826344e66c48252bdba319fc7e1))\n- Apply the baud reload factor to transfer timing ([Stenzek](https://github.com/stenzek/duckstation/commit/1d8f71af0c04482b1d8da1b7c16075498df94db2))\n- Send a byte queued during a transfer when the device doesn't ACK ([Stenzek](https://github.com/stenzek/duckstation/commit/457672d21fe8ecc5e88f1ee952aa25ee9abf2dae))\n- Clear RXEN after receiving a byte instead of setting it on transfers ([Stenzek](https://github.com/stenzek/duckstation/commit/7a2483f3a176bcad12a5ceaa0ef9ed7611d2de6a))\n- Reply FFFF and end reads of invalid sectors ([Stenzek](https://github.com/stenzek/duckstation/commit/19c666ef6651fc59707cc976160855a84f8c9448))\n- Report bad checksums and bad sectors in the write end byte ([Stenzek](https://github.com/stenzek/duckstation/commit/757b2c10ca2bc843604e42f1354c964ad6079e0a))\n- Merge multitap into pad.cpp and fix all-controllers accesses ([Stenzek](https://github.com/stenzek/duckstation/commit/e43a1fcb55d9743666f98d56db6b4e2f70185718))\n- Skip memory card state instead of loading into a dummy card ([Stenzek](https://github.com/stenzek/duckstation/commit/7611735438dde285f65875ba15f02d7d7ef642c3))\n- Save the byte being shifted out ([Stenzek](https://github.com/stenzek/duckstation/commit/2e2205e41e5acd8ddd23b7a240c4cbb4938b8deb))\n- Add digital/analog controller tests ([Stenzek](https://github.com/stenzek/duckstation/commit/cee941a8554950a2d7411757b4b89bbe12dc617f))\n- Use all six actuator alignment bytes ([Stenzek](https://github.com/stenzek/duckstation/commit/c2a958a4e1018f0579474a4a0e18ebfb3bce8c20))\n- Mask the 44h lock byte instead of ignoring other values ([Stenzek](https://github.com/stenzek/duckstation/commit/b0a0f729b6e74d901c920837cd8818a24c9781de))\n- Reply to the remaining config mode commands ([Stenzek](https://github.com/stenzek/duckstation/commit/b207ca2611ff6a310d839f865e9b01c8665ddb75))\n- Reply with the ID byte to unknown commands ([Stenzek](https://github.com/stenzek/duckstation/commit/1200cdd6d18a50a7a475334224009455159baa15))\n- Only send L3/R3 in analog and config mode ([Stenzek](https://github.com/stenzek/duckstation/commit/b87c4809b84952cd643354da6684e220a5b5f972))\n- Fix small/large motor vibration bias being swapped ([Stenzek](https://github.com/stenzek/duckstation/commit/de8b4d2e0505ccf5c3ed57dde5243f323d4d7d7f))\n- Clear the analog lock on reset ([Stenzek](https://github.com/stenzek/duckstation/commit/f7f61d790d8757dbf00cc7fd32d0861e8695979c))\n- Match the member defaults to the setting defaults ([Stenzek](https://github.com/stenzek/duckstation/commit/65bd3e4d0a86667c8bf3786696b39a8a52e02828))\n- Update both stick axes when leaving the deadzone ([Stenzek](https://github.com/stenzek/duckstation/commit/e1eecf63c78237cd622b059b8efa1f0150188a84))\n- Add tests for the remaining controller types ([Stenzek](https://github.com/stenzek/duckstation/commit/52382dabb5645e42710b8026ac2049634d862493))\n- Stay in config mode when switching to digital mode ([Stenzek](https://github.com/stenzek/duckstation/commit/b24a90500f5b31a8d952de0942b32ad4d4078439))\n- Port the AnalogController config mode fixes ([Stenzek](https://github.com/stenzek/duckstation/commit/a3190d4be682a181a46a4b261480e5dbf785232e))\n- Fix inverted button state bits and signed offset formats ([Stenzek](https://gi…",
+      "content": "DuckStation 已发布 Android 最新版本 preview。\n\n发布日期：2026年11月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n提交\n• 添加“ Mute on Focus Loss” 选项( Stenzek)（https://github.com/stenzek/duckstation/commit/47b2db406ddc8f64779bbf0ed871a2b0cbfabb25）)",
+      "originalContent": "## Commits\n- Add 'Mute On Focus Loss' option ([Stenzek](https://github.com/stenzek/duckstation/commit/47b2db406ddc8f64779bbf0ed871a2b0cbfabb25))",
       "platforms": [
         "android"
       ],
       "relatedEmulatorIds": [
         "duckstation"
       ],
-      "contentHash": "30f8eef3cb1d9115fda8f4caa8dde174c5b02d0c630e9c9fb4af6bb6b39b2010",
+      "contentHash": "714dbbaff84f5d354dc644d8415dc6837b125337cc0c6371620d76f633e9837d",
+      "translationPending": false
+    },
+    {
+      "id": "145240",
+      "title": "【工具】NSW-Home v0.1.0",
+      "originalTitle": "[Utilitaires Multi-systemes] NSW-Home v0.1.0",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-28T12:55:05Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145240-utilitaires-multi-systemes-nsw-home-v0-1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/NSW-Home.jpg",
+      "officialUrl": "https://github.com/daniel-madrid-07/NSW-Home",
+      "summary": "NSW-Home 是适用于 PC 的 Nintendo Switch 替代主界面，使用 C++ 开发，旨在尽可能忠实地还原原版主机的体验。通过完全隐藏模拟器窗口并集中管理游戏和用户，该界面可让您重拾熟悉的环境。 该软件兼容 Ryujinx、Ryubing、Kenji-NX、Eden、Suyu 和 Citron，主要提供手柄管理、屏幕截图、存档、更新、DLC、MOD 和作弊码等功能。它还支持反编译游戏和原生 PC 应用程序。",
+      "content": "NSW-Home 是适用于 PC 的 Nintendo Switch 替代主界面，使用 C++ 开发，旨在尽可能忠实地还原原版主机的体验。通过完全隐藏模拟器窗口并集中管理游戏和用户，该界面可让您重拾熟悉的环境。\n该软件兼容 Ryujinx、Ryubing、Kenji-NX、Eden、Suyu 和 Citron，主要提供手柄管理、屏幕截图、存档、更新、DLC、MOD 和作弊码等功能。它还支持反编译游戏和原生 PC 应用程序。\n注：NSW-Home 不是模拟器，而是一个独立的界面，需要兼容的模拟器或反编译的游戏。",
+      "originalContent": "NSW-Home est une interface HOME alternative pour Nintendo Switch sur PC, développée en C++ et conçue pour reproduire aussi fidèlement que possible l'expérience de la console originale. Elle permet de retrouver un environnement familier en masquant complètement les fenêtres des émulateurs et en centralisant la gestion des jeux et des utilisateurs.\n\nCompatible avec Ryujinx, Ryubing, Kenji-NX, Eden, Suyu et Citron, elle propose notamment la gestion des manettes, des captures d'écran, des sauvegardes, des mises à jour, DLC, mods et cheats. Elle prend également en charge les jeux décompilés et les applications PC natives.\n\nRemarque: NSW-Home n'est pas un émulateur, mais une interface indépendante nécessitant un émulateur compatible ou des jeux décompilés.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "bdb02ee06e9b189a58fec7e956e783dd8b91d8309cd562f0d2e5b136de21bf5e",
+      "translationPending": false
+    },
+    {
+      "id": "145237",
+      "title": "【家用机】Gopher64 v1.2.4",
+      "originalTitle": "[Consoles de salon] Gopher64 v1.2.4",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T12:45:41Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145237-consoles-de-salon-gopher64-v1-2-4/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2024/07/gopher64.png",
+      "officialUrl": "https://github.com/gopher64/gopher64/",
+      "summary": "这是一款由 Logan McNaughton（simple64）使用 Rust 编写的 N64 模拟器，其中部分代码来自 mupen64plus 和/或 ares。 目标概述如下： • 性能。作者希望能够在自己的笔记本电脑上使用这款模拟器。 • 易于使用。 • 易于使用。动态重编译器性能出色，但非常难以阅读和理解。该模拟器仅配备 CPU 和 RSP 的解释器。",
+      "content": "这是一款由 Logan McNaughton（simple64）使用 Rust 编写的 N64 模拟器，其中部分代码来自 mupen64plus 和/或 ares。\n\n目标概述如下：\n• 性能。作者希望能够在自己的笔记本电脑上使用这款模拟器。\n• 易于使用。\n• 易于使用。动态重编译器性能出色，但非常难以阅读和理解。该模拟器仅配备 CPU 和 RSP 的解释器。\n此外，它完全使用 Rust（Parallel-RDP 除外）编写，这是一种现代编程语言，其用户数量不断增长。作者尽量避免使用宏，因为宏虽然可以减少代码的重复性，但也会降低代码的可读性。\n\n变更内容如下：\n\n• 改进中断时序\n• 修复了在 Android 系统上存在实体控制器时触摸叠加层隐藏的问题\n• 尝试修复一些 Android 崩溃问题\n• 添加修改或删除控制器配置文件的选项\n• 添加一些针对特定游戏的 ROM 补丁，以克服时序问题（这些补丁适用于少数几款游戏，它们的代码中存在一些非常难以克服的时序问题，除非采用近乎完美的模拟时序）。",
+      "originalContent": "Il s'agit d'un émulateur de N64 écrit en Rust par Logan McNaughton (simple64) et dont certaines portions proviennent de mupen64plus et/ou ares.\n\nLes objectifs en résumé sont les suivants:\n- Performance. L'auteur veux pouvoir utiliser cet émulateur sur son ordinateur portable.\n- Facile à utiliser.\n- Facile de travailler avec. Les recompilateurs dynamiques sont performants mais ils sont très difficiles à lire et à comprendre. Cet émulateur n'aura des interprèteurs que pour le CPU et RSP. De plus, il est entièrement écrit en Rust (en dehors de Parallel-RDP), un langage de programmation moderne dont le nombre d'utilisateurs ne cesse de croître. L'auteur a essayé d'éviter l'utilisation de macros, qui peuvent réduire la répétitivité du code, mais aussi sa lisibilité.\n\nLes changements sont:\n\n- Improve interrupt timing\n- Fix touch overlay hiding on Android when a physical controller is present\n- Attempt to fix some Android crashes\n- Add option to modify or delete controller profile\n- Add some per-game ROM patches to overcome timing challenges (these are for a few games that have races in their code which are very difficult to overcome without near-perfect emulated timing)",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "gopher64"
+      ],
+      "contentHash": "e56fc5e8b7e510ce535b8e2f1600f552ace8f3680b787db0aa1013abd50d13a8",
+      "translationPending": false
+    },
+    {
+      "id": "145230",
+      "title": "【家用机】XSEmu v0.1.1 pre3",
+      "originalTitle": "[Consoles de salon] XSEmu v0.1.1 pre3",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T12:24:00Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145230-consoles-de-salon-xsemu-v0-1-1-pre3/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/XSEmu.png",
+      "officialUrl": "https://github.com/zortos293/XSEmu",
+      "summary": "XSEmu 是一个实验性项目，旨在在 64 位 Windows 10/11 上运行 Xbox Series X|S 游戏。该项目基于 XCL，并不像传统模拟器那样重现主机的硬件：游戏的 x64 代码由 PC 的处理器直接执行，而兼容层则支持库和功能。 控制台特有功能（内核、音频、输入、存储等）。",
+      "content": "XSEmu 是一个实验性项目，旨在在 64 位 Windows 10/11 上运行 Xbox Series X|S 游戏。该项目基于 XCL，并不像传统模拟器那样重现主机的硬件：游戏的 x64 代码由 PC 的处理器直接执行，而兼容层则支持库和功能。\n控制台特有功能（内核、音频、输入、存储等）。\n另一方面，图形部分需要真正的模拟和转换工作：对 D3D12.X API 的调用被适配到 Direct3D 12，为游戏机 RDNA2 架构编译的着色器被重新编译为 DXIL，以便在兼容的 PC 显卡上运行。\n。该项目还集成了可执行文件加载器、虚拟文件系统以及对 Xbox 软件组件的各种重新实现。\nXSEmu 目前仍处于实验阶段，不保证与商业游戏的兼容性。该模拟器特别需要 64 位 Windows 10/11 系统，以及兼容 Direct3D 12、支持 Shader Model 6.6 和 Mesh Shaders 的显卡。\n与 XCL 等简单的兼容层或 AnyPS5 等移植工具不同，XSEmu 提供一个专门用于 Xbox Series X|S 游戏的运行环境，尤其集成了原始可执行文件的加载及其图形和系统环境的转换。\n正是这种方法使其有资格被列入标杆项目。",
+      "originalContent": "XSEmu est un projet expérimental permettant d'exécuter des jeux Xbox Series X|S sur Windows 10/11 64 bits. Basé sur XCL, il ne reproduit pas le matériel de la console comme un émulateur traditionnel: le code x64 des jeux est exécuté directement par le processeur du PC, tandis qu'une couche de compatibilité prend en charge les bibliothèques et fonctionnalités propres à la console (kernel, audio, entrées, stockage, etc.).\n\nLa partie graphique nécessite en revanche un véritable travail d'émulation et de traduction: les appels à l'API D3D12.X sont adaptés à Direct3D 12 et les shaders compilés pour l'architecture RDNA2 de la console sont recompilés en DXIL afin de fonctionner sur les cartes graphiques PC compatibles. Le projet intègre également un chargeur d'exécutables, un système de fichiers virtuel et différentes réimplémentations des composants logiciels de la Xbox.\n\nEncore au stade expérimental, XSEmu ne garantit actuellement aucune compatibilité avec les jeux commerciaux. Il nécessite notamment Windows 10/11 64 bits et une carte graphique compatible Direct3D 12 avec Shader Model 6.6 et Mesh Shaders.\n\nContrairement à une simple couche de compatibilité comme XCL ou à un outil de portage comme AnyPS5, XSEmu propose un environnement d'exécution dédié aux jeux Xbox Series X|S, intégrant notamment le chargement des exécutables originaux et la traduction de leur environnement graphique et système. C'est cette approche qui justifie son référencement parmi les projets d'émulation.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "2489f9d5161ad5fc67ada1ff148b9f99b047d9045128748c012579dd6e510679",
+      "translationPending": false
+    },
+    {
+      "id": "145227",
+      "title": "【街机】FinalBurn Neo EX v1.0",
+      "originalTitle": "[Arcade] FinalBurn Neo EX v1.0",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "tool",
+      "publishedAt": "2026-11-28T12:00:47Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145227-arcade-finalburn-neo-ex-v1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/11/FinalBurn-Neo-EX-Logo-scaled.png",
+      "officialUrl": "https://github.com/hazem-abdelghani/FinalBurn-Neo-EX",
+      "summary": "FinalBurn Neo EX 是适用于 Windows 的原生前端，专为街机模拟器 FinalBurn Neo 而设计。它可用于运行该模拟器支持的街机和家用游戏机游戏，包括 Capcom CPS、SNK Neo Geo、Sega System 16 至 32、Konami、Taito、Cave、Toaplan 等众多系统。 它独立于模拟器开发，使用其 libretro 版本，从专用文件夹动态加载，且不修改模拟器核心。",
+      "content": "FinalBurn Neo EX 是适用于 Windows 的原生前端，专为街机模拟器 FinalBurn Neo 而设计。它可用于运行该模拟器支持的街机和家用游戏机游戏，包括 Capcom CPS、SNK Neo Geo、Sega System 16 至 32、Konami、Taito、Cave、Toaplan 等众多系统。\n它独立于模拟器开发，使用其 libretro 版本，从专用文件夹动态加载，且不修改模拟器核心。它基于 Genesis Plus EX，无需安装，只需运行一个简单的可执行文件即可，其配置文件和数据存储在本地文件夹中。",
+      "originalContent": "FinalBurn Neo EX est un frontend natif pour Windows destiné à l'émulateur d'arcade FinalBurn Neo. Il permet de lancer les jeux d'arcade et de console pris en charge par ce dernier, notamment les systèmes Capcom CPS, SNK Neo Geo, Sega System 16 à 32, Konami, Taito, Cave, Toaplan et bien d'autres.\n\nDéveloppé indépendamment de l'émulateur, il utilise sa version libretro, chargée dynamiquement depuis un dossier dédié, sans modifier le cœur d'émulation. Basé sur Genesis Plus EX, il ne nécessite aucune installation et fonctionne à partir d'un simple exécutable, avec ses fichiers de configuration et ses données stockés dans des dossiers locaux.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "fbneo_core"
+      ],
+      "contentHash": "9c0f801c0ff7d83f1b4fb4ee588beef054095f6e383e20f9d30076e7e5d279f8",
+      "translationPending": false
+    },
+    {
+      "id": "145224",
+      "title": "【街机】ZiNc-EX v1.1.0",
+      "originalTitle": "[Arcade] ZiNc-EX v1.1.0",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "tool",
+      "publishedAt": "2026-11-28T11:30:09Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145224-arcade-zinc-ex-v1-1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/ZiNc_EX_Logo.png",
+      "officialUrl": "https://github.com/hazem-abdelghani/ZiNc-EX",
+      "summary": "这是由 Hazem Abdelghani 开发的街机模拟器 ZiNc 1.1（基于索尼 ZN-1/ZN-2 的街机主板：Capcom、Taito、Namco System 11/12 等）的前端。它是一个独立的小型 .exe 文件，无需安装程序或运行环境（纯 C 语言编程和 Win32 API）。 更新内容： 新版 • CRT 效果（视频）：浅色、经典和弯曲预设，带有扫描线、荧光屏遮罩，弯曲预设还带有略微凸起的屏幕和更暗的角落。",
+      "content": "这是由 Hazem Abdelghani 开发的街机模拟器 ZiNc 1.1（基于索尼 ZN-1/ZN-2 的街机主板：Capcom、Taito、Namco System 11/12 等）的前端。它是一个独立的小型 .exe 文件，无需安装程序或运行环境（纯 C 语言编程和 Win32 API）。\n\n更新内容：\n\n新版\n• CRT 效果（视频）：浅色、经典和弯曲预设，带有扫描线、荧光屏遮罩，弯曲预设还带有略微凸起的屏幕和更暗的角落。启用时，它将取代旧的“扫描线”设置。\n• 整数缩放（视频）：图像高度是游戏机图像的整数倍，因此扫描线保持均匀。使用“拉伸至窗口”时，它将保持 4:3 的比例。\n• 将所有列调整为合适大小：右键单击游戏列表标题，或使用“视图”>“列表列”。\n• 工具栏子菜单（视图）：显示工具栏、显示工具栏标签、显示搜索栏、显示筛选栏和显示状态栏。现在，“显示工具栏标签”下方有一个分隔符。\n• 将鼠标指针悬停在“收藏”星号上。\n\n已更改\n• 启用“CRT 效果”时，“扫描线”将灰显。\n• 将游戏设置恢复为“与全局设置相同”将删除其在游戏设置中的副本。桌面图标使用的副本将保留。\n• 桌面图标和 --game 启动使用全局边框设置。\n\n已修复\n• “收藏”光标不再显示在整个单元格上，而仅显示在星号上。\n• 禁用 CRT 效果的游戏不再从全局设置中获取扫描线。\n• 重置后，桌面图标将保留其自身的输入设置。\n• 加强了设置代码中的内部缓冲区和行数限制。",
+      "originalContent": "Il s'agit d'un frontend pour l'émulateur d'arcade ZiNc 1.1 (cartes d'arcade basées sur Sony ZN-1/ZN-2: Capcom, Taito, Namco System 11/12 et autres) développé par Hazem Abdelghani. Il s'agit d'un unique petit fichier .exe sans programme d'installation ni environnement d'exécution (programmation en C pur et API Win32).\n\nLes changements:\n\nNew\n- CRT Look (Video): Light, Classic and Curved presets with scanlines, a phosphor mask and, for Curved, a slightly bulging screen with darker corners. It replaces the old Scanlines setting while it's on.\n- Integer Scaling (Video): the picture height is a whole multiple of the console picture, so scanlines stay even. With Stretch To Window it keeps 4:3.\n- Size All Columns to Fit: right-click the game list header, or use View > List Columns.\n- Toolbars submenu (View): Show Toolbar, Show Toolbar Labels, Show Search Bar, Show Filter Bar and Show Status Bar. A separator now sits below Show Toolbar Labels.\n- Hand cursor over the Favorite star.\n\nChanged\n- Scanlines is greyed out while CRT Look is on.\n- Setting a game back to \"Same As Global\" deletes its copies in game-settings. The copy used by a desktop icon is kept.\n- Desktop icons and --game launches use the global bezel setting.\n\nFixed\n- The Favorite cursor no longer shows over the whole cell, only over the star.\n- A game with CRT Look Off no longer gets scanlines from the global setting.\n- Desktop icons keep their own input settings after a reset.\n- Hardened internal buffer and row limits in the settings code.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "4e90f419b583fd2f665bd3fce61d85ed2238b6559ba899354041d8652ccda27f",
+      "translationPending": false
+    },
+    {
+      "id": "145222",
+      "title": "【街机】MAME-EX v1.1.0",
+      "originalTitle": "[MAME Support Files] MAME-EX v1.1.0",
+      "category": "arcade",
+      "categoryLabel": "街机",
+      "kind": "tool",
+      "publishedAt": "2026-11-28T11:27:38Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145222-mame-support-files-mame-ex-v1-1-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/MAME_EX_Logo.png",
+      "officialUrl": "https://github.com/hazem-abdelghani/MAME-EX",
+      "summary": "MAME EX是一个非正式的前端 MAME由Hazem Abdelghani开发。 它允许从基于PlayStation架构的系统管理和推出462个街机游戏,包括索尼ZN-1/ZN-2,南科系统10/11/12,Konami GV/System 573等。",
+      "content": "MAME EX是一个非正式的前端 MAME由Hazem Abdelghani开发。 它允许从基于PlayStation架构的系统管理和推出462个街机游戏,包括索尼ZN-1/ZN-2,南科系统10/11/12,Konami GV/System 573等。 Taito G-Net和FX-1A/FX-1B,最终SNK Hyper Neo Geo 64.\n\n在C++17为Windows开发,它提供了包含过滤器和最爱的游戏列表,指令配置,许多视频和音频选项,以及管理 s BIOS,DIP开关和配置备份。 其基础是现有的 MAME 因而不是独立的模仿者。\n\n特征 :\n• 按区域、制造商和流派列出有搜索、最喜爱和过滤功能的游戏清单\n• 游戏设置:BIOS、DIP开关、视频、声音和作弊\n• 配置带有剖面图的密钥和控制器,以及专用于自动射击的一栏\n• 组合与按钮或按钮有关的运动\n• 视频:预设、BGFX、Direct3D和OpenGL的HLSL设置\n• BIOS文件夹、ROM核查、备份和恢复\n• Pegasus,发射盒的前端控制线 RetroBat et Playnite\n• 日志默认在常规标签中被禁用。\n\n变化 :\n\n接口\n• 视图菜单重组:工具栏坐落在工具栏子菜单中,并带有显示工具栏标签选项。\n• 默认新建显示状态栏选项。\n• 过滤器栏现在有一个“Filters:”标签和一个重置按钮。\n• 所有要适应的列的大小可从视图菜单和列标题右键取出。\n• 工具栏选择边缘更平滑。\n• 手光标只显示在最爱的恒星上。\n• 窗口的大小和最大状态。\n\n黑暗主题\n• 菜单栏现在是# 272727。\n• 下放选择为蓝色并有白色文字。\n——\"重新开始应用主题\"现在能用。\n\n命令行 : MAME-EX.exe --game [- 满屏 RetroBat, Playnite 和类似。 出站代码为0、2、3、4、5和6(6个月) MAME 以错误结束。 桌面图标也使用。\n控制:更安全的著作 MAME'cfg\\\\ \\ \\ \\ \\default.cfg,带有一次性备份原作,更自拍固定。\n备份和还原:zip处理更严格,现在包含自动点火文件。\n固定:在装入时重置已保存的样本率, build.bat 现在建筑在Windows上。\n• 过滤窗口:不再作实验标记。",
+      "originalContent": "MAME EX est un frontend non officiel pour MAME, développé par Hazem Abdelghani. Il permet de gérer et de lancer 462 jeux d'arcade issus de systèmes basés sur l'architecture PlayStation, notamment les Sony ZN-1/ZN-2, Namco System 10/11/12, Konami GV/System 573, Taito G-Net et FX-1A/FX-1B, et enfin SNK Hyper Neo Geo 64.\n\nDéveloppé en C++17 pour Windows, il propose une liste de jeux avec filtres et favoris, la configuration des commandes, de nombreuses options vidéo et audio, ainsi que la gestion des BIOS, des DIP switches et des sauvegardes de configuration. Il s'appuie sur une installation existante de MAME et ne constitue donc pas un émulateur indépendant.\n\nFonctionnalités:\n- Liste de jeux avec recherche, favoris et filtres par région, fabricant et genre\n- Réglages par jeu: BIOS, DIP switches, vidéo, son et triches\n- Configuration des touches et manettes avec profils, ainsi qu'une colonne dédiée au tir automatique\n- Combinaisons de mouvements associées à une touche ou un bouton de manette\n- Vidéo: réglages HLSL avec préréglages, BGFX, Direct3D et OpenGL\n- Dossier BIOS, vérification des ROMs, sauvegarde et restauration\n- Ligne de commande du frontend pour LaunchBox, Pegasus, RetroBat et Playnite\n- Les journaux sont désactivés par défaut (activer « Enable Logs » dans l'onglet General)\n\nLes changements:\n\nInterface\n- The View menu is reorganized: toolbars sit in a Toolbars submenu, with a Show Toolbar Labels option.\n- New Show Status Bar option, on by default.\n- The filter bar now has a \"Filters:\" label and a Reset button.\n- Size All Columns to Fit is available from the View menu and the column-header right-click.\n- Toolbar selection edges are smoother.\n- The hand cursor shows only over the favorite star.\n- The window remembers its size and maximized state.\n\nDark theme\n- The menu bar is now #272727.\n- Dropdown selection is blue with white text.\n- \"Restart to apply theme\" now works.\n\nCommand line: MAME-EX.exe --game [--fullscreen | --windowed] for LaunchBox, Pegasus, RetroBat, Playnite and similar. Exit codes are 0, 2, 3, 4, 5 and 6 (6 means MAME ended with an error). Desktop icons use it too.\nControls: safer writes to MAME's cfg\\default.cfg, with a one-time backup of the original, plus autofire fixes.\nBackup and restore: zip handling is stricter, and the autofire file is now included.\nFixes: a saved sample rate was being reset at load, and build.bat now builds on Windows.\n- Filter Window: no longer marked experimental.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [
+        "mame_pc",
+        "mame_gw_core",
+        "mame_arcadia_pc",
+        "mame_chip8_pc",
+        "mame_tamagotchi_pc",
+        "mame_apple2",
+        "mame_pc88",
+        "mame_pc98"
+      ],
+      "contentHash": "6e739a917152a26fbb8c78bae654f32a564802aa63fbeb645abc57ea5350428b",
+      "translationPending": false
+    },
+    {
+      "id": "145219",
+      "title": "【家用机】Kega Fusion EX v3.64 EX1",
+      "originalTitle": "[Consoles de salon] Kega Fusion EX v3.64 EX1",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T11:23:16Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145219-consoles-de-salon-kega-fusion-ex-v3-64-ex1/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/kegaEX.png",
+      "officialUrl": "https://github.com/hazem-abdelghani/Kega-Fusion/",
+      "summary": "Kega Fusion EX是Kega Fusion的修改版 3.64由Steve Snake开发的世嘉控制台模拟器 这道叉由Hazem Abdelghani提出,重组了菜单,并带来了与Windows最新版本的相容性固定。",
+      "content": "Kega Fusion EX是Kega Fusion的修改版 3.64由Steve Snake开发的世嘉控制台模拟器 这道叉由Hazem Abdelghani提出,重组了菜单,并带来了与Windows最新版本的相容性固定。 它特别融入了DxWrapper,将DirectDraw呼叫翻译为Direct3D 9,以将流畅度提高到60 FPS并减少通过全屏时的延迟,以及q Xidi ue,它通过同时使用方向十字和左相模拟棒来改进了XInput控制器的管理。 该接口还被改造为高分辨率(HPC)屏幕。\n\n特征 :\n• 60 FPS的流体模拟和通过DxWrapper的即时全屏(从DirectDraw转换为Direct3D 9)\n• 由于西迪的缘故,同时使用方向十字和左棒与X输入控制器\n• 重新组织菜单(模拟、音频、工具、选项)、最新文件清单和简化视频子菜单\n• 与Windows DPI散开兼容的接口,使用现代本地控制来避免高分辨率屏幕模糊\n• 不需要安装:只需提取文件和运行 Fusion.exe\n\n注释:\n• 为纠正通过全屏时的延迟,在视频菜单中禁用垂直同步(VSync),并设置全屏分辨率到桌面。\n• 未修改的原始可执行文件以名称提供 Fusion_original.exe.\n• 不提供额外的ROM或BIOS;用户必须合法获得游戏。\n\n变化 :\n\n通过 DxWrapper (DirectDraw → Direct3D 9) 平滑 60 FPS + 即时全屏切换\nD-pad 和左接棒通过 Xidi 一起工作 Xput 控制器\n重命名并重命名为 Fusion EX EX.exe(d) 将原建筑与原建筑区分开来——未触及的原建筑列为 Fusion.exe\n为 Fusion 创建新图标和自己的文件版本信息 EX.exe\n重新组织菜单( 模拟、 音频、 工具、 选项) , 包含最近的文件列表和清理视频子菜单\n\n没有安装——取出并运行Fusion EX.exe",
+      "originalContent": "Kega Fusion EX est une version modifiée de Kega Fusion 3.64, l'émulateur de consoles Sega développé à l'origine par Steve Snake. Ce fork, proposé par Hazem Abdelghani, réorganise les menus et apporte des correctifs de compatibilité avec les versions récentes de Windows. Il intègre notamment DxWrapper, qui traduit les appels DirectDraw en Direct3D 9 afin d'améliorer la fluidité à 60 FPS et de réduire le délai lors du passage en plein écran, ainsi que Xidi, qui améliore la gestion des manettes XInput en permettant d'utiliser simultanément la croix directionnelle et le stick analogique gauche. L'interface a également été adaptée aux écrans haute résolution (DPI).\n\nFonctionnalités:\n- Émulation fluide à 60 FPS et passage instantané en plein écran grâce à DxWrapper (conversion de DirectDraw vers Direct3D 9)\n- Utilisation simultanée de la croix directionnelle et du stick gauche avec les manettes XInput grâce à Xidi\n- Menus réorganisés (Emulation, Audio, Tools, Options), liste des fichiers récents et sous-menus vidéo simplifiés\n- Interface compatible avec la mise à l'échelle DPI de Windows, utilisant les contrôles natifs modernes pour éviter le flou sur les écrans haute résolution\n- Aucune installation nécessaire: il suffit d'extraire les fichiers et de lancer Fusion.exe\n\nNotes:\n- Pour corriger le délai lors du passage en plein écran, désactiver la synchronisation verticale (VSync) dans le menu vidéo et régler la résolution plein écran sur celle du bureau.\n- L'exécutable original non modifié est fourni sous le nom Fusion_original.exe.\n- Aucune ROM ni aucun BIOS supplémentaire n'est fourni ; les jeux doivent être obtenus légalement par l'utilisateur.\n\nLes changements:\n\n🎮 Smooth 60 FPS + instant full-screen switching via DxWrapper (DirectDraw → Direct3D 9)\n🕹️ D-pad and left stick work together on XInput controllers via Xidi\n🏷️ Renamed and rebranded as Fusion EX (Fusion EX.exe) to distinguish it from the original — the untouched original build is included as Fusion.exe\n🎨 Brand new icon and proper file version info for Fusion EX.exe\n🪟 Reorganized menus (Emulation, Audio, Tools, Options) with a Recent Files list and tidy Video submenus\n🖥️ DPI-aware UI using modern Windows common controls — no more blurry scaling on high-DPI displays\n📦 No installation — extract and run Fusion EX.exe",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "f4495b5b83063c069ea0ee3977b047949342755c309f50ac766377c5d2205640",
+      "translationPending": false
+    },
+    {
+      "id": "145217",
+      "title": "【家用机】Genesis-Plus EX v3.3.0",
+      "originalTitle": "[Consoles de salon] Genesis-Plus EX v3.3.0",
+      "category": "home_console",
+      "categoryLabel": "家用机",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T11:21:03Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145217-consoles-de-salon-genesis-plus-ex-v3-3-0/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/10/Genesis-Plus-EX-Logo.png",
+      "officialUrl": "https://github.com/hazem-abdelghani/Genesis-Plus-EX/",
+      "summary": "Genesis Plus EX是一款由Hazem Abdelghani开发的Windows仿真器,基于开源核心的: Genesis Plus GX。。。。 这个分叉为Windows提供了一个本土端口,没有了SDL,有多个图形渲染引擎和许多图像过滤器。",
+      "content": "Genesis Plus EX是一款由Hazem Abdelghani开发的Windows仿真器,基于开源核心的: Genesis Plus GX。。。。 这个分叉为Windows提供了一个本土端口,没有了SDL,有多个图形渲染引擎和许多图像过滤器。 它支持Mega Drive/Genesis,Master System,Game Gear,SG-1000,Mega CD/Sega CD,32X和Pico.\n\n特征 :\n- 模拟Mega Drive、Mega CD、32X、Master System、Game Gear、SG-1000和Sega Pico控制台\n- 具体模拟Paprium弹匣芯片和增强音轨(MD+、32++和MSU-MD)\n- 几个渲染引擎:GDI、Direct3D 9和Direct3D 11\n– 众多图形滤镜: Calm2x, Calm3x, Eagle, xBRZ, MPMPX, 扫描线, CRT 口罩和 4x 滤镜\n- 在图形卡上执行的新的缩放滤镜(缩放滤镜)(Nearest, Sharp Neast, Bilinear, Sharp Bilinear, Bicubic),取代了旧的平滑缩放\n- 在Direct3D 11下支持可变刷新(VRR:G-Sync,FreeSync,Adaptive-Sync),以避免没有VSync而撕裂\n- 通过librashader(64位版本)支持.slangp格式的遮蔽器\n– 视频设置: NTSC 过滤器, LCD 重置, 解接, 缩放( 上至 10x), 图像旋转, 图像比, 超扫描和形成锁定选项 调整大小时的 e 窗口\n- 色彩校正模式(颜色校正:Off, Light, Full),用于模拟可移植的液晶显示屏(Game Gear)的显示,并带有重复和周期颜色\n- 音频仿真和忠实处理器:摩托罗拉68000,Z80,SH-2 (32X),Yamaha YM2612 FM芯片,PSG (SN76489)和Pico语音芯片\n- 耳机的几个调频音频核心、等效器、低通口滤波器和新的交叉音效模式(光、中、强)\n- 独立控制发援会的音量(0%至150%)和专用的无声密钥(Ctrl+D),以便在Mega Drive、Mega CD和Pico上隔离调频样轨(声音、冲击)\n- 心脏的新精确度选项 Genesis Plus GX: 增强的平地垂直滚动,锁定-Ups系统和处理器速度(CPU从50%到400%)\n- XInput/DirectInput键盘和控制器的配置(SDL数据库),具有模拟轴管理和棒对角(Wide Strai)的新计算模式。 嗯,甚至8,宽对角)\n- 支持周期附件:多塔普、大鼠、光学手枪(Menacer、Judifield)、活化器和Pico stylus\n- 广泛支持具有可调整的白色相框(光枪边界)的现代火炮(如辛登光枪),用于绘图和定制相机的外屏射击管理 完全取景器(形状、颜色、大小)\n— Sega Pico 交互式显示故事器模块\n- 管理区域编码(美国、日本、欧洲)、显示格式(NTSC 60Hz/PAL 50Hz)并直接推出BIOS光盘\n- 在游戏列表和夹克上可选显示区域旗帜\n- 状态备份,包括预览、可视化管理器、校验和验证以及最后的负载取消\n- 支持内部备份游戏的RAM备份(.srm和.sav文件)\n– 后向函数( 逐步倒转) 并支持 Game Genie and Action Replay 欺骗代码\n- 集成完整调试器:内存查看器(HEX),VDP,有RAM搜索和监视工具(.wch)的声音和CPU\n– 有7个暗主题的自定义界面, 高对比度模式以适应Windows和夹克上的控制台徽\n– 全部Bar Masking 模式( 通过 Ctrl+H 隐藏全部栏) 只显示游戏窗口\n— Factory 重置选项, 不触摸备份或ROM, 将所有参数重置为零\n- ROM浏览器,有封面、最近的文件、自动列宽调整、搜索过滤器和直接启动\n— play ZIP, GZ 和 7Z 存档(包含多盘和ROM 游戏,最多可达 96 MB)\n– 由.po文件(Gettext)提供的多语言支持,具有Windows系统检测和自动窗口调整功能。\n— 数据文件夹位置( BIOS, 骗局, 保存, 图像... )\n– 二玩家本地网络游戏\n- 用WAV格式的MP4音频和音频捕获录相\n- 便携式版本:可执行的旁边保存的参数和数据或% LOCALAPPDATA%\n- 与\"出道\"前端相兼容 Playnite、ES-DE、模拟和 RetroBat\n\n变化 :\n\n此更新添加了带有遮蔽器预设的 Direct3D 12 渲染器( 以及用来选择它们的Shader Preset 浏览器), 平滑地用于在 PAL 和 NTSC 屏幕上滚动的 Motion, 一个 Fullscreen Monit 或选择,run-Ahead 少输入泻湖, 和快速前进速度选择。 世嘉CD光碟可以从驱动器直接播放(Open Disc from Drive),少数Mega CD+32X光碟现在运行在其中 PicoDrive. The Genesis Plus GX 核心和控制器数据库与上游的最新费用,许多固定使窗口、主题和滚动条在Windows高分时行为。",
+      "originalContent": "Genesis Plus EX est un émulateur Windows développé par Hazem Abdelghani, basé sur le cœur open source de Genesis Plus GX. Ce fork propose un port natif pour Windows, sans SDL, avec plusieurs moteurs de rendu graphique et de nombreux filtres d'image. Il prend en charge la Mega Drive/Genesis, la Master System, la Game Gear, la SG-1000, le Mega CD/Sega CD, la 32X et la Pico.\n\nFonctionnalités:\n– Émulation des consoles Mega Drive, Mega CD, 32X, Master System, Game Gear, SG-1000 et Sega Pico\n– Émulation spécifique de la puce cartouche de Paprium et des pistes audio enrichies (MD+, 32X+ et MSU-MD)\n– Plusieurs moteurs de rendu: GDI, Direct3D 9 et Direct3D 11\n– Nombreux filtres graphiques: Scale2x, Scale3x, Eagle, xBRZ, MMPX, scanlines, masque CRT et filtres 4x\n– Nouveaux filtres de mise à l’échelle (Scaling Filter) exécutés sur carte graphique (Nearest, Sharp Nearest, Bilinear, Sharp Bilinear, Bicubic) remplaçant l'ancien Smooth Scaling\n– Prise en charge du rafraîchissement variable (VRR: G-Sync, FreeSync, Adaptive-Sync) sous Direct3D 11 pour éviter les déchirements sans VSync\n– Prise en charge des shaders au format .slangp via librashader (version 64 bits)\n– Réglages vidéo: filtre NTSC, rémanence LCD, désentrelacement, mise à l’échelle (jusqu'à 10x), rotation de l'image, rapports d’image, overscan et option de verrouillage de la forme de fenêtre lors du redimensionnement\n– Mode Correction des couleurs (Color Correction: Off, Light, Full) pour simuler l'affichage d'un écran LCD portable (Game Gear) avec rémanence et couleurs d'époque\n– Émulation audio et processeurs fidèles: Motorola 68000, Z80, SH-2 (32X), puce FM Yamaha YM2612, PSG (SN76489) et puce vocale Pico\n– Plusieurs cœurs audio FM, égaliseur, filtre passe-bas et nouveau mode Crossfeed pour casque (Light, Medium, Strong)\n– Contrôle indépendant du volume du DAC (0% à 150%) et touche muet dédiée (Ctrl+D) pour isoler les pistes d'échantillons FM (voix, percussions) sur Mega Drive, Mega CD et Pico\n– Nouvelles options d'exactitude (Accuracy) du cœur Genesis Plus GX: Enhanced Per-Tile Vertical Scroll, System Lock-Ups et vitesse du processeur (CPU Speed de 50% à 400%)\n– Configuration des commandes au clavier et manettes XInput/DirectInput (base SDL) avec gestion des axes analogiques et nouveaux modes de calcul des diagonales du stick (Wide Straight, Even Eight, Wide Diagonal)\n– Prise en charge des accessoires d’époque: Multitap, Mega Mouse, pistolets optiques (Menacer, Justifier), Activator et stylet Pico\n– Support étendu des pistolets modernes (ex: Sinden Lightgun) avec cadre blanc réglable (Light Gun Border), gestion des tirs hors-écran pour le rechargement et personnalisation complète du viseur (forme, couleur, taille)\n– Module Storyware d'affichage interactif des livrets d'images pour Sega Pico\n– Gestion des codes régionaux (USA, Japon, Europe), du format d’affichage (NTSC 60Hz / PAL 50Hz) et lancement direct des BIOS CD\n– Affichage optionnel des drapeaux régionaux dans la liste des jeux et sur les jaquettes\n– Sauvegardes d’état avec aperçus, gestionnaire visuel, vérification du checksum et annulation du dernier chargement\n– Prise en charge des sauvegardes de type RAM (fichiers .srm et .sav) pour les jeux avec sauvegarde interne\n– Fonction de retour en arrière (rewind pas à pas) et prise en charge des codes de triche Game Genie et Action Replay\n– Debugger complet intégré: visionneurs mémoire (HEX), VDP, son et CPU avec outils RAM Search & Watch (.wch)\n– Interface personnalisable avec 7 thèmes sombres, mode Contraste Élevé pour s'adapter à Windows et badges de console sur les jaquettes\n– Mode Masquage total des barres (Hide All Bars via Ctrl+H) pour n'afficher que la fenêtre de jeu\n– Option de réinitialisation d'usine (Factory Reset) pour remettre tous les paramètres à zéro sans toucher aux sauvegardes ou ROMs\n– Navigateur de ROMs avec jaquettes, fichiers récents, ajustement automatique de la largeur des colonnes, filtre de recherche et lancement direct\n– Lecture des archives ZIP, GZ et 7Z (y compris jeux multidisques et ROMs jusqu'à 96 Mo)\n– Support multilingue par fichiers .po (Gettext) avec détection du système Windows et adaptation automatique des fenêtres\n– Emplacements des dossiers de données (BIOS, Cheats, Saves, Images...) entièrement configurables\n– Jeu en réseau local à deux joueurs\n– Enregistrement vidéo avec audio au format MP4 et capture audio au format WAV\n– Version portable: paramètres et données conservés à côté de l’exécutable ou dans %LOCALAPPDATA%\n– Compatible avec les frontends LaunchBox, Pegasus, Playnite, ES-DE, EmulationStation et RetroBat\n\nLes changements:\n\nThis update adds a Direct3D 12 renderer with shader presets (and a Shader Preset Browser to pick them), Smooth Motion for even scrolling on PAL and NTSC screens, a Fullscreen Monitor choice, Run-Ahead for less input lag, and a Fast Forward Speed choice. Sega CD discs can be played straight from a drive (Open Disc from Drive), and the few Mega CD + 32X discs now run in PicoDrive. The Genesis Plus GX core and the controller database are brought up to date with upstream, and many fixes make the windows, themes and scroll bars behave at high Windows scaling.",
+      "platforms": [
+        "pc"
+      ],
+      "relatedEmulatorIds": [],
+      "contentHash": "50c8bd79a7382df0a93a45663a7d9932d10f6ef07c6dbdfa096ce64d0ef16b4e",
+      "translationPending": false
+    },
+    {
+      "id": "145215",
+      "title": "【工具】x360ce v4.31",
+      "originalTitle": "[Utilitaires Divers] x360ce v4.31",
+      "category": "tools",
+      "categoryLabel": "工具",
+      "kind": "tool",
+      "publishedAt": "2026-11-28T11:14:35Z",
+      "sourceName": "Emu-France",
+      "sourceUrl": "https://www.emu-france.com/news/145215-utilitaires-divers-x360ce-v4-31/",
+      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/x360ce_General-300x253.png",
+      "officialUrl": "https://github.com/x360ce/x360ce",
+      "summary": "'Xbox 360 Control Emolator'是一个将 XInput 调用翻译为 DirectInput 调用并允许支持不兼容的 XInput 调用程序库 应用(特别是游戏). 换句话说:x360ce允许您在游戏中只支持XBOX360垫的任意垫! 注意,AnyCPU版本根据系统的不同,在32或64个比特中本土运行。 这是目前唯一可取的版本。 官方网站 (简体中文).",
+      "content": "'Xbox 360 Control Emolator'是一个将 XInput 调用翻译为 DirectInput 调用并允许支持不兼容的 XInput 调用程序库 应用(特别是游戏).\n\n换句话说:x360ce允许您在游戏中只支持XBOX360垫的任意垫!\n\n注意,AnyCPU版本根据系统的不同,在32或64个比特中本土运行。 这是目前唯一可取的版本。\n\n官方网站 (简体中文).",
+      "originalContent": "'Xbox 360 Controller Emulator' est une bibliothèque de wrappers qui traduit les appels XInput en appels DirectInput, et permet le support des pads non-compatibles XInput dans les applications (surtout des jeux).\n\nEn d'autres termes: x360ce vous permet d'utiliser n'importe quel pad dans les jeux qui supportent à la base uniquement le pad XBOX360 !\n\nNotez que la version AnyCPU s'exécute nativement en 32 ou 64 bits selon le système. Elle est donc la seule version à jour à privilégier.\n\nPlus d'infos sur le site officiel.",
+      "platforms": [],
+      "relatedEmulatorIds": [],
+      "contentHash": "49975ceb690b6c0a16dca1c207d9a9d32276f335d462e819ba2146a3f333c817",
+      "translationPending": false
+    },
+    {
+      "id": "android-release-virtual_jaguar_core-nightly",
+      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
+      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
+      "category": "android_update",
+      "categoryLabel": "Android更新",
+      "kind": "emulator",
+      "publishedAt": "2026-11-28T09:55:59Z",
+      "sourceName": "EmuHub 版本追踪",
+      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
+      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
+      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
+      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年11月28日。点击查看官方版本信息与更新说明。",
+      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月28日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `5c45f61` — `v3.13.1` (`develop`)\n\n提交：`5c45f61`（https://github.com/libretro/virtualjaguar-libretro/commit/5c45f61dbbd7a4fc3c829a6ec4791c29ab1d0ce8）\n构建时间：2026-11-28 09:55 UTC\nCI Q: 构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/46128380326）\n分支：`develop`\n\n提示:自动建造 `develop` 提示,每推一次就换掉 它汇编了所有24个目标;它没有通过测试套件或任何人工质量控制。 为了稳定的建筑,使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）.\n\n快速下载\n\n平台:自動應用程式:Libretro核心\nmacOS:通用应用程序 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip）: 苹果硅（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib） 英特尔（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib）\nWindows x64 / x86: x64 安装器 (. exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe） * x64便携式(.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip）: 64 位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll） * 32位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll）\nWindows ARM64: Installer (.exe) (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe） 便携式(.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-arm64.dll）\nLinux x86-64 / x86: AppImage (64-bit) (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage） • .deb(64位)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb） 平板(64位)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak）: 64 位数（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so） * 32位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so）\nLinux ARM64: 附录（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage） • 辩论（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb） 平板电脑（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so）\nAndroid: --:ARM64 (英语).（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so） · ARMv7（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so） · x86-64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so） · x86（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so）\n| iOS / tvOS | — | [iOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/vi…",
+      "originalContent": "### Nightly `5c45f61` — `v3.13.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`5c45f61`](https://github.com/libretro/virtualjaguar-libretro/commit/5c45f61dbbd7a4fc3c829a6ec4791c29ab1d0ce8) |\n| **Built** | 2026-11-28 09:55 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/46128380326) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\n### Quick downloads\n\n| Platform | Standalone app | Libretro core |\n|---|---|---|\n| macOS | [Universal app (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip) | [Apple Silicon](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib) · [Intel](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib) |\n| Windows x64 / x86 | [x64 installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe) · [x64 portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll) |\n| Windows ARM64 | [Installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe) · [Portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-arm64.dll) |\n| Linux x86-64 / x86 | [AppImage (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage) · [.deb (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb) · [Flatpak (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so) |\n| Linux ARM64 | [AppImage](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage) · [.deb](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb) · [Flatpak](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so) |\n| Android | — | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so) · [ARMv7](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so) · [x86-64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so) · [x86](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so) |\n| iOS / tvOS | — | [iOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/vi…",
+      "platforms": [
+        "android"
+      ],
+      "relatedEmulatorIds": [
+        "virtual_jaguar_core"
+      ],
+      "contentHash": "e4926b970daa00f7cd0633a916bb13de504935e0aaf44baf6791a5983818db17",
       "translationPending": false
     },
     {
@@ -102,31 +422,6 @@
         "azahar"
       ],
       "contentHash": "af1c8ea1157f54ee803f6a346cae7c8e289dbd5f6e2735357d1237c0193a1583",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-fbneo_core-latest",
-      "title": "【Android更新】FinalBurn Neo (RetroArch 核心) latest",
-      "originalTitle": "FinalBurn Neo (RetroArch 核心) latest Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-27T19:32:30Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/finalburnneo/FBNeo/releases/tag/latest",
-      "imageUrl": "asset://assets/emulators/fbneo_core.png",
-      "officialUrl": "https://github.com/finalburnneo/FBNeo",
-      "summary": "FinalBurn Neo (RetroArch 核心) 发布 Android 新版本 latest，发布日期为2026年11月27日。点击查看官方版本信息与更新说明。",
-      "content": "FinalBurn Neo (RetroArch 核心) 已发布 Android 最新版本 latest。\n\n发布日期：2026年11月27日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n说明\n• macos和linux独立端口没有积极维护,可能缺少重要特征,使用我们的libretro端口或通过葡萄酒/十字路口建造的运行窗口 r被认为是这些平台的安全选择\n• 可能首先需要运行的马可建筑 `xattr -dr com.apple.quarantine FinalBurn Neo.app` 从终点站出发,以避免出现 \"FinalBurn Neo 已损坏“ 错误\n\n自前一晚以来\n• sel.cpp,按预设按钮(dinkc64)后给出游戏列表焦点",
-      "originalContent": "### Notes\n• The macos and linux standalone ports are not actively maintained, and might be missing important features, using our libretro port or running windows builds through wine/crossover is considered a safer choice for those platforms\n• The macos builds might first require running `xattr -dr com.apple.quarantine FinalBurn Neo.app` from a terminal to avoid a \"FinalBurn Neo is damaged\" error\n\n### Commits since previous nightly\n• sel.cpp, give the game list focus after pressing a preset button (dinkc64)",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "fbneo_core",
-        "fbneo_neogeo"
-      ],
-      "contentHash": "a5494d9a68929114e12eee81a66fee0d010b88effb25a3f04a72b42e68cb25cd",
       "translationPending": false
     },
     {
@@ -437,30 +732,6 @@
       "translationPending": false
     },
     {
-      "id": "android-release-armsx2-nightly-20261126",
-      "title": "【Android更新】ARMSX2 nightly-20261126",
-      "originalTitle": "ARMSX2 nightly-20261126 Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-26T18:57:46Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261126",
-      "imageUrl": "asset://assets/emulators/armsx2.png",
-      "officialUrl": "https://github.com/ARMSX2/ARMSX2",
-      "summary": "ARMSX2 发布 Android 新版本 nightly-20261126，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "ARMSX2 已发布 Android 最新版本 nightly-20261126。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n社区测试自动夜间建设(未签名).\n\n每次下载都命名 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`,因此构建\n从不同的夜晚开始,在下载它们后,可以区分。\n\n• macOS arm64: macOS-arm64.tar.xz\n• Linux arm64: Linux-arm64.AppImage,4K,16K和64K页内核相同\n• Windows arm64: Windows-arm64.zip\n• RetroArch 在 Linux arm64 上: Linux-arm64-libretro-core.tar.zst\n• 零散千米手持设备: Linux-arm64-SDL-handheld.tar.zst (Rocknix和Batocera运行堆肥机,所以用Qt Appimage代替)\n• 机器人: Android-arm64.apk (设置为 ARMSX2 晚上,与稳定应用一起)\n• iOS: iOS-arm64.ipa,未签名,侧载(安装为 ARMSX2 晚上,与稳定应用一起)\n\n从旧夜里来的? 噩梦现在是一个单独的应用程序, ARMSX2 晚上,在稳定旁边。\n\n• Android:稳定无法在旧的夜晚安装。 备份您的保存和记忆卡, 解开旧的夜晚, 然后安装稳定的APK。\niOS:你的旧夜是 ARMSX2 iOS应用程序还有你的储蓄。 把它们复制到 ARMSX2 晚上与文件应用程序。\n\n或\n• Discord:离开后状态恢复 ARMSX2\n\n完整更改日志 : https://github.com/ARMSX2/ARMSX2/compare/nightly-20261125...46f157520540a2538b8cb48f4695398ef2908025",
-      "originalContent": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64.AppImage, for 4K, 16K and 64K page kernels alike\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Discord: the status comes back after leaving ARMSX2\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261125...46f157520540a2538b8cb48f4695398ef2908025",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "armsx2"
-      ],
-      "contentHash": "83430f61466377e1b83b144a6f4a94daf0cf8beac9b1fab6436a1edc89f8c235",
-      "translationPending": false
-    },
-    {
       "id": "145157",
       "title": "【家用机】DuckStation v0.1 r261126",
       "originalTitle": "[Consoles de salon] DuckStation v0.1 r261126",
@@ -682,30 +953,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "e94ad221bcd7c63efbd16f505670543a64ee9b7dbf076b4e70f5625ac3742ea3",
-      "translationPending": false
-    },
-    {
-      "id": "android-release-virtual_jaguar_core-nightly",
-      "title": "【Android更新】Virtual Jaguar (RetroArch 核心) nightly",
-      "originalTitle": "Virtual Jaguar (RetroArch 核心) nightly Android release",
-      "category": "android_update",
-      "categoryLabel": "Android更新",
-      "kind": "emulator",
-      "publishedAt": "2026-11-26T03:32:47Z",
-      "sourceName": "EmuHub 版本追踪",
-      "sourceUrl": "https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly",
-      "imageUrl": "asset://assets/emulators/virtual_jaguar_core.png",
-      "officialUrl": "https://github.com/libretro/virtualjaguar-libretro",
-      "summary": "Virtual Jaguar (RetroArch 核心) 发布 Android 新版本 nightly，发布日期为2026年11月26日。点击查看官方版本信息与更新说明。",
-      "content": "Virtual Jaguar (RetroArch 核心) 已发布 Android 最新版本 nightly。\n\n发布日期：2026年11月26日\n适用平台：Android\n\n可通过下方“查看原文”打开官方发布页面，版本号、兼容性和安装要求请以项目官方说明为准。\n\n官方更新说明（中文）：\n\n夜间构建 `de7c9b5` — `v3.13.1` (`develop`)\n\n提交：`de7c9b5`（https://github.com/libretro/virtualjaguar-libretro/commit/de7c9b56dbc36025371d0d80d88ddb3f5e3c9d07）\n构建时间：2026-11-26 03:32 UTC\nCI 任务：构建日志（https://github.com/libretro/virtualjaguar-libretro/actions/runs/45746182316）\n分支：`develop`\n提示：`develop` tip 的自动构建，每次推送时都会替换。它已在所有 24 个目标上编译；尚未经过测试套件或任何人工质量保证。如需稳定版本，请使用最新发布的（https://github.com/libretro/virtualjaguar-libretro/releases/latest）。\n\n快速下载\n\n平台：独立应用程序：Libretro核心\nmacOS：通用应用（.zip）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip）：Apple Silicon（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib） · Intel（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib）\nWindows x64 / x86：x64 安装程序 (.exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe） · x64 便携版 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip）：64 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll） · 32 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll）\nWindows ARM64：安装程序 (.exe)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe） · 便携版 (.zip)（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-arm64.dll）\nLinux x86-64 / x86：AppImage（64 位）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage） · .deb（64 位）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb） · Flatpak（64 位）（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak）：64 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so） · 32 位（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so）\nLinux ARM64：AppImage（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage） · .deb（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb） · Flatpak（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak）：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so）\nAndroid：—：ARM64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so） · ARMv7（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so） · x86-64（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so） · x86（https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so）\n| iOS/tvOS | — | [iOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/vi…",
-      "originalContent": "### Nightly `de7c9b5` — `v3.13.1` (`develop`)\n\n| | |\n|---|---|\n| **Commit** | [`de7c9b5`](https://github.com/libretro/virtualjaguar-libretro/commit/de7c9b56dbc36025371d0d80d88ddb3f5e3c9d07) |\n| **Built** | 2026-11-26 03:32 UTC |\n| **CI run** | [build log](https://github.com/libretro/virtualjaguar-libretro/actions/runs/45746182316) |\n| **Branch** | `develop` |\n\n> Automatic build of the `develop` tip, replaced on every push. It compiled on all 24 targets; it has **not** been through the test suite or any manual QA. For a stable build use the [latest release](https://github.com/libretro/virtualjaguar-libretro/releases/latest).\n\n### Quick downloads\n\n| Platform | Standalone app | Libretro core |\n|---|---|---|\n| macOS | [Universal app (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-macos-universal.zip) | [Apple Silicon](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-arm64.dylib) · [Intel](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-macos-x86_64.dylib) |\n| Windows x64 / x86 | [x64 installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64-setup.exe) · [x64 portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-x64.zip) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-x86_64.dll) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-i686.dll) |\n| Windows ARM64 | [Installer (.exe)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64-setup.exe) · [Portable (.zip)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-windows-arm64.zip) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-windows-arm64.dll) |\n| Linux x86-64 / x86 | [AppImage (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage) · [.deb (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb) · [Flatpak (64-bit)](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak) | [64-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-x86_64.so) · [32-bit](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-i686.so) |\n| Linux ARM64 | [AppImage](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.AppImage) · [.deb](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb) · [Flatpak](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-aarch64.flatpak) | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-linux-aarch64.so) |\n| Android | — | [ARM64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-arm64-v8a.so) · [ARMv7](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-armeabi-v7a.so) · [x86-64](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86_64.so) · [x86](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_libretro-android-x86.so) |\n| iOS / tvOS | — | [iOS](https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/vi…",
-      "platforms": [
-        "android"
-      ],
-      "relatedEmulatorIds": [
-        "virtual_jaguar_core"
-      ],
-      "contentHash": "55d20c3d043fa35b5b00999983be3cd3b53414f913ac7235291ae27a75cdd8c1",
       "translationPending": false
     },
     {
@@ -19618,196 +19865,6 @@
       "platforms": [],
       "relatedEmulatorIds": [],
       "contentHash": "b56f2828bb516684d1926534768a0bafe4f18b5b771492fd1b267b1638210951",
-      "translationPending": false
-    },
-    {
-      "id": "136387",
-      "title": "【电脑】DOSBox Automation v0.85",
-      "originalTitle": "[Ordi.] DOSBox Automation v0.85",
-      "category": "computer",
-      "categoryLabel": "电脑",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T19:55:08Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136387-ordi-dosbox-automation-v0-85/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/dosbox-automation-scaled.png",
-      "officialUrl": "https://github.com/dosbox-automation/dosbox-automation/",
-      "summary": "DOSBox Automation是DOSBox Staging的一个分支，它将仿真器转变为强烈面向自动化和外部控制的环境。它特别添加了REST HTTP API、沙盒Lua脚本、录制和重放输入、音频/视频捕获、读取屏幕上显示的文本以及功能 访问和操作内存、CPU寄存器和I/O端口。它还集成了自动安装和磁盘更改的机制，并具有安全的安装策略。",
-      "content": "DOSBox Automation是DOSBox Staging的一个分支，它将仿真器转变为强烈面向自动化和外部控制的环境。它特别添加了REST HTTP API、沙盒Lua脚本、录制和重放输入、音频/视频捕获、读取屏幕上显示的文本以及功能\n访问和操作内存、CPU寄存器和I/O端口。它还集成了自动安装和磁盘更改的机制，并具有安全的安装策略。\n与DOSBox Staging的区别： Staging仍然主要是一个DOS模拟器，旨在运行具有现代模拟和兼容性的DOS软件和游戏。DOSBox Automation恢复其基础，但增加了一个重要的自动化、脚本和反思层，允许外部程序控制情绪\n并与其内部状态进行交互。因此，它主要针对启动器、自动化测试、开发工具、调试和逆向工程，而不是仅仅针对想要玩游戏的用户。",
-      "originalContent": "DOSBox Automation est un fork de DOSBox Staging qui transforme l'émulateur en un environnement fortement orienté vers l'automatisation et le contrôle externe. Il ajoute notamment une API HTTP REST, des scripts Lua sandboxés, l'enregistrement et la relecture des entrées, la capture audio/vidéo, la lecture du texte affiché à l'écran ainsi que des fonctions d'accès et de manipulation de la mémoire, des registres CPU et des ports d'E/S. Il intègre également des mécanismes pour automatiser les installations et les changements de disques, avec une politique de montage sécurisée.\n\nDifférence avec DOSBox Staging: Staging reste avant tout un émulateur DOS destiné à faire fonctionner les logiciels et jeux DOS avec une émulation et une compatibilité modernes. DOSBox Automation reprend sa base mais ajoute une importante couche d'automatisation, de scripting et d'introspection, permettant à des programmes externes de contrôler l'émulation et d'interagir avec son état interne. Il s'adresse donc principalement aux launchers, tests automatisés, outils de développement, debugging et reverse engineering, plutôt qu'à l'utilisateur qui cherche simplement à jouer.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "78e48d3208109022a605bd794da251267f5cfaba80db4dda7c2a7051d49e7b5d",
-      "translationPending": false
-    },
-    {
-      "id": "136382",
-      "title": "【家用机】Erings v0.4.1",
-      "originalTitle": "[Consoles de salon] Erings v0.4.1",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "tool",
-      "publishedAt": "2026-08-30T19:05:46Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136382-consoles-de-salon-erings-v0-4-1/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/07/erings-v0.3.3.png",
-      "officialUrl": "https://github.com/user-none/erings",
-      "summary": "Erings是一款世嘉Saturn模拟器，主要设计为简单易用的游戏玩家，而不是完美的硬件模拟工具。其主要目的是让您在优良的条件下享受大部分官方目录，而无需担心复杂的技术设置或 不必要的发育障碍。 它通过时尚的eblitui桌面界面进行操作，经过全面优化，可在大屏幕上使用，并为单人玩家提供操纵杆导航。",
-      "content": "Erings是一款世嘉Saturn模拟器，主要设计为简单易用的游戏玩家，而不是完美的硬件模拟工具。其主要目的是让您在优良的条件下享受大部分官方目录，而无需担心复杂的技术设置或\n不必要的发育障碍。\n它通过时尚的eblitui桌面界面进行操作，经过全面优化，可在大屏幕上使用，并为单人玩家提供操纵杆导航。它支持.chd和.cue/.bin格式的磁盘映像，处理NTSC和PAL区域，集成RetroAchievements命中，并自动保持备份集成\n以及从一个会话到另一个会话的保存状态。\n在硬件方面，它包括4 MB RAM扩展盒和MPEG卡。为了简化您的生活，它包括一个HLE BIOS ，避免搜索外部文件，同时管理区域补丁（如果您使用原始BIOS ）\n简而言之，切换到全屏Erings ，舒适地安顿下来，轻松重启您最喜爱的土星游戏。\n\n改进包括：\n\n已修复：\nGoshed在紧密循环中被调用，当它只应在几毫秒后作为产量调用时\n\n更改：\n轻微性能转向\n\n游戏修复：\n• DUKE NUK 'EM （ MK-81071 ）\n• PANZER DRAGOON ZWEI （ MK-81022 ）\n•曼佳美X4 （ T-1219H ） | BATSUGUN （ T-20605G ） | RADIANT S.G （ T-32902G ）\n•曼佳美X4 (T-1219H)\n• ASTRA SUPERSTARS （ T-1521G ）\n• DAYTONA美国电路版（ GS-9100 ）\n•初始D （ T-25503G ）\n\n[wpfilebase tag = file id = 8365 tpl = simple3/]",
-      "originalContent": "Erings est un émulateur Sega Saturn conçu avant tout comme un lecteur de jeux simple et accessible, plutôt que comme un outil d'émulation matérielle parfaite. Son objectif principal est de vous permettre de profiter de la majorité du catalogue officiel dans d'excellentes conditions, sans vous soucier de réglages techniques complexes ou de fonctionnalités de développement inutiles.\n\nFonctionnant via l'interface bureau épurée eblitui, il est totalement optimisé pour une utilisation sur grand écran avec une navigation à la manette pour un joueur solo. Il prend en charge les images disque au format .chd et .cue/.bin, gère les zones NTSC et PAL, intègre les succès RetroAchievements, et conserve automatiquement vos sauvegardes internes ainsi que vos save states d'une session à l'autre.\n\nCôté matériel, il embarque la cartouche d'extension RAM 4 Mo et la carte MPEG. Pour vous simplifier la vie, il inclut un BIOS HLE évitant la recherche de fichiers externes, tout en gérant le patch de région si vous utilisez des BIOS originaux. En résumé, passez Erings en plein écran, installez-vous confortablement et relancez vos jeux Saturn préférés en toute simplicité.\n\nLes améliorations sont les suivantes:\n\nFixes:\nGoshed was called in a tight loop when it should only be called after a few ms as a yield\n\nChanges:\nMinor performance turning\n\nGame Fixes:\n- DUKE NUK'EM (MK-81071)\n- PANZER DRAGOON ZWEI (MK-81022)\n- MEGAMAN X4 (T-1219H) | BATSUGUN (T-20605G) | RADIANT S.G (T-32902G)\n- MEGAMAN X4 (T-1219H)\n- ASTRA SUPERSTARS (T-1521G)\n- DAYTONA USA CIRCUIT EDITION (GS-9100)\n- INITIAL D (T-25503G)\n\n[wpfilebase tag=file id=8365 tpl=simple3 /]",
-      "platforms": [],
-      "relatedEmulatorIds": [
-        "erings_pc"
-      ],
-      "contentHash": "7daad4ee2aa9bf0bc4476c4d13c52ddddcab6db1bdb17e09e9485010856d6d76",
-      "translationPending": false
-    },
-    {
-      "id": "136380",
-      "title": "【街机】Hypseus Singe v3.0.2",
-      "originalTitle": "[Arcade] Hypseus Singe v3.0.2",
-      "category": "arcade",
-      "categoryLabel": "街机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T19:02:01Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136380-arcade-hypseus-singe-v3-0-2/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/10/hypseus-logo.png",
-      "officialUrl": "https://github.com/DirtBagXon/hypseus-singe",
-      "summary": "Hypseus是由Matt Ownby创建的Daphne分叉。 这是Daphne和Monkey的SDL2版本。 这是一个在PC、Mac或Raspberry Pi上玩Laserdisc街机游戏的程序。 此版本包括对Fan Made和American Laser Games的Monkey和Monkey2支持。",
-      "content": "Hypseus是由Matt Ownby创建的Daphne分叉。 这是Daphne和Monkey的SDL2版本。\n这是一个在PC、Mac或Raspberry Pi上玩Laserdisc街机游戏的程序。\n此版本包括对Fan Made和American Laser Games的Monkey和Monkey2支持。\n\n特点：\n\nSDL2支持\nMPEG2解码器已更新\n升级32位Daphne VLDP\n内置挡板支架（活动）\n支持Daphne和Monkey 4k 4Gb + M2V\n集成Monkey libretro仿真路径\n摇杆猴支架， Lightgun EV_ABS （鼠标） EV_ABS [鼠标]\n完全支持Monkey 2的32位叠加\n猴子游戏中的Sinden支持\n有关猴子游戏的列表，请参阅此处。\nDaphne的替代镶嵌选择\n支持多个游戏控制器（热插拔） ： config\n高级配置和多操纵杆支持：配置\n原始的“巢穴/王牌”硬件和软件公告板。\nWindows 64位和MacOS X端口\n使用Sun Microsystems Type 5c键盘专门在VIM中编码。\n\n演示视频\n历史记录：\n\n原作者马特·奥恩比（ Matt Ownby ）开创的开发项目在几年前就停止了。\n\nMonkey由Scott Duensing创建，作为Daphne玩American Laser Games的插件。\n此存储库是为了构建在Jeffrey Clark创建的Hypseus项目之上而创建的。 许多叠加层仍未在原始存储库中实现。 猴子也被移走了。\n\n将名称改为Hypseus ，以便Daphne的原始作者不会因请求支持而负担过重。\n非常感谢Matt Ownby、Scott Duensing、Jeffrey Clark、Manuel Alfayate、David Griffith以及为这个项目提供工作的许多其他开发人员。 没有他们，这个项目是不可能的。\n\nHypseus Monkey ， Super Multiple Arcade激光光盘模拟器\n版权所有(C) 2021 DirtBagXon\nHypseus ，多街机激光光盘模拟器\n版权所有(C) 2016 Jeffrey Clark\n\nDaphne ，有史以来第一款多街机激光光盘模拟器\n版权所有(C) 1999-2013 Matt Ownby\n\n变更内容：\n\n•微调vldp_audio_callback以高效使用SDL3流媒体。\n•添加了在API中检索连接的“相对鼠标”数量的功能\n•修改示例.ini文件，以便大多数用户可以直接复制。\n•检测到MAX_GAMECONTROLLER操纵杆时，删除了错位的SDL_FREE。\n•删除-sound_buffer以保留新的SDL3音频流计时。\n•在适当情况下更新了分布式gamecontrollerdb.txt。\n•改进了tms9128 Goal to Go游戏战术菜单中的对齐方式。\n•添加参数以保持非标准显示器中的视频纵横比。\n•修复了SDL3导致DAC声音驱动程序[MACH3]缓冲区溢出的问题。\n•现在支持在游戏挡板上模糊游戏叠加层。\n•通过Mutex LOCK_GUARDS序列化声音芯片更新。\n•添加API调用以翻转叠加层上的双线性缩放。\n•在自动生成的文件中修剪[GLOBAL] .ini部分。\n•为SDL3_TTF字体添加受控提示和混合。\n•在ZipROM中处理//，就像在文件系统上一样。\n•可能更多...\n\nPS ：请注意， MONKEY v2.1也已上市几个月，可在此处下载。\n\n此处为游戏收集边框。",
-      "originalContent": "Hypseus est un fork de Daphne créé par Matt Ownby. C'est une version SDL2 de Daphne et Singe.\nIl s'agit d'un programme pour jouer à des jeux d'arcade Laserdisc sur PC, Mac ou Raspberry Pi.\nCette version inclut la prise en charge de Singe et Singe2 pour les Fan Made et les American Laser Games.\n\nCaractéristiques:\n\nPrise en charge de SDL2\nDécodeur MPEG2 mis à jour\nMise à niveau de Daphne VLDP 32 bits\nSupport de bezels intégré (actif)\nSupport M2V 4k 4Gb+ de Daphne et Singe\nIntégration du chemin d'émulation libretro de Singe\nSupport Singe Joystick, Lightgun EV_ABS (souris)EV_ABS [souris]\nPrise en charge complète de la superposition 32 bits de Singe 2\nSupport de Sinden dans les jeux Singe\nPour la liste des jeux Singe, voir ici .\nChoix d'incrustations alternatives pour Daphne\nPrise en charge de plusieurs contrôleurs de jeu (hotplug): config\nConfiguration avancée et support multi-joystick: config\nTableaux d'affichage originaux matériels et logiciels « lair/ace » .\nPorts Windows 64 bits et MacOS X\nCodé exclusivement en vim à l'aide d'un clavier Sun Microsystems Type 5c.\n\nVidéos de démos\nHistoire:\n\nLe développement ouvert par l'auteur original, Matt Ownby, a cessé il y a des années.\n\nSinge a été créé par Scott Duensing en tant que plugin pour Daphne pour permettre de jouer aux Laser Games américains .\n\nCe référentiel a été créé pour s'appuyer sur le projet Hypseus créé par Jeffrey Clark . De nombreuses superpositions n'étaient toujours pas implémentée dans le référentiel d'origine. Singe avait également été retiré.\n\nLe nom a été changé en Hypseus afin que les auteurs originaux de Daphne ne soient pas surchargés de demandes de soutien.\n\nUn grand merci à Matt Ownby , Scott Duensing , Jeffrey Clark , Manuel Alfayate , David Griffith et les nombreux autres développeurs qui ont mis leur travail à disposition pour que ce projet puisse exister. Sans eux, ce projet ne serait pas possible.\n\nHypseus Singe, Super Multiple Arcade Laserdisc Emulator\nCopyright (C) 2021 DirtBagXon\n\nHypseus, Multiple Arcade Laserdisc Emulator\nCopyright (C) 2016 Jeffrey Clark\n\nDaphne, the First Ever Multiple Arcade Laserdisc Emulator\nCopyright (C) 1999-2013 Matt Ownby\n\nLes changements:\n\n- Fine tune vldp_audio_callback to utilize SDL3 streaming efficiently.\n- Added the ability to retrieve the number of connected \"relative mice\" in API\n- Altered example .ini files so direct copies are sane for most users.\n- Removed misplaced SDL_free when detecting MAX_GAMECONTROLLER Joysticks.\n- Removed -sound_buffer to preserve new SDL3 audio stream timing.\n- Updated distributed gamecontrollerdb.txt where appropriate.\n- Improved alignment in the tms9128 Goal to Go play tactic menu.\n- Argument added to preserve video aspect ratio in non-standard displays.\n- Fixed an SDL3 caused buffer overflow in the DAC sound driver [MACH3].\n- Blitting the game overlay on top of a game bezel is now supported.\n- Serialize the sound CHIP updates via Mutex lock_guards.\n- Add API call to flip bi-linear scaling on the overlay.\n- Trim [GLOBAL] .ini section in auto-generated files.\n- Add controlled HINTING and BLEND for SDL3_TTF fonts.\n- Treat // in ZipROM, as on a filesystem.\n- Probably more...\n\nPS: Noter que SINGE v2.1 est également disponible depuis quelques mois, téléchargeable ici.\n\nCollection de bezels pour les jeux ici.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [],
-      "contentHash": "b0c1024d88e294504b01382cfe1dcb3c8ab819ff2a9c1670fd6ba330a71342fb",
-      "translationPending": false
-    },
-    {
-      "id": "136372",
-      "title": "【家用机】Bcan v0.08",
-      "originalTitle": "[Consoles de salon] Bcan v0.08",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T14:24:40Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136372-consoles-de-salon-bcan-v0-08/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/Bcan008b.png",
-      "officialUrl": "https://www.facebook.com/profile.php?id=61579382638861",
-      "summary": "B 'can是台湾Super A' Can控制台的模拟器，由BillyJr开发，基于MAME 0.287. 该项目接管了Super A'Can的现有仿真，旨在纠正仍然存在的问题，特别是在显示和声音方面。 BillyJr表示，他在AI的帮助下多次接管并修复了代码，并表示所有当前已知的问题都已得到修复。 源代码仍在清理中。 然后， BillyJr计划将增强功能提交给MAME。 另一个与BillyJr无关的在线模拟项目可在此处找到。",
-      "content": "B 'can是台湾Super A' Can控制台的模拟器，由BillyJr开发，基于MAME 0.287.\n该项目接管了Super A'Can的现有仿真，旨在纠正仍然存在的问题，特别是在显示和声音方面。 BillyJr表示，他在AI的帮助下多次接管并修复了代码，并表示所有当前已知的问题都已得到修复。\n源代码仍在清理中。 然后， BillyJr计划将增强功能提交给MAME。\n\n另一个与BillyJr无关的在线模拟项目可在此处找到。\n\nhttps://www.youtube.com/watch?v=Kajm0UIzfOw\n\n以下是Super A'Can模拟的历史：\n\n2002年左右\n李先生帮忙爆爆動物園从墨盒上翻转游戏。 当时，超级A 'Can几乎没有任何研究专门用于模拟。\n\n2004\nBillyJr正在寻找研究Super A'Can的人，并联系WonderSwan Cygne仿真器开发人员Tomasz Slanina （ DOX ）。 Tomasz同意在控制台上工作。\n\n然后，他将这项工作委托给了彼得·特劳纳（ Peter Trauner ） ，他是MAME/MESS早期的重要开发人员。\n\n2004年12月17日\nPeter Trauner开始从的ROM开发Super A 'Can仿真爆爆動物園。 第一个版本仍然存在几个问题，特别是在CPU 68000和6502之间的声音、旋转、缩放和通信方面。\n\n2004年12月19日\n\nPeter告诉BillyJr爆爆動物園现在可以玩了。\n由于Peter没有Super A'Can ， BillyJr直接在台湾的控制台上进行测试，以便为他提供有关硬件和显示器实际操作的信息。\n\n2005年底\n\nPeter Trauner拥有10个Super A'Can游戏的备份。\n\n2010\nMESS 0.136正式整合了Super A'Can驱动程序。 威尔伯特·波尔是这一时期的重要贡献者之一。\n\n2019\nMAME开发商Ryan Holtz正在对Super A 'Can仿真进行重大重组。 特别是，它可以纠正精灵、声音CPU、复位和停止的行为，以及与控制器的通信。 它还纠正了有关第三和第四名球员支持的假设。\n\n2021\nRyan Holtz和superctr添加了Super A'Can声音模拟的第一个版本。\n\n2023\n\nRyan Holtz和wxhsplash将68000的Boot ROM集成到仿真中。\n\n2024\nAngelo Salese开始解决许多剩余问题，包括瓦片地图、精灵、过扫描、显示图层、滚动和墨盒备份内存。\n\nMAME 0.284\nSuper A'Can最终被正式归类为在MAME工作。 列出的两个主要贡献者是Angelo Salese和Ryan Holtz。\n\n2026年7月\nBillyJr在人工智能的帮助下，以MAME 0.287为基础，接管模拟工作。 他表示，他接管了代码50多次，并纠正了所有已知问题。\n源代码仍在重组中。 这项工作完成后， BillyJr说他想将他的改进提交给MAME。\n\n好消息： BillyJr回来了！ 特别是，他最近开发了XaviXemu ，当时在模拟的伟大岁月中欺骗了许多Neo Geo游戏。",
-      "originalContent": "B'can est un émulateur de la console taïwanaise Super A'Can, développé par BillyJr et basé sur MAME 0.287.\n\nLe projet reprend l’émulation existante de la Super A'Can et vise à corriger les problèmes encore présents, notamment au niveau de l’affichage et du son. BillyJr indique avoir repris et corrigé le code à de nombreuses reprises avec l’aide de l’IA et affirme que tous les problèmes actuellement connus ont été corrigés.\n\nLe code source est encore en cours de nettoyage. BillyJr prévoit ensuite de soumettre les améliorations à MAME.\n\nUn autre projet (non lié à BillyJr) d'émulation online est disponible ici.\n\nhttps://www.youtube.com/watch?v=Kajm0UIzfOw\n\nVoici un historique de l’émulation de la Super A'Can:\n\nVers 2002\n\nMr. Lee aide à dumper le jeu 爆爆動物園 depuis une cartouche. À cette époque, la Super A'Can reste pratiquement sans recherches consacrées à son émulation.\n\n2004\n\nBillyJr cherche quelqu’un pour étudier la Super A'Can et contacte Tomasz Slanina (dox), développeur notamment de l’émulateur WonderSwan Cygne. Tomasz accepte de travailler sur la console.\n\nIl confie ensuite le travail à Peter Trauner, développeur important des débuts de MAME/MESS.\n\n17 décembre 2004\n\nPeter Trauner commence à développer l’émulation de la Super A'Can à partir de la ROM de 爆爆動物園. La première version présente encore plusieurs problèmes, notamment au niveau du son, de la rotation, du zoom et de la communication entre les CPU 68000 et 6502.\n\n19 décembre 2004\n\nPeter annonce à BillyJr que 爆爆動物園 est désormais jouable.\n\nComme Peter ne possède pas de Super A'Can, BillyJr effectue des tests directement sur la console à Taïwan afin de lui fournir des informations sur le fonctionnement réel du matériel et de l’affichage.\n\nFin 2005\n\nPeter Trauner dispose des sauvegardes de 10 jeux Super A'Can.\n\n2010\n\nMESS 0.136 intègre officiellement le driver Super A'Can. Wilbert Pol fait partie des contributeurs importants de cette période.\n\n2019\n\nLe développeur MAME Ryan Holtz entreprend une importante réorganisation de l’émulation de la Super A'Can. Il corrige notamment le comportement des sprites, le CPU sonore, le Reset et le Halt, ainsi que la communication avec les manettes. Il corrige également l’hypothèse concernant le support des troisième et quatrième joueurs.\n\n2021\n\nRyan Holtz et superctr ajoutent une première version de l’émulation sonore de la Super A'Can.\n\n2023\n\nRyan Holtz et wxhsplash intègrent le Boot ROM du 68000 de la console dans l’émulation.\n\n2024\n\nAngelo Salese commence à traiter de nombreux problèmes restants concernant notamment les Tilemaps, les Sprites, l’Overscan, les couches d’affichage, le défilement et la mémoire de sauvegarde des cartouches.\n\nMAME 0.284\n\nLa Super A'Can est finalement classée officiellement Working dans MAME. Les deux principaux contributeurs indiqués sont Angelo Salese et Ryan Holtz.\n\nJuillet 2026\n\nBillyJr reprend le travail sur l’émulation en utilisant MAME 0.287 comme base, avec l’aide de l’IA. Il indique avoir repris le code plus de 50 fois et avoir corrigé tous les problèmes connus.\n\nLe code source est encore en cours de réorganisation. Une fois ce travail terminé, BillyJr indique vouloir soumettre ses améliorations à MAME.\n\nUne excellente nouvelle: BillyJr est de retour ! Il a notamment développé XaviXemu récemment et, à l’époque, avait dumpé de nombreux jeux Neo Geo durant les grandes années de l’émulation.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "65603b4784f0899e90d7effe014b300639aee798f6566fb85dd0252b1874da9e",
-      "translationPending": false
-    },
-    {
-      "id": "136368",
-      "title": "【家用机】KytyPlus v3.0",
-      "originalTitle": "[Consoles de salon] KytyPlus v3.0",
-      "category": "home_console",
-      "categoryLabel": "家用机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T11:36:22Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136368-consoles-de-salon-kytyplus-v3-0/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/08/kytyplus-scaled.png",
-      "officialUrl": "https://github.com/Coder787-source/KytyPlus",
-      "summary": "KytyPlus是KytyPS5的一个分支，它本身源自最初的Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了几项改进，包括通过shadPS4对PS4游戏的实验性支持， 1.0 FSR ， Vulkan缓存以保留已编译的流水线和不同的命运优化 集成GPU (iGPU)。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。",
-      "content": "KytyPlus是KytyPS5的一个分支，它本身源自最初的Kyty项目。它恢复了对PlayStation 5的模拟，同时增加了几项改进，包括通过shadPS4对PS4游戏的实验性支持， 1.0 FSR ， Vulkan缓存以保留已编译的流水线和不同的命运优化\n集成GPU (iGPU)。 它还允许从其界面安装PKG文件，并提供PS4和PS5游戏的统一管理。 该项目仍在开发中，许多游戏可能会出现崩溃、黑屏或图形问题。\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68",
-      "originalContent": "KytyPlus est un fork de KytyPS5, lui-même dérivé du projet original Kyty. Il reprend son émulation de la PlayStation 5 tout en ajoutant plusieurs améliorations, notamment le support expérimental des jeux PS4 via shadPS4, le FSR 1.0, un cache Vulkan permettant de conserver les pipelines compilés et différentes optimisations destinées aux GPU intégrés (iGPU). Il permet également l’installation des fichiers PKG depuis son interface et propose une gestion unifiée des jeux PS4 et PS5. Le projet est encore en développement et de nombreux jeux peuvent rencontrer des plantages, des écrans noirs ou des problèmes graphiques.\n\nhttps://www.youtube.com/watch?v=1vXa9zByq68",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "06444f3f658223e5df226dad6eb2fd29df45c9c83ed6dc5e28600be97ad59c80",
-      "translationPending": false
-    },
-    {
-      "id": "136364",
-      "title": "【移动设备】EKA2L1 v0.0.9 r260831",
-      "originalTitle": "[PDA et TEL] EKA2L1 v0.0.9 r260831",
-      "category": "mobile",
-      "categoryLabel": "移动设备",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T11:16:54Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136364-pda-et-tel-eka2l1-v0-0-9-r260831/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2021/05/EKA2L1.jpg",
-      "officialUrl": "https://github.com/EKA2L1/EKA2L1",
-      "summary": "一个 Symbian OS 模拟器。 (自动构建) • 将 \" yest/fix/eka1-n70-compat \" 中的 \" 657 \" 毛衣请求合并 • 固定(窗口):测量 EKA1 直接屏幕访问帧缓冲深度 • perf(常见):用于对大小写不敏感路径恢复的索引主机目录 • 固定(内核):恢复Symbian上失踪的EKA1执行电话 8.1a • 从平面/编码/固定-ngage-games合并毛衣请求 # 656 • Feel(相机)…",
-      "content": "一个 Symbian OS 模拟器。 (自动构建)\n\n• 将 \" yest/fix/eka1-n70-compat \" 中的 \" 657 \" 毛衣请求合并\n• 固定(窗口):测量 EKA1 直接屏幕访问帧缓冲深度\n• perf(常见):用于对大小写不敏感路径恢复的索引主机目录\n• 固定(内核):恢复Symbian上失踪的EKA1执行电话 8.1a\n• 从平面/编码/固定-ngage-games合并毛衣请求 # 656\n• Feel(相机):执行EKA1相机服务器\n• 固定(eka1):恢复N-Gage运行时间合同\n• 将655号毛衣请求从平面/固定/mda-audio-output-streng-starvation合并\n• 固定(媒体客户流):遵守MMF缓冲和开放合同\n• 固定(音频):从当前播放的音频上报告输出流位置\n• 固定( 自动): 给一个流式客户端一个完整的缓冲期以回答\n• 从平面/固定/qt-app-exit-return-to-list合并毛衣请求 #654\n• qt: 当游戏退出时返回应用程序列表\n• 从平面/固定/更新-释放-资产名称合并毛衣请求 # 653\n• qt:让macOS和Linux也检查更新\n• qt:以当前发布的名称查阅更新\n• 从平分/ci/macos-scripting合并毛衣请求#651\n• 此处:在没有脚本子系统的情况下停止建立macOS\n• 将 \" yest/ci/macos-arm64-asset-name \" 中的 \" 652 \" 毛衣请求合并\n• 此处:在macOS DMG的真正架构下运输它自己\n• 从平面/固定/qt-install-thread-pool-deadlock合并毛衣请求 #650\n• qt:运行软件包在全球线程池外安装\n• 将偶数/纤维/阿特拉斯自有包装的毛衣申请649号合并\n• fbs:给地图册自己的打包机,大小掉入峡谷\n• 将 \" 同意 \" / \" 固定 \" / \" 存档 -- -- ump -- -- rom -- -- 选择 \" 的 \" 毛衣 \" 请求648号合并\n• 固定(安装):从垃圾场的ROM文件夹中安装真正的ROM",
-      "originalContent": "Un émulateur du système Symbian OS. (Builds automatiques)\n\n- Merge pull request #657 from yeatse/fix/eka1-n70-compat\n- fix(window): measure the EKA1 direct screen access framebuffer depth\n- perf(common): index host directories for case-insensitive path recovery\n- fix(kernel): restore the missing EKA1 executive calls on Symbian 8.1a\n- Merge pull request #656 from yeatse/codex/fix-ngage-games\n- feat(camera): implement the EKA1 CameraServer\n- fix(eka1): restore N-Gage runtime contracts\n- Merge pull request #655 from yeatse/fix/mda-audio-output-stream-starvation\n- fix(mediaclientaudiostream): honour the MMF buffer and open contract\n- fix(audio): report the output stream position from audio actually played\n- fix(audio): give a streaming client a whole buffer period to answer\n- Merge pull request #654 from yeatse/fix/qt-app-exit-return-to-list\n- qt: return to the application list when a game exits\n- Merge pull request #653 from yeatse/fix/updater-release-asset-names\n- qt: Let macOS and Linux check for updates too\n- qt: Look the update up under the name the release actually uses\n- Merge pull request #651 from yeatse/ci/macos-scripting\n- ci: stop building macOS without the scripting subsystem\n- Merge pull request #652 from yeatse/ci/macos-arm64-asset-name\n- ci: ship the macOS DMG itself, under its real architecture\n- Merge pull request #650 from yeatse/fix/qt-install-thread-pool-deadlock\n- qt: run package install off the global thread pool\n- Merge pull request #649 from yeatse/fbs/atlas-owns-packer\n- fbs: give the atlas its own packer, and size fallbacks off the canonical\n- Merge pull request #648 from yeatse/fix/archive-dump-rom-selection\n- fix(installer): install the real ROM out of a dump's ROM folder",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [
-        "eka2l1"
-      ],
-      "contentHash": "f763dbf33efe7f93b41b1620576449826b4a413bf089a9cd44b373d63cb39ca7",
-      "translationPending": false
-    },
-    {
-      "id": "136361",
-      "title": "【工具】x360ce v4.19.17",
-      "originalTitle": "[Utilitaires Divers] x360ce v4.19.17",
-      "category": "tools",
-      "categoryLabel": "工具",
-      "kind": "tool",
-      "publishedAt": "2026-08-30T11:14:19Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136361-utilitaires-divers-x360ce-v4-19-17/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2015/01/x360ce_General-300x253.png",
-      "officialUrl": "https://github.com/x360ce/x360ce",
-      "summary": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。 换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！ 请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。 更多信息请访问官方网站。",
-      "content": "“Xbox 360 Controller Emulator”是一个包装器库，可将XInput调用转换为DirectInput调用，并允许在应用程序（尤其是游戏）中支持不兼容的XInput焊盘。\n\n换句话说： x360ce允许您在游戏中使用基本上只支持XBOX360平板电脑的任何平板电脑！\n请注意， AnyCPU版本本机运行在32位或64位，具体取决于系统。 因此，它是唯一关注的最新版本。\n\n更多信息请访问官方网站。",
-      "originalContent": "'Xbox 360 Controller Emulator' est une bibliothèque de wrappers qui traduit les appels XInput en appels DirectInput, et permet le support des pads non-compatibles XInput dans les applications (surtout des jeux).\n\nEn d'autres termes: x360ce vous permet d'utiliser n'importe quel pad dans les jeux qui supportent à la base uniquement le pad XBOX360 !\n\nNotez que la version AnyCPU s'exécute nativement en 32 ou 64 bits selon le système. Elle est donc la seule version à jour à privilégier.\n\nPlus d'infos sur le site officiel.",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "a6b9f4772d05f936793a99b7d2cf13cf98a0ae1d03407b53210a5d816e045c06",
-      "translationPending": false
-    },
-    {
-      "id": "136358",
-      "title": "【街机】Obentou v0.2.1",
-      "originalTitle": "[Multi-systemes] Obentou v0.2.1",
-      "category": "arcade",
-      "categoryLabel": "街机",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T11:12:24Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136358-multi-systemes-obentou-v0-2-1/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2026/01/Obentou.png",
-      "officialUrl": "https://github.com/yughias/Obentou",
-      "summary": "Obentou是一个用C编写的多系统仿真器，旨在将作者多年来开发的所有仿真器汇集在一个单一的程序中。 该项目是开源的，并根据GPL-3.0.许可证进行分发 当前支持的系统： •太空侵略者商场 • Pacman核心— Pacman, Ms. Pacman, Jr. Pacman和其他基于Pacman的街机地图 • CHIP-8 • Bytepusher -幻想机器，带1个操作码 • GAMATE • GBC — Game Boy/Game…",
-      "content": "Obentou是一个用C编写的多系统仿真器，旨在将作者多年来开发的所有仿真器汇集在一个单一的程序中。\n该项目是开源的，并根据GPL-3.0.许可证进行分发\n\n当前支持的系统：\n•太空侵略者商场\n• Pacman核心— Pacman, Ms. Pacman, Jr. Pacman和其他基于Pacman的街机地图\n• CHIP-8\n• Bytepusher -幻想机器，带1个操作码\n• GAMATE\n• GBC — Game Boy/Game Boy Color/Mega Duck\n• GBA - Game Boy Advance\n• NES —任天堂娱乐系统\n• PCE — PC-Engine\n• PV1000 -卡西欧PV-1000\n• TMS80 — TMS9918 + Z80系统（ SMS/游戏装备/SG-1000/SC-3000 ）\n• Coleco Vision —需要BIOS\n• WATARA — WATARA Super Vision\n• SPECCY — ZX Spectrum 48K\n• JACE — Jupiter Ace\n\n这些变化是：\n\n•添加了gamate核心",
-      "originalContent": "Obentou est un émulateur multi‑systèmes écrit en C, conçu pour regrouper en un seul programme tous les émulateurs développés par son auteur au fil des années.\nLe projet est open‑source et distribué sous licence GPL‑3.0.\n\nSystèmes actuellement supportés:\n- Space Invaders Arcade\n- Pacman core — Pacman, Ms. Pacman, Jr. Pacman et autres cartes d'arcade basées sur Pacman\n- CHIP-8\n- Bytepusher — machine fantasy à 1 opcode\n- GAMATE\n- GBC — Game Boy / Game Boy Color / Mega Duck\n- GBA - Game Boy Advance\n- NES — Nintendo Entertainment System\n- PCE — PC-Engine\n- PV1000 — Casio PV-1000\n- TMS80 — systèmes TMS9918 + Z80 (SMS / Game Gear / SG-1000 / SC-3000)\n- Coleco Vision — BIOS requis\n- WATARA — Watara Super Vision\n- SPECCY — ZX Spectrum 48K\n- JACE — Jupiter Ace\n\nLes changements sont:\n\n- added gamate core",
-      "platforms": [],
-      "relatedEmulatorIds": [],
-      "contentHash": "6bc1b26fa0a389d2cbf9c97a0b018659baf184f855694ab8c92ac3a9d0101264",
-      "translationPending": false
-    },
-    {
-      "id": "136355",
-      "title": "【电脑】Fuse v1.9.2",
-      "originalTitle": "[Ordi.] Fuse v1.9.2",
-      "category": "computer",
-      "categoryLabel": "电脑",
-      "kind": "emulator",
-      "publishedAt": "2026-08-30T11:09:13Z",
-      "sourceName": "Emu-France",
-      "sourceUrl": "https://www.emu-france.com/news/136355-ordi-fuse-v1-9-2/",
-      "imageUrl": "https://www.emu-france.com/wp-content/uploads/2017/10/fuse.png",
-      "officialUrl": "http://fuse-emulator.sourceforge.net/",
-      "summary": "FUSE （ Free UNIX Spectrum Emulator ）是最初在UNIX上运行的模拟器。 已制作了几个端口，包括一个用于Windows的端口。 模拟了16K、48K、128K、+2、+2A、+3、+3e、SE、TC2048、TC2068、TS2068、TTX2000S、Pentagon 128和Scorpion ZS 256系统。 •精确的16K、48K （包括NTSC变体）、128K、+2、+2A和+3仿真。",
-      "content": "FUSE （ Free UNIX Spectrum Emulator ）是最初在UNIX上运行的模拟器。 已制作了几个端口，包括一个用于Windows的端口。 模拟了16K、48K、128K、+2、+2A、+3、+3e、SE、TC2048、TC2068、TS2068、TTX2000S、Pentagon 128和Scorpion ZS 256系统。\n•精确的16K、48K （包括NTSC变体）、128K、+2、+2A和+3仿真。\n•工作+3e ， SE ， TC2048 ， TC2068 ， TS2068 ，五角大楼128 ，五角大楼“512” （五角大楼128修改为额外的内存） ，五角大楼1024和蝎子ZS 256仿真。\n•在任何可能试用的计算机上以真正的Speccy速度运行。\n•支持从.tzx文件加载，包括加速加载。\n•声音（在Windows和Mac OS X上，以及在支持ALSA、Open Sound System、SDL或OpenBSD/Solaris的/dev/audio的系统上）。\n• Kempston操纵杆仿真。\n•模拟您可以连接到Spectrum的各种打印机。\n•支持RZX输入记录文件格式，包括“竞争模式”。\n• Currah µSource、DivIDE、DivMMC、接口1、Kempston鼠标、Multiface One/128/3、Spectrum +3e、ZXATASP、ZXCF和ZXMMC接口的仿真。\n•模拟Covox、Fuller音频盒、Melodik和SpecDrum音频接口。\n•模拟Beta 128、+ D、Didaktik 80/40、DISCiPLE和Opus Discovery接口。\n•模拟Spectranet和SpeccyBoot接口。\n•支持Recreated ZX Spectrum蓝牙键盘。",
-      "originalContent": "Fuse (Free Unix Spectrum Emulator) est un émulateur tournant à l'origine sous Unix. Plusieurs portages ont été fait dont celui pour Windows. Les systèmes 16K, 48K, 128K, +2, +2A, +3, +3e, SE, TC2048, TC2068, TS2068, TTX2000S, Pentagon 128 et Scorpion ZS 256 sont émulés.\n\n- Accurate 16K, 48K (including the NTSC variant), 128K, +2, +2A and +3 emulation.\n- Working +3e, SE, TC2048, TC2068, TS2068, Pentagon 128, Pentagon \"512\" (Pentagon 128 modified for extra memory), Pentagon 1024 and Scorpion ZS 256 emulation.\n- Runs at true Speccy speed on any computer you're likely to try it on.\n- Support for loading from .tzx files, including accelerated loading.\n- Sound (on Windows and Mac OS X, and on systems supporting ALSA, the Open Sound System, SDL or OpenBSD/Solaris's /dev/audio).\n- Kempston joystick emulation.\n- Emulation of the various printers you could attach to the Spectrum.\n- Support for the RZX input recording file format, including 'competition mode'.\n- Emulation of the Currah µSource, DivIDE, DivMMC, Interface 1, Kempston mouse, Multiface One/128/3, Spectrum +3e, ZXATASP, ZXCF and ZXMMC interfaces.\n- Emulation of the Covox, Fuller audio box, Melodik and SpecDrum audio interfaces.\n- Emulation of the Beta 128, +D, Didaktik 80/40, DISCiPLE and Opus Discovery interfaces.\n- Emulation of the Spectranet and SpeccyBoot interfaces.\n- Support for the Recreated ZX Spectrum Bluetooth keyboard.",
-      "platforms": [
-        "pc"
-      ],
-      "relatedEmulatorIds": [],
-      "contentHash": "5afeab6c9de332f80a260db62274085fbd2ca7a8ab629bd2bbb34de73585fa62",
       "translationPending": false
     }
   ]
